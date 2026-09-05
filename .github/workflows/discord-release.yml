@@ -1,0 +1,75 @@
+name: Discord Release Notification
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  discord:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send BiSTooltip release notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          RELEASE_NAME: ${{ github.event.release.name }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          RELEASE_URL: ${{ github.event.release.html_url }}
+          RELEASE_BODY: ${{ github.event.release.body }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.request
+
+          webhook = os.environ["DISCORD_WEBHOOK"]
+          name = os.environ.get("RELEASE_NAME") or os.environ.get("RELEASE_TAG") or "New Release"
+          tag = os.environ.get("RELEASE_TAG", "")
+          url = os.environ.get("RELEASE_URL", "")
+          body = os.environ.get("RELEASE_BODY", "").strip()
+
+          if not body:
+              body = "A new version of BiSTooltip is now available."
+
+          if len(body) > 3500:
+              body = body[:3500] + "\n\n…"
+
+          payload = {
+              "username": "BiSTooltip Releases",
+              "content": "## 🟦 BiSTooltip Update",
+              "embeds": [
+                  {
+                      "title": f"🚀 {name}",
+                      "url": url,
+                      "description": body,
+                      "fields": [
+                          {
+                              "name": "📦 Version",
+                              "value": f"`{tag}`",
+                              "inline": True
+                          },
+                          {
+                              "name": "⬇️ Download",
+                              "value": f"[Open GitHub Release]({url})",
+                              "inline": True
+                          }
+                      ],
+                      "footer": {
+                          "text": "BiSTooltip • WotLK • GitHub Release"
+                      }
+                  }
+              ]
+          }
+
+          data = json.dumps(payload).encode("utf-8")
+
+          req = urllib.request.Request(
+              webhook,
+              data=data,
+              headers={"Content-Type": "application/json"},
+              method="POST"
+          )
+
+          with urllib.request.urlopen(req) as response:
+              print("Discord status:", response.status)
+          PY
