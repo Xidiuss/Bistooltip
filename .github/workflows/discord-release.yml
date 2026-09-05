@@ -9,13 +9,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Send BiSTooltip release notification
+      - name: Send BiaoGe release notification
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           RELEASE_NAME: ${{ github.event.release.name }}
           RELEASE_TAG: ${{ github.event.release.tag_name }}
           RELEASE_URL: ${{ github.event.release.html_url }}
           RELEASE_BODY: ${{ github.event.release.body }}
+          BIAOGE_ROLE_ID: "1545592862920671252"
         run: |
           python - <<'PY'
           import json
@@ -23,20 +24,24 @@ jobs:
           import urllib.request
 
           webhook = os.environ["DISCORD_WEBHOOK"]
+          role_id = os.environ["BISTOOLTIP_ROLE_ID"]
           name = os.environ.get("RELEASE_NAME") or os.environ.get("RELEASE_TAG") or "New Release"
           tag = os.environ.get("RELEASE_TAG", "")
           url = os.environ.get("RELEASE_URL", "")
           body = os.environ.get("RELEASE_BODY", "").strip()
 
           if not body:
-              body = "A new version of BiSTooltip is now available."
+              body = "A new version of BiaoGe is now available."
 
           if len(body) > 3500:
               body = body[:3500] + "\n\n…"
 
           payload = {
               "username": "BiSTooltip Releases",
-              "content": "## 🟦 BiSTooltip Update",
+              "content": f"<@&{role_id}>",
+              "allowed_mentions": {
+                  "roles": [role_id]
+              },
               "embeds": [
                   {
                       "title": f"🚀 {name}",
@@ -55,7 +60,7 @@ jobs:
                           }
                       ],
                       "footer": {
-                          "text": "BiSTooltip • WotLK • GitHub Release"
+                          "text": "BiaoGe • WotLK • GitHub Release"
                       }
                   }
               ]
