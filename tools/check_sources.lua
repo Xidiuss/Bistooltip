@@ -51,12 +51,14 @@ for sid, s in pairs(reg) do
     assert(s.difficulty == "" or s.difficulty == "H", "dungeon source with raid difficulty: " .. sid)
   end
   -- collapsed/merged fake zones must never resurface as registry identities
-  assert(s.instance:sub(1, 10) ~= "Tier 9.25 ", "leaked Tier 9.25 identity: " .. sid)
-  assert(s.instance:sub(1, 8) ~= "Tier 9.5", "leaked Tier 9.5 identity: " .. sid)
-  assert(s.instance:sub(1, 8) ~= "Tier 10N", "leaked Tier 10N identity: " .. sid)
-  assert(s.instance:sub(1, 9) ~= "Tier 10HC", "leaked Tier 10HC identity: " .. sid)
-  assert(s.instance:sub(1, 13) ~= "Tier 7 Tokens", "leaked Tier 7 identity: " .. sid)
-  assert(s.instance:sub(1, 13) ~= "Tier 8 Tokens", "leaked Tier 8 identity: " .. sid)
+  -- (instance-less CUSTOM-kind rows carry no zone identity; skip the prefix probe)
+  local inst = s.instance or ""
+  assert(inst:sub(1, 10) ~= "Tier 9.25 ", "leaked Tier 9.25 identity: " .. sid)
+  assert(inst:sub(1, 8) ~= "Tier 9.5", "leaked Tier 9.5 identity: " .. sid)
+  assert(inst:sub(1, 8) ~= "Tier 10N", "leaked Tier 10N identity: " .. sid)
+  assert(inst:sub(1, 9) ~= "Tier 10HC", "leaked Tier 10HC identity: " .. sid)
+  assert(inst:sub(1, 13) ~= "Tier 7 Tokens", "leaked Tier 7 identity: " .. sid)
+  assert(inst:sub(1, 13) ~= "Tier 8 Tokens", "leaked Tier 8 identity: " .. sid)
 end
 -- alias guard: known duplicate spellings must not both exist
 assert(not (reg["AHN_KAHET_TALDARAM"] and reg["AHN_KAHET_THE_OLD_KINGDOM_TALDARAM"]),
@@ -213,5 +215,5 @@ for id, entries in pairs(acq) do
   end
 end
 assert(nOther == 0, "TROPHY with non-oracle Triumph amount: " .. nOther)
-assert(n45 > 0 and n75 > 0, "TROPHY price split collapsed (45x" .. n45 .. " 75x" .. n75 .. ")")
+assert(n45 == 76 and n75 == 114, "TROPHY price split drifted (45x" .. n45 .. " 75x" .. n75 .. ", want 45x76 75x114)")
 print("trophy-prices: OK (45x" .. n45 .. " 75x" .. n75 .. ", oracle-verified, no fallback)")

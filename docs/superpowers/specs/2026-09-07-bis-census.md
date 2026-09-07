@@ -3,12 +3,12 @@
 Date: 2026-09-07. Task 1 of the meta-BisTooltip data-system plan. Analysis only — no addon code changed.
 Gate: `lua5.1 tools/census_bis.lua` requires the line `STANDARD = ...` below.
 
-STANDARD = wowsims (file `Bistooltip_WoWSimsBP_bislists.lua`, global `Bistooltip_wowsims_bislists`)
+STANDARD = WoWSimsBP (file `Bistooltip_WoWSimsBP_bislists.lua`, global `Bistooltip_wowsims_bislists`; lowercase `wowsims` = that file/global shorthand)
 
 ## 1. Sources inventoried
 
-All paths relative to repo root `/mnt/d/PROJEKTY/Bistooltip-main` (files are UNTRACKED working-dir
-copies there, except where noted; the worktree `feat/meta-bistooltip-data` tracks only the wowtbc file):
+All paths below relative to the repo root (files are UNTRACKED working-dir
+copies in the main checkout, except where noted; the worktree `feat/meta-bistooltip-data` tracks only the wowtbc file):
 
 | file | size | lines | global | git status |
 |---|---|---|---|---|
@@ -27,30 +27,30 @@ Shape (all three): `BIS[class][spec][phase][slot] = { [1..6] = itemID, slot_name
 |---|---|---|---|---|---|---|---|---|
 | wowtbc | 10 | 32 | 190 | 2822 | 16932 | 292 | 2838 | PR,T7,T8,T9,T10,RS |
 | wh | 10 | 31 | 153 | 2284 | 13704 | 90 | 2513 | PR,T7,T8,T9,T10 (no RS) |
-| wowsims (primary) | 10 | 32 | 190 | 2822 | 16932 | 292 | 2836 | PR,T7,T8,T9,T10,RS |
+| WoWSimsBP (primary) | 10 | 32 | 190 | 2822 | 16932 | 292 | 2836 | PR,T7,T8,T9,T10,RS |
 
-- Spec difference: Mage `Fire FFB` exists only in wowtbc+wowsims; wh Mage = Arcane/Fire/Frost.
-- Sparse phases: DK `Blood dps` lacks T7/T8 in wowtbc AND wowsims (wh: only PR,T9,T10 for that spec).
-- wowsims file additionally holds faction tables `Bistooltip_bislists_alliance`/`_horde`
+- Spec difference: Mage `Fire FFB` exists only in wowtbc+WoWSimsBP; wh Mage = Arcane/Fire/Frost.
+- Sparse phases: DK `Blood dps` lacks T7/T8 in wowtbc AND WoWSimsBP (wh: only PR,T9,T10 for that spec).
+- WoWSimsBP file additionally holds faction tables `Bistooltip_bislists_alliance`/`_horde`
   (10 classes each, all 6 phases, 2652 alliance slots, single-rank `[1]` + `-1` fillers,
   970 unique alliance rank-1; alliance-vs-horde rank-1 agreement 93.0%).
 
 ## 3. Overlap (measured)
 
-- Unique-item overlap: wowtbc∩wowsims = 2833 (only-wowtbc 5, only-wowsims 3);
+- Unique-item overlap: wowtbc∩WoWSimsBP = 2833 (only-wowtbc 5, only-WoWSimsBP 3);
   wowtbc∩wh = 2143 (only-wowtbc 695, only-wh 370).
-- Rank-1 agreement: wowtbc vs wowsims **99.0%** (2794 shared slots);
-  wh vs wowsims 63.2%, wowtbc vs wh 62.3% (2159 shared slots).
-- wh vs wowsims rank-1 per phase: PR **0.9%**, T7 77.6%, T8 83.9%, T9 82.3%, T10 70.9%.
+- Rank-1 agreement: wowtbc vs WoWSimsBP **99.0%** (2794 shared slots);
+  wh vs WoWSimsBP 63.2%, wowtbc vs wh 62.3% (2159 shared slots).
+- wh vs WoWSimsBP rank-1 per phase: PR **0.9%**, T7 77.6%, T8 83.9%, T9 82.3%, T10 70.9%.
   wh is a genuinely different ranking, most divergent pre-raid.
 
 ## 4. Custom-item finding (decisive)
 
 - wowtbc is the ONLY base with out-of-range IDs: 27 entries, **all rank-1**, all in
   `Weapon` (24) / `Ranged` (3) slots; 5 unique IDs: 128858, 130023, 130031, 131004, 150005
-  (max real-WotLK ID in the other bases: 54591; wh/wowsims have zero custom entries).
-- In the exact same slots wowsims ranks real items (e.g. Fury T7 Weapon: wowtbc=130031 vs
-  wowsims=40384; the 3 wowsims-only IDs 40343, 42317, 45458 are the displaced real items).
+  (max real-WotLK ID in the other bases: 54591; wh/WoWSimsBP have zero custom entries).
+- In the exact same slots WoWSimsBP ranks real items (e.g. Fury T7 Weapon: wowtbc=130031 vs
+  WoWSimsBP=40384; the 3 WoWSimsBP-only IDs 40343, 42317, 45458 are the displaced real items).
 - Shape match: a private-server diff baked into the base file, NOT part of any Standard.
 
 ## 5. Is `wh` Whitemane-only? No (evidence)
@@ -68,11 +68,11 @@ Shape (all three): `BIS[class][spec][phase][slot] = { [1..6] = itemID, slot_name
 
 ## 7. Decision and consequences
 
-STANDARD = wowsims (file `Bistooltip_WoWSimsBP_bislists.lua`, global `Bistooltip_wowsims_bislists`,
+STANDARD = WoWSimsBP (file `Bistooltip_WoWSimsBP_bislists.lua`, global `Bistooltip_wowsims_bislists`,
 faction slots resolved via `Bistooltip_bislists_alliance`/`_horde`).
 
 Rationale: spec direction is WoWSims-first with Wowhead/RaidMasterSuite cross-check and NO new
-ranking from scratch. wowsims primary is rank-99%-identical to the current runtime base (wowtbc)
+ranking from scratch. WoWSimsBP primary is rank-99%-identical to the current runtime base (wowtbc)
 minus its 27 custom rank-1 overrides, has full RS coverage + Fire FFB, zero custom IDs, and the
 only faction-split tables. It is the cleanest superset, not a new build.
 
@@ -88,7 +88,7 @@ data lives (vendor into repo vs. reference-only) before migration code depends o
 
 ## 8. Repro
 
-From `/mnt/d/PROJEKTY/Bistooltip-main` (read-only; files live only there):
+From the main-checkout repo root (read-only; files live only there):
 `lua5.1 -e '_G.FACTION_ALLIANCE="A"; _G.FACTION_HORDE="H";
 dofile("Bistooltip/Bistooltip_wowtbc_bislists.lua");
 dofile("Bistooltip/Bistooltip_wh_bislists.lua");

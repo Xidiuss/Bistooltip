@@ -105,7 +105,7 @@ local function checkEnhs(enhs, what)
 end
 local function copyEnhs(enhs)
   local out = {}
-  for i, e in ipairs(enhs) do out[i] = e end
+  for i, e in ipairs(enhs) do out[i] = { type = e.type, id = e.id } end
   return out
 end
 

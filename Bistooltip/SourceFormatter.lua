@@ -30,6 +30,12 @@ function BisTooltip_FormatSource(entry)
     return s.instance .. " - " .. s.boss
   end
   if entry.kind == "TOKEN" or entry.kind == "MARK" then
+    -- S2: never Lua-error in tooltip; malformed entries render as nothing.
+    if type(entry.tier) ~= "string" or entry.tier == ""
+      or type(entry.family) ~= "string" or entry.family == ""
+      or type(s.difficulty) ~= "string" then
+      return nil
+    end
     return entry.tier .. " - " .. entry.kind .. ": " .. entry.family
       .. " [" .. s.instance .. ": " .. s.boss .. " <" .. s.difficulty .. ">]"
   end

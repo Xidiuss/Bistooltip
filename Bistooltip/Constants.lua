@@ -414,6 +414,7 @@ BistooltipConstants.INSTANCE_DIFFICULTY = {
     ["Onyxia's Lair (25)"] = "25N",
 }
 
+-- LEGACY-DEAD: no .toc-loaded caller (sole caller was unloaded Bislist.lua); difficulty now comes from canonical data.
 -- Get difficulty tag for an instance name
 function BistooltipConstants.GetInstanceDifficulty(instanceName)
     if not instanceName then return nil end

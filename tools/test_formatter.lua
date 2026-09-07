@@ -10,6 +10,8 @@ local cases = {
   { { kind = "DROP", source = "VEZAX" }, "Ulduar [25N] - General Vezax" },
   { { kind = "TOKEN", tier = "T8", family = "Wayward Protector", source = "THORIM" },
     "T8 - TOKEN: Wayward Protector [Ulduar: Thorim <25N>]" },
+  { { kind = "MARK", tier = "T10", family = "Vanquisher's Mark", source = "THORIM" },
+    "T10 - MARK: Vanquisher's Mark [Ulduar: Thorim <25N>]" },
   { { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
     "T9 - VENDOR: 50 Emblem of Triumph" },
   { { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY",

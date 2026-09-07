@@ -496,6 +496,10 @@ end
 local function sortedKeys(t)
   local ks = {}
   for k in pairs(t) do ks[#ks + 1] = k end
+  for i = 2, #ks do
+    assert(type(ks[i]) == type(ks[1]),
+      "sortedKeys: heterogeneous key types (" .. type(ks[1]) .. " vs " .. type(ks[i]) .. ")")
+  end
   table.sort(ks)
   return ks
 end

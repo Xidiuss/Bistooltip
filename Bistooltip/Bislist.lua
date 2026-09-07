@@ -236,6 +236,7 @@ end
 -- Instance Difficulty Helper (NEW)
 -- ============================================================
 
+-- LEGACY-DEAD: Bislist.lua is not loaded by Bistooltip/Bistooltip.toc; difficulty now comes from canonical data.
 local function GetInstanceDifficultyTag(instanceName)
     if not instanceName then return nil end
     
