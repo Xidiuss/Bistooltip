@@ -182,6 +182,23 @@ local function difficultyOf(zone)
   return ""
 end
 
+-- Old lootTable zones starting with "Tier " name a tier set, not a real place
+-- (token turn-ins, quest chains, emblem gear lists). Stamp that tier on DROP
+-- entries from those zones so the UI can restore the Tier gear marker without
+-- substring guessing (R5-A). Explicit prefix map; anything else stays tier-less.
+local function tierOf(zone)
+  if zone:sub(1, 8) == "Tier 0.5" then return "T0.5" end
+  if zone:sub(1, 6) == "Tier 3" then return "T3" end
+  if zone:sub(1, 6) == "Tier 4" then return "T4" end
+  if zone:sub(1, 6) == "Tier 5" then return "T5" end
+  if zone:sub(1, 6) == "Tier 6" then return "T6" end
+  if zone:sub(1, 6) == "Tier 7" then return "T7" end
+  if zone:sub(1, 6) == "Tier 8" then return "T8" end
+  if zone:sub(1, 6) == "Tier 9" then return "T9" end -- 9, 9.25, 9.5
+  if zone:sub(1, 7) == "Tier 10" then return "T10" end -- 10, 10N, 10HC
+  return nil
+end
+
 -- Emblem currency -> tier, ONLY where provable from the repo: the
 -- "Tier 9 ... (HC5, Raids25)" zones pair Emblem of Triumph with T9 and the
 -- "Tier 10 ... (HC5 Dialy, ICC10/25)" zones pair Emblem of Frost with T10.
@@ -234,13 +251,16 @@ for zone, bosses in pairs(lootTable) do
     local inst = canonInstance(zone)
     local diff = difficultyOf(zone)
     local suffix = SOURCE_SUFFIX[zone] or ""
+    local dtier = tierOf(zone)
     for boss, items in pairs(bosses) do
       local cboss = BOSS_ALIASES[boss] or boss
       local id = sourceID(inst, diff, cboss)
       if suffix ~= "" then id = id .. "_" .. suffix end
       registry[id] = registry[id] or { instance = inst, boss = cboss, difficulty = diff }
       for _, itemID in pairs(items) do
-        addEntry(itemID, { kind = "DROP", source = id })
+        local entry = { kind = "DROP", source = id }
+        if dtier then entry.tier = dtier end
+        addEntry(itemID, entry)
       end
     end
   end
@@ -254,7 +274,7 @@ end
 
 -- dedup: collapse byte-identical entries per item; distinct bosses stay separate
 local function entryKey(e)
-  if e.kind == "DROP" then return "DROP\0" .. e.source end
+  if e.kind == "DROP" then return "DROP\0" .. e.source .. "\0" .. (e.tier or "") end
   local parts = { e.kind or "", e.tier or "", e.displayVariant or "" }
   for _, c in ipairs(e.cost or {}) do
     parts[#parts + 1] = (c.currency or "") .. "#" .. (c.item or 0) .. "#" .. (c.amount or 0)
@@ -319,7 +339,9 @@ local function writeAcquisition(path)
     f:write(string.format("  [%d] = {\n", itemID))
     for _, e in ipairs(acquisition[itemID]) do
       if e.kind == "DROP" then
-        f:write(string.format("    { kind = %q, source = %q },\n", e.kind, e.source))
+        local extra = ""
+        if e.tier then extra = extra .. string.format(", tier = %q", e.tier) end
+        f:write(string.format("    { kind = %q, source = %q%s },\n", e.kind, e.source, extra))
       else -- VENDOR (optional tier / displayVariant, N-leg cost)
         local extra = ""
         if e.tier then extra = extra .. string.format(", tier = %q", e.tier) end

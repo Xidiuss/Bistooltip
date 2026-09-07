@@ -3,6 +3,7 @@ dofile("Bistooltip/SourceRegistry.lua") -- test-local fixture overrides globals 
 BisTooltip_SourceRegistry = {
   VEZAX = { instance = "Ulduar", boss = "General Vezax", difficulty = "25N" },
   THORIM = { instance = "Ulduar", boss = "Thorim", difficulty = "25N" },
+  FLAT = { instance = "Ulduar", boss = "General Vezax", difficulty = "" },
 }
 dofile("Bistooltip/SourceFormatter.lua")
 local cases = {
@@ -15,6 +16,7 @@ local cases = {
       cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
     "T9 - TROPHY: Crusade + 75 Emblem of Triumph" },
   { { kind = "CUSTOM", label = "VIP Shop" }, "VIP Shop" },
+  { { kind = "DROP", source = "FLAT" }, "Ulduar - General Vezax" }, -- empty difficulty: no brackets
   { { kind = "DROP", source = "NOPE" }, nil }, -- unknown sourceID: skip line, no error
 }
 for i, c in ipairs(cases) do

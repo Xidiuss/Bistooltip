@@ -1111,11 +1111,13 @@ local function CreatePooledItemIcon(itemId, size, parent, callbacks)
         UI.SetBoEMarker(icon, true)
     end
 
-    -- Set up Tier gear marker (T7-10.5 items have "Tier" in their source)
-    if _G.BistooltipAddon and _G.BistooltipAddon.GetItemSourceInfo then
-        local zone = _G.BistooltipAddon:GetItemSourceInfo(displayId)
-        if zone and (zone:find("Tier") or zone:find("tier")) then
-            UI.SetTierMarker(icon, true)
+    -- Set up Tier gear marker (entries from ex-Tier zones carry a tier stamp)
+    if Data and Data.GetAllItemSources then
+        for _, src in ipairs(Data.GetAllItemSources(displayId)) do
+            if src.tier then
+                UI.SetTierMarker(icon, true)
+                break
+            end
         end
     end
 

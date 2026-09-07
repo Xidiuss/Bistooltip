@@ -62,7 +62,7 @@ SourceRegistry["ICC_25HC_MARROWGAR"] = { instance="Icecrown Citadel", boss="Lord
 ### ItemAcquisition[itemID] — lista źródeł, O(1)
 
 ```lua
-ItemAcquisition[49986] = { { kind="DROP", source="ULDUAR_25N_VEZAX" } }
+ItemAcquisition[49986] = { { kind="DROP", source="ULDUAR_25N_VEZAX" } } -- DROP może nieść opcjonalne tier (pochodzenie ze strefy Tier*)
 ItemAcquisition[51834] = { -- mark z 2 realnych bossów: 2 wpisy, BEZ deduplikacji
   { kind="MARK", tier="T10", family="Protector", source="ICC_10HC_BOSS_A" },
   { kind="MARK", tier="T10", family="Protector", source="ICC_25N_BOSS_B" },
@@ -93,7 +93,7 @@ Zero parserów nazw tokenów w runtime. Zero heurystyk difficulty.
 Zamrożone wzory:
 
 ```text
-DROP:    <Instance> [<Diff>] - <Boss>
+DROP:    <Instance> [<Diff>] - <Boss> (puste difficulty bez nawiasów)
 TOKEN:   <Tier> - TOKEN: <Family> [<Instance>: <Boss> <<Diff>>]
 MARK:    <Tier> - MARK: <Family> [<Instance>: <Boss> <<Diff>>]
 VENDOR:  <Tier> - VENDOR: <Cost> <Currency>

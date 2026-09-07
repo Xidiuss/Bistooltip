@@ -348,11 +348,16 @@ function BistooltipData.GetAllItemSources(itemId)
                 if e.kind == "DROP" or e.kind == "TOKEN" or e.kind == "MARK" then
                     local s = e.source and reg[e.source] or nil
                     if s then
+                        local zone = s.instance
+                        if s.difficulty and s.difficulty ~= "" then
+                            zone = zone .. " [" .. s.difficulty .. "]"
+                        end
                         src = {
                             type = "raid",
-                            zone = s.instance .. " [" .. (s.difficulty or "") .. "]",
+                            zone = zone,
                             boss = s.boss,
                             difficulty = s.difficulty,
+                            tier = e.tier, -- optional ex-Tier-zone stamp (R5-A), nil otherwise
                             text = line,
                         }
                     end

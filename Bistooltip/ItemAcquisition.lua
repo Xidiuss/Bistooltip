@@ -2265,220 +2265,220 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ABYSSAL_COUNCIL_SILITHUS_THE_DUKE_OF_CINDERS_FIRE_" },
   },
   [21994] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET", tier = "T0.5" },
   },
   [21995] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET", tier = "T0.5" },
   },
   [21996] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET", tier = "T0.5" },
   },
   [21997] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET", tier = "T0.5" },
   },
   [21998] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET", tier = "T0.5" },
   },
   [21999] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET", tier = "T0.5" },
   },
   [22000] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET", tier = "T0.5" },
   },
   [22001] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARRIOR_SET", tier = "T0.5" },
   },
   [22002] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET", tier = "T0.5" },
   },
   [22003] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET", tier = "T0.5" },
   },
   [22004] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET", tier = "T0.5" },
   },
   [22005] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET", tier = "T0.5" },
   },
   [22006] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET", tier = "T0.5" },
   },
   [22007] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET", tier = "T0.5" },
   },
   [22008] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET", tier = "T0.5" },
   },
   [22009] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_ROGUE_SET", tier = "T0.5" },
   },
   [22010] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET", tier = "T0.5" },
   },
   [22011] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET", tier = "T0.5" },
   },
   [22013] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET", tier = "T0.5" },
   },
   [22015] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET", tier = "T0.5" },
   },
   [22016] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET", tier = "T0.5" },
   },
   [22017] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET", tier = "T0.5" },
   },
   [22060] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET", tier = "T0.5" },
   },
   [22061] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_HUNTER_SET", tier = "T0.5" },
   },
   [22062] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET", tier = "T0.5" },
   },
   [22063] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET", tier = "T0.5" },
   },
   [22064] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET", tier = "T0.5" },
   },
   [22065] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET", tier = "T0.5" },
   },
   [22066] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET", tier = "T0.5" },
   },
   [22067] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET", tier = "T0.5" },
   },
   [22068] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET", tier = "T0.5" },
   },
   [22069] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_MAGE_SET", tier = "T0.5" },
   },
   [22070] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET", tier = "T0.5" },
   },
   [22071] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET", tier = "T0.5" },
   },
   [22072] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET", tier = "T0.5" },
   },
   [22073] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET", tier = "T0.5" },
   },
   [22074] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET", tier = "T0.5" },
   },
   [22075] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET", tier = "T0.5" },
   },
   [22076] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET", tier = "T0.5" },
   },
   [22077] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_WARLOCK_SET", tier = "T0.5" },
   },
   [22078] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET", tier = "T0.5" },
   },
   [22079] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET", tier = "T0.5" },
   },
   [22080] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET", tier = "T0.5" },
   },
   [22081] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET", tier = "T0.5" },
   },
   [22082] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET", tier = "T0.5" },
   },
   [22083] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET", tier = "T0.5" },
   },
   [22084] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET", tier = "T0.5" },
   },
   [22085] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PRIEST_SET", tier = "T0.5" },
   },
   [22086] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET", tier = "T0.5" },
   },
   [22087] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET", tier = "T0.5" },
   },
   [22088] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET", tier = "T0.5" },
   },
   [22089] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET", tier = "T0.5" },
   },
   [22090] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET", tier = "T0.5" },
   },
   [22091] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET", tier = "T0.5" },
   },
   [22092] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET", tier = "T0.5" },
   },
   [22093] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_PALADIN_SET", tier = "T0.5" },
   },
   [22095] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET", tier = "T0.5" },
   },
   [22096] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET", tier = "T0.5" },
   },
   [22097] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET", tier = "T0.5" },
   },
   [22098] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET", tier = "T0.5" },
   },
   [22099] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET", tier = "T0.5" },
   },
   [22100] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET", tier = "T0.5" },
   },
   [22101] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET", tier = "T0.5" },
   },
   [22102] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_SHAMAN_SET", tier = "T0.5" },
   },
   [22106] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET", tier = "T0.5" },
   },
   [22107] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET", tier = "T0.5" },
   },
   [22108] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET", tier = "T0.5" },
   },
   [22109] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET", tier = "T0.5" },
   },
   [22110] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET", tier = "T0.5" },
   },
   [22111] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET", tier = "T0.5" },
   },
   [22112] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET", tier = "T0.5" },
   },
   [22113] = {
-    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_0_5_QUESTS_DRUID_SET", tier = "T0.5" },
   },
   [22114] = {
     { kind = "DROP", source = "BLIZZARD_COLLECTABLES_CHRISTMAS_GIFT_2006" },
@@ -2529,220 +2529,220 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "LOVE_IS_IN_THE_AIR_QUEST_REWARDS" },
   },
   [22416] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET", tier = "T3" },
   },
   [22417] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET", tier = "T3" },
   },
   [22418] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET", tier = "T3" },
   },
   [22419] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET", tier = "T3" },
   },
   [22420] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET", tier = "T3" },
   },
   [22421] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET", tier = "T3" },
   },
   [22422] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET", tier = "T3" },
   },
   [22423] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET", tier = "T3" },
   },
   [22424] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET", tier = "T3" },
   },
   [22425] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET", tier = "T3" },
   },
   [22426] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET", tier = "T3" },
   },
   [22427] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET", tier = "T3" },
   },
   [22428] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET", tier = "T3" },
   },
   [22429] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET", tier = "T3" },
   },
   [22430] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET", tier = "T3" },
   },
   [22431] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET", tier = "T3" },
   },
   [22436] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET", tier = "T3" },
   },
   [22437] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET", tier = "T3" },
   },
   [22438] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET", tier = "T3" },
   },
   [22439] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET", tier = "T3" },
   },
   [22440] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET", tier = "T3" },
   },
   [22441] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET", tier = "T3" },
   },
   [22442] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET", tier = "T3" },
   },
   [22443] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET", tier = "T3" },
   },
   [22464] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET", tier = "T3" },
   },
   [22465] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET", tier = "T3" },
   },
   [22466] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET", tier = "T3" },
   },
   [22467] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET", tier = "T3" },
   },
   [22468] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET", tier = "T3" },
   },
   [22469] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET", tier = "T3" },
   },
   [22470] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET", tier = "T3" },
   },
   [22471] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET", tier = "T3" },
   },
   [22476] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET", tier = "T3" },
   },
   [22477] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET", tier = "T3" },
   },
   [22478] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET", tier = "T3" },
   },
   [22479] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET", tier = "T3" },
   },
   [22480] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET", tier = "T3" },
   },
   [22481] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET", tier = "T3" },
   },
   [22482] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET", tier = "T3" },
   },
   [22483] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET", tier = "T3" },
   },
   [22488] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET", tier = "T3" },
   },
   [22489] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET", tier = "T3" },
   },
   [22490] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET", tier = "T3" },
   },
   [22491] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET", tier = "T3" },
   },
   [22492] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET", tier = "T3" },
   },
   [22493] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET", tier = "T3" },
   },
   [22494] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET", tier = "T3" },
   },
   [22495] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET", tier = "T3" },
   },
   [22496] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET", tier = "T3" },
   },
   [22497] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET", tier = "T3" },
   },
   [22498] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET", tier = "T3" },
   },
   [22499] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET", tier = "T3" },
   },
   [22500] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET", tier = "T3" },
   },
   [22501] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET", tier = "T3" },
   },
   [22502] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET", tier = "T3" },
   },
   [22503] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET", tier = "T3" },
   },
   [22504] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET", tier = "T3" },
   },
   [22505] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET", tier = "T3" },
   },
   [22506] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET", tier = "T3" },
   },
   [22507] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET", tier = "T3" },
   },
   [22508] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET", tier = "T3" },
   },
   [22509] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET", tier = "T3" },
   },
   [22510] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET", tier = "T3" },
   },
   [22511] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET", tier = "T3" },
   },
   [22512] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET", tier = "T3" },
   },
   [22513] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET", tier = "T3" },
   },
   [22514] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET", tier = "T3" },
   },
   [22515] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET", tier = "T3" },
   },
   [22516] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET", tier = "T3" },
   },
   [22517] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET", tier = "T3" },
   },
   [22518] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET", tier = "T3" },
   },
   [22519] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET", tier = "T3" },
   },
   [22651] = {
     { kind = "DROP", source = "WARSONG_GULCH_LV_60_REWARDS_HORDE_" },
@@ -2892,31 +2892,31 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "CHILDREN_S_WEEK_AZEROTH" },
   },
   [23059] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARRIOR_SET", tier = "T3" },
   },
   [23060] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_ROGUE_SET", tier = "T3" },
   },
   [23061] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PRIEST_SET", tier = "T3" },
   },
   [23062] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_MAGE_SET", tier = "T3" },
   },
   [23063] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_WARLOCK_SET", tier = "T3" },
   },
   [23064] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_DRUID_SET", tier = "T3" },
   },
   [23065] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_SHAMAN_SET", tier = "T3" },
   },
   [23066] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_PALADIN_SET", tier = "T3" },
   },
   [23067] = {
-    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET" },
+    { kind = "DROP", source = "TIER_3_TOKENS_HUNTER_SET", tier = "T3" },
   },
   [23078] = {
     { kind = "DROP", source = "SCOURGE_INVASION_PLATE_SET" },
@@ -3908,259 +3908,259 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "LEVEL_70_HONOR_PVP_WEAPONS_ALLIANCE_" },
   },
   [28963] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [28964] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [28966] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [28967] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [28968] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29011] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29012] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29015] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29016] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29017] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29019] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29020] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29021] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29022] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29023] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29028] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29029] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29030] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29031] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29032] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29033] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29034] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29035] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29036] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29037] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29038] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29039] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29040] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29042] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29043] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29044] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29045] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29046] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29047] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29048] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29049] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29050] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29053] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29054] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29055] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29056] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29057] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29058] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29059] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29060] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29061] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29062] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29063] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29064] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29065] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29066] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29067] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29068] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29069] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29070] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29071] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29072] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29073] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29074] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29075] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29076] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29077] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29078] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29079] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29080] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29081] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29082] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29083] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29084] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29085] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29086] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29087] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29088] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29089] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29090] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29091] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29092] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29093] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29094] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29095] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29096] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_MAGTHERIDON_MAGTHERIDON_S_LAIR_", tier = "T4" },
   },
   [29097] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_THE_CURATOR_KARAZHAN_", tier = "T4" },
   },
   [29098] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_PRINCE_MALCHEZAAR_KARAZHAN_", tier = "T4" },
   },
   [29099] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_GRUUL_THE_DRAGONKILLER_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29100] = {
-    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_" },
+    { kind = "DROP", source = "TIER_4_TOKENS_HIGH_KING_MAULGAR_GRUUL_S_LAIR_", tier = "T4" },
   },
   [29228] = {
     { kind = "DROP", source = "WORLD_PVP_HALAA_NAGRAND_" },
@@ -4355,175 +4355,175 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "LEVEL_60_HONOR_PVP_PALADIN_SET" },
   },
   [30113] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30114] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30115] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30116] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30117] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30118] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30119] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30120] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30121] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30122] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30123] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30124] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30125] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30126] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30127] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30129] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30130] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30131] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30132] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30133] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30134] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30135] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30136] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30137] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30138] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30139] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30140] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30141] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30142] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30143] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30144] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30145] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30146] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30148] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30149] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30150] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30151] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30152] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30153] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30154] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30159] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30160] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30161] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30162] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30163] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30164] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30165] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30166] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30167] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30168] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30169] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30170] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30171] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30172] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30173] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30183] = {
     { kind = "DROP", source = "HEROIC_MODE_TOKENS_ACCESSORIES_SHATTRATH_CITY_" },
   },
   [30185] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30186] = {
     { kind = "DROP", source = "ARENA_SEASON_1_WARLOCK_SET" },
@@ -4535,19 +4535,19 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ARENA_SEASON_1_WARLOCK_SET" },
   },
   [30189] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30190] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30192] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30194] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30196] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30200] = {
     { kind = "DROP", source = "ARENA_SEASON_1_WARLOCK_SET" },
@@ -4556,76 +4556,76 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ARENA_SEASON_1_WARLOCK_SET" },
   },
   [30205] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30206] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30207] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30210] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30211] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30212] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30213] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30214] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30215] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30216] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30217] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30219] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30220] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30221] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30222] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30223] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30228] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30229] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30230] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30231] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_KAEL_THAS_SUNSTRIDER_THE_EYE_", tier = "T5" },
   },
   [30232] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LEOTHERAS_THE_BLIND_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30233] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_LADY_VASHJ_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30234] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_FATHOM_LORD_KARATHRESS_SERPENTSHRINE_CAVERN_", tier = "T5" },
   },
   [30235] = {
-    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_" },
+    { kind = "DROP", source = "TIER_5_TOKENS_VOID_REAVER_THE_EYE_", tier = "T5" },
   },
   [30343] = {
     { kind = "DROP", source = "LEVEL_70_HONOR_PVP_ACCESSORIES_HORDE_" },
@@ -4751,259 +4751,259 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "HEROIC_MODE_TOKENS_FIRE_RESISTANCE_GEAR" },
   },
   [30969] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [30970] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [30972] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [30974] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [30975] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [30976] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [30977] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [30978] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [30979] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [30980] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [30982] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [30983] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [30985] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [30987] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [30988] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [30989] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [30990] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [30991] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [30992] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [30993] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [30994] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [30995] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [30996] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [30997] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [30998] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [31001] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31003] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31004] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [31005] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [31006] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [31007] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31008] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31011] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31012] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31014] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31015] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31016] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [31017] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [31018] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [31019] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [31020] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [31021] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [31022] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [31023] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [31024] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [31026] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31027] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31028] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [31029] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [31030] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [31032] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31034] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31035] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31037] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31039] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31040] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31041] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [31042] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [31043] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [31044] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [31045] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [31046] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [31047] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [31048] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [31049] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [31050] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31051] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31052] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [31053] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [31054] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [31055] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31056] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31057] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [31058] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [31059] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [31060] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31061] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_AZGALOR_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31063] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31064] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ARCHIMONDE_HYJAL_SUMMIT_", tier = "T6" },
   },
   [31065] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [31066] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_ILLIDAN_STORMRAGE_BLACK_TEMPLE_", tier = "T6" },
   },
   [31067] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [31068] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_THE_ILLIDARI_COUNCIL_BLACK_TEMPLE_", tier = "T6" },
   },
   [31069] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [31070] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_MOTHER_SHAHRAZ_BLACK_TEMPLE_", tier = "T6" },
   },
   [31318] = {
     { kind = "DROP", source = "WORLD_DROPS_LEVEL_70" },
@@ -6976,67 +6976,67 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "FEAST_OF_WINTER_VEIL_WINTER_VEIL_GIFT" },
   },
   [34431] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34432] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34433] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34434] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34435] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34436] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34437] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34438] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34439] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34441] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34442] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34443] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34444] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34445] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34446] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34447] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34448] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_KALECGOS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34480] = {
     { kind = "DROP", source = "LOVE_IS_IN_THE_AIR_GIFT_OF_ADORATION" },
   },
   [34485] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34487] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34488] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34492] = {
     { kind = "DROP", source = "UPPER_DECK_LOOT_CARD_ITEMS" },
@@ -7048,10 +7048,10 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "UPPER_DECK_LOOT_CARD_ITEMS" },
   },
   [34527] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34528] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34529] = {
     { kind = "DROP", source = "ARENA_SEASON_3_WEAPONS" },
@@ -7063,91 +7063,91 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ARENA_SEASON_3_WEAPONS" },
   },
   [34541] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34542] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34543] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34545] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34546] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34547] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34549] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34554] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34555] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34556] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34557] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34558] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_BRUTALLUS_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34559] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34560] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34561] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34562] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34563] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34564] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34565] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34566] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34567] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34568] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34569] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34570] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34571] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34572] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34573] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34574] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34575] = {
-    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_" },
+    { kind = "DROP", source = "TIER_6_TOKENS_FELMYST_SUNWELL_PLATEAU_", tier = "T6" },
   },
   [34576] = {
     { kind = "DROP", source = "LEVEL_70_HONOR_PVP_NON_SET_ACCESSORIES" },
@@ -10078,67 +10078,67 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_10N_TRASH_MOBS" },
   },
   [39491] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39492] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39493] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39494] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39495] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39496] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39497] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39498] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39499] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39500] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39514] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39515] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39517] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39518] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39519] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39521] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39523] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39528] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39529] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39530] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39531] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39534] = {
     { kind = "DROP", source = "HALLS_OF_LIGHTNING_IONAR" },
@@ -10150,226 +10150,226 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "HALLS_OF_LIGHTNING_IONAR" },
   },
   [39538] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39539] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39542] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39543] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39544] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39545] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39546] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39547] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39548] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39553] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39554] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39555] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39556] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39557] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39558] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39560] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39561] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39564] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39565] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39578] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39579] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39580] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39581] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39582] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39583] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39588] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39589] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39590] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39591] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39592] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39593] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39594] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39595] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39596] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39597] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39601] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39602] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39603] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39604] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39605] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39606] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39607] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39608] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39609] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39610] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39611] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39612] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39613] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39617] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39618] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39619] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39620] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39621] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39622] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39623] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39624] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39625] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39626] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39627] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39628] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39629] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39630] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39631] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39632] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39633] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39634] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39635] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39636] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39637] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39638] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39639] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39640] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39641] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39642] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39656] = {
     { kind = "DROP", source = "BLIZZARD_COLLECTABLES_WORLDWIDE_INVITATIONAL_PARIS_2008" },
@@ -11345,34 +11345,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_TRASH_MOBS" },
   },
   [40415] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40416] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40417] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40418] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40419] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40420] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40421] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40422] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40423] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40424] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40426] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
@@ -11415,23 +11415,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40445] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40446] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40447] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40448] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40449] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40450] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40451] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
@@ -11442,61 +11442,61 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40454] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40455] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
   },
   [40456] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40457] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40458] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40459] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40460] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40461] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40462] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40463] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40465] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40466] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40467] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40468] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40469] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40470] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40471] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40472] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40473] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40474] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_10N_MALYGOS" },
@@ -11517,112 +11517,112 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_10N_MALYGOS" },
   },
   [40493] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40494] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40495] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40496] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40497] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_10N_MALYGOS" },
   },
   [40499] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40500] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40502] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40503] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40504] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40505] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40506] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40507] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40508] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40509] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40510] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40511] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_10N_MALYGOS" },
   },
   [40512] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40513] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40514] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40515] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40516] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40517] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40518] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40519] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_10N_MALYGOS" },
   },
   [40520] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40521] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40522] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40523] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40524] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40525] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40526] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_10N_MALYGOS" },
   },
   [40527] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40528] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40529] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40530] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40531] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
@@ -11645,49 +11645,49 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40544] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40545] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40546] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40547] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40548] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40549] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40550] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40552] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40554] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40555] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40556] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40557] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40558] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40559] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40560] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
@@ -11702,69 +11702,69 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40563] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40564] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40565] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40566] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40567] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40568] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40569] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40570] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40571] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40572] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40573] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40574] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40575] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40576] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40577] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40578] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40579] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [40580] = {
-    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40581] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40583] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
   },
   [40584] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
+    { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40588] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
@@ -14594,7 +14594,7 @@ BisTooltip_ItemAcquisition = {
   },
   [45262] = {
     { kind = "DROP", source = "ULDUAR_25N_KOLOGARN" },
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45263] = {
@@ -14800,289 +14800,289 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45335] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45336] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45337] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45338] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45339] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45340] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45341] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45342] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45343] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45344] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45345] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45346] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45347] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45348] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45349] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45351] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45352] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45353] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45354] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45355] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45356] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45357] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45358] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45359] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45360] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45361] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45363] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45364] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45365] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45367] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45368] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45369] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45370] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45371] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45372] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45373] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45374] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45375] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45376] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45377] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45378] = {
     { kind = "DROP", source = "ULDUAR_10N_IRON_COUNCIL" },
   },
   [45379] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45380] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45381] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45382] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45383] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45384] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45385] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45386] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45387] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45388] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45389] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45390] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45391] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45392] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45393] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45394] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45395] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45396] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45397] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45398] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45399] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45400] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45401] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45402] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45403] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45404] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45405] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45406] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45408] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45409] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45410] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45411] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45412] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45413] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45414] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45415] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45416] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45417] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45418] = {
     { kind = "DROP", source = "ULDUAR_10N_IRON_COUNCIL" },
   },
   [45419] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45420] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45421] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45422] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45423] = {
     { kind = "DROP", source = "ULDUAR_10N_IRON_COUNCIL" },
   },
   [45424] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45425] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45426] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45427] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45428] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45429] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45430] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45431] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45432] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45433] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45434] = {
     { kind = "DROP", source = "ULDUAR_25N_AURIAYA" },
@@ -16242,302 +16242,302 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_FREYA" },
   },
   [46111] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46113] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46115] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46116] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46117] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46118] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46119] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46120] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46121] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46122] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46123] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46124] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46125] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46126] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46127] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46129] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46130] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46131] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [46132] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46133] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46134] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46135] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46136] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46137] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46138] = {
     { kind = "DROP", source = "ULDUAR_25N_TRASH_MOBS" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Conquest", amount = 19 } } },
   },
   [46139] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46140] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46141] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46142] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46143] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46144] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46145] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46146] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46148] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46149] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46150] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46151] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46152] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46153] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46154] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46155] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46156] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46157] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46158] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46159] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46160] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46161] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46162] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46163] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46164] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46165] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46166] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46167] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46168] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46169] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46170] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46172] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46173] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46174] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46175] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46176] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46177] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46178] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46179] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46180] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46181] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46182] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46183] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46184] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46185] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46186] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46187] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46188] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46189] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46190] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46191] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46192] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46193] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46194] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46195] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46196] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46197] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46198] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46199] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46200] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46201] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46202] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46203] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46204] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46205] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46206] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46207] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
   },
   [46208] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46209] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46210] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
   },
   [46211] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46212] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46312] = {
     { kind = "DROP", source = "ULDUAR_10HC_YOGG_SARON" },
   },
   [46313] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [46320] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
@@ -18345,19 +18345,19 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
   },
   [47748] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47749] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47750] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47751] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47752] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47753] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -18375,34 +18375,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [47758] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47759] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47760] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47761] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47762] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47763] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47764] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47765] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47766] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47767] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47768] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -18420,19 +18420,19 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [47773] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47774] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47775] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47776] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47777] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47778] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -18450,64 +18450,64 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [47783] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47784] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47785] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47786] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47787] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47788] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47789] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47790] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47791] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47792] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47793] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47794] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47795] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47796] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47797] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47798] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47799] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47800] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47801] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47802] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47803] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -18768,7 +18768,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
   },
   [47914] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47915] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
@@ -18834,7 +18834,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
   },
   [47936] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47937] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
@@ -18966,13 +18966,13 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
   },
   [47980] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47981] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47982] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47983] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19113,31 +19113,31 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
   },
   [48029] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48030] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
   },
   [48031] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48032] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
   },
   [48033] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48034] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
   },
   [48035] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48036] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
   },
   [48037] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48038] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
@@ -19197,19 +19197,19 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
   },
   [48057] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48058] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48059] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48060] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48061] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48062] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19227,34 +19227,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48067] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48068] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48069] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48070] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48071] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48072] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48073] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48074] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48075] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48076] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48077] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19272,34 +19272,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48082] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48083] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48084] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48085] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48086] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48087] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48088] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48089] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48090] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48091] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48092] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19317,34 +19317,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48097] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48098] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48099] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48100] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48101] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48102] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48129] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48130] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48131] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48132] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48133] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19362,34 +19362,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48138] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48139] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48140] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48141] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48142] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48143] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48144] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48145] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48146] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48147] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48148] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19407,34 +19407,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48153] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48154] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48155] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48156] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48157] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48158] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48159] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48160] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48161] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48162] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48163] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19452,34 +19452,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48168] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48169] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48170] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48171] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48172] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48173] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48174] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48175] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48176] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48177] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48178] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19497,34 +19497,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48183] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48184] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48185] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48186] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48187] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48188] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48189] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48190] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48191] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48192] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48193] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19542,34 +19542,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48198] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48199] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48200] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48201] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48202] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48203] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48204] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48205] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48206] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48207] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48208] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19587,34 +19587,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48213] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48214] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48215] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48216] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48217] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48218] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48219] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48220] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48221] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48222] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48223] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19632,34 +19632,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48228] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48229] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48230] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48231] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48232] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48233] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48234] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48235] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48236] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48237] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48238] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19677,34 +19677,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48243] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48244] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48245] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48246] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48247] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48250] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48251] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48252] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48253] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48254] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48255] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19722,34 +19722,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48260] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48261] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48262] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48263] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48264] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48265] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48266] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48267] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48268] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48269] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48270] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19767,34 +19767,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48275] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48276] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48277] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48278] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48279] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48280] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48281] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48282] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48283] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48284] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48285] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19812,34 +19812,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48290] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48291] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48292] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48293] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48294] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48295] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48296] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48297] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48298] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48299] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48300] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19857,34 +19857,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48305] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48306] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48307] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48308] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48309] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48310] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48312] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48313] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48314] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48315] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48316] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19902,34 +19902,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48321] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48322] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48323] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48324] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48325] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48326] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48327] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48328] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48329] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48330] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48331] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19947,34 +19947,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48336] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48337] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48338] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48339] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48340] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48341] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48342] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48343] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48344] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48345] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48346] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -19992,34 +19992,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48351] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48352] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48353] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48354] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48355] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48356] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48357] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48358] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48359] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48360] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48361] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -20037,34 +20037,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48366] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48367] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48368] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48369] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48370] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48371] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48372] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48373] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48374] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48375] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48376] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -20082,34 +20082,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48381] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48382] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48383] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48384] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48385] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48386] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48387] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48388] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48389] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48390] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48391] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -20127,82 +20127,82 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48396] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48397] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48398] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48399] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48400] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48418] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
   },
   [48429] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48430] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48433] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48436] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48445] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48446] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48447] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48448] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48449] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48450] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48451] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48452] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48453] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48454] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48455] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48456] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48457] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48458] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48459] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48460] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48461] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -20220,34 +20220,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48466] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48467] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48468] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48469] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48470] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48472] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48474] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48476] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48478] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48480] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48481] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -20265,34 +20265,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48486] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48487] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48488] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48489] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48490] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48491] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48492] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48493] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48494] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48495] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48496] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -20310,34 +20310,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48501] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48502] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48503] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48504] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48505] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48529] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48531] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48533] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48535] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48537] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48538] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -20355,34 +20355,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48543] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48544] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48545] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48546] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48547] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48548] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48549] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48550] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48551] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48552] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48553] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -20400,34 +20400,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48558] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48559] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48560] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48561] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48562] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48564] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48566] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48568] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48572] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48574] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48575] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -20445,34 +20445,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48580] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48581] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48582] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48583] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48584] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48585] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48586] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48587] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48588] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48589] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48590] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -20490,34 +20490,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48595] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48596] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48597] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48598] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48599] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48602] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48603] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48604] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48605] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48606] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48607] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -20535,34 +20535,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48612] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48613] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48614] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48615] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48616] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48617] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48618] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48619] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48620] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48621] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48622] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -20580,34 +20580,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48627] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48628] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48629] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48630] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48631] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48632] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48633] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48634] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48635] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48636] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48637] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -20625,49 +20625,49 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [48642] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48643] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48644] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48645] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48646] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48647] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48648] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48649] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48650] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48651] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48652] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48653] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48654] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48655] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48656] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH" },
+    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48657] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 50 } } },
@@ -21579,101 +21579,101 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25N_BLOOD_PRINCES" },
   },
   [50078] = {
-    { kind = "DROP", source = "TIER_10_WARRIOR_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARRIOR_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50079] = {
-    { kind = "DROP", source = "TIER_10_WARRIOR_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARRIOR_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50080] = {
-    { kind = "DROP", source = "TIER_10_WARRIOR_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARRIOR_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50081] = {
-    { kind = "DROP", source = "TIER_10_WARRIOR_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARRIOR_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50082] = {
-    { kind = "DROP", source = "TIER_10_WARRIOR_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARRIOR_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50086] = {
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50087] = {
-    { kind = "DROP", source = "TIER_10_ROGUE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_ROGUE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50088] = {
-    { kind = "DROP", source = "TIER_10_ROGUE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_ROGUE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50089] = {
-    { kind = "DROP", source = "TIER_10_ROGUE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_ROGUE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50090] = {
-    { kind = "DROP", source = "TIER_10_ROGUE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_ROGUE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50094] = {
-    { kind = "DROP", source = "TIER_10_DK_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DK_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50095] = {
-    { kind = "DROP", source = "TIER_10_DK_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DK_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50096] = {
-    { kind = "DROP", source = "TIER_10_DK_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DK_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50097] = {
-    { kind = "DROP", source = "TIER_10_DK_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DK_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50098] = {
-    { kind = "DROP", source = "TIER_10_DK_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DK_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50105] = {
-    { kind = "DROP", source = "TIER_10_ROGUE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_ROGUE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50106] = {
-    { kind = "DROP", source = "TIER_10_DRUID_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50107] = {
-    { kind = "DROP", source = "TIER_10_DRUID_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50108] = {
-    { kind = "DROP", source = "TIER_10_DRUID_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50109] = {
-    { kind = "DROP", source = "TIER_10_DRUID_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50113] = {
-    { kind = "DROP", source = "TIER_10_DRUID_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50114] = {
-    { kind = "DROP", source = "TIER_10_HUNTER_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_HUNTER_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50115] = {
-    { kind = "DROP", source = "TIER_10_HUNTER_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_HUNTER_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50116] = {
-    { kind = "DROP", source = "TIER_10_HUNTER_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_HUNTER_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50117] = {
-    { kind = "DROP", source = "TIER_10_HUNTER_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_HUNTER_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50118] = {
-    { kind = "DROP", source = "TIER_10_HUNTER_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_HUNTER_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50169] = {
     { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_BRONJAHM" },
@@ -21832,23 +21832,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "PIT_OF_SARON_H_KRICK_AND_ICK" },
   },
   [50240] = {
-    { kind = "DROP", source = "TIER_10_WARLOCK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARLOCK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50241] = {
-    { kind = "DROP", source = "TIER_10_WARLOCK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARLOCK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50242] = {
-    { kind = "DROP", source = "TIER_10_WARLOCK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARLOCK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50243] = {
-    { kind = "DROP", source = "TIER_10_WARLOCK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARLOCK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50244] = {
-    { kind = "DROP", source = "TIER_10_WARLOCK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARLOCK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50259] = {
@@ -21905,23 +21905,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG" },
   },
   [50275] = {
-    { kind = "DROP", source = "TIER_10_MAGE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_MAGE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50276] = {
-    { kind = "DROP", source = "TIER_10_MAGE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_MAGE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50277] = {
-    { kind = "DROP", source = "TIER_10_MAGE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_MAGE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50278] = {
-    { kind = "DROP", source = "TIER_10_MAGE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_MAGE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50279] = {
-    { kind = "DROP", source = "TIER_10_MAGE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_MAGE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50283] = {
@@ -22029,19 +22029,19 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_TRASH_MOBS" },
   },
   [50324] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50325] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50326] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50327] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50328] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50333] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG" },
@@ -22159,23 +22159,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "THE_ASHEN_VERDICT_HONORED" },
   },
   [50391] = {
-    { kind = "DROP", source = "TIER_10_PRIEST_SHADOW_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PRIEST_SHADOW_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50392] = {
-    { kind = "DROP", source = "TIER_10_PRIEST_SHADOW_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PRIEST_SHADOW_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50393] = {
-    { kind = "DROP", source = "TIER_10_PRIEST_SHADOW_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PRIEST_SHADOW_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50394] = {
-    { kind = "DROP", source = "TIER_10_PRIEST_SHADOW_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PRIEST_SHADOW_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50396] = {
-    { kind = "DROP", source = "TIER_10_PRIEST_SHADOW_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PRIEST_SHADOW_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50397] = {
@@ -22735,19 +22735,19 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ICECROWN_CITADEL_10N_LORD_MARROWGAR" },
   },
   [50765] = {
-    { kind = "DROP", source = "TIER_10_PRIEST_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PRIEST_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50766] = {
-    { kind = "DROP", source = "TIER_10_PRIEST_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PRIEST_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50767] = {
-    { kind = "DROP", source = "TIER_10_PRIEST_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PRIEST_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50768] = {
-    { kind = "DROP", source = "TIER_10_PRIEST_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PRIEST_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50769] = {
-    { kind = "DROP", source = "TIER_10_PRIEST_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PRIEST_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50771] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_10N_LORD_MARROWGAR" },
@@ -22876,112 +22876,112 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ICECROWN_CITADEL_10N_FESTERGUT" },
   },
   [50819] = {
-    { kind = "DROP", source = "TIER_10_DRUID_BALANCE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_BALANCE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50820] = {
-    { kind = "DROP", source = "TIER_10_DRUID_BALANCE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_BALANCE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50821] = {
-    { kind = "DROP", source = "TIER_10_DRUID_BALANCE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_BALANCE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50822] = {
-    { kind = "DROP", source = "TIER_10_DRUID_BALANCE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_BALANCE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50823] = {
-    { kind = "DROP", source = "TIER_10_DRUID_BALANCE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_BALANCE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50824] = {
-    { kind = "DROP", source = "TIER_10_DRUID_FERAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_FERAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50825] = {
-    { kind = "DROP", source = "TIER_10_DRUID_FERAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_FERAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50826] = {
-    { kind = "DROP", source = "TIER_10_DRUID_FERAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_FERAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50827] = {
-    { kind = "DROP", source = "TIER_10_DRUID_FERAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_FERAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50828] = {
-    { kind = "DROP", source = "TIER_10_DRUID_FERAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DRUID_FERAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50830] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_ENHANCEMENT_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_ENHANCEMENT_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50831] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_ENHANCEMENT_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_ENHANCEMENT_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50832] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_ENHANCEMENT_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_ENHANCEMENT_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50833] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_ENHANCEMENT_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_ENHANCEMENT_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50834] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_ENHANCEMENT_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_ENHANCEMENT_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50835] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50836] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50837] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50838] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50839] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50841] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_ELEMENTAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_ELEMENTAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50842] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_ELEMENTAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_ELEMENTAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50843] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_ELEMENTAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_ELEMENTAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50844] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_ELEMENTAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_ELEMENTAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50845] = {
-    { kind = "DROP", source = "TIER_10_SHAMAN_ELEMENTAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_SHAMAN_ELEMENTAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50846] = {
-    { kind = "DROP", source = "TIER_10_WARRIOR_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARRIOR_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50847] = {
-    { kind = "DROP", source = "TIER_10_WARRIOR_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARRIOR_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50848] = {
-    { kind = "DROP", source = "TIER_10_WARRIOR_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARRIOR_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50849] = {
-    { kind = "DROP", source = "TIER_10_WARRIOR_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARRIOR_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50850] = {
-    { kind = "DROP", source = "TIER_10_WARRIOR_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_WARRIOR_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50852] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_10N_FESTERGUT" },
   },
   [50853] = {
-    { kind = "DROP", source = "TIER_10_DK_TANK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DK_TANK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50854] = {
-    { kind = "DROP", source = "TIER_10_DK_TANK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DK_TANK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50855] = {
-    { kind = "DROP", source = "TIER_10_DK_TANK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DK_TANK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50856] = {
-    { kind = "DROP", source = "TIER_10_DK_TANK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DK_TANK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50857] = {
-    { kind = "DROP", source = "TIER_10_DK_TANK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_DK_TANK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50858] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_10N_FESTERGUT" },
@@ -22990,34 +22990,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ICECROWN_CITADEL_10N_FESTERGUT" },
   },
   [50860] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50861] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50862] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50863] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50864] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50865] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50866] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50867] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50868] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50869] = {
-    { kind = "DROP", source = "TIER_10_PALADIN_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST" },
+    { kind = "DROP", source = "TIER_10_PALADIN_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50965] = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
@@ -23207,623 +23207,623 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ICECROWN_CITADEL_10N_SINDRAGOSA" },
   },
   [51125] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51126] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51127] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51128] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51129] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51130] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51131] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51132] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51133] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51134] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51135] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51136] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51137] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51138] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51139] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51140] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51141] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51142] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51143] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51144] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51145] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51146] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51147] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51148] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51149] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51150] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51151] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51152] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51153] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51154] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51155] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51156] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51157] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51158] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51159] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51160] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51161] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51162] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51163] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51164] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51165] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51166] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51167] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51168] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51169] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51170] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51171] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51172] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51173] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51174] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51175] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51176] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51177] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51178] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51179] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51180] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51181] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51182] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51183] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51184] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51185] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51186] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51187] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51188] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51189] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51190] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51191] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51192] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51193] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51194] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51195] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51196] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51197] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51198] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51199] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51200] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51201] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51202] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51203] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51204] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51205] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51206] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51207] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51208] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51209] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51210] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51211] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51212] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51213] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51214] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51215] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51216] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51217] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51218] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
   },
   [51219] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25N_MARK", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51220] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51221] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51222] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51223] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51224] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51225] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51226] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51227] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51228] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51229] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51230] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51231] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51232] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51233] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51234] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51235] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51236] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51237] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51238] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51239] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51240] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51241] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51242] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51243] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51244] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51245] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51246] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51247] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51248] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51249] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51250] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51251] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51252] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51253] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51254] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51255] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51256] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51257] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51258] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51259] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51260] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51261] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51262] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51263] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51264] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51265] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51266] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51267] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51268] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51269] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51270] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51271] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51272] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51273] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51274] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51275] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51276] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51277] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51278] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51279] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51280] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51281] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51282] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51283] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51284] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51285] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51286] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51287] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51288] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51289] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51290] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51291] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51292] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51293] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51294] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51295] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51296] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51297] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51298] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51299] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51300] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51301] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51302] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51303] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51304] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51305] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51306] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51307] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51308] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51309] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
   },
   [51310] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51311] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51312] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51313] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51314] = {
-    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC" },
+    { kind = "DROP", source = "ICECROWN_CITADEL_25HC_MARK_HC", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51325] = {

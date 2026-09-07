@@ -402,7 +402,12 @@ function BistooltipAddon:GetItemSourceInfo(itemId)
   if not e then return nil, nil end
   if e.kind == "DROP" or e.kind == "TOKEN" or e.kind == "MARK" then
     local s = (BisTooltip_SourceRegistry or {})[e.source]
-    if s then return s.instance .. " [" .. s.difficulty .. "]", s.boss end
+    if s then
+      if s.difficulty and s.difficulty ~= "" then
+        return s.instance .. " [" .. s.difficulty .. "]", s.boss
+      end
+      return s.instance, s.boss
+    end
   end
   return nil, nil
 end

@@ -23,7 +23,12 @@ function BisTooltip_FormatSource(entry)
     if entry.source and not warned[entry.source] then warned[entry.source] = true end
     return nil
   end
-  if entry.kind == "DROP" then return s.instance .. " [" .. s.difficulty .. "] - " .. s.boss end
+  if entry.kind == "DROP" then
+    if s.difficulty and s.difficulty ~= "" then
+      return s.instance .. " [" .. s.difficulty .. "] - " .. s.boss
+    end
+    return s.instance .. " - " .. s.boss
+  end
   if entry.kind == "TOKEN" or entry.kind == "MARK" then
     return entry.tier .. " - " .. entry.kind .. ": " .. entry.family
       .. " [" .. s.instance .. ": " .. s.boss .. " <" .. s.difficulty .. ">]"

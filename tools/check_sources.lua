@@ -7,6 +7,10 @@ assert(n > 1000, "expected >1000 acquired items, got " .. n)
 for id, entries in pairs(acq) do
   for _, e in ipairs(entries) do
     if e.source then assert(reg[e.source], "dangling sourceID " .. tostring(e.source) .. " on item " .. id) end
+    -- R5-A: DROP entries may carry an optional tier stamp (ex-Tier-zone origin)
+    if e.kind == "DROP" and e.tier ~= nil then
+      assert(type(e.tier) == "string" and e.tier ~= "", "DROP with bad tier on item " .. id)
+    end
   end
 end
 print("smoke: OK (" .. n .. " items)")
