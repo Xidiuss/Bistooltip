@@ -389,90 +389,22 @@ function searchIDInBislistsClassSpec(structure, id, class, spec, filterByBlocked
 end
 
 -- ============================================================
--- DataStore Integration
+-- New source model (O(1) ItemAcquisition -> SourceRegistry)
 -- ============================================================
 
-local function getDataStoreInventory()
-    if _G.DataStore_Inventory then
-        return _G.DataStore_Inventory
-    end
-    local ok, AceAddon = pcall(LibStub, "AceAddon-3.0")
-    if ok and AceAddon and AceAddon.GetAddon then
-        local ds = AceAddon:GetAddon("DataStore_Inventory", true)
-        if ds then return ds end
-    end
-    return nil
-end
-
-local function formatInstanceName(instance)
-    if not instance then return nil end
-    instance = tostring(instance)
-    local tmpInstance = string.lower(instance)
-
-    -- Normalize heroic labels to 25-man naming
-    if tmpInstance == "the obsidian sanctum (heroic)" then
-        instance = "The Obsidian Sanctum(25)"
-    elseif tmpInstance == "the eye of eternity (heroic)" then
-        instance = "The Eye Of Eternity (25)"
-    elseif tmpInstance == "naxxramas (heroic)" then
-        instance = "Naxxramas (25)"
-    elseif tmpInstance == "ulduar (heroic)" then
-        instance = "Ulduar (25)"
-    end
-
-    return instance
-end
-
-local function findSourceInLootTable(itemId)
-    local lt = rawget(_G, "lootTable")
-    if type(lt) ~= "table" then
-        lt = type(lootTable) == "table" and lootTable or nil
-    end
-    if type(lt) ~= "table" then
-        return nil, nil
-    end
-
-    for zone, bosses in pairs(lt) do
-        if type(bosses) == "table" then
-            for boss, items in pairs(bosses) do
-                if type(items) == "table" then
-                    for k, v in pairs(items) do
-                        if k == itemId or v == itemId then
-                            return formatInstanceName(zone), boss
-                        end
-                    end
-                end
-            end
-        end
-    end
-
-    return nil, nil
-end
-
 -- Public API used by Bislist: returns instance, boss
+-- O(1) shim over the new model: first acquisition entry -> registry facts.
+-- Signature unchanged; all existing call sites keep working untouched.
 function BistooltipAddon:GetItemSourceInfo(itemId)
-    if not itemId then return nil, nil end
-
-    self._sourceCache = self._sourceCache or {}
-    local cached = self._sourceCache[itemId]
-    if cached then
-        return cached[1], cached[2]
-    end
-
-    local zone, boss = findSourceInLootTable(itemId)
-
-    if not zone then
-        local DataStore_Inventory = getDataStoreInventory()
-        if DataStore_Inventory and DataStore_Inventory.GetSource then
-            local Instance, Boss = DataStore_Inventory:GetSource(itemId)
-            if Instance and Boss then
-                zone, boss = formatInstanceName(Instance), Boss
-            end
-        end
-    end
-
-    self._sourceCache[itemId] = { zone, boss }
-    return zone, boss
+  if not itemId then return nil, nil end
+  local entries = (BisTooltip_ItemAcquisition or {})[itemId]
+  local e = entries and entries[1] or nil
+  if not e then return nil, nil end
+  if e.kind == "DROP" or e.kind == "TOKEN" or e.kind == "MARK" then
+    local s = (BisTooltip_SourceRegistry or {})[e.source]
+    if s then return s.instance .. " [" .. s.difficulty .. "]", s.boss end
+  end
+  return nil, nil
 end
 
 local function GetItemSource(itemId)
@@ -497,76 +429,28 @@ local function GetOwnedInfo(itemId)
 end
 
 -- ============================================================
--- Dual Source Support (Boss + Emblems)
+-- Tooltip source lines (new model: one line per acquisition entry)
 -- ============================================================
 
 local function GetAllItemSources(itemId)
-    local sources = {}
-    if not itemId or itemId <= 0 then return sources end
-    
-    -- Get raid/dungeon source
-    if _G.BistooltipAddon and _G.BistooltipAddon.GetItemSourceInfo then
-        local zone, boss = _G.BistooltipAddon:GetItemSourceInfo(itemId)
-        if zone and boss then
-            local diffTag = nil
-            if Constants and Constants.GetInstanceDifficulty then
-                diffTag = Constants.GetInstanceDifficulty(zone)
-            end
-            table.insert(sources, {
-                type = "raid",
-                zone = zone,
-                boss = boss,
-                difficulty = diffTag,
-            })
-        end
-    end
-    
-    -- Check for emblem source
-    local emblemSource = nil
-    if _G.Bistooltip_emblem_items then
-        emblemSource = _G.Bistooltip_emblem_items[itemId]
-    end
-    if not emblemSource and Constants and Constants.GetEmblemSource then
-        emblemSource = Constants.GetEmblemSource(itemId)
-    end
-    
-    if emblemSource then
-        table.insert(sources, {
-            type = "emblem",
-            currency = emblemSource.currency or "Emblems",
-            cost = emblemSource.cost,
-        })
-    end
-    
-    return sources
-end
-
-local function FormatSourcesForTooltip(sources)
-    if not sources or #sources == 0 then return nil end
-    
     local lines = {}
-    
-    for _, src in ipairs(sources) do
-        if src.type == "raid" then
-            local text = "|cFF00FF00[" .. tostring(src.zone)
-            if src.difficulty then
-                text = text .. " " .. src.difficulty
-            end
-            text = text .. "]|r - |cFFFFD000" .. tostring(src.boss) .. "|r"
-            table.insert(lines, text)
-            
-        elseif src.type == "emblem" then
-            local emblemInfo = Constants and Constants.EMBLEM_VENDORS and Constants.EMBLEM_VENDORS[src.currency]
-            local color = emblemInfo and emblemInfo.color or "ff00ff"
-            local text = "|cff" .. color .. src.currency
-            if src.cost then
-                text = text .. " x" .. src.cost
-            end
-            text = text .. "|r"
-            table.insert(lines, text)
+    if not itemId or itemId <= 0 then return lines end
+    local entries = (BisTooltip_ItemAcquisition or {})[itemId]
+    if type(entries) ~= "table" then return lines end
+    local fmt = BisTooltip_FormatSource
+    if type(fmt) ~= "function" then return lines end
+
+    -- Multi-source items keep every line; dedup ONLY byte-identical
+    -- rendered lines (Saurfang vs Putricide stay separate).
+    local seen = {}
+    for _, e in ipairs(entries) do
+        local line = fmt(e)
+        if line and not seen[line] then
+            seen[line] = true
+            table.insert(lines, line)
         end
     end
-    
+
     return lines
 end
 
@@ -957,14 +841,13 @@ local function OnGameTooltipSetItem(tooltip)
 
     -- Item source (controlled by show_item_source setting)
     if BistooltipAddon.db.char.show_item_source then
-        local sources = GetAllItemSources(itemId)
-        local sourceLines = FormatSourcesForTooltip(sources)
+        local sourceLines = GetAllItemSources(itemId)
 
         if sourceLines and #sourceLines > 0 then
             tooltip:AddLine(" ", 1, 1, 0)
             tooltip:AddLine("|cFFFFFFFFSource:|r", 1, 1, 1)
             for _, line in ipairs(sourceLines) do
-                tooltip:AddLine("  " .. line, 1, 1, 1)
+                tooltip:AddLine("  |cFF00FF00" .. line .. "|r", 1, 1, 1)
             end
             tooltip:AddLine(" ", 1, 1, 0)
         end

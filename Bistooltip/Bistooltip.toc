@@ -40,6 +40,14 @@ Bistooltip_horde_to_ali.lua
 EmblemData.lua
 
 # ============================================================
+# New source model (canonical registry + acquisition + formatter)
+# Must load after Loot_Sources/EmblemData, before DataProvider.
+# ============================================================
+SourceRegistry.lua
+ItemAcquisition.lua
+SourceFormatter.lua
+
+# ============================================================
 # Core Framework (ORDER MATTERS!)
 # Load order: Utils -> Constants -> Data -> State -> Pools -> UI -> Core
 # ============================================================

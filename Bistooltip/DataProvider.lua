@@ -320,53 +320,71 @@ end
 -- Source Information
 -- ============================================================
 
+-- Item sources from the new model (O(1) acquisition -> registry facts).
+-- Each acquisition entry renders via BisTooltip_FormatSource; multi-source
+-- items keep every line, deduped ONLY on byte-identical rendered lines
+-- (Saurfang vs Putricide stay separate). Returned structs preserve the
+-- legacy {type,zone,boss,difficulty,currency,cost} shape so existing UI
+-- call sites (BislistUI, UIFramework, BuildChecklistGroups) keep working
+-- untouched; the rendered MASTER line rides along as .text.
 function BistooltipData.GetAllItemSources(itemId)
     if not itemId or itemId <= 0 then return {} end
-    
-    -- Check cache
-    if DataCache.sourceCache[itemId] then
-        return DataCache.sourceCache[itemId]
-    end
-    
+
+    local entries = (BisTooltip_ItemAcquisition or {})[itemId]
+    if type(entries) ~= "table" then return {} end
+    local reg = BisTooltip_SourceRegistry or {}
+    local fmt = BisTooltip_FormatSource
+    if type(fmt) ~= "function" then return {} end
+
     local sources = {}
-    
-    -- Raid/dungeon source
-    if _G.BistooltipAddon and _G.BistooltipAddon.GetItemSourceInfo then
-        local zone, boss = _G.BistooltipAddon:GetItemSourceInfo(itemId)
-        if zone and boss then
-            local difficulty = BistooltipData.GetInstanceDifficulty(zone)
-            table.insert(sources, {
-                type = "raid",
-                zone = zone,
-                boss = boss,
-                difficulty = difficulty,
-            })
+    local seen = {}
+
+    for _, e in ipairs(entries) do
+        if type(e) == "table" then
+            local line = fmt(e)
+            if line and not seen[line] then
+                seen[line] = true
+                local src = nil
+                if e.kind == "DROP" or e.kind == "TOKEN" or e.kind == "MARK" then
+                    local s = e.source and reg[e.source] or nil
+                    if s then
+                        src = {
+                            type = "raid",
+                            zone = s.instance .. " [" .. (s.difficulty or "") .. "]",
+                            boss = s.boss,
+                            difficulty = s.difficulty,
+                            text = line,
+                        }
+                    end
+                elseif e.kind == "VENDOR" then
+                    local currency, amount = nil, nil
+                    for _, c in ipairs(e.cost or {}) do
+                        if c.currency and not currency then
+                            currency, amount = c.currency, c.amount
+                        end
+                    end
+                    src = {
+                        type = "emblem",
+                        currency = currency or "Emblems",
+                        cost = amount,
+                        text = line,
+                    }
+                elseif e.kind == "CUSTOM" then
+                    src = {
+                        type = "custom",
+                        label = e.label,
+                        text = line,
+                    }
+                end
+                -- Entries with unknown sourceIDs render to nil and are
+                -- skipped here (dev warning is drained once in Core.lua).
+                if src then
+                    table.insert(sources, src)
+                end
+            end
         end
     end
-    
-    -- Emblem source
-    local emblemSource = nil
-    if _G.Bistooltip_emblem_items then
-        emblemSource = _G.Bistooltip_emblem_items[itemId]
-    end
-    if not emblemSource and Constants and Constants.EMBLEM_ITEMS then
-        emblemSource = Constants.EMBLEM_ITEMS[itemId]
-    end
-    
-    if emblemSource then
-        local emblemInfo = Constants and Constants.EMBLEM_VENDORS and
-                          Constants.EMBLEM_VENDORS[emblemSource.currency]
-        table.insert(sources, {
-            type = "emblem",
-            currency = emblemSource.currency or "Emblems",
-            cost = emblemSource.cost,
-            color = emblemInfo and emblemInfo.color or (Constants.COLORS.ASCENSION or "00ffcc"),
-            icon = emblemInfo and emblemInfo.icon,
-        })
-    end
-    
-    -- Cache result
-    DataCache.sourceCache[itemId] = sources
+
     return sources
 end
 
@@ -400,30 +418,9 @@ function BistooltipData.GetEmblemCost(itemId)
     return nil, nil
 end
 
-function BistooltipData.GetInstanceDifficulty(instanceName)
-    if not instanceName then return nil end
-    
-    -- Check Constants first
-    if Constants and Constants.GetInstanceDifficulty then
-        local tag = Constants.GetInstanceDifficulty(instanceName)
-        if tag then return tag end
-    end
-    
-    -- Parse common patterns
-    local lower = string.lower(instanceName)
-    
-    if lower:find("heroic") or lower:find("hm") then
-        if lower:find("25") then return "25HM"
-        elseif lower:find("10") then return "10HM"
-        else return "HM" end
-    end
-    
-    if lower:find("25") then return "25N"
-    elseif lower:find("10") then return "10N"
-    end
-    
-    return nil
-end
+-- NOTE: difficulty is a closed fact set on SourceRegistry entries (spec S2);
+-- the old difficulty-substring guessing heuristic was removed with the O(N)
+-- lookup (Task 5). Difficulty now travels on GetAllItemSources structs.
 
 -- ============================================================
 -- Slot Data Access

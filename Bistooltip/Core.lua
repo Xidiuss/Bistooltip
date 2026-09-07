@@ -207,6 +207,35 @@ local function GetDataStoreInventory()
 end
 
 -- ============================================================
+-- Unknown sourceID dev-warning drain (new source model)
+-- ============================================================
+
+-- Session-local seen table: each unknown sourceID warns at most once per
+-- session. Deliberately no cache/invalidation framework (frozen constraint:
+-- lookups are already O(1)).
+local _warnedUnknownSources = {}
+
+local function DrainUnknownSourceWarnings()
+    local acq = _G.BisTooltip_ItemAcquisition
+    local reg = _G.BisTooltip_SourceRegistry
+    if type(acq) ~= "table" or type(reg) ~= "table" then return end
+    for itemId, entries in pairs(acq) do
+        if type(entries) == "table" then
+            for _, e in ipairs(entries) do
+                local sid = type(e) == "table" and e.source or nil
+                if sid and not reg[sid] and not _warnedUnknownSources[sid] then
+                    _warnedUnknownSources[sid] = true
+                    if DEFAULT_CHAT_FRAME and DEFAULT_CHAT_FRAME.AddMessage then
+                        DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip:|r unknown sourceID "
+                            .. tostring(sid) .. " on item " .. tostring(itemId))
+                    end
+                end
+            end
+        end
+    end
+end
+
+-- ============================================================
 -- Addon Initialization
 -- ============================================================
 
@@ -255,6 +284,10 @@ function BistooltipAddon:OnInitialize()
 
     -- Ensure we have an initial cache for "You have this item" lines
     self:ScanEquipment(true)
+
+    -- One-time dev warnings for acquisition entries pointing at
+    -- sourceIDs missing from the registry (e.g. plugin typos).
+    DrainUnknownSourceWarnings()
 end
 
 -- ============================================================
