@@ -93,3 +93,125 @@ for id, entries in pairs(acq) do
 end
 assert(nTrophy > 0, "expected T9-245 TROPHY entries, found none")
 print("canonical: OK (" .. nTrophy .. " TROPHY entries)")
+
+-- Task 7 final audit: orphan-registry report + rendered-line coverage.
+-- (1) Orphan report: every source referenced at least once, or RESERVED below.
+-- RESERVED = migrator artifacts from EMPTY raw boss lists (verified 2026-09-07:
+-- each of these 29 zone/boss pairs holds zero items in Loot_Sources.lua, yet the
+-- migrator emits one registry identity per pair). Empty normal-mode bosses whose
+-- heroic twin carries the loot (Amanitar, Eck), empty Ulduar-HM identities,
+-- empty reputation standings, one empty heroic trash identity. Any NEW orphan
+-- fails; any RESERVED entry that gains a reference fails as a stale listing.
+local RESERVED = {
+  ["AHN_KAHET_THE_OLD_KINGDOM_AMANITAR"] = true,
+  ["ALLIANCE_VANGUARD_FRIENDLY"] = true,
+  ["ALLIANCE_VANGUARD_HONORED"] = true,
+  ["ARGENT_CRUSADE_FRIENDLY"] = true,
+  ["AZJOL_NERUB_H_TRASH_MOBS"] = true,
+  ["GUNDRAK_ECK"] = true,
+  ["KIRIN_TOR_FRIENDLY"] = true,
+  ["KNIGHTS_OF_THE_EBON_BLADE_FRIENDLY"] = true,
+  ["THE_HORDE_EXPEDITION_FRIENDLY"] = true,
+  ["THE_HORDE_EXPEDITION_HONORED"] = true,
+  ["THE_KALU_AK_FRIENDLY"] = true,
+  ["THE_ORACLES_EXALTED"] = true,
+  ["THE_ORACLES_FRIENDLY"] = true,
+  ["THE_ORACLES_HONORED"] = true,
+  ["THE_SONS_OF_HODIR_FRIENDLY"] = true,
+  ["THE_WYRMREST_ACCORD_FRIENDLY"] = true,
+  ["ULDUAR_10HC_ALGALON"] = true,
+  ["ULDUAR_10HC_AURIAYA"] = true,
+  ["ULDUAR_10HC_IGNIS"] = true,
+  ["ULDUAR_10HC_KOLOGARN"] = true,
+  ["ULDUAR_10HC_RAZORSCALE"] = true,
+  ["ULDUAR_25HC_ALGALON"] = true,
+  ["ULDUAR_25HC_AURIAYA"] = true,
+  ["ULDUAR_25HC_IGNIS"] = true,
+  ["ULDUAR_25HC_KOLOGARN"] = true,
+  ["ULDUAR_25HC_RAZORSCALE"] = true,
+  ["WINTERFINRETREAT_EXALTED"] = true,
+  ["WINTERFINRETREAT_HONORED"] = true,
+  ["WINTERFINRETREAT_REVERED"] = true,
+}
+local refCount = {}
+for _, entries in pairs(acq) do
+  for _, e in ipairs(entries) do
+    if e.source then refCount[e.source] = (refCount[e.source] or 0) + 1 end
+  end
+end
+local nReserved, nUnlisted = 0, 0
+for sid in pairs(reg) do
+  if not refCount[sid] then
+    if RESERVED[sid] then
+      nReserved = nReserved + 1
+    else
+      nUnlisted = nUnlisted + 1
+      print("UNLISTED ORPHAN: " .. sid)
+    end
+  end
+end
+for sid in pairs(RESERVED) do
+  assert(reg[sid], "stale RESERVED listing (left the registry): " .. sid)
+  assert(not refCount[sid], "stale RESERVED listing (now referenced, prune it): " .. sid)
+end
+assert(nUnlisted == 0, "found " .. nUnlisted .. " unlisted orphan sources")
+print("orphans: OK (" .. nReserved .. " RESERVED empty-list artifacts, 0 unlisted)")
+
+-- (2) Rendered-line coverage: EVERY acquisition entry must render to a
+-- non-empty string via the MASTER formatter (all 8820 entries, incl.
+-- tier-stamped DROPs and VENDOR/TROPHY shapes). VENDOR-without-tier renders
+-- as "VENDOR: ..." (tier prefix omitted), never nil -- no exception needed.
+BisTooltip_SourceRegistry = reg
+dofile("Bistooltip/SourceFormatter.lua")
+local nEntries, nTierDrop, nVendorPlain, nTrophyRender = 0, 0, 0, 0
+local nNil = 0
+for id, entries in pairs(acq) do
+  for _, e in ipairs(entries) do
+    nEntries = nEntries + 1
+    if e.kind == "DROP" and e.tier then nTierDrop = nTierDrop + 1 end
+    if e.kind == "VENDOR" and e.displayVariant ~= "TROPHY" then nVendorPlain = nVendorPlain + 1 end
+    if e.displayVariant == "TROPHY" then nTrophyRender = nTrophyRender + 1 end
+    local s = BisTooltip_FormatSource(e)
+    if type(s) ~= "string" or s == "" then
+      nNil = nNil + 1
+      if nNil <= 10 then
+        print("UNRENDERABLE: item " .. id .. " kind=" .. tostring(e.kind)
+          .. " source=" .. tostring(e.source) .. " tier=" .. tostring(e.tier))
+      end
+    end
+  end
+end
+assert(nNil == 0, "found " .. nNil .. " unrenderable entries of " .. nEntries)
+print("render: OK (" .. nEntries .. " entries: " .. nTierDrop .. " tier-stamped DROP, "
+  .. nVendorPlain .. " plain VENDOR, " .. nTrophyRender .. " TROPHY, 0 unrenderable)")
+
+-- (3) CUSTOM synthetic: zero real CUSTOM entries exist today, so cover the
+-- shape synthetically exactly the way the formatter goldens do.
+assert(BisTooltip_FormatSource({ kind = "CUSTOM", label = "VIP Shop" }) == "VIP Shop",
+  "CUSTOM label must render verbatim")
+assert(BisTooltip_FormatSource({ kind = "CUSTOM", label = "" }) == nil,
+  "empty CUSTOM label must not render")
+assert(BisTooltip_FormatSource({ kind = "BOGUS", source = "NOPE" }) == nil,
+  "unknown kind must not render")
+print("custom: OK (synthetic, 0 real CUSTOM entries in data)")
+
+-- (4) R4 TROPHY price lock: oracle-verified per-item Triumph amounts only.
+-- Flat-50 fallback is gone; every TROPHY cost must be 45 (shoulder/hands) or
+-- 75 (head/chest/legs), and both prices must occur (guards a one-sided slip).
+local n45, n75, nOther = 0, 0, 0
+for id, entries in pairs(acq) do
+  for _, e in ipairs(entries) do
+    if e.displayVariant == "TROPHY" then
+      for _, c in ipairs(e.cost or {}) do
+        if c.currency == "Emblem of Triumph" then
+          if c.amount == 45 then n45 = n45 + 1
+          elseif c.amount == 75 then n75 = n75 + 1
+          else nOther = nOther + 1 end
+        end
+      end
+    end
+  end
+end
+assert(nOther == 0, "TROPHY with non-oracle Triumph amount: " .. nOther)
+assert(n45 > 0 and n75 > 0, "TROPHY price split collapsed (45x" .. n45 .. " 75x" .. n75 .. ")")
+print("trophy-prices: OK (45x" .. n45 .. " 75x" .. n75 .. ", oracle-verified, no fallback)")

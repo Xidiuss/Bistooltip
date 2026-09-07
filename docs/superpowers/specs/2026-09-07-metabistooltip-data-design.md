@@ -142,15 +142,18 @@ DefineSource / SetAcquisition / AddAcquisition / SetBiSSlot / SetEnhancement
 `DefineSource`, `SetAcquisition`, `SetBiSSlot`, `SetEnhancement` = replace-wins.
 `AddAcquisition` = append.
 
+Uwaga nazewnicza: `BisTooltip` (API, dwa `s`, dwa wielkie `T`) to tabela API; `Bistooltip` (jedno `s`) to folder/nazwa addona.
+
 ```lua
 BisTooltip:DefineSource("ULDUAR_25N_VEZAX", { instance="Ulduar", boss="General Vezax", difficulty="25N" })
 BisTooltip:SetAcquisition(49986, { { kind="DROP", source="ULDUAR_25N_VEZAX" } }) -- pełny replace itemu
 BisTooltip:AddAcquisition(999001, { kind="DROP", source="CUSTOM_ICC_VIP" })      -- dopisanie 1 linii
 BisTooltip:SetBiSSlot("Warrior", "Fury", "T10", "Chest", { 999001, 51289, 50024 })
 BisTooltip:SetEnhancement("Warrior", "Fury", "T10", "Weapon",
-  { enchant={ type="spell", id=59621 }, gems={ 40111, 40111 } })
+  { { type="spell", id=59621 }, { type="item", id=40111 } })
 BisTooltip:SetEnhancement("Warrior", "Fury", nil, "Weapon", -- COMMON (wszystkie fazy)
-  { enchant={ type="spell", id=59621 } })
+  { { type="spell", id=59621 } })
+-- kształt `enhs` to zawsze lista `{ { type=..., id=... }, ... }` (nie `{enchant=,gems=}`).
 BisTooltip:DefineSource("CUSTOM_VIP", { kind="CUSTOM", label="VIP Shop — Donate Vendor" })
 ```
 
