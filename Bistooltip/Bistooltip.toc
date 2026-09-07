@@ -46,6 +46,7 @@ EmblemData.lua
 SourceRegistry.lua
 ItemAcquisition.lua
 SourceFormatter.lua
+PluginAPI.lua
 
 # ============================================================
 # Core Framework (ORDER MATTERS!)
