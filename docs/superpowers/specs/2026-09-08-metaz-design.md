@@ -1,11 +1,12 @@
 # META-Z — Meta-BisTooltip system design
 
-Status: **DRAFT** — oczekuje na review właściciela przed planem implementacji.
+Status: **DRAFT v2** — oczekuje na review właściciela przed planem implementacji.
 Data: 2026-09-08. Gałąź: `META-Z` (utworzona z `feat/meta-bistooltip-data`,
 pełna historia). Klasyfikacja: architectural.
 Relacja: rozszerza **frozen** `2026-09-07-metabistooltip-data-design.md`
-(S1–S4, wdrożone) o poprawki S2-3, S2-4, S3-5, S4-5; importuje frozen
-`2026-09-08-vendor-scanner-design.md` + jej plan.
+(S1–S4, wdrożone) o poprawki S2-3, S2-4, S2-5, S3-5, S3-6, S4-5; importuje
+frozen `2026-09-08-vendor-scanner-design.md` + jej plan. v2 wynika z rewizji
+etapu przebudowy: `2026-09-08-metaz-stage-review.md` (dowody tam).
 
 ## 0. Cel
 
@@ -47,6 +48,14 @@ Stan wejściowy na `feat/meta-bistooltip-data` (zmierzony, nie zgadywany):
   (`SlotHasAscensionSource`, `State.emblemFilterMode`) — działa tylko dzięki
   customowym walutom; na czystym WotLK nie ma sensu. Do przemianowania na
   VENDOR i przełączenia na model ItemAcquisition.
+- Cutover niedokończony (rewizja W1): koszty vendorowe czytane w runtime
+  z OBU modeli naraz — UI przez `GetEmblemCost`→`Bistooltip_emblem_items`
+  (`DataProvider.lua:399–414`, `BislistUI.lua:3314/3436/3472/5245`), tooltip
+  przez `ItemAcquisition`. Do domknięcia w W1.
+- Martwy ciężar (rewizja W2/W3): `Loot_Sources.lua` (1624 linii) ładowany
+  w `.toc` przy **zerze** konsumentów runtime; martwe pliki poza `.toc`
+  (Bislist.lua 3653 linii z przestarzałą logiką ASCEND, FlowView/GridView/
+  ItemButton/Pool, legacy/) — **usunięte commitami rewizji**.
 
 ## 1. Architektura docelowa
 
@@ -130,6 +139,16 @@ waluta/koszt     #00FFCC (turkus — spójnie z dzisiejszym kolorem emblematów)
   zawsze na stringu **plain** (kolor nigdy nie uczestniczy w tożsamości).
 - Konfigurowalność palety w options: poza MVP (decyzja: najpierw domyślne).
 
+## 3a. Poprawka S2-5 (draft): dane w formatterze i jednostki kosztu
+
+- `variantLabel` w danych zamiast hardcodu: TROPHY drukuje
+  `(entry.tier) - TROPHY: (entry.variantLabel) + koszt`; „Crusade" znika
+  z `SourceFormatter.lua:18` (dane w kodzie = naruszenie zasady S2).
+  Stary wpis T9-245 dostaje `variantLabel="Crusade"` w migratorze.
+- Kanon jednostek kosztu: `amount` **zawsze w miedziakach** dla
+  `currency="Gold"` (tak jak z API 3.3.5a); formatter renderuje Gold jako
+  `g/s/c` (np. `15g`), nie „150000 Gold". Pozostałe waluty: liczba j.owa.
+
 ## 4. Poprawka S3-5 (draft): DB registry + overlay replay wtyczek
 
 Problem: `PluginAPI.SetBiSSlot/SetEnhancement` piszą w **aliasowanej**
@@ -155,14 +174,35 @@ BisTooltip_DBRegistry = {
   dziś, uogólniona). Dropdown `db.char.data_source` z 3 pozycjami, default
   `wowsims` (kwestia domyślnej bazy: patrz pytania).
 - `PluginAPI.lua`: każda udana mutacja (`DefineSource`, `SetAcquisition`,
-  `AddAcquisition`, `SetBiSSlot`, `SetEnhancement`) jest zapisywana do
-  wewnętrznego logu overlay `{fn, deep-copy(args), plugin}`. Po
-  `changeSpec()` core odbindowuje aliasy, binduje nową bazę i **replaying**
-  log w kolejności wykonania. Semantyka replace-wins bez zmian.
-- Błędy replay (slot nie istnieje w nowej bazie): warn-once per plugin+slot,
-  wpis pomijany — wtyczka opisuje serwer, nie konkretną bazę rankingową.
+  `AddAcquisition`, `SetBiSSlot`, `SetBiSSlotRank`, `SetEnhancement`) jest
+  zapisywana do wewnętrznego logu overlay `{fn, deep-copy(args), plugin}`.
+  Po `changeSpec()` core odbindowuje aliasy, binduje nową bazę i
+  **replaying** log w kolejności wykonania. Semantyka replace-wins bez
+  zmian. Operacje akwizycji (itemID-kluczowane) są z natury bazoniezależne;
+  replay ma sens przede wszystkim dla operacji slotowych.
+- Błędy replay (slot/rank nie istnieje w nowej bazie): warn-once per
+  plugin+slot, wpis pomijany — wtyczka opisuje serwer, nie konkretną bazę
+  rankingową.
 - Overlay jest mały (liczba wywołań wtyczki, nie itemów), nie podlega
   invalidation — po prostu wykonuje się ponownie.
+
+### Poprawka S3-6 (draft): `SetBiSSlotRank` — nadpisanie pojedynczego ranku
+
+Szósta funkcja API (rewizja W5 — slot-level replace jest zbyt gruby dla
+wtyczek serwerowych):
+
+```lua
+BisTooltip:SetBiSSlotRank("Warrior", "Fury", "T7", "Weapon", 1, 130031, plugin)
+```
+
+- Nadpisuje **jeden rank** w slocie (`slot[rank] = itemID`), reszta listy
+  zostaje z aktywnej bazy — diff jest bazoniezależny („rank 1 = custom")
+  i survivaluje aktualizacje rankingów core oraz replay po zmianie bazy.
+- Walidacje: `rank` ∈ [1, długość slotu]; warn (nie error), gdy `itemID`
+  występuje już na innym ranku tego slotu (duplikat rankingu).
+- `SetBiSSlot` (pełna lista) zostaje dla wtyczek świadomie przejmujących
+  cały slot. Skaner emituje akwizycje; rankingi wtyczek wyrażają się
+  naturalnie przez `SetBiSSlotRank`.
 
 ## 5. Poprawka S4-5 (draft): backfill tierów (VOA + TOKEN/MARK per-boss)
 
@@ -223,10 +263,11 @@ Folder `Bistooltip_Whitemane/` (nazwa folderu bez dwukropka — patrz pytania),
    Emblem of Ascension (incl. 130023, 130031, 15000?), Emblem of Ascension II
    (Ulduar-HM loot 19–150 + 131004 „Domhammer", 128858 „Scythe of the Cat
    God"), Echo of the Titans (131010 =2, 131008 =1 itd.).
-3. `SetBiSSlot` dla 27 nadpisań rank-1 z bazy wowtbc (5 ID customowych)
-   — listy slotów złożone na bazie STANDARD (wowsims) z customem na rank 1.
-   Po zmianie bazy użytkownika overlay replay przenosi diff automatycznie
-   (S3-5); brak slotu w `wh` = warn-once + skip.
+3. `SetBiSSlotRank` dla 27 nadpisań rank-1 z bazy wowtbc (5 ID customowych)
+   — postać diffu: „rank 1 slotu = custom ID", **bez pieczonych list**
+   (rewizja W5): działa na każdej bazie i survivaluje update core.
+   Po zmianie bazy overlay replay przenosi diff automatycznie (S3-5);
+   brak slotu/ranku w innej bazie = warn-once + skip.
 4. Miejsce na przyszłe custom enchants (`SetEnhancement`) i kolejne itemy
    zebrane skanerem.
 
@@ -239,12 +280,17 @@ zostaje przeniesiona do initu DataProvider).
 
 ## 8. Skaner (frozen import + 1 rozszerzenie)
 
-Realizacja 1:1 wg `2026-09-08-vendor-scanner-plan.md` (4 taski). Rozszerzenie
-drafter'owe (małe, w tym samym addonie): `/bis item <ID>` — snippet dla
-pojedynczego itemu po ID (nazwa z cache, komentarz `-- UNCACHED` gdy brak),
-emitujący szkielet `DefineSource`/`SetAcquisition` do uzupełnienia.
-To zamyka żądanie „proste dodawanie customowych przedmiotów oraz skanowanie
-przedmiotów po ID".
+Realizacja 1:1 wg `2026-09-08-vendor-scanner-plan.md` (4 tasky). Rozszerzenia
+drafter'owe (małe, w tym samym addonie):
+
+- `/bis item <ID>` — snippet dla pojedynczego itemu po ID (nazwa z cache,
+  komentarz `-- UNCACHED` gdy brak), emitujący szkielet
+  `DefineSource`/`SetAcquisition` do uzupełnienia. To zamyka żądanie
+  „proste dodawanie customowych przedmiotów oraz skanowanie przedmiotów
+  po ID".
+- Jednostka gold (rewizja W7): eksport zostaje przy `amount` = miedziaki
+  (kanon S2-5); formatter renderuje `g/s/c`.
+
 
 ## 9. Wydajność i zasady frozen utrzymane
 
@@ -252,7 +298,10 @@ przedmiotów po ID".
   (setki, nie tysiące) raz na zmianę bazy.
 - Trzy bazy w `.toc` = ~3,4 MB tabel w pamięci (akceptowalne dla 3.3.5a;
   dane statyczne). Jeśli zmierzony load time bolą — ładowanie warunkowe
-  jest decyzją po pomiarze, nie z góry.
+  jest decyzją po pomiarze, nie z góry. Dodatkowo (rewizja W4): tabele
+  frakcyjne WoWSimsBP (~połowa pliku, **0 konsumentów**) do wygenerowania
+  lub usunięcia przy adopcji STANDARD — patrz Q14; `Loot_Sources.lua`
+  znika z `.toc` już w W1 (0 konsumentów runtime).
 - TROPHY pozostaje display-only; brak EnchantAcquisition; CUSTOM walidowane;
   brak importerów w core; skaner nigdy nie pisze do tabel core.
 
@@ -260,14 +309,15 @@ przedmiotów po ID".
 
 | # | Workstream | Zależy od |
 |---|---|---|
-| W1 | Słownik trudności v2 (migrator+audyt+goldens, regeneracja danych) | — |
-| W2 | Backfill tierów (VOA, TOKEN/MARK per-boss) + walidacja oracle | W1 |
+| W0 | ~~Gałąź META-Z, track baz, import dokumentów~~ + ~~usunięcie martwych plików~~ (rewizja) — **wykonane** | — |
+| W1 | Cutover runtime: `.toc` clean (Loot_Sources out), `GetEmblemCost` → shim nad ItemAcquisition; słownik trudności v2 (migrator+audyt+goldens, regeneracja danych) | — |
+| W2 | Backfill tierów (VOA, TOKEN/MARK per-boss) + walidacja oracle + audyt cross-DB coverage (każdy ID z każdej bazy ma akwizycję albo allowlista) | W1 |
 | W3 | FormatSourceColored + paleta + wpięcie tooltip/checklist | W1 |
-| W4 | DB registry + options + overlay replay (S3-5) | — |
-| W5 | Tryb VENDOR (rename + semantyka ItemAcquisition) | W2 |
-| W6 | Wtyczka Whitemane + czyszczenie EmblemData/wowtbc + toc slim | W4, W5 |
-| W7 | Bistooltip_Scanner (frozen plan) + `/bis item` | — |
-| W8 | `tools/run_all` + pełny audyt + manual in-game | W1–W7 |
+| W4 | DB registry + options (scope klucza: Q16) + overlay replay (S3-5) + `SetBiSSlotRank` (S3-6); W4a: regeneracja pliku wowsims (frakcyjne tabele wg Q14, duplikat phases) | — |
+| W5 | Tryb VENDOR (rename + semantyka ItemAcquisition) | W1 |
+| W6 | Wtyczka Whitemane (SetBiSSlotRank diffy) + czyszczenie EmblemData/wowtbc | W4, W5 |
+| W7 | Bistooltip_Scanner (frozen plan) + `/bis item` + jednostka gold | — |
+| W8 | `tools/run_all` + propozycja CI (Q15) + pełny audyt + manual in-game | W1–W7 |
 
 Każdy workstream dostaje własny implementation plan (workflow superpowers:
 design → review → plan → implement). W0 (gałąź META-Z, track baz, import
@@ -306,16 +356,30 @@ dokumentów) wykonane przy tworzeniu tego speca.
     przyszłościowej wtyczki?
 13. Priorytet workstreamów: proponowana kolejność W1→W8 (najpierw dane,
     potem render/kolory) — zgodna z Twoimi oczekiwaniami?
+14. Tabele frakcyjne WoWSimsBP (`Bistooltip_bislists_alliance/_horde`,
+    ~połowa pliku, 0 konsumentów w kodzie): usunąć z pliku shippingowego
+    przy regeneracji (rekomendacja rewizji W4), czy przewidujesz dla nich
+    realny użytek (np. frakcyjne BiS w UI)?
+15. CI: czy dodać GitHub Actions (luac -p + wszystkie suity lua5.1 na
+    push/PR) jako bramkę dla regenerowanych danych? (rewizja W8)
+16. Zasięg wyboru bazy: `db.char.data_source` jest per-postać — przełączyć
+    na profil (db.profile) przy W4? (rewizja W11)
 
 ## Self-review speca
 
 - Placeholdery: jawnie oznaczone pytania (etykieta wh, label vendorów,
-  domyślna baza) — reszta decyzji zamknięta.
+  domyślna baza, frakcyjne tabele, CI, scope klucza) — reszta decyzji
+  zamknięta.
 - Spójność z frozen: S1/S2 bez zmian strukturalnych; TROPHY nadal
-  display-only; formatter nadal jedyny; PluginAPI nadal 5 funkcji (overlay
-  to wewnętrzny log, nie nowe API); skaner nadal standalone.
-- Nowe ryzyka nazwane: pamięć 3 baz (akcept / pomiar), replay błędów
-  (warn-once + skip), oracle jako jedyny świadek (wymóg drugiego źródła).
+  display-only (label przeniesiony do danych); formatter nadal jedyny;
+  API rośnie do 6 funkcji wyłącznie o granularny `SetBiSSlotRank`
+  (uzasadnienie: rewizja W5); skaner nadal standalone.
+- v2 wg rewizji: cutover przyspieszony do W1 (podwójna prawda kosztów,
+  martwy `.toc`), Whitemane bez pieczonych list slotów, kanon jednostek
+  gold, audyt cross-DB coverage, higiena pliku STANDARD.
+- Nowe ryzyka nazwane: pamięć 3 baz (akcept / pomiar + redukcja o tabele
+  frakcyjne), replay błędów (warn-once + skip), oracle jako jedyny świadek
+  (wymóg drugiego źródła).
 - Zakres: brak nowej warstwy architektonicznej poza wyszczególnionymi
   poprawkami; nic nie budujemy „na zapas" (paleta options, lazy load
   baz — dopiero po pomiarze).
