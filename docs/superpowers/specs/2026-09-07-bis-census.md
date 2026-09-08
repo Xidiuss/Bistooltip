@@ -116,3 +116,31 @@ the fork's wowtbc; extracted before import to
 Census rerun on refreshed data = workstream W0a (spec v2.2). The
 `STANDARD = WoWSimsBP` decision is expected to hold (same provenance,
 newer snapshot) but must be re-confirmed by the rerun.
+
+## Rerun (2026-09-08, refreshed data) — W0a COMPLETE
+
+Tool: `tools/census_analyze.lua` (committed, reproducible; replaces the
+one-off script). Numbers below = refreshed upstream files (commit
+`79406c2`); the sections above describe the STALE copies for history.
+
+| dataset | specs | combos | slots | unique | -1 | custom IDs (>54591) |
+|---|---|---|---|---|---|---|
+| wowsims | 32 | 190 | 2822 | 2836 | 292 | **0** |
+| wowtbc  | 32 | 190 | 2822 | 2750 | 313 | **0** |
+| wh      | 31 | 153 | 2284 | 2513 |  90 | **0** |
+
+- Rank-1 agreement: wowsims↔wowtbc **99.8%** (was 99.0%; wowtbc after
+  refresh is a near-identical variant), wowsims↔wh 63.2%, wowtbc↔wh
+  63.2%; wh↔wowsims per phase: PR 0.9%, T7 77.6%, T8 83.9%, T9 82.3%,
+  T10 70.9% (unchanged — wh refresh did not change census-visible shape).
+- Unique overlap: wowsims∩wowtbc 2750, wowsims∩wh 2144, wowtbc∩wh 2141.
+- Faction tables (WoWSimsBP): 2652/2652 slots, alliance↔horde rank-1
+  agreement 93.6%.
+- The old decisive finding (27 custom rank-1 entries in wowtbc) is GONE:
+  refreshed wowtbc is clean; the Whitemane legendaries live only in
+  `docs/superpowers/data/whitemane-custom-extract-2026-09-08.lua` (W6 input).
+
+**STANDARD = WoWSimsBP — RECONFIRMED.** Rationale unchanged (only dataset
+with full PR–RS coverage + Fire FFB spec set + faction tables) and now
+additionally: the strongest agreement with the refreshed wowtbc (99.8%)
+with zero custom IDs anywhere. Gate: `lua5.1 tools/census_bis.lua` → OK.
