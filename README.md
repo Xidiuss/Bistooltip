@@ -71,12 +71,7 @@ Bis-Tooltip/
 │   ├── debounce.lua            # Input debouncing for search
 │   └── reset.lua               # Frame reset/cleanup functions
 │
-├── Utils.lua                   # Centralized utility functions
-│
-└── legacy/                     # Unused/deprecated code
-    ├── FlowView.lua            # (unused) Alternative layout
-    ├── GridView.lua            # (unused) Grid layout
-    └── ItemButton.lua          # (unused) Legacy item buttons
+└── Utils.lua                   # Centralized utility functions
 ```
 
 ## Architecture
