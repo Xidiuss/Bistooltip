@@ -103,10 +103,11 @@ local BOSS_ALIASES = {
   ["Trash Mobs"] = "Trash mobs",
 }
 
--- Explicit RAW zone -> difficulty. Closed fact set: 10N/25N/10HC/25HC for raids,
--- H for 5-man heroics; anything unlisted (world/vendor/events/rep/PvP/single-mode
--- 5-man normals, multi-source emblem zones) stays "" per frozen spec S2.
--- Ulduar HM = hard modes, the WotLK heroic-equivalent (flagged decision).
+-- Explicit RAW zone -> difficulty. Closed fact set v2 (spec S2-3):
+-- 10N/25N/10HC/25HC for raids, 10HM/25HM for Ulduar hard modes,
+-- HC for 5-man heroics; anything unlisted (world/vendor/events/rep/PvP/
+-- single-mode 5-man normals, multi-source emblem zones) stays "" per
+-- frozen spec S2. Owner decision Q10: Ulduar is NEVER 10HC/25HC.
 local ZONE_DIFFICULTY = {
   ["Naxxramas (10)"] = "10N",
   ["Naxxramas (25)"] = "25N",
@@ -124,8 +125,8 @@ local ZONE_DIFFICULTY = {
   ["Onyxia's Lair (25)"] = "25N",
   ["Ulduar (10)"] = "10N",
   ["Ulduar (25)"] = "25N",
-  ["Ulduar HM(10)"] = "10HC",
-  ["Ulduar HM(25)"] = "25HC",
+  ["Ulduar HM(10)"] = "10HM",
+  ["Ulduar HM(25)"] = "25HM",
   ["Trial of the Crusader (10)"] = "10N",
   ["Trial of the Crusader (25)"] = "25N",
   ["Trial of the Crusader (10) (Heroic)"] = "10HC",
@@ -138,22 +139,22 @@ local ZONE_DIFFICULTY = {
   ["Ruby Sanctum (25)"] = "25N",
   ["Ruby Sanctum (10) (Heroic)"] = "10HC",
   ["Ruby Sanctum (25) (Heroic)"] = "25HC",
-  ["Trial of the Champion (Heroic)"] = "H",
-  ["The Forge of Souls (Heroic)"] = "H",
-  ["Pit of Saron (Heroic)"] = "H",
-  ["Halls of Reflection (Heroic)"] = "H",
-  ["Utgarde keep (Heroic)"] = "H",
-  ["The Nexus (Heroic)"] = "H",
-  ["Azjol Nerub (Heroic)"] = "H",
-  ["Ahn'kahet: The Old Kingdom (Heroic)"] = "H",
-  ["Drak'Tharon Keep (Heroic)"] = "H",
-  ["The Violet Hold (Heroic)"] = "H",
-  ["Gundrak (Heroic)"] = "H",
-  ["Halls of Stone (Heroic)"] = "H",
-  ["Halls of Lightning (Heroic)"] = "H",
-  ["Utgarde Pinnacle (Heroic)"] = "H",
-  ["The Oculus (Heroic)"] = "H",
-  ["Caverns of Time Old Stratholme (Heroic)"] = "H",
+  ["Trial of the Champion (Heroic)"] = "HC",
+  ["The Forge of Souls (Heroic)"] = "HC",
+  ["Pit of Saron (Heroic)"] = "HC",
+  ["Halls of Reflection (Heroic)"] = "HC",
+  ["Utgarde keep (Heroic)"] = "HC",
+  ["The Nexus (Heroic)"] = "HC",
+  ["Azjol Nerub (Heroic)"] = "HC",
+  ["Ahn'kahet: The Old Kingdom (Heroic)"] = "HC",
+  ["Drak'Tharon Keep (Heroic)"] = "HC",
+  ["The Violet Hold (Heroic)"] = "HC",
+  ["Gundrak (Heroic)"] = "HC",
+  ["Halls of Stone (Heroic)"] = "HC",
+  ["Halls of Lightning (Heroic)"] = "HC",
+  ["Utgarde Pinnacle (Heroic)"] = "HC",
+  ["The Oculus (Heroic)"] = "HC",
+  ["Caverns of Time Old Stratholme (Heroic)"] = "HC",
   ["Tier 7 Tokens Naxx(10)"] = "10N",
   ["Tier 7 Tokens OS(10)"] = "10N",
   ["Tier 7 Tokens Naxx(25)"] = "25N",
@@ -429,8 +430,17 @@ local function addEntry(itemID, entry)
   table.insert(acquisition[itemID], entry)
 end
 
+-- Zones intentionally NOT migrated yet. The refreshed upstream Loot_Sources
+-- added Vault of Archavon with mangled boss keys ("of Archavon Archavon1..7");
+-- the oracle-verified canonical boss/difficulty map is workstream W2.
+local DEFERRED_ZONES = {
+  ["Vault of Archavon"] = "W2 tier backfill (mangled boss keys in raw data)",
+}
+
 for zone, bosses in pairs(lootTable) do
-  if isTrophyZone(zone) then
+  if DEFERRED_ZONES[zone] then
+    print("[defer] " .. zone .. " -> " .. DEFERRED_ZONES[zone])
+  elseif isTrophyZone(zone) then
     -- fake zone (not a real place): no registry identity; vendor TROPHY instead
     for _, items in pairs(bosses) do
       for _, itemID in pairs(items) do

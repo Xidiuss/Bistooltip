@@ -19,13 +19,14 @@ print("smoke: OK (" .. n .. " items)")
 -- NOTE: brief draft asserted difficulty ~= "" for ALL sources; frozen spec S2
 -- allows empty ONLY for world/vendor (and single-mode 5-man normals, which carry
 -- no mode qualifier). The audit below enforces exactly that instead.
-local DIFF_OK = { ["10N"] = true, ["25N"] = true, ["10HC"] = true, ["25HC"] = true, H = true, [""] = true }
+local DIFF_OK = { ["10N"] = true, ["25N"] = true, ["10HC"] = true, ["25HC"] = true,
+  ["10HM"] = true, ["25HM"] = true, HC = true, [""] = true }
 local RAIDS = { -- canonical instance -> must carry a raid-mode difficulty
   ["Naxxramas"] = true, ["Obsidian Sanctum"] = true, ["Eye of Eternity"] = true,
   ["Onyxia's Lair"] = true, ["Ulduar"] = true, ["Trial of the Crusader"] = true,
   ["Icecrown Citadel"] = true, ["Ruby Sanctum"] = true,
 }
-local DUNGEONS = { -- 5-mans: normal ("") or heroic ("H") only
+local DUNGEONS = { -- 5-mans: normal ("") or heroic ("HC") only
   ["Trial of the Champion"] = true, ["The Forge of Souls"] = true, ["Pit of Saron"] = true,
   ["Halls of Reflection"] = true, ["Utgarde Keep"] = true, ["The Nexus"] = true,
   ["Azjol-Nerub"] = true, ["Ahn'kahet: The Old Kingdom"] = true, ["Drak'Tharon Keep"] = true,
@@ -34,7 +35,7 @@ local DUNGEONS = { -- 5-mans: normal ("") or heroic ("H") only
   ["Caverns of Time Old Stratholme"] = true,
 }
 local function isRaidDiff(d)
-  return d == "10N" or d == "25N" or d == "10HC" or d == "25HC"
+  return d == "10N" or d == "25N" or d == "10HC" or d == "25HC" or d == "10HM" or d == "25HM"
 end
 for sid, s in pairs(reg) do
   assert(DIFF_OK[s.difficulty], "source with unknown difficulty: " .. sid)
@@ -45,10 +46,19 @@ for sid, s in pairs(reg) do
   assert(s.boss ~= "Anubarak", "unmerged boss alias Anubarak: " .. sid)
   assert(s.boss ~= "Taldaram", "unmerged boss alias Taldaram: " .. sid)
   assert(s.boss ~= "Trash Mobs", "unmerged boss alias Trash Mobs: " .. sid)
+  assert(s.instance ~= "Vault of Archavon", "VOA must not surface before W2 (mangled raw keys): " .. sid)
   if RAIDS[s.instance] then
     assert(isRaidDiff(s.difficulty), "raid source without raid difficulty: " .. sid)
+    if s.instance == "Ulduar" then
+      assert(s.difficulty == "10N" or s.difficulty == "25N"
+        or s.difficulty == "10HM" or s.difficulty == "25HM",
+        "Ulduar source outside 10N/25N/10HM/25HM (spec S2-3, Q10): " .. sid)
+    else
+      assert(s.difficulty ~= "10HM" and s.difficulty ~= "25HM",
+        "HM difficulty is Ulduar-only (spec S2-3): " .. sid)
+    end
   elseif DUNGEONS[s.instance] then
-    assert(s.difficulty == "" or s.difficulty == "H", "dungeon source with raid difficulty: " .. sid)
+    assert(s.difficulty == "" or s.difficulty == "HC", "dungeon source with raid difficulty: " .. sid)
   end
   -- collapsed/merged fake zones must never resurface as registry identities
   -- (instance-less CUSTOM-kind rows carry no zone identity; skip the prefix probe)

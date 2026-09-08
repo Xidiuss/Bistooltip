@@ -4,6 +4,8 @@ BisTooltip_SourceRegistry = {
   VEZAX = { instance = "Ulduar", boss = "General Vezax", difficulty = "25N" },
   THORIM = { instance = "Ulduar", boss = "Thorim", difficulty = "25N" },
   FLAT = { instance = "Ulduar", boss = "General Vezax", difficulty = "" },
+  AKN = { instance = "Ahn'kahet: The Old Kingdom", boss = "Prince Taldaram", difficulty = "HC" },
+  HODIR_HM = { instance = "Ulduar", boss = "Hodir", difficulty = "25HM" },
 }
 dofile("Bistooltip/SourceFormatter.lua")
 local cases = {
@@ -20,6 +22,9 @@ local cases = {
   { { kind = "CUSTOM", label = "VIP Shop" }, "VIP Shop" },
   { { kind = "DROP", source = "FLAT" }, "Ulduar - General Vezax" }, -- empty difficulty: no brackets
   { { kind = "DROP", source = "NOPE" }, nil }, -- unknown sourceID: skip line, no error
+  { { kind = "DROP", source = "AKN" }, "Ahn'kahet: The Old Kingdom [HC] - Prince Taldaram" }, -- 5-man heroic vocab v2
+  { { kind = "TOKEN", tier = "T8", family = "Wayward Protector", source = "HODIR_HM" },
+    "T8 - TOKEN: Wayward Protector [Ulduar: Hodir <25HM>]" }, -- Ulduar hard mode vocab v2
 }
 for i, c in ipairs(cases) do
   local got = BisTooltip_FormatSource(c[1])
