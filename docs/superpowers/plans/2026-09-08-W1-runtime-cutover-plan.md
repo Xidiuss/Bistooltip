@@ -1,5 +1,11 @@
 # W1 — Runtime cutover + difficulty vocabulary v2 (implementation plan)
 
+> **STATUS: COMPLETE** — Tasks 1–5 executed (commits `601b422`…`500be75`),
+> W5 (VENDOR mode) pulled forward per owner request (`ef511c6` + hotfix
+> `1409d10`), **Task 6 in-game verification PASSED** (owner, 2026-09-08:
+> "teraz jest ok"). Owner data note carried to W2: item 45614 (Starshine
+> Circle) is an Algalon quest reward — model as `Algalon [Quest]` source.
+
 > **For agentic workers:** implement task-by-task, TDD (failing check first).
 > Lua 5.1 via WSL: `wsl -e bash -c "cd '/mnt/j/projekty z/Bistooltip-main/.worktrees/META-Z' && lua5.1 …"`; syntax gate `luac5.1 -p`.
 
