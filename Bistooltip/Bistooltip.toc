@@ -31,8 +31,8 @@ Libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
 # ============================================================
 # Data Files
 # NOTE: EmblemData.lua must load after bislists (T8 set auto-registration)
+# NOTE: Loot_Sources.lua is an OFFLINE migrator input only — never loaded here
 # ============================================================
-Loot_Sources.lua
 GemData.lua
 Bistooltip_classes.lua
 Bistooltip_wowtbc_bislists.lua
@@ -41,7 +41,7 @@ EmblemData.lua
 
 # ============================================================
 # New source model (canonical registry + acquisition + formatter)
-# Must load after Loot_Sources/EmblemData, before DataProvider.
+# Standalone tables; load before DataProvider.
 # ============================================================
 SourceRegistry.lua
 ItemAcquisition.lua
