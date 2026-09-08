@@ -190,16 +190,27 @@ BisTooltip_DBRegistry = {
   `EnableSpec(dbKey)` aliasuje `Bistooltip_bislists/classes/phases` z
   wybranego wpisu. Dropdown `db.global.data_source` (Q16: account-wide,
   z migracją z `db.char`) z 3 pozycjami, default `wowsims` (Q5).
-  Tabele frakcyjne **zostają i pracują** (korekta Q14): upstream konsumuje
-  je w `assembleActiveBislists()`, więc wejście `wowsims` w rejestrze
-  dostaje hook `assemble` — port logiki upstream: primary = tabeli
-  frakcji gracza (rank-1), fallback = pełna tabela wowsims, mirror ID
-  przez `Bistooltip_horde_to_ali` + filtr itemów obcej frakcji przez
-  `Bistooltip_item_faction`; scalanie: frakcyjne rank-1 przed kolumnami
-  fallbacku, dedup, cap 6. `wh`/`wowtbc` = zwykły alias. Przy porcie:
-  `Bistooltip_faction.lua` dołącza do `.toc` (przed bislistami, jak
-  upstream), stary `Bistooltip_horde_to_ali.lua` znika z `.toc` po
-  porównaniu tabel (upstream trzyma obie mapy w jednym pliku).
+  Dwa ODRĘBNE mechanizmy frakcyjne (uwaga właściciela 2026-09-08: baza
+  wowtbc = 800 KB danych + 25 KB `Bistooltip_horde_to_ali` — autorskie
+  założenie pakietu):
+  1. **Globalny mirror runtime (fork, już istnieje, zostaje):**
+     horde→alliance translacja ID przy wyświetlaniu/wyszukiwaniu,
+     niezależna od aktywnej bazy — konsumenci: `DataProvider.lua:166-231`,
+     `Utils.lua:223`, `Bistooltip.lua:496`, `UIFramework.lua:342/619`.
+  2. **Hook `assemble` tylko dla wowsims (port upstream, W4):** tabele
+     frakcyjne **zostają i pracują** (korekta Q14) — upstream konsumuje
+     je w `assembleActiveBislists()`: primary = tabeli frakcji gracza
+     (rank-1), fallback = pełna tabela wowsims, mirror ID przez
+     `Bistooltip_horde_to_ali` + filtr itemów obcej frakcji przez
+     `Bistooltip_item_faction`; scalanie: frakcyjne rank-1 przed
+     kolumnami fallbacku, dedup, cap 6. `wh`/`wowtbc` = zwykły alias
+     (mirror globalny z pkt 1 obejmuje je z definicji).
+  Konsolidacja map w W4 (zweryfikowana 2026-09-08): obie kopie
+  `Bistooltip_horde_to_ali` mają **identyczną treść** (639 wpisów; nasz
+  osobny plik vs sekcja w `Bistooltip_faction.lua`). Gdy
+  `Bistooltip_faction.lua` dołączy do `.toc` (przed bislistami, jak
+  upstream), `Bistooltip_horde_to_ali.lua` znika z `.toc` — jedna
+  definicja globalnej nazwy, wszyscy istniejący konsumenci bez zmian.
 - `PluginAPI.lua`: każda udana mutacja (`DefineSource`, `SetAcquisition`,
   `AddAcquisition`, `SetBiSSlot`, `SetBiSSlotRank`, `SetEnhancement`) jest
   zapisywana do wewnętrznego logu overlay `{fn, deep-copy(args), plugin}`.
