@@ -12,6 +12,7 @@ _G.SlashCmdList = {}
 dofile("Bistooltip/Loot_Sources.lua") -- provides lootTable
 dofile("Bistooltip/EmblemData.lua") -- provides Bistooltip_emblem_items
 assert(type(lootTable) == "table", "lootTable missing after Loot_Sources.lua")
+local TM = assert(dofile("tools/tier_matrix.lua"), "tier_matrix.lua missing")
 assert(type(Bistooltip_emblem_items) == "table", "Bistooltip_emblem_items missing after EmblemData.lua")
 
 -- RAW zone -> canonical instance. Only zones needing rename/merge are listed;
@@ -20,6 +21,8 @@ assert(type(Bistooltip_emblem_items) == "table", "Bistooltip_emblem_items missin
 local CANON_ZONE = {
   -- 5-man heroic splits share one instance identity (mode via ZONE_DIFFICULTY)
   ["Trial of the Champion (Heroic)"] = "Trial of the Champion",
+  ["Vault of Archavon (10)"] = "Vault of Archavon",
+  ["Vault of Archavon (25)"] = "Vault of Archavon",
   ["The Forge of Souls (Heroic)"] = "The Forge of Souls",
   ["Pit of Saron (Heroic)"] = "Pit of Saron",
   ["Halls of Reflection (Heroic)"] = "Halls of Reflection",
@@ -161,6 +164,8 @@ local ZONE_DIFFICULTY = {
   ["Tier 7 Tokens OS(25)"] = "25N",
   ["Tier 8 Tokens Ulduar(10)"] = "10N",
   ["Tier 8 Tokens Ulduar(25)"] = "25N",
+  ["Vault of Archavon (10)"] = "10N",
+  ["Vault of Archavon (25)"] = "25N",
 }
 
 -- Drake-count variants share instance/boss/difficulty with the base Sanctum kill
@@ -420,7 +425,7 @@ local function isTrophyZone(zone)
 end
 
 local registry, acquisition = {}, {}
-local nTrophy, nDeduped = 0, 0
+local nTrophy, nDeduped, nMarkGear, nQuest = 0, 0, 0, 0
 local function sourceID(inst, diff, boss)
   return ((inst .. "_" .. (diff or "") .. "_" .. boss):gsub("[^%w]+", "_"):gsub("_+", "_"):upper())
 end
@@ -430,17 +435,8 @@ local function addEntry(itemID, entry)
   table.insert(acquisition[itemID], entry)
 end
 
--- Zones intentionally NOT migrated yet. The refreshed upstream Loot_Sources
--- added Vault of Archavon with mangled boss keys ("of Archavon Archavon1..7");
--- the oracle-verified canonical boss/difficulty map is workstream W2.
-local DEFERRED_ZONES = {
-  ["Vault of Archavon"] = "W2 tier backfill (mangled boss keys in raw data)",
-}
-
 for zone, bosses in pairs(lootTable) do
-  if DEFERRED_ZONES[zone] then
-    print("[defer] " .. zone .. " -> " .. DEFERRED_ZONES[zone])
-  elseif isTrophyZone(zone) then
+  if isTrophyZone(zone) then
     -- fake zone (not a real place): no registry identity; vendor TROPHY instead
     for _, items in pairs(bosses) do
       for _, itemID in pairs(items) do
@@ -455,19 +451,41 @@ for zone, bosses in pairs(lootTable) do
       end
     end
   else
-    local inst = canonInstance(zone)
-    local diff = difficultyOf(zone)
-    local suffix = SOURCE_SUFFIX[zone] or ""
-    local dtier = tierOf(zone)
-    for boss, items in pairs(bosses) do
-      local cboss = BOSS_ALIASES[boss] or boss
-      local id = sourceID(inst, diff, cboss)
-      if suffix ~= "" then id = id .. "_" .. suffix end
-      registry[id] = registry[id] or { instance = inst, boss = cboss, difficulty = diff }
-      for _, itemID in pairs(items) do
-        local entry = { kind = "DROP", source = id }
-        if dtier then entry.tier = dtier end
-        addEntry(itemID, entry)
+    -- Tier 10N/10HC sanctified gear: per-boss MARK acquisitions (S4-5/W2).
+    -- Zone shape: "Tier 10N <Class>[ <Spec>] ICC(25)" / "Tier 10HC ... (25HC)".
+    -- Replaces the old aggregated fake boss "Mark"/"Mark HC" identity.
+    if zone:sub(1, 8) == "Tier 10N" or zone:sub(1, 9) == "Tier 10HC" then
+      local diff = (zone:sub(1, 9) == "Tier 10HC") and "25HC" or "25N"
+      local rest = zone:gsub("^Tier 10[NH][CM]?%s+", ""):gsub("%s*ICC%(.-$", "")
+      local class = rest:match("^(%S+)") or ""
+      local family = assert(TM.CLASS_FAMILY[class], "Tier 10 zone with unknown class: " .. zone)
+      for _, items in pairs(bosses) do
+        for _, itemID in pairs(items) do
+          if type(itemID) == "number" and itemID > 0 then
+            for _, boss in ipairs(TM.ICC_MARK_BOSSES) do
+              local sid = sourceID("Icecrown Citadel", diff, boss)
+              registry[sid] = registry[sid] or { instance = "Icecrown Citadel", boss = boss, difficulty = diff }
+              addEntry(itemID, { kind = "MARK", tier = "T10", family = family, source = sid })
+            end
+            nMarkGear = nMarkGear + 1
+          end
+        end
+      end
+    else
+      local inst = canonInstance(zone)
+      local diff = difficultyOf(zone)
+      local suffix = SOURCE_SUFFIX[zone] or ""
+      local dtier = tierOf(zone)
+      for boss, items in pairs(bosses) do
+        local cboss = BOSS_ALIASES[boss] or boss
+        local id = sourceID(inst, diff, cboss)
+        if suffix ~= "" then id = id .. "_" .. suffix end
+        registry[id] = registry[id] or { instance = inst, boss = cboss, difficulty = diff }
+        for _, itemID in pairs(items) do
+          local entry = { kind = "DROP", source = id }
+          if dtier then entry.tier = dtier end
+          addEntry(itemID, entry)
+        end
       end
     end
   end
@@ -479,9 +497,34 @@ for itemID, e in pairs(Bistooltip_emblem_items or {}) do
   addEntry(itemID, entry)
 end
 
+-- Mark of Sanctification items themselves drop from the mark bosses
+-- (oracle fact): normal marks at 25N and 25HC, heroic marks at 25HC only.
+for markID, m in pairs(TM.MARKS) do
+  local diffs = (m.heroic and { "25HC" }) or { "25N", "25HC" }
+  for _, diff in ipairs(diffs) do
+    for _, boss in ipairs(TM.ICC_MARK_BOSSES) do
+      local sid = sourceID("Icecrown Citadel", diff, boss)
+      registry[sid] = registry[sid] or { instance = "Icecrown Citadel", boss = boss, difficulty = diff }
+      addEntry(markID, { kind = "DROP", source = sid })
+    end
+  end
+end
+
+-- Boss-tied quest rewards: dedicated "<Boss> [Quest]" sources (owner rule;
+-- input boss lists must NOT still carry these items — render audit shows
+-- doubled lines if they do).
+for itemID, q in pairs(TM.QUEST_DROPS) do
+  local sid = sourceID(q.instance, q.difficulty, q.boss)
+  registry[sid] = registry[sid] or { instance = q.instance, boss = q.boss, difficulty = q.difficulty }
+  addEntry(itemID, { kind = "DROP", source = sid })
+  nQuest = nQuest + 1
+end
+
 -- dedup: collapse byte-identical entries per item; distinct bosses stay separate
 local function entryKey(e)
-  if e.kind == "DROP" then return "DROP\0" .. e.source .. "\0" .. (e.tier or "") end
+  if e.kind == "DROP" or e.kind == "TOKEN" or e.kind == "MARK" then
+    return e.kind .. "\0" .. e.source .. "\0" .. (e.tier or "") .. "\0" .. (e.family or "")
+  end
   local parts = { e.kind or "", e.tier or "", e.displayVariant or "" }
   for _, c in ipairs(e.cost or {}) do
     parts[#parts + 1] = (c.currency or "") .. "#" .. (c.item or 0) .. "#" .. (c.amount or 0)
@@ -549,10 +592,13 @@ local function writeAcquisition(path)
   for _, itemID in ipairs(sortedKeys(acquisition)) do
     f:write(string.format("  [%d] = {\n", itemID))
     for _, e in ipairs(acquisition[itemID]) do
-      if e.kind == "DROP" then
+      if e.kind == "DROP" or e.kind == "TOKEN" or e.kind == "MARK" then
         local extra = ""
         if e.tier then extra = extra .. string.format(", tier = %q", e.tier) end
+        if e.family then extra = extra .. string.format(", family = %q", e.family) end
         f:write(string.format("    { kind = %q, source = %q%s },\n", e.kind, e.source, extra))
+      elseif e.kind == "CUSTOM" then
+        f:write(string.format("    { kind = %q, label = %q },\n", e.kind, e.label))
       else -- VENDOR (optional tier / displayVariant, N-leg cost)
         local extra = ""
         if e.tier then extra = extra .. string.format(", tier = %q", e.tier) end
@@ -574,5 +620,5 @@ writeAcquisition("Bistooltip/ItemAcquisition.lua")
 local nreg, nacq = 0, 0
 for _ in pairs(registry) do nreg = nreg + 1 end
 for _ in pairs(acquisition) do nacq = nacq + 1 end
-print(string.format("migrated: %d sources, %d items (%d TROPHY entries, %d deduped)",
-  nreg, nacq, nTrophy, nDeduped))
+print(string.format("migrated: %d sources, %d items (%d TROPHY entries, %d deduped, %d MARK-gear items, %d quest drops)",
+  nreg, nacq, nTrophy, nDeduped, nMarkGear, nQuest))

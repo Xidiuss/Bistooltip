@@ -1,5 +1,23 @@
 # BisTooltip Changelog
 
+## META-Z W2 wave 1 (2026-09-08) — tier backfill: VOA + T10 MARK + quest rule
+
+### Changes
+
+1. **Vault of Archavon sources added** (was completely absent)
+   - 4 canonical bosses × {10N, 25N}, items decoded from the AtlasLoot oracle
+     (upstream's mangled `Archavon1..7` keys replaced by real boss names)
+   - Toravon drops T10 gloves/legs directly; Emalon/Koralon carry T8/T9 tokens
+2. **T10 sanctified gear: per-boss MARK format** (owner requirement)
+   - `T10 - MARK: Protector [Icecrown Citadel: Deathbringer Saurfang <25N>]` —
+     one line per real boss (Saurfang, Putricide, Lana'thel, Sindragosa, Lich King)
+   - Replaces the aggregated fake source `boss="Mark"` (950 MARK entries / 190 items)
+   - Mark of Sanctification items themselves list their boss drops
+3. **Boss-tied quest rewards rule** (owner: "dałbym drop Algalon[quest]")
+   - `Ulduar [25N] - Algalon [Quest]` for Starshine Circle (45614)
+4. Audits extended: VOA matrix, MARK shape (T10/ICC/25N+25HC/families),
+   fake-boss guard, `[Quest]` line presence; full gate green
+
 ## META-Z W1 (2026-09-08) — runtime cutover + difficulty vocabulary v2
 
 ### Changes

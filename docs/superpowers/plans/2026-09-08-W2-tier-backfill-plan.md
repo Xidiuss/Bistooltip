@@ -94,4 +94,21 @@ tier labels; Ulduar 10N/25N/10HM/25HM only).
 
 ## Execution log
 
-- (filled during implementation)
+- 2026-09-08, wave 1 COMPLETE (in-game check pending): oracle inspected
+  (pages are per CLASS-GROUP, not per boss; upstream VOA keys inherited the
+  same numbering — decoding done from page CONTENT). VOA decoded from all
+  78 oracle pages (4 bosses × 2 difficulties + Koralon A/H variants merged)
+  and spliced into Loot_Sources as canonical zones. `tools/tier_matrix.lua`
+  committed (ICC mark bosses, marks 52025-30, class→family, quest drops).
+  Migrator: Tier 10N/10HC zones now emit per-boss MARK entries (5 bosses ×
+  25N/25HC); fake `Mark`/`Mark HC` aggregates gone; serializer supports
+  TOKEN/MARK fields; dedupe key includes source+family. Quest: 45614 →
+  `Ulduar [25N] - Algalon [Quest]` (removed from raw Algalon-25 list).
+  Result: 719 sources / 8233 items / 950 MARK entries on 190 items /
+  1 quest line; audits green (VOA matrix, MARK shape, fake-boss guard).
+  Oracle anomalies handled: ICC 10HC mark rows EXCLUDED (single witness,
+  contradicts lockouts); 25HC lists both mark tiers (kept — private-server
+  reality).
+- WAVE 2 REMAINING: T7/T8 TOKEN per-boss matrix (Naxx/Ulduar/Sartharion
+  token rows already extracted to /tmp — needs gear↔token-slot matching
+  via oracle slot descriptors) + T9 Regalia from Tribute chest pages.

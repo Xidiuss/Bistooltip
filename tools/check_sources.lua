@@ -24,7 +24,7 @@ local DIFF_OK = { ["10N"] = true, ["25N"] = true, ["10HC"] = true, ["25HC"] = tr
 local RAIDS = { -- canonical instance -> must carry a raid-mode difficulty
   ["Naxxramas"] = true, ["Obsidian Sanctum"] = true, ["Eye of Eternity"] = true,
   ["Onyxia's Lair"] = true, ["Ulduar"] = true, ["Trial of the Crusader"] = true,
-  ["Icecrown Citadel"] = true, ["Ruby Sanctum"] = true,
+  ["Icecrown Citadel"] = true, ["Ruby Sanctum"] = true, ["Vault of Archavon"] = true,
 }
 local DUNGEONS = { -- 5-mans: normal ("") or heroic ("HC") only
   ["Trial of the Champion"] = true, ["The Forge of Souls"] = true, ["Pit of Saron"] = true,
@@ -37,6 +37,7 @@ local DUNGEONS = { -- 5-mans: normal ("") or heroic ("HC") only
 local function isRaidDiff(d)
   return d == "10N" or d == "25N" or d == "10HC" or d == "25HC" or d == "10HM" or d == "25HM"
 end
+local voaBosses = {}
 for sid, s in pairs(reg) do
   assert(DIFF_OK[s.difficulty], "source with unknown difficulty: " .. sid)
   assert((s.instance and s.boss) or s.custom, "source without identity: " .. sid)
@@ -46,13 +47,18 @@ for sid, s in pairs(reg) do
   assert(s.boss ~= "Anubarak", "unmerged boss alias Anubarak: " .. sid)
   assert(s.boss ~= "Taldaram", "unmerged boss alias Taldaram: " .. sid)
   assert(s.boss ~= "Trash Mobs", "unmerged boss alias Trash Mobs: " .. sid)
-  assert(s.instance ~= "Vault of Archavon", "VOA must not surface before W2 (mangled raw keys): " .. sid)
+  assert(s.boss ~= "Mark" and s.boss ~= "Mark HC", "fake aggregated boss resurfaced (W2 removed these): " .. sid)
+  if s.instance == "Vault of Archavon" then
+    voaBosses[s.difficulty .. "|" .. s.boss] = true
+  end
   if RAIDS[s.instance] then
     assert(isRaidDiff(s.difficulty), "raid source without raid difficulty: " .. sid)
     if s.instance == "Ulduar" then
       assert(s.difficulty == "10N" or s.difficulty == "25N"
         or s.difficulty == "10HM" or s.difficulty == "25HM",
         "Ulduar source outside 10N/25N/10HM/25HM (spec S2-3, Q10): " .. sid)
+    elseif s.instance == "Vault of Archavon" then
+      assert(s.difficulty == "10N" or s.difficulty == "25N", "VOA source outside 10N/25N: " .. sid)
     else
       assert(s.difficulty ~= "10HM" and s.difficulty ~= "25HM",
         "HM difficulty is Ulduar-only (spec S2-3): " .. sid)
@@ -87,6 +93,46 @@ assert(has("Trial of the Champion", "The Black Knight", "HC"), "missing ToC5 her
 assert(has("Ahn'kahet: The Old Kingdom", "Prince Taldaram", "HC"), "missing Ahn'kahet HC Prince Taldaram")
 assert(has("Azjol-Nerub", "Anub'arak", "HC"), "missing Azjol-Nerub HC Anub'arak")
 assert(has("World Drops", "Level 80", ""), "missing World Drops identity")
+
+-- W2: VOA matrix — 4 canonical bosses x {10N, 25N}, all referenced
+local VOA_BOSSES = {
+  "Archavon the Stone Watcher", "Emalon the Storm Watcher",
+  "Koralon the Flame Watcher", "Toravon the Ice Watcher",
+}
+for _, b in ipairs(VOA_BOSSES) do
+  assert(voaBosses["10N|" .. b], "missing VOA 10N source for " .. b)
+  assert(voaBosses["25N|" .. b], "missing VOA 25N source for " .. b)
+end
+
+-- W2: MARK audit — kind=MARK is T10-only, ICC-only, 25N/25HC, valid family
+local nMark, markItems = 0, 0
+local MARK_FAMILY = { Protector = true, Conqueror = true, Vanquisher = true }
+for id, entries in pairs(acq) do
+  local itemHasMark = false
+  for _, e in ipairs(entries) do
+    if e.kind == "MARK" then
+      nMark = nMark + 1
+      itemHasMark = true
+      assert(e.tier == "T10", "MARK outside T10 on item " .. id)
+      assert(MARK_FAMILY[e.family], "MARK with unknown family on item " .. id)
+      local ms = reg[e.source]
+      assert(ms and ms.instance == "Icecrown Citadel", "MARK source outside ICC on item " .. id)
+      assert(ms.difficulty == "25N" or ms.difficulty == "25HC",
+        "MARK difficulty outside 25N/25HC on item " .. id)
+    end
+  end
+  if itemHasMark then markItems = markItems + 1 end
+end
+assert(nMark > 0, "expected MARK entries for T10 gear, found none")
+print(string.format("marks: OK (%d entries on %d items)", nMark, markItems))
+local nQuestLines = 0
+for id, entries in pairs(acq) do
+  for _, e in ipairs(entries) do
+    if e.source and reg[e.source] and reg[e.source].boss:find("%[Quest%]") then nQuestLines = nQuestLines + 1 end
+  end
+end
+assert(nQuestLines >= 1, "expected at least one [Quest] source line (45614)")
+print("quests: OK (" .. nQuestLines .. " [Quest] line(s))")
 -- TROPHY shape: display-only variant of VENDOR T9 with trophy+currency cost
 local nTrophy = 0
 for id, entries in pairs(acq) do
