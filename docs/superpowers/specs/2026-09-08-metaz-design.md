@@ -397,7 +397,7 @@ drafter'owe (małe, w tym samym addonie):
 | W2 | Backfill tierów (VOA, TOKEN/MARK per-boss) + walidacja oracle + audyt cross-DB coverage (każdy ID z każdej bazy ma akwizycję albo allowlista) | W1 |
 | W3 | FormatSourceColored + paleta + wpięcie tooltip/checklist | W1 |
 | W4 | DB registry + options + overlay replay (S3-5) + `SetBiSSlotRank` (S3-6); migracja do `db.global` (`data_source` + `custom_priorities` — warstwa §12); wowsims = alias (alliance) / alias+podmiana overrides (horda); W4a: `tools/assemble_wowsims.lua` (port algorytmu upstream) + wygenerowanie `Bistooltip_wowsims_final.lua` (baza alliance + overrides hordy, raport zróżnicowania) | — |
-| W5 | Tryb VENDOR (rename + semantyka ItemAcquisition, kind VENDOR+CUSTOM) | W1 |
+| W5 | ~~Tryb VENDOR (rename + semantyka ItemAcquisition, kind VENDOR+CUSTOM)~~ — **wykonane przedplanowo** na żądanie właściciela przy testach W1; przy okazji naprawiono zgłoszony wyciek: GroupSlotsByInstance grupował po rank-1 slotu, więc sloty z itemem vendorowym głębiej w rankingu trafiały do grup instancji (np. ToC) w trybie filtru | W1 |
 | W6 | Wtyczka `Bistooltip_Whitemane_Frostmourne` (diffy SetBiSSlotRank, poprawka 150005, waluty cata-like po skanie) + czyszczenie EmblemData/wowtbc + usunięcie root `_some custom items.lua` PO ekstrakcji (Q4) | W4, W5 |
 | W7 | Bistooltip_Scanner (frozen plan) + `/bis item` + jednostka gold | — |
 | W8 | `tools/run_all` + CI GitHub Actions (Q15: TAK) + pełny audyt + manual in-game | W1–W7 |

@@ -23,7 +23,7 @@ local State = {
     
     -- UI mode flags
     bisChecklistMode = false,
-    emblemFilterMode = false,
+    vendorFilterMode = false,
     showOnlyMissing = false,
     customizeMode = false,
     
@@ -241,9 +241,9 @@ function BistooltipState.SetChecklistMode(enabled)
     BistooltipState.NotifyListeners("bisChecklistMode", enabled)
 end
 
-function BistooltipState.SetEmblemFilterMode(enabled)
-    State.emblemFilterMode = enabled
-    BistooltipState.NotifyListeners("emblemFilterMode", enabled)
+function BistooltipState.SetVendorFilterMode(enabled)
+    State.vendorFilterMode = enabled
+    BistooltipState.NotifyListeners("vendorFilterMode", enabled)
 end
 
 function BistooltipState.SetShowOnlyMissing(enabled)
@@ -544,7 +544,7 @@ function BistooltipState.Reset()
     State.searchTextLower = ""
     State.showOnlyMissing = false
     State.customizeMode = false
-    State.emblemFilterMode = false
+    State.vendorFilterMode = false
     State.unlockedSlots = {}
     State.selectedSwapItem = nil
     State.savedScrollValue = 0
@@ -579,7 +579,7 @@ function BistooltipState.PrintState()
     DEFAULT_CHAT_FRAME:AddMessage(string.format("  Spec: %s (index: %d)", tostring(State.spec), State.spec_index))
     DEFAULT_CHAT_FRAME:AddMessage(string.format("  Phase: %s (index: %d)", tostring(State.phase), State.phase_index))
     DEFAULT_CHAT_FRAME:AddMessage(string.format("  Checklist Mode: %s", tostring(State.bisChecklistMode)))
-    DEFAULT_CHAT_FRAME:AddMessage(string.format("  Emblem Filter: %s", tostring(State.emblemFilterMode)))
+    DEFAULT_CHAT_FRAME:AddMessage(string.format("  Vendor Filter: %s", tostring(State.vendorFilterMode)))
     DEFAULT_CHAT_FRAME:AddMessage(string.format("  Customize Mode: %s", tostring(State.customizeMode)))
     DEFAULT_CHAT_FRAME:AddMessage(string.format("  Phase Locked: %s", tostring(State.blockedPhase)))
     DEFAULT_CHAT_FRAME:AddMessage(string.format("  Search: '%s'", State.searchText))

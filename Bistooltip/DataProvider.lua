@@ -458,7 +458,7 @@ local function CreateVirtualSlot(originalSlot, newSlotName, itemIndex)
     return virtualSlot
 end
 
-function BistooltipData.FilterSlots(slots, searchText, showOnlyMissing, emblemFilterMode, isHorde, bisMode)
+function BistooltipData.FilterSlots(slots, searchText, showOnlyMissing, vendorFilterMode, isHorde, bisMode)
     if not slots then return {}, {} end
 
     -- Ensure searchText is a string (handle nil/empty properly)
@@ -492,7 +492,7 @@ function BistooltipData.FilterSlots(slots, searchText, showOnlyMissing, emblemFi
         local matches = BistooltipData.SlotMatchesFilter(slot, searchLower, isHorde)
 
         -- Check if slot passes emblem filter (Ascension mode)
-        local hasAscension = BistooltipData.SlotHasAscensionSource(slot, emblemFilterMode, isHorde)
+        local hasVendor = BistooltipData.SlotHasVendorSource(slot, vendorFilterMode, isHorde)
 
         if matches and hasAscension then
             -- In BIS mode, split Finger and Trinket into separate rows
@@ -586,17 +586,21 @@ function BistooltipData.SlotMatchesFilter(slot, searchLower, isHorde)
     return false
 end
 
-function BistooltipData.SlotHasAscensionSource(slot, emblemFilterMode, isHorde)
-    if not emblemFilterMode then return true end
-    
+-- W5/VENDOR semantics: a slot qualifies for VENDOR mode when ANY of its
+-- ranked items has a vendor acquisition (kind=VENDOR via the single source
+-- of truth BisTooltip_GetVendorCost). Custom (plugin) sources join when
+-- the Whitemane plugin ships (spec Q8: kind VENDOR + CUSTOM).
+function BistooltipData.SlotHasVendorSource(slot, vendorFilterMode, isHorde)
+    if not vendorFilterMode then return true end
+
     for _, iid in ipairs(slot) do
         local id = BistooltipData.GetDisplayItemID(iid, isHorde)
-        local cost, currency = BistooltipData.GetEmblemCost(id)
-        if currency and string.find(currency, "Ascension") then
+        local _, currency = BisTooltip_GetVendorCost(id)
+        if currency then
             return true
         end
     end
-    
+
     return false
 end
 
@@ -658,7 +662,7 @@ end
 -- Build Checklist Groups (by Boss/Zone)
 -- ============================================================
 
-function BistooltipData.BuildChecklistGroups(className, specName, phase, emblemFilterMode)
+function BistooltipData.BuildChecklistGroups(className, specName, phase, vendorFilterMode)
     local groups = {}         -- groups[zone][boss] = { items = {}, difficulty = "10HM" }
     local totalMissing = 0
     local emblemGroups = {}   -- emblemGroups[costKey] = { items = {}, total = 0, cost = X }
@@ -672,28 +676,19 @@ function BistooltipData.BuildChecklistGroups(className, specName, phase, emblemF
         for _, id in ipairs(required) do
             if id and id > 0 and BistooltipData.GetOwnedCount(id) < 1 then
                 totalMissing = totalMissing + 1
-                
+
                 local sources = BistooltipData.GetAllItemSources(id)
-                local isAscensionItem = false
-                
-                -- Check if this is an Ascension emblem item
-                for _, src in ipairs(sources) do
-                    if src.type == "emblem" and src.currency and string.find(src.currency, "Ascension") then
-                        isAscensionItem = true
-                        break
-                    end
-                end
-                
+
                 for _, src in ipairs(sources) do
                     if src.type == "raid" then
-                        -- Only add raid items if NOT in ASCEND mode
-                        if not emblemFilterMode then
+                        -- Only add raid items if NOT in VENDOR mode
+                        if not vendorFilterMode then
                             local zone = src.zone or "Unknown"
                             local boss = src.boss or "Unknown"
-                            
+
                             groups[zone] = groups[zone] or {}
                             groups[zone][boss] = groups[zone][boss] or { items = {}, difficulty = src.difficulty }
-                            
+
                             table.insert(groups[zone][boss].items, {
                                 id = id,
                                 slot = slot.slot_name or "",
@@ -701,31 +696,33 @@ function BistooltipData.BuildChecklistGroups(className, specName, phase, emblemF
                             })
                         end
                     elseif src.type == "emblem" then
+                        -- VENDOR mode: vendor items are the WHOLE point; normal
+                        -- mode keeps them as emblem groups next to raid drops.
+                        -- Grouped by currency (spec W5; replaces the old
+                        -- Ascension-only substring grouping and its cost buckets).
                         local currency = src.currency or "Emblems"
                         local cost = src.cost or 0
-                        local isAscension = string.find(currency, "Ascension") ~= nil
-                        
-                        -- In ASCEND mode: only show Ascension emblems
-                        -- In normal mode: only show non-Ascension emblems
-                        if (emblemFilterMode and isAscension) or (not emblemFilterMode and not isAscension) then
-                            -- Group by cost for Ascension emblems
-                            local groupKey
-                            if isAscension then
-                                groupKey = string.format("Ascension (%d)", cost)
-                            else
-                                groupKey = currency
-                            end
-                            
-                            emblemGroups[groupKey] = emblemGroups[groupKey] or { items = {}, total = 0, cost = cost }
-                            emblemGroups[groupKey].total = emblemGroups[groupKey].total + cost
-                            
-                            table.insert(emblemGroups[groupKey].items, {
-                                id = id,
-                                slot = slot.slot_name or "",
-                                cost = cost,
-                                sources = sources,
-                            })
-                        end
+                        local groupKey = currency
+
+                        emblemGroups[groupKey] = emblemGroups[groupKey] or { items = {}, total = 0, cost = 0 }
+                        emblemGroups[groupKey].total = emblemGroups[groupKey].total + cost
+
+                        table.insert(emblemGroups[groupKey].items, {
+                            id = id,
+                            slot = slot.slot_name or "",
+                            cost = cost,
+                            sources = sources,
+                        })
+                    elseif src.type == "custom" and vendorFilterMode then
+                        -- Plugin donate/custom shops: VENDOR mode only.
+                        local groupKey = src.label or "Custom"
+                        emblemGroups[groupKey] = emblemGroups[groupKey] or { items = {}, total = 0, cost = 0 }
+                        table.insert(emblemGroups[groupKey].items, {
+                            id = id,
+                            slot = slot.slot_name or "",
+                            cost = 0,
+                            sources = sources,
+                        })
                     end
                 end
             end

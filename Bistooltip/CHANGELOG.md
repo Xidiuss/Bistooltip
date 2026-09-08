@@ -15,6 +15,15 @@
      tier-backfill workstream (raw upstream keys are mangled)
 4. **Data regenerated** from the canonical Loot_Sources with vocabulary v2
    (712 sources / 8820 acquisition entries; audits green, TROPHY prices locked)
+5. **ASCEND mode renamed to VENDOR** with new semantics (pulled forward from W5)
+   - Qualification by acquisition kind (VENDOR via `BisTooltip_GetVendorCost`), not
+     by the "Ascension" currency substring — works on clean WotLK (Triumph/Frost)
+     and with custom currencies alike
+   - Fixed owner-reported leak: slots whose vendor item sat below rank 1 were grouped
+     by their rank-1 raid instance (e.g. Trial of the Crusader groups inside the
+     filter mode); VENDOR mode now groups strictly by the slot's vendor currency and
+     never renders instance groups
+   - Button label, tooltips, empty-state and summary strings updated
 
 ## Version 2.2.2-3.3.5a (2026-04-17)
 

@@ -401,22 +401,22 @@ local function SwitchToTab(tabId)
     -- Handle mode switching
     if tabId == TAB_MAIN then
         State.SetChecklistMode(false)
-        -- Disable ASCEND mode when leaving BIS tab
-        State.SetEmblemFilterMode(false)
-        -- Reset ASCEND button visual using STYLE system
-        if uiFrames.ascendBtn then
-            if uiFrames.ascendBtn._bg then
-                ApplyColor(uiFrames.ascendBtn._bg, STYLE.COLORS.BG_MEDIUM)
+        -- Disable VENDOR mode when leaving BIS tab
+        State.SetVendorFilterMode(false)
+        -- Reset VENDOR button visual using STYLE system
+        if uiFrames.vendorBtn then
+            if uiFrames.vendorBtn._bg then
+                ApplyColor(uiFrames.vendorBtn._bg, STYLE.COLORS.BG_MEDIUM)
             end
-            if uiFrames.ascendBtn._borders then
-                for _, border in ipairs(uiFrames.ascendBtn._borders) do
+            if uiFrames.vendorBtn._borders then
+                for _, border in ipairs(uiFrames.vendorBtn._borders) do
                     ApplyColor(border, STYLE.COLORS.BORDER_SUBTLE)
                 end
             end
-            if uiFrames.ascendBtn._label then
-                ApplyTextColor(uiFrames.ascendBtn._label, STYLE.COLORS.TEXT_NORMAL)
+            if uiFrames.vendorBtn._label then
+                ApplyTextColor(uiFrames.vendorBtn._label, STYLE.COLORS.TEXT_NORMAL)
             end
-            uiFrames.ascendBtn._isActive = false
+            uiFrames.vendorBtn._isActive = false
         end
         if BistooltipAddon.db and BistooltipAddon.db.char then
             BistooltipAddon.db.char.bis_checklist = false
@@ -3982,19 +3982,19 @@ drawSpecData = function()
     -- Filter slots
     local searchText = State.Get("searchTextLower")
     local showOnlyMissing = State.Get("showOnlyMissing")
-    local emblemFilterMode = State.Get("emblemFilterMode")
+    local vendorFilterMode = State.Get("vendorFilterMode")
     local bisChecklistMode = State.Get("bisChecklistMode")
     local isHorde = State.Get("isHorde")
 
     local filteredSlots, allSlotsForProgress = Data.FilterSlots(
-        slots, searchText, showOnlyMissing, emblemFilterMode, isHorde, bisChecklistMode
+        slots, searchText, showOnlyMissing, vendorFilterMode, isHorde, bisChecklistMode
     )
 
     -- Store for progress calculation
     _G.Bistooltip_allSlotsForProgress = allSlotsForProgress
 
-    -- Show message if ASCEND mode is enabled but no items match
-    if emblemFilterMode and #filteredSlots == 0 then
+    -- Show message if VENDOR mode is enabled but no items match
+    if vendorFilterMode and #filteredSlots == 0 then
         -- Create or show empty message label
         if not customContentFrame._emptyLabel then
             customContentFrame._emptyLabel = customContentFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
@@ -4024,7 +4024,7 @@ drawSpecData = function()
 
     -- In BIS mode, group slots by instance and render with collapsible headers
     if bisChecklistMode and BistooltipInstanceHeader and BistooltipInstanceHeader.GroupSlotsByInstance then
-        local instanceGroups = BistooltipInstanceHeader.GroupSlotsByInstance(filteredSlots, isHorde, emblemFilterMode)
+        local instanceGroups = BistooltipInstanceHeader.GroupSlotsByInstance(filteredSlots, isHorde, vendorFilterMode)
 
         for _, group in ipairs(instanceGroups) do
             -- Render instance header
@@ -4085,8 +4085,8 @@ drawSpecData = function()
     if checklistSummaryLabel then
         if not bisChecklistMode then
             checklistSummaryLabel:SetText("")
-        elseif emblemFilterMode then
-            checklistSummaryLabel:SetText("|cffff00ffASCEND MODE|r: Showing Emblem of Ascension items only")
+        elseif vendorFilterMode then
+            checklistSummaryLabel:SetText("|cffff00ffVENDOR MODE|r: Showing vendor-purchasable items only")
         else
             checklistSummaryLabel:SetText("|cffffff00BIS Mode|r: Shows source boss, cost, and gem planning.")
         end
@@ -4094,7 +4094,7 @@ drawSpecData = function()
     
     -- Update emblem summary
     if emblemSummaryLabel then
-        if bisChecklistMode and emblemFilterMode then
+        if bisChecklistMode and vendorFilterMode then
             local totals = Data.CalculateMissingEmblems(className, specName, phase)
             local ascensionData = totals["Emblem of Ascension"]
             
@@ -4700,23 +4700,23 @@ local function CreateNewTabBar(parent)
                 -- Switching to MAIN tab
                 State.SetChecklistMode(false)
 
-                -- CRITICAL: Disable ASCEND mode when leaving BIS tab
-                State.SetEmblemFilterMode(false)
+                -- CRITICAL: Disable VENDOR mode when leaving BIS tab
+                State.SetVendorFilterMode(false)
 
-                -- Reset ASCEND button visual state using STYLE system
-                if uiFrames.ascendBtn then
-                    if uiFrames.ascendBtn._bg then
-                        ApplyColor(uiFrames.ascendBtn._bg, STYLE.COLORS.BG_MEDIUM)
+                -- Reset VENDOR button visual state using STYLE system
+                if uiFrames.vendorBtn then
+                    if uiFrames.vendorBtn._bg then
+                        ApplyColor(uiFrames.vendorBtn._bg, STYLE.COLORS.BG_MEDIUM)
                     end
-                    if uiFrames.ascendBtn._borders then
-                        for _, border in ipairs(uiFrames.ascendBtn._borders) do
+                    if uiFrames.vendorBtn._borders then
+                        for _, border in ipairs(uiFrames.vendorBtn._borders) do
                             ApplyColor(border, STYLE.COLORS.BORDER_SUBTLE)
                         end
                     end
-                    if uiFrames.ascendBtn._label then
-                        ApplyTextColor(uiFrames.ascendBtn._label, STYLE.COLORS.TEXT_NORMAL)
+                    if uiFrames.vendorBtn._label then
+                        ApplyTextColor(uiFrames.vendorBtn._label, STYLE.COLORS.TEXT_NORMAL)
                     end
-                    uiFrames.ascendBtn._isActive = false
+                    uiFrames.vendorBtn._isActive = false
                 end
 
                 if BistooltipAddon.db and BistooltipAddon.db.char then
@@ -5402,7 +5402,7 @@ local function ShowExportPopup()
 end
 
 -- ============================================================
--- NEW UI: Bottom Bar (Reload, Discord, Reset, ASCEND, EXPORT)
+-- NEW UI: Bottom Bar (Reload, Discord, Reset, VENDOR, EXPORT)
 -- Uses unified STYLE system for consistent look
 -- ============================================================
 
@@ -5456,16 +5456,16 @@ local function CreateNewBottomBar(parent)
     sep:SetTexture("Interface\\Buttons\\WHITE8x8")
     ApplyColor(sep, STYLE.COLORS.BORDER_NORMAL)
 
-    -- ASCEND button (emblem filter) - toggle button style
-    local ascendBtn = CreateStyledButton(frame, "ASCEND", 75, STYLE.BUTTON_HEIGHT, function(self)
+    -- VENDOR button (vendor filter) - toggle button style
+    local vendorBtn = CreateStyledButton(frame, "VENDOR", 80, STYLE.BUTTON_HEIGHT, function(self)
         local bisChecklistMode = State.Get("bisChecklistMode")
         if not bisChecklistMode then
-            DEFAULT_CHAT_FRAME:AddMessage("|cffff8800Bistooltip:|r ASCEND mode is only available in the BIS tab.")
+            DEFAULT_CHAT_FRAME:AddMessage("|cffff8800Bistooltip:|r VENDOR mode is only available in the BIS tab.")
             return
         end
 
-        local newState = not State.Get("emblemFilterMode")
-        State.SetEmblemFilterMode(newState)
+        local newState = not State.Get("vendorFilterMode")
+        State.SetVendorFilterMode(newState)
 
         -- Update button visual state
         if newState then
@@ -5480,14 +5480,14 @@ local function CreateNewBottomBar(parent)
             self:SetActive(false)
         end
         drawSpecData()
-    end, "Filter Emblem of Ascension items (BIS tab only)")
-    ascendBtn:SetToggleMode(true)
-    ascendBtn:SetPoint("LEFT", sep, "RIGHT", 12, 0)
-    uiFrames.ascendBtn = ascendBtn
+    end, "Show vendor-purchasable items only (BIS tab only)")
+    vendorBtn:SetToggleMode(true)
+    vendorBtn:SetPoint("LEFT", sep, "RIGHT", 12, 0)
+    uiFrames.vendorBtn = vendorBtn
 
-    -- Custom OnEnter/OnLeave for ASCEND to handle teal active state
-    ascendBtn:SetScript("OnEnter", function(self)
-        local isActive = State.Get("emblemFilterMode")
+    -- Custom OnEnter/OnLeave for VENDOR to handle teal active state
+    vendorBtn:SetScript("OnEnter", function(self)
+        local isActive = State.Get("vendorFilterMode")
         if not isActive then
             ApplyColor(self._bg, STYLE.COLORS.BG_HOVER)
             for _, border in ipairs(self._borders) do
@@ -5496,12 +5496,12 @@ local function CreateNewBottomBar(parent)
             ApplyTextColor(self._label, STYLE.COLORS.TEXT_BRIGHT)
         end
         GameTooltip:SetOwner(self, "ANCHOR_TOP")
-        GameTooltip:SetText("Filter Emblem of Ascension items (BIS tab only)", 1, 1, 1, 1, true)
+        GameTooltip:SetText("Show vendor-purchasable items only (BIS tab only)", 1, 1, 1, 1, true)
         GameTooltip:Show()
     end)
 
-    ascendBtn:SetScript("OnLeave", function(self)
-        local isActive = State.Get("emblemFilterMode")
+    vendorBtn:SetScript("OnLeave", function(self)
+        local isActive = State.Get("vendorFilterMode")
         if isActive then
             ApplyColor(self._bg, STYLE.COLORS.ACCENT_TEAL)
             for _, border in ipairs(self._borders) do
@@ -5522,7 +5522,7 @@ local function CreateNewBottomBar(parent)
     local exportBtn = CreateStyledButton(frame, "EXPORT", 75, STYLE.BUTTON_HEIGHT, function()
         ShowExportPopup()
     end, "Export BIS list to clipboard")
-    exportBtn:SetPoint("LEFT", ascendBtn, "RIGHT", 6, 0)
+    exportBtn:SetPoint("LEFT", vendorBtn, "RIGHT", 6, 0)
 
     return frame
 end
@@ -5860,21 +5860,21 @@ function BistooltipAddon:showMainFrame()
         tabBtn:GetScript("OnClick")(tabBtn)
     end
 
-    -- 8. Update ASCEND button visual state
-    local ascendBtn = uiFrames.ascendBtn
-    if ascendBtn then
-        local emblemFilterMode = State.Get("emblemFilterMode")
-        local btnBg = ascendBtn._bg
-        local btnLabel = ascendBtn._label
+    -- 8. Update VENDOR button visual state
+    local vendorBtn = uiFrames.vendorBtn
+    if vendorBtn then
+        local vendorFilterMode = State.Get("vendorFilterMode")
+        local btnBg = vendorBtn._bg
+        local btnLabel = vendorBtn._label
         if btnBg and btnBg.SetVertexColor then
-            if emblemFilterMode then
+            if vendorFilterMode then
                 btnBg:SetVertexColor(0.0, 0.8, 0.6, 0.95)
             else
                 btnBg:SetVertexColor(0.12, 0.12, 0.15, 0.9)
             end
         end
         if btnLabel and btnLabel.SetTextColor then
-            if emblemFilterMode then
+            if vendorFilterMode then
                 btnLabel:SetTextColor(0.1, 0.1, 0.1, 1)
             else
                 btnLabel:SetTextColor(0.8, 0.8, 0.8, 1)
