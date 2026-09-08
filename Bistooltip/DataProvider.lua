@@ -393,34 +393,19 @@ function BistooltipData.GetAllItemSources(itemId)
     return sources
 end
 
+-- W1 cutover: both emblem helpers read the new source model
+-- (ItemAcquisition VENDOR entries) via the pure lookup in
+-- SourceFormatter.lua. Bistooltip_emblem_items / Constants.EMBLEM_ITEMS
+-- are no longer consulted at runtime (single source of truth).
 function BistooltipData.HasEmblemSource(itemId)
     if not itemId or itemId <= 0 then return false end
-    
-    if _G.Bistooltip_emblem_items and _G.Bistooltip_emblem_items[itemId] then
-        return true
-    end
-    if Constants and Constants.EMBLEM_ITEMS and Constants.EMBLEM_ITEMS[itemId] then
-        return true
-    end
-    
-    return false
+    local _, currency = BisTooltip_GetVendorCost(itemId)
+    return currency ~= nil
 end
 
 function BistooltipData.GetEmblemCost(itemId)
     if not itemId or itemId <= 0 then return nil, nil end
-    
-    local emblem = nil
-    if _G.Bistooltip_emblem_items then
-        emblem = _G.Bistooltip_emblem_items[itemId]
-    end
-    if not emblem and Constants and Constants.EMBLEM_ITEMS then
-        emblem = Constants.EMBLEM_ITEMS[itemId]
-    end
-    
-    if emblem then
-        return emblem.cost, emblem.currency
-    end
-    return nil, nil
+    return BisTooltip_GetVendorCost(itemId)
 end
 
 -- NOTE: difficulty is a closed fact set on SourceRegistry entries (spec S2);

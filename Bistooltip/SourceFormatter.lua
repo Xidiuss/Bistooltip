@@ -41,3 +41,21 @@ function BisTooltip_FormatSource(entry)
   end
   return nil
 end
+
+-- Single source of truth for vendor costs (W1): returns the amount and
+-- currency name of the first VENDOR acquisition of an item, preferring a
+-- currency part over an item part (TROPHY entries price in emblems).
+function BisTooltip_GetVendorCost(itemID)
+  local entries = (BisTooltip_ItemAcquisition or {})[itemID]
+  if not entries then return nil, nil end
+  for _, e in ipairs(entries) do
+    if type(e) == "table" and e.kind == "VENDOR" then
+      for _, c in ipairs(e.cost or {}) do
+        if type(c) == "table" and type(c.currency) == "string" and c.currency ~= "" then
+          return c.amount, c.currency
+        end
+      end
+    end
+  end
+  return nil, nil
+end

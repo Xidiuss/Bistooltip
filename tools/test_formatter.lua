@@ -26,3 +26,27 @@ for i, c in ipairs(cases) do
   assert(got == c[2], "case " .. i .. ": got " .. tostring(got) .. ", want " .. tostring(c[2]))
 end
 print("formatter: OK (" .. #cases .. " cases)")
+
+-- BisTooltip_GetVendorCost: single source of truth for vendor costs (W1 Task 2)
+BisTooltip_ItemAcquisition = {
+  [1] = { { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 50 } } } },
+  [2] = { { kind = "VENDOR", displayVariant = "TROPHY", tier = "T9",
+            cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } } },
+  [3] = { { kind = "DROP", source = "VEZAX" } },
+  [4] = { { kind = "DROP", source = "VEZAX" },
+          { kind = "VENDOR", cost = { { item = 30183, amount = 1 }, { currency = "Emblem of Ascension II", amount = 150 } } } },
+}
+local vcases = {
+  { 1, 50, "Emblem of Triumph" },   -- plain VENDOR
+  { 2, 75, "Emblem of Triumph" },   -- TROPHY: currency part preferred over item part
+  { 3, nil, nil },                  -- no VENDOR entry
+  { 4, 150, "Emblem of Ascension II" }, -- VENDOR after a DROP entry
+  { 999, nil, nil },                -- no acquisition at all
+}
+for i, c in ipairs(vcases) do
+  local amount, currency = BisTooltip_GetVendorCost(c[1])
+  assert(amount == c[2] and currency == c[3],
+    "vcost case " .. i .. ": got " .. tostring(amount) .. "," .. tostring(currency)
+    .. ", want " .. tostring(c[2]) .. "," .. tostring(c[3]))
+end
+print("vendorcost: OK (" .. #vcases .. " cases)")
