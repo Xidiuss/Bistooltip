@@ -1,9 +1,9 @@
 # META-Z — Meta-BisTooltip system design
 
-Status: **DRAFT v2.3** — decyzje Q1–Q16 wdrożone; Q14 odwrócona po
+Status: **DRAFT v2.4** — decyzje Q1–Q16 wdrożone; Q14 odwrócona po
 weryfikacji upstream + refresh danych wykonany; v2.3: assembly frakcyjne
-wowsims przeniesione do offline (bez merge w runtime); oczekuje na plan
-implementacji.
+offline; v2.4: reprezentacja kompaktowa final (baza alliance + overrides
+hordy w duchu horde_to_ali); oczekuje na plan implementacji.
 Data: 2026-09-08. Gałąź: `META-Z` (utworzona z `feat/meta-bistooltip-data`,
 pełna historia). Klasyfikacja: architectural.
 Relacja: rozszerza **frozen** `2026-09-07-metabistooltip-data-design.md`
@@ -15,7 +15,9 @@ v2.1: decyzje Q&A + warstwa Personal BiS (§12). v2.2: Q14 odwrócona
 z upstream (provenance: github.com/ExoJdi/BiS-Tooltip_335a_fixed_backport,
 commit 2026-06-09). v2.3: assembly frakcyjne OFFLINE (decyzja właściciela —
 bez runtime merge w stylu WoWSimsBP; runtime = zwykły alias, generator
-`tools/assemble_wowsims.lua`).
+`tools/assemble_wowsims.lua`). v2.4: reprezentacja kompaktowa — baza
+alliance + mapa nadpisań hordy (`..._horde_overrides`) zamiast dwóch
+pełnych tabel (duch `horde_to_ali`; żądanie właściciela 2026-09-08).
 
 ## 0. Cel
 
@@ -107,7 +109,7 @@ Layout docelowy:
 ```text
 Bistooltip/                        # core
   Bistooltip_wowsims_final.lua     # STANDARD (default) — WYGENEROWANY offline
-                                   # (2 tabele frakcyjne; dołączyć do .toc)
+                                   # (baza alliance + overrides hordy; do .toc)
   Bistooltip_wh_bislists.lua       # baza wybieralna — dołączyć do .toc
   Bistooltip_wowtbc_bislists.lua   # baza wybieralna, OCZYSZCZONA z custom ID
   Bistooltip_WoWSimsBP_bislists.lua + Bistooltip_faction.lua  # INPUT offline
@@ -204,21 +206,28 @@ BisTooltip_DBRegistry = {
      horde→alliance translacja ID przy wyświetlaniu/wyszukiwaniu,
      niezależna od aktywnej bazy — konsumenci: `DataProvider.lua:166-231`,
      `Utils.lua:223`, `Bistooltip.lua:496`, `UIFramework.lua:342/619`.
-  2. **Assembly frakcyjne wowsims — OFFLINE, nie w runtime (v2.3, decyzja
-     właściciela „nie robić tego sposobem WoWSimsBP"):** niuansem
-     upstream jest MERGE w runtime (`assembleActiveBislists()`); META-Z
-     przenosi go do narzędzia offline. Nowe `tools/assemble_wowsims.lua`
-     portuje algorytm upstream 1:1 (primary+fallback, mirror ID, filtr
-     frakcji, aliasowanie Ranged/Relic, cap 6) i emituje plik kanoniczny
-     `Bistooltip_wowsims_final.lua` z dwiema gotowymi tabelami
-     (alliance/horde) + classes + phases (jedna definicja — duplikat
-     phases znika z definicji). Runtime: wpis `wowsims` w rejestrze =
-     **zwykły alias** na tabelę frakcji gracza (`UnitFactionGroup` przy
-     `EnableSpec`); zero logiki scalania w grze, zgodnie z filozofią
-     zamkniętego rdzenia (to samo, co zrobiliśmy z `findSourceInLootTable`
-     i heurystyką difficulty). `Bistooltip_WoWSimsBP_bislists.lua`
-     (3 tabele) i `Bistooltip_faction.lua` zostają w repo jako **input
-     offline, nie ładowane w `.toc`** — ten sam wzorzec co Loot_Sources.
+  2. **Assembly frakcyjne wowsims — OFFLINE + reprezentacja kompaktowa
+     (v2.3: „nie robić tego sposobem WoWSimsBP"; v2.4: zmniejszyć plik
+     w duchu `horde_to_ali`):** upstream merguje w runtime i ładuje 3
+     tabele; META-Z robi merge offline i ładuje mniej.
+     `tools/assemble_wowsims.lua` portuje algorytm upstream 1:1
+     (primary+fallback, mirror ID, filtr frakcji, aliasowanie
+     Ranged/Relic, cap 6), liczy OBA finalne rankingi frakcyjne i emituje
+     `Bistooltip_wowsims_final.lua` w postaci kompaktowej:
+     `..._final_alliance` (jedna pełna baza) +
+     `..._final_horde_overrides` (tylko sloty, w których horda różni się
+     w ogóle — cały slot precomputowany; duch `Bistooltip_horde_to_ali`:
+     mała mapa różnic zamiast drugiej pełnej tabeli) + classes + phases
+     (jedna definicja — duplikat phases znika z definicji). Runtime:
+     alliance = czysty alias; horda = alias + pętla podmian referencji
+     slotów nadpisanych (O(#overrides), bez kopiowania i bez scalania —
+     zgodnie z filozofią zamkniętego rdzenia, jak usunięcie
+     `findSourceInLootTable` i heurystyki difficulty). Generator drukuje
+     raport zróżnicowania (sloty/%/rozmiar) — pomiar należy do W4a.
+     Rebind po zmianie bazy idempotentny z definicji (nadpisania
+     podmieniają referencje, overlay/personal reaplikują te same
+     wartości). Inputy upstream (3-tabelowy plik, `Bistooltip_faction.lua`)
+     zostają w repo, nieładowane w `.toc` — wzorzec Loot_Sources.
 
      Dowód pomiarowy (WSL lua5.1, 2026-09-08; uzasadnia czemu tabel nie
      wolno zignorować i czemu merge musi istnieć — tylko offline):
@@ -369,7 +378,8 @@ drafter'owe (małe, w tym samym addonie):
   (setki, nie tysiące) raz na zmianę bazy.
 - Trzy bazy w `.toc` = ~3,4 MB tabel w pamięci (akceptowalne dla 3.3.5a;
   dane statyczne). `.toc` ładuje wyłącznie **wygenerowane pliki final**
-  (wowsims: 2 pełne tabele frakcyjne; wh/wowtbc: po jednej) — pliki
+  (wowsims: baza alliance + mapa overrides hordy — mniej niż 2 pełne
+  tabele, rozmiar zmierzy raport W4a; wh/wowtbc: po jednej) — pliki
   input upstream (3-tabelowy WoWSimsBP, faction.lua) i `Loot_Sources.lua`
   pozostają w repo, ale nie są ładowane (Loot_Sources znika z `.toc`
   już w W1). Jeśli zmierzony load time będzie bolał — ładowanie
@@ -386,7 +396,7 @@ drafter'owe (małe, w tym samym addonie):
 | W1 | Cutover runtime: `.toc` clean (Loot_Sources out), `GetEmblemCost` → shim nad ItemAcquisition; słownik trudności v2 (migrator+audyt+goldens, regeneracja danych ze ŚWIEŻEGO Loot_Sources) | W0a |
 | W2 | Backfill tierów (VOA, TOKEN/MARK per-boss) + walidacja oracle + audyt cross-DB coverage (każdy ID z każdej bazy ma akwizycję albo allowlista) | W1 |
 | W3 | FormatSourceColored + paleta + wpięcie tooltip/checklist | W1 |
-| W4 | DB registry + options + overlay replay (S3-5) + `SetBiSSlotRank` (S3-6); migracja do `db.global` (`data_source` + `custom_priorities` — warstwa §12); wowsims = zwykły alias na tabelę frakcji gracza z pliku wygenerowanego OFFLINE; W4a: `tools/assemble_wowsims.lua` (port algorytmu upstream) + wygenerowanie `Bistooltip_wowsims_final.lua` | — |
+| W4 | DB registry + options + overlay replay (S3-5) + `SetBiSSlotRank` (S3-6); migracja do `db.global` (`data_source` + `custom_priorities` — warstwa §12); wowsims = alias (alliance) / alias+podmiana overrides (horda); W4a: `tools/assemble_wowsims.lua` (port algorytmu upstream) + wygenerowanie `Bistooltip_wowsims_final.lua` (baza alliance + overrides hordy, raport zróżnicowania) | — |
 | W5 | Tryb VENDOR (rename + semantyka ItemAcquisition, kind VENDOR+CUSTOM) | W1 |
 | W6 | Wtyczka `Bistooltip_Whitemane_Frostmourne` (diffy SetBiSSlotRank, poprawka 150005, waluty cata-like po skanie) + czyszczenie EmblemData/wowtbc + usunięcie root `_some custom items.lua` PO ekstrakcji (Q4) | W4, W5 |
 | W7 | Bistooltip_Scanner (frozen plan) + `/bis item` + jednostka gold | — |
@@ -500,6 +510,10 @@ Target:
 - v2.3 (decyzja właściciela): assembly frakcyjne offline — runtime bez
   merge; generator + plik final; pomiar uzasadniający (primary czysto
   alliance, zgodność rank-1 59,5%/64,4%) zapisany w §4.
+- v2.4 (żądanie właściciela): reprezentacja kompaktowa final — baza
+  alliance + `horde_overrides` (całe sloty tam, gdzie horda różni się
+  w ogóle); runtime hordy = pętla podmian referencji; nadpisania nigdy
+  nie są większe od pełnej tabeli, więc v2.4 ≤ v2.3 rozmiarowo z definicji.
 - Nowe ryzyka nazwane: pamięć 3 baz (akcept / pomiar), replay błędów
   (warn-once + skip), oracle jako jedyny świadek (wymóg drugiego źródła),
   personalizacja per slot może maskować nadpisania wtyczki (świadomy
