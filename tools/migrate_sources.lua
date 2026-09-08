@@ -444,7 +444,7 @@ for zone, bosses in pairs(lootTable) do
         -- a missing entry fails loudly so the next oracle check adds it).
         local triumph = TROPHY_TRIUMPH[itemID]
         assert(triumph, "trophy item without oracle-verified Triumph price: " .. tostring(itemID))
-        addEntry(itemID, { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY",
+        addEntry(itemID, { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade",
           cost = { { item = TROPHY_ITEM, amount = 1 },
                    { currency = "Emblem of Triumph", amount = triumph } } })
         nTrophy = nTrophy + 1
@@ -599,10 +599,11 @@ local function writeAcquisition(path)
         f:write(string.format("    { kind = %q, source = %q%s },\n", e.kind, e.source, extra))
       elseif e.kind == "CUSTOM" then
         f:write(string.format("    { kind = %q, label = %q },\n", e.kind, e.label))
-      else -- VENDOR (optional tier / displayVariant, N-leg cost)
+      else -- VENDOR (optional tier / displayVariant / variantLabel, N-leg cost)
         local extra = ""
         if e.tier then extra = extra .. string.format(", tier = %q", e.tier) end
         if e.displayVariant then extra = extra .. string.format(", displayVariant = %q", e.displayVariant) end
+        if e.variantLabel then extra = extra .. string.format(", variantLabel = %q", e.variantLabel) end
         f:write(string.format("    { kind = %q%s, cost = ", e.kind, extra))
         writeCost(f, e.cost)
         f:write(" },\n")

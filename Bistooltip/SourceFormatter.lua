@@ -41,10 +41,23 @@ local function render(entry, colored)
     end
     return nil
   end
+  local function goldText(cu)
+    -- canonical unit: COPPER (as returned by the merchant API / scanner)
+    local g = math.floor(cu / 10000)
+    local s = math.floor((cu % 10000) / 100)
+    local c = cu % 100
+    local t = {}
+    if g > 0 then t[#t + 1] = g .. "g" end
+    if s > 0 then t[#t + 1] = s .. "s" end
+    if c > 0 or #t == 0 then t[#t + 1] = c .. "c" end
+    return table.concat(t, " ")
+  end
   local function costText(cost)
     local parts = {}
     for _, c in ipairs(cost or {}) do
-      if c.currency then
+      if c.currency == "Gold" then
+        parts[#parts + 1] = seg(P.currency, goldText(c.amount or 0))
+      elseif c.currency then
         parts[#parts + 1] = seg(P.currency, c.amount .. " " .. c.currency)
       end
     end
@@ -53,7 +66,7 @@ local function render(entry, colored)
   if entry.kind == "VENDOR" then
     if entry.displayVariant == "TROPHY" then
       return seg(P.method, (entry.tier or "T9") .. " - TROPHY: ")
-        .. seg(P.currency, "Crusade + ") .. costText(entry.cost)
+        .. seg(P.currency, (entry.variantLabel or "Crusade") .. " + ") .. costText(entry.cost)
     end
     local prefix = (entry.tier or "") .. (entry.tier and " - " or "") .. "VENDOR: "
     return seg(P.method, prefix) .. costText(entry.cost)

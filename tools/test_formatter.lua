@@ -20,6 +20,10 @@ local cases = {
       cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
     "T9 - TROPHY: Crusade + 75 Emblem of Triumph" },
   { { kind = "CUSTOM", label = "VIP Shop" }, "VIP Shop" },
+  { { kind = "VENDOR", tier = "T9", cost = { { currency = "Gold", amount = 150000 } } },
+    "T9 - VENDOR: 15g" },
+  { { kind = "VENDOR", tier = "T9", cost = { { currency = "Gold", amount = 150059 } } },
+    "T9 - VENDOR: 15g 59c" },
   { { kind = "DROP", source = "FLAT" }, "Ulduar - General Vezax" }, -- empty difficulty: no brackets
   { { kind = "DROP", source = "NOPE" }, nil }, -- unknown sourceID: skip line, no error
   { { kind = "DROP", source = "AKN" }, "Ahn'kahet: The Old Kingdom [HC] - Prince Taldaram" }, -- 5-man heroic vocab v2

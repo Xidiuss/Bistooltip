@@ -19547,20 +19547,20 @@ BisTooltip_ItemAcquisition = {
   },
   [47753] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47754] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47755] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47756] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47757] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47758] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -19593,21 +19593,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47768] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47769] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47770] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47771] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47772] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47773] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
@@ -19627,21 +19627,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [47778] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47779] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47780] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47781] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47782] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47783] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
@@ -19709,20 +19709,20 @@ BisTooltip_ItemAcquisition = {
   },
   [47803] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47804] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47805] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47806] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47807] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47808] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
@@ -20178,20 +20178,20 @@ BisTooltip_ItemAcquisition = {
   },
   [47983] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47984] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47985] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47986] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47987] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47988] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
@@ -20416,21 +20416,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48062] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48063] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48064] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48065] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48066] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48067] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
@@ -20468,20 +20468,20 @@ BisTooltip_ItemAcquisition = {
   },
   [48077] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48078] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48079] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48080] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48081] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48082] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -20514,21 +20514,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48092] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48093] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48094] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48095] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48096] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48097] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
@@ -20566,20 +20566,20 @@ BisTooltip_ItemAcquisition = {
   },
   [48133] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48134] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48135] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48136] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48137] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48138] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -20612,21 +20612,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48148] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48149] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48150] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48151] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48152] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48153] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
@@ -20663,21 +20663,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48163] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48164] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48165] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48166] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48167] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48168] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -20710,20 +20710,20 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48178] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48179] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48180] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48181] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48182] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48183] = {
@@ -20761,21 +20761,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48193] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48194] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48195] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48196] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48197] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48198] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -20808,20 +20808,20 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48208] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48209] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48210] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48211] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48212] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48213] = {
@@ -20859,21 +20859,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48223] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48224] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48225] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48226] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48227] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48228] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -20906,21 +20906,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48238] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48239] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48240] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48241] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48242] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48243] = {
     { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
@@ -20957,21 +20957,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48255] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48256] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48257] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48258] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48259] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48260] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -21004,21 +21004,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48270] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48271] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48272] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48273] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48274] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48275] = {
     { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
@@ -21055,21 +21055,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48285] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48286] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48287] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48288] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48289] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48290] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -21104,21 +21104,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48300] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48301] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48302] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48303] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48304] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48305] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -21153,21 +21153,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48316] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48317] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48318] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48319] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48320] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48321] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -21200,21 +21200,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48331] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48332] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48333] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48334] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48335] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48336] = {
     { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
@@ -21251,21 +21251,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48346] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48347] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48348] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48349] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48350] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48351] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -21298,21 +21298,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48361] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48362] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48363] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48364] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48365] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48366] = {
     { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
@@ -21349,21 +21349,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48376] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48377] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48378] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48379] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48380] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48381] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -21398,21 +21398,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48391] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48392] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48393] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48394] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48395] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48396] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -21436,7 +21436,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48430] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48433] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -21449,7 +21449,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48446] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48447] = {
@@ -21463,20 +21463,20 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48450] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48451] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48452] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48453] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48454] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48455] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -21499,21 +21499,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48461] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48462] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48463] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48464] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48465] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48466] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -21548,21 +21548,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48481] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48482] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48483] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48484] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48485] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48486] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -21595,21 +21595,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48496] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48497] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48498] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48499] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48500] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48501] = {
     { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
@@ -21646,21 +21646,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48538] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48539] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48540] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48541] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48542] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48543] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -21693,21 +21693,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48553] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48554] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48555] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48556] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48557] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48558] = {
     { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
@@ -21744,21 +21744,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48575] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48576] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48577] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48578] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48579] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48580] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -21791,21 +21791,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48590] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48591] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48592] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48593] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48594] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48595] = {
     { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
@@ -21842,21 +21842,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48607] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48608] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48609] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48610] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48611] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48612] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -21889,21 +21889,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48622] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48623] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48624] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48625] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48626] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48627] = {
     { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
@@ -21940,21 +21940,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48637] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48638] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48639] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48640] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48641] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48642] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
@@ -22004,21 +22004,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48657] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48658] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48659] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48660] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48661] = {
-    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
+    { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48666] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },

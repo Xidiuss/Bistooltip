@@ -1,5 +1,23 @@
 # BisTooltip Changelog
 
+## META-Z W7 + S2-5 (2026-09-08) — vendor scanner addon + cost units
+
+### Changes
+
+1. **New standalone addon `Bistooltip_Scanner`** (OptionalDeps: Bistooltip)
+   - `/bis scan` or the "Bis Scan" button on MerchantFrame: reads the open
+     vendor (ID, name, gold price in copper, extended-cost currencies) into
+     `BistooltipScannerDB` per "Vendor @ Zone" key, then opens an export window
+   - Export = ready-to-paste Bistooltip plugin snippet (VENDOR mode default,
+     CUSTOM mode toggle for donate shops); rescan-safe (keyed by itemID)
+   - `/bis item <ID>`: one-item acquisition skeleton (name from cache, UNCACHED
+     marker otherwise) — for adding custom items without a vendor
+   - All merchant API calls guarded; mock-tested offline (scan/SV/snippet/UI)
+2. **Cost units canonical (S2-5)**: `amount` for `currency="Gold"` is always
+   COPPER; the formatter renders it as g/s/c (`15g`, `15g 59c`)
+3. **TROPHY label from data (S2-5)**: `variantLabel="Crusade"` lives in the
+   generated data now, not hardcoded in the formatter
+
 ## META-Z W3 (2026-09-08) — colored source rendering
 
 ### Changes

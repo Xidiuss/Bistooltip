@@ -1,0 +1,10 @@
+## Interface: 30300
+## Title: Bistooltip Scanner
+## Notes: Scans the open vendor (ID, name, cost, currency) and exports a Bistooltip plugin snippet; also emits item-by-ID skeletons via /bis item
+## Author: Bistooltip
+## Version: 0.2.0
+## SavedVariables: BistooltipScannerDB
+## OptionalDeps: Bistooltip
+
+Scanner.lua
+Export.lua
