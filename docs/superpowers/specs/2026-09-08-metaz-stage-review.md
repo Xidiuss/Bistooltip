@@ -74,6 +74,19 @@ frakcyjnych", ale runtime ich nigdy nie używa.
 frakcyjnych (mniejszy plik, szybszy load). Decyzja właściciela — Q14
 (ewentualnie przewidzieć realny użytek frakcyjny w UI, czego dziś nie ma).
 
+> **KOREKTA (2026-09-08, po Q14 — weryfikacja origin):** werdykt
+> „usunąć tabele frakcyjne" był **błędny**. Upstream
+> (github.com/ExoJdi/BiS-Tooltip_335a_fixed_backport, commit 2026-06-09)
+> konsumuje je aktywnie w `assembleActiveBislists()` (Config.lua):
+> scalanie rank-1 tabeli frakcji gracza z pełną tabelą fallback +
+> mirror ID (`Bistooltip_horde_to_ali`) + filtr obcej frakcji
+> (`Bistooltip_item_faction`). Nasz fork stracił ten krok przy ekstrakcji
+> danych — dlatego grep pokazał „0 konsumentów" (true dla forka, false
+> dla origin). Tabele zostają; META-Z W4 portuje assembly (spec v2.2 §4).
+> Przy okazji stwierdzono: wszystkie 4 pliki danych forka były starsze
+> niż origin — refresh wykonany, 27 wpisów custom Frostmourne
+> wyekstrahowanych przed importem.
+
 ### W5. `SetBiSSlot` zbyt gruby dla wtyczek serwerowych (projekt API)
 
 Slot-level replace wymaga od wtyczki **upieczenia całej listy ranków**

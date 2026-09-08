@@ -1,14 +1,17 @@
 # META-Z — Meta-BisTooltip system design
 
-Status: **DRAFT v2.1** — decyzje właściciela Q1–Q16 (2026-09-08) wdrożone;
-oczekuje na plan implementacji.
+Status: **DRAFT v2.2** — decyzje Q1–Q16 wdrożone; Q14 odwrócona po
+weryfikacji upstream + refresh danych wykonany; oczekuje na plan implementacji.
 Data: 2026-09-08. Gałąź: `META-Z` (utworzona z `feat/meta-bistooltip-data`,
 pełna historia). Klasyfikacja: architectural.
 Relacja: rozszerza **frozen** `2026-09-07-metabistooltip-data-design.md`
 (S1–S4, wdrożone) o poprawki S2-3, S2-4, S2-5, S3-5, S3-6, S3-7, S4-5;
 importuje frozen `2026-09-08-vendor-scanner-design.md` + jej plan. v2 wynika
 z rewizji etapu przebudowy: `2026-09-08-metaz-stage-review.md` (dowody tam).
-v2.1: decyzje Q&A + warstwa Personal BiS (§12).
+v2.1: decyzje Q&A + warstwa Personal BiS (§12). v2.2: Q14 odwrócona
+(tabele frakcyjne żywe u upstream, port assembly w W4) + refresh danych
+z upstream (provenance: github.com/ExoJdi/BiS-Tooltip_335a_fixed_backport,
+commit 2026-06-09).
 
 ## 0. Cel
 
@@ -58,6 +61,14 @@ Stan wejściowy na `feat/meta-bistooltip-data` (zmierzony, nie zgadywany):
   w `.toc` przy **zerze** konsumentów runtime; martwe pliki poza `.toc`
   (Bislist.lua 3653 linii z przestarzałą logiką ASCEND, FlowView/GridView/
   ItemButton/Pool, legacy/) — **usunięte commitami rewizji**.
+- Dane starsze niż origin (Q14): wszystkie 3 bislisty + Loot_Sources
+  różniły się od upstream (ExoJdi/BiS-Tooltip_335a_fixed_backport, commit
+  2026-06-09 „Add data source UI and new BIS lists"; diff 2751/5072/19376
+  linii). **Refresh wykonany** (W0a): 3 bislisty + Loot_Sources +
+  `Bistooltip_faction.lua` (nowy w forku — mapa frakcji itemów używana
+  przez upstream do scalania). 27 wpisów custom Frostmourne (obecnych
+  TYLKO u nas) wyekstrahowane PRZED importem do
+  `docs/superpowers/data/whitemane-custom-extract-2026-09-08.lua`.
 
 ## 1. Architektura docelowa
 
@@ -179,7 +190,16 @@ BisTooltip_DBRegistry = {
   `EnableSpec(dbKey)` aliasuje `Bistooltip_bislists/classes/phases` z
   wybranego wpisu. Dropdown `db.global.data_source` (Q16: account-wide,
   z migracją z `db.char`) z 3 pozycjami, default `wowsims` (Q5).
-  Tabele frakcyjne nie uczestniczą — usunięte przy regeneracji (Q14, W4a).
+  Tabele frakcyjne **zostają i pracują** (korekta Q14): upstream konsumuje
+  je w `assembleActiveBislists()`, więc wejście `wowsims` w rejestrze
+  dostaje hook `assemble` — port logiki upstream: primary = tabeli
+  frakcji gracza (rank-1), fallback = pełna tabela wowsims, mirror ID
+  przez `Bistooltip_horde_to_ali` + filtr itemów obcej frakcji przez
+  `Bistooltip_item_faction`; scalanie: frakcyjne rank-1 przed kolumnami
+  fallbacku, dedup, cap 6. `wh`/`wowtbc` = zwykły alias. Przy porcie:
+  `Bistooltip_faction.lua` dołącza do `.toc` (przed bislistami, jak
+  upstream), stary `Bistooltip_horde_to_ali.lua` znika z `.toc` po
+  porównaniu tabel (upstream trzyma obie mapy w jednym pliku).
 - `PluginAPI.lua`: każda udana mutacja (`DefineSource`, `SetAcquisition`,
   `AddAcquisition`, `SetBiSSlot`, `SetBiSSlotRank`, `SetEnhancement`) jest
   zapisywana do wewnętrznego logu overlay `{fn, deep-copy(args), plugin}`.
@@ -312,9 +332,8 @@ drafter'owe (małe, w tym samym addonie):
   (setki, nie tysiące) raz na zmianę bazy.
 - Trzy bazy w `.toc` = ~3,4 MB tabel w pamięci (akceptowalne dla 3.3.5a;
   dane statyczne). Jeśli zmierzony load time bolą — ładowanie warunkowe
-  jest decyzją po pomiarze, nie z góry. Dodatkowo (rewizja W4): tabele
-  frakcyjne WoWSimsBP (~połowa pliku, **0 konsumentów**) do wygenerowania
-  lub usunięcia przy adopcji STANDARD — patrz Q14; `Loot_Sources.lua`
+  jest decyzją po pomiarze, nie z góry. Tabele frakcyjne pozostają w
+  pliku wowsims (żywy input hooka `assemble`, §4); `Loot_Sources.lua`
   znika z `.toc` już w W1 (0 konsumentów runtime).
 - TROPHY pozostaje display-only; brak EnchantAcquisition; CUSTOM walidowane;
   brak importerów w core; skaner nigdy nie pisze do tabel core.
@@ -324,10 +343,11 @@ drafter'owe (małe, w tym samym addonie):
 | # | Workstream | Zależy od |
 |---|---|---|
 | W0 | ~~Gałąź META-Z, track baz, import dokumentów~~ + ~~usunięcie martwych plików~~ (rewizja) — **wykonane** | — |
-| W1 | Cutover runtime: `.toc` clean (Loot_Sources out), `GetEmblemCost` → shim nad ItemAcquisition; słownik trudności v2 (migrator+audyt+goldens, regeneracja danych) | — |
+| W0a | Refresh danych z upstream (ExoJdi, 2026-06-09): 3 bislisty + Loot_Sources + `Bistooltip_faction.lua` — **import + ekstrakcja customów wykonane**; zostało: rerun census + rekonfirmacja STANDARD | — |
+| W1 | Cutover runtime: `.toc` clean (Loot_Sources out), `GetEmblemCost` → shim nad ItemAcquisition; słownik trudności v2 (migrator+audyt+goldens, regeneracja danych ze ŚWIEŻEGO Loot_Sources) | W0a |
 | W2 | Backfill tierów (VOA, TOKEN/MARK per-boss) + walidacja oracle + audyt cross-DB coverage (każdy ID z każdej bazy ma akwizycję albo allowlista) | W1 |
 | W3 | FormatSourceColored + paleta + wpięcie tooltip/checklist | W1 |
-| W4 | DB registry + options + overlay replay (S3-5) + `SetBiSSlotRank` (S3-6); migracja do `db.global` (`data_source` + `custom_priorities` — warstwa §12); W4a: regeneracja pliku wowsims BEZ tabel frakcyjnych (Q14) i bez duplikatu phases | — |
+| W4 | DB registry + options + overlay replay (S3-5) + `SetBiSSlotRank` (S3-6); migracja do `db.global` (`data_source` + `custom_priorities` — warstwa §12); **port faction-assembly z upstream** (hook `assemble` dla wowsims, `Bistooltip_faction.lua` do `.toc`, konsolidacja `Bistooltip_horde_to_ali.lua`); W4a: regeneracja pliku wowsims bez duplikatu phases (tabele frakcyjne zostają) | — |
 | W5 | Tryb VENDOR (rename + semantyka ItemAcquisition, kind VENDOR+CUSTOM) | W1 |
 | W6 | Wtyczka `Bistooltip_Whitemane_Frostmourne` (diffy SetBiSSlotRank, poprawka 150005, waluty cata-like po skanie) + czyszczenie EmblemData/wowtbc + usunięcie root `_some custom items.lua` PO ekstrakcji (Q4) | W4, W5 |
 | W7 | Bistooltip_Scanner (frozen plan) + `/bis item` + jednostka gold | — |
@@ -341,7 +361,7 @@ dokumentów) wykonane przy tworzeniu tego speca.
 
 | Q | Decyzja |
 |---|---|
-| 1 | Folder wtyczki: `Bistooltip_Whitemane_Frostmourne` (z odpowiedzi „Bistooltip_Whitemane Frostmourne"; spacja w nazwie folderu WoW technicznie działa, ale podkreślnik jest bezpieczniejszy dla narzędzi); Title: „Bistooltip — Whitemane: Frostmourne" |
+| 1 | Folder wtyczki: `Bistooltip_Whitemane_Frostmourne` (z odpowiedzi „Bistooltip_Whitemane Frostmourne"; spacja w nazwie folderu WoW technicznie działa, ale podkreślnik jest bezpieczniejszy dla narzędzi); Title: „Bistooltip — Whitemane: Frostmourne" — **ZAAKCEPTOWANE** |
 | 2 | `[15000]` = literówka → przy ekstrakcji poprawione na `150005` |
 | 3 | 27 nadpisań rank-1 w wowtbc = w całości content Frostmourne → wtyczka |
 | 4 | Root `…_some custom items.lua` → usunąć w W6 PO ekstrakcji diffów |
@@ -354,18 +374,23 @@ dokumentów) wykonane przy tworzeniu tego speca.
 | 11 | Tier tokeny: jednolita etykieta `T7`–`T10`, bez rozróżniania 10N/25N |
 | 12 | Whitemane Frostmourne ma system walut cata-like → przeskanować NPC skanerem; wsparcie przez standardowy format `cost[]` |
 | 13 | Kolejność W1→W8 potwierdzona |
-| 14 | Tabele frakcyjne: usunąć przy regeneracji W4a (wyjaśnienie różnicy poniżej) |
-| 15 | CI: rekomendacja przyjęta — GitHub Actions (luac -p + suity lua5.1) na push/PR od W8 |
+| 14 | **DECYZJA ODWRÓCONA po weryfikacji upstream**: tabele frakcyjne ZOSTAJĄ i pracują (hook `assemble`, §4); refresh danych wykonany (szczegóły pod tabelą) |
+| 15 | CI: rekomendacja zatwierdzona przez właściciela — GitHub Actions (luac -p + suity lua5.1) na push/PR od W8 |
 | 16 | `db.char.data_source` → `db.global.data_source`; personal BiS → `db.global` (§12); `db.profile` wyłącznie dla ustawień UI |
 
-Q14 wyjaśnienie (na pytanie „jaka to różnica?"): `Bistooltip_bislists_
-alliance/_horde` to druga połowa pliku WoWSimsBP — osobne rankingi
-single-rank (tylko pozycja 1 + wypełniacze `-1`) dla każdej frakcji,
-2652 sloty każda. **Addon nigdy ich nie czyta** (0 konsumentów w kodzie,
-grep zweryfikowany w rewizji W4). Różnica praktyczna: zostawienie =
-mniejszy plik i szybszy load niczego nie kosztuje; usunięcie = plik ~2×
-mniejszy, zero zmiany zachowania w grze. Gdyby kiedyś powstał realny
-użytek frakcyjny — regeneracja ze źródła offline.
+Q14 — wynik weryfikacji origin (github.com/ExoJdi/BiS-Tooltip_335a_
+fixed_backport, commit 2026-06-09): `Bistooltip_bislists_alliance/_horde`
+są **aktywnie konsumowane** przez `assembleActiveBislists()` (Config.lua
+upstream): aktywny ranking wowsims = scalanie rank-1 tabeli frakcji
+gracza + pełnej tabeli fallback, z mirrorowaniem ID między frakcjami
+(`Bistooltip_horde_to_ali`) i filtrowaniem itemów obcej frakcji
+(`Bistooltip_item_faction` — plik, którego w naszym forku w ogóle nie
+było; dodany przy refreshu). Nasz fork stracił ten krok przy ekstrakcji
+danych — stąd błędny wniosek rewizji W4 o „0 konsumentach" (korekta
+w stage-review). Dodatkowo wszystkie 4 pliki danych były starsze niż
+upstream (diff: 2751/5072/19376 linii) — **refresh wykonany**; 27 wpisów
+custom Frostmourne (istniejących tylko u nas) wyekstrahowane PRZED
+importem do artifactu W6; census wymaga rerunu na świeżych danych (W0a).
 
 Follow-upy otwarte (nie blokują planów): label vendorów customowych
 (uzupełni skaner — Q7), weryfikacja dropu przy serwerowych HC/HM (Q10),
@@ -430,10 +455,14 @@ Target:
 - v2.1 wg decyzji: domyślna baza WoWSimsBP, 3 pełnoprawne bazy, kolory
   domyślnie ON, VENDOR+CUSTOM w trybie VENDOR, tabele frakcyjne OUT,
   CI IN, kaskada baza→plugin→personal (account-wide).
-- Nowe ryzyka nazwane: pamięć 3 baz (akcept / pomiar + redukcja o tabele
-  frakcyjne), replay błędów (warn-once + skip), oracle jako jedyny świadek
-  (wymóg drugiego źródła), personalizacja per slot może maskować
-  nadpisania wtyczki (świadomy precedens właściciela).
+- v2.2 (Q14 zweryfikowane): tabele frakcyjne IN + hook `assemble`
+  (port upstream), refresh danych z origin wykonany, ekstrakcja customów
+  Frostmourne zabezpieczona artifactem, W0a (census rerun) przed W1.
+- Nowe ryzyka nazwane: pamięć 3 baz (akcept / pomiar), replay błędów
+  (warn-once + skip), oracle jako jedyny świadek (wymóg drugiego źródła),
+  personalizacja per slot może maskować nadpisania wtyczki (świadomy
+  precedens właściciela), świeżość danych zależna od origin (proces
+  refreshu udokumentowany w W0a).
 - Zakres: brak nowej warstwy architektonicznej poza wyszczególnionymi
   poprawkami; nic nie budujemy „na zapas" (paleta options, lazy load
   baz — dopiero po pomiarze).

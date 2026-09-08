@@ -97,3 +97,22 @@ print(Bistooltip_wowtbc_bislists and "wowtbc OK", Bistooltip_wh_bislists and "wh
 Bistooltip_wowsims_bislists and "wowsims OK")'`
 Full per-slot stats: `lua5.1 /tmp/opencode/census_analyze.lua` (one-off, uncommitted).
 Gate (worktree): `lua5.1 tools/census_bis.lua` → `census gate: OK`.
+
+## Addendum (2026-09-08): upstream refresh
+
+All measured numbers above describe the fork's (stale) copies. Verified
+against origin (github.com/ExoJdi/BiS-Tooltip_335a_fixed_backport, commit
+2026-06-09 "Add data source UI and new BIS lists"): all 4 data files
+differed (wowtbc 2751 / wh 5072 / WoWSimsBP 19376 changed lines;
+Loot_Sources too). Refresh imported into META-Z: 3 bislists + Loot_Sources
++ `Bistooltip_faction.lua` (absent from our fork; upstream uses it for
+faction filtering + ID mirroring inside `assembleActiveBislists()` —
+the faction tables in WoWSimsBP are ALIVE upstream, not dead weight).
+
+The 27 custom rank-1 entries (Whitemane, IDs incl. 150005) existed ONLY in
+the fork's wowtbc; extracted before import to
+`docs/superpowers/data/whitemane-custom-extract-2026-09-08.lua`.
+
+Census rerun on refreshed data = workstream W0a (spec v2.2). The
+`STANDARD = WoWSimsBP` decision is expected to hold (same provenance,
+newer snapshot) but must be re-confirmed by the rerun.
