@@ -108,6 +108,10 @@ Loot_Sources too). Refresh imported into META-Z: 3 bislists + Loot_Sources
 + `Bistooltip_faction.lua` (absent from our fork; upstream uses it for
 faction filtering + ID mirroring inside `assembleActiveBislists()` —
 the faction tables in WoWSimsBP are ALIVE upstream, not dead weight).
+CORRECTION (W1): the upstream Loot_Sources is a 9-zone/710-line subset
+(raids only, mangled VOA keys) — the fork's rich 1624-line canonical
+input was RESTORED as the migrator input; upstream's variant is recorded
+as a W2 cross-check source only.
 
 The 27 custom rank-1 entries (Whitemane, IDs incl. 150005) existed ONLY in
 the fork's wowtbc; extracted before import to

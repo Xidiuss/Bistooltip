@@ -8264,15 +8264,15 @@ BisTooltip_ItemAcquisition = {
   },
   [35652] = {
     { kind = "DROP", source = "THE_VIOLET_HOLD_TRASH_MOBS" },
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_TRASH_MOBS" },
   },
   [35653] = {
     { kind = "DROP", source = "THE_VIOLET_HOLD_TRASH_MOBS" },
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_TRASH_MOBS" },
   },
   [35654] = {
     { kind = "DROP", source = "THE_VIOLET_HOLD_TRASH_MOBS" },
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_TRASH_MOBS" },
   },
   [35655] = {
     { kind = "DROP", source = "AZJOL_NERUB_KRIKTHIR" },
@@ -8619,169 +8619,169 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "BREWFEST_COREN_DIREBREW" },
   },
   [37134] = {
-    { kind = "DROP", source = "THE_NEXUS_H_TELESTRA" },
+    { kind = "DROP", source = "THE_NEXUS_HC_TELESTRA" },
   },
   [37135] = {
-    { kind = "DROP", source = "THE_NEXUS_H_TELESTRA" },
+    { kind = "DROP", source = "THE_NEXUS_HC_TELESTRA" },
   },
   [37138] = {
-    { kind = "DROP", source = "THE_NEXUS_H_TELESTRA" },
+    { kind = "DROP", source = "THE_NEXUS_HC_TELESTRA" },
   },
   [37139] = {
-    { kind = "DROP", source = "THE_NEXUS_H_TELESTRA" },
+    { kind = "DROP", source = "THE_NEXUS_HC_TELESTRA" },
   },
   [37141] = {
-    { kind = "DROP", source = "THE_NEXUS_H_ANOMALUS" },
+    { kind = "DROP", source = "THE_NEXUS_HC_ANOMALUS" },
   },
   [37144] = {
-    { kind = "DROP", source = "THE_NEXUS_H_ANOMALUS" },
+    { kind = "DROP", source = "THE_NEXUS_HC_ANOMALUS" },
   },
   [37149] = {
-    { kind = "DROP", source = "THE_NEXUS_H_ANOMALUS" },
+    { kind = "DROP", source = "THE_NEXUS_HC_ANOMALUS" },
   },
   [37150] = {
-    { kind = "DROP", source = "THE_NEXUS_H_ANOMALUS" },
+    { kind = "DROP", source = "THE_NEXUS_HC_ANOMALUS" },
   },
   [37151] = {
-    { kind = "DROP", source = "THE_NEXUS_H_ORMOROK" },
+    { kind = "DROP", source = "THE_NEXUS_HC_ORMOROK" },
   },
   [37152] = {
-    { kind = "DROP", source = "THE_NEXUS_H_ORMOROK" },
+    { kind = "DROP", source = "THE_NEXUS_HC_ORMOROK" },
   },
   [37153] = {
-    { kind = "DROP", source = "THE_NEXUS_H_ORMOROK" },
+    { kind = "DROP", source = "THE_NEXUS_HC_ORMOROK" },
   },
   [37155] = {
-    { kind = "DROP", source = "THE_NEXUS_H_ORMOROK" },
+    { kind = "DROP", source = "THE_NEXUS_HC_ORMOROK" },
   },
   [37162] = {
-    { kind = "DROP", source = "THE_NEXUS_H_KERISTRASZA" },
+    { kind = "DROP", source = "THE_NEXUS_HC_KERISTRASZA" },
   },
   [37165] = {
-    { kind = "DROP", source = "THE_NEXUS_H_KERISTRASZA" },
+    { kind = "DROP", source = "THE_NEXUS_HC_KERISTRASZA" },
   },
   [37166] = {
-    { kind = "DROP", source = "THE_NEXUS_H_KERISTRASZA" },
+    { kind = "DROP", source = "THE_NEXUS_HC_KERISTRASZA" },
   },
   [37167] = {
-    { kind = "DROP", source = "THE_NEXUS_H_KERISTRASZA" },
+    { kind = "DROP", source = "THE_NEXUS_HC_KERISTRASZA" },
   },
   [37169] = {
-    { kind = "DROP", source = "THE_NEXUS_H_KERISTRASZA" },
+    { kind = "DROP", source = "THE_NEXUS_HC_KERISTRASZA" },
   },
   [37170] = {
-    { kind = "DROP", source = "THE_NEXUS_H_KERISTRASZA" },
+    { kind = "DROP", source = "THE_NEXUS_HC_KERISTRASZA" },
   },
   [37171] = {
-    { kind = "DROP", source = "THE_NEXUS_H_KERISTRASZA" },
+    { kind = "DROP", source = "THE_NEXUS_HC_KERISTRASZA" },
   },
   [37172] = {
-    { kind = "DROP", source = "THE_NEXUS_H_KERISTRASZA" },
+    { kind = "DROP", source = "THE_NEXUS_HC_KERISTRASZA" },
   },
   [37177] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_KELESETH" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_KELESETH" },
   },
   [37178] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_KELESETH" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_KELESETH" },
   },
   [37179] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_KELESETH" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_KELESETH" },
   },
   [37180] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_KELESETH" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_KELESETH" },
   },
   [37181] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_SKARVALD" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_SKARVALD" },
   },
   [37182] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_SKARVALD" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_SKARVALD" },
   },
   [37183] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_SKARVALD" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_SKARVALD" },
   },
   [37184] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_SKARVALD" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_SKARVALD" },
   },
   [37186] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_INGVAR" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_INGVAR" },
   },
   [37188] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_INGVAR" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_INGVAR" },
   },
   [37189] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_INGVAR" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_INGVAR" },
   },
   [37190] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_INGVAR" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_INGVAR" },
   },
   [37191] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_INGVAR" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_INGVAR" },
   },
   [37192] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_INGVAR" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_INGVAR" },
   },
   [37193] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_INGVAR" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_INGVAR" },
   },
   [37194] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_INGVAR" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_INGVAR" },
   },
   [37195] = {
-    { kind = "DROP", source = "THE_OCULUS_H_UROM" },
+    { kind = "DROP", source = "THE_OCULUS_HC_UROM" },
   },
   [37196] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_TRASH_MOBS" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_TRASH_MOBS" },
   },
   [37197] = {
-    { kind = "DROP", source = "UTGARDE_KEEP_H_TRASH_MOBS" },
+    { kind = "DROP", source = "UTGARDE_KEEP_HC_TRASH_MOBS" },
   },
   [37216] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_KRIKTHIR" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_KRIKTHIR" },
   },
   [37217] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_KRIKTHIR" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_KRIKTHIR" },
   },
   [37218] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_KRIKTHIR" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_KRIKTHIR" },
   },
   [37219] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_KRIKTHIR" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_KRIKTHIR" },
   },
   [37220] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_HADRONOX" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_HADRONOX" },
   },
   [37221] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_HADRONOX" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_HADRONOX" },
   },
   [37222] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_HADRONOX" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_HADRONOX" },
   },
   [37230] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_HADRONOX" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_HADRONOX" },
   },
   [37232] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_ANUB_ARAK" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_ANUB_ARAK" },
   },
   [37235] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_ANUB_ARAK" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_ANUB_ARAK" },
   },
   [37236] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_ANUB_ARAK" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_ANUB_ARAK" },
   },
   [37237] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_ANUB_ARAK" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_ANUB_ARAK" },
   },
   [37238] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_ANUB_ARAK" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_ANUB_ARAK" },
   },
   [37240] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_ANUB_ARAK" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_ANUB_ARAK" },
   },
   [37241] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_ANUB_ARAK" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_ANUB_ARAK" },
   },
   [37242] = {
-    { kind = "DROP", source = "AZJOL_NERUB_H_ANUB_ARAK" },
+    { kind = "DROP", source = "AZJOL_NERUB_HC_ANUB_ARAK" },
   },
   [37243] = {
     { kind = "DROP", source = "AZJOL_NERUB_TRASH_MOBS" },
@@ -8790,133 +8790,133 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "WORLD_DROPS_LEVEL_80" },
   },
   [37255] = {
-    { kind = "DROP", source = "THE_OCULUS_H_DRAKOS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_DRAKOS" },
   },
   [37256] = {
-    { kind = "DROP", source = "THE_OCULUS_H_DRAKOS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_DRAKOS" },
   },
   [37257] = {
-    { kind = "DROP", source = "THE_OCULUS_H_DRAKOS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_DRAKOS" },
   },
   [37258] = {
-    { kind = "DROP", source = "THE_OCULUS_H_DRAKOS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_DRAKOS" },
   },
   [37260] = {
-    { kind = "DROP", source = "THE_OCULUS_H_CLOUDSTRIDER" },
+    { kind = "DROP", source = "THE_OCULUS_HC_CLOUDSTRIDER" },
   },
   [37261] = {
-    { kind = "DROP", source = "THE_OCULUS_H_CLOUDSTRIDER" },
+    { kind = "DROP", source = "THE_OCULUS_HC_CLOUDSTRIDER" },
   },
   [37262] = {
-    { kind = "DROP", source = "THE_OCULUS_H_CLOUDSTRIDER" },
+    { kind = "DROP", source = "THE_OCULUS_HC_CLOUDSTRIDER" },
   },
   [37263] = {
-    { kind = "DROP", source = "THE_OCULUS_H_CLOUDSTRIDER" },
+    { kind = "DROP", source = "THE_OCULUS_HC_CLOUDSTRIDER" },
   },
   [37264] = {
-    { kind = "DROP", source = "THE_OCULUS_H_UROM" },
+    { kind = "DROP", source = "THE_OCULUS_HC_UROM" },
   },
   [37288] = {
-    { kind = "DROP", source = "THE_OCULUS_H_UROM" },
+    { kind = "DROP", source = "THE_OCULUS_HC_UROM" },
   },
   [37289] = {
-    { kind = "DROP", source = "THE_OCULUS_H_UROM" },
+    { kind = "DROP", source = "THE_OCULUS_HC_UROM" },
   },
   [37290] = {
-    { kind = "DROP", source = "THE_OCULUS_H_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_TRASH_MOBS" },
   },
   [37291] = {
-    { kind = "DROP", source = "THE_OCULUS_H_EREGOS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_EREGOS" },
   },
   [37292] = {
-    { kind = "DROP", source = "THE_OCULUS_H_EREGOS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_EREGOS" },
   },
   [37293] = {
-    { kind = "DROP", source = "THE_OCULUS_H_EREGOS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_EREGOS" },
   },
   [37294] = {
-    { kind = "DROP", source = "THE_OCULUS_H_EREGOS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_EREGOS" },
   },
   [37360] = {
-    { kind = "DROP", source = "THE_OCULUS_H_EREGOS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_EREGOS" },
   },
   [37361] = {
-    { kind = "DROP", source = "THE_OCULUS_H_EREGOS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_EREGOS" },
   },
   [37362] = {
-    { kind = "DROP", source = "THE_OCULUS_H_EREGOS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_EREGOS" },
   },
   [37363] = {
-    { kind = "DROP", source = "THE_OCULUS_H_EREGOS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_EREGOS" },
   },
   [37364] = {
-    { kind = "DROP", source = "THE_OCULUS_H_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_TRASH_MOBS" },
   },
   [37365] = {
-    { kind = "DROP", source = "THE_OCULUS_H_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_TRASH_MOBS" },
   },
   [37366] = {
-    { kind = "DROP", source = "THE_OCULUS_H_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_OCULUS_HC_TRASH_MOBS" },
   },
   [37367] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_SORROWGRAVE" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_SORROWGRAVE" },
   },
   [37368] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_SORROWGRAVE" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_SORROWGRAVE" },
   },
   [37369] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_SORROWGRAVE" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_SORROWGRAVE" },
   },
   [37370] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_SORROWGRAVE" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_SORROWGRAVE" },
   },
   [37373] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_PALEHOOF" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_PALEHOOF" },
   },
   [37374] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_PALEHOOF" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_PALEHOOF" },
   },
   [37376] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_PALEHOOF" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_PALEHOOF" },
   },
   [37377] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_SKADI" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_SKADI" },
   },
   [37379] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_SKADI" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_SKADI" },
   },
   [37384] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_SKADI" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_SKADI" },
   },
   [37389] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_SKADI" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_SKADI" },
   },
   [37390] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_YMIRON" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_YMIRON" },
   },
   [37395] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_YMIRON" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_YMIRON" },
   },
   [37397] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_YMIRON" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_YMIRON" },
   },
   [37398] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_YMIRON" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_YMIRON" },
   },
   [37401] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_YMIRON" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_YMIRON" },
   },
   [37407] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_YMIRON" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_YMIRON" },
   },
   [37408] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_YMIRON" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_YMIRON" },
   },
   [37409] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_YMIRON" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_YMIRON" },
   },
   [37410] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_TRASH_MOBS" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_TRASH_MOBS" },
   },
   [37449] = {
     { kind = "DROP", source = "WINTERFINRETREAT_FRIENDLY" },
@@ -8934,342 +8934,342 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "WINTERFINRETREAT_FRIENDLY" },
   },
   [37587] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_TRASH_MOBS" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_TRASH_MOBS" },
   },
   [37590] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_TRASH_MOBS" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_TRASH_MOBS" },
   },
   [37591] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_NAODX" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_NAODX" },
   },
   [37592] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_NAODX" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_NAODX" },
   },
   [37593] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_NAODX" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_NAODX" },
   },
   [37594] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_NAODX" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_NAODX" },
   },
   [37595] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_PRINCE_TALDARAM" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_PRINCE_TALDARAM" },
   },
   [37597] = {
     { kind = "DROP", source = "BREWFEST_COREN_DIREBREW" },
   },
   [37612] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_PRINCE_TALDARAM" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_PRINCE_TALDARAM" },
   },
   [37613] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_PRINCE_TALDARAM" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_PRINCE_TALDARAM" },
   },
   [37614] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_PRINCE_TALDARAM" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_PRINCE_TALDARAM" },
   },
   [37615] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_VOLAZJ" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_VOLAZJ" },
   },
   [37616] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_VOLAZJ" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_VOLAZJ" },
   },
   [37617] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_VOLAZJ" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_VOLAZJ" },
   },
   [37618] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_VOLAZJ" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_VOLAZJ" },
   },
   [37619] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_VOLAZJ" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_VOLAZJ" },
   },
   [37620] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_VOLAZJ" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_VOLAZJ" },
   },
   [37622] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_VOLAZJ" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_VOLAZJ" },
   },
   [37623] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_VOLAZJ" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_VOLAZJ" },
   },
   [37624] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_TRASH_MOBS" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_TRASH_MOBS" },
     { kind = "DROP", source = "AZJOL_NERUB_TRASH_MOBS" },
   },
   [37625] = {
     { kind = "DROP", source = "AZJOL_NERUB_TRASH_MOBS" },
   },
   [37626] = {
-    { kind = "DROP", source = "GUNDRAK_H_SLADRAN" },
+    { kind = "DROP", source = "GUNDRAK_HC_SLADRAN" },
   },
   [37627] = {
-    { kind = "DROP", source = "GUNDRAK_H_SLADRAN" },
+    { kind = "DROP", source = "GUNDRAK_HC_SLADRAN" },
   },
   [37628] = {
-    { kind = "DROP", source = "GUNDRAK_H_SLADRAN" },
+    { kind = "DROP", source = "GUNDRAK_HC_SLADRAN" },
   },
   [37629] = {
-    { kind = "DROP", source = "GUNDRAK_H_SLADRAN" },
+    { kind = "DROP", source = "GUNDRAK_HC_SLADRAN" },
   },
   [37630] = {
-    { kind = "DROP", source = "GUNDRAK_H_MOORABI" },
+    { kind = "DROP", source = "GUNDRAK_HC_MOORABI" },
   },
   [37631] = {
-    { kind = "DROP", source = "GUNDRAK_H_MOORABI" },
+    { kind = "DROP", source = "GUNDRAK_HC_MOORABI" },
   },
   [37632] = {
-    { kind = "DROP", source = "GUNDRAK_H_MOORABI" },
+    { kind = "DROP", source = "GUNDRAK_HC_MOORABI" },
   },
   [37633] = {
-    { kind = "DROP", source = "GUNDRAK_H_MOORABI" },
+    { kind = "DROP", source = "GUNDRAK_HC_MOORABI" },
   },
   [37634] = {
-    { kind = "DROP", source = "GUNDRAK_H_COLOSSUS" },
+    { kind = "DROP", source = "GUNDRAK_HC_COLOSSUS" },
   },
   [37635] = {
-    { kind = "DROP", source = "GUNDRAK_H_COLOSSUS" },
+    { kind = "DROP", source = "GUNDRAK_HC_COLOSSUS" },
   },
   [37636] = {
-    { kind = "DROP", source = "GUNDRAK_H_COLOSSUS" },
+    { kind = "DROP", source = "GUNDRAK_HC_COLOSSUS" },
   },
   [37637] = {
-    { kind = "DROP", source = "GUNDRAK_H_COLOSSUS" },
+    { kind = "DROP", source = "GUNDRAK_HC_COLOSSUS" },
   },
   [37638] = {
-    { kind = "DROP", source = "GUNDRAK_H_GALDARAH" },
+    { kind = "DROP", source = "GUNDRAK_HC_GALDARAH" },
   },
   [37639] = {
-    { kind = "DROP", source = "GUNDRAK_H_GALDARAH" },
+    { kind = "DROP", source = "GUNDRAK_HC_GALDARAH" },
   },
   [37640] = {
-    { kind = "DROP", source = "GUNDRAK_H_GALDARAH" },
+    { kind = "DROP", source = "GUNDRAK_HC_GALDARAH" },
   },
   [37641] = {
-    { kind = "DROP", source = "GUNDRAK_H_GALDARAH" },
+    { kind = "DROP", source = "GUNDRAK_HC_GALDARAH" },
   },
   [37642] = {
-    { kind = "DROP", source = "GUNDRAK_H_GALDARAH" },
+    { kind = "DROP", source = "GUNDRAK_HC_GALDARAH" },
   },
   [37643] = {
-    { kind = "DROP", source = "GUNDRAK_H_GALDARAH" },
+    { kind = "DROP", source = "GUNDRAK_HC_GALDARAH" },
   },
   [37644] = {
-    { kind = "DROP", source = "GUNDRAK_H_GALDARAH" },
+    { kind = "DROP", source = "GUNDRAK_HC_GALDARAH" },
   },
   [37645] = {
-    { kind = "DROP", source = "GUNDRAK_H_GALDARAH" },
+    { kind = "DROP", source = "GUNDRAK_HC_GALDARAH" },
   },
   [37646] = {
-    { kind = "DROP", source = "GUNDRAK_H_TRASH_MOBS" },
+    { kind = "DROP", source = "GUNDRAK_HC_TRASH_MOBS" },
   },
   [37647] = {
-    { kind = "DROP", source = "GUNDRAK_H_TRASH_MOBS" },
+    { kind = "DROP", source = "GUNDRAK_HC_TRASH_MOBS" },
   },
   [37648] = {
-    { kind = "DROP", source = "GUNDRAK_H_TRASH_MOBS" },
+    { kind = "DROP", source = "GUNDRAK_HC_TRASH_MOBS" },
   },
   [37650] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_KRYSTALLUS" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_KRYSTALLUS" },
   },
   [37651] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_KRYSTALLUS" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_KRYSTALLUS" },
   },
   [37652] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_KRYSTALLUS" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_KRYSTALLUS" },
   },
   [37653] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_TRIBUNAL_CHEST" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_TRIBUNAL_CHEST" },
   },
   [37654] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_TRIBUNAL_CHEST" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_TRIBUNAL_CHEST" },
   },
   [37655] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_TRIBUNAL_CHEST" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_TRIBUNAL_CHEST" },
   },
   [37656] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_TRIBUNAL_CHEST" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_TRIBUNAL_CHEST" },
   },
   [37657] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_SJONNIR" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_SJONNIR" },
   },
   [37658] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_SJONNIR" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_SJONNIR" },
   },
   [37660] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_SJONNIR" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_SJONNIR" },
   },
   [37666] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_SJONNIR" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_SJONNIR" },
   },
   [37667] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_SJONNIR" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_SJONNIR" },
   },
   [37668] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_SJONNIR" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_SJONNIR" },
   },
   [37669] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_SJONNIR" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_SJONNIR" },
   },
   [37670] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_SJONNIR" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_SJONNIR" },
   },
   [37671] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_TRASH_MOBS" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_TRASH_MOBS" },
   },
   [37672] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_TRASH_MOBS" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_TRASH_MOBS" },
   },
   [37673] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_TRASH_MOBS" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_TRASH_MOBS" },
   },
   [37675] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_MEATHOOK" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_MEATHOOK" },
   },
   [37678] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_MEATHOOK" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_MEATHOOK" },
   },
   [37679] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_MEATHOOK" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_MEATHOOK" },
   },
   [37680] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_MEATHOOK" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_MEATHOOK" },
   },
   [37681] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_SALRAMM_THE_FLESHCRAFTER" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_SALRAMM_THE_FLESHCRAFTER" },
   },
   [37682] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_SALRAMM_THE_FLESHCRAFTER" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_SALRAMM_THE_FLESHCRAFTER" },
   },
   [37683] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_SALRAMM_THE_FLESHCRAFTER" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_SALRAMM_THE_FLESHCRAFTER" },
   },
   [37684] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_SALRAMM_THE_FLESHCRAFTER" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_SALRAMM_THE_FLESHCRAFTER" },
   },
   [37685] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_CHRONO_LORD_EPOCH" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_CHRONO_LORD_EPOCH" },
   },
   [37686] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_CHRONO_LORD_EPOCH" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_CHRONO_LORD_EPOCH" },
   },
   [37687] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_CHRONO_LORD_EPOCH" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_CHRONO_LORD_EPOCH" },
   },
   [37688] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_CHRONO_LORD_EPOCH" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_CHRONO_LORD_EPOCH" },
   },
   [37689] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_MAL_GANIS" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_MAL_GANIS" },
   },
   [37690] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_MAL_GANIS" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_MAL_GANIS" },
   },
   [37691] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_MAL_GANIS" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_MAL_GANIS" },
   },
   [37692] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_MAL_GANIS" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_MAL_GANIS" },
   },
   [37693] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_MAL_GANIS" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_MAL_GANIS" },
   },
   [37694] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_MAL_GANIS" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_MAL_GANIS" },
   },
   [37695] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_MAL_GANIS" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_MAL_GANIS" },
   },
   [37696] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_MAL_GANIS" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_MAL_GANIS" },
   },
   [37712] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_TROLLGORE" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_TROLLGORE" },
   },
   [37714] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_TROLLGORE" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_TROLLGORE" },
   },
   [37715] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_TROLLGORE" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_TROLLGORE" },
   },
   [37717] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_TROLLGORE" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_TROLLGORE" },
   },
   [37718] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_NOVOS" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_NOVOS" },
   },
   [37721] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_NOVOS" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_NOVOS" },
   },
   [37722] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_NOVOS" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_NOVOS" },
   },
   [37723] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_KING_DRED" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_KING_DRED" },
   },
   [37724] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_KING_DRED" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_KING_DRED" },
   },
   [37725] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_KING_DRED" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_KING_DRED" },
   },
   [37726] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_KING_DRED" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_KING_DRED" },
   },
   [37728] = {
-    { kind = "DROP", source = "THE_NEXUS_H_KOLURG_STOUTBEARD" },
+    { kind = "DROP", source = "THE_NEXUS_HC_KOLURG_STOUTBEARD" },
   },
   [37729] = {
-    { kind = "DROP", source = "THE_NEXUS_H_KOLURG_STOUTBEARD" },
+    { kind = "DROP", source = "THE_NEXUS_HC_KOLURG_STOUTBEARD" },
   },
   [37730] = {
-    { kind = "DROP", source = "THE_NEXUS_H_KOLURG_STOUTBEARD" },
+    { kind = "DROP", source = "THE_NEXUS_HC_KOLURG_STOUTBEARD" },
   },
   [37731] = {
-    { kind = "DROP", source = "THE_NEXUS_H_KOLURG_STOUTBEARD" },
+    { kind = "DROP", source = "THE_NEXUS_HC_KOLURG_STOUTBEARD" },
   },
   [37732] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_THARONJA" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_THARONJA" },
   },
   [37733] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_THARONJA" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_THARONJA" },
   },
   [37734] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_THARONJA" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_THARONJA" },
   },
   [37735] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_THARONJA" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_THARONJA" },
   },
   [37784] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_THARONJA" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_THARONJA" },
   },
   [37788] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_THARONJA" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_THARONJA" },
   },
   [37791] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_THARONJA" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_THARONJA" },
   },
   [37798] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_THARONJA" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_THARONJA" },
   },
   [37799] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_TRASH_MOBS" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_TRASH_MOBS" },
   },
   [37800] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_TRASH_MOBS" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_TRASH_MOBS" },
   },
   [37801] = {
-    { kind = "DROP", source = "DRAK_THARON_KEEP_H_TRASH_MOBS" },
+    { kind = "DROP", source = "DRAK_THARON_KEEP_HC_TRASH_MOBS" },
   },
   [37814] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_BJARNGRIM" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_BJARNGRIM" },
   },
   [37818] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_BJARNGRIM" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_BJARNGRIM" },
   },
   [37825] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_BJARNGRIM" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_BJARNGRIM" },
   },
   [37826] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_IONAR" },
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_BJARNGRIM" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_IONAR" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_BJARNGRIM" },
   },
   [37835] = {
     { kind = "DROP", source = "WORLD_DROPS_LEVEL_80" },
@@ -9278,112 +9278,112 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_GRIZZLY_HILLS" },
   },
   [37840] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_VOLKHAN" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_VOLKHAN" },
   },
   [37841] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_VOLKHAN" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_VOLKHAN" },
   },
   [37842] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_VOLKHAN" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_VOLKHAN" },
   },
   [37843] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_VOLKHAN" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_VOLKHAN" },
   },
   [37844] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_IONAR" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_IONAR" },
   },
   [37845] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_IONAR" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_IONAR" },
   },
   [37846] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_IONAR" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_IONAR" },
   },
   [37848] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_LOKEN" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_LOKEN" },
   },
   [37849] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_LOKEN" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_LOKEN" },
   },
   [37850] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_LOKEN" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_LOKEN" },
   },
   [37851] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_LOKEN" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_LOKEN" },
   },
   [37852] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_LOKEN" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_LOKEN" },
   },
   [37853] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_LOKEN" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_LOKEN" },
   },
   [37854] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_LOKEN" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_LOKEN" },
   },
   [37855] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_LOKEN" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_LOKEN" },
   },
   [37856] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_TRASH_MOBS" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_TRASH_MOBS" },
   },
   [37857] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_TRASH_MOBS" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_TRASH_MOBS" },
   },
   [37858] = {
-    { kind = "DROP", source = "HALLS_OF_LIGHTNING_H_TRASH_MOBS" },
+    { kind = "DROP", source = "HALLS_OF_LIGHTNING_HC_TRASH_MOBS" },
   },
   [37861] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_XEVOZZ" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_XEVOZZ" },
   },
   [37862] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_ICHORON" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_ICHORON" },
   },
   [37867] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_XEVOZZ" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_XEVOZZ" },
   },
   [37868] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_XEVOZZ" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_XEVOZZ" },
   },
   [37869] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_ICHORON" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_ICHORON" },
   },
   [37870] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_LAVANTHOR" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_LAVANTHOR" },
   },
   [37871] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_LAVANTHOR" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_LAVANTHOR" },
   },
   [37872] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_LAVANTHOR" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_LAVANTHOR" },
   },
   [37873] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_CYANIGOSA" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_CYANIGOSA" },
   },
   [37874] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_CYANIGOSA" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_CYANIGOSA" },
   },
   [37875] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_CYANIGOSA" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_CYANIGOSA" },
   },
   [37876] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_CYANIGOSA" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_CYANIGOSA" },
   },
   [37883] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_CYANIGOSA" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_CYANIGOSA" },
   },
   [37884] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_CYANIGOSA" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_CYANIGOSA" },
   },
   [37886] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_CYANIGOSA" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_CYANIGOSA" },
   },
   [37889] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_TRASH_MOBS" },
   },
   [37890] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_TRASH_MOBS" },
   },
   [37891] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_TRASH_MOBS" },
   },
   [38050] = {
     { kind = "DROP", source = "UPPER_DECK_LOOT_CARD_ITEMS" },
@@ -9635,16 +9635,16 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "HALLS_OF_STONE_MAIDEN" },
   },
   [38615] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_MAIDEN" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_MAIDEN" },
   },
   [38616] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_MAIDEN" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_MAIDEN" },
   },
   [38617] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_MAIDEN" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_MAIDEN" },
   },
   [38618] = {
-    { kind = "DROP", source = "HALLS_OF_STONE_H_MAIDEN" },
+    { kind = "DROP", source = "HALLS_OF_STONE_HC_MAIDEN" },
   },
   [39083] = {
     { kind = "DROP", source = "PROFESSION_BLACKSMITHING" },
@@ -13248,10 +13248,10 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "PROFESSION_INSCRIPTION" },
   },
   [43085] = {
-    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_H_MAL_GANIS" },
+    { kind = "DROP", source = "CAVERNS_OF_TIME_OLD_STRATHOLME_HC_MAL_GANIS" },
   },
   [43102] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [43129] = {
     { kind = "DROP", source = "PROFESSION_LEATHERWORKING" },
@@ -13320,28 +13320,28 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_JEDOGA" },
   },
   [43280] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_JEDOGA" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_JEDOGA" },
   },
   [43281] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_JEDOGA" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_JEDOGA" },
   },
   [43282] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_JEDOGA" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_JEDOGA" },
   },
   [43283] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_JEDOGA" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_JEDOGA" },
   },
   [43284] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_AMANITAR" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_AMANITAR" },
   },
   [43285] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_AMANITAR" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_AMANITAR" },
   },
   [43286] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_AMANITAR" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_AMANITAR" },
   },
   [43287] = {
-    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_H_AMANITAR" },
+    { kind = "DROP", source = "AHN_KAHET_THE_OLD_KINGDOM_HC_AMANITAR" },
   },
   [43305] = {
     { kind = "DROP", source = "GUNDRAK_GALDARAH" },
@@ -13353,16 +13353,16 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "GUNDRAK_GALDARAH" },
   },
   [43310] = {
-    { kind = "DROP", source = "GUNDRAK_H_ECK" },
+    { kind = "DROP", source = "GUNDRAK_HC_ECK" },
   },
   [43311] = {
-    { kind = "DROP", source = "GUNDRAK_H_ECK" },
+    { kind = "DROP", source = "GUNDRAK_HC_ECK" },
   },
   [43312] = {
-    { kind = "DROP", source = "GUNDRAK_H_ECK" },
+    { kind = "DROP", source = "GUNDRAK_HC_ECK" },
   },
   [43313] = {
-    { kind = "DROP", source = "GUNDRAK_H_ECK" },
+    { kind = "DROP", source = "GUNDRAK_HC_ECK" },
   },
   [43353] = {
     { kind = "DROP", source = "THE_VIOLET_HOLD_ZURAMAT" },
@@ -13383,34 +13383,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "THE_VIOLET_HOLD_MORAGG" },
   },
   [43401] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_ICHORON" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_ICHORON" },
   },
   [43402] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_ZURAMAT" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_ZURAMAT" },
   },
   [43403] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_ZURAMAT" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_ZURAMAT" },
   },
   [43404] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_ZURAMAT" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_ZURAMAT" },
   },
   [43405] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_EREKEM" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_EREKEM" },
   },
   [43406] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_EREKEM" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_EREKEM" },
   },
   [43407] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_EREKEM" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_EREKEM" },
   },
   [43408] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_MORAGG" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_MORAGG" },
   },
   [43409] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_MORAGG" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_MORAGG" },
   },
   [43410] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_MORAGG" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_MORAGG" },
   },
   [43411] = {
     { kind = "DROP", source = "AZJOL_NERUB_ANUB_ARAK" },
@@ -13506,7 +13506,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "PROFESSION_LEATHERWORKING" },
   },
   [43500] = {
-    { kind = "DROP", source = "THE_VIOLET_HOLD_H_CYANIGOSA" },
+    { kind = "DROP", source = "THE_VIOLET_HOLD_HC_CYANIGOSA" },
   },
   [43502] = {
     { kind = "DROP", source = "PROFESSION_LEATHERWORKING" },
@@ -13910,7 +13910,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ARGENT_CRUSADE_HONORED" },
   },
   [44151] = {
-    { kind = "DROP", source = "UTGARDE_PINNACLE_H_SKADI" },
+    { kind = "DROP", source = "UTGARDE_PINNACLE_HC_SKADI" },
   },
   [44152] = {
     { kind = "DROP", source = "THE_WYRMREST_ACCORD_REVERED" },
@@ -14285,10 +14285,10 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "PROFESSION_ENGINEERING" },
   },
   [44990] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_EADRIC_THE_PURE" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_FACTION_CHAMPIONS" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_ARGENT_CONFESSOR_PALETRESS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [45038] = {
     { kind = "DROP", source = "ULDUAR_25N_GENERAL_VEZAX" },
@@ -14357,23 +14357,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_FLAME_LEVIATHAN" },
   },
   [45132] = {
-    { kind = "DROP", source = "ULDUAR_25HC_FLAME_LEVIATHAN" },
+    { kind = "DROP", source = "ULDUAR_25HM_FLAME_LEVIATHAN" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45133] = {
-    { kind = "DROP", source = "ULDUAR_25HC_FLAME_LEVIATHAN" },
+    { kind = "DROP", source = "ULDUAR_25HM_FLAME_LEVIATHAN" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45134] = {
-    { kind = "DROP", source = "ULDUAR_25HC_FLAME_LEVIATHAN" },
+    { kind = "DROP", source = "ULDUAR_25HM_FLAME_LEVIATHAN" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45135] = {
-    { kind = "DROP", source = "ULDUAR_25HC_FLAME_LEVIATHAN" },
+    { kind = "DROP", source = "ULDUAR_25HM_FLAME_LEVIATHAN" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45136] = {
-    { kind = "DROP", source = "ULDUAR_25HC_FLAME_LEVIATHAN" },
+    { kind = "DROP", source = "ULDUAR_25HM_FLAME_LEVIATHAN" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45137] = {
@@ -14520,23 +14520,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_IRON_COUNCIL" },
   },
   [45241] = {
-    { kind = "DROP", source = "ULDUAR_25HC_IRON_COUNCIL" },
+    { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45242] = {
-    { kind = "DROP", source = "ULDUAR_25HC_IRON_COUNCIL" },
+    { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45243] = {
-    { kind = "DROP", source = "ULDUAR_25HC_IRON_COUNCIL" },
+    { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45244] = {
-    { kind = "DROP", source = "ULDUAR_25HC_IRON_COUNCIL" },
+    { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45245] = {
-    { kind = "DROP", source = "ULDUAR_25HC_IRON_COUNCIL" },
+    { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45246] = {
@@ -14670,23 +14670,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_FLAME_LEVIATHAN" },
   },
   [45293] = {
-    { kind = "DROP", source = "ULDUAR_10HC_FLAME_LEVIATHAN" },
+    { kind = "DROP", source = "ULDUAR_10HM_FLAME_LEVIATHAN" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45294] = {
-    { kind = "DROP", source = "ULDUAR_10HC_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10HM_FREYA" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45295] = {
-    { kind = "DROP", source = "ULDUAR_10HC_FLAME_LEVIATHAN" },
+    { kind = "DROP", source = "ULDUAR_10HM_FLAME_LEVIATHAN" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45296] = {
-    { kind = "DROP", source = "ULDUAR_10HC_FLAME_LEVIATHAN" },
+    { kind = "DROP", source = "ULDUAR_10HM_FLAME_LEVIATHAN" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45297] = {
-    { kind = "DROP", source = "ULDUAR_10HC_FLAME_LEVIATHAN" },
+    { kind = "DROP", source = "ULDUAR_10HM_FLAME_LEVIATHAN" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45298] = {
@@ -14696,7 +14696,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_RAZORSCALE" },
   },
   [45300] = {
-    { kind = "DROP", source = "ULDUAR_10HC_FLAME_LEVIATHAN" },
+    { kind = "DROP", source = "ULDUAR_10HM_FLAME_LEVIATHAN" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45301] = {
@@ -15110,35 +15110,35 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_AURIAYA" },
   },
   [45442] = {
-    { kind = "DROP", source = "ULDUAR_25HC_XT_002_DECONSTRUCTOR" },
+    { kind = "DROP", source = "ULDUAR_25HM_XT_002_DECONSTRUCTOR" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45443] = {
-    { kind = "DROP", source = "ULDUAR_25HC_XT_002_DECONSTRUCTOR" },
+    { kind = "DROP", source = "ULDUAR_25HM_XT_002_DECONSTRUCTOR" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45444] = {
-    { kind = "DROP", source = "ULDUAR_25HC_XT_002_DECONSTRUCTOR" },
+    { kind = "DROP", source = "ULDUAR_25HM_XT_002_DECONSTRUCTOR" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45445] = {
-    { kind = "DROP", source = "ULDUAR_25HC_XT_002_DECONSTRUCTOR" },
+    { kind = "DROP", source = "ULDUAR_25HM_XT_002_DECONSTRUCTOR" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45446] = {
-    { kind = "DROP", source = "ULDUAR_25HC_XT_002_DECONSTRUCTOR" },
+    { kind = "DROP", source = "ULDUAR_25HM_XT_002_DECONSTRUCTOR" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45447] = {
-    { kind = "DROP", source = "ULDUAR_10HC_IRON_COUNCIL" },
+    { kind = "DROP", source = "ULDUAR_10HM_IRON_COUNCIL" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45448] = {
-    { kind = "DROP", source = "ULDUAR_10HC_IRON_COUNCIL" },
+    { kind = "DROP", source = "ULDUAR_10HM_IRON_COUNCIL" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45449] = {
-    { kind = "DROP", source = "ULDUAR_10HC_IRON_COUNCIL" },
+    { kind = "DROP", source = "ULDUAR_10HM_IRON_COUNCIL" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45450] = {
@@ -15158,33 +15158,33 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR" },
   },
   [45455] = {
-    { kind = "DROP", source = "ULDUAR_10HC_IRON_COUNCIL" },
+    { kind = "DROP", source = "ULDUAR_10HM_IRON_COUNCIL" },
   },
   [45456] = {
-    { kind = "DROP", source = "ULDUAR_10HC_IRON_COUNCIL" },
+    { kind = "DROP", source = "ULDUAR_10HM_IRON_COUNCIL" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45457] = {
-    { kind = "DROP", source = "ULDUAR_25HC_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25HM_HODIR" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 52 } } },
   },
   [45458] = {
     { kind = "DROP", source = "ULDUAR_10N_HODIR" },
   },
   [45459] = {
-    { kind = "DROP", source = "ULDUAR_25HC_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25HM_HODIR" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45460] = {
-    { kind = "DROP", source = "ULDUAR_25HC_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25HM_HODIR" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45461] = {
-    { kind = "DROP", source = "ULDUAR_25HC_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25HM_HODIR" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45462] = {
-    { kind = "DROP", source = "ULDUAR_25HC_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25HM_HODIR" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45463] = {
@@ -15208,23 +15208,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45470] = {
-    { kind = "DROP", source = "ULDUAR_25HC_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45471] = {
-    { kind = "DROP", source = "ULDUAR_25HC_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45472] = {
-    { kind = "DROP", source = "ULDUAR_25HC_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45473] = {
-    { kind = "DROP", source = "ULDUAR_25HC_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45474] = {
-    { kind = "DROP", source = "ULDUAR_25HC_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45479] = {
@@ -15244,23 +15244,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA" },
   },
   [45484] = {
-    { kind = "DROP", source = "ULDUAR_25HC_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45485] = {
-    { kind = "DROP", source = "ULDUAR_25HC_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45486] = {
-    { kind = "DROP", source = "ULDUAR_25HC_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45487] = {
-    { kind = "DROP", source = "ULDUAR_25HC_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45488] = {
-    { kind = "DROP", source = "ULDUAR_25HC_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45489] = {
@@ -15280,19 +15280,19 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
   },
   [45494] = {
-    { kind = "DROP", source = "ULDUAR_25HC_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45495] = {
-    { kind = "DROP", source = "ULDUAR_25HC_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45496] = {
-    { kind = "DROP", source = "ULDUAR_25HC_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45497] = {
-    { kind = "DROP", source = "ULDUAR_25HC_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45498] = {
@@ -15315,7 +15315,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_GENERAL_VEZAX" },
   },
   [45506] = {
-    { kind = "DROP", source = "ULDUAR_10HC_IRON_COUNCIL" },
+    { kind = "DROP", source = "ULDUAR_10HM_IRON_COUNCIL" },
   },
   [45507] = {
     { kind = "DROP", source = "ULDUAR_25N_GENERAL_VEZAX" },
@@ -15347,23 +15347,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_GENERAL_VEZAX" },
   },
   [45516] = {
-    { kind = "DROP", source = "ULDUAR_25HC_GENERAL_VEZAX" },
+    { kind = "DROP", source = "ULDUAR_25HM_GENERAL_VEZAX" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 52 } } },
   },
   [45517] = {
-    { kind = "DROP", source = "ULDUAR_25HC_GENERAL_VEZAX" },
+    { kind = "DROP", source = "ULDUAR_25HM_GENERAL_VEZAX" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45518] = {
-    { kind = "DROP", source = "ULDUAR_25HC_GENERAL_VEZAX" },
+    { kind = "DROP", source = "ULDUAR_25HM_GENERAL_VEZAX" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45519] = {
-    { kind = "DROP", source = "ULDUAR_25HC_GENERAL_VEZAX" },
+    { kind = "DROP", source = "ULDUAR_25HM_GENERAL_VEZAX" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45520] = {
-    { kind = "DROP", source = "ULDUAR_25HC_GENERAL_VEZAX" },
+    { kind = "DROP", source = "ULDUAR_25HM_GENERAL_VEZAX" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45521] = {
@@ -15397,23 +15397,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
   },
   [45533] = {
-    { kind = "DROP", source = "ULDUAR_25HC_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25HM_YOGG_SARON" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 52 } } },
   },
   [45534] = {
-    { kind = "DROP", source = "ULDUAR_25HC_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25HM_YOGG_SARON" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45535] = {
-    { kind = "DROP", source = "ULDUAR_25HC_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25HM_YOGG_SARON" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45536] = {
-    { kind = "DROP", source = "ULDUAR_25HC_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25HM_YOGG_SARON" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45537] = {
-    { kind = "DROP", source = "ULDUAR_25HC_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_25HM_YOGG_SARON" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45538] = {
@@ -15503,7 +15503,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "PROFESSION_TAILORING" },
   },
   [45570] = {
-    { kind = "DROP", source = "ULDUAR_25HC_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 52 } } },
   },
@@ -15526,7 +15526,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_TRASH_MOBS" },
   },
   [45607] = {
-    { kind = "DROP", source = "ULDUAR_25HC_IRON_COUNCIL" },
+    { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
   },
   [45608] = {
@@ -15545,12 +15545,12 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45612] = {
-    { kind = "DROP", source = "ULDUAR_25HC_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25HM_HODIR" },
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45613] = {
-    { kind = "DROP", source = "ULDUAR_25HC_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 52 } } },
   },
@@ -15577,15 +15577,15 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45620] = {
-    { kind = "DROP", source = "ULDUAR_25HC_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45624] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_EADRIC_THE_PURE" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_FACTION_CHAMPIONS" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_ARGENT_CONFESSOR_PALETRESS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [45632] = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR" },
@@ -15683,7 +15683,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM" },
   },
   [45663] = {
-    { kind = "DROP", source = "ULDUAR_25HC_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45665] = {
@@ -15773,16 +15773,16 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "THE_KALU_AK_REVERED" },
   },
   [45784] = {
-    { kind = "DROP", source = "ULDUAR_10HC_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10HM_THORIM" },
   },
   [45786] = {
-    { kind = "DROP", source = "ULDUAR_10HC_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10HM_HODIR" },
   },
   [45787] = {
-    { kind = "DROP", source = "ULDUAR_10HC_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
   },
   [45788] = {
-    { kind = "DROP", source = "ULDUAR_10HC_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10HM_FREYA" },
   },
   [45810] = {
     { kind = "DROP", source = "PROFESSION_TAILORING" },
@@ -15791,16 +15791,16 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "PROFESSION_TAILORING" },
   },
   [45814] = {
-    { kind = "DROP", source = "ULDUAR_25HC_FREYA" },
+    { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
   },
   [45815] = {
-    { kind = "DROP", source = "ULDUAR_25HC_HODIR" },
+    { kind = "DROP", source = "ULDUAR_25HM_HODIR" },
   },
   [45816] = {
-    { kind = "DROP", source = "ULDUAR_25HC_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
   },
   [45817] = {
-    { kind = "DROP", source = "ULDUAR_25HC_THORIM" },
+    { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
   },
   [45819] = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Conquest", amount = 25 } } },
@@ -15893,7 +15893,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Conquest", amount = 39 } } },
   },
   [45857] = {
-    { kind = "DROP", source = "ULDUAR_25HC_IRON_COUNCIL" },
+    { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
   },
   [45864] = {
     { kind = "DROP", source = "ULDUAR_10N_AURIAYA" },
@@ -15905,23 +15905,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_AURIAYA" },
   },
   [45867] = {
-    { kind = "DROP", source = "ULDUAR_10HC_XT_002_DECONSTRUCTOR" },
+    { kind = "DROP", source = "ULDUAR_10HM_XT_002_DECONSTRUCTOR" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45868] = {
-    { kind = "DROP", source = "ULDUAR_10HC_XT_002_DECONSTRUCTOR" },
+    { kind = "DROP", source = "ULDUAR_10HM_XT_002_DECONSTRUCTOR" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45869] = {
-    { kind = "DROP", source = "ULDUAR_10HC_XT_002_DECONSTRUCTOR" },
+    { kind = "DROP", source = "ULDUAR_10HM_XT_002_DECONSTRUCTOR" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45870] = {
-    { kind = "DROP", source = "ULDUAR_10HC_XT_002_DECONSTRUCTOR" },
+    { kind = "DROP", source = "ULDUAR_10HM_XT_002_DECONSTRUCTOR" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45871] = {
-    { kind = "DROP", source = "ULDUAR_10HC_XT_002_DECONSTRUCTOR" },
+    { kind = "DROP", source = "ULDUAR_10HM_XT_002_DECONSTRUCTOR" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45872] = {
@@ -15934,23 +15934,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_HODIR" },
   },
   [45876] = {
-    { kind = "DROP", source = "ULDUAR_10HC_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10HM_HODIR" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45877] = {
-    { kind = "DROP", source = "ULDUAR_10HC_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10HM_HODIR" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45886] = {
-    { kind = "DROP", source = "ULDUAR_10HC_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10HM_HODIR" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45887] = {
-    { kind = "DROP", source = "ULDUAR_10HC_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10HM_HODIR" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45888] = {
-    { kind = "DROP", source = "ULDUAR_10HC_HODIR" },
+    { kind = "DROP", source = "ULDUAR_10HM_HODIR" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45892] = {
@@ -15969,23 +15969,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM" },
   },
   [45928] = {
-    { kind = "DROP", source = "ULDUAR_10HC_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10HM_THORIM" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45929] = {
-    { kind = "DROP", source = "ULDUAR_10HC_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10HM_THORIM" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45930] = {
-    { kind = "DROP", source = "ULDUAR_10HC_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10HM_THORIM" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45931] = {
-    { kind = "DROP", source = "ULDUAR_10HC_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10HM_THORIM" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45933] = {
-    { kind = "DROP", source = "ULDUAR_10HC_THORIM" },
+    { kind = "DROP", source = "ULDUAR_10HM_THORIM" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45934] = {
@@ -16004,19 +16004,19 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_FREYA" },
   },
   [45943] = {
-    { kind = "DROP", source = "ULDUAR_10HC_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10HM_FREYA" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45945] = {
-    { kind = "DROP", source = "ULDUAR_10HC_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10HM_FREYA" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45946] = {
-    { kind = "DROP", source = "ULDUAR_10HC_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10HM_FREYA" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45947] = {
-    { kind = "DROP", source = "ULDUAR_10HC_FREYA" },
+    { kind = "DROP", source = "ULDUAR_10HM_FREYA" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45972] = {
@@ -16035,23 +16035,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
   },
   [45982] = {
-    { kind = "DROP", source = "ULDUAR_10HC_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45988] = {
-    { kind = "DROP", source = "ULDUAR_10HC_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45989] = {
-    { kind = "DROP", source = "ULDUAR_10HC_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45990] = {
-    { kind = "DROP", source = "ULDUAR_10HC_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45993] = {
-    { kind = "DROP", source = "ULDUAR_10HC_MIMIRION" },
+    { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45996] = {
@@ -16133,23 +16133,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
   },
   [46032] = {
-    { kind = "DROP", source = "ULDUAR_10HC_GENERAL_VEZAX" },
+    { kind = "DROP", source = "ULDUAR_10HM_GENERAL_VEZAX" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46033] = {
-    { kind = "DROP", source = "ULDUAR_10HC_GENERAL_VEZAX" },
+    { kind = "DROP", source = "ULDUAR_10HM_GENERAL_VEZAX" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46034] = {
-    { kind = "DROP", source = "ULDUAR_10HC_GENERAL_VEZAX" },
+    { kind = "DROP", source = "ULDUAR_10HM_GENERAL_VEZAX" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46035] = {
-    { kind = "DROP", source = "ULDUAR_10HC_GENERAL_VEZAX" },
+    { kind = "DROP", source = "ULDUAR_10HM_GENERAL_VEZAX" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46036] = {
-    { kind = "DROP", source = "ULDUAR_10HC_GENERAL_VEZAX" },
+    { kind = "DROP", source = "ULDUAR_10HM_GENERAL_VEZAX" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46037] = {
@@ -16219,23 +16219,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
   },
   [46067] = {
-    { kind = "DROP", source = "ULDUAR_10HC_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10HM_YOGG_SARON" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46068] = {
-    { kind = "DROP", source = "ULDUAR_10HC_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10HM_YOGG_SARON" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46095] = {
-    { kind = "DROP", source = "ULDUAR_10HC_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10HM_YOGG_SARON" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46096] = {
-    { kind = "DROP", source = "ULDUAR_10HC_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10HM_YOGG_SARON" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46097] = {
-    { kind = "DROP", source = "ULDUAR_10HC_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10HM_YOGG_SARON" },
     { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46110] = {
@@ -16534,7 +16534,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46312] = {
-    { kind = "DROP", source = "ULDUAR_10HC_YOGG_SARON" },
+    { kind = "DROP", source = "ULDUAR_10HM_YOGG_SARON" },
   },
   [46313] = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
@@ -17180,7 +17180,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
   },
   [47241] = {
-    { kind = "DROP", source = "THE_NEXUS_H_ORMOROK" },
+    { kind = "DROP", source = "THE_NEXUS_HC_ORMOROK" },
   },
   [47242] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
@@ -17196,22 +17196,22 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
   },
   [47243] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_FACTION_CHAMPIONS" },
   },
   [47244] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_FACTION_CHAMPIONS" },
   },
   [47245] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_ARGENT_CONFESSOR_PALETRESS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47248] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_FACTION_CHAMPIONS" },
   },
   [47249] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_FACTION_CHAMPIONS" },
   },
   [47250] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_FACTION_CHAMPIONS" },
   },
   [47251] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
@@ -17694,67 +17694,67 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
   },
   [47493] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_FACTION_CHAMPIONS" },
   },
   [47494] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_EADRIC_THE_PURE" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_ARGENT_CONFESSOR_PALETRESS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47495] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_EADRIC_THE_PURE" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_ARGENT_CONFESSOR_PALETRESS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47496] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_EADRIC_THE_PURE" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_ARGENT_CONFESSOR_PALETRESS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47497] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_EADRIC_THE_PURE" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_ARGENT_CONFESSOR_PALETRESS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47498] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_EADRIC_THE_PURE" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_ARGENT_CONFESSOR_PALETRESS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47500] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_EADRIC_THE_PURE" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_ARGENT_CONFESSOR_PALETRESS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47501] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_EADRIC_THE_PURE" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
   },
   [47502] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_EADRIC_THE_PURE" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
   },
   [47503] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_EADRIC_THE_PURE" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
   },
   [47504] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_EADRIC_THE_PURE" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
   },
   [47506] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
   },
   [47508] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_EADRIC_THE_PURE" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
   },
   [47509] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_EADRIC_THE_PURE" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
   },
   [47510] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_ARGENT_CONFESSOR_PALETRESS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47511] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_ARGENT_CONFESSOR_PALETRESS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47512] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_ARGENT_CONFESSOR_PALETRESS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47513] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
   },
   [47514] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_ARGENT_CONFESSOR_PALETRESS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47515] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
@@ -17778,7 +17778,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
   },
   [47522] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_ARGENT_CONFESSOR_PALETRESS" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47523] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
@@ -17793,13 +17793,13 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
   },
   [47527] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [47528] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
   },
   [47529] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [47545] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
@@ -17841,34 +17841,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
   },
   [47560] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [47561] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [47562] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [47563] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [47564] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [47565] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [47566] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [47567] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [47568] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [47569] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [47570] = {
     { kind = "DROP", source = "PROFESSION_BLACKSMITHING" },
@@ -20142,7 +20142,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48418] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [48429] = {
     { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
@@ -21034,7 +21034,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ONYXIA_S_LAIR_10N_ONYXIA" },
   },
   [49682] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_H_THE_BLACK_KNIGHT" },
+    { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [49783] = {
     { kind = "DROP", source = "THE_FORGE_OF_SOULS_BRONJAHM" },
@@ -21676,7 +21676,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_10_HUNTER_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50169] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_BRONJAHM" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_BRONJAHM" },
   },
   [50170] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25N_BLOOD_PRINCES" },
@@ -21739,28 +21739,28 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25N_VALITHRIA_DREAMWALKER" },
   },
   [50191] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_BRONJAHM" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_BRONJAHM" },
   },
   [50192] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25N_VALITHRIA_DREAMWALKER" },
   },
   [50193] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_BRONJAHM" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_BRONJAHM" },
   },
   [50194] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_BRONJAHM" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_BRONJAHM" },
   },
   [50195] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25N_VALITHRIA_DREAMWALKER" },
   },
   [50196] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_BRONJAHM" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_BRONJAHM" },
   },
   [50197] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_BRONJAHM" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_BRONJAHM" },
   },
   [50198] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_DEVOURER_OF_SOULS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_DEVOURER_OF_SOULS" },
   },
   [50199] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25N_VALITHRIA_DREAMWALKER" },
@@ -21769,67 +21769,67 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25N_VALITHRIA_DREAMWALKER" },
   },
   [50203] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_DEVOURER_OF_SOULS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_DEVOURER_OF_SOULS" },
   },
   [50205] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25N_VALITHRIA_DREAMWALKER" },
   },
   [50206] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_DEVOURER_OF_SOULS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_DEVOURER_OF_SOULS" },
   },
   [50207] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_DEVOURER_OF_SOULS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_DEVOURER_OF_SOULS" },
   },
   [50208] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_DEVOURER_OF_SOULS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_DEVOURER_OF_SOULS" },
   },
   [50209] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_DEVOURER_OF_SOULS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_DEVOURER_OF_SOULS" },
   },
   [50210] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_DEVOURER_OF_SOULS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_DEVOURER_OF_SOULS" },
   },
   [50211] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_DEVOURER_OF_SOULS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_DEVOURER_OF_SOULS" },
   },
   [50212] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_DEVOURER_OF_SOULS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_DEVOURER_OF_SOULS" },
   },
   [50213] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_DEVOURER_OF_SOULS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_DEVOURER_OF_SOULS" },
   },
   [50214] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_DEVOURER_OF_SOULS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_DEVOURER_OF_SOULS" },
   },
   [50215] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_DEVOURER_OF_SOULS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_DEVOURER_OF_SOULS" },
   },
   [50226] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25N_FESTERGUT" },
   },
   [50227] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_FORGEMASTER_GARFROST" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_FORGEMASTER_GARFROST" },
   },
   [50228] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_FORGEMASTER_GARFROST" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_FORGEMASTER_GARFROST" },
   },
   [50229] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_FORGEMASTER_GARFROST" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_FORGEMASTER_GARFROST" },
   },
   [50230] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_FORGEMASTER_GARFROST" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_FORGEMASTER_GARFROST" },
   },
   [50231] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25N_ROTFACE" },
   },
   [50233] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_FORGEMASTER_GARFROST" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_FORGEMASTER_GARFROST" },
   },
   [50234] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_FORGEMASTER_GARFROST" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_FORGEMASTER_GARFROST" },
   },
   [50235] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_KRICK_AND_ICK" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_KRICK_AND_ICK" },
   },
   [50240] = {
     { kind = "DROP", source = "TIER_10_WARLOCK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
@@ -21852,43 +21852,43 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50259] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_SCOURGELORD_TYRANNUS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_SCOURGELORD_TYRANNUS" },
   },
   [50260] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_MARWYN" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_MARWYN" },
   },
   [50262] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_KRICK_AND_ICK" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_KRICK_AND_ICK" },
   },
   [50263] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_KRICK_AND_ICK" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_KRICK_AND_ICK" },
   },
   [50265] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_KRICK_AND_ICK" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_KRICK_AND_ICK" },
   },
   [50266] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_KRICK_AND_ICK" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_KRICK_AND_ICK" },
   },
   [50267] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_SCOURGELORD_TYRANNUS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_SCOURGELORD_TYRANNUS" },
   },
   [50268] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_SCOURGELORD_TYRANNUS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_SCOURGELORD_TYRANNUS" },
   },
   [50269] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_SCOURGELORD_TYRANNUS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_SCOURGELORD_TYRANNUS" },
   },
   [50270] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_SCOURGELORD_TYRANNUS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_SCOURGELORD_TYRANNUS" },
   },
   [50271] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_SCOURGELORD_TYRANNUS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_SCOURGELORD_TYRANNUS" },
   },
   [50272] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_SCOURGELORD_TYRANNUS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_SCOURGELORD_TYRANNUS" },
   },
   [50273] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_SCOURGELORD_TYRANNUS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_SCOURGELORD_TYRANNUS" },
   },
   [50274] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25HC_ICECROWN_GUNSHIP_BATTLE" },
@@ -21925,108 +21925,108 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50283] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_SCOURGELORD_TYRANNUS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_SCOURGELORD_TYRANNUS" },
   },
   [50284] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_SCOURGELORD_TYRANNUS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_SCOURGELORD_TYRANNUS" },
   },
   [50285] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_SCOURGELORD_TYRANNUS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_SCOURGELORD_TYRANNUS" },
   },
   [50286] = {
-    { kind = "DROP", source = "PIT_OF_SARON_H_SCOURGELORD_TYRANNUS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_SCOURGELORD_TYRANNUS" },
   },
   [50290] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_FALRIC" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_FALRIC" },
   },
   [50291] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_FALRIC" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_FALRIC" },
   },
   [50292] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_FALRIC" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_FALRIC" },
   },
   [50293] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_FALRIC" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_FALRIC" },
   },
   [50294] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_FALRIC" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_FALRIC" },
   },
   [50295] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_FALRIC" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_FALRIC" },
   },
   [50296] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_MARWYN" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_MARWYN" },
   },
   [50297] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_MARWYN" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_MARWYN" },
   },
   [50298] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_MARWYN" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_MARWYN" },
   },
   [50299] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_MARWYN" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_MARWYN" },
   },
   [50300] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_MARWYN" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_MARWYN" },
   },
   [50302] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_THE_LICH_KING" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_THE_LICH_KING" },
   },
   [50303] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_THE_LICH_KING" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_THE_LICH_KING" },
   },
   [50304] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_THE_LICH_KING" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_THE_LICH_KING" },
   },
   [50305] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_THE_LICH_KING" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_THE_LICH_KING" },
   },
   [50306] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_THE_LICH_KING" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_THE_LICH_KING" },
   },
   [50308] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_THE_LICH_KING" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_THE_LICH_KING" },
   },
   [50309] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_THE_LICH_KING" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_THE_LICH_KING" },
   },
   [50310] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_THE_LICH_KING" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_THE_LICH_KING" },
   },
   [50311] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_THE_LICH_KING" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_THE_LICH_KING" },
   },
   [50312] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_THE_LICH_KING" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_THE_LICH_KING" },
   },
   [50313] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_THE_LICH_KING" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_THE_LICH_KING" },
   },
   [50314] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_THE_LICH_KING" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_THE_LICH_KING" },
   },
   [50315] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_TRASH_MOBS" },
-    { kind = "DROP", source = "PIT_OF_SARON_H_TRASH_MOBS" },
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_TRASH_MOBS" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_TRASH_MOBS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_TRASH_MOBS" },
   },
   [50316] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_BRONJAHM" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_BRONJAHM" },
     { kind = "DROP", source = "THE_FORGE_OF_SOULS_BRONJAHM" },
   },
   [50317] = {
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_BRONJAHM" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_BRONJAHM" },
     { kind = "DROP", source = "THE_FORGE_OF_SOULS_BRONJAHM" },
   },
   [50318] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_TRASH_MOBS" },
-    { kind = "DROP", source = "PIT_OF_SARON_H_TRASH_MOBS" },
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_TRASH_MOBS" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_TRASH_MOBS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_TRASH_MOBS" },
   },
   [50319] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_TRASH_MOBS" },
-    { kind = "DROP", source = "PIT_OF_SARON_H_TRASH_MOBS" },
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_TRASH_MOBS" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_TRASH_MOBS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_TRASH_MOBS" },
   },
   [50324] = {
     { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
@@ -22137,14 +22137,14 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "THE_ASHEN_VERDICT_FRIENDLY" },
   },
   [50379] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_TRASH_MOBS" },
-    { kind = "DROP", source = "PIT_OF_SARON_H_TRASH_MOBS" },
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_TRASH_MOBS" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_TRASH_MOBS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_TRASH_MOBS" },
   },
   [50380] = {
-    { kind = "DROP", source = "HALLS_OF_REFLECTION_H_TRASH_MOBS" },
-    { kind = "DROP", source = "PIT_OF_SARON_H_TRASH_MOBS" },
-    { kind = "DROP", source = "THE_FORGE_OF_SOULS_H_TRASH_MOBS" },
+    { kind = "DROP", source = "HALLS_OF_REFLECTION_HC_TRASH_MOBS" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_TRASH_MOBS" },
+    { kind = "DROP", source = "THE_FORGE_OF_SOULS_HC_TRASH_MOBS" },
   },
   [50384] = {
     { kind = "DROP", source = "THE_ASHEN_VERDICT_HONORED" },
@@ -22390,7 +22390,7 @@ BisTooltip_ItemAcquisition = {
   },
   [50624] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25HC_VALITHRIA_DREAMWALKER" },
-    { kind = "DROP", source = "PIT_OF_SARON_H_KRICK_AND_ICK" },
+    { kind = "DROP", source = "PIT_OF_SARON_HC_KRICK_AND_ICK" },
   },
   [50625] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25HC_VALITHRIA_DREAMWALKER" },

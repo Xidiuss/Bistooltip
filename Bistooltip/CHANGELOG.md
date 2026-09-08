@@ -1,5 +1,21 @@
 # BisTooltip Changelog
 
+## META-Z W1 (2026-09-08) — runtime cutover + difficulty vocabulary v2
+
+### Changes
+
+1. **Loot_Sources.lua no longer loads at runtime** (`Bistooltip.toc`)
+   - Zero runtime consumers; the file remains the offline migrator input
+2. **Single source of truth for vendor costs** (`SourceFormatter.lua`, `DataProvider.lua`)
+   - New pure `BisTooltip_GetVendorCost(itemID)`; `GetEmblemCost`/`HasEmblemSource`
+     read `ItemAcquisition` VENDOR entries instead of `EmblemData` tables
+3. **Difficulty labels v2** (visible in tooltips)
+   - 5-man heroics: `[H]` → `[HC]`; Ulduar hard modes: `<10HC>/<25HC>` → `<10HM>/<25HM>`
+   - Ulduar now exclusively 10N/25N/10HM/25HM; Vault of Archavon deferred to the
+     tier-backfill workstream (raw upstream keys are mangled)
+4. **Data regenerated** from the canonical Loot_Sources with vocabulary v2
+   (712 sources / 8820 acquisition entries; audits green, TROPHY prices locked)
+
 ## Version 2.2.2-3.3.5a (2026-04-17)
 
 ### Bug Fixes

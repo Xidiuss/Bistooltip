@@ -393,7 +393,7 @@ drafter'owe (małe, w tym samym addonie):
 |---|---|---|
 | W0 | ~~Gałąź META-Z, track baz, import dokumentów~~ + ~~usunięcie martwych plików~~ (rewizja) — **wykonane** | — |
 | W0a | Refresh danych z upstream (ExoJdi, 2026-06-09): 3 bislisty + Loot_Sources + `Bistooltip_faction.lua` — **import + ekstrakcja customów wykonane**; zostało: rerun census + rekonfirmacja STANDARD | — |
-| W1 | Cutover runtime: `.toc` clean (Loot_Sources out), `GetEmblemCost` → shim nad ItemAcquisition; słownik trudności v2 (migrator+audyt+goldens, regeneracja danych ze ŚWIEŻEGO Loot_Sources) | W0a |
+| W1 | Cutover runtime: `.toc` clean (Loot_Sources out), `GetEmblemCost` → shim nad ItemAcquisition; słownik trudności v2 (migrator+audyt+goldens, regeneracja danych z kanonicznego Loot_Sources forka — wariant upstream to 9-strefowy subset, patrz korekta w census) | — |
 | W2 | Backfill tierów (VOA, TOKEN/MARK per-boss) + walidacja oracle + audyt cross-DB coverage (każdy ID z każdej bazy ma akwizycję albo allowlista) | W1 |
 | W3 | FormatSourceColored + paleta + wpięcie tooltip/checklist | W1 |
 | W4 | DB registry + options + overlay replay (S3-5) + `SetBiSSlotRank` (S3-6); migracja do `db.global` (`data_source` + `custom_priorities` — warstwa §12); wowsims = alias (alliance) / alias+podmiana overrides (horda); W4a: `tools/assemble_wowsims.lua` (port algorytmu upstream) + wygenerowanie `Bistooltip_wowsims_final.lua` (baza alliance + overrides hordy, raport zróżnicowania) | — |

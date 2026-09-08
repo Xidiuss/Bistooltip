@@ -82,9 +82,10 @@ local function has(instance, boss, difficulty)
 end
 assert(has("Icecrown Citadel", "Lord Marrowgar", "25HC"), "missing ICC 25HC Marrowgar")
 assert(has("Naxxramas", "Kel'Thuzad", "10N"), "missing Naxx 10N Kel'Thuzad")
-assert(has("Trial of the Champion", "The Black Knight", "H"), "missing ToC5 heroic identity")
-assert(has("Ahn'kahet: The Old Kingdom", "Prince Taldaram", "H"), "missing Ahn'kahet H Prince Taldaram")
-assert(has("Azjol-Nerub", "Anub'arak", "H"), "missing Azjol-Nerub H Anub'arak")
+assert(has("Ulduar", "Algalon", "10HM"), "missing Ulduar 10HM Algalon (vocab v2)")
+assert(has("Trial of the Champion", "The Black Knight", "HC"), "missing ToC5 heroic identity")
+assert(has("Ahn'kahet: The Old Kingdom", "Prince Taldaram", "HC"), "missing Ahn'kahet HC Prince Taldaram")
+assert(has("Azjol-Nerub", "Anub'arak", "HC"), "missing Azjol-Nerub HC Anub'arak")
 assert(has("World Drops", "Level 80", ""), "missing World Drops identity")
 -- TROPHY shape: display-only variant of VENDOR T9 with trophy+currency cost
 local nTrophy = 0
@@ -119,7 +120,7 @@ local RESERVED = {
   ["ALLIANCE_VANGUARD_FRIENDLY"] = true,
   ["ALLIANCE_VANGUARD_HONORED"] = true,
   ["ARGENT_CRUSADE_FRIENDLY"] = true,
-  ["AZJOL_NERUB_H_TRASH_MOBS"] = true,
+  ["AZJOL_NERUB_HC_TRASH_MOBS"] = true,
   ["GUNDRAK_ECK"] = true,
   ["KIRIN_TOR_FRIENDLY"] = true,
   ["KNIGHTS_OF_THE_EBON_BLADE_FRIENDLY"] = true,
@@ -131,16 +132,16 @@ local RESERVED = {
   ["THE_ORACLES_HONORED"] = true,
   ["THE_SONS_OF_HODIR_FRIENDLY"] = true,
   ["THE_WYRMREST_ACCORD_FRIENDLY"] = true,
-  ["ULDUAR_10HC_ALGALON"] = true,
-  ["ULDUAR_10HC_AURIAYA"] = true,
-  ["ULDUAR_10HC_IGNIS"] = true,
-  ["ULDUAR_10HC_KOLOGARN"] = true,
-  ["ULDUAR_10HC_RAZORSCALE"] = true,
-  ["ULDUAR_25HC_ALGALON"] = true,
-  ["ULDUAR_25HC_AURIAYA"] = true,
-  ["ULDUAR_25HC_IGNIS"] = true,
-  ["ULDUAR_25HC_KOLOGARN"] = true,
-  ["ULDUAR_25HC_RAZORSCALE"] = true,
+  ["ULDUAR_10HM_ALGALON"] = true,
+  ["ULDUAR_10HM_AURIAYA"] = true,
+  ["ULDUAR_10HM_IGNIS"] = true,
+  ["ULDUAR_10HM_KOLOGARN"] = true,
+  ["ULDUAR_10HM_RAZORSCALE"] = true,
+  ["ULDUAR_25HM_ALGALON"] = true,
+  ["ULDUAR_25HM_AURIAYA"] = true,
+  ["ULDUAR_25HM_IGNIS"] = true,
+  ["ULDUAR_25HM_KOLOGARN"] = true,
+  ["ULDUAR_25HM_RAZORSCALE"] = true,
   ["WINTERFINRETREAT_EXALTED"] = true,
   ["WINTERFINRETREAT_HONORED"] = true,
   ["WINTERFINRETREAT_REVERED"] = true,
