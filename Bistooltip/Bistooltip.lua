@@ -444,6 +444,10 @@ local function GetAllItemSources(itemId)
     if type(entries) ~= "table" then return lines end
     local fmt = BisTooltip_FormatSource
     if type(fmt) ~= "function" then return lines end
+    -- W3: colored rendering (identical structure); dedup stays on the
+    -- PLAIN line so color never participates in identity.
+    local fmtC = BisTooltip_FormatSourceColored
+    local useColor = type(fmtC) == "function"
 
     -- Multi-source items keep every line; dedup ONLY byte-identical
     -- rendered lines (Saurfang vs Putricide stay separate).
@@ -452,7 +456,12 @@ local function GetAllItemSources(itemId)
         local line = fmt(e)
         if line and not seen[line] then
             seen[line] = true
-            table.insert(lines, line)
+            local out = line
+            if useColor then
+                local colored = fmtC(e)
+                if colored then out = colored end
+            end
+            table.insert(lines, out)
         end
     end
 
@@ -852,7 +861,7 @@ local function OnGameTooltipSetItem(tooltip)
             tooltip:AddLine(" ", 1, 1, 0)
             tooltip:AddLine("|cFFFFFFFFSource:|r", 1, 1, 1)
             for _, line in ipairs(sourceLines) do
-                tooltip:AddLine("  |cFF00FF00" .. line .. "|r", 1, 1, 1)
+                tooltip:AddLine("  " .. line, 1, 1, 1)
             end
             tooltip:AddLine(" ", 1, 1, 0)
         end

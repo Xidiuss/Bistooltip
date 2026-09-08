@@ -1,5 +1,20 @@
 # BisTooltip Changelog
 
+## META-Z W3 (2026-09-08) — colored source rendering
+
+### Changes
+
+1. **Colored source lines** (spec S2-4; colors on by default, Q9)
+   - New pure `BisTooltip_FormatSourceColored(entry)` — identical MASTER
+     structure with per-part colors; plain `FormatSource` stays canonical
+     (tests, dedup, logs; identity never includes color)
+   - Palette (single table `BisTooltip_SourcePalette`, aliased as
+     `Constants.COLORS.SOURCE`): instance gold, boss/family white,
+     tier+method blue, currency teal, N gray / HC red / HM orange
+   - Tooltip source lines no longer uniformly green; checklist cards use
+     the palette (boss white, difficulty per N/HC/HM, currency teal)
+2. Golden tests extended: 7 colored cases on top of 10 plain + 5 cost cases
+
 ## META-Z W2 wave 1 (2026-09-08) — tier backfill: VOA + T10 MARK + quest rule
 
 ### Changes

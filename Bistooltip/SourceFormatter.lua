@@ -1,33 +1,75 @@
 -- Bistooltip/SourceFormatter.lua (pure; no WoW API; warn-once via local flag table)
 local warned = {}
-function BisTooltip_FormatSource(entry)
+
+-- Default source palette (spec S2-4; Q9: colors on by default).
+-- "RRGGBB" hex; the colored renderer wraps fragments as |cFF<hex>…|r.
+-- Constants.lua aliases this table as COLORS.SOURCE for the UI layers;
+-- future options wiring can swap fields without touching the builder.
+BisTooltip_SourcePalette = {
+  instance = "FFD100", -- gold    — instance names
+  boss     = "FFFFFF", -- white   — boss names
+  family   = "FFFFFF", -- white   — token families / custom labels
+  method   = "00CCFF", -- blue    — tier + TOKEN/MARK/VENDOR/TROPHY
+  currency = "00FFCC", -- teal    — costs/currencies (legacy emblem color)
+  diffN    = "9D9D9D", -- gray    — …N difficulties
+  diffHC   = "FF4040", -- red     — …HC difficulties
+  diffHM   = "FF9900", -- orange  — …HM difficulties
+}
+
+local function diffColor(d)
+  if d and d ~= "" then
+    if d:find("HM", 1, true) then return BisTooltip_SourcePalette.diffHM end
+    if d:find("HC", 1, true) then return BisTooltip_SourcePalette.diffHC end
+    return BisTooltip_SourcePalette.diffN
+  end
+  return nil
+end
+
+-- Shared MASTER builder (spec S2/S2-4): ONE place assembles every string;
+-- plain mode returns fragments verbatim (golden-locked), colored mode wraps
+-- them per palette. Identity/dedup always uses the PLAIN rendering.
+local function render(entry, colored)
   if type(entry) ~= "table" or not entry.kind then return nil end
+  local P = BisTooltip_SourcePalette
+  local function seg(hex, text)
+    if colored and hex then return "|cFF" .. hex .. text .. "|r" end
+    return text
+  end
   if entry.kind == "CUSTOM" then
-    if type(entry.label) == "string" and entry.label ~= "" then return entry.label end
+    if type(entry.label) == "string" and entry.label ~= "" then
+      return seg(P.family, entry.label)
+    end
     return nil
   end
-  local reg = BisTooltip_SourceRegistry or {}
   local function costText(cost)
     local parts = {}
     for _, c in ipairs(cost or {}) do
-      if c.currency then table.insert(parts, c.amount .. " " .. c.currency) end
+      if c.currency then
+        parts[#parts + 1] = seg(P.currency, c.amount .. " " .. c.currency)
+      end
     end
     return table.concat(parts, " + ")
   end
   if entry.kind == "VENDOR" then
-    if entry.displayVariant == "TROPHY" then return (entry.tier or "T9") .. " - TROPHY: Crusade + " .. costText(entry.cost) end
-    return (entry.tier or "") .. (entry.tier and " - " or "") .. "VENDOR: " .. costText(entry.cost)
+    if entry.displayVariant == "TROPHY" then
+      return seg(P.method, (entry.tier or "T9") .. " - TROPHY: ")
+        .. seg(P.currency, "Crusade + ") .. costText(entry.cost)
+    end
+    local prefix = (entry.tier or "") .. (entry.tier and " - " or "") .. "VENDOR: "
+    return seg(P.method, prefix) .. costText(entry.cost)
   end
-  local s = entry.source and reg[entry.source] or nil
+  local s = entry.source and (BisTooltip_SourceRegistry or {})[entry.source] or nil
   if not s then
     if entry.source and not warned[entry.source] then warned[entry.source] = true end
     return nil
   end
   if entry.kind == "DROP" then
     if s.difficulty and s.difficulty ~= "" then
-      return s.instance .. " [" .. s.difficulty .. "] - " .. s.boss
+      return seg(P.instance, s.instance) .. " "
+        .. seg(diffColor(s.difficulty), "[" .. s.difficulty .. "]") .. " - "
+        .. seg(P.boss, s.boss)
     end
-    return s.instance .. " - " .. s.boss
+    return seg(P.instance, s.instance) .. " - " .. seg(P.boss, s.boss)
   end
   if entry.kind == "TOKEN" or entry.kind == "MARK" then
     -- S2: never Lua-error in tooltip; malformed entries render as nothing.
@@ -36,10 +78,21 @@ function BisTooltip_FormatSource(entry)
       or type(s.difficulty) ~= "string" then
       return nil
     end
-    return entry.tier .. " - " .. entry.kind .. ": " .. entry.family
-      .. " [" .. s.instance .. ": " .. s.boss .. " <" .. s.difficulty .. ">]"
+    return seg(P.method, entry.tier .. " - " .. entry.kind .. ": ")
+      .. seg(P.family, entry.family) .. " "
+      .. seg(P.instance, "[" .. s.instance .. ": ")
+      .. seg(P.boss, s.boss .. " ")
+      .. seg(diffColor(s.difficulty), "<" .. s.difficulty .. ">]")
   end
   return nil
+end
+
+function BisTooltip_FormatSource(entry)
+  return render(entry, false)
+end
+
+function BisTooltip_FormatSourceColored(entry)
+  return render(entry, true)
 end
 
 -- Single source of truth for vendor costs (W1): returns the amount and

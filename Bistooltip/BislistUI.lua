@@ -1601,12 +1601,20 @@ local function CreateBossItemInfoFrame(slot)
     
     local bossText
     if bossName then
-        bossText = "|cffc41f3b" .. Utils.TruncateText(bossName, 18) .. "|r"
+        -- W3: palette-driven source colors (single palette, spec S2-4)
+        local P = Constants.COLORS.SOURCE or BisTooltip_SourcePalette or {}
+        local dc = P.diffN or "9d9d9d"
         if difficulty then
-            bossText = bossText .. " |cffaaaaaa(" .. difficulty .. ")|r"
+            if difficulty:find("HM", 1, true) then dc = P.diffHM or "ff9900"
+            elseif difficulty:find("HC", 1, true) then dc = P.diffHC or "ff4040" end
+        end
+        bossText = "|cff" .. (P.boss or "ffffff") .. Utils.TruncateText(bossName, 18) .. "|r"
+        if difficulty then
+            bossText = bossText .. " |cff" .. dc .. "(" .. difficulty .. ")|r"
         end
     elseif emblemInfo then
-        local color = Constants.COLORS.ASCENSION or "00ffcc"
+        local P = Constants.COLORS.SOURCE or BisTooltip_SourcePalette or {}
+        local color = P.currency or Constants.COLORS.ASCENSION or "00ffcc"
         bossText = "|cff" .. color .. (emblemInfo.currency or "Emblem") .. " x" .. (emblemInfo.cost or "?") .. "|r"
     else
         bossText = "|cff666666Unknown Source|r"

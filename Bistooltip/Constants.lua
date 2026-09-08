@@ -85,6 +85,10 @@ BistooltipConstants.COLORS = {
     NO_BIS = "ff3b3b",      -- Red
     FOUND = "ffff00",       -- Yellow
 
+    -- W3: source palette (alias of BisTooltip_SourcePalette defined in
+    -- SourceFormatter.lua, which loads earlier; one table, one truth)
+    SOURCE = BisTooltip_SourcePalette,
+
     -- UI colors
     HEADER = "ffd100",      -- Gold
     SUBHEADER = "ffffff",   -- White

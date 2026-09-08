@@ -55,3 +55,27 @@ for i, c in ipairs(vcases) do
     .. ", want " .. tostring(c[2]) .. "," .. tostring(c[3]))
 end
 print("vendorcost: OK (" .. #vcases .. " cases)")
+
+-- W3: colored variant — identical MASTER structure, parts wrapped in |c…|r.
+-- Palette defaults: instance FFD100, boss/family FFFFFF, method 00CCFF,
+-- currency 00FFCC, diffN 9D9D9D, diffHC FF4040, diffHM FF9900.
+local ccases = {
+  { { kind = "DROP", source = "VEZAX" },
+    "|cFFFFD100Ulduar|r |cFF9D9D9D[25N]|r - |cFFFFFFFFGeneral Vezax|r" },
+  { { kind = "DROP", source = "AKN" },
+    "|cFFFFD100Ahn'kahet: The Old Kingdom|r |cFFFF4040[HC]|r - |cFFFFFFFFPrince Taldaram|r" },
+  { { kind = "TOKEN", tier = "T8", family = "Wayward Protector", source = "HODIR_HM" },
+    "|cFF00CCFFT8 - TOKEN: |r|cFFFFFFFFWayward Protector|r |cFFFFD100[Ulduar: |r|cFFFFFFFFHodir |r|cFFFF9900<25HM>]|r" },
+  { { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
+    "|cFF00CCFFT9 - VENDOR: |r|cFF00FFCC50 Emblem of Triumph|r" },
+  { { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY",
+      cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
+    "|cFF00CCFFT9 - TROPHY: |r|cFF00FFCCCrusade + |r|cFF00FFCC75 Emblem of Triumph|r" },
+  { { kind = "CUSTOM", label = "VIP Shop" }, "|cFFFFFFFFVIP Shop|r" },
+  { { kind = "DROP", source = "NOPE" }, nil },
+}
+for i, c in ipairs(ccases) do
+  local got = BisTooltip_FormatSourceColored(c[1])
+  assert(got == c[2], "colored case " .. i .. ":\n  got  " .. tostring(got) .. "\n  want " .. tostring(c[2]))
+end
+print("colored: OK (" .. #ccases .. " cases)")
