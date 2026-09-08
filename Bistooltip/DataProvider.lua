@@ -491,10 +491,10 @@ function BistooltipData.FilterSlots(slots, searchText, showOnlyMissing, vendorFi
         -- Check if slot matches search filter
         local matches = BistooltipData.SlotMatchesFilter(slot, searchLower, isHorde)
 
-        -- Check if slot passes emblem filter (Ascension mode)
+        -- Check if slot passes the vendor filter (VENDOR mode; true when off)
         local hasVendor = BistooltipData.SlotHasVendorSource(slot, vendorFilterMode, isHorde)
 
-        if matches and hasAscension then
+        if matches and hasVendor then
             -- In BIS mode, split Finger and Trinket into separate rows
             if bisMode and slot.slot_name == "Finger" then
                 -- Create Ring 1 (item [1]) and Ring 2 (item [2])

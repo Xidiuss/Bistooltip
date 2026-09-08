@@ -4003,7 +4003,7 @@ drawSpecData = function()
             customContentFrame._emptyLabel:SetWidth((Constants.UI.MAIN_FRAME_WIDTH or 600) - 4 - 24 - 40)
             customContentFrame._emptyLabel:SetJustifyH("CENTER")
         end
-        customContentFrame._emptyLabel:SetText("|cffff8800ASCEND Mode Active|r\n\n|cffaaaaaaNo items in this spec/phase are purchasable with Emblem of Ascension.\n\nTry a different spec or phase.|r")
+        customContentFrame._emptyLabel:SetText("|cffff8800VENDOR Mode Active|r\n\n|cffaaaaaaNo items in this spec/phase are vendor-purchasable.\n\nTry a different spec or phase.|r")
         customContentFrame._emptyLabel:Show()
         customContentFrame:SetHeight(150)
         isDrawing = false
