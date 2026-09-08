@@ -1,6 +1,9 @@
 -- Whitemane:Frostmourne custom content extracted from fork data (2026-09-08)
 -- BEFORE upstream refresh. Source for the Bistooltip_Whitemane_Frostmourne
--- plugin diff (spec W6). Custom IDs: 128858, 130023, 130031, 131004, 150005.
+-- plugin diff (spec W6). Custom IDs: 128858, 130023, 130031, 131004, 150005 —
+-- LEGENDARY items of Whitemane Frostmourne (owner note 2026-09-08).
+-- Costs in custom emblems per EmblemData; final acquisition method
+-- (vendor/drop/quest) to be confirmed by scanner on the server.
 -- A) wowtbc bislists: slots containing custom IDs (self-describing lines):
 
 Bistooltip_wowtbc_bislists["Druid"]["Balance"]["T7"][13] = { ["slot_name"] = "Weapon", ["enhs"] = { [1] = { ["type"] = "spell", ["id"] = 60714 } }, [1] = 130023, [2] = 40395, [3] = 40489, [4] = 40408, [5] = 39424, [6] = 39763}

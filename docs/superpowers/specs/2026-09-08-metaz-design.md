@@ -325,7 +325,11 @@ bezpieczniejszy dla narzędzi, Title: „Bistooltip — Whitemane: Frostmourne")
    Emblem of Ascension (incl. 130023, 130031; literówka `15000` poprawiona
    na `150005` — Q2), Emblem of Ascension II (Ulduar-HM loot 19–150 +
    131004 „Domhammer", 128858 „Scythe of the Cat God"), Echo of the Titans
-   (131010 =2, 131008 =1 itd.).
+   (131010 =2, 131008 =1 itd.). Uwaga właściciela (2026-09-08): 5 ID
+   rank-1 (128858, 130023, 130031, 131004, 150005) to **przedmioty
+   legendarne** Frostmourne — stąd ich dominacja na rank-1 slotów
+   Weapon/Ranged; koszty w customowych emblematach wg EmblemData, ostateczna
+   metoda zdobycia (vendor/drop/quest) potwierdzi skaner na serwerze.
 3. `SetBiSSlotRank` dla 27 nadpisań rank-1 z bazy wowtbc (5 ID customowych)
    — postać diffu: „rank 1 slotu = custom ID", **bez pieczonych list**
    (rewizja W5): działa na każdej bazie i survivaluje update core.
