@@ -1,12 +1,14 @@
 # META-Z — Meta-BisTooltip system design
 
-Status: **DRAFT v2** — oczekuje na review właściciela przed planem implementacji.
+Status: **DRAFT v2.1** — decyzje właściciela Q1–Q16 (2026-09-08) wdrożone;
+oczekuje na plan implementacji.
 Data: 2026-09-08. Gałąź: `META-Z` (utworzona z `feat/meta-bistooltip-data`,
 pełna historia). Klasyfikacja: architectural.
 Relacja: rozszerza **frozen** `2026-09-07-metabistooltip-data-design.md`
-(S1–S4, wdrożone) o poprawki S2-3, S2-4, S2-5, S3-5, S3-6, S4-5; importuje
-frozen `2026-09-08-vendor-scanner-design.md` + jej plan. v2 wynika z rewizji
-etapu przebudowy: `2026-09-08-metaz-stage-review.md` (dowody tam).
+(S1–S4, wdrożone) o poprawki S2-3, S2-4, S2-5, S3-5, S3-6, S3-7, S4-5;
+importuje frozen `2026-09-08-vendor-scanner-design.md` + jej plan. v2 wynika
+z rewizji etapu przebudowy: `2026-09-08-metaz-stage-review.md` (dowody tam).
+v2.1: decyzje Q&A + warstwa Personal BiS (§12).
 
 ## 0. Cel
 
@@ -61,18 +63,19 @@ Stan wejściowy na `feat/meta-bistooltip-data` (zmierzony, nie zgadywany):
 
 ```text
 ┌─ Bistooltip (CORE, czysty WotLK 3.3.5a) ─────────────────────────────┐
-│ BIS DB registry: wowsims (STANDARD, default) | wh | wowtbc           │
+│ BIS DB registry: wowsims (STANDARD, default) | wowtbc | wh           │
 │ SourceRegistry + ItemAcquisition (+ VOA, TOKEN/MARK per-boss)        │
 │ SourceFormatter: FormatSource (plain, kanoniczny)                    │
 │                  FormatSourceColored (ta sama struktura + paleta)    │
-│ PluginAPI (5 f-cji) + overlay replay przy zmianie bazy               │
+│ PluginAPI (6 f-cji) + overlay replay przy zmianie bazy               │
+│ Personal BiS overrides (db.global, kaskada: baza→plugin→personal)    │
 │ Tryb VENDOR (ex-ASCEND) na ItemAcquisition                          │
 ├─ Wtyczki serwerowe (## Dependencies: Bistooltip) ───────────────────┤
-│ Bistooltip_Whitemane (Frostmourne): waluty, itemy, koszty, BiS diff  │
+│ Bistooltip_Whitemane_Frostmourne: waluty, itemy, koszty, BiS diff    │
 │ …dowolne kolejne (Bistooltip_<Serwer>)…                              │
 ├─ Narzędzia ──────────────────────────────────────────────────────────┤
 │ Bistooltip_Scanner (standalone, OptionalDeps): vendor scan /bis scan │
-│ tools/ offline: migrator, backfill tierów, audytor, run_all          │
+│ tools/ offline: migrator, backfill tierów, audytor, run_all + CI     │
 └───────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -92,7 +95,7 @@ Bistooltip/                        # core
   Bistooltip_wh_bislists.lua       # baza wybieralna — dołączyć do .toc
   Bistooltip_wowtbc_bislists.lua   # baza wybieralna, OCZYSZCZONA z custom ID
   SourceRegistry.lua / ItemAcquisition.lua / SourceFormatter.lua / PluginAPI.lua
-Bistooltip_Whitemane/              # wtyczka serwera (2 pliki: toc + Plugin.lua)
+Bistooltip_Whitemane_Frostmourne/  # wtyczka serwera (toc + Plugin.lua)
 Bistooltip_Scanner/                # per frozen scanner-design (toc + 2 lua)
 tools/                             # + backfill_tiers.lua, run_all
 ```
@@ -108,6 +111,10 @@ Closed set rośnie z 6 do 8 wartości:
 - Heroiki 5-man: `H` → `HC` (żądanie właściciela; dziś 77 źródeł `H`).
 - Ulduar hard-mody: `10HC/25HC` → `10HM/25HM`; Algalon (hard-only) = `HM`.
   ICC/TOGC/RS zostają przy `HC` (taka jest natywna nomenklatura WotLK).
+  Potwierdzone (Q10): Ulduar przyjmuje **wyłącznie** 10N/25N/10HM/25HM —
+  zero wartości HC. Uwaga serwerowa: Whitemane Frostmourne ma własne tryby
+  HC/HM (prawdopodobnie bez dodatkowego dropu) — do weryfikacji skanerem
+  na serwerze (§7 pkt 5).
 - Implementacja w `tools/migrate_sources.lua` (mapa `ZONE_DIFFICULTY` +
   tabela wyjątków Ulduar), closed set w `tools/check_sources.lua`,
   golden cases w `tools/test_formatter.lua`. Formatter się nie zmienia —
@@ -137,7 +144,8 @@ waluta/koszt     #00FFCC (turkus — spójnie z dzisiejszym kolorem emblematów)
   źródeł zamiast jednolitej zieleni), karty checklisty (`BislistUI.lua`
   1581–1615), nagłówki grup (`ui/InstanceHeader.lua`). Dedup i porównania
   zawsze na stringu **plain** (kolor nigdy nie uczestniczy w tożsamości).
-- Konfigurowalność palety w options: poza MVP (decyzja: najpierw domyślne).
+- Konfigurowalność palety w options: poza MVP (Q9: kolorowanie domyślnie
+  włączone, paleta doborzona pod czytelność na ciemnym tle tooltipu).
 
 ## 3a. Poprawka S2-5 (draft): dane w formatterze i jednostki kosztu
 
@@ -161,18 +169,17 @@ Rozwiązanie (bez cache-frameworka — to log operacji, nie cache):
 
 ```lua
 BisTooltip_DBRegistry = {
-  wowsims = { label = "WoWSims (STANDARD)", bis = Bistooltip_wowsims_bislists,
-              classes = …, phases = …, factionTables = true },
-  wh      = { label = "wh (reference)" },      -- etykieta: patrz pytania
-  wowtbc  = { label = "wowtbc.gg (reference)" },
+  wowsims = { label = "WoWSimsBP (STANDARD)", bis = Bistooltip_wowsims_bislists,
+              classes = …, phases = … },
+  wowtbc  = { label = "wowtbc.gg" },   -- pełnoprawna 3. baza wybieralna (Q6)
+  wh      = { label = "Whitemane (wh)" },
 }
 ```
 
   `EnableSpec(dbKey)` aliasuje `Bistooltip_bislists/classes/phases` z
-  wybranego wpisu (woWSims: rozstrzygnięcie slotów frakcyjnych przez
-  `Bistooltip_bislists_alliance/_horde` wg frakcji gracza — mechanika jak
-  dziś, uogólniona). Dropdown `db.char.data_source` z 3 pozycjami, default
-  `wowsims` (kwestia domyślnej bazy: patrz pytania).
+  wybranego wpisu. Dropdown `db.global.data_source` (Q16: account-wide,
+  z migracją z `db.char`) z 3 pozycjami, default `wowsims` (Q5).
+  Tabele frakcyjne nie uczestniczą — usunięte przy regeneracji (Q14, W4a).
 - `PluginAPI.lua`: każda udana mutacja (`DefineSource`, `SetAcquisition`,
   `AddAcquisition`, `SetBiSSlot`, `SetBiSSlotRank`, `SetEnhancement`) jest
   zapisywana do wewnętrznego logu overlay `{fn, deep-copy(args), plugin}`.
@@ -244,25 +251,28 @@ AtlasLoot + wiedza domenowa; wyjście: dopisek do `SourceRegistry.lua` /
   "VENDOR", komunikaty, sorty/grupowanie w `BuildChecklistGroups`,
   `ui/InstanceHeader.lua`); migracja starego klucza SavedVariables.
 - Zmiana **semantyki**: kwalifikacja itemu przez `ItemAcquisition`
-  (`kind=="VENDOR"`; o CUSTOM/Gold — patrz pytania), nie przez substring
-  po `EmblemData`. Grupowanie po walucie z `cost[]` (label grupy:
-  `<Currency> (N)`), sort po koszcie malejąco.
+  (`kind ∈ {VENDOR, CUSTOM}` — Q8; itemy za gold wchodzą, bo są kind=VENDOR),
+  nie przez substring po `EmblemData`. Grupowanie po walucie z `cost[]`
+  (label grupy: `<Currency> (N)`), sort po koszcie malejąco.
 - Efekt: tryb działa identycznie na czystym WotLK (Emblem of Triumph/Frost)
   i na serwerach custom — waluty wtyczki pojawiają się same, bo są danymi.
 - `SlotHasAscensionSource`/substring "Ascension" — usunięte.
 
 ## 7. Wtyczka Bistooltip_Whitemane (Frostmourne)
 
-Folder `Bistooltip_Whitemane/` (nazwa folderu bez dwukropka — patrz pytania),
+Folder `Bistooltip_Whitemane_Frostmourne/` (Q1 — nazwa z odpowiedzi
+„Bistooltip_Whitemane Frostmourne"; podkreślnik zamiast spacji jest
+bezpieczniejszy dla narzędzi, Title: „Bistooltip — Whitemane: Frostmourne"),
 `## Dependencies: Bistooltip`, `Plugin.lua` woła wyłącznie API S3:
 
 1. `DefineSource` dla vendorów customowych (label np. "Emblem Vendor —
    Dalaran"; finalne label do potwierdzenia / zebrane skanerem).
 2. `SetAcquisition` dla itemów customowych z kosztami w customowych
    walutach — treść przeniesiona z `EmblemData.lua`:
-   Emblem of Ascension (incl. 130023, 130031, 15000?), Emblem of Ascension II
-   (Ulduar-HM loot 19–150 + 131004 „Domhammer", 128858 „Scythe of the Cat
-   God"), Echo of the Titans (131010 =2, 131008 =1 itd.).
+   Emblem of Ascension (incl. 130023, 130031; literówka `15000` poprawiona
+   na `150005` — Q2), Emblem of Ascension II (Ulduar-HM loot 19–150 +
+   131004 „Domhammer", 128858 „Scythe of the Cat God"), Echo of the Titans
+   (131010 =2, 131008 =1 itd.).
 3. `SetBiSSlotRank` dla 27 nadpisań rank-1 z bazy wowtbc (5 ID customowych)
    — postać diffu: „rank 1 slotu = custom ID", **bez pieczonych list**
    (rewizja W5): działa na każdej bazie i survivaluje update core.
@@ -270,6 +280,10 @@ Folder `Bistooltip_Whitemane/` (nazwa folderu bez dwukropka — patrz pytania),
    brak slotu/ranku w innej bazie = warn-once + skip.
 4. Miejsce na przyszłe custom enchants (`SetEnhancement`) i kolejne itemy
    zebrane skanerem.
+5. Weryfikacje serwerowe (Q10/Q12): tryby HC/HM Whitemane — sprawdzić,
+   czy nie dodają dropu (jeśli dodają: nowe source przez DefineSource +
+   SetAcquisition); system walut cata-like (valor/justice) — przeskanować
+   NPC skanerem, wpisy kosztów w standardowym formacie `cost[]`.
 
 Równolegle **czyszczenie core**: `EmblemData.lua` traci tabele
 Ascension/Echo (zostają wyłącznie standardowe emblemy WotLK), baza `wowtbc`
@@ -313,73 +327,113 @@ drafter'owe (małe, w tym samym addonie):
 | W1 | Cutover runtime: `.toc` clean (Loot_Sources out), `GetEmblemCost` → shim nad ItemAcquisition; słownik trudności v2 (migrator+audyt+goldens, regeneracja danych) | — |
 | W2 | Backfill tierów (VOA, TOKEN/MARK per-boss) + walidacja oracle + audyt cross-DB coverage (każdy ID z każdej bazy ma akwizycję albo allowlista) | W1 |
 | W3 | FormatSourceColored + paleta + wpięcie tooltip/checklist | W1 |
-| W4 | DB registry + options (scope klucza: Q16) + overlay replay (S3-5) + `SetBiSSlotRank` (S3-6); W4a: regeneracja pliku wowsims (frakcyjne tabele wg Q14, duplikat phases) | — |
-| W5 | Tryb VENDOR (rename + semantyka ItemAcquisition) | W1 |
-| W6 | Wtyczka Whitemane (SetBiSSlotRank diffy) + czyszczenie EmblemData/wowtbc | W4, W5 |
+| W4 | DB registry + options + overlay replay (S3-5) + `SetBiSSlotRank` (S3-6); migracja do `db.global` (`data_source` + `custom_priorities` — warstwa §12); W4a: regeneracja pliku wowsims BEZ tabel frakcyjnych (Q14) i bez duplikatu phases | — |
+| W5 | Tryb VENDOR (rename + semantyka ItemAcquisition, kind VENDOR+CUSTOM) | W1 |
+| W6 | Wtyczka `Bistooltip_Whitemane_Frostmourne` (diffy SetBiSSlotRank, poprawka 150005, waluty cata-like po skanie) + czyszczenie EmblemData/wowtbc + usunięcie root `_some custom items.lua` PO ekstrakcji (Q4) | W4, W5 |
 | W7 | Bistooltip_Scanner (frozen plan) + `/bis item` + jednostka gold | — |
-| W8 | `tools/run_all` + propozycja CI (Q15) + pełny audyt + manual in-game | W1–W7 |
+| W8 | `tools/run_all` + CI GitHub Actions (Q15: TAK) + pełny audyt + manual in-game | W1–W7 |
 
 Każdy workstream dostaje własny implementation plan (workflow superpowers:
 design → review → plan → implement). W0 (gałąź META-Z, track baz, import
 dokumentów) wykonane przy tworzeniu tego speca.
 
-## 11. Pytania otwarte (do właściciela)
+## 11. Decyzje właściciela (Q1–Q16, 2026-09-08) — zamknięte
 
-1. Nazwa folderu wtyczki: dwukropek w „Whitemane:Frostmourne" jest
-   nielegalny w nazwie folderu Windows — propose `Bistooltip_Whitemane`,
-   Title „Bistooltip — Whitemane: Frostmourne". OK?
-2. Wolne ID `[15000] = 80` w EmblemData — wygląda na literówkę (150005
-   występuje w bislistach, ale nie ma go w EmblemData). Usunąć, poprawić
-   na 150005, czy przenieść 1:1?
-3. Czy 27 nadpisań rank-1 w wowtbc (w tym 150005) to w całości content
-   Frostmourne i wszystkie trafiają do wtyczki?
-4. Plik root `Bistooltip_wowtbc_bislists _some custom items.lua` (829 KB,
-   wariant nadpisujący bazę) — usunąć po ekstrakcji diffów?
-5. Domyślna baza w options: WoWSimsBP (rekomendacja census) czy obecny
-   runtime wowtbc aż do audytu in-game?
-6. Etykieta bazy `wh` w dropdownie („Wowhead WotLK"?) i czy wowtbc
-   (oczyszczony) ma być pełnoprawną 3. bazą wybieralną, czy tylko legacy?
-7. Waluty custom (Emblem of Ascension / II, Echo of the Titans): z jakich
-   vendorów/lokacji pochodzą (potrzebne do `label` w DefineSource)? Czy
-   zbierzesz to skanerem w grze, czy podasz nazwy teraz?
-8. Tryb VENDOR: pokazywać wyłącznie `kind="VENDOR"`, czy również
-   `kind="CUSTOM"` (sklepy donate) i itemy za gold (`currency="Gold"`)?
-9. Paleta kolorów (propozycja w §3): zatwierdzić/zmienić? Kolorowanie
-   domyślnie włączone czy przełącznikiem w options?
-10. Algalon (hard-only boss Ulduaru): oznaczyć jako `10HM/25HM`
-    (propozycja) czy trzymać HC?
-11. T7: tokeny 10N („Heroes'") i 25N („Valorous…") jako osobne source bez
-    dedup — a etykieta tieru zostaje jednolita `T7` (propozycja), czy
-    rozróżniać `T7.10/T7.25`?
-12. „Punkty valor/justice jak cata": czy konkretny serwer docelowy ma już
-    taki system walut do wsparcia w formacie kosztów, czy to tylko przykład
-    przyszłościowej wtyczki?
-13. Priorytet workstreamów: proponowana kolejność W1→W8 (najpierw dane,
-    potem render/kolory) — zgodna z Twoimi oczekiwaniami?
-14. Tabele frakcyjne WoWSimsBP (`Bistooltip_bislists_alliance/_horde`,
-    ~połowa pliku, 0 konsumentów w kodzie): usunąć z pliku shippingowego
-    przy regeneracji (rekomendacja rewizji W4), czy przewidujesz dla nich
-    realny użytek (np. frakcyjne BiS w UI)?
-15. CI: czy dodać GitHub Actions (luac -p + wszystkie suity lua5.1 na
-    push/PR) jako bramkę dla regenerowanych danych? (rewizja W8)
-16. Zasięg wyboru bazy: `db.char.data_source` jest per-postać — przełączyć
-    na profil (db.profile) przy W4? (rewizja W11)
+| Q | Decyzja |
+|---|---|
+| 1 | Folder wtyczki: `Bistooltip_Whitemane_Frostmourne` (z odpowiedzi „Bistooltip_Whitemane Frostmourne"; spacja w nazwie folderu WoW technicznie działa, ale podkreślnik jest bezpieczniejszy dla narzędzi); Title: „Bistooltip — Whitemane: Frostmourne" |
+| 2 | `[15000]` = literówka → przy ekstrakcji poprawione na `150005` |
+| 3 | 27 nadpisań rank-1 w wowtbc = w całości content Frostmourne → wtyczka |
+| 4 | Root `…_some custom items.lua` → usunąć w W6 PO ekstrakcji diffów |
+| 5 | Domyślna baza: **WoWSimsBP** |
+| 6 | wowtbc = pełnoprawna 3. baza wybieralna; dropdown: „WoWSimsBP (STANDARD)", „wowtbc.gg", „Whitemane (wh)". Uwaga: census nie znalazł w pliku `wh` powiązań z Whitemane (0 stringów, 0 custom ID) — etykieta wedle decyzji właściciela |
+| 7 | Label vendorów customowych: zbierane skanerem w grze (do tego czasu placeholder) |
+| 8 | Tryb VENDOR: `kind ∈ {VENDOR, CUSTOM}` (istnienie customów wykaże skaner); itemy za gold wchodzą (to kind=VENDOR) |
+| 9 | Kolory: włączone **domyślnie**, paleta doborzona pod czytelność (§3) |
+| 10 | Ulduar wyłącznie 10N/25N/10HM/25HM (zero wartości HC); serwerowe HC/HM Whitemane — weryfikacja dropu w §7 pkt 5 |
+| 11 | Tier tokeny: jednolita etykieta `T7`–`T10`, bez rozróżniania 10N/25N |
+| 12 | Whitemane Frostmourne ma system walut cata-like → przeskanować NPC skanerem; wsparcie przez standardowy format `cost[]` |
+| 13 | Kolejność W1→W8 potwierdzona |
+| 14 | Tabele frakcyjne: usunąć przy regeneracji W4a (wyjaśnienie różnicy poniżej) |
+| 15 | CI: rekomendacja przyjęta — GitHub Actions (luac -p + suity lua5.1) na push/PR od W8 |
+| 16 | `db.char.data_source` → `db.global.data_source`; personal BiS → `db.global` (§12); `db.profile` wyłącznie dla ustawień UI |
+
+Q14 wyjaśnienie (na pytanie „jaka to różnica?"): `Bistooltip_bislists_
+alliance/_horde` to druga połowa pliku WoWSimsBP — osobne rankingi
+single-rank (tylko pozycja 1 + wypełniacze `-1`) dla każdej frakcji,
+2652 sloty każda. **Addon nigdy ich nie czyta** (0 konsumentów w kodzie,
+grep zweryfikowany w rewizji W4). Różnica praktyczna: zostawienie =
+mniejszy plik i szybszy load niczego nie kosztuje; usunięcie = plik ~2×
+mniejszy, zero zmiany zachowania w grze. Gdyby kiedyś powstał realny
+użytek frakcyjny — regeneracja ze źródła offline.
+
+Follow-upy otwarte (nie blokują planów): label vendorów customowych
+(uzupełni skaner — Q7), weryfikacja dropu przy serwerowych HC/HM (Q10),
+wynik skanu walut cata-like (Q12).
+
+## 12. Personal BiS overrides — warstwa osobista (account-wide)
+
+Poprawka S3-7 (draft). Zgodnie z decyzją właściciela hierarchia efektywna:
+
+```text
+wybrana baza bazowa (WoWSimsBP domyślnie | wowtbc | wh)
+        ↓
+ew. plugin serwera (overlay replay, S3-5)
+        ↓
+PERSONAL BIS OVERRIDES (db.global, sparse)
+        ↓
+wynik widoczny w addonie
+```
+
+Precedens: **personal > plugin > baza**. Kolejność aplikowania =
+kolejność powyższej kaskady (bind bazy → replay wtyczek → aplikacja
+personal per slot przy odczycie).
+
+Istniejący mechanizm (zinwentaryzowany, zostaje edytorem warstwy):
+- UI: tryb customize (odblokowanie slotu na fioletowo + swap pozycji
+  w obrębie slotu) — `StateManager.lua:28-40` (`customizeMode`,
+  `unlockedSlots`), swap `BislistUI.lua:1842-1855`, persistencja
+  `DataProvider.lua:826-921` (`CustomPriorities`/`SaveCustomPriority`/
+  `LoadCustomPriority`/`RestoreOriginalOrder`).
+- Storage dziś: `db.char.custom_priorities["Class_Spec_Phase_Slot"] =
+  {itemIds}` — per-postać, pełna kolejka **tylko dotkniętych slotów**
+  (sparse per slot), rekoncyliacja po ID przy load: itemu nieobecnego
+  w slocie nie wstawiamy, nowe itemy dopisywane na końcu.
+
+Target:
+1. Migracja do `db.global.custom_priorities` + `db.global.data_source`
+   (jednorazowo przy starcie: kopia z przestrzeni char, gdy global puste;
+   dane char pozostają uśpione jako backup). `db.profile` zostaje
+   wyłącznie ustawieniom UI (możliwym do różnicowania między profilami).
+2. Personal = **sparse override nad aktywną bazą+dostawcą, nie kolejna
+   baza** — nie kopiujemy całych rankingów, tylko dotknięte sloty.
+3. Rekoncyliacja ID zostaje (istniejący algorytm): kolejność osobista
+   przeżywa zmianę bazy, update rankingów core i zmiany wtyczki —
+   brakujące ID wypadają, nowe dopisywane na końcu.
+4. Porządek aplikowania w W4: personal `LoadCustomPriority` wykonuje się
+   **po** overlay replay wtyczek (precedens z kaskady).
 
 ## Self-review speca
 
-- Placeholdery: jawnie oznaczone pytania (etykieta wh, label vendorów,
-  domyślna baza, frakcyjne tabele, CI, scope klucza) — reszta decyzji
-  zamknięta.
+- Placeholdery: brak pytań blokujących (Q1–Q16 zamknięte, §11); otwarte
+  follow-upy (label vendorów, weryfikacja HC/HM Whitemane, skan walut
+  cata-like) mają właściciela procesu: skaner/serwer.
 - Spójność z frozen: S1/S2 bez zmian strukturalnych; TROPHY nadal
   display-only (label przeniesiony do danych); formatter nadal jedyny;
   API rośnie do 6 funkcji wyłącznie o granularny `SetBiSSlotRank`
-  (uzasadnienie: rewizja W5); skaner nadal standalone.
+  (uzasadnienie: rewizja W5); personal BiS nie jest nowym API — to
+  istniejący mechanizm customize podniesiony do db.global i wpięty w
+  kaskadę precedensu; skaner nadal standalone.
 - v2 wg rewizji: cutover przyspieszony do W1 (podwójna prawda kosztów,
   martwy `.toc`), Whitemane bez pieczonych list slotów, kanon jednostek
   gold, audyt cross-DB coverage, higiena pliku STANDARD.
+- v2.1 wg decyzji: domyślna baza WoWSimsBP, 3 pełnoprawne bazy, kolory
+  domyślnie ON, VENDOR+CUSTOM w trybie VENDOR, tabele frakcyjne OUT,
+  CI IN, kaskada baza→plugin→personal (account-wide).
 - Nowe ryzyka nazwane: pamięć 3 baz (akcept / pomiar + redukcja o tabele
   frakcyjne), replay błędów (warn-once + skip), oracle jako jedyny świadek
-  (wymóg drugiego źródła).
+  (wymóg drugiego źródła), personalizacja per slot może maskować
+  nadpisania wtyczki (świadomy precedens właściciela).
 - Zakres: brak nowej warstwy architektonicznej poza wyszczególnionymi
   poprawkami; nic nie budujemy „na zapas" (paleta options, lazy load
   baz — dopiero po pomiarze).
