@@ -1,7 +1,9 @@
 # META-Z — Meta-BisTooltip system design
 
-Status: **DRAFT v2.2** — decyzje Q1–Q16 wdrożone; Q14 odwrócona po
-weryfikacji upstream + refresh danych wykonany; oczekuje na plan implementacji.
+Status: **DRAFT v2.3** — decyzje Q1–Q16 wdrożone; Q14 odwrócona po
+weryfikacji upstream + refresh danych wykonany; v2.3: assembly frakcyjne
+wowsims przeniesione do offline (bez merge w runtime); oczekuje na plan
+implementacji.
 Data: 2026-09-08. Gałąź: `META-Z` (utworzona z `feat/meta-bistooltip-data`,
 pełna historia). Klasyfikacja: architectural.
 Relacja: rozszerza **frozen** `2026-09-07-metabistooltip-data-design.md`
@@ -11,7 +13,9 @@ z rewizji etapu przebudowy: `2026-09-08-metaz-stage-review.md` (dowody tam).
 v2.1: decyzje Q&A + warstwa Personal BiS (§12). v2.2: Q14 odwrócona
 (tabele frakcyjne żywe u upstream, port assembly w W4) + refresh danych
 z upstream (provenance: github.com/ExoJdi/BiS-Tooltip_335a_fixed_backport,
-commit 2026-06-09).
+commit 2026-06-09). v2.3: assembly frakcyjne OFFLINE (decyzja właściciela —
+bez runtime merge w stylu WoWSimsBP; runtime = zwykły alias, generator
+`tools/assemble_wowsims.lua`).
 
 ## 0. Cel
 
@@ -102,13 +106,16 @@ Layout docelowy:
 
 ```text
 Bistooltip/                        # core
-  Bistooltip_wowsims_bislists.lua  # STANDARD (default) — dołączyć do .toc
+  Bistooltip_wowsims_final.lua     # STANDARD (default) — WYGENEROWANY offline
+                                   # (2 tabele frakcyjne; dołączyć do .toc)
   Bistooltip_wh_bislists.lua       # baza wybieralna — dołączyć do .toc
   Bistooltip_wowtbc_bislists.lua   # baza wybieralna, OCZYSZCZONA z custom ID
+  Bistooltip_WoWSimsBP_bislists.lua + Bistooltip_faction.lua  # INPUT offline
+                                   # (nie ładowane w .toc)
   SourceRegistry.lua / ItemAcquisition.lua / SourceFormatter.lua / PluginAPI.lua
 Bistooltip_Whitemane_Frostmourne/  # wtyczka serwera (toc + Plugin.lua)
 Bistooltip_Scanner/                # per frozen scanner-design (toc + 2 lua)
-tools/                             # + backfill_tiers.lua, run_all
+tools/                             # + backfill_tiers.lua, assemble_wowsims.lua, run_all
 ```
 
 ## 2. Poprawka S2-3 (draft): słownik trudności v2
@@ -197,20 +204,35 @@ BisTooltip_DBRegistry = {
      horde→alliance translacja ID przy wyświetlaniu/wyszukiwaniu,
      niezależna od aktywnej bazy — konsumenci: `DataProvider.lua:166-231`,
      `Utils.lua:223`, `Bistooltip.lua:496`, `UIFramework.lua:342/619`.
-  2. **Hook `assemble` tylko dla wowsims (port upstream, W4):** tabele
-     frakcyjne **zostają i pracują** (korekta Q14) — upstream konsumuje
-     je w `assembleActiveBislists()`: primary = tabeli frakcji gracza
-     (rank-1), fallback = pełna tabela wowsims, mirror ID przez
-     `Bistooltip_horde_to_ali` + filtr itemów obcej frakcji przez
-     `Bistooltip_item_faction`; scalanie: frakcyjne rank-1 przed
-     kolumnami fallbacku, dedup, cap 6. `wh`/`wowtbc` = zwykły alias
-     (mirror globalny z pkt 1 obejmuje je z definicji).
-  Konsolidacja map w W4 (zweryfikowana 2026-09-08): obie kopie
-  `Bistooltip_horde_to_ali` mają **identyczną treść** (639 wpisów; nasz
-  osobny plik vs sekcja w `Bistooltip_faction.lua`). Gdy
-  `Bistooltip_faction.lua` dołączy do `.toc` (przed bislistami, jak
-  upstream), `Bistooltip_horde_to_ali.lua` znika z `.toc` — jedna
-  definicja globalnej nazwy, wszyscy istniejący konsumenci bez zmian.
+  2. **Assembly frakcyjne wowsims — OFFLINE, nie w runtime (v2.3, decyzja
+     właściciela „nie robić tego sposobem WoWSimsBP"):** niuansem
+     upstream jest MERGE w runtime (`assembleActiveBislists()`); META-Z
+     przenosi go do narzędzia offline. Nowe `tools/assemble_wowsims.lua`
+     portuje algorytm upstream 1:1 (primary+fallback, mirror ID, filtr
+     frakcji, aliasowanie Ranged/Relic, cap 6) i emituje plik kanoniczny
+     `Bistooltip_wowsims_final.lua` z dwiema gotowymi tabelami
+     (alliance/horde) + classes + phases (jedna definicja — duplikat
+     phases znika z definicji). Runtime: wpis `wowsims` w rejestrze =
+     **zwykły alias** na tabelę frakcji gracza (`UnitFactionGroup` przy
+     `EnableSpec`); zero logiki scalania w grze, zgodnie z filozofią
+     zamkniętego rdzenia (to samo, co zrobiliśmy z `findSourceInLootTable`
+     i heurystyką difficulty). `Bistooltip_WoWSimsBP_bislists.lua`
+     (3 tabele) i `Bistooltip_faction.lua` zostają w repo jako **input
+     offline, nie ładowane w `.toc`** — ten sam wzorzec co Loot_Sources.
+
+     Dowód pomiarowy (WSL lua5.1, 2026-09-08; uzasadnia czemu tabel nie
+     wolno zignorować i czemu merge musi istnieć — tylko offline):
+     primary = czysto alliance (0 itemów hordy; 396 ali na rank-1,
+     2359 w listach); zgodność rank-1 tabel frakcyjnych z primary: horda
+     59,5%, ali 64,4% (primary = baseline, nie ranking docelowy);
+     ali vs horda 93,6%.
+
+     Konsolidacja map: `Bistooltip_item_faction` staje się wyłącznie
+     inputem offline (nie trafia do `.toc`); `Bistooltip_horde_to_ali`
+     pozostaje w `.toc` bez zmian (żywi konsumenci z pkt 1; kopie
+     zweryfikowane identyczne — 639 wpisów). Procedura refreshu danych
+     (W0a): import z upstream → migrator (Źródła) → assembler (wowsims
+     final) → census rerun → commit wyników.
 - `PluginAPI.lua`: każda udana mutacja (`DefineSource`, `SetAcquisition`,
   `AddAcquisition`, `SetBiSSlot`, `SetBiSSlotRank`, `SetEnhancement`) jest
   zapisywana do wewnętrznego logu overlay `{fn, deep-copy(args), plugin}`.
@@ -342,10 +364,12 @@ drafter'owe (małe, w tym samym addonie):
 - Lookup O(1) bez cache-frameworka; overlay replay to N wywołań wtyczki
   (setki, nie tysiące) raz na zmianę bazy.
 - Trzy bazy w `.toc` = ~3,4 MB tabel w pamięci (akceptowalne dla 3.3.5a;
-  dane statyczne). Jeśli zmierzony load time bolą — ładowanie warunkowe
-  jest decyzją po pomiarze, nie z góry. Tabele frakcyjne pozostają w
-  pliku wowsims (żywy input hooka `assemble`, §4); `Loot_Sources.lua`
-  znika z `.toc` już w W1 (0 konsumentów runtime).
+  dane statyczne). `.toc` ładuje wyłącznie **wygenerowane pliki final**
+  (wowsims: 2 pełne tabele frakcyjne; wh/wowtbc: po jednej) — pliki
+  input upstream (3-tabelowy WoWSimsBP, faction.lua) i `Loot_Sources.lua`
+  pozostają w repo, ale nie są ładowane (Loot_Sources znika z `.toc`
+  już w W1). Jeśli zmierzony load time będzie bolał — ładowanie
+  warunkowe/per-frakcja to decyzja po pomiarze, nie z góry.
 - TROPHY pozostaje display-only; brak EnchantAcquisition; CUSTOM walidowane;
   brak importerów w core; skaner nigdy nie pisze do tabel core.
 
@@ -358,7 +382,7 @@ drafter'owe (małe, w tym samym addonie):
 | W1 | Cutover runtime: `.toc` clean (Loot_Sources out), `GetEmblemCost` → shim nad ItemAcquisition; słownik trudności v2 (migrator+audyt+goldens, regeneracja danych ze ŚWIEŻEGO Loot_Sources) | W0a |
 | W2 | Backfill tierów (VOA, TOKEN/MARK per-boss) + walidacja oracle + audyt cross-DB coverage (każdy ID z każdej bazy ma akwizycję albo allowlista) | W1 |
 | W3 | FormatSourceColored + paleta + wpięcie tooltip/checklist | W1 |
-| W4 | DB registry + options + overlay replay (S3-5) + `SetBiSSlotRank` (S3-6); migracja do `db.global` (`data_source` + `custom_priorities` — warstwa §12); **port faction-assembly z upstream** (hook `assemble` dla wowsims, `Bistooltip_faction.lua` do `.toc`, konsolidacja `Bistooltip_horde_to_ali.lua`); W4a: regeneracja pliku wowsims bez duplikatu phases (tabele frakcyjne zostają) | — |
+| W4 | DB registry + options + overlay replay (S3-5) + `SetBiSSlotRank` (S3-6); migracja do `db.global` (`data_source` + `custom_priorities` — warstwa §12); wowsims = zwykły alias na tabelę frakcji gracza z pliku wygenerowanego OFFLINE; W4a: `tools/assemble_wowsims.lua` (port algorytmu upstream) + wygenerowanie `Bistooltip_wowsims_final.lua` | — |
 | W5 | Tryb VENDOR (rename + semantyka ItemAcquisition, kind VENDOR+CUSTOM) | W1 |
 | W6 | Wtyczka `Bistooltip_Whitemane_Frostmourne` (diffy SetBiSSlotRank, poprawka 150005, waluty cata-like po skanie) + czyszczenie EmblemData/wowtbc + usunięcie root `_some custom items.lua` PO ekstrakcji (Q4) | W4, W5 |
 | W7 | Bistooltip_Scanner (frozen plan) + `/bis item` + jednostka gold | — |
@@ -469,6 +493,9 @@ Target:
 - v2.2 (Q14 zweryfikowane): tabele frakcyjne IN + hook `assemble`
   (port upstream), refresh danych z origin wykonany, ekstrakcja customów
   Frostmourne zabezpieczona artifactem, W0a (census rerun) przed W1.
+- v2.3 (decyzja właściciela): assembly frakcyjne offline — runtime bez
+  merge; generator + plik final; pomiar uzasadniający (primary czysto
+  alliance, zgodność rank-1 59,5%/64,4%) zapisany w §4.
 - Nowe ryzyka nazwane: pamięć 3 baz (akcept / pomiar), replay błędów
   (warn-once + skip), oracle jako jedyny świadek (wymóg drugiego źródła),
   personalizacja per slot może maskować nadpisania wtyczki (świadomy
