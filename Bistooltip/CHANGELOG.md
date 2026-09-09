@@ -1,5 +1,25 @@
 # BisTooltip Changelog
 
+## META-Z W6 + W8 (2026-09-08) — Whitemane plugin, clean core, unified gate
+
+### Changes
+
+1. **`Bistooltip_Whitemane_Frostmourne` plugin** (hard ## Dependencies)
+   - 27 legendary rank-1 overrides as DB-independent `SetBiSSlotRank` calls
+     (generated from the extraction artifact, all paths verified against the
+     STANDARD database; typo `[15000]` fixed to 150005 per owner Q2)
+   - 377 custom-currency vendor costs (Emblem of Ascension / Ascension II,
+     Echo of the Titans) via `AddAcquisition` — append, core drop lines kept
+2. **Core is now clean WotLK**: the custom-server currency tables left
+   EmblemData for the plugin; core VENDOR entries 658 → 293 (standard emblems
+   only); regenerated ItemAcquisition (8224 items) — audits green
+3. **`tools/run_all.sh`** — single gate: syntax (luac) + formatter/pluginapi/
+   check_sources/census suites + end-to-end validation of EVERY
+   `Bistooltip_*/main.lua` plugin; `test_plugin.lua` now binds the STANDARD
+   database like `EnableSpec` does
+4. **CI** (`.github/workflows/tests.yml`): lua5.1 + full gate on every
+   push/PR (owner-approved, Q15)
+
 ## META-Z W4 (2026-09-08) — database registry, faction assembly, account-wide state
 
 ### Changes

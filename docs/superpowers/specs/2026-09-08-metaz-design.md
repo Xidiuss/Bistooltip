@@ -398,9 +398,9 @@ drafter'owe (małe, w tym samym addonie):
 | W3 | FormatSourceColored + paleta + wpięcie tooltip/checklist | W1 |
 | W4 | ~~DB registry + overlay replay (S3-5) + `SetBiSSlotRank` (S3-6); migracja do `db.global`; wowsims = alias (alliance) / alias+podmiana overrides (horda); W4a: `tools/assemble_wowsims.lua` + wygenerowanie `Bistooltip_wowsims_final.lua`~~ — **WYKONANE** (assembler: 2907 slotów, overrides 956/32,9%, plik 706 KB; horde hook + replay zweryfikowane na realnych danych) | — |
 | W5 | ~~Tryb VENDOR (rename + semantyka ItemAcquisition, kind VENDOR+CUSTOM)~~ — **wykonane przedplanowo** na żądanie właściciela przy testach W1; przy okazji naprawiono zgłoszony wyciek: GroupSlotsByInstance grupował po rank-1 slotu, więc sloty z itemem vendorowym głębiej w rankingu trafiały do grup instancji (np. ToC) w trybie filtru | W1 |
-| W6 | Wtyczka `Bistooltip_Whitemane_Frostmourne` (diffy SetBiSSlotRank, poprawka 150005, waluty cata-like po skanie) + czyszczenie EmblemData/wowtbc + usunięcie root `_some custom items.lua` PO ekstrakcji (Q4) | W4, W5 |
-| W7 | Bistooltip_Scanner (frozen plan) + `/bis item` + jednostka gold | — |
-| W8 | `tools/run_all` + CI GitHub Actions (Q15: TAK) + pełny audyt + manual in-game | W1–W7 |
+| W6 | ~~Wtyczka `Bistooltip_Whitemane_Frostmourne` + czyszczenie EmblemData~~ — **WYKONANE** (27× SetBiSSlotRank z artifactu, ścieżki zweryfikowane vs STANDARD; 377 walut AddAcquisition — append, dropy zostają; literówka 15000→150005; core VENDOR 658→293 = czysty WotLK; label vendorów → po skanach D6; usunięcie root `_some custom items.lua` → owner, patrz rejestr D4) | W4, W5 |
+| W7 | ~~Bistooltip_Scanner + `/bis item` + jednostka gold~~ — **WYKONANE** (finalna wersja ownera v0.2.1 z Menu.lua — ręczne koszty; drafty agenta W7/Skanner2 w historii gita) | — |
+| W8 | ~~`tools/run_all` + CI GitHub Actions (Q15: TAK) + pełny audyt~~ — **WYKONANE** (run_all: syntax + 4 suity + e2e każdej wtyczki, ALL GREEN; CI tests.yml na push/PR); manual in-game = D5 (owner) | — |
 
 Każdy workstream dostaje własny implementation plan (workflow superpowers:
 design → review → plan → implement). W0 (gałąź META-Z, track baz, import

@@ -10,6 +10,15 @@ dofile("Bistooltip/ItemAcquisition.lua")
 dofile("Bistooltip/SourceFormatter.lua")
 dofile("Bistooltip/PluginAPI.lua")
 
+-- Plugins may touch ranking slots (SetBiSSlot/SetBiSSlotRank) — bind the
+-- STANDARD database the same way Config.EnableSpec does at runtime.
+if type(Bistooltip_bislists) ~= "table" then
+  pcall(dofile, "Bistooltip/Bistooltip_wowsims_final.lua")
+  if type(Bistooltip_wowsims_final) == "table" then
+    Bistooltip_bislists = Bistooltip_wowsims_final
+  end
+end
+
 local function itemCount(t)
   local n = 0
   for _ in pairs(t) do n = n + 1 end

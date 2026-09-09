@@ -183,9 +183,6 @@ BisTooltip_ItemAcquisition = {
   [14558] = {
     { kind = "DROP", source = "WORLD_DROPS_LEVEL_50_60" },
   },
-  [15000] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 80 } } },
-  },
   [15196] = {
     { kind = "DROP", source = "LEVEL_60_HONOR_PVP_ACCESSORIES_ALLIANCE_" },
   },
@@ -10442,23 +10439,18 @@ BisTooltip_ItemAcquisition = {
   },
   [39701] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39702] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [39703] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39704] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39706] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39712] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
@@ -10474,56 +10466,44 @@ BisTooltip_ItemAcquisition = {
   [39717] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39718] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39719] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39720] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [39721] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39722] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [39723] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [39724] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [39725] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39726] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39727] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39728] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 12 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
   },
   [39729] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [39730] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
@@ -10531,75 +10511,61 @@ BisTooltip_ItemAcquisition = {
   },
   [39731] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [39732] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [39733] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39734] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39735] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39756] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [39757] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 12 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
   },
   [39758] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
   },
   [39759] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39760] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [39761] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [39762] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [39763] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
   },
   [39764] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [39765] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [39766] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
   },
   [39767] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [39768] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [39878] = {
     { kind = "DROP", source = "THE_ORACLES_REVERED" },
@@ -10609,15 +10575,12 @@ BisTooltip_ItemAcquisition = {
   },
   [40061] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40062] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40063] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40064] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
@@ -10625,7 +10588,6 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40065] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
@@ -10633,7 +10595,6 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40067] = {
     { kind = "DROP", source = "FRENZYHEART_TRIBE_HONORED" },
@@ -10644,7 +10605,6 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40071] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
@@ -10652,7 +10612,6 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40074] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
@@ -10660,7 +10619,6 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40075] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
@@ -10668,7 +10626,6 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40080] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
@@ -10676,7 +10633,6 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40087] = {
     { kind = "DROP", source = "FRENZYHEART_TRIBE_HONORED" },
@@ -10687,7 +10643,6 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40108] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GRAND_WIDOW_FAERLINA" },
@@ -10695,29 +10650,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40184] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40185] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40186] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40187] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40188] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40189] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
@@ -10728,7 +10677,7 @@ BisTooltip_ItemAcquisition = {
   [40191] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 12 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
   },
   [40192] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
@@ -10736,55 +10685,44 @@ BisTooltip_ItemAcquisition = {
   [40193] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40194] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40196] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40197] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40198] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40200] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40201] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40203] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40204] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40205] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40206] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40207] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 12 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
   },
   [40208] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
@@ -10793,161 +10731,131 @@ BisTooltip_ItemAcquisition = {
   [40209] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40210] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40233] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
   },
   [40234] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40235] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40236] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40237] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40238] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40239] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 12 } } },
   },
   [40240] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40241] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40242] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40243] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40244] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40245] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
   },
   [40246] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40247] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40249] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40250] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40251] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40252] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40253] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40254] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40255] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40256] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40257] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40258] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN_THE_UNCLEAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40259] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40260] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40261] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40262] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40263] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40264] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
@@ -10961,51 +10869,42 @@ BisTooltip_ItemAcquisition = {
   },
   [40267] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 12 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
   },
   [40268] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 12 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
   },
   [40269] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40270] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40271] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40272] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40273] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
   },
   [40274] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40275] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40277] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40278] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40279] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40280] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
@@ -11017,11 +10916,9 @@ BisTooltip_ItemAcquisition = {
   },
   [40282] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40283] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40284] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
@@ -11031,136 +10928,108 @@ BisTooltip_ItemAcquisition = {
   },
   [40286] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40287] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40288] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40289] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40294] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40296] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40297] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40298] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40299] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40300] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
   },
   [40301] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40302] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40303] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40304] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40305] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40306] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40315] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40316] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40317] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40318] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40319] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40320] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40321] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 12 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
   },
   [40322] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 12 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
   },
   [40323] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40324] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40325] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40326] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40327] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_INSTRUCTOR_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40328] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
   },
   [40329] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40330] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40331] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
@@ -11168,14 +11037,12 @@ BisTooltip_ItemAcquisition = {
   [40332] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40333] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
   },
   [40334] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40335] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK_THE_HARVESTER" },
@@ -11209,7 +11076,6 @@ BisTooltip_ItemAcquisition = {
   },
   [40344] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40345] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
@@ -11220,14 +11086,12 @@ BisTooltip_ItemAcquisition = {
   },
   [40347] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40348] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
   },
   [40349] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40350] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
@@ -11235,150 +11099,114 @@ BisTooltip_ItemAcquisition = {
   },
   [40351] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40352] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40362] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40363] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40365] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40366] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40367] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40368] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
   },
   [40369] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40370] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40371] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40372] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40373] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40374] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40375] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40376] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40377] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40378] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40379] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40380] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40381] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40382] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40383] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40384] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40385] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40386] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40387] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40388] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40395] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40396] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40398] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40399] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40400] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40401] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40402] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40403] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40405] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40406] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_TRASH_MOBS" },
@@ -11454,28 +11282,22 @@ BisTooltip_ItemAcquisition = {
   },
   [40431] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40432] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40433] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 15 } } },
   },
   [40437] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40438] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40439] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [40445] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
@@ -11483,7 +11305,6 @@ BisTooltip_ItemAcquisition = {
   },
   [40446] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40447] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
@@ -11501,11 +11322,9 @@ BisTooltip_ItemAcquisition = {
   },
   [40451] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40453] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40454] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
@@ -11722,23 +11541,18 @@ BisTooltip_ItemAcquisition = {
   },
   [40531] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40532] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40539] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40541] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40543] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40544] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
@@ -11760,7 +11574,6 @@ BisTooltip_ItemAcquisition = {
   },
   [40549] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40550] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
@@ -11775,7 +11588,6 @@ BisTooltip_ItemAcquisition = {
   },
   [40555] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40556] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
@@ -11786,7 +11598,6 @@ BisTooltip_ItemAcquisition = {
   },
   [40558] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40559] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
@@ -11794,15 +11605,12 @@ BisTooltip_ItemAcquisition = {
   },
   [40560] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40561] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40562] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40563] = {
     { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
@@ -11810,14 +11618,12 @@ BisTooltip_ItemAcquisition = {
   },
   [40564] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40565] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
   },
   [40566] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40567] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
@@ -11882,32 +11688,25 @@ BisTooltip_ItemAcquisition = {
   },
   [40588] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40589] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40590] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40591] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40592] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40594] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [40602] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH_THE_PLAGUEBRINGER" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
   },
   [40611] = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Heroism", amount = 80 } } },
@@ -11915,20 +11714,11 @@ BisTooltip_ItemAcquisition = {
   [40614] = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Heroism", amount = 60 } } },
   },
-  [40626] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
-  },
-  [40629] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
-  },
-  [40632] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
-  },
   [40635] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 25 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 75 } } },
   },
   [40638] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 60 } } },
   },
   [40668] = {
     { kind = "DROP", source = "PROFESSION_BLACKSMITHING" },
@@ -14737,31 +14527,24 @@ BisTooltip_ItemAcquisition = {
   },
   [44003] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_1D" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [44004] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_1D" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } },
   },
   [44005] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_2D" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [44006] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_2D" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [44007] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_2D" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [44008] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_2D" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [44011] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_2D" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 38 } } },
   },
   [44050] = {
     { kind = "DROP", source = "THE_KALU_AK_EXALTED" },
@@ -15420,11 +15203,9 @@ BisTooltip_ItemAcquisition = {
   },
   [45111] = {
     { kind = "DROP", source = "ULDUAR_25N_FLAME_LEVIATHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45112] = {
     { kind = "DROP", source = "ULDUAR_25N_FLAME_LEVIATHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45113] = {
     { kind = "DROP", source = "ULDUAR_25N_FLAME_LEVIATHAN" },
@@ -15450,34 +15231,27 @@ BisTooltip_ItemAcquisition = {
   },
   [45132] = {
     { kind = "DROP", source = "ULDUAR_25HM_FLAME_LEVIATHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45133] = {
     { kind = "DROP", source = "ULDUAR_25HM_FLAME_LEVIATHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45134] = {
     { kind = "DROP", source = "ULDUAR_25HM_FLAME_LEVIATHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45135] = {
     { kind = "DROP", source = "ULDUAR_25HM_FLAME_LEVIATHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45136] = {
     { kind = "DROP", source = "ULDUAR_25HM_FLAME_LEVIATHAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45137] = {
     { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45138] = {
     { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
   },
   [45139] = {
     { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45140] = {
     { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
@@ -15507,7 +15281,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45148] = {
     { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45149] = {
     { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
@@ -15523,7 +15296,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45158] = {
     { kind = "DROP", source = "ULDUAR_25N_IGNIS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45161] = {
     { kind = "DROP", source = "ULDUAR_25N_IGNIS" },
@@ -15582,7 +15354,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45228] = {
     { kind = "DROP", source = "ULDUAR_25N_IRON_COUNCIL" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45232] = {
     { kind = "DROP", source = "ULDUAR_25N_IRON_COUNCIL" },
@@ -15613,30 +15384,24 @@ BisTooltip_ItemAcquisition = {
   },
   [45241] = {
     { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45242] = {
     { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45243] = {
     { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45244] = {
     { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45245] = {
     { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45246] = {
     { kind = "DROP", source = "ULDUAR_25N_XT_002_DECONSTRUCTOR" },
   },
   [45247] = {
     { kind = "DROP", source = "ULDUAR_25N_XT_002_DECONSTRUCTOR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45248] = {
     { kind = "DROP", source = "ULDUAR_25N_XT_002_DECONSTRUCTOR" },
@@ -15646,11 +15411,9 @@ BisTooltip_ItemAcquisition = {
   },
   [45250] = {
     { kind = "DROP", source = "ULDUAR_25N_XT_002_DECONSTRUCTOR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45251] = {
     { kind = "DROP", source = "ULDUAR_25N_XT_002_DECONSTRUCTOR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45252] = {
     { kind = "DROP", source = "ULDUAR_25N_XT_002_DECONSTRUCTOR" },
@@ -15687,7 +15450,6 @@ BisTooltip_ItemAcquisition = {
   [45262] = {
     { kind = "DROP", source = "ULDUAR_25N_KOLOGARN" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45263] = {
     { kind = "DROP", source = "ULDUAR_25N_KOLOGARN" },
@@ -15716,7 +15478,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45271] = {
     { kind = "DROP", source = "ULDUAR_25N_KOLOGARN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45272] = {
     { kind = "DROP", source = "ULDUAR_25N_KOLOGARN" },
@@ -15744,7 +15505,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45286] = {
     { kind = "DROP", source = "ULDUAR_10N_FLAME_LEVIATHAN" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45287] = {
     { kind = "DROP", source = "ULDUAR_10N_FLAME_LEVIATHAN" },
@@ -15763,23 +15523,18 @@ BisTooltip_ItemAcquisition = {
   },
   [45293] = {
     { kind = "DROP", source = "ULDUAR_10HM_FLAME_LEVIATHAN" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45294] = {
     { kind = "DROP", source = "ULDUAR_10HM_FREYA" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45295] = {
     { kind = "DROP", source = "ULDUAR_10HM_FLAME_LEVIATHAN" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45296] = {
     { kind = "DROP", source = "ULDUAR_10HM_FLAME_LEVIATHAN" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45297] = {
     { kind = "DROP", source = "ULDUAR_10HM_FLAME_LEVIATHAN" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45298] = {
     { kind = "DROP", source = "ULDUAR_10N_RAZORSCALE" },
@@ -15789,7 +15544,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45300] = {
     { kind = "DROP", source = "ULDUAR_10HM_FLAME_LEVIATHAN" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45301] = {
     { kind = "DROP", source = "ULDUAR_10N_RAZORSCALE" },
@@ -15814,7 +15568,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45308] = {
     { kind = "DROP", source = "ULDUAR_10N_RAZORSCALE" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45309] = {
     { kind = "DROP", source = "ULDUAR_10N_IGNIS" },
@@ -15848,7 +15601,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45319] = {
     { kind = "DROP", source = "ULDUAR_25N_AURIAYA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45320] = {
     { kind = "DROP", source = "ULDUAR_25N_AURIAYA" },
@@ -15867,7 +15619,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45326] = {
     { kind = "DROP", source = "ULDUAR_25N_AURIAYA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45327] = {
     { kind = "DROP", source = "ULDUAR_25N_AURIAYA" },
@@ -15889,7 +15640,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45334] = {
     { kind = "DROP", source = "ULDUAR_25N_AURIAYA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45335] = {
     { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
@@ -16242,42 +15992,33 @@ BisTooltip_ItemAcquisition = {
   },
   [45442] = {
     { kind = "DROP", source = "ULDUAR_25HM_XT_002_DECONSTRUCTOR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45443] = {
     { kind = "DROP", source = "ULDUAR_25HM_XT_002_DECONSTRUCTOR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45444] = {
     { kind = "DROP", source = "ULDUAR_25HM_XT_002_DECONSTRUCTOR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45445] = {
     { kind = "DROP", source = "ULDUAR_25HM_XT_002_DECONSTRUCTOR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45446] = {
     { kind = "DROP", source = "ULDUAR_25HM_XT_002_DECONSTRUCTOR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45447] = {
     { kind = "DROP", source = "ULDUAR_10HM_IRON_COUNCIL" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45448] = {
     { kind = "DROP", source = "ULDUAR_10HM_IRON_COUNCIL" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45449] = {
     { kind = "DROP", source = "ULDUAR_10HM_IRON_COUNCIL" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45450] = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR" },
   },
   [45451] = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45452] = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR" },
@@ -16293,30 +16034,24 @@ BisTooltip_ItemAcquisition = {
   },
   [45456] = {
     { kind = "DROP", source = "ULDUAR_10HM_IRON_COUNCIL" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45457] = {
     { kind = "DROP", source = "ULDUAR_25HM_HODIR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 52 } } },
   },
   [45458] = {
     { kind = "DROP", source = "ULDUAR_10N_HODIR" },
   },
   [45459] = {
     { kind = "DROP", source = "ULDUAR_25HM_HODIR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45460] = {
     { kind = "DROP", source = "ULDUAR_25HM_HODIR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45461] = {
     { kind = "DROP", source = "ULDUAR_25HM_HODIR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45462] = {
     { kind = "DROP", source = "ULDUAR_25HM_HODIR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45463] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM" },
@@ -16326,7 +16061,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45466] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45467] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM" },
@@ -16336,27 +16070,21 @@ BisTooltip_ItemAcquisition = {
   },
   [45469] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45470] = {
     { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45471] = {
     { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45472] = {
     { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45473] = {
     { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45474] = {
     { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45479] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA" },
@@ -16366,7 +16094,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45481] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45482] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA" },
@@ -16376,30 +16103,24 @@ BisTooltip_ItemAcquisition = {
   },
   [45484] = {
     { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45485] = {
     { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45486] = {
     { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45487] = {
     { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45488] = {
     { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45489] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
   },
   [45490] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45491] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
@@ -16412,19 +16133,15 @@ BisTooltip_ItemAcquisition = {
   },
   [45494] = {
     { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45495] = {
     { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45496] = {
     { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45497] = {
     { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45498] = {
     { kind = "DROP", source = "ULDUAR_25N_GENERAL_VEZAX" },
@@ -16434,7 +16151,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45502] = {
     { kind = "DROP", source = "ULDUAR_25N_GENERAL_VEZAX" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45503] = {
     { kind = "DROP", source = "ULDUAR_25N_GENERAL_VEZAX" },
@@ -16479,23 +16195,18 @@ BisTooltip_ItemAcquisition = {
   },
   [45516] = {
     { kind = "DROP", source = "ULDUAR_25HM_GENERAL_VEZAX" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 52 } } },
   },
   [45517] = {
     { kind = "DROP", source = "ULDUAR_25HM_GENERAL_VEZAX" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45518] = {
     { kind = "DROP", source = "ULDUAR_25HM_GENERAL_VEZAX" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45519] = {
     { kind = "DROP", source = "ULDUAR_25HM_GENERAL_VEZAX" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45520] = {
     { kind = "DROP", source = "ULDUAR_25HM_GENERAL_VEZAX" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45521] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
@@ -16529,23 +16240,18 @@ BisTooltip_ItemAcquisition = {
   },
   [45533] = {
     { kind = "DROP", source = "ULDUAR_25HM_YOGG_SARON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 52 } } },
   },
   [45534] = {
     { kind = "DROP", source = "ULDUAR_25HM_YOGG_SARON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45535] = {
     { kind = "DROP", source = "ULDUAR_25HM_YOGG_SARON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45536] = {
     { kind = "DROP", source = "ULDUAR_25HM_YOGG_SARON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45537] = {
     { kind = "DROP", source = "ULDUAR_25HM_YOGG_SARON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45538] = {
     { kind = "DROP", source = "ULDUAR_25N_TRASH_MOBS" },
@@ -16555,14 +16261,12 @@ BisTooltip_ItemAcquisition = {
   },
   [45540] = {
     { kind = "DROP", source = "ULDUAR_25N_TRASH_MOBS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45541] = {
     { kind = "DROP", source = "ULDUAR_25N_TRASH_MOBS" },
   },
   [45542] = {
     { kind = "DROP", source = "ULDUAR_25N_TRASH_MOBS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45543] = {
     { kind = "DROP", source = "ULDUAR_25N_TRASH_MOBS" },
@@ -16636,22 +16340,18 @@ BisTooltip_ItemAcquisition = {
   [45570] = {
     { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 52 } } },
   },
   [45587] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45588] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
   },
   [45594] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45599] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45605] = {
     { kind = "DROP", source = "ULDUAR_25N_TRASH_MOBS" },
@@ -16665,52 +16365,42 @@ BisTooltip_ItemAcquisition = {
   },
   [45609] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45610] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45611] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45612] = {
     { kind = "DROP", source = "ULDUAR_25HM_HODIR" },
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45613] = {
     { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 52 } } },
   },
   [45614] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON_QUEST_" },
   },
   [45615] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45616] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45617] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45618] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
   },
   [45619] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45620] = {
     { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 44 } } },
   },
   [45624] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
@@ -16723,7 +16413,7 @@ BisTooltip_ItemAcquisition = {
   },
   [45633] = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Conquest", amount = 58 } } },
   },
   [45634] = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR" },
@@ -16742,7 +16432,7 @@ BisTooltip_ItemAcquisition = {
   },
   [45639] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Conquest", amount = 58 } } },
   },
   [45640] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM" },
@@ -16752,7 +16442,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45642] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 19 } } },
   },
   [45643] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
@@ -16789,7 +16478,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45654] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 25 } } },
   },
   [45655] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA" },
@@ -16799,7 +16487,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45657] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 19 } } },
   },
   [45658] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON" },
@@ -16815,11 +16502,9 @@ BisTooltip_ItemAcquisition = {
   },
   [45663] = {
     { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45665] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 32 } } },
   },
   [45675] = {
     { kind = "DROP", source = "ULDUAR_10N_XT_002_DECONSTRUCTOR" },
@@ -16877,7 +16562,6 @@ BisTooltip_ItemAcquisition = {
   },
   [45703] = {
     { kind = "DROP", source = "ULDUAR_10N_KOLOGARN" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45704] = {
     { kind = "DROP", source = "ULDUAR_10N_KOLOGARN" },
@@ -17037,23 +16721,18 @@ BisTooltip_ItemAcquisition = {
   },
   [45867] = {
     { kind = "DROP", source = "ULDUAR_10HM_XT_002_DECONSTRUCTOR" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45868] = {
     { kind = "DROP", source = "ULDUAR_10HM_XT_002_DECONSTRUCTOR" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45869] = {
     { kind = "DROP", source = "ULDUAR_10HM_XT_002_DECONSTRUCTOR" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45870] = {
     { kind = "DROP", source = "ULDUAR_10HM_XT_002_DECONSTRUCTOR" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45871] = {
     { kind = "DROP", source = "ULDUAR_10HM_XT_002_DECONSTRUCTOR" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45872] = {
     { kind = "DROP", source = "ULDUAR_10N_HODIR" },
@@ -17066,23 +16745,18 @@ BisTooltip_ItemAcquisition = {
   },
   [45876] = {
     { kind = "DROP", source = "ULDUAR_10HM_HODIR" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45877] = {
     { kind = "DROP", source = "ULDUAR_10HM_HODIR" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45886] = {
     { kind = "DROP", source = "ULDUAR_10HM_HODIR" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45887] = {
     { kind = "DROP", source = "ULDUAR_10HM_HODIR" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45888] = {
     { kind = "DROP", source = "ULDUAR_10HM_HODIR" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45892] = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM" },
@@ -17101,23 +16775,18 @@ BisTooltip_ItemAcquisition = {
   },
   [45928] = {
     { kind = "DROP", source = "ULDUAR_10HM_THORIM" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45929] = {
     { kind = "DROP", source = "ULDUAR_10HM_THORIM" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45930] = {
     { kind = "DROP", source = "ULDUAR_10HM_THORIM" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45931] = {
     { kind = "DROP", source = "ULDUAR_10HM_THORIM" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45933] = {
     { kind = "DROP", source = "ULDUAR_10HM_THORIM" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45934] = {
     { kind = "DROP", source = "ULDUAR_10N_FREYA" },
@@ -17136,19 +16805,15 @@ BisTooltip_ItemAcquisition = {
   },
   [45943] = {
     { kind = "DROP", source = "ULDUAR_10HM_FREYA" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45945] = {
     { kind = "DROP", source = "ULDUAR_10HM_FREYA" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45946] = {
     { kind = "DROP", source = "ULDUAR_10HM_FREYA" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45947] = {
     { kind = "DROP", source = "ULDUAR_10HM_FREYA" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45972] = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
@@ -17167,23 +16832,18 @@ BisTooltip_ItemAcquisition = {
   },
   [45982] = {
     { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45988] = {
     { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45989] = {
     { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45990] = {
     { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45993] = {
     { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [45996] = {
     { kind = "DROP", source = "ULDUAR_10N_GENERAL_VEZAX" },
@@ -17233,7 +16893,6 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_XT_002_DECONSTRUCTOR" },
     { kind = "DROP", source = "ULDUAR_25N_HODIR" },
     { kind = "DROP", source = "ULDUAR_25N_IRON_COUNCIL" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 150 } } },
   },
   [46018] = {
     { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
@@ -17243,7 +16902,6 @@ BisTooltip_ItemAcquisition = {
   },
   [46021] = {
     { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46022] = {
     { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON" },
@@ -17265,83 +16923,63 @@ BisTooltip_ItemAcquisition = {
   },
   [46032] = {
     { kind = "DROP", source = "ULDUAR_10HM_GENERAL_VEZAX" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46033] = {
     { kind = "DROP", source = "ULDUAR_10HM_GENERAL_VEZAX" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46034] = {
     { kind = "DROP", source = "ULDUAR_10HM_GENERAL_VEZAX" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46035] = {
     { kind = "DROP", source = "ULDUAR_10HM_GENERAL_VEZAX" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46036] = {
     { kind = "DROP", source = "ULDUAR_10HM_GENERAL_VEZAX" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46037] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46038] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46039] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46040] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46041] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46042] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46043] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46044] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46045] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46046] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46047] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46048] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46049] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46050] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46051] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46052] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
@@ -17351,23 +16989,18 @@ BisTooltip_ItemAcquisition = {
   },
   [46067] = {
     { kind = "DROP", source = "ULDUAR_10HM_YOGG_SARON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46068] = {
     { kind = "DROP", source = "ULDUAR_10HM_YOGG_SARON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46095] = {
     { kind = "DROP", source = "ULDUAR_10HM_YOGG_SARON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46096] = {
     { kind = "DROP", source = "ULDUAR_10HM_YOGG_SARON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46097] = {
     { kind = "DROP", source = "ULDUAR_10HM_YOGG_SARON" },
-    { kind = "VENDOR", cost = { { currency = "Echo of the Titans", amount = 12 } } },
   },
   [46110] = {
     { kind = "DROP", source = "ULDUAR_10N_FREYA" },
@@ -27080,24 +26713,8 @@ BisTooltip_ItemAcquisition = {
   [54591] = {
     { kind = "DROP", source = "RUBY_SANCTUM_25HC_HALION" },
   },
-  [128858] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 150 } } },
-  },
-  [130023] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 80 } } },
-  },
-  [130031] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 80 } } },
-  },
   [131004] = {
     { kind = "DROP", source = "ULDUAR_25N_LEGENDARY" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 150 } } },
-  },
-  [131008] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 1 } } },
-  },
-  [131010] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 2 } } },
   },
 }
 return BisTooltip_ItemAcquisition
