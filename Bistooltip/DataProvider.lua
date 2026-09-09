@@ -830,11 +830,12 @@ function BistooltipData.LoadCustomPriority(slot, className, specName, phase)
     
     -- Load from memory
     local savedOrder = CustomPriorities[key]
-    
-    -- Try saved variables
-    if not savedOrder and _G.BistooltipAddon and _G.BistooltipAddon.db and 
-       _G.BistooltipAddon.db.char and _G.BistooltipAddon.db.char.custom_priorities then
-        savedOrder = _G.BistooltipAddon.db.char.custom_priorities[key]
+
+    -- Try saved variables (account-wide since W4/§12)
+    if not savedOrder and _G.BistooltipAddon and _G.BistooltipAddon.db
+       and _G.BistooltipAddon.db.global
+       and _G.BistooltipAddon.db.global.custom_priorities then
+        savedOrder = _G.BistooltipAddon.db.global.custom_priorities[key]
         if savedOrder then
             CustomPriorities[key] = savedOrder
         end
@@ -881,16 +882,24 @@ function BistooltipData.SaveCustomPriority(slot, className, specName, phase)
     end
     
     CustomPriorities[key] = itemIds
-    
-    -- Persist to saved variables
-    if _G.BistooltipAddon and _G.BistooltipAddon.db and _G.BistooltipAddon.db.char then
-        _G.BistooltipAddon.db.char.custom_priorities = _G.BistooltipAddon.db.char.custom_priorities or {}
-        _G.BistooltipAddon.db.char.custom_priorities[key] = itemIds
+
+    -- Persist to saved variables (account-wide since W4/§12)
+    if _G.BistooltipAddon and _G.BistooltipAddon.db and _G.BistooltipAddon.db.global then
+        local g = _G.BistooltipAddon.db.global
+        g.custom_priorities = g.custom_priorities or {}
+        g.custom_priorities[key] = itemIds
     end
 end
 
-function BistooltipData.RestoreOriginalOrder(slot, className, specName, phase)
-    if not slot or not slot.slot_name then return end
+-- W4: called on database switch — the cached orders belong to the
+-- previously bound DB. Reads re-reconcile from db.global per slot via
+-- LoadCustomPriority (ID-based, so personal order survives the switch).
+function BistooltipData.ResetCustomPriorityCaches()
+    CustomPriorities = {}
+    OriginalOrders = {}
+end
+
+function BistooltipData.RestoreOriginalOrder(slot, className, specName, phase)    if not slot or not slot.slot_name then return end
     
     local key = BistooltipData.GetCustomPriorityKey(className, specName, phase, slot.slot_name)
     local origOrder = OriginalOrders[key]

@@ -1,16 +1,20 @@
 -- Bistooltip/PluginAPI.lua (pure; no WoW API; plain Lua 5.1)
--- Frozen S3 5-function server plugin API over the canonical data model:
+-- Server plugin API over the canonical data model (S3 + S3-6):
 --   BisTooltip_SourceRegistry (sourceID -> facts)
 --   BisTooltip_ItemAcquisition (itemID -> acquisition entries)
 --   Bistooltip_bislists[class][spec][phase] (slot tables with slot_name/enhs + ranked IDs)
--- Semantics: DefineSource/SetAcquisition/SetBiSSlot/SetEnhancement = replace-wins,
--- AddAcquisition = append. Core overrides print a one-time dev warning
--- ("Plugin <name> replaced core ... <ID>", caller via trailing plugin arg or
--- "unknown plugin"). Malformed input raises a pcall-safe error (never silent).
--- Acquisition entries are shape-validated WITHOUT registry membership checks,
--- so plugins may SetAcquisition before DefineSource (any order).
+-- Semantics: DefineSource/SetAcquisition/SetBiSSlot/SetBiSSlotRank/SetEnhancement
+-- = replace-wins, AddAcquisition = append. Core overrides print a one-time dev
+-- warning ("Plugin <name> replaced core ... <ID>", caller via trailing plugin
+-- arg or "unknown plugin"). Malformed input raises a pcall-safe error (never
+-- silent). Acquisition entries are shape-validated WITHOUT registry membership
+-- checks, so plugins may SetAcquisition before DefineSource (any order).
 -- SetEnhancement with phase=nil means COMMON: the slot's enhs is replaced in
 -- EVERY phase of the spec that contains a slot with that slot_name.
+-- SetBiSSlotRank overrides a SINGLE rank (DB-independent server diffs).
+-- W4 overlay: every mutation is recorded (deep-copied) and can be REPLAYED
+-- after a database switch (BisTooltip_ReplayOverlay) — plugins describe the
+-- server, not a specific ranking DB.
 BisTooltip = BisTooltip or {}
 
 local warned = {}
@@ -22,7 +26,53 @@ local function noteOverride(key, msg)
   if not warned[key] then warned[key] = true print(msg) end
 end
 
+-- ---------------------------------------------------------------------------
+-- W4 overlay log + replay
+-- ---------------------------------------------------------------------------
+local Overlay = {}
+local replaying = false
+local function deepCopy(v)
+  if type(v) ~= "table" then return v end
+  local out = {}
+  for k, val in pairs(v) do out[k] = deepCopy(val) end
+  return out
+end
+local function record(fn, ...)
+  if replaying then return end
+  Overlay[#Overlay + 1] = { fn = fn, args = deepCopy({ ... }) }
+end
+-- Re-executes the recorded plugin mutations (call after rebinding
+-- Bistooltip_bislists to another database). Failures are warn-once skips:
+-- a slot missing in the new DB must never raise into the UI.
+function BisTooltip_ReplayOverlay()
+  replaying = true
+  for _, op in ipairs(Overlay) do
+    local fn = BisTooltip[op.fn]
+    if type(fn) == "function" then
+      local ok, err = pcall(fn, BisTooltip, unpack(op.args))
+      if not ok then
+        noteOverride("replay:" .. op.fn .. "|" .. tostring(err),
+          "Plugin overlay replay skipped one op: " .. tostring(err))
+      end
+    end
+  end
+  replaying = false
+end
+
 local KINDS = { DROP = true, TOKEN = true, MARK = true, VENDOR = true, CUSTOM = true }
+-- Byte-level identity of an entry (idempotent-append + replay safety).
+local function entryIdentity(e)
+  local parts = {
+    tostring(e.kind), tostring(e.tier or ""), tostring(e.family or ""),
+    tostring(e.label or ""), tostring(e.source or ""),
+    tostring(e.displayVariant or ""), tostring(e.variantLabel or ""),
+  }
+  for _, c in ipairs(e.cost or {}) do
+    parts[#parts + 1] = tostring(c.currency or "") .. "#"
+      .. tostring(c.item or 0) .. "#" .. tostring(c.amount or 0)
+  end
+  return table.concat(parts, "\0")
+end
 local function checkEntry(e, what)
   if type(e) ~= "table" then error(what .. ": entry must be a table", 2) end
   if not KINDS[e.kind] then error(what .. ": unknown kind " .. tostring(e.kind), 2) end
@@ -149,6 +199,7 @@ function BisTooltip:DefineSource(sourceID, def, plugin)
       "Plugin " .. plugName(plugin) .. " replaced core source " .. sourceID)
   end
   BisTooltip_SourceRegistry[sourceID] = def
+  record("DefineSource", sourceID, def, plugin)
   return true
 end
 
@@ -169,10 +220,11 @@ function BisTooltip:SetAcquisition(itemID, entries, plugin)
       "Plugin " .. plugName(plugin) .. " replaced core acquisition " .. tostring(itemID))
   end
   BisTooltip_ItemAcquisition[itemID] = entries
+  record("SetAcquisition", itemID, entries, plugin)
   return true
 end
 
-function BisTooltip:AddAcquisition(itemID, entry)
+function BisTooltip:AddAcquisition(itemID, entry, plugin)
   local what = "BisTooltip.AddAcquisition"
   if type(itemID) ~= "number" or itemID <= 0 then
     error(what .. ": itemID must be a positive number", 2)
@@ -188,7 +240,17 @@ function BisTooltip:AddAcquisition(itemID, entry)
   elseif type(list) ~= "table" then
     error(what .. ": existing acquisition for item " .. tostring(itemID) .. " is corrupt", 2)
   end
+  -- Idempotent append: a byte-identical entry already present is a no-op
+  -- (keeps overlay replay from duplicating lines across DB switches).
+  local identity = entryIdentity(entry)
+  for _, existing in ipairs(list) do
+    if entryIdentity(existing) == identity then
+      record("AddAcquisition", itemID, entry, plugin)
+      return true
+    end
+  end
   table.insert(list, entry)
+  record("AddAcquisition", itemID, entry, plugin)
   return true
 end
 
@@ -208,6 +270,42 @@ function BisTooltip:SetBiSSlot(className, specName, phase, slotName, ids, plugin
   noteOverride("bis:" .. className .. "|" .. specName .. "|" .. phase .. "|" .. slotName,
     "Plugin " .. plugName(plugin) .. " replaced core BiS slot "
     .. className .. "/" .. specName .. "/" .. phase .. "/" .. slotName)
+  record("SetBiSSlot", className, specName, phase, slotName, ids, plugin)
+  return true
+end
+
+-- S3-6: rank-level override — the granular form plugins should prefer for
+-- server diffs ("rank 1 = custom legendary"). DB-independent: the rest of
+-- the ranked list stays from the active database, so the diff survives
+-- ranking updates and database switches (overlay replay).
+function BisTooltip:SetBiSSlotRank(className, specName, phase, slotName, rank, itemID, plugin)
+  local what = "BisTooltip.SetBiSSlotRank"
+  if type(rank) ~= "number" or rank < 1 or rank % 1 ~= 0 then
+    error(what .. ": rank must be a positive integer", 2)
+  end
+  if type(itemID) ~= "number" or itemID <= 0 then
+    error(what .. ": itemID must be a positive number", 2)
+  end
+  local slot = findSlot(className, specName, phase, slotName, what)
+  local maxRank = 0
+  for k in pairs(slot) do
+    if type(k) == "number" and k > maxRank then maxRank = k end
+  end
+  if rank > maxRank then
+    error(what .. ": rank " .. rank .. " exceeds slot length " .. maxRank, 2)
+  end
+  for i = 1, maxRank do
+    if i ~= rank and slot[i] == itemID then
+      noteOverride("bisrank-dup:" .. className .. "|" .. specName .. "|" .. phase .. "|" .. slotName .. "|" .. itemID,
+        "Plugin " .. plugName(plugin) .. ": item " .. itemID .. " already at rank " .. i
+        .. " of " .. className .. "/" .. specName .. "/" .. phase .. "/" .. slotName .. " (duplicate ranking)")
+    end
+  end
+  slot[rank] = itemID
+  noteOverride("bisrank:" .. className .. "|" .. specName .. "|" .. phase .. "|" .. slotName .. "|" .. rank,
+    "Plugin " .. plugName(plugin) .. " replaced core BiS rank " .. rank
+    .. " of " .. className .. "/" .. specName .. "/" .. phase .. "/" .. slotName)
+  record("SetBiSSlotRank", className, specName, phase, slotName, rank, itemID, plugin)
   return true
 end
 
@@ -234,6 +332,7 @@ function BisTooltip:SetEnhancement(className, specName, phase, slotName, enhs, p
       end
     end
     if n == 0 then error(what .. ": unknown slot " .. slotName .. " (no phase of " .. specName .. " has it)", 2) end
+    record("SetEnhancement", className, specName, phase, slotName, enhs, plugin)
     return true
   end
   local slot = findSlot(className, specName, phase, slotName, what)
@@ -241,6 +340,7 @@ function BisTooltip:SetEnhancement(className, specName, phase, slotName, enhs, p
   noteOverride("enh:" .. className .. "|" .. specName .. "|" .. phase .. "|" .. slotName,
     "Plugin " .. plugName(plugin) .. " replaced core enhancements "
     .. className .. "/" .. specName .. "/" .. phase .. "/" .. slotName)
+  record("SetEnhancement", className, specName, phase, slotName, enhs, plugin)
   return true
 end
 

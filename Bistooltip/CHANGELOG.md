@@ -1,5 +1,25 @@
 # BisTooltip Changelog
 
+## META-Z W4 (2026-09-08) — database registry, faction assembly, account-wide state
+
+### Changes
+
+1. **Three selectable ranking databases** (options → Data source, default WoWSimsBP)
+   - `Bistooltip_wowsims_final.lua` generated OFFLINE by `tools/assemble_wowsims.lua`
+     (1:1 port of upstream's faction assembly): alliance base (2907 slots) +
+     `horde_overrides` — only the 956 slots (32.9%) where horde differs — applied
+     at runtime by reference swaps (706 KB loaded instead of the 1.98 MB 3-table file)
+   - `wh` and cleaned `wowtbc` join as plain aliases; upstream input files stay
+     in the repo but are no longer loaded
+2. **SetBiSSlotRank** — 6th plugin API function: single-rank, DB-independent
+   server diffs (rank validation + duplicate-rank warning)
+3. **Overlay replay** — every plugin mutation is recorded (deep-copied) and
+   replayed on database switch; AddAcquisition is now idempotent (byte-identical
+   appends are no-ops), so replays never duplicate lines; failures warn-once
+4. **Account-wide state (§12)** — `data_source` + personal BiS priorities moved
+   to `db.global` (one-time migration from `db.char`; char copies dormant);
+   personal order caches reset on database switch and re-reconciled by ID
+
 ## META-Z W7 + S2-5 (2026-09-08) — vendor scanner addon + cost units
 
 ### Changes

@@ -35,6 +35,8 @@ Libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
 # ============================================================
 GemData.lua
 Bistooltip_classes.lua
+Bistooltip_wowsims_final.lua
+Bistooltip_wh_bislists.lua
 Bistooltip_wowtbc_bislists.lua
 Bistooltip_horde_to_ali.lua
 EmblemData.lua

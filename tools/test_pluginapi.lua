@@ -100,4 +100,28 @@ BisTooltip:SetEnhancement("Warrior", "Fury", nil, "Weapon", { { type = "item", i
 assert(Bistooltip_bislists["Warrior"]["Fury"]["T9"][2].enhs[1].id == 777, "COMMON must hit T9")
 assert(Bistooltip_bislists["Warrior"]["Fury"]["T10"][2].enhs[1].id == 777, "COMMON must hit T10")
 
+-- SetBiSSlotRank (S3-6): single-rank override, rest of the list untouched.
+BisTooltip:SetBiSSlotRank("Warrior", "Fury", "T9", "Chest", 1, 130031, "RankPlugin")
+local rslot = Bistooltip_bislists["Warrior"]["Fury"]["T9"][1]
+assert(rslot[1] == 130031 and rslot[2] == 222, "SetBiSSlotRank must replace one rank only")
+assert(rslot.slot_name == "Chest" and rslot.enhs[1].id == 1, "SetBiSSlotRank must keep slot_name/enhs")
+assert(not pcall(BisTooltip.SetBiSSlotRank, BisTooltip, "Warrior", "Fury", "T9", "Chest", 9, 1),
+  "rank beyond slot length must be rejected")
+assert(not pcall(BisTooltip.SetBiSSlotRank, BisTooltip, "Warrior", "Fury", "T9", "Chest", 1.5, 1),
+  "fractional rank must be rejected")
+
+-- Overlay replay (W4): mutations survive a database rebind.
+local savedRank1 = rslot[1]
+Bistooltip_bislists = { -- simulate switching to a FRESH database
+  Warrior = { Fury = { T9 = {
+    { slot_name = "Chest", enhs = { { type = "spell", id = 1 } }, 111, 222 },
+    { slot_name = "Weapon", enhs = { { type = "spell", id = 9 } }, 444 },
+  } } } }
+BisTooltip_ReplayOverlay()
+local fresh = Bistooltip_bislists["Warrior"]["Fury"]["T9"][1]
+assert(fresh[1] == 130031, "overlay replay must re-apply SetBiSSlotRank on the new DB")
+-- acquisitions replay too (DB-independent)
+assert(BisTooltip_ItemAcquisition[1] and #BisTooltip_ItemAcquisition[1] >= 2,
+  "overlay replay must re-apply acquisition ops")
+
 print("pluginapi: OK")

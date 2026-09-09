@@ -19,11 +19,15 @@ local icon_name = "BisTooltipIcon"
 -- ============================================================
 
 local sources = {
-    wowtbc = "wowtbc"
+    wowsims = "wowsims",
+    wowtbc = "wowtbc",
+    wh = "wh",
 }
 
 Bistooltip_source_to_url = {
-    ["wowtbc"] = "wowtbc.gg/wotlk"
+    ["wowsims"] = "WoWSimsBP (STANDARD)",
+    ["wowtbc"] = "wowtbc.gg",
+    ["wh"] = "Whitemane (wh)",
 }
 
 -- ============================================================
@@ -31,21 +35,24 @@ Bistooltip_source_to_url = {
 -- ============================================================
 
 local db_defaults = {
+    -- Account-wide (W4 §12): database choice and personal BiS priorities
+    -- are shared across characters; UI-only preferences stay per-char.
+    global = {
+        data_source = "wowsims",
+        custom_priorities = {},
+    },
     char = {
         -- Selection state
         class_index = 1,
         spec_index = 1,
         phase_index = 1,
-        
+
         -- Filtering
         filter_specs = {},
         highlight_spec = {},
         filter_class_names = true,
         show_item_source = true,
 
-        -- Data source
-        data_source = "wowtbc",
-        
         -- UI preferences
         minimap_icon = true,
         tooltip_with_ctrl = false,
@@ -184,12 +191,12 @@ local configTable = {
             values = Bistooltip_source_to_url,
             -- FIXED: select type uses (info, value) not (info, key, val)
             set = function(info, value)
-                BistooltipAddon.db.char.data_source = value
+                BistooltipAddon.db.global.data_source = value
                 BistooltipAddon:changeSpec(value)
             end,
             -- FIXED: select type uses (info) not (info, key)
             get = function(info)
-                return BistooltipAddon.db.char.data_source
+                return BistooltipAddon.db.global.data_source
             end
         },
         header_filter = {
@@ -351,12 +358,12 @@ local function OpenSourceSelectDialog()
 
     local sourceDropdown = AceGUI:Create("Dropdown")
     sourceDropdown:SetCallback("OnValueChanged", function(_, _, key)
-        BistooltipAddon.db.char.data_source = key
+        BistooltipAddon.db.global.data_source = key
         BistooltipAddon:changeSpec(key)
     end)
     sourceDropdown:SetRelativeWidth(1)
     sourceDropdown:SetList(Bistooltip_source_to_url)
-    sourceDropdown:SetValue(BistooltipAddon.db.char.data_source)
+    sourceDropdown:SetValue(BistooltipAddon.db.global.data_source)
     frame:AddChild(sourceDropdown)
 end
 
@@ -366,7 +373,21 @@ end
 
 local function MigrateAddonDB()
     local db = BistooltipAddon.db.char
-    
+
+    -- W4 (§12): account-wide migration — one-time copy of the old
+    -- per-character values into db.global; char copies stay dormant.
+    local gdb = BistooltipAddon.db.global
+    if db.data_source ~= nil and gdb.data_source == "wowsims"
+        and db.data_source ~= "wowsims" then
+        gdb.data_source = db.data_source
+    end
+    if type(db.custom_priorities) == "table" then
+        gdb.custom_priorities = gdb.custom_priorities or {}
+        for k, v in pairs(db.custom_priorities) do
+            if gdb.custom_priorities[k] == nil then gdb.custom_priorities[k] = v end
+        end
+    end
+
     -- Initial migration
     if not db.version then
         db.version = 6.1
@@ -379,7 +400,7 @@ local function MigrateAddonDB()
 
     -- Set default data source if not set
     if db.data_source == nil then
-        db.data_source = "wowtbc"
+        db.data_source = "wowsims"
     end
 
     -- Version 6.1 -> 6.2 migration
@@ -405,15 +426,42 @@ end
 -- ============================================================
 
 local function EnableSpec(spec_name)
-    if spec_name == sources.wowtbc then
+    -- W4 DB registry (spec §4): wowsims = assembled STANDARD (alliance base
+    -- + horde slot overrides via reference swaps); wowtbc / wh = plain alias.
+    -- Unknown keys fall back to the STANDARD.
+    local key = sources[spec_name] and spec_name or "wowsims"
+    if key == "wowsims" then
+        Bistooltip_bislists = Bistooltip_wowsims_final
+        Bistooltip_classes = Bistooltip_wowsims_final_classes
+        Bistooltip_phases = Bistooltip_wowsims_final_phases
+        if type(Bistooltip_wowsims_horde_overrides) == "table"
+            and type(UnitFactionGroup) == "function"
+            and UnitFactionGroup("player") == "Horde" then
+            for className, specs in pairs(Bistooltip_wowsims_horde_overrides) do
+                local classData = Bistooltip_bislists[className]
+                if type(classData) == "table" then
+                    for specName, phases in pairs(specs) do
+                        local specData = classData[specName]
+                        if type(specData) == "table" then
+                            for phaseName, idxMap in pairs(phases) do
+                                local phaseList = specData[phaseName]
+                                if type(phaseList) == "table" then
+                                    for idx, slot in pairs(idxMap) do
+                                        phaseList[idx] = slot
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    elseif key == "wh" then
+        Bistooltip_bislists = Bistooltip_wh_bislists
+        Bistooltip_classes = Bistooltip_wh_classes
+        Bistooltip_phases = Bistooltip_wh_phases
+    else -- wowtbc
         Bistooltip_bislists = Bistooltip_wowtbc_bislists
-        Bistooltip_items = Bistooltip_wowtbc_items
-        Bistooltip_classes = Bistooltip_wowtbc_classes
-        Bistooltip_phases = Bistooltip_wowtbc_phases
-    else
-        -- Handle unexpected spec_name - fall back to wowtbc
-        Bistooltip_bislists = Bistooltip_wowtbc_bislists
-        Bistooltip_items = Bistooltip_wowtbc_items
         Bistooltip_classes = Bistooltip_wowtbc_classes
         Bistooltip_phases = Bistooltip_wowtbc_phases
     end
@@ -422,6 +470,13 @@ local function EnableSpec(spec_name)
     if type(Bistooltip_phases) ~= "table" then
         DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Bis-Tooltip:|r Phase data not loaded. Check addon files.")
         return
+    end
+
+    -- W4 overlay replay: server plugins describe the SERVER, not a ranking
+    -- DB — their mutations follow the user across database switches
+    -- (warn-once skips for slots missing in the new DB).
+    if type(BisTooltip_ReplayOverlay) == "function" then
+        BisTooltip_ReplayOverlay()
     end
 
     BuildFilterSpecOptions()
@@ -502,8 +557,14 @@ function BistooltipAddon:changeSpec(spec_name)
     self.db.char.class_index = 1
     self.db.char.spec_index = 1
     self.db.char.phase_index = 1
-    
-    -- Enable new data source
+
+    -- Personal-BiS order caches are keyed to the previously bound database
+    -- (ID reconciliation re-applies the saved order on read)
+    if BistooltipData and BistooltipData.ResetCustomPriorityCaches then
+        BistooltipData.ResetCustomPriorityCaches()
+    end
+
+    -- Enable new data source (binds aliases + replays the plugin overlay)
     EnableSpec(spec_name)
     
     -- Clear caches
@@ -535,7 +596,7 @@ function BistooltipAddon:initConfig()
     MigrateAddonDB()
 
     -- Enable current data source
-    EnableSpec(self.db.char.data_source)
+    EnableSpec(self.db.global.data_source)
 
     -- Build filter options
     BuildFilterSpecOptions()
