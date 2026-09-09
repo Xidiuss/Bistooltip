@@ -1,5 +1,29 @@
 # BisTooltip Changelog
 
+## META-Z hotfix round 1 (2026-09-10) — owner in-game feedback
+
+### Fixed
+
+1. **Sorting crash** (`invalid order function`): heroic/normal comparator could
+   return `nil` when a vendor item had no raid zone — both comparators now
+   return real booleans
+2. **VENDOR mode rebuilt per-ITEM** (was per-slot): slots are replaced by
+   virtual slots holding only purchasable ranks — raid items no longer leak
+   into the mode (T8 shoulders, Naxx drops), "unknown vendor" disappeared,
+   group cost totals are the true sum (5×20 = 100, not 320)
+3. **Database switch now fully refreshes the UI** even when the options panel
+   covers the window: class/spec/phase dropdowns rebuild for the new database
+   (fixes Rogue tab showing DK "Blood tank" until a manual refresh)
+4. **TOC/TOGC shorthand** (owner D17): Trial family renders `TOC [25N] - Boss`
+   for N and `TOGC [25HC] - Tribute Chest` for HC; **VoA** unified (D18)
+5. **T9-232 garbage sources removed** (D17c): the 19 mechanical
+   "Tier 9 <spec> (HC5, Raids25)" zones no longer produce DROP identities —
+   those items show their proper `T9 - VENDOR: N Emblem of Triumph` lines
+6. **N difficulties are green** now (D20): `[10N]/[25N]/<25N>` render green
+   instead of gray (HC red / HM orange unchanged)
+7. **wh database renamed "Wowhead (wh)"** in the dropdown (owner D-B5: the
+   plugin is Whitemane; the ranking base is Wowhead)
+
 ## META-Z W6 + W8 (2026-09-08) — Whitemane plugin, clean core, unified gate
 
 ### Changes

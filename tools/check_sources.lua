@@ -23,8 +23,8 @@ local DIFF_OK = { ["10N"] = true, ["25N"] = true, ["10HC"] = true, ["25HC"] = tr
   ["10HM"] = true, ["25HM"] = true, HC = true, [""] = true }
 local RAIDS = { -- canonical instance -> must carry a raid-mode difficulty
   ["Naxxramas"] = true, ["Obsidian Sanctum"] = true, ["Eye of Eternity"] = true,
-  ["Onyxia's Lair"] = true, ["Ulduar"] = true, ["Trial of the Crusader"] = true,
-  ["Icecrown Citadel"] = true, ["Ruby Sanctum"] = true, ["Vault of Archavon"] = true,
+  ["Onyxia's Lair"] = true, ["Ulduar"] = true, ["TOC"] = true, ["TOGC"] = true,
+  ["Icecrown Citadel"] = true, ["Ruby Sanctum"] = true, ["VoA"] = true,
 }
 local DUNGEONS = { -- 5-mans: normal ("") or heroic ("HC") only
   ["Trial of the Champion"] = true, ["The Forge of Souls"] = true, ["Pit of Saron"] = true,
@@ -48,7 +48,7 @@ for sid, s in pairs(reg) do
   assert(s.boss ~= "Taldaram", "unmerged boss alias Taldaram: " .. sid)
   assert(s.boss ~= "Trash Mobs", "unmerged boss alias Trash Mobs: " .. sid)
   assert(s.boss ~= "Mark" and s.boss ~= "Mark HC", "fake aggregated boss resurfaced (W2 removed these): " .. sid)
-  if s.instance == "Vault of Archavon" then
+  if s.instance == "VoA" then
     voaBosses[s.difficulty .. "|" .. s.boss] = true
   end
   if RAIDS[s.instance] then
@@ -57,7 +57,7 @@ for sid, s in pairs(reg) do
       assert(s.difficulty == "10N" or s.difficulty == "25N"
         or s.difficulty == "10HM" or s.difficulty == "25HM",
         "Ulduar source outside 10N/25N/10HM/25HM (spec S2-3, Q10): " .. sid)
-    elseif s.instance == "Vault of Archavon" then
+    elseif s.instance == "VoA" then
       assert(s.difficulty == "10N" or s.difficulty == "25N", "VOA source outside 10N/25N: " .. sid)
     else
       assert(s.difficulty ~= "10HM" and s.difficulty ~= "25HM",

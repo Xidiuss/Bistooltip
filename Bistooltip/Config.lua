@@ -27,7 +27,7 @@ local sources = {
 Bistooltip_source_to_url = {
     ["wowsims"] = "WoWSimsBP (STANDARD)",
     ["wowtbc"] = "wowtbc.gg",
-    ["wh"] = "Whitemane (wh)",
+    ["wh"] = "Wowhead (wh)" -- wh = Wowhead WotLK ranking (census: no data-level Whitemane link),
 }
 
 -- ============================================================

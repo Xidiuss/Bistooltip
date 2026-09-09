@@ -3998,6 +3998,34 @@ drawSpecData = function()
         slots, searchText, showOnlyMissing, vendorFilterMode, isHorde, bisChecklistMode
     )
 
+    -- W5/VENDOR (owner feedback 2026-09-10): the mode answers "what can I
+    -- BUY" — it must render PER ITEM, not per slot. Replace each slot with a
+    -- virtual slot holding ONLY the ranks that carry a vendor cost, so:
+    -- raid items never leak in (T8 shoulders / Naxx drops), grouping by
+    -- rank-1 is always the vendor item, and group cost totals are the real
+    -- sum. Slots with no purchasable rank disappear entirely.
+    if vendorFilterMode then
+        local vendorSlots = {}
+        for _, slot in ipairs(filteredSlots) do
+            local ids = {}
+            for i = 1, 6 do
+                local id = slot[i]
+                if type(id) == "number" and id > 0 then
+                    local disp = id
+                    if Data.GetDisplayItemID then disp = Data.GetDisplayItemID(id, isHorde) end
+                    local _, currency = BisTooltip_GetVendorCost(disp)
+                    if currency then ids[#ids + 1] = id end
+                end
+            end
+            if ids[1] then
+                local vslot = { slot_name = slot.slot_name, enhs = slot.enhs }
+                for i, id in ipairs(ids) do vslot[i] = id end
+                vendorSlots[#vendorSlots + 1] = vslot
+            end
+        end
+        filteredSlots = vendorSlots
+    end
+
     -- Store for progress calculation
     _G.Bistooltip_allSlotsForProgress = allSlotsForProgress
 
@@ -5961,13 +5989,26 @@ function BistooltipAddon:reloadData()
     buildClassDict()
     loadData()
 
+    -- W4 (owner feedback 2026-09-10): dropdowns must be rebuilt for the
+    -- bound database even when the main frame is hidden (e.g. the options
+    -- panel is open during a database switch) — stale widgets previously
+    -- left the class tab on the old database while spec indices resolved
+    -- against the new one (Rogue tab showing DK "Blood tank").
+    if classDropdown then
+        classDropdown:SetValue(State.Get("class_index") or 1)
+    end
+    if specDropdown then
+        buildSpecsDict(State.Get("class_index") or 1)
+        specDropdown:SetList(spec_options)
+        specDropdown:SetValue(State.Get("spec_index") or 1)
+    end
+    if phaseDropdown and _G.Bistooltip_phases then
+        phaseDropdown:SetList(_G.Bistooltip_phases)
+        phaseDropdown:SetValue(State.Get("phase_index") or 1)
+    end
+
     -- Refresh if frame is open
     if mainFrame and mainFrame.frame:IsShown() then
-        if specDropdown then
-            buildSpecsDict(State.Get("class_index") or 1)
-            specDropdown:SetList(spec_options)
-            specDropdown:SetValue(State.Get("spec_index") or 1)
-        end
         -- Force immediate redraw
         drawSpecData()
         -- Also preload items in background

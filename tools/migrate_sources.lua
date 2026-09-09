@@ -21,8 +21,8 @@ assert(type(Bistooltip_emblem_items) == "table", "Bistooltip_emblem_items missin
 local CANON_ZONE = {
   -- 5-man heroic splits share one instance identity (mode via ZONE_DIFFICULTY)
   ["Trial of the Champion (Heroic)"] = "Trial of the Champion",
-  ["Vault of Archavon (10)"] = "Vault of Archavon",
-  ["Vault of Archavon (25)"] = "Vault of Archavon",
+  ["Vault of Archavon (10)"] = "VoA",
+  ["Vault of Archavon (25)"] = "VoA",
   ["The Forge of Souls (Heroic)"] = "The Forge of Souls",
   ["Pit of Saron (Heroic)"] = "Pit of Saron",
   ["Halls of Reflection (Heroic)"] = "Halls of Reflection",
@@ -425,7 +425,7 @@ local function isTrophyZone(zone)
 end
 
 local registry, acquisition = {}, {}
-local nTrophy, nDeduped, nMarkGear, nQuest = 0, 0, 0, 0
+local nTrophy, nDeduped, nMarkGear, nQuest, nMechSkip = 0, 0, 0, 0, 0
 local function sourceID(inst, diff, boss)
   return ((inst .. "_" .. (diff or "") .. "_" .. boss):gsub("[^%w]+", "_"):gsub("_+", "_"):upper())
 end
@@ -472,8 +472,20 @@ for zone, bosses in pairs(lootTable) do
         end
       end
     else
+      -- Mechanical vendor zones ("Tier 9 <spec> (HC5, Raids25)") name the
+      -- emblem purchase path, not a place; their items already carry VENDOR
+      -- entries from EmblemData. Skipping them prevents garbage identities
+      -- like "Tier 9 Paladin Retrubution (HC5, Raids25) - Emblem of Triumph".
+      if zone:find("^Tier 9 .-%(HC5, Raids25%)") then
+        nMechSkip = nMechSkip + 1
+      else
       local inst = canonInstance(zone)
       local diff = difficultyOf(zone)
+      -- Owner naming (D17/D18, 2026-09-10): the Trial family uses the
+      -- TOC/TOGC shorthand, keyed on difficulty (N = TOC, HC = TOGC).
+      if inst == "Trial of the Crusader" then
+        inst = (diff == "10HC" or diff == "25HC") and "TOGC" or "TOC"
+      end
       local suffix = SOURCE_SUFFIX[zone] or ""
       local dtier = tierOf(zone)
       for boss, items in pairs(bosses) do
@@ -487,6 +499,7 @@ for zone, bosses in pairs(lootTable) do
           addEntry(itemID, entry)
         end
       end
+      end -- mechanical-vendor-zone guard
     end
   end
 end
@@ -621,5 +634,5 @@ writeAcquisition("Bistooltip/ItemAcquisition.lua")
 local nreg, nacq = 0, 0
 for _ in pairs(registry) do nreg = nreg + 1 end
 for _ in pairs(acquisition) do nacq = nacq + 1 end
-print(string.format("migrated: %d sources, %d items (%d TROPHY entries, %d deduped, %d MARK-gear items, %d quest drops)",
-  nreg, nacq, nTrophy, nDeduped, nMarkGear, nQuest))
+print(string.format("migrated: %d sources, %d items (%d TROPHY entries, %d deduped, %d MARK-gear items, %d quest drops, %d mech-vendor zones skipped)",
+  nreg, nacq, nTrophy, nDeduped, nMarkGear, nQuest, nMechSkip))

@@ -65,7 +65,7 @@ print("vendorcost: OK (" .. #vcases .. " cases)")
 -- currency 00FFCC, diffN 9D9D9D, diffHC FF4040, diffHM FF9900.
 local ccases = {
   { { kind = "DROP", source = "VEZAX" },
-    "|cFFFFD100Ulduar|r |cFF9D9D9D[25N]|r - |cFFFFFFFFGeneral Vezax|r" },
+    "|cFFFFD100Ulduar|r |cFF00FF00[25N]|r - |cFFFFFFFFGeneral Vezax|r" },
   { { kind = "DROP", source = "AKN" },
     "|cFFFFD100Ahn'kahet: The Old Kingdom|r |cFFFF4040[HC]|r - |cFFFFFFFFPrince Taldaram|r" },
   { { kind = "TOKEN", tier = "T8", family = "Wayward Protector", source = "HODIR_HM" },

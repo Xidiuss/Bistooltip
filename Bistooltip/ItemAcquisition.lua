@@ -10078,72 +10078,72 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39492] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39493] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39494] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39495] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39496] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39497] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39498] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39499] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39500] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39514] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39515] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39517] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39518] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39519] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39521] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39523] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39528] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39529] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39530] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39531] = {
@@ -10159,33 +10159,33 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "HALLS_OF_LIGHTNING_IONAR" },
   },
   [39538] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39539] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39542] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39543] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39544] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39545] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39546] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39547] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39548] = {
@@ -10195,33 +10195,33 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39554] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39555] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39556] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39557] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39558] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39560] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39561] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39564] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39565] = {
@@ -10231,69 +10231,69 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39579] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39580] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39581] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39582] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39583] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39588] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39589] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39590] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39591] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39592] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39593] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39594] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39595] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39596] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39597] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39601] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39602] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39603] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39604] = {
@@ -10303,69 +10303,69 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39606] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39607] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39608] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39609] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39610] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39611] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39612] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39613] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39617] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39618] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39619] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39620] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39621] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39622] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39623] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39624] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39625] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39626] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39627] = {
@@ -10375,51 +10375,51 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39629] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39630] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39631] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39632] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39633] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39634] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39635] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39636] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39637] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7" },
   },
   [39638] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THE_FOUR_HORSEMEN", tier = "T7" },
   },
   [39639] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7" },
   },
   [39640] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7" },
   },
   [39641] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "NAXXRAMAS_10N_THADDIUS", tier = "T7" },
   },
   [39642] = {
@@ -11230,7 +11230,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_TRASH_MOBS" },
   },
   [40415] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40416] = {
@@ -11238,17 +11238,17 @@ BisTooltip_ItemAcquisition = {
   },
   [40417] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40418] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40419] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40420] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40421] = {
@@ -11256,11 +11256,11 @@ BisTooltip_ItemAcquisition = {
   },
   [40422] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40423] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40424] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
@@ -11300,7 +11300,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
   },
   [40445] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40446] = {
@@ -11311,11 +11311,11 @@ BisTooltip_ItemAcquisition = {
   },
   [40448] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40449] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40450] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
@@ -11327,7 +11327,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
   },
   [40454] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40455] = {
@@ -11338,17 +11338,17 @@ BisTooltip_ItemAcquisition = {
   },
   [40457] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40458] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40459] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40460] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40461] = {
@@ -11356,17 +11356,17 @@ BisTooltip_ItemAcquisition = {
   },
   [40462] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40463] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40465] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40466] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40467] = {
@@ -11374,21 +11374,21 @@ BisTooltip_ItemAcquisition = {
   },
   [40468] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40469] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40470] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40471] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40472] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40473] = {
@@ -11414,17 +11414,17 @@ BisTooltip_ItemAcquisition = {
   },
   [40493] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40494] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40495] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40496] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40497] = {
@@ -11435,17 +11435,17 @@ BisTooltip_ItemAcquisition = {
   },
   [40500] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40502] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40503] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40504] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40505] = {
@@ -11453,17 +11453,17 @@ BisTooltip_ItemAcquisition = {
   },
   [40506] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40507] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40508] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40509] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40510] = {
@@ -11474,17 +11474,17 @@ BisTooltip_ItemAcquisition = {
   },
   [40512] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40513] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40514] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40515] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40516] = {
@@ -11492,7 +11492,7 @@ BisTooltip_ItemAcquisition = {
   },
   [40517] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40518] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
@@ -11501,7 +11501,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_10N_MALYGOS" },
   },
   [40520] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40521] = {
@@ -11509,24 +11509,24 @@ BisTooltip_ItemAcquisition = {
   },
   [40522] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40523] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40524] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40525] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40526] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_10N_MALYGOS" },
   },
   [40527] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40528] = {
@@ -11534,7 +11534,7 @@ BisTooltip_ItemAcquisition = {
   },
   [40529] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40530] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
@@ -11556,10 +11556,10 @@ BisTooltip_ItemAcquisition = {
   },
   [40544] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40545] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40546] = {
@@ -11567,7 +11567,7 @@ BisTooltip_ItemAcquisition = {
   },
   [40547] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40548] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
@@ -11577,10 +11577,10 @@ BisTooltip_ItemAcquisition = {
   },
   [40550] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40552] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40554] = {
@@ -11591,7 +11591,7 @@ BisTooltip_ItemAcquisition = {
   },
   [40556] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40557] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
@@ -11601,7 +11601,7 @@ BisTooltip_ItemAcquisition = {
   },
   [40559] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40560] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
@@ -11613,7 +11613,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
   },
   [40563] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40564] = {
@@ -11627,17 +11627,17 @@ BisTooltip_ItemAcquisition = {
   },
   [40567] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40568] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40569] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40570] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40571] = {
@@ -11645,17 +11645,17 @@ BisTooltip_ItemAcquisition = {
   },
   [40572] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40573] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40574] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40575] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40576] = {
@@ -11663,17 +11663,17 @@ BisTooltip_ItemAcquisition = {
   },
   [40577] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40578] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
   },
   [40579] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THE_FOUR_HORSEMEN", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40580] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7" },
   },
   [40581] = {
@@ -11681,7 +11681,7 @@ BisTooltip_ItemAcquisition = {
   },
   [40583] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40584] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7" },
@@ -11931,22 +11931,22 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 40 } } },
   },
   [40781] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40782] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40783] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40784] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40785] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40786] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40790] = {
     { kind = "DROP", source = "ARENA_SEASON_7_WARRIOR_SET" },
@@ -11958,52 +11958,52 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ARENA_SEASON_7_PALADIN_SET" },
   },
   [40801] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40802] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40803] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40804] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40805] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40806] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40807] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [40808] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [40809] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [40810] = {
     { kind = "DROP", source = "ARENA_SEASON_7_WARRIOR_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [40811] = {
     { kind = "DROP", source = "ARENA_SEASON_7_DEATH_KNIGHT" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [40812] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PALADIN_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [40822] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_GRIZZLY_HILLS" },
@@ -12018,52 +12018,52 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ARENA_SEASON_7_PALADIN_SET" },
   },
   [40840] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40841] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40842] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40844] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40845] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40846] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40847] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [40848] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [40849] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [40850] = {
     { kind = "DROP", source = "ARENA_SEASON_7_WARRIOR_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [40851] = {
     { kind = "DROP", source = "ARENA_SEASON_7_DEATH_KNIGHT" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [40852] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PALADIN_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [40867] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_GRIZZLY_HILLS" },
@@ -12088,89 +12088,89 @@ BisTooltip_ItemAcquisition = {
   },
   [40879] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_PLATE" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [40880] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_PLATE" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [40881] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [40882] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [40883] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [40884] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [40887] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_PLATE" },
   },
   [40888] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_PLATE" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [40889] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [40890] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [40895] = {
     { kind = "DROP", source = "PROFESSION_ENGINEERING" },
   },
   [40904] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40905] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40910] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PALADIN_SET" },
   },
   [40925] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40926] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40927] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [40928] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PALADIN_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [40934] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PALADIN_SET" },
   },
   [40937] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40938] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40939] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [40940] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PALADIN_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [40942] = {
     { kind = "DROP", source = "PROFESSION_BLACKSMITHING" },
@@ -12225,51 +12225,51 @@ BisTooltip_ItemAcquisition = {
   },
   [40974] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_PLATE" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [40975] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_PLATE" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [40976] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [40977] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [40978] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [40979] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [40982] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_PLATE" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [40983] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [40984] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [40988] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40989] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40990] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40991] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [40994] = {
     { kind = "DROP", source = "ARENA_SEASON_7_SHAMAN_SET" },
@@ -12278,36 +12278,36 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ARENA_SEASON_7_SHAMAN_SET" },
   },
   [40999] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41000] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41001] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41002] = {
     { kind = "DROP", source = "ARENA_SEASON_7_SHAMAN_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41005] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41006] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41007] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41008] = {
     { kind = "DROP", source = "ARENA_SEASON_7_SHAMAN_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41014] = {
     { kind = "DROP", source = "ARENA_SEASON_7_SHAMAN_SET" },
@@ -12316,36 +12316,36 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ARENA_SEASON_7_SHAMAN_SET" },
   },
   [41025] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41026] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41027] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41028] = {
     { kind = "DROP", source = "ARENA_SEASON_7_SHAMAN_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41031] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41032] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41033] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41034] = {
     { kind = "DROP", source = "ARENA_SEASON_7_SHAMAN_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41039] = {
     { kind = "DROP", source = "ARENA_SEASON_7_SHAMAN_SET" },
@@ -12358,7 +12358,7 @@ BisTooltip_ItemAcquisition = {
   },
   [41048] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41049] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
@@ -12367,96 +12367,96 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
   },
   [41051] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41052] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41054] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41055] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41056] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41059] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41060] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41061] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41063] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
   },
   [41064] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41065] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41066] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41068] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
   },
   [41069] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41070] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41071] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41073] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
   },
   [41074] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41075] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41076] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41079] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41080] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41082] = {
     { kind = "DROP", source = "ARENA_SEASON_7_SHAMAN_SET" },
   },
   [41085] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41086] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41088] = {
     { kind = "DROP", source = "ARENA_SEASON_7_HUNTER_SET" },
@@ -12486,36 +12486,36 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "PROFESSION_BLACKSMITHING" },
   },
   [41135] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41136] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41137] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41138] = {
     { kind = "DROP", source = "ARENA_SEASON_7_SHAMAN_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41141] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41142] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41143] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41144] = {
     { kind = "DROP", source = "ARENA_SEASON_7_HUNTER_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41152] = {
     { kind = "DROP", source = "ARENA_SEASON_7_SHAMAN_SET" },
@@ -12524,7 +12524,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ARENA_SEASON_7_HUNTER_SET" },
   },
   [41162] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41168] = {
     { kind = "DROP", source = "PROFESSION_ENGINEERING" },
@@ -12560,33 +12560,33 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "PROFESSION_BLACKSMITHING" },
   },
   [41198] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41199] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41200] = {
     { kind = "DROP", source = "ARENA_SEASON_7_SHAMAN_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41203] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41204] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41205] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41206] = {
     { kind = "DROP", source = "ARENA_SEASON_7_HUNTER_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41212] = {
     { kind = "DROP", source = "ARENA_SEASON_7_SHAMAN_SET" },
@@ -12599,45 +12599,45 @@ BisTooltip_ItemAcquisition = {
   },
   [41224] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41225] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41226] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41228] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
   },
   [41229] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41230] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41231] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41233] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
   },
   [41234] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_MAIL" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41235] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41236] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41239] = {
     { kind = "DROP", source = "PROFESSION_BLACKSMITHING" },
@@ -12667,83 +12667,83 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ARENA_SEASON_7_DRUID_SET" },
   },
   [41284] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41286] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41287] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41288] = {
     { kind = "DROP", source = "ARENA_SEASON_7_DRUID_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41291] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41292] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41293] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41294] = {
     { kind = "DROP", source = "ARENA_SEASON_7_DRUID_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41296] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41297] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41298] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41299] = {
     { kind = "DROP", source = "ARENA_SEASON_7_DRUID_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41302] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41303] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41304] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41305] = {
     { kind = "DROP", source = "ARENA_SEASON_7_DRUID_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41308] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41309] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41311] = {
     { kind = "DROP", source = "ARENA_SEASON_7_DRUID_SET" },
   },
   [41314] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41315] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41317] = {
     { kind = "DROP", source = "ARENA_SEASON_7_DRUID_SET" },
@@ -12915,134 +12915,134 @@ BisTooltip_ItemAcquisition = {
   },
   [41616] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_LEATHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41617] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41618] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41620] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_LEATHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41621] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41622] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41624] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_LEATHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41625] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41626] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41628] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_LEATHER" },
   },
   [41629] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_LEATHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41630] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41631] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41633] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_LEATHER" },
   },
   [41634] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_LEATHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41635] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41636] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41638] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_LEATHER" },
   },
   [41639] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_LEATHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41640] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41641] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41648] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41649] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41651] = {
     { kind = "DROP", source = "ARENA_SEASON_7_ROGUE_SET" },
   },
   [41653] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41654] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41655] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41656] = {
     { kind = "DROP", source = "ARENA_SEASON_7_ROGUE_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41659] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41660] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41662] = {
     { kind = "DROP", source = "ARENA_SEASON_7_DRUID_SET" },
   },
   [41665] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41666] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41667] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41668] = {
     { kind = "DROP", source = "ARENA_SEASON_7_DRUID_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41673] = {
     { kind = "DROP", source = "ARENA_SEASON_7_ROGUE_SET" },
@@ -13123,36 +13123,36 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_WINTERGRASP" },
   },
   [41765] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41766] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41767] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41768] = {
     { kind = "DROP", source = "ARENA_SEASON_7_ROGUE_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41771] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41772] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41773] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41774] = {
     { kind = "DROP", source = "ARENA_SEASON_7_DRUID_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41799] = {
     { kind = "DROP", source = "HALLS_OF_LIGHTNING_LOKEN" },
@@ -13168,86 +13168,86 @@ BisTooltip_ItemAcquisition = {
   },
   [41831] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_LEATHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41832] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41833] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41835] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_LEATHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41836] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41837] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41839] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_LEATHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41840] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41841] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41855] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PRIEST_SET" },
   },
   [41857] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41858] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41860] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PRIEST_SET" },
   },
   [41862] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41863] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41864] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41865] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PRIEST_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41870] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PRIEST_SET" },
   },
   [41872] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41873] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41874] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41875] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PRIEST_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41877] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_CLOTH" },
@@ -13260,178 +13260,178 @@ BisTooltip_ItemAcquisition = {
   },
   [41880] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_CLOTH" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41881] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41882] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41884] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_CLOTH" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41885] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41886] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41892] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_CLOTH" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41893] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41894] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41896] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_CLOTH" },
   },
   [41897] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_CLOTH" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41898] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41899] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41901] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_CLOTH" },
   },
   [41902] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_CLOTH" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41903] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41904] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41907] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_CLOTH" },
   },
   [41908] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_CLOTH" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [41909] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41910] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41916] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PRIEST_SET" },
   },
   [41919] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41920] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41922] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PRIEST_SET" },
   },
   [41925] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41926] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41927] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41928] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PRIEST_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41935] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PRIEST_SET" },
   },
   [41938] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41939] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41940] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41941] = {
     { kind = "DROP", source = "ARENA_SEASON_7_PRIEST_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41947] = {
     { kind = "DROP", source = "ARENA_SEASON_7_MAGE_SET" },
   },
   [41950] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41951] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41954] = {
     { kind = "DROP", source = "ARENA_SEASON_7_MAGE_SET" },
   },
   [41957] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41958] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41959] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41960] = {
     { kind = "DROP", source = "ARENA_SEASON_7_MAGE_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41966] = {
     { kind = "DROP", source = "ARENA_SEASON_7_MAGE_SET" },
   },
   [41969] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41970] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41971] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [41972] = {
     { kind = "DROP", source = "ARENA_SEASON_7_MAGE_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [41974] = {
     { kind = "DROP", source = "PROFESSION_BLACKSMITHING" },
@@ -13452,48 +13452,48 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ARENA_SEASON_7_WARLOCK_SET" },
   },
   [41997] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [41999] = {
     { kind = "DROP", source = "ARENA_SEASON_7_WARLOCK_SET" },
   },
   [42001] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [42003] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [42004] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [42005] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42006] = {
     { kind = "DROP", source = "ARENA_SEASON_7_WARLOCK_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42012] = {
     { kind = "DROP", source = "ARENA_SEASON_7_WARLOCK_SET" },
   },
   [42015] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [42016] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [42017] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42018] = {
     { kind = "DROP", source = "ARENA_SEASON_7_WARLOCK_SET" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42020] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_ACCESSORIES" },
@@ -13517,81 +13517,81 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_ACCESSORIES" },
   },
   [42027] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42028] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42029] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42030] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42031] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42032] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42033] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42034] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42035] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42036] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42037] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42038] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42039] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42040] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42041] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42042] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42043] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42044] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42045] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42046] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42047] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42055] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_ACCESSORIES" },
@@ -13615,81 +13615,81 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_ACCESSORIES" },
   },
   [42062] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42063] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42064] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42065] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42066] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42067] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42068] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42069] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42070] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42071] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42072] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42073] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42074] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42075] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42076] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42077] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42078] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42079] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42080] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42081] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42082] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42093] = {
     { kind = "DROP", source = "PROFESSION_TAILORING" },
@@ -13725,26 +13725,26 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "PROFESSION_TAILORING" },
   },
   [42114] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42115] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [42116] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42117] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [42118] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42119] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [42122] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_NON_SET_ACCESSORIES" },
@@ -14456,14 +14456,14 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "THE_SONS_OF_HODIR_REVERED" },
   },
   [43959] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [43961] = {
     { kind = "DROP", source = "THE_SONS_OF_HODIR_EXALTED" },
@@ -14625,14 +14625,14 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_WINTERGRASP" },
   },
   [44083] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [44084] = {
     { kind = "DROP", source = "LEVEL_80_HONOR_PVP_WINTERGRASP" },
@@ -15648,11 +15648,11 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45337] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45338] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45339] = {
@@ -15662,28 +15662,28 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45341] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45342] = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45343] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45344] = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45345] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45346] = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45347] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45348] = {
@@ -15693,28 +15693,28 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45351] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45352] = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45353] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45354] = {
     { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45355] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45356] = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45357] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45358] = {
@@ -15724,14 +15724,14 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45360] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45361] = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45362] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
   },
   [45363] = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
@@ -15743,7 +15743,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45367] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45368] = {
@@ -15753,11 +15753,11 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45370] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45371] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45372] = {
@@ -15773,7 +15773,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45376] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45377] = {
@@ -15783,7 +15783,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_IRON_COUNCIL" },
   },
   [45379] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45380] = {
@@ -15796,11 +15796,11 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45383] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45384] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45385] = {
@@ -15810,11 +15810,11 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45387] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45388] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45389] = {
@@ -15827,14 +15827,14 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45392] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45393] = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45394] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45395] = {
@@ -15844,28 +15844,28 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45397] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45398] = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45399] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45400] = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45401] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45402] = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45403] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45404] = {
@@ -15875,14 +15875,14 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45406] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45408] = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45409] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45410] = {
@@ -15898,14 +15898,14 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45414] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45415] = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
   },
   [45416] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45417] = {
@@ -15915,11 +15915,11 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_IRON_COUNCIL" },
   },
   [45419] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45420] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45421] = {
@@ -15938,11 +15938,11 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45426] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45427] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45428] = {
@@ -15952,14 +15952,14 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_YOGG_SARON", tier = "T8" },
   },
   [45430] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [45431] = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
   },
   [45432] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45433] = {
@@ -17010,14 +17010,14 @@ BisTooltip_ItemAcquisition = {
   },
   [46113] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46115] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46116] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46117] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
@@ -17027,14 +17027,14 @@ BisTooltip_ItemAcquisition = {
   },
   [46119] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46120] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46121] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46122] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
@@ -17044,14 +17044,14 @@ BisTooltip_ItemAcquisition = {
   },
   [46124] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46125] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46126] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46127] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
@@ -17063,23 +17063,23 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46131] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
     { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
   },
   [46132] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46133] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46134] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46135] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46136] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
@@ -17093,7 +17093,7 @@ BisTooltip_ItemAcquisition = {
   },
   [46139] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46140] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
@@ -17103,14 +17103,14 @@ BisTooltip_ItemAcquisition = {
   },
   [46142] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46143] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46144] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46145] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
@@ -17120,14 +17120,14 @@ BisTooltip_ItemAcquisition = {
   },
   [46148] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46149] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46150] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46151] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
@@ -17137,14 +17137,14 @@ BisTooltip_ItemAcquisition = {
   },
   [46153] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46154] = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46155] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46156] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
@@ -17154,14 +17154,14 @@ BisTooltip_ItemAcquisition = {
   },
   [46158] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46159] = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
   },
   [46160] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46161] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
@@ -17171,11 +17171,11 @@ BisTooltip_ItemAcquisition = {
   },
   [46163] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46164] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46165] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
@@ -17191,11 +17191,11 @@ BisTooltip_ItemAcquisition = {
   },
   [46169] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46170] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46172] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
@@ -17205,14 +17205,14 @@ BisTooltip_ItemAcquisition = {
   },
   [46174] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46175] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46176] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46177] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
@@ -17222,28 +17222,28 @@ BisTooltip_ItemAcquisition = {
   },
   [46179] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46180] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46181] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46182] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
   },
   [46183] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46184] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46185] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46186] = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
@@ -17253,11 +17253,11 @@ BisTooltip_ItemAcquisition = {
   },
   [46188] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46189] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46190] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
@@ -17267,7 +17267,7 @@ BisTooltip_ItemAcquisition = {
   },
   [46192] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46193] = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
@@ -17277,7 +17277,7 @@ BisTooltip_ItemAcquisition = {
   },
   [46195] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46196] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
@@ -17290,18 +17290,18 @@ BisTooltip_ItemAcquisition = {
   },
   [46199] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46200] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46201] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46202] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46203] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
@@ -17317,18 +17317,18 @@ BisTooltip_ItemAcquisition = {
   },
   [46207] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46208] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46209] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46210] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46211] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG_SARON", tier = "T8" },
@@ -17389,399 +17389,399 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_TRASH_MOBS" },
   },
   [46373] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
   },
   [46374] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [46958] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46959] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46960] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46961] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46962] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46963] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46964] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46965] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46966] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46967] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46968] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46969] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46970] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46971] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46972] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46973] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46974] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46975] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46976] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46977] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46979] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46980] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46985] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46986] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46988] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46989] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46990] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46991] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46992] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [46993] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [46994] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [46995] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [46996] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [46997] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [46999] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47000] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47001] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47002] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47003] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47004] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47041] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47042] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47043] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47051] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47052] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47053] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47054] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47055] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47056] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47057] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47059] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47060] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47061] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47062] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47063] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47064] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47066] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47067] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47068] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47069] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47070] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47071] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47072] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47073] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47074] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47075] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47076] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47077] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47078] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47079] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47080] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47081] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47082] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47083] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47084] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47085] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47086] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47087] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47088] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47089] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47090] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47092] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47093] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47094] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47095] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47096] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47097] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47098] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47099] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47104] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47105] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47106] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47107] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47108] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47109] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47110] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47111] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47112] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47113] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47114] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47115] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47116] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47121] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47126] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47129] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47130] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47131] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47132] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47133] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47138] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47139] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47140] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47141] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47142] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47143] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47144] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47145] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47146] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47147] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47148] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47149] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47150] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47151] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47152] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47153] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47154] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47155] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47156] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47157] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47170] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_FACTION_CHAMPIONS" },
@@ -17818,47 +17818,47 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47182] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47183] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47184] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47185] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_EADRIC_THE_PURE" },
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47186] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47187] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47188] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47189] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47190] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47191] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47192] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47193] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47194] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47195] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47197] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_EADRIC_THE_PURE" },
@@ -17876,25 +17876,25 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_EADRIC_THE_PURE" },
   },
   [47203] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47204] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47205] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47206] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47207] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47208] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47209] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47210] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_EADRIC_THE_PURE" },
@@ -17937,13 +17937,13 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_THE_BLACK_KNIGHT" },
   },
   [47223] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47224] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47225] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47226] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_THE_BLACK_KNIGHT" },
@@ -17967,50 +17967,50 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_THE_BLACK_KNIGHT" },
   },
   [47233] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47234] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47235] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47236] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47237] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47238] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47239] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47240] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47241] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_ARCHAVON_THE_STONE_WATCHER" },
     { kind = "DROP", source = "THE_NEXUS_HC_ORMOROK" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_EMALON_THE_STORM_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_ARCHAVON_THE_STONE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_EMALON_THE_STORM_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_ARCHAVON_THE_STONE_WATCHER" },
   },
   [47242] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47243] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_FACTION_CHAMPIONS" },
@@ -18031,484 +18031,484 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_FACTION_CHAMPIONS" },
   },
   [47251] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47252] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47253] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47254] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47255] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47256] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47257] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47258] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47259] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47260] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47261] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47262] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47263] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47264] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47265] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_25N_THE_BEASTS_OF_NORTHREND" },
   },
   [47266] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47267] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47268] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47269] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47270] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47271] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47272] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47273] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47274] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47275] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47276] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47277] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47278] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47279] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47280] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_25N_LORD_JARAXXUS" },
   },
   [47281] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47282] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47283] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47284] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47285] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47286] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47287] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47288] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47289] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47290] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47291] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47292] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47293] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47294] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47295] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_25N_FACTION_CHAMPIONS" },
   },
   [47296] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47297] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47298] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47299] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47300] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47301] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47302] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47303] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47304] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47305] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47306] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47307] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47308] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47309] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47310] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_25N_THE_TWIN_VAL_KYR" },
   },
   [47311] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47312] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47313] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47314] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47315] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47316] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47317] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47318] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47319] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47320] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47321] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47322] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47323] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47324] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47325] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47326] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47327] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47328] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47329] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47330] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_25N_ANUB_ARAK" },
   },
   [47412] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47413] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47414] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47415] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47416] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47417] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47418] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47419] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47420] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47421] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47422] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47423] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47424] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47425] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47426] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_25HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47427] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47428] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47429] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47430] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47431] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47432] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47433] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47434] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47435] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47436] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47437] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47438] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47439] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47440] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47441] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_25HC_LORD_JARAXXUS" },
   },
   [47442] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47443] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47444] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47445] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47446] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47447] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47448] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47449] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47450] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47451] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47452] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47453] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47454] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47455] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47456] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_25HC_FACTION_CHAMPIONS" },
   },
   [47457] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47458] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47459] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47460] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47461] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47462] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47463] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47464] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47465] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47466] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47467] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47468] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47469] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47470] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47471] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_25HC_THE_TWIN_VAL_KYR" },
   },
   [47472] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47473] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47474] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47475] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47476] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47477] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47478] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47479] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47480] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47481] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47482] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47483] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47484] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47485] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47486] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47487] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47489] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47490] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47491] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47492] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_25HC_ANUB_ARAK" },
   },
   [47493] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_FACTION_CHAMPIONS" },
@@ -18550,7 +18550,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
   },
   [47506] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47508] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_EADRIC_THE_PURE" },
@@ -18568,94 +18568,94 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47513] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47514] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47515] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47516] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47517] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47518] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47519] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47520] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47521] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47522] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_ARGENT_CONFESSOR_PALETRESS" },
   },
   [47523] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47524] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47525] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47526] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47527] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [47528] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47529] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
   },
   [47545] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47546] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47547] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47548] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47549] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47550] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47551] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47552] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47553] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47554] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47556] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47557] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47558] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_RUN" },
   },
   [47560] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
@@ -18712,7 +18712,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "PROFESSION_LEATHERWORKING" },
   },
   [47578] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47579] = {
     { kind = "DROP", source = "PROFESSION_LEATHERWORKING" },
@@ -18799,157 +18799,157 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "PROFESSION_TAILORING" },
   },
   [47607] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47608] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47609] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47610] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47611] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47612] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47613] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47614] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47615] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47616] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47617] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47618] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47619] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47620] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47621] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47622] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47623] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47624] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47625] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47626] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47627] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47628] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47629] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47630] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47631] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47632] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47633] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47634] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47635] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47636] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47637] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47638] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47639] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47640] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47641] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47642] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47643] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47644] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47645] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47646] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47647] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47648] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47649] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47650] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47651] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47652] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47653] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47654] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47655] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47656] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47657] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_PATTERNS" },
+    { kind = "DROP", source = "TOC_10N_PATTERNS" },
   },
   [47658] = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 25 } } },
@@ -18967,7 +18967,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 25 } } },
   },
   [47663] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47664] = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 25 } } },
@@ -18985,7 +18985,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 25 } } },
   },
   [47669] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47670] = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 25 } } },
@@ -19003,22 +19003,22 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47676] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47678] = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47679] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47680] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47682] = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47683] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47684] = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 75 } } },
@@ -19045,13 +19045,13 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47700] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47701] = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47703] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47705] = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 45 } } },
@@ -19066,7 +19066,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47711] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47714] = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 45 } } },
@@ -19075,34 +19075,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47717] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47718] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47719] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47720] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47721] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47724] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47725] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47726] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47727] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47728] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47729] = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 35 } } },
@@ -19126,67 +19126,56 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [47736] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47737] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47738] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47739] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47740] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47741] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47742] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47743] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47744] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47745] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47746] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47747] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
-  },
-  [47748] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [47749] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47750] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [47751] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [47752] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [47753] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47754] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47755] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47756] = {
@@ -19196,34 +19185,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47758] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47759] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47760] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47761] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47762] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47763] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47764] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47765] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47766] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47767] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47768] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
@@ -19232,32 +19221,21 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47770] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47771] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47772] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47773] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [47774] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [47775] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [47776] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [47777] = {
-    { kind = "DROP", source = "TIER_9_MAGE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [47778] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
@@ -19266,89 +19244,67 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47780] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47781] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47782] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47783] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [47784] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [47785] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [47786] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [47787] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [47788] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47789] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47790] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47791] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47792] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47793] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47794] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47795] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47796] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47797] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
-  },
-  [47798] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [47799] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [47800] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [47801] = {
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [47802] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_WARLOCK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [47803] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47804] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47805] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47806] = {
@@ -19358,466 +19314,455 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47808] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47809] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47810] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47811] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47812] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47813] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47814] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47815] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47816] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47829] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47830] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47832] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47834] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47835] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47836] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47837] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47838] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47849] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47850] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47851] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47852] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47853] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47854] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47855] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47856] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47857] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47858] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47859] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47860] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOC_10N_THE_BEASTS_OF_NORTHREND" },
   },
   [47861] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47862] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47863] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47864] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47865] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47866] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47867] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47868] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47869] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47870] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47871] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47872] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [47873] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47874] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47875] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47876] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47877] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47878] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47879] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47880] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47881] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47882] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOC_10N_FACTION_CHAMPIONS" },
   },
   [47883] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47884] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47885] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47886] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47887] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47888] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47889] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47890] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47891] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47892] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47893] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47894] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47895] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47896] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47897] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47898] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47899] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47900] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47901] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47902] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47903] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47904] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47905] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47906] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47907] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47908] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47909] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47910] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47911] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_ANUB_ARAK" },
+    { kind = "DROP", source = "TOC_10N_ANUB_ARAK" },
   },
   [47913] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
-  },
-  [47914] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [47915] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47916] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47917] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47918] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47919] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47920] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47921] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47922] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47923] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47924] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47925] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47926] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47927] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [47928] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [47929] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [47930] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [47931] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [47932] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [47933] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [47934] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [47935] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
-  },
-  [47936] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [47937] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [47938] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [47939] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [47940] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [47941] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [47942] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [47943] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [47944] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [47945] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [47946] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [47947] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [47948] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [47949] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [47950] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [47951] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [47952] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [47953] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [47954] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [47955] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [47956] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [47957] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [47958] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [47959] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [47960] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [47961] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [47962] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47963] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47964] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47965] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47966] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47967] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47968] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47969] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47970] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47971] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47972] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47973] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47974] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47975] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47976] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47977] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47978] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47979] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [47980] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [47981] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [47982] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [47983] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47984] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47985] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [47986] = {
@@ -19827,226 +19772,226 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [47988] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47989] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47990] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47991] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47992] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47993] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47994] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47995] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47996] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47997] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47998] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [47999] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_BEASTS_OF_NORTHREND" },
+    { kind = "DROP", source = "TOGC_10HC_THE_BEASTS_OF_NORTHREND" },
   },
   [48000] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [48001] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [48002] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [48003] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [48004] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [48005] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [48006] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [48007] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [48008] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [48009] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [48010] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [48011] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [48012] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [48013] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [48014] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [48015] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [48016] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [48017] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [48018] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [48019] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [48020] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [48021] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_FACTION_CHAMPIONS" },
+    { kind = "DROP", source = "TOGC_10HC_FACTION_CHAMPIONS" },
   },
   [48022] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [48023] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [48024] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [48025] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [48026] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [48027] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [48028] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [48029] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48030] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [48031] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48032] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [48033] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48034] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [48035] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48036] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [48037] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48038] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [48039] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48040] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48041] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48042] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48043] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48044] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48045] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48046] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48047] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48048] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48049] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48050] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48051] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48052] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48053] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48054] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48055] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48056] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_ANUB_ARAK" },
+    { kind = "DROP", source = "TOGC_10HC_ANUB_ARAK" },
   },
   [48057] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48058] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48059] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48060] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48061] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48062] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
@@ -20055,59 +20000,37 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48064] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48065] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48066] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48067] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48068] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48069] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48070] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48071] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48072] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48073] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48074] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48075] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48076] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48077] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48078] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48079] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48080] = {
@@ -20117,34 +20040,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48082] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48083] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48084] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48085] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48086] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48087] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48088] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48089] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48090] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48091] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48092] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
@@ -20153,59 +20076,37 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48094] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48095] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48096] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48097] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48098] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48099] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48100] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48101] = {
-    { kind = "DROP", source = "TIER_9_PRIEST_SHADOW_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48102] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48129] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48130] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48131] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48132] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48133] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48134] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48135] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48136] = {
@@ -20215,34 +20116,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48138] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48139] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48140] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48141] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48142] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48143] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48144] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48145] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48146] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48147] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48148] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
@@ -20251,60 +20152,38 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48150] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48151] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48152] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48153] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48154] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48155] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48156] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48157] = {
-    { kind = "DROP", source = "TIER_9_DRUID_RESTO_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48158] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48159] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48160] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48161] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48162] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48163] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48164] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48165] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48166] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
@@ -20313,34 +20192,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48168] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48169] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48170] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48171] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48172] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48173] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48174] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48175] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48176] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48177] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48178] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
@@ -20350,59 +20229,37 @@ BisTooltip_ItemAcquisition = {
   },
   [48180] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48181] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48182] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48183] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48184] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48185] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48186] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48187] = {
-    { kind = "DROP", source = "TIER_9_DRUID_BALANCE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48188] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48189] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48190] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48191] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48192] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48193] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48194] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48195] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48196] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
@@ -20411,34 +20268,34 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48198] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48199] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48200] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48201] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48202] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48203] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48204] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48205] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48206] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48207] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48208] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
@@ -20448,1282 +20305,1007 @@ BisTooltip_ItemAcquisition = {
   },
   [48210] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48211] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48212] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48213] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48214] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48215] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48216] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48217] = {
-    { kind = "DROP", source = "TIER_9_DRUID_FERAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48218] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48219] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48220] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48221] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48222] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48223] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48224] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48225] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48226] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48227] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48228] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48229] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48230] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48231] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48232] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48233] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48234] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48235] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48236] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48237] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48238] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48239] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48240] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48241] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48242] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
-  [48243] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
   [48244] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48245] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48246] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48247] = {
-    { kind = "DROP", source = "TIER_9_ROGUE_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48250] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48251] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48252] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48253] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48254] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48255] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48256] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48257] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48258] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48259] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48260] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48261] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48262] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48263] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48264] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48265] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48266] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48267] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48268] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48269] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48270] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48271] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48272] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48273] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48274] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
-  [48275] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
   [48276] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48277] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48278] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48279] = {
-    { kind = "DROP", source = "TIER_9_HUNTER_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48280] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48281] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48282] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48283] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48284] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48285] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48286] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48287] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48288] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48289] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48290] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48291] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48292] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48293] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48294] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
-  },
-  [48295] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48296] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48297] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48298] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48299] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_RESTORATION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48300] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48301] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48302] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48303] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48304] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48305] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48306] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48307] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48308] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48309] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
-  },
-  [48310] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48312] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-  },
-  [48313] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48314] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-  },
-  [48315] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48316] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48317] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48318] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48319] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48320] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48321] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48322] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48323] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48324] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48325] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48326] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48327] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48328] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48329] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48330] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48331] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48332] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48333] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48334] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48335] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
-  [48336] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
   [48337] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-  },
-  [48338] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48339] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-  },
-  [48340] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ELEMENTAL_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48341] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48342] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48343] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48344] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48345] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48346] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48347] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48348] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48349] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48350] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48351] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48352] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48353] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48354] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48355] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48356] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48357] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48358] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48359] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48360] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48361] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48362] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48363] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48364] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48365] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
-  [48366] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
   [48367] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48368] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48369] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48370] = {
-    { kind = "DROP", source = "TIER_9_SHAMAN_ENHANCEMENT_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48371] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48372] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48373] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48374] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48375] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48376] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48377] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48378] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48379] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48380] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48381] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48382] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48383] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48384] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48385] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
-  },
-  [48386] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48387] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48388] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48389] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48390] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48391] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48392] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48393] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48394] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48395] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48396] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48397] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48398] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48399] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48400] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48418] = {
     { kind = "DROP", source = "TRIAL_OF_THE_CHAMPION_HC_THE_BLACK_KNIGHT" },
-  },
-  [48429] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
   },
   [48430] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48433] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
-  },
-  [48436] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48445] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48446] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48447] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
-  },
-  [48448] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48449] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48450] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48451] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48452] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48453] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48454] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48455] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
-  },
-  [48456] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48457] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48458] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48459] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48460] = {
-    { kind = "DROP", source = "TIER_9_WARRIOR_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48461] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48462] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48463] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48464] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48465] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48466] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48467] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48468] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48469] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48470] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
-  },
-  [48472] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48474] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48476] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48478] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48480] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48481] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48482] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48483] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48484] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48485] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48486] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48487] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48488] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48489] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48490] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48491] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48492] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48493] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48494] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48495] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48496] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48497] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48498] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48499] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48500] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
-  [48501] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
   [48502] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48503] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48504] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48505] = {
-    { kind = "DROP", source = "TIER_9_DK_DPS_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48529] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48531] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48533] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48535] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48537] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48538] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48539] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48540] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48541] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48542] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48543] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48544] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48545] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48546] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48547] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48548] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48549] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48550] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48551] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48552] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48553] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48554] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48555] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48556] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48557] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
-  [48558] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
   [48559] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48560] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48561] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48562] = {
-    { kind = "DROP", source = "TIER_9_DK_TANK_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48564] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48566] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48568] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48572] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48574] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48575] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48576] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48577] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48578] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48579] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48580] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48581] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48582] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48583] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48584] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48585] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48586] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48587] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48588] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48589] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48590] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48591] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48592] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48593] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48594] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
-  [48595] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
   [48596] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48597] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48598] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48599] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_HOLY_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48602] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48603] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48604] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48605] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48606] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48607] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48608] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48609] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48610] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48611] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48612] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48613] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48614] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48615] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48616] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48617] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48618] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48619] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48620] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48621] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48622] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48623] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48624] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48625] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48626] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
-  [48627] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
   [48628] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48629] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48630] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48631] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_RETRIBUTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48632] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48633] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48634] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48635] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48636] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48637] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48638] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48639] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48640] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48641] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48642] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48643] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48644] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48645] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48646] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48647] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48648] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48649] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48650] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48651] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_25HC_TRIBUTE_CHEST", tier = "T9" },
-  },
-  [48652] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "TOGC_25HC_TRIBUTE_CHEST", tier = "T9" },
   },
   [48653] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48654] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48655] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_KORALON_THE_FLAME_WATCHER" },
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
-  },
-  [48656] = {
-    { kind = "DROP", source = "TIER_9_PALADIN_PROTECTION_HC5_RAIDS25_EMBLEM_OF_TRIUMPH", tier = "T9" },
+    { kind = "DROP", source = "VOA_10N_KORALON_THE_FLAME_WATCHER" },
   },
   [48657] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48658] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48659] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
   },
   [48660] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 75 } } },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [48661] = {
     { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY", variantLabel = "Crusade", cost = { { item = 47242, amount = 1 }, { currency = "Emblem of Triumph", amount = 45 } } },
   },
   [48666] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48667] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48668] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48669] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48670] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48671] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48672] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48673] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48674] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48675] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48693] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48695] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48697] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48699] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48701] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48703] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48705] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48708] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48709] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48710] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48711] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48712] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48713] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48714] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [48722] = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
@@ -21732,46 +21314,46 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
   },
   [49044] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [49046] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_TRIBUTE_RUN" },
+    { kind = "DROP", source = "TOGC_10HC_TRIBUTE_RUN" },
   },
   [49179] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [49181] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [49183] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_KORALON_THE_FLAME_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_KORALON_THE_FLAME_WATCHER" },
   },
   [49231] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [49232] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOC_10N_THE_TWIN_VAL_KYR" },
   },
   [49233] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [49234] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_THE_TWIN_VAL_KYR" },
+    { kind = "DROP", source = "TOGC_10HC_THE_TWIN_VAL_KYR" },
   },
   [49235] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [49236] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10N_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOC_10N_LORD_JARAXXUS" },
   },
   [49237] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [49238] = {
-    { kind = "DROP", source = "TRIAL_OF_THE_CRUSADER_10HC_LORD_JARAXXUS" },
+    { kind = "DROP", source = "TOGC_10HC_LORD_JARAXXUS" },
   },
   [49294] = {
     { kind = "DROP", source = "ONYXIA_S_LAIR_25N_ONYXIA" },
@@ -21881,8 +21463,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ONYXIA_S_LAIR_10N_ONYXIA" },
   },
   [49426] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [49437] = {
     { kind = "DROP", source = "ONYXIA_S_LAIR_10N_ONYXIA" },
@@ -22568,7 +22150,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50079] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_WARRIOR_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
@@ -22577,7 +22159,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50081] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_WARRIOR_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
@@ -22593,7 +22175,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50088] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_ROGUE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
@@ -22602,7 +22184,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50090] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_ROGUE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
@@ -22611,7 +22193,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50095] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_DK_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
@@ -22620,7 +22202,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50097] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_DK_DPS_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
@@ -22638,7 +22220,7 @@ BisTooltip_ItemAcquisition = {
   },
   [50107] = {
     { kind = "DROP", source = "TIER_10_DRUID_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50108] = {
@@ -22647,21 +22229,21 @@ BisTooltip_ItemAcquisition = {
   },
   [50109] = {
     { kind = "DROP", source = "TIER_10_DRUID_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50113] = {
     { kind = "DROP", source = "TIER_10_DRUID_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50114] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_HUNTER_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50115] = {
     { kind = "DROP", source = "TIER_10_HUNTER_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50116] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_HUNTER_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50117] = {
@@ -22827,7 +22409,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "PIT_OF_SARON_HC_KRICK_AND_ICK" },
   },
   [50240] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_WARLOCK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
@@ -22836,7 +22418,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50242] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_WARLOCK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
@@ -22902,7 +22484,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG" },
   },
   [50275] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_MAGE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
@@ -22911,7 +22493,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50277] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_MAGE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
@@ -23032,14 +22614,14 @@ BisTooltip_ItemAcquisition = {
   },
   [50325] = {
     { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
   },
   [50326] = {
     { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50327] = {
     { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
   },
   [50328] = {
     { kind = "DROP", source = "TIER_10_PALADIN_RETRIBUTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
@@ -23161,7 +22743,7 @@ BisTooltip_ItemAcquisition = {
   },
   [50391] = {
     { kind = "DROP", source = "TIER_10_PRIEST_SHADOW_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50392] = {
@@ -23170,7 +22752,7 @@ BisTooltip_ItemAcquisition = {
   },
   [50393] = {
     { kind = "DROP", source = "TIER_10_PRIEST_SHADOW_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50394] = {
@@ -23741,7 +23323,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_10_PRIEST_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50766] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_PRIEST_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50767] = {
@@ -23751,7 +23333,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_10_PRIEST_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50769] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_PRIEST_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50771] = {
@@ -23884,14 +23466,14 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_10_DRUID_BALANCE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50820] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_DRUID_BALANCE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50821] = {
     { kind = "DROP", source = "TIER_10_DRUID_BALANCE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50822] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_DRUID_BALANCE_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50823] = {
@@ -23901,14 +23483,14 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_10_DRUID_FERAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50825] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_DRUID_FERAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50826] = {
     { kind = "DROP", source = "TIER_10_DRUID_FERAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50827] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_DRUID_FERAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50828] = {
@@ -23918,14 +23500,14 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_10_SHAMAN_ENHANCEMENT_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50831] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_SHAMAN_ENHANCEMENT_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50832] = {
     { kind = "DROP", source = "TIER_10_SHAMAN_ENHANCEMENT_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50833] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_SHAMAN_ENHANCEMENT_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50834] = {
@@ -23935,14 +23517,14 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_10_SHAMAN_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50836] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_SHAMAN_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50837] = {
     { kind = "DROP", source = "TIER_10_SHAMAN_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50838] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_SHAMAN_RESTORATION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50839] = {
@@ -23952,14 +23534,14 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_10_SHAMAN_ELEMENTAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50842] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_SHAMAN_ELEMENTAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50843] = {
     { kind = "DROP", source = "TIER_10_SHAMAN_ELEMENTAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50844] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_SHAMAN_ELEMENTAL_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50845] = {
@@ -23970,14 +23552,14 @@ BisTooltip_ItemAcquisition = {
   },
   [50847] = {
     { kind = "DROP", source = "TIER_10_WARRIOR_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
   },
   [50848] = {
     { kind = "DROP", source = "TIER_10_WARRIOR_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50849] = {
     { kind = "DROP", source = "TIER_10_WARRIOR_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
   },
   [50850] = {
     { kind = "DROP", source = "TIER_10_WARRIOR_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
@@ -23990,14 +23572,14 @@ BisTooltip_ItemAcquisition = {
   },
   [50854] = {
     { kind = "DROP", source = "TIER_10_DK_TANK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
   },
   [50855] = {
     { kind = "DROP", source = "TIER_10_DK_TANK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50856] = {
     { kind = "DROP", source = "TIER_10_DK_TANK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
   },
   [50857] = {
     { kind = "DROP", source = "TIER_10_DK_TANK_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
@@ -24012,14 +23594,14 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "TIER_10_PALADIN_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50861] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_PALADIN_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50862] = {
     { kind = "DROP", source = "TIER_10_PALADIN_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50863] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
     { kind = "DROP", source = "TIER_10_PALADIN_PROTECTION_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50864] = {
@@ -24030,14 +23612,14 @@ BisTooltip_ItemAcquisition = {
   },
   [50866] = {
     { kind = "DROP", source = "TIER_10_PALADIN_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
   },
   [50867] = {
     { kind = "DROP", source = "TIER_10_PALADIN_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
   },
   [50868] = {
     { kind = "DROP", source = "TIER_10_PALADIN_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_10N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_10N_TORAVON_THE_ICE_WATCHER" },
   },
   [50869] = {
     { kind = "DROP", source = "TIER_10_PALADIN_HOLY_HC5_DIALY_ICC10_25_EMBLEM_OF_FROST", tier = "T10" },
@@ -24237,7 +23819,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Vanquisher" },
   },
   [51126] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Vanquisher" },
@@ -24252,7 +23834,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Vanquisher" },
   },
   [51128] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Vanquisher" },
@@ -24279,7 +23861,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_SINDRAGOSA", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Vanquisher" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51132] = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Vanquisher" },
@@ -24287,7 +23869,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_SINDRAGOSA", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Vanquisher" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51133] = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Vanquisher" },
@@ -24311,7 +23893,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Vanquisher" },
   },
   [51136] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Vanquisher" },
@@ -24326,7 +23908,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Vanquisher" },
   },
   [51138] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Vanquisher" },
@@ -24360,7 +23942,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_SINDRAGOSA", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Vanquisher" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51143] = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Vanquisher" },
@@ -24375,7 +23957,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_SINDRAGOSA", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Vanquisher" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51145] = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Vanquisher" },
@@ -24391,7 +23973,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_SINDRAGOSA", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Vanquisher" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51147] = {
@@ -24408,7 +23990,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_SINDRAGOSA", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Vanquisher" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51149] = {
@@ -24434,7 +24016,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Protector" },
   },
   [51152] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Protector" },
@@ -24449,7 +24031,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Protector" },
   },
   [51154] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Protector" },
@@ -24476,7 +24058,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_SINDRAGOSA", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Vanquisher" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51158] = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Vanquisher" },
@@ -24491,7 +24073,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_SINDRAGOSA", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Vanquisher" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51160] = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Conqueror" },
@@ -24501,7 +24083,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Conqueror" },
   },
   [51161] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Conqueror" },
@@ -24517,7 +24099,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Conqueror" },
   },
   [51163] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Conqueror" },
@@ -24560,7 +24142,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_SINDRAGOSA", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Conqueror" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51169] = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Conqueror" },
@@ -24568,7 +24150,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_SINDRAGOSA", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Conqueror" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [51170] = {
@@ -24579,7 +24161,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Conqueror" },
   },
   [51171] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Conqueror" },
@@ -24587,7 +24169,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Conqueror" },
   },
   [51172] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Conqueror" },
@@ -24628,7 +24210,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_SINDRAGOSA", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Conqueror" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51178] = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Conqueror" },
@@ -24644,7 +24226,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_SINDRAGOSA", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Conqueror" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51180] = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Conqueror" },
@@ -24654,7 +24236,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Conqueror" },
   },
   [51181] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Conqueror" },
@@ -24670,7 +24252,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Conqueror" },
   },
   [51183] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Conqueror" },
@@ -24692,7 +24274,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Vanquisher" },
   },
   [51186] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Vanquisher" },
@@ -24707,7 +24289,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Vanquisher" },
   },
   [51188] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Vanquisher" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Vanquisher" },
@@ -24729,7 +24311,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Protector" },
   },
   [51191] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Protector" },
@@ -24745,7 +24327,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [51193] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Protector" },
@@ -24768,7 +24350,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Protector" },
   },
   [51196] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Protector" },
@@ -24783,7 +24365,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Protector" },
   },
   [51198] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Protector" },
@@ -24810,7 +24392,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_SINDRAGOSA", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Protector" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51202] = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Protector" },
@@ -24826,7 +24408,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_SINDRAGOSA", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Protector" },
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51204] = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Protector" },
@@ -24851,7 +24433,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Conqueror" },
   },
   [51207] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Conqueror" },
@@ -24866,7 +24448,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Conqueror" },
   },
   [51209] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Conqueror" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Conqueror" },
@@ -24881,7 +24463,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Protector" },
   },
   [51211] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Protector" },
@@ -24896,7 +24478,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Protector" },
   },
   [51213] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Protector" },
@@ -24918,7 +24500,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Protector" },
   },
   [51216] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Protector" },
@@ -24926,7 +24508,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_THE_LICH_KING", tier = "T10", family = "Protector" },
   },
   [51217] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_DEATHBRINGER_SAURFANG", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_PROFESSOR_PUTRICIDE", tier = "T10", family = "Protector" },
     { kind = "MARK", source = "ICECROWN_CITADEL_25N_BLOOD_QUEEN_LANA_THEL", tier = "T10", family = "Protector" },
@@ -25654,154 +25236,154 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ICECROWN_CITADEL_10N_BLOOD_PRINCES" },
   },
   [51327] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51328] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51329] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51330] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51331] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51332] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51333] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51334] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51335] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51336] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51337] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51338] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51339] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51340] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51341] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51342] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51343] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51344] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51345] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51346] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51347] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51348] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51349] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51350] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51351] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51352] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51353] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51354] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51355] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51356] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51357] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51358] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51359] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51360] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51361] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51362] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51363] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51364] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51365] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51366] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51367] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51368] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51369] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51370] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51371] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51372] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51373] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51374] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51375] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51376] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51379] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_10N_BLOOD_PRINCES" },
@@ -25831,100 +25413,100 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ICECROWN_CITADEL_10N_BLOOD_QUEEN_LANA_THEL" },
   },
   [51414] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51416] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51420] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51422] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51426] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51428] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51434] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51436] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51459] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51461] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51464] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51466] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51469] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51471] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51475] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51477] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51483] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51485] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51488] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51490] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51493] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51495] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51498] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51500] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51504] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51506] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51510] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51512] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51537] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51539] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51542] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51544] = {
-    { kind = "DROP", source = "VAULT_OF_ARCHAVON_25N_TORAVON_THE_ICE_WATCHER" },
+    { kind = "DROP", source = "VOA_25N_TORAVON_THE_ICE_WATCHER" },
   },
   [51548] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_10N_BLOOD_QUEEN_LANA_THEL" },

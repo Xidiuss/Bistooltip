@@ -825,6 +825,8 @@ function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, vendorFil
     _G.Bistooltip_totalEmblemsNeeded = totalEmblems
 
     -- Helper: Check if an item comes from a heroic source
+    -- (MUST return a real boolean — sort comparators choke on nil,
+    -- which crashed grouping when vendor items had no raid zone.)
     local function IsHeroicSource(slot)
         if not slot or not slot[1] then return false end
         local itemId = slot[1]
@@ -832,7 +834,7 @@ function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, vendorFil
             local zone, boss = _G.BistooltipAddon:GetItemSourceInfo(itemId)
             if zone then
                 local lowerZone = zone:lower()
-                return lowerZone:find("heroic") or lowerZone:find("hm") or lowerZone:find("hc")
+                return (lowerZone:find("heroic") or lowerZone:find("hm") or lowerZone:find("hc")) ~= nil
             end
         end
         return false
@@ -854,10 +856,10 @@ function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, vendorFil
             else
                 -- For other groups: Heroic items first, then Normal
                 table.sort(group.slots, function(a, b)
-                    local aHeroic = IsHeroicSource(a)
-                    local bHeroic = IsHeroicSource(b)
+                    local aHeroic = IsHeroicSource(a) == true
+                    local bHeroic = IsHeroicSource(b) == true
                     if aHeroic ~= bHeroic then
-                        return aHeroic  -- Heroic items come first (true > false)
+                        return aHeroic  -- Heroic items come first
                     end
                     return (a.slot_name or "") < (b.slot_name or "")
                 end)

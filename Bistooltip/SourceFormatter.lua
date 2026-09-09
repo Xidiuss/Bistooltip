@@ -11,7 +11,7 @@ BisTooltip_SourcePalette = {
   family   = "FFFFFF", -- white   — token families / custom labels
   method   = "00CCFF", -- blue    — tier + TOKEN/MARK/VENDOR/TROPHY
   currency = "00FFCC", -- teal    — costs/currencies (legacy emblem color)
-  diffN    = "9D9D9D", -- gray    — …N difficulties
+  diffN    = "00FF00", -- green   — …N difficulties (owner D20, 2026-09-10)
   diffHC   = "FF4040", -- red     — …HC difficulties
   diffHM   = "FF9900", -- orange  — …HM difficulties
 }
