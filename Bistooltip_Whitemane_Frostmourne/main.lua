@@ -12,6 +12,14 @@
 -- Pure Lua 5.1; loads after Bistooltip (hard ## Dependencies).
 
 local P = "Bistooltip_Whitemane_Frostmourne"
+-- Guard: without the core addon (missing/disabled) stay silent instead of
+-- erroring on every line. ## Dependencies normally prevents this load order.
+if not BisTooltip then
+    if DEFAULT_CHAT_FRAME then
+        DEFAULT_CHAT_FRAME:AddMessage("|cffff0000" .. P .. ":|r Bistooltip core missing or disabled - plugin inactive")
+    end
+    return
+end
 BisTooltip:SetBiSSlotRank("Druid", "Balance", "T7", "Weapon", 1, 130023, P) -- legendary rank-1
 BisTooltip:SetBiSSlotRank("Druid", "Balance", "T8", "Weapon", 1, 130023, P) -- legendary rank-1
 BisTooltip:SetBiSSlotRank("Druid", "Feral dps", "T8", "Weapon", 1, 128858, P) -- legendary rank-1

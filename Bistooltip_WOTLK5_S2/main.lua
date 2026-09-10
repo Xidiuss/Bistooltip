@@ -11,6 +11,14 @@
 -- Pure Lua 5.1, no WoW API. Loads after Bistooltip (hard ## Dependencies).
 
 local P = "Bistooltip_WOTLK5_S2"
+-- Guard: without the core addon (missing/disabled) stay silent instead of
+-- erroring on every line. ## Dependencies normally prevents this load order.
+if not BisTooltip then
+    if DEFAULT_CHAT_FRAME then
+        DEFAULT_CHAT_FRAME:AddMessage("|cffff0000" .. P .. ":|r Bistooltip core missing or disabled - plugin inactive")
+    end
+    return
+end
 
 -- Bistooltip_Scanner EXPORT | vendors: 1 | 2026-09-08
 -- Vexmor Gravebinder / Dalaran / 2026-09-08 / 368 by Bistooltip_Scanner
