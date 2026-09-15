@@ -1,5 +1,24 @@
 # BisTooltip Changelog
 
+## v3.0.0 — row duplication FIXED (owner-verified in-game, 2026-09-15)
+
+### Root cause & fix
+
+1. **Assembler serializer collapsed sparse override maps** — `ser()` used
+   implied sequential keys whenever `#v`-based checks passed; on a sparse map
+   `{[1],[4],[6],…}` Lua's `#` returns an undefined border, so horde override
+   indices silently shifted after every gap → duplicated Trinket/Weapon/Off
+   hand rows, missing Chest/Hands/Legs (Paladin, Mage FFB, Warlock, Enh
+   Shaman, Combat Rogue). Dense detection now counts keys explicitly
+   (exactly 1..maxKey, no `#` anywhere); sparse maps keep explicit `[k]=` keys
+2. **D8 collapse** — duplicate slot_name entries inherited from the raw
+   upstream faction tables (their dual-slot convention: Weaponx2, Waistx2)
+   are merged into single slots with concatenated/deduped/capped rank lists
+   (the STANDARD model expresses duals via ranks)
+3. Verified: applied-horde sweep 0 illegal duplicates across ALL phases;
+   all reported phases render Head..Relic clean; owner in-game confirmation
+   (Paladin + Mage + Warlock + Shaman + Rogue)
+
 ## META-Z hotfix round 1 (2026-09-10) — owner in-game feedback
 
 ### Fixed
