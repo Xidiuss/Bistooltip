@@ -185,6 +185,15 @@ danych na `Tested-In-Game: yes` albo notka w tym rejestrze.
 - Artifact z 27 nadpisaniami legendarnych:
   `docs/superpowers/data/whitemane-custom-extract-2026-09-08.lua`
 
+### D7 — wh: PR/T7 zanieczyszczone erą T8/T9 (DECYZJA WŁAŚCICIELA)
+Wykryte 2026-09-10 (raport ownera, potwierdzone offline): baza wh ma w PR
+itemy z ery T8/T9 (DK Frost: Trinket rank1 = 45931/Ulduar, Head = 48472/T9-232,
+Weapon = 46097; te same itemy na głębszych rangach T7). wowsims i wowtbc są
+czyste. To DANE ŹRÓDŁOWE (census: zgodność PR wh↔wowsims = 0,9% — inna migawka),
+nie bug kodu. Opcje: (a) curacja ręczna PR/T7 wh, (b) wykluczyć fazę PR z wh
+w migratorze (puste → komunikat), (c) zostawić z ostrzeżeniem w labelce.
+Do decyzji właściciela; domyślnie zalecane (b) do czasu curacji.
+
 ---
 
 ## [A] Workstreamy kodowe (agent — nie częścią batcha ownera)

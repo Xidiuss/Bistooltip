@@ -553,10 +553,22 @@ end
 -- ============================================================
 
 function BistooltipAddon:changeSpec(spec_name)
-    -- Reset selection indices
-    self.db.char.class_index = 1
-    self.db.char.spec_index = 1
-    self.db.char.phase_index = 1
+    -- W4 (owner feedback 2026-09-10): keep the LAST VIEWED profile across a
+    -- database switch, resolved BY NAME against the new database (indices
+    -- are database-relative; specs/phases differ between bases).
+    local D = _G.BistooltipData
+    local className, specName, phaseName
+    if D and D.GetClassList then
+        local ci = D.GetClassList()[self.db.char.class_index]
+        className = ci and ci.name or nil
+        if className and D.GetSpecsForClass then
+            local specs = D.GetSpecsForClass(className)
+            specName = specs and specs[self.db.char.spec_index] or nil
+        end
+    end
+    if type(_G.Bistooltip_phases) == "table" then
+        phaseName = _G.Bistooltip_phases[self.db.char.phase_index] or nil
+    end
 
     -- Personal-BiS order caches are keyed to the previously bound database
     -- (ID reconciliation re-applies the saved order on read)
@@ -566,6 +578,29 @@ function BistooltipAddon:changeSpec(spec_name)
 
     -- Enable new data source (binds aliases + replays the plugin overlay)
     EnableSpec(spec_name)
+
+    -- Re-resolve the remembered profile in the new database (fallback 1/1/1)
+    self.db.char.class_index = 1
+    self.db.char.spec_index = 1
+    self.db.char.phase_index = 1
+    if className and D and D.GetClassList then
+        for i, cls in ipairs(D.GetClassList() or {}) do
+            if cls.name == className then
+                self.db.char.class_index = i
+                if specName and D.GetSpecsForClass then
+                    for j, sn in ipairs(D.GetSpecsForClass(cls.name) or {}) do
+                        if sn == specName then self.db.char.spec_index = j break end
+                    end
+                end
+                break
+            end
+        end
+    end
+    if phaseName and type(_G.Bistooltip_phases) == "table" then
+        for k, pn in ipairs(_G.Bistooltip_phases) do
+            if pn == phaseName then self.db.char.phase_index = k break end
+        end
+    end
     
     -- Clear caches
     if self.ClearSourceCache then

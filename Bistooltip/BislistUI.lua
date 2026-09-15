@@ -6007,10 +6007,13 @@ function BistooltipAddon:reloadData()
         phaseDropdown:SetValue(State.Get("phase_index") or 1)
     end
 
-    -- Refresh if frame is open
-    if mainFrame and mainFrame.frame:IsShown() then
-        -- Force immediate redraw
+    -- W4 (owner feedback 2026-09-10): redraw even when the frame is hidden —
+    -- previously the table kept the OLD database's rows until a manual
+    -- refresh while the dropdown headers already showed the new selection.
+    if mainFrame then
         drawSpecData()
+    end
+    if mainFrame and mainFrame.frame:IsShown() then
         -- Also preload items in background
         ForceReloadAllItems()
         -- Provide user feedback
