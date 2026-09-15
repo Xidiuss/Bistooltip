@@ -441,6 +441,29 @@ local function FreshBind(src)
             for phaseName, list in pairs(phases) do
                 local arr = {}
                 for i, slot in ipairs(list) do arr[i] = slot end
+                -- Mutation trap (row-duplication hunt): after bind these
+                -- arrays should only be index-READ; any NEW key written
+                -- (e.g. an appended duplicate Weapon/Off hand) logs the
+                -- exact source line that did it via debugstack.
+                local label = className .. "/" .. specName .. "/" .. phaseName
+                local seenSites = {}
+                setmetatable(arr, {
+                    __newindex = function(t, k, v)
+                        local site = "?"
+                        if type(debugstack) == "function" then
+                            site = tostring(debugstack(2, 2, 1) or "?"):gsub("\n", " ")
+                        end
+                        if not seenSites[site] then
+                            seenSites[site] = true
+                            if DEFAULT_CHAT_FRAME then
+                                DEFAULT_CHAT_FRAME:AddMessage("|cffff0000[Bis-MUTATE]|r " .. label
+                                    .. " [" .. tostring(k) .. "] = " .. tostring(v and v.slot_name or type(v))
+                                    .. " @ " .. site)
+                            end
+                        end
+                        rawset(t, k, v)
+                    end,
+                })
                 out[className][specName][phaseName] = arr
             end
         end
