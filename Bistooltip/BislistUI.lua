@@ -4002,8 +4002,26 @@ drawSpecData = function()
             end
         end
         if bad then
-            DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Bis-Tooltip:|r corrupted phase rows detected (" .. bad
-                .. ") — use /bistooltip repairrows")
+            local entries = {}
+            for i, s in ipairs(slots) do
+                entries[#entries + 1] = i .. ":" .. tostring(s.slot_name) .. "[" .. tostring(s[1]) .. "]"
+            end
+            -- compare with the pristine global to localize the corruption
+            local g = _G.Bistooltip_wowsims_final
+            local glist = g and g[className] and g[className][specName] and g[className][specName][phase]
+            local gbad = "n/a"
+            if type(glist) == "table" then
+                local gseen = {}
+                for _, s in ipairs(glist) do
+                    gseen[s.slot_name] = (gseen[s.slot_name] or 0) + 1
+                end
+                gbad = (gseen["Weapon"] or 0) .. "W/" .. (gseen["Off hand"] or 0) .. "O"
+            end
+            DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Bis-Tooltip:|r corrupted phase rows (" .. bad
+                .. ") | " .. className .. "/" .. specName .. "/" .. phase
+                .. " | pristine: " .. gbad
+                .. " | " .. table.concat(entries, " "))
+            DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Bis-Tooltip:|r use /bistooltip repairrows")
         end
     end
 

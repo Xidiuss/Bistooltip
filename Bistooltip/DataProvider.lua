@@ -419,14 +419,25 @@ end
 function BistooltipData.GetSlotsForSpec(className, specName, phase)
     if not _G.Bistooltip_bislists then return nil end
     if not className or not specName or not phase then return nil end
-    
+
     local classData = _G.Bistooltip_bislists[className]
     if not classData then return nil end
-    
+
     local specData = classData[specName]
     if not specData then return nil end
-    
-    return specData[phase]
+
+    local list = specData[phase]
+    if type(list) ~= "table" then return nil end
+
+    -- Defensive copy per read (row-duplication hunt, owner report): some
+    -- in-session code path overwrites EXISTING array entries (invisible to
+    -- __newindex traps), duplicating Weapon/Off hand rows within ~2s of a
+    -- fresh bind. Returning a fresh array per call starves that mutator —
+    -- every draw reads the bound source untouched. Slot tables stay shared
+    -- (personal rank order and plugin rank overrides persist).
+    local copy = {}
+    for i, slot in ipairs(list) do copy[i] = slot end
+    return copy
 end
 
 -- ============================================================
