@@ -263,17 +263,26 @@ function BistooltipAddon:OnInitialize()
             end
         end
         table.insert = function(t, a, b)
-            if slotArray(t) and ((type(a) == "table" and a.slot_name) or (b ~= nil and type(b) == "table" and b.slot_name)) then
-                report("INS", "slot-array insert pos=" .. tostring(b ~= nil and a or (#t + 1)))
+            if b ~= nil then
+                if slotArray(t) and type(b) == "table" and b.slot_name then
+                    report("INS", "slot-array insert pos=" .. tostring(a))
+                end
+                return rawInsert(t, a, b)
             end
-            return rawInsert(t, a, b)
+            if slotArray(t) and type(a) == "table" and a.slot_name then
+                report("INS", "slot-array append")
+            end
+            return rawInsert(t, a) -- preserve 2-arg arity (explicit nil breaks C insert)
         end
         table.remove = function(t, pos)
             if slotArray(t) then
-                local v = t[pos or #t]
+                local v = pos ~= nil and t[pos] or t[#t]
                 report("REM", "slot-array remove pos=" .. tostring(pos or #t) .. " (" .. tostring(v and v.slot_name) .. ")")
             end
-            return rawRemove(t, pos)
+            if pos ~= nil then
+                return rawRemove(t, pos)
+            end
+            return rawRemove(t) -- preserve 1-arg arity
         end
     end
 
