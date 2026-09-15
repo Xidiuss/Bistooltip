@@ -6101,19 +6101,40 @@ function BistooltipAddon:initBislists()
             BistooltipAddon:openConfigDialog()
         elseif msg == "reload" or msg == "refresh" then
             BistooltipAddon:reloadData()
-        elseif msg == "debugrows" then
-            local s = _G.Bistooltip_DebugRows
-            if not s then
-                DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip:|r open a spec first, then /bistooltip debugrows")
+        elseif msg == "debug" or msg == "debugrows" then
+            -- /bistooltip debug: LIVE integrity check + last-draw snapshot
+            local className, specName, phase = State.GetCurrentSelection()
+            local slots = className and specName and phase and Data.GetSlotsForSpec(className, specName, phase)
+            if slots then
+                local seen, bad = {}, nil
+                for _, s in ipairs(slots) do
+                    local n = s.slot_name
+                    if n then
+                        seen[n] = (seen[n] or 0) + 1
+                        if seen[n] > 1 and n ~= "Finger" and n ~= "Trinket" then
+                            bad = (bad and bad .. ", " or "") .. n .. "x" .. seen[n]
+                        end
+                    end
+                end
+                if bad then
+                    DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Bis-Tooltip debug: GUARD FAIL|r " ..
+                        tostring(className) .. "/" .. tostring(specName) .. "/" .. tostring(phase)
+                        .. " -> " .. bad .. " | use /bistooltip repairrows")
+                else
+                    DEFAULT_CHAT_FRAME:AddMessage("|cff00ff00Bis-Tooltip debug: guard OK|r " ..
+                        tostring(className) .. "/" .. tostring(specName) .. "/" .. tostring(phase)
+                        .. " (" .. #slots .. " slot rows, no illegal duplicates)")
+                end
             else
+                DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip debug:|r open a spec first")
+            end
+            local s = _G.Bistooltip_DebugRows
+            if s then
                 DEFAULT_CHAT_FRAME:AddMessage(string.format(
                     "|cffffd000Bis-Tooltip debugrows:|r %s/%s/%s bis=%s vendor=%s | data slots: %d, filtered: %d, rendered rows: %d, progress total: %d",
                     tostring(s.class), tostring(s.spec), tostring(s.phase),
                     tostring(s.bisMode), tostring(s.vendorMode),
                     s.dataSlots, #s.filtered, s.renderedRows, s.progressTotal))
-                for i, name in ipairs(s.filtered) do
-                    DEFAULT_CHAT_FRAME:AddMessage("  filtered[" .. i .. "] " .. name)
-                end
                 for gi, g in ipairs(s.groups) do
                     DEFAULT_CHAT_FRAME:AddMessage("  group[" .. gi .. "] " .. g)
                 end
@@ -6129,6 +6150,8 @@ function BistooltipAddon:initBislists()
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip|r - Toggle BIS window")
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip config|r - Open settings")
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip reload|r - Reload data")
+            DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip debug|r - Integrity guard + row diagnostics")
+            DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip repairrows|r - Fresh rebind (heal duplicated rows)")
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bis|r - Short alias")
         else
             BistooltipAddon:createMainFrame()
@@ -6137,7 +6160,20 @@ function BistooltipAddon:initBislists()
 
     LibStub("AceConsole-3.0"):RegisterChatCommand("bis", function(msg)
         msg = msg and msg:lower():trim() or ""
-        if msg == "config" or msg == "c" then
+        if msg == "debug" or msg == "d" or msg == "debugrows" then
+            -- /bis debug: re-dispatch into the full diagnostics handler
+            local cmd = SlashCmdList["BISTOOLTIP"]
+            if type(cmd) == "function" then
+                cmd("debug")
+            else
+                DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip:|r debug unavailable")
+            end
+        elseif msg == "repairrows" then
+            local cmd = SlashCmdList["BISTOOLTIP"]
+            if type(cmd) == "function" then
+                cmd("repairrows")
+            end
+        elseif msg == "config" or msg == "c" then
             BistooltipAddon:openConfigDialog()
         elseif msg == "reload" or msg == "r" then
             BistooltipAddon:reloadData()
