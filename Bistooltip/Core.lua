@@ -23,7 +23,7 @@ BistooltipAddon = LibStub("AceAddon-3.0"):NewAddon("Bis-Tooltip")
 -- ============================================================
 
 local ADDON_NAME = "Bis-Tooltip"
-local ADDON_VERSION = "2.2.2"
+local ADDON_VERSION = "3.0.0"
 local ADDON_CREDITS = "backport by Silver [DisruptionAuras]"
 local SCAN_DEBOUNCE = 0.25
 

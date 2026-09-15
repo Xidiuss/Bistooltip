@@ -4104,6 +4104,33 @@ drawSpecData = function()
     -- Set content height
     customContentFrame:SetHeight(math.max(totalHeight, 1))
 
+    -- Diagnostic snapshot for /bistooltip debugrows (owner-reported row
+    -- duplication): capture WHAT this draw actually produced.
+    do
+        local snap = {
+            class = className, spec = specName, phase = phase,
+            bisMode = bisChecklistMode and true or false,
+            vendorMode = vendorFilterMode and true or false,
+            dataSlots = slots and #slots or 0,
+            filtered = {},
+            renderedRows = #activeCustomRows,
+            groups = {},
+            progressTotal = allSlotsForProgress and #allSlotsForProgress or 0,
+        }
+        for i, s in ipairs(filteredSlots) do
+            snap.filtered[i] = tostring(s.slot_name) .. "[" .. tostring(s[1]) .. "]"
+        end
+        if bisChecklistMode and BistooltipInstanceHeader then
+            local gs = BistooltipInstanceHeader.GroupSlotsByInstance(filteredSlots, isHorde, vendorFilterMode)
+            for gi, g in ipairs(gs) do
+                local names = {}
+                for _, s in ipairs(g.slots) do names[#names + 1] = tostring(s.slot_name) end
+                snap.groups[gi] = g.name .. " => " .. table.concat(names, ",")
+            end
+        end
+        _G.Bistooltip_DebugRows = snap
+    end
+
     -- Calculate and update progress bar
     local collectedCount = 0
     local totalCount = 0
@@ -6036,6 +6063,23 @@ function BistooltipAddon:initBislists()
             BistooltipAddon:openConfigDialog()
         elseif msg == "reload" or msg == "refresh" then
             BistooltipAddon:reloadData()
+        elseif msg == "debugrows" then
+            local s = _G.Bistooltip_DebugRows
+            if not s then
+                DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip:|r open a spec first, then /bistooltip debugrows")
+            else
+                DEFAULT_CHAT_FRAME:AddMessage(string.format(
+                    "|cffffd000Bis-Tooltip debugrows:|r %s/%s/%s bis=%s vendor=%s | data slots: %d, filtered: %d, rendered rows: %d, progress total: %d",
+                    tostring(s.class), tostring(s.spec), tostring(s.phase),
+                    tostring(s.bisMode), tostring(s.vendorMode),
+                    s.dataSlots, #s.filtered, s.renderedRows, s.progressTotal))
+                for i, name in ipairs(s.filtered) do
+                    DEFAULT_CHAT_FRAME:AddMessage("  filtered[" .. i .. "] " .. name)
+                end
+                for gi, g in ipairs(s.groups) do
+                    DEFAULT_CHAT_FRAME:AddMessage("  group[" .. gi .. "] " .. g)
+                end
+            end
         elseif msg == "help" then
             DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip Commands:|r")
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip|r - Toggle BIS window")

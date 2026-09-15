@@ -1,6 +1,7 @@
 # Bis-Tooltip
 
 A World of Warcraft 3.3.5a (WotLK) addon that displays Best-in-Slot (BiS) information in item tooltips and provides a comprehensive BiS checklist UI.
+> **Bistooltip 3.0.0 (META-Z)** — rebuilt data model: 3 selectable ranking databases (WoWSimsBP STANDARD / wowtbc / Wowhead), MASTER source format with colors (per-boss TOKEN/MARK, TOC/TOGC, VoA, HC/HM), VENDOR mode, server plugins (Whitemane:Frostmourne, WOTLK5_S2), standalone vendor Scanner, account-wide personal BiS. See Bistooltip/CHANGELOG.md.
 
 ## Features
 

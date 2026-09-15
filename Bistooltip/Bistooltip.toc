@@ -2,7 +2,7 @@
 ## Title: Bis-Tooltip
 ## Notes: Shows Best-in-Slot information in tooltips and provides a BIS checklist UI
 ## Author: Silver [DisruptionAuras], refactored by Divian
-## Version: 2.2.1-3.3.5a
+## Version: 3.0.0
 ## SavedVariables: BisTooltipDB
 ## OptionalDeps: DataStore, DataStore_Inventory, ElvUI, Tukui
 
