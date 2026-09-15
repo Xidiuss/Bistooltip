@@ -220,18 +220,26 @@ local function ser(v)
   if t == "boolean" then return tostring(v) end
   if t ~= "table" then error("cannot serialize " .. t) end
   local n = #v
-  local keys, hasMap = {}, false
+  local keys = {}
+  local numInRange = 0
   for k in pairs(v) do
-    if type(k) ~= "number" or k < 1 or k > n or k % 1 ~= 0 then hasMap = true end
+    if type(k) == "number" and k >= 1 and k <= n and k % 1 == 0 then
+      numInRange = numInRange + 1
+    end
     keys[#keys + 1] = k
   end
+  -- Positional (implied-key) form ONLY for exactly-dense arrays 1..n.
+  -- Sparse numeric maps (e.g. horde_overrides {[1],[4],[6]=...}) MUST keep
+  -- explicit keys — collapsing them into a dense array silently shifts
+  -- every index after the first gap (the row-duplication bug).
+  local dense = (numInRange == n) and (n > 0 or next(v) == nil)
   table.sort(keys, function(a, b)
     if type(a) ~= type(b) then return type(a) == "number" end
     return a < b
   end)
   local parts = {}
   for _, k in ipairs(keys) do
-    local idx = (type(k) == "number" and k >= 1 and k <= n and k % 1 == 0) and k or nil
+    local idx = dense and type(k) == "number" and k or nil
     if idx then
       parts[#parts + 1] = ser(v[idx])
     else
