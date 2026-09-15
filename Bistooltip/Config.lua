@@ -425,13 +425,36 @@ end
 -- Enable Data Source
 -- ============================================================
 
+-- Fresh shallow copy of the database's phase ARRAYS per bind (slot tables
+-- stay shared, so rank-level personalization and plugin rank overrides
+-- survive). This isolates the live view from in-session corruption of the
+-- pristine globals: an owner report showed a phase array mutating mid-
+-- session (Chest/Hands/Legs swapped for extra Trinket/Weapon/Off hand
+-- entries) — with per-bind copies every (re)bind heals the arrays.
+local function FreshBind(src)
+    if type(src) ~= "table" then return src end
+    local out = {}
+    for className, specs in pairs(src) do
+        out[className] = {}
+        for specName, phases in pairs(specs) do
+            out[className][specName] = {}
+            for phaseName, list in pairs(phases) do
+                local arr = {}
+                for i, slot in ipairs(list) do arr[i] = slot end
+                out[className][specName][phaseName] = arr
+            end
+        end
+    end
+    return out
+end
+
 local function EnableSpec(spec_name)
     -- W4 DB registry (spec §4): wowsims = assembled STANDARD (alliance base
     -- + horde slot overrides via reference swaps); wowtbc / wh = plain alias.
     -- Unknown keys fall back to the STANDARD.
     local key = sources[spec_name] and spec_name or "wowsims"
     if key == "wowsims" then
-        Bistooltip_bislists = Bistooltip_wowsims_final
+        Bistooltip_bislists = FreshBind(Bistooltip_wowsims_final)
         Bistooltip_classes = Bistooltip_wowsims_final_classes
         Bistooltip_phases = Bistooltip_wowsims_final_phases
         if type(Bistooltip_wowsims_horde_overrides) == "table"
@@ -457,11 +480,11 @@ local function EnableSpec(spec_name)
             end
         end
     elseif key == "wh" then
-        Bistooltip_bislists = Bistooltip_wh_bislists
+        Bistooltip_bislists = FreshBind(Bistooltip_wh_bislists)
         Bistooltip_classes = Bistooltip_wh_classes
         Bistooltip_phases = Bistooltip_wh_phases
     else -- wowtbc
-        Bistooltip_bislists = Bistooltip_wowtbc_bislists
+        Bistooltip_bislists = FreshBind(Bistooltip_wowtbc_bislists)
         Bistooltip_classes = Bistooltip_wowtbc_classes
         Bistooltip_phases = Bistooltip_wowtbc_phases
     end

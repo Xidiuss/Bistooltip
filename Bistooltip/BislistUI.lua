@@ -3987,6 +3987,26 @@ drawSpecData = function()
         return
     end
 
+    -- Integrity guard (owner-reported row duplication): Finger/Trinket may
+    -- legitimately appear twice in some databases (dual slots); any OTHER
+    -- slot_name occurring more than once in a phase is array corruption.
+    do
+        local seen, bad = {}, nil
+        for i, s in ipairs(slots) do
+            local n = s.slot_name
+            if n then
+                seen[n] = (seen[n] or 0) + 1
+                if seen[n] > 1 and n ~= "Finger" and n ~= "Trinket" then
+                    bad = (bad and bad .. ", " or "") .. n .. "x" .. seen[n]
+                end
+            end
+        end
+        if bad then
+            DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Bis-Tooltip:|r corrupted phase rows detected (" .. bad
+                .. ") — use /bistooltip repairrows")
+        end
+    end
+
     -- Filter slots
     local searchText = State.Get("searchTextLower")
     local showOnlyMissing = State.Get("showOnlyMissing")
@@ -6080,6 +6100,12 @@ function BistooltipAddon:initBislists()
                     DEFAULT_CHAT_FRAME:AddMessage("  group[" .. gi .. "] " .. g)
                 end
             end
+        elseif msg == "repairrows" then
+            -- Rebind the current database: phase arrays are rebuilt fresh
+            -- from the pristine globals (heals in-session row duplication)
+            BistooltipAddon:changeSpec(BistooltipAddon.db.global.data_source)
+            DEFAULT_CHAT_FRAME:AddMessage("|cff00ff00Bis-Tooltip:|r rows repaired (fresh rebind of " ..
+                tostring(BistooltipAddon.db.global.data_source) .. ")")
         elseif msg == "help" then
             DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip Commands:|r")
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip|r - Toggle BIS window")
