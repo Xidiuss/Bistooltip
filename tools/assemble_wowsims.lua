@@ -154,6 +154,58 @@ end
 local A = assemble(1, Bistooltip_bislists_alliance)
 local H = assemble(2, Bistooltip_bislists_horde)
 
+-- D8 collapse: the RAW faction tables sometimes carry the same slot_name
+-- twice (their own dual-slot convention: Weaponx2, Waistx2...) and phases
+-- missing from the primary flow through translateSlots verbatim, leaking
+-- that structure into the final view. The STANDARD model expresses duals
+-- via RANKS in a single slot (like Finger/Trinket), so duplicate slot
+-- entries are merged: rank lists concatenated, IDs deduped, capped at 6.
+local function collapseDuplicates(list)
+  local byName, order = {}, {}
+  for _, slot in ipairs(list) do
+    local name = slot.slot_name
+    local tgt = byName[name]
+    if not tgt then
+      tgt = { slot_name = name, enhs = slot.enhs }
+      for k = 1, 6 do tgt[k] = slot[k] or -1 end
+      byName[name] = tgt
+      order[#order + 1] = tgt
+    else
+      local seen = {}
+      for k = 1, 6 do
+        if type(tgt[k]) == "number" and tgt[k] > 0 then seen[tgt[k]] = true end
+      end
+      for k = 1, 6 do
+        local id = slot[k]
+        if type(id) == "number" and id > 0 and not seen[id] then
+          for r = 1, 6 do
+            if type(tgt[r]) ~= "number" or tgt[r] <= 0 then
+              tgt[r] = id
+              seen[id] = true
+              break
+            end
+          end
+        end
+      end
+      if (not tgt.enhs or #tgt.enhs == 0) and slot.enhs and #slot.enhs > 0 then
+        tgt.enhs = slot.enhs
+      end
+    end
+  end
+  for i = 1, #list do list[i] = nil end
+  for i, slot in ipairs(order) do list[i] = slot end
+  return list
+end
+for _, faction in ipairs({ A, H }) do
+  for _, specs in pairs(faction) do
+    for _, phases in pairs(specs) do
+      for _, list in pairs(phases) do
+        collapseDuplicates(list)
+      end
+    end
+  end
+end
+
 -- self-audit: no opposite-faction tagged ids inside either final
 local function auditFaction(t, pf, label)
   local bad, slots = 0, 0
@@ -219,27 +271,29 @@ local function ser(v)
   if t == "string" then return string.format("%q", v) end
   if t == "boolean" then return tostring(v) end
   if t ~= "table" then error("cannot serialize " .. t) end
-  local n = #v
+  -- Dense detection WITHOUT #: #v on a sparse map is an UNDEFINED border
+  -- (e.g. keys {1,4,6..14} may yield #v==1), which made the previous
+  -- numInRange==n check pass and collapse sparse override maps again.
+  -- Dense iff every key is a positive integer and they are exactly 1..N.
   local keys = {}
-  local numInRange = 0
+  local numKeys, maxKey, hasOther = 0, 0, false
   for k in pairs(v) do
-    if type(k) == "number" and k >= 1 and k <= n and k % 1 == 0 then
-      numInRange = numInRange + 1
-    end
     keys[#keys + 1] = k
+    if type(k) == "number" and k >= 1 and k % 1 == 0 then
+      numKeys = numKeys + 1
+      if k > maxKey then maxKey = k end
+    else
+      hasOther = true
+    end
   end
-  -- Positional (implied-key) form ONLY for exactly-dense arrays 1..n.
-  -- Sparse numeric maps (e.g. horde_overrides {[1],[4],[6]=...}) MUST keep
-  -- explicit keys — collapsing them into a dense array silently shifts
-  -- every index after the first gap (the row-duplication bug).
-  local dense = (numInRange == n) and (n > 0 or next(v) == nil)
+  local dense = (not hasOther) and (numKeys == maxKey) and (numKeys > 0 or next(v) == nil)
   table.sort(keys, function(a, b)
     if type(a) ~= type(b) then return type(a) == "number" end
     return a < b
   end)
   local parts = {}
   for _, k in ipairs(keys) do
-    local idx = dense and type(k) == "number" and k or nil
+    local idx = dense and k or nil
     if idx then
       parts[#parts + 1] = ser(v[idx])
     else
