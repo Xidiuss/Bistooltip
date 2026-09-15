@@ -240,6 +240,43 @@ end
 -- ============================================================
 
 function BistooltipAddon:OnInitialize()
+    -- Diagnostic (row-duplication hunt): intercept table.insert/remove on
+    -- slot arrays. The corruptor removes Chest/Hands/Legs entries and
+    -- inserts duplicate Trinket/Weapon/Off hand (array length stays 15,
+    -- so __newindex traps stay silent). These wrappers log the source line.
+    do
+        local rawInsert, rawRemove = table.insert, table.remove
+        local seenSites = {}
+        local function slotArray(t)
+            return type(t) == "table" and #t > 0 and #t <= 40
+                and type(t[1]) == "table" and t[1].slot_name ~= nil
+        end
+        local function report(tag, detail)
+            local site = type(debugstack) == "function"
+                and tostring(debugstack(2, 3, 1) or "?") or "?"
+            site = site:gsub("\n", " ")
+            local key = tag .. "|" .. site
+            if seenSites[key] then return end
+            seenSites[key] = true
+            if DEFAULT_CHAT_FRAME then
+                DEFAULT_CHAT_FRAME:AddMessage("|cffff8800[Bis-" .. tag .. "]|r " .. detail .. " @ " .. site)
+            end
+        end
+        table.insert = function(t, a, b)
+            if slotArray(t) and ((type(a) == "table" and a.slot_name) or (b ~= nil and type(b) == "table" and b.slot_name)) then
+                report("INS", "slot-array insert pos=" .. tostring(b ~= nil and a or (#t + 1)))
+            end
+            return rawInsert(t, a, b)
+        end
+        table.remove = function(t, pos)
+            if slotArray(t) then
+                local v = t[pos or #t]
+                report("REM", "slot-array remove pos=" .. tostring(pos or #t) .. " (" .. tostring(v and v.slot_name) .. ")")
+            end
+            return rawRemove(t, pos)
+        end
+    end
+
     -- Pre-warm object pools FIRST (before any UI creation)
     -- This prevents CreateFrame calls during rendering and reduces FPS drops
     if BistooltipPools and BistooltipPools.Initialize then
