@@ -96,8 +96,8 @@ assert(has("World Drops", "Level 80", ""), "missing World Drops identity")
 
 -- W2: VOA matrix — 4 canonical bosses x {10N, 25N}, all referenced
 local VOA_BOSSES = {
-  "Archavon the Stone Watcher", "Emalon the Storm Watcher",
-  "Koralon the Flame Watcher", "Toravon the Ice Watcher",
+  "Archavon", "Emalon", "Koralon", "Toravon",
+  
 }
 for _, b in ipairs(VOA_BOSSES) do
   assert(voaBosses["10N|" .. b], "missing VOA 10N source for " .. b)

@@ -98,8 +98,8 @@ local function canonInstance(zone)
   return zone
 end
 
--- RAW boss -> canonical boss. Only proven duplicates (brief-mandated Taldaram
--- plus data-proven Anubarak 4-vs-2 and Trash Mobs 12-vs-21 majority spellings).
+-- RAW boss -> canonical boss. Proven duplicates + owner short-form names
+-- (2026-09-15 cosmetics pass; full list in tools/tier_matrix.lua BOSS_SHORT).
 local BOSS_ALIASES = {
   ["Taldaram"] = "Prince Taldaram",
   ["Anubarak"] = "Anub'arak",
@@ -425,7 +425,8 @@ local function isTrophyZone(zone)
 end
 
 local registry, acquisition = {}, {}
-local nTrophy, nDeduped, nMarkGear, nQuest, nMechSkip = 0, 0, 0, 0, 0
+local nTrophy, nDeduped, nMarkGear, nQuest, nMechSkip, nTokenItems = 0, 0, 0, 0, 0, 0
+local noVendorAfter = {} -- zones whose items lose emblem-vendor lines (heroic T10)
 local function sourceID(inst, diff, boss)
   return ((inst .. "_" .. (diff or "") .. "_" .. boss):gsub("[^%w]+", "_"):gsub("_+", "_"):upper())
 end
@@ -454,11 +455,14 @@ for zone, bosses in pairs(lootTable) do
     -- Tier 10N/10HC sanctified gear: per-boss MARK acquisitions (S4-5/W2).
     -- Zone shape: "Tier 10N <Class>[ <Spec>] ICC(25)" / "Tier 10HC ... (25HC)".
     -- Replaces the old aggregated fake boss "Mark"/"Mark HC" identity.
+    -- T10HC (ilvl 277) gear must NOT carry the 251-level VENDOR Frost cost
+    -- (owner 2026-09-15: heroic sources = MARK only; emblem vendor sells 251).
     if zone:sub(1, 8) == "Tier 10N" or zone:sub(1, 9) == "Tier 10HC" then
       local diff = (zone:sub(1, 9) == "Tier 10HC") and "25HC" or "25N"
       local rest = zone:gsub("^Tier 10[NH][CM]?%s+", ""):gsub("%s*ICC%(.-$", "")
       local class = rest:match("^(%S+)") or ""
       local family = assert(TM.CLASS_FAMILY[class], "Tier 10 zone with unknown class: " .. zone)
+      if diff == "25HC" then noVendorAfter[zone] = true end
       for _, items in pairs(bosses) do
         for _, itemID in pairs(items) do
           if type(itemID) == "number" and itemID > 0 then
@@ -490,6 +494,7 @@ for zone, bosses in pairs(lootTable) do
       local dtier = tierOf(zone)
       for boss, items in pairs(bosses) do
         local cboss = BOSS_ALIASES[boss] or boss
+        cboss = TM.BOSS_SHORT[cboss] or cboss -- owner short-form names
         local id = sourceID(inst, diff, cboss)
         if suffix ~= "" then id = id .. "_" .. suffix end
         registry[id] = registry[id] or { instance = inst, boss = cboss, difficulty = diff }
@@ -503,11 +508,87 @@ for zone, bosses in pairs(lootTable) do
     end
   end
 end
+
+-- T7/T8 TOKEN conversions (owner cosmetics pass 2026-09-15): items listed in
+-- TM.TOKEN_PAGES lose their plain DROP entries from the "Tier 7/8 Tokens"
+-- zones and gain kind=TOKEN acquisitions, one per real boss (no dedup).
+do
+  local bossSeen = {}
+  for itemID, info in pairs(TM.TOKEN_PAGES) do
+    local kept = {}
+    local list = acquisition[itemID]
+    if list then
+      for _, e in ipairs(list) do
+        local keep = true
+        if e.kind == "DROP" and e.tier and (e.tier == "T7" or e.tier == "T8") then
+          keep = false -- old aggregated token-zone DROP replaced by TOKEN lines
+        end
+        if keep then kept[#kept + 1] = e end
+      end
+      acquisition[itemID] = kept
+    end
+    for _, pg in ipairs(info.pages) do
+      local sid = sourceID(pg[1], pg[3], pg[2])
+      registry[sid] = registry[sid] or { instance = pg[1], boss = pg[2], difficulty = pg[3] }
+      addEntry(itemID, { kind = "TOKEN", tier = info.tier, family = info.family, source = sid })
+      bossSeen[sid] = true
+    end
+    -- a TOKEN line fully describes the drop: remove the plain DROP from the
+    -- same place so the tooltip shows the TOKEN format only
+    local tokenSources = {}
+    for _, e in ipairs(acquisition[itemID]) do
+      if e.kind == "TOKEN" then tokenSources[e.source] = true end
+    end
+    if next(tokenSources) then
+      local deduped = {}
+      for _, e in ipairs(acquisition[itemID]) do
+        if not (e.kind == "DROP" and tokenSources[e.source]) then
+          deduped[#deduped + 1] = e
+        end
+      end
+      acquisition[itemID] = deduped
+    end
+    nTokenItems = nTokenItems + 1
+  end
+end
+
 -- emblem items -> VENDOR entries (tier only where provable, see VENDOR_TIER)
 for itemID, e in pairs(Bistooltip_emblem_items or {}) do
   local entry = { kind = "VENDOR", cost = { { currency = e.currency, amount = e.cost } } }
   if VENDOR_TIER[e.currency] then entry.tier = VENDOR_TIER[e.currency] end
   addEntry(itemID, entry)
+end
+
+-- Heroic T10 (25HC, ilvl 277) items must not carry the 251-level emblem
+-- VENDOR cost (owner 2026-09-15): only MARK 25HC lines remain for them.
+do
+  local hcT10 = {}
+  for zone in pairs(noVendorAfter) do
+    -- re-walk the raw zone to collect its itemIDs
+    for _, items in pairs(lootTable[zone] or {}) do
+      for _, itemID in pairs(items) do
+        if type(itemID) == "number" and itemID > 0 then hcT10[itemID] = true end
+      end
+    end
+  end
+  for itemID in pairs(hcT10) do
+    local list = acquisition[itemID]
+    if list then
+      local kept, removed = {}, 0
+      for _, e in ipairs(list) do
+        if e.kind == "VENDOR" and e.cost then
+          local frost = false
+          for _, c in ipairs(e.cost) do
+            if c.currency == "Emblem of Frost" then frost = true end
+          end
+          if frost then removed = removed + 1 else kept[#kept + 1] = e end
+        else
+          kept[#kept + 1] = e
+        end
+      end
+      if removed > 0 then acquisition[itemID] = kept end
+    end
+  end
 end
 
 -- Mark of Sanctification items themselves drop from the mark bosses
@@ -634,5 +715,5 @@ writeAcquisition("Bistooltip/ItemAcquisition.lua")
 local nreg, nacq = 0, 0
 for _ in pairs(registry) do nreg = nreg + 1 end
 for _ in pairs(acquisition) do nacq = nacq + 1 end
-print(string.format("migrated: %d sources, %d items (%d TROPHY entries, %d deduped, %d MARK-gear items, %d quest drops, %d mech-vendor zones skipped)",
-  nreg, nacq, nTrophy, nDeduped, nMarkGear, nQuest, nMechSkip))
+print(string.format("migrated: %d sources, %d items (%d TROPHY, %d deduped, %d MARK-gear, %d quest, %d mech-skip, %d token items)",
+  nreg, nacq, nTrophy, nDeduped, nMarkGear, nQuest, nMechSkip, nTokenItems))
