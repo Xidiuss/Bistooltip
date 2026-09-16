@@ -76,7 +76,8 @@ def notification_from_event(
 
 
 def clip(value: str, limit: int) -> str:
-    return value if len(value) <= limit else value[: limit - 1].rstrip() + "\u0102\u02d8\u00e2\u201a\u00ac\u00c2\u00a6"
+    suffix = "\u0102\u02d8\u00e2\u201a\u00ac\u00c2\u00a6"
+    return value if len(value) <= limit else value[: limit - len(suffix)].rstrip() + suffix
 
 
 def build_payload(notification: Notification, role_id: str) -> dict:
@@ -113,13 +114,9 @@ def validate_payload(payload: dict) -> None:
     content = payload.get("content")
     allowed_mentions = payload.get("allowed_mentions")
     if content:
-        roles = allowed_mentions.get("roles") if isinstance(allowed_mentions, dict) else None
         if (
-            not isinstance(roles, list)
-            or len(roles) != 1
-            or not isinstance(roles[0], str)
-            or content != f"<@&{roles[0]}>"
-            or allowed_mentions != {"roles": roles}
+            content != f"<@&{ROLE_ID}>"
+            or allowed_mentions != {"roles": [ROLE_ID]}
         ):
             raise ValueError("Pinging payload must allow only its one role mention.")
     elif content != "" or allowed_mentions != {"parse": []}:

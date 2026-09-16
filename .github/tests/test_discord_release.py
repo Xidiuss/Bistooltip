@@ -30,7 +30,15 @@ class FormatterTests(unittest.TestCase):
                 self.assertEqual(sender.component_name(tag, "maintenance"), expected)
 
     def test_branch_mapping_and_unknown_fallback(self):
-        self.assertEqual(sender.component_name("v1", "Bistooltip_Scanner"), "BiSTooltip Scanner")
+        cases = {
+            "main": "BiSTooltip Core",
+            "Bistooltip_Scanner": "BiSTooltip Scanner",
+            "Bistooltip_WOTLK5_S2": "BiSTooltip WOTLK5 S2",
+            "Bistooltip_Whitemane_Frostmourne": "BiSTooltip Whitemane Frostmourne",
+        }
+        for branch, expected in cases.items():
+            with self.subTest(branch=branch):
+                self.assertEqual(sender.component_name("v1", branch), expected)
         self.assertEqual(sender.component_name("v1", "hotfix-x"), "BiSTooltip (hotfix-x)")
 
     def test_release_payload_pings_only_updates_role(self):
@@ -61,8 +69,22 @@ class FormatterTests(unittest.TestCase):
         long_note = sender.notification_from_event("release", self.release(body="x" * 10000), False, "unused")
         payload = sender.build_payload(long_note, "1545592862920671252")
         sender.validate_payload(payload)
+        self.assertLessEqual(len(payload["embeds"][0]["description"]), 3500)
         self.assertLessEqual(len(payload["embeds"][0]["description"]), 4096)
         self.assertLessEqual(sender.embed_character_count(payload["embeds"][0]), 6000)
+
+    def test_validate_payload_rejects_another_role_id(self):
+        note = sender.notification_from_event("release", self.release(), False, "unused")
+        payload = sender.build_payload(note, "999")
+        with self.assertRaises(ValueError):
+            sender.validate_payload(payload)
+
+    def test_validate_payload_rejects_pinging_payload_with_parse_enabled(self):
+        note = sender.notification_from_event("release", self.release(), False, "unused")
+        payload = sender.build_payload(note, sender.ROLE_ID)
+        payload["allowed_mentions"] = {"parse": ["roles"]}
+        with self.assertRaises(ValueError):
+            sender.validate_payload(payload)
 
     def test_missing_release_field_and_unknown_event_fail_clearly(self):
         with self.assertRaisesRegex(ValueError, "tag_name"):
