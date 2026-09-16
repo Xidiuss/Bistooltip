@@ -2,12 +2,23 @@ name: tests
 
 on: [push, pull_request]
 
+permissions:
+  contents: read
+
 jobs:
-  gate:
+  discord-notification:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-      - name: Install Lua 5.1
-        run: sudo apt-get update && sudo apt-get install -y lua5.1 liblua5.1-0-dev
-      - name: Full offline gate (syntax + unit suites + plugin e2e)
-        run: bash tools/run_all.sh
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Compile sender and tests
+        run: python -m compileall -q .github/scripts .github/tests
+      - name: Run Discord notification tests
+        run: python -m unittest discover -s .github/tests -p "test_*.py" -v

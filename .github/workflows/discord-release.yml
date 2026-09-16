@@ -3,78 +3,35 @@ name: Discord Release Notification
 on:
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      ping_role:
+        description: Ping the BiSTooltip Updates role during this manual test
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
 
 jobs:
   discord:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 3
     steps:
-      - name: Send BiaoGe release notification
+      - name: Check out notification code from the default branch
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          sparse-checkout: .github
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Send BiSTooltip release notification
         env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          RELEASE_NAME: ${{ github.event.release.name }}
-          RELEASE_TAG: ${{ github.event.release.tag_name }}
-          RELEASE_URL: ${{ github.event.release.html_url }}
-          RELEASE_BODY: ${{ github.event.release.body }}
-          BIAOGE_ROLE_ID: "1545592862920671252"
-        run: |
-          python - <<'PY'
-          import json
-          import os
-          import urllib.request
-
-          webhook = os.environ["DISCORD_WEBHOOK"]
-          role_id = os.environ["BISTOOLTIP_ROLE_ID"]
-          name = os.environ.get("RELEASE_NAME") or os.environ.get("RELEASE_TAG") or "New Release"
-          tag = os.environ.get("RELEASE_TAG", "")
-          url = os.environ.get("RELEASE_URL", "")
-          body = os.environ.get("RELEASE_BODY", "").strip()
-
-          if not body:
-              body = "A new version of BiaoGe is now available."
-
-          if len(body) > 3500:
-              body = body[:3500] + "\n\n…"
-
-          payload = {
-              "username": "BiSTooltip Releases",
-              "content": f"<@&{role_id}>",
-              "allowed_mentions": {
-                  "roles": [role_id]
-              },
-              "embeds": [
-                  {
-                      "title": f"🚀 {name}",
-                      "url": url,
-                      "description": body,
-                      "fields": [
-                          {
-                              "name": "📦 Version",
-                              "value": f"`{tag}`",
-                              "inline": True
-                          },
-                          {
-                              "name": "⬇️ Download",
-                              "value": f"[Open GitHub Release]({url})",
-                              "inline": True
-                          }
-                      ],
-                      "footer": {
-                          "text": "BiaoGe • WotLK • GitHub Release"
-                      }
-                  }
-              ]
-          }
-
-          data = json.dumps(payload).encode("utf-8")
-
-          req = urllib.request.Request(
-              webhook,
-              data=data,
-              headers={"Content-Type": "application/json"},
-              method="POST"
-          )
-
-          with urllib.request.urlopen(req) as response:
-              print("Discord status:", response.status)
-          PY
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          BISTOOLTIP_UPDATES_ROLE_ID: "1545592862920671252"
+          MANUAL_PING_ROLE: ${{ inputs.ping_role }}
+        run: python .github/scripts/discord_release.py
