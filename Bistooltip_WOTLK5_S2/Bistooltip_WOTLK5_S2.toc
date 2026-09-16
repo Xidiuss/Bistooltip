@@ -1,6 +1,0 @@
-## Interface: 30300
-## Title: Bistooltip WOTLK5 S2
-## Notes: Server diff for WOTLK5 season 2 (scanned vendor costs)
-## Version: 1.0.1
-## Dependencies: Bistooltip
-main.lua

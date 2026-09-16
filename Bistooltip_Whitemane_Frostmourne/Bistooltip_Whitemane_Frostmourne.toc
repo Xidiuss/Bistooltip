@@ -1,7 +1,0 @@
-## Interface: 30300
-## Title: Bistooltip — Whitemane: Frostmourne
-## Notes: Server diff for Whitemane Frostmourne — custom currencies (Emblem of Ascension/II, Echo of the Titans), legendary rank-1 overrides
-## Author: Bistooltip
-## Version: 1.0.1
-## Dependencies: Bistooltip
-main.lua
