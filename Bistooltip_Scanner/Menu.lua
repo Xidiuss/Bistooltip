@@ -415,8 +415,9 @@ function Bistooltip_Scanner_SetMarkFromClick(linkOrID)
   return id
 end
 
--- Ctrl+Lewy na slocie plecaka: pobierz ID marki zamiast podnoszenia.
--- Zwraca true gdy obsluzone (oryginalny handler pomijany).
+-- Ctrl+Lewy na slocie plecaka: podepnij ID marki (obserwacja post-hooka;
+-- oryginalny handler ZAWSZE leci dalej, wiec przedmiot tez sie podnosi).
+-- Zwraca true gdy ID przechwycone (wartosc informacyjna, nic nie blokuje).
 local function containerCtrlCapture(self)
   local bag, slot = nil, nil
   if type(self) == "table" and type(self.GetParent) == "function" then
@@ -440,20 +441,30 @@ local function containerCtrlCapture(self)
   return true
 end
 
--- Owrapowanie globalnego handlera plecaka. Idempotentne, headless-safe.
+-- Obserwacja klikow plecaka przez hooksecurefunc. Celowo NIE nadpisujemy
+-- globalnego ContainerFrameItemButton_OnClick: podmiana tego globala
+-- taintuje sciezke klikow i blokuje chronione UseContainerItem, przez co
+-- prawy przycisk przestaje uzywac przedmiotow z baga (z paska akcji
+-- dziala, bo to osobna secure-sciezka; po wylaczeniu skanera wraca).
+-- Post-hook nie moze zablokowac podniesienia, wiec Ctrl+Lewy lapie Marke
+-- I podnosi przedmiot (odloz go ponownym kliknieciem). Idempotentne,
+-- headless-safe.
+local function containerCtrlObserve(self, button)
+  if button ~= "LeftButton" then return end
+  if type(IsControlKeyDown) ~= "function" then return end
+  local okC, ctrl = pcall(IsControlKeyDown)
+  if not (okC and ctrl) then return end
+  pcall(containerCtrlCapture, self)
+end
+
+-- Podpiecie obserwacji. Bez hooksecurefunc (bardzo stary klient?) nic nie
+-- robimy: wolimy zgubic ficzer Ctrl+klik niz zepsuc uzywanie przedmiotow.
 local function hookContainerClick()
-  if type(ContainerFrameItemButton_OnClick) ~= "function" then return end
   if _G.BistooltipScannerContainerHooked then return end
-  local orig = ContainerFrameItemButton_OnClick
+  if type(hooksecurefunc) ~= "function" then return end
+  if type(ContainerFrameItemButton_OnClick) ~= "function" then return end
   _G.BistooltipScannerContainerHooked = true
-  _G.ContainerFrameItemButton_OnClick = function(self, button, ...)
-    local okC, ctrl = pcall(IsControlKeyDown)
-    if okC and ctrl and button == "LeftButton" then
-      local okH, handled = pcall(containerCtrlCapture, self)
-      if okH and handled then return end
-    end
-    return orig(self, button, ...)
-  end
+  pcall(hooksecurefunc, "ContainerFrameItemButton_OnClick", containerCtrlObserve)
 end
 
 hookContainerClick()
@@ -945,7 +956,7 @@ local function ensureMenu()
   layoutMarkSets()
   -- Dol: hinty + Clear/Close przy prawej krawedzi.
   mkBottomLabel("Alt+click item = attach mark (never buys)", 70, 340)
-  mkBottomLabel("Ctrl+click bag item = grab mark ID", 56, 340)
+  mkBottomLabel("Ctrl+click bag item = grab mark ID (+pickup, put it back)", 56, 340)
   pcall(function()
     local clearB = CreateFrame("Button", "BistooltipScannerMenuClear", f)
     if clearB ~= nil then
