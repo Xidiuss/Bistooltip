@@ -240,10 +240,11 @@ end
 -- ============================================================
 
 function BistooltipAddon:OnInitialize()
-    -- Diagnostic (row-duplication hunt): intercept table.insert/remove on
-    -- slot arrays. The corruptor removes Chest/Hands/Legs entries and
-    -- inserts duplicate Trinket/Weapon/Off hand (array length stays 15,
-    -- so __newindex traps stay silent). These wrappers log the source line.
+    -- Diagnostic interception of table.insert/remove on slot arrays.
+    -- SILENT by default — fires only when /bis debug on enables
+    -- _G.Bistooltip_DebugMode (the wrappers otherwise spammed chat on every
+    -- normal FilterSlots call during tab switches).
+    _G.Bistooltip_DebugMode = _G.Bistooltip_DebugMode or false
     do
         local rawInsert, rawRemove = table.insert, table.remove
         local seenSites = {}
@@ -252,6 +253,7 @@ function BistooltipAddon:OnInitialize()
                 and type(t[1]) == "table" and t[1].slot_name ~= nil
         end
         local function report(tag, detail)
+            if not _G.Bistooltip_DebugMode then return end
             local site = type(debugstack) == "function"
                 and tostring(debugstack(2, 3, 1) or "?") or "?"
             site = site:gsub("\n", " ")

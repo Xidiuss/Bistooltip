@@ -6147,8 +6147,17 @@ function BistooltipAddon:initBislists()
             BistooltipAddon:openConfigDialog()
         elseif msg == "reload" or msg == "refresh" then
             BistooltipAddon:reloadData()
+        elseif msg == "debug on" then
+            _G.Bistooltip_DebugMode = true
+            DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip:|r debug mode |cff00ff00ON|r — [Bis-INS]/[Bis-REM] interception logs enabled (/bis debug off)")
+        elseif msg == "debug off" then
+            _G.Bistooltip_DebugMode = false
+            DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip:|r debug mode |cffff0000OFF|r")
         elseif msg == "debug" or msg == "debugrows" then
             _G.Bistooltip_DebugDump()
+            DEFAULT_CHAT_FRAME:AddMessage("  interception logs: " ..
+                (_G.Bistooltip_DebugMode and "|cff00ff00ON|r" or "|cffff0000OFF|r")
+                .. "  (toggle: /bis debug on | /bis debug off)")
         elseif msg == "repairrows" then
             _G.Bistooltip_RepairRows()
         elseif msg == "help" then
@@ -6157,6 +6166,7 @@ function BistooltipAddon:initBislists()
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip config|r - Open settings")
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip reload|r - Reload data")
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip debug|r - Integrity guard + row diagnostics")
+            DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip debug on/off|r - Toggle [Bis-INS]/[Bis-REM] interception logs")
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip repairrows|r - Fresh rebind (heal duplicated rows)")
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bis|r - Short alias")
         else
@@ -6166,11 +6176,17 @@ function BistooltipAddon:initBislists()
 
     LibStub("AceConsole-3.0"):RegisterChatCommand("bis", function(msg)
         msg = msg and msg:lower():trim() or ""
-        if msg == "debug" or msg == "d" or msg == "debugrows" then
-            -- /bis debug: direct call, no SlashCmdList indirection (the
-            -- indirection broke when the main handler registered under a
-            -- different AceConsole key — owner hit "debug unavailable")
+        if msg == "debug on" or msg == "d on" then
+            _G.Bistooltip_DebugMode = true
+            DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip:|r debug mode |cff00ff00ON|r — [Bis-INS]/[Bis-REM] interception logs enabled (/bis debug off)")
+        elseif msg == "debug off" or msg == "d off" then
+            _G.Bistooltip_DebugMode = false
+            DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip:|r debug mode |cffff0000OFF|r")
+        elseif msg == "debug" or msg == "d" or msg == "debugrows" then
             _G.Bistooltip_DebugDump()
+            DEFAULT_CHAT_FRAME:AddMessage("  interception logs: " ..
+                (_G.Bistooltip_DebugMode and "|cff00ff00ON|r" or "|cffff0000OFF|r")
+                .. "  (toggle: /bis debug on | /bis debug off)")
         elseif msg == "repairrows" then
             _G.Bistooltip_RepairRows()
         elseif msg == "config" or msg == "c" then
