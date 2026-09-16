@@ -51,6 +51,8 @@ def validate_config(webhook_url: str, role_id: str) -> None:
         raise ValueError("DISCORD_WEBHOOK_URL is not a valid Discord webhook URL.")
     if not re.fullmatch(r"\d{17,20}", role_id):
         raise ValueError("BiSTooltip Updates role ID must be a 17-20 digit Discord snowflake.")
+    if role_id != ROLE_ID:
+        raise ValueError("BiSTooltip Updates role ID does not match the authorized Discord role.")
 
 
 def _redact_webhook_text(value: str, webhook_url: str) -> str:

@@ -171,6 +171,21 @@ class RuntimeTests(unittest.TestCase):
         self.assertIn("::error::", errors.getvalue())
         self.assertNotIn("not-a-webhook", errors.getvalue())
 
+    def test_main_rejects_alternate_valid_role_id_before_http(self):
+        alternate_role_id = "1545592862920671253"
+        environment = {
+            "DISCORD_WEBHOOK_URL": "https://discord.com/api/webhooks/1/SECRET_TOKEN",
+            "BISTOOLTIP_UPDATES_ROLE_ID": alternate_role_id,
+        }
+        errors = io.StringIO()
+        with unittest.mock.patch.dict(os.environ, environment, clear=True):
+            with unittest.mock.patch.object(sender.urllib.request, "urlopen") as urlopen:
+                with contextlib.redirect_stderr(errors):
+                    self.assertEqual(sender.main(), 1)
+        urlopen.assert_not_called()
+        self.assertIn("role ID", errors.getvalue())
+        self.assertNotIn(alternate_role_id, errors.getvalue())
+
     def test_main_delivers_once_and_writes_summary(self):
         self.assertTrue(callable(getattr(sender, "main", None)), "main must be implemented")
         response = unittest.mock.MagicMock()
