@@ -25,11 +25,11 @@ M.CLASS_FAMILY = {
 -- Sindragosa/LichKing 25Man + 25ManHEROIC pages; no other ICC boss
 -- carries Mark of Sanctification rows)
 M.ICC_MARK_BOSSES = {
-  "Deathbringer Saurfang",
-  "Professor Putricide",
-  "Blood Queen Lana'thel",
+  "Saurfang",
+  "Putricide",
+  "BQ Lana'thel",
   "Sindragosa",
-  "The Lich King",
+  "Lich King",
 }
 
 -- Mark of Sanctification items: id -> {family, heroic}
@@ -65,6 +65,10 @@ M.BOSS_SHORT = {
   ["Koralon the Flame Watcher"] = "Koralon",
   ["Toravon the Ice Watcher"] = "Toravon",
   -- Ulduar
+  ["Flame Leviathan"] = "Leviathan",
+  ["Ignis the Furnace Master"] = "Ignis",
+  ["Lord Marrowgar"] = "Marrowgar",
+  ["Lady Deathwhisper"] = "Lady",
   ["XT-002 Deconstructor"] = "XT",
   ["Assembly of Iron"] = "Assembly",
   ["General Vezax"] = "Vezax",

@@ -24,7 +24,7 @@ local DIFF_OK = { ["10N"] = true, ["25N"] = true, ["10HC"] = true, ["25HC"] = tr
 local RAIDS = { -- canonical instance -> must carry a raid-mode difficulty
   ["Naxxramas"] = true, ["Obsidian Sanctum"] = true, ["Eye of Eternity"] = true,
   ["Onyxia's Lair"] = true, ["Ulduar"] = true, ["TOC"] = true, ["TOGC"] = true,
-  ["Icecrown Citadel"] = true, ["Ruby Sanctum"] = true, ["VoA"] = true,
+  ["ICC"] = true, ["Ruby Sanctum"] = true, ["VoA"] = true,
 }
 local DUNGEONS = { -- 5-mans: normal ("") or heroic ("HC") only
   ["Trial of the Champion"] = true, ["The Forge of Souls"] = true, ["Pit of Saron"] = true,
@@ -86,7 +86,7 @@ local function has(instance, boss, difficulty)
   end
   return false
 end
-assert(has("Icecrown Citadel", "Lord Marrowgar", "25HC"), "missing ICC 25HC Marrowgar")
+assert(has("ICC", "Marrowgar", "25HC"), "missing ICC 25HC Marrowgar")
 assert(has("Naxxramas", "Kel'Thuzad", "10N"), "missing Naxx 10N Kel'Thuzad")
 assert(has("Ulduar", "Algalon", "10HM"), "missing Ulduar 10HM Algalon (vocab v2)")
 assert(has("Trial of the Champion", "The Black Knight", "HC"), "missing ToC5 heroic identity")
@@ -116,7 +116,7 @@ for id, entries in pairs(acq) do
       assert(e.tier == "T10", "MARK outside T10 on item " .. id)
       assert(MARK_FAMILY[e.family], "MARK with unknown family on item " .. id)
       local ms = reg[e.source]
-      assert(ms and ms.instance == "Icecrown Citadel", "MARK source outside ICC on item " .. id)
+      assert(ms and ms.instance == "ICC", "MARK source outside ICC on item " .. id)
       assert(ms.difficulty == "25N" or ms.difficulty == "25HC",
         "MARK difficulty outside 25N/25HC on item " .. id)
     end

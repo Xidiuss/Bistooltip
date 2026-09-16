@@ -74,10 +74,10 @@ local CANON_ZONE = {
   ["Trial of the Crusader (25)"] = "Trial of the Crusader",
   ["Trial of the Crusader (10) (Heroic)"] = "Trial of the Crusader",
   ["Trial of the Crusader (25) (Heroic)"] = "Trial of the Crusader",
-  ["Icecrown Citadel (10)"] = "Icecrown Citadel",
-  ["Icecrown Citadel (25)"] = "Icecrown Citadel",
-  ["Icecrown Citadel (10) (Heroic)"] = "Icecrown Citadel",
-  ["Icecrown Citadel (25) (Heroic)"] = "Icecrown Citadel",
+  ["Icecrown Citadel (10)"] = "ICC",
+  ["Icecrown Citadel (25)"] = "ICC",
+  ["Icecrown Citadel (10) (Heroic)"] = "ICC",
+  ["Icecrown Citadel (25) (Heroic)"] = "ICC",
   ["Ruby Sanctum (10)"] = "Ruby Sanctum",
   ["Ruby Sanctum (25)"] = "Ruby Sanctum",
   ["Ruby Sanctum (10) (Heroic)"] = "Ruby Sanctum",
@@ -93,8 +93,8 @@ local function canonInstance(zone)
   local inst = CANON_ZONE[zone]
   if inst then return inst end
   if zone:sub(1, 8) == "Tier 9.5" then return "Trial of the Crusader" end
-  if zone:sub(1, 8) == "Tier 10N" then return "Icecrown Citadel" end
-  if zone:sub(1, 9) == "Tier 10HC" then return "Icecrown Citadel" end
+  if zone:sub(1, 8) == "Tier 10N" then return "ICC" end
+  if zone:sub(1, 9) == "Tier 10HC" then return "ICC" end
   return zone
 end
 
@@ -467,21 +467,36 @@ for zone, bosses in pairs(lootTable) do
         for _, itemID in pairs(items) do
           if type(itemID) == "number" and itemID > 0 then
             for _, boss in ipairs(TM.ICC_MARK_BOSSES) do
-              local sid = sourceID("Icecrown Citadel", diff, boss)
-              registry[sid] = registry[sid] or { instance = "Icecrown Citadel", boss = boss, difficulty = diff }
+              local sid = sourceID("ICC", diff, boss)
+              registry[sid] = registry[sid] or { instance = "ICC", boss = boss, difficulty = diff }
               addEntry(itemID, { kind = "MARK", tier = "T10", family = family, source = sid })
             end
             nMarkGear = nMarkGear + 1
           end
         end
       end
-    else
+    -- Tier 9.5 gear (ilvl 258, "Tier 9.5 <Class> ToC(25HC)"): TOKEN entries
+    -- from the Tribute Chest in TOGC (oracle: Regalia pages on Tribute
+    -- 25HC; owner format: TOKEN: Grand <Family>).
+    elseif zone:sub(1, 8) == "Tier 9.5" then
+      local rest = zone:gsub("^Tier 9%.5%s+", ""):gsub("%s*ToC%(.-$", "")
+      local class = rest:match("^(%S+)") or ""
+      local family = assert(TM.CLASS_FAMILY[class], "Tier 9.5 zone with unknown class: " .. zone)
+      local sid = sourceID("TOGC", "25HC", "Tribute Chest")
+      registry[sid] = registry[sid] or { instance = "TOGC", boss = "Tribute Chest", difficulty = "25HC" }
+      for _, items in pairs(bosses) do
+        for _, itemID in pairs(items) do
+          if type(itemID) == "number" and itemID > 0 then
+            addEntry(itemID, { kind = "TOKEN", tier = "T9", family = "Grand " .. family, source = sid })
+            nTokenItems = nTokenItems + 1
+          end
+        end
+      end
+    elseif zone:find("^Tier 9 .-%(HC5, Raids25%)") then
       -- Mechanical vendor zones ("Tier 9 <spec> (HC5, Raids25)") name the
       -- emblem purchase path, not a place; their items already carry VENDOR
       -- entries from EmblemData. Skipping them prevents garbage identities
       -- like "Tier 9 Paladin Retrubution (HC5, Raids25) - Emblem of Triumph".
-      if zone:find("^Tier 9 .-%(HC5, Raids25%)") then
-        nMechSkip = nMechSkip + 1
       else
       local inst = canonInstance(zone)
       local diff = difficultyOf(zone)
@@ -505,7 +520,6 @@ for zone, bosses in pairs(lootTable) do
         end
       end
       end -- mechanical-vendor-zone guard
-    end
   end
 end
 
@@ -597,8 +611,8 @@ for markID, m in pairs(TM.MARKS) do
   local diffs = (m.heroic and { "25HC" }) or { "25N", "25HC" }
   for _, diff in ipairs(diffs) do
     for _, boss in ipairs(TM.ICC_MARK_BOSSES) do
-      local sid = sourceID("Icecrown Citadel", diff, boss)
-      registry[sid] = registry[sid] or { instance = "Icecrown Citadel", boss = boss, difficulty = diff }
+      local sid = sourceID("ICC", diff, boss)
+      registry[sid] = registry[sid] or { instance = "ICC", boss = boss, difficulty = diff }
       addEntry(markID, { kind = "DROP", source = sid })
     end
   end
