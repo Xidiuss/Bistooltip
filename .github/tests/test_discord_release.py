@@ -1,6 +1,8 @@
 import contextlib
 import io
+import json
 import os
+import runpy
 import sys
 import tempfile
 import unittest
@@ -79,6 +81,32 @@ class FormatterTests(unittest.TestCase):
         self.assertLessEqual(len(payload["embeds"][0]["description"]), 4096)
         self.assertLessEqual(sender.embed_character_count(payload["embeds"][0]), 6000)
 
+    def test_payload_uses_intended_icons_and_ellipsis(self):
+        note = sender.notification_from_event("release", self.release(), False, "unused")
+        payload = sender.build_payload(note, sender.ROLE_ID)
+        embed = payload["embeds"][0]
+        self.assertEqual(embed["title"], "\U0001F4E6 BiSTooltip Core: Core 3.1.0")
+        self.assertEqual(embed["fields"][0]["name"], "\U0001F3F7\uFE0F Version")
+        self.assertEqual(embed["fields"][1]["name"], "\U0001F3AF Target")
+        self.assertEqual(embed["fields"][2]["name"], "\U0001F517 Download")
+        self.assertEqual(
+            embed["footer"]["text"], "BiSTooltip - WotLK \u2022 GitHub Release"
+        )
+        self.assertEqual(sender.clip("abcd", 1), "\u2026")
+
+    def test_clip_stays_within_nonpositive_and_small_limits(self):
+        cases = {
+            -3: "",
+            0: "",
+            1: "\u2026",
+            2: "a\u2026",
+        }
+        for limit, expected in cases.items():
+            with self.subTest(limit=limit):
+                clipped = sender.clip("abcd", limit)
+                self.assertEqual(clipped, expected)
+                self.assertLessEqual(len(clipped), max(limit, 0))
+
     def test_validate_payload_rejects_another_role_id(self):
         note = sender.notification_from_event("release", self.release(), False, "unused")
         payload = sender.build_payload(note, "999")
@@ -122,6 +150,20 @@ class RuntimeTests(unittest.TestCase):
                 sender.send_webhook(secret, {"content": "test"}, timeout=10)
         self.assertIn("HTTP 401", str(raised.exception))
         self.assertNotIn("SECRET_TOKEN", str(raised.exception))
+
+    def test_http_error_redacts_query_bearing_url_and_bare_token(self):
+        secret = "https://discord.com/api/webhooks/123/SECRET_TOKEN?wait=true"
+        error = sender.urllib.error.HTTPError(secret, 401, "Unauthorized", {}, None)
+        error.read = unittest.mock.MagicMock(
+            return_value=(f"delivery failed: {secret}; token=SECRET_TOKEN").encode()
+        )
+        with unittest.mock.patch.object(sender.urllib.request, "urlopen", side_effect=error):
+            with self.assertRaises(RuntimeError) as raised:
+                sender.send_webhook(secret, {"content": "test"}, timeout=10)
+        self.assertIn("HTTP 401", str(raised.exception))
+        self.assertNotIn(secret, str(raised.exception))
+        self.assertNotIn("SECRET_TOKEN", str(raised.exception))
+        self.assertIn("[redacted]", str(raised.exception))
 
     def test_success_writes_status_without_secret(self):
         self.assertTrue(
@@ -222,6 +264,62 @@ class RuntimeTests(unittest.TestCase):
         self.assertIn("manual-test", output.getvalue())
         self.assertIn("204", output.getvalue())
         self.assertNotIn("SECRET_TOKEN", output.getvalue())
+
+    def test_main_rejects_invalid_built_payload_before_http(self):
+        environment = {
+            "DISCORD_WEBHOOK_URL": "https://discord.com/api/webhooks/1/SECRET_TOKEN",
+            "BISTOOLTIP_UPDATES_ROLE_ID": sender.ROLE_ID,
+            "GITHUB_EVENT_NAME": "workflow_dispatch",
+            "GITHUB_SERVER_URL": "https://github.com",
+            "GITHUB_REPOSITORY": "Xidiuss/Bistooltip",
+            "GITHUB_RUN_ID": "1",
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            event_path = Path(directory) / "event.json"
+            event_path.write_text(
+                json.dumps({"repository": {"default_branch": "main"}}), encoding="utf-8"
+            )
+            environment["GITHUB_EVENT_PATH"] = str(event_path)
+            errors = io.StringIO()
+            with unittest.mock.patch.dict(os.environ, environment, clear=True):
+                with unittest.mock.patch.object(
+                    sender, "build_payload", return_value={"content": "unsafe"}
+                ):
+                    with unittest.mock.patch.object(sender.urllib.request, "urlopen") as urlopen:
+                        with contextlib.redirect_stderr(errors):
+                            self.assertEqual(sender.main(), 1)
+            urlopen.assert_not_called()
+        self.assertIn("::error::", errors.getvalue())
+
+    def test_direct_script_execution_defines_helpers_before_main(self):
+        response = unittest.mock.MagicMock()
+        response.status = 204
+        response.__enter__.return_value = response
+        response.__exit__.return_value = False
+        script_path = Path(__file__).parents[1] / "scripts" / "discord_release.py"
+        with tempfile.TemporaryDirectory() as directory:
+            event_path = Path(directory) / "event.json"
+            summary_path = Path(directory) / "summary.md"
+            event_path.write_text(
+                json.dumps({"repository": {"default_branch": "main"}}), encoding="utf-8"
+            )
+            environment = {
+                "DISCORD_WEBHOOK_URL": "https://discord.com/api/webhooks/1/SECRET_TOKEN",
+                "BISTOOLTIP_UPDATES_ROLE_ID": sender.ROLE_ID,
+                "GITHUB_EVENT_NAME": "workflow_dispatch",
+                "GITHUB_EVENT_PATH": str(event_path),
+                "GITHUB_SERVER_URL": "https://github.com",
+                "GITHUB_REPOSITORY": "Xidiuss/Bistooltip",
+                "GITHUB_RUN_ID": "1",
+                "GITHUB_STEP_SUMMARY": str(summary_path),
+            }
+            with unittest.mock.patch.dict(os.environ, environment, clear=True):
+                with unittest.mock.patch.object(sender.urllib.request, "urlopen", return_value=response) as urlopen:
+                    with self.assertRaises(SystemExit) as exited:
+                        runpy.run_path(str(script_path), run_name="__main__")
+            self.assertEqual(exited.exception.code, 0)
+            self.assertIn("BiSTooltip Test", summary_path.read_text(encoding="utf-8"))
+        self.assertEqual(urlopen.call_count, 1)
 
 
 if __name__ == "__main__":

@@ -56,7 +56,7 @@ def validate_config(webhook_url: str, role_id: str) -> None:
 
 
 def _redact_webhook_text(value: str, webhook_url: str) -> str:
-    token = webhook_url.rsplit("/", 1)[-1]
+    token = urllib.parse.urlparse(webhook_url).path.rsplit("/", 1)[-1]
     return value.replace(webhook_url, "[redacted]").replace(token, "[redacted]")
 
 
@@ -127,7 +127,9 @@ def main() -> int:
         notification = notification_from_event(
             os.environ.get("GITHUB_EVENT_NAME", ""), event, manual_ping, run_url
         )
-        status = send_webhook(webhook_url, build_payload(notification, role_id))
+        payload = build_payload(notification, role_id)
+        validate_payload(payload)
+        status = send_webhook(webhook_url, payload)
         write_summary(Path(os.environ.get("GITHUB_STEP_SUMMARY", "")), notification, status)
     except (OSError, json.JSONDecodeError):
         print(
@@ -147,10 +149,6 @@ def main() -> int:
         f"component={notification.component}; tag={notification.tag}; status={status}"
     )
     return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
 
 
 def component_name(tag: str, target: str) -> str:
@@ -198,7 +196,9 @@ def notification_from_event(
 
 
 def clip(value: str, limit: int) -> str:
-    suffix = "\u0102\u02d8\u00e2\u201a\u00ac\u00c2\u00a6"
+    suffix = "\u2026"
+    if limit <= 0:
+        return ""
     return value if len(value) <= limit else value[: limit - len(suffix)].rstrip() + suffix
 
 
@@ -210,15 +210,15 @@ def build_payload(notification: Notification, role_id: str) -> dict:
             {"roles": [role_id]} if notification.ping_role else {"parse": []}
         ),
         "embeds": [{
-            "title": clip(f"\u00c4\u2018\u0139\u015f\u0139\u02c7\u00e2\u201a\u00ac {notification.component}: {notification.name}", 256),
+            "title": clip(f"\U0001F4E6 {notification.component}: {notification.name}", 256),
             "url": notification.url,
             "description": clip(notification.body, DESCRIPTION_LIMIT),
             "fields": [
-                {"name": "\u00c4\u2018\u0139\u015f\u00e2\u20ac\u015b\u00c2\u00a6 Version", "value": f"`{clip(notification.tag, 100)}`", "inline": True},
-                {"name": "\u00c4\u2018\u0139\u015f\u0139\u0161\u0139\u013d Target", "value": clip(notification.target, 100), "inline": True},
-                {"name": "\u0102\u02d8\u00c2\u00ac\u00e2\u20ac\u02c7\u00c4\u0179\u00c2\u00b8\u0139\u0105 Download", "value": f"[Open GitHub Release]({clip(notification.url, 900)})", "inline": False},
+                {"name": "\U0001F3F7\uFE0F Version", "value": f"`{clip(notification.tag, 100)}`", "inline": True},
+                {"name": "\U0001F3AF Target", "value": clip(notification.target, 100), "inline": True},
+                {"name": "\U0001F517 Download", "value": f"[Open GitHub Release]({clip(notification.url, 900)})", "inline": False},
             ],
-            "footer": {"text": "BiSTooltip - WotLK \u0102\u02d8\u00e2\u201a\u00ac\u00cb\u0098 GitHub Release"},
+            "footer": {"text": "BiSTooltip - WotLK \u2022 GitHub Release"},
         }],
     }
 
@@ -267,3 +267,7 @@ def validate_payload(payload: dict) -> None:
             raise ValueError("Embed footer exceeds Discord's 2048-character limit.")
         if embed_character_count(embed) > 6000:
             raise ValueError("Embed exceeds Discord's 6000-character aggregate limit.")
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
