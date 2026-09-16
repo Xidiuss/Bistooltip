@@ -1,5 +1,11 @@
+import contextlib
+import io
+import os
 import sys
+import tempfile
 import unittest
+import unittest.mock
+import urllib.error
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parents[1] / "scripts"))
@@ -91,6 +97,116 @@ class FormatterTests(unittest.TestCase):
             sender.notification_from_event("release", self.release(tag_name=""), False, "unused")
         with self.assertRaisesRegex(ValueError, "Unsupported GitHub event"):
             sender.notification_from_event("push", {}, False, "unused")
+
+
+class RuntimeTests(unittest.TestCase):
+    def test_validate_config_rejects_missing_secret_and_bad_role(self):
+        self.assertTrue(
+            callable(getattr(sender, "validate_config", None)),
+            "validate_config must be implemented",
+        )
+        with self.assertRaisesRegex(ValueError, "DISCORD_WEBHOOK_URL"):
+            sender.validate_config("", sender.ROLE_ID)
+        with self.assertRaisesRegex(ValueError, "role ID"):
+            sender.validate_config("https://discord.com/api/webhooks/1/token", "BiSTooltip Updates")
+
+    def test_http_error_is_bounded_and_never_exposes_webhook_url(self):
+        self.assertTrue(
+            callable(getattr(sender, "send_webhook", None)),
+            "send_webhook must be implemented",
+        )
+        secret = "https://discord.com/api/webhooks/123/SECRET_TOKEN"
+        error = sender.urllib.error.HTTPError(secret, 401, "Unauthorized", {}, None)
+        with unittest.mock.patch.object(sender.urllib.request, "urlopen", side_effect=error):
+            with self.assertRaises(RuntimeError) as raised:
+                sender.send_webhook(secret, {"content": "test"}, timeout=10)
+        self.assertIn("HTTP 401", str(raised.exception))
+        self.assertNotIn("SECRET_TOKEN", str(raised.exception))
+
+    def test_success_writes_status_without_secret(self):
+        self.assertTrue(
+            callable(getattr(sender, "send_webhook", None)),
+            "send_webhook must be implemented",
+        )
+        response = unittest.mock.MagicMock()
+        response.status = 204
+        response.__enter__.return_value = response
+        response.__exit__.return_value = False
+        with unittest.mock.patch.object(sender.urllib.request, "urlopen", return_value=response):
+            self.assertEqual(sender.send_webhook("https://discord.com/api/webhooks/1/token", {"content": "test"}), 204)
+
+    def test_summary_contains_delivery_metadata_only(self):
+        self.assertTrue(
+            callable(getattr(sender, "write_summary", None)),
+            "write_summary must be implemented",
+        )
+        note = sender.notification_from_event(
+            "workflow_dispatch",
+            {"repository": {"default_branch": "main"}},
+            False,
+            "https://github/run/1",
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "summary.md"
+            sender.write_summary(path, note, 204)
+            summary = path.read_text(encoding="utf-8")
+        self.assertIn("BiSTooltip Test", summary)
+        self.assertIn("manual-test", summary)
+        self.assertIn("main", summary)
+        self.assertIn("204", summary)
+        self.assertNotIn("webhooks", summary)
+
+    def test_main_rejects_invalid_config_before_http(self):
+        self.assertTrue(callable(getattr(sender, "main", None)), "main must be implemented")
+        environment = {
+            "DISCORD_WEBHOOK_URL": "not-a-webhook",
+            "BISTOOLTIP_UPDATES_ROLE_ID": sender.ROLE_ID,
+        }
+        errors = io.StringIO()
+        with unittest.mock.patch.dict(os.environ, environment, clear=True):
+            with unittest.mock.patch.object(sender.urllib.request, "urlopen") as urlopen:
+                with contextlib.redirect_stderr(errors):
+                    self.assertEqual(sender.main(), 1)
+        urlopen.assert_not_called()
+        self.assertIn("::error::", errors.getvalue())
+        self.assertNotIn("not-a-webhook", errors.getvalue())
+
+    def test_main_delivers_once_and_writes_summary(self):
+        self.assertTrue(callable(getattr(sender, "main", None)), "main must be implemented")
+        response = unittest.mock.MagicMock()
+        response.status = 204
+        response.__enter__.return_value = response
+        response.__exit__.return_value = False
+        with tempfile.TemporaryDirectory() as directory:
+            event_path = Path(directory) / "event.json"
+            summary_path = Path(directory) / "summary.md"
+            event_path.write_text(
+                '{"repository": {"default_branch": "main"}}', encoding="utf-8"
+            )
+            environment = {
+                "DISCORD_WEBHOOK_URL": "https://discord.com/api/webhooks/1/SECRET_TOKEN",
+                "BISTOOLTIP_UPDATES_ROLE_ID": sender.ROLE_ID,
+                "GITHUB_EVENT_NAME": "workflow_dispatch",
+                "GITHUB_EVENT_PATH": str(event_path),
+                "GITHUB_SERVER_URL": "https://github.com",
+                "GITHUB_REPOSITORY": "Xidiuss/Bistooltip",
+                "GITHUB_RUN_ID": "1",
+                "GITHUB_STEP_SUMMARY": str(summary_path),
+                "MANUAL_PING_ROLE": "yes",
+            }
+            output = io.StringIO()
+            with unittest.mock.patch.dict(os.environ, environment, clear=True):
+                with unittest.mock.patch.object(sender.urllib.request, "urlopen", return_value=response) as urlopen:
+                    with contextlib.redirect_stdout(output):
+                        self.assertEqual(sender.main(), 0)
+            summary = summary_path.read_text(encoding="utf-8")
+        self.assertEqual(urlopen.call_count, 1)
+        self.assertIn("BiSTooltip Test", summary)
+        self.assertIn("204", summary)
+        self.assertIn("BiSTooltip Test", output.getvalue())
+        self.assertIn("manual-test", output.getvalue())
+        self.assertIn("204", output.getvalue())
+        self.assertNotIn("SECRET_TOKEN", output.getvalue())
 
 
 if __name__ == "__main__":

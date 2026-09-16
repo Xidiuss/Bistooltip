@@ -1,6 +1,14 @@
-"""Pure formatting helpers for Discord release notifications."""
+"""Formatting and delivery helpers for Discord release notifications."""
 
 from dataclasses import dataclass
+import json
+import os
+import re
+import sys
+import urllib.error
+import urllib.parse
+import urllib.request
+from pathlib import Path
 
 
 ROLE_ID = "1545592862920671252"
@@ -29,6 +37,118 @@ class Notification:
     target: str
     is_test: bool
     ping_role: bool
+
+
+def validate_config(webhook_url: str, role_id: str) -> None:
+    parsed = urllib.parse.urlparse(webhook_url)
+    if not webhook_url:
+        raise ValueError("Missing DISCORD_WEBHOOK_URL; add it in repository Actions secrets.")
+    if (
+        parsed.scheme != "https"
+        or parsed.hostname not in {"discord.com", "discordapp.com"}
+        or not parsed.path.startswith("/api/webhooks/")
+    ):
+        raise ValueError("DISCORD_WEBHOOK_URL is not a valid Discord webhook URL.")
+    if not re.fullmatch(r"\d{17,20}", role_id):
+        raise ValueError("BiSTooltip Updates role ID must be a 17-20 digit Discord snowflake.")
+
+
+def _redact_webhook_text(value: str, webhook_url: str) -> str:
+    token = webhook_url.rsplit("/", 1)[-1]
+    return value.replace(webhook_url, "[redacted]").replace(token, "[redacted]")
+
+
+def send_webhook(webhook_url: str, payload: dict, timeout: int = 10) -> int:
+    request = urllib.request.Request(
+        webhook_url,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "Content-Type": "application/json",
+            "User-Agent": "BiSTooltip-GitHub-Actions/1.0",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            status = response.status
+    except urllib.error.HTTPError as error:
+        try:
+            body = error.read(512)
+        except OSError:
+            body = b""
+        excerpt = _redact_webhook_text(
+            body.decode("utf-8", errors="replace"), webhook_url
+        )[:200]
+        detail = f": {excerpt}" if excerpt else ""
+        raise RuntimeError(f"Discord webhook returned HTTP {error.code}{detail}") from None
+    except urllib.error.URLError:
+        raise RuntimeError("Discord webhook request could not be completed.") from None
+    except TimeoutError:
+        raise RuntimeError("Discord webhook request timed out.") from None
+
+    if not 200 <= status <= 299:
+        raise RuntimeError(f"Discord webhook returned HTTP {status}")
+    return status
+
+
+def write_summary(path: Path, notification: Notification, status: int) -> None:
+    summary = (
+        "## Discord release notification\n\n"
+        f"- Component: `{notification.component}`\n"
+        f"- Tag: `{notification.tag}`\n"
+        f"- Target: `{notification.target}`\n"
+        f"- Discord HTTP status: `{status}`\n"
+    )
+    with Path(path).open("a", encoding="utf-8") as output:
+        output.write(summary)
+
+
+def main() -> int:
+    webhook_url = os.environ.get("DISCORD_WEBHOOK_URL", "")
+    try:
+        role_id = os.environ.get("BISTOOLTIP_UPDATES_ROLE_ID", "")
+        validate_config(webhook_url, role_id)
+        event_path = Path(os.environ.get("GITHUB_EVENT_PATH", ""))
+        event = json.loads(event_path.read_text(encoding="utf-8"))
+        if not isinstance(event, dict):
+            raise ValueError("GitHub event payload must be a JSON object.")
+        manual_ping = os.environ.get("MANUAL_PING_ROLE", "").strip().lower() in {
+            "1",
+            "true",
+            "yes",
+            "on",
+        }
+        server_url = os.environ.get("GITHUB_SERVER_URL", "").rstrip("/")
+        repository = os.environ.get("GITHUB_REPOSITORY", "").strip("/")
+        run_id = os.environ.get("GITHUB_RUN_ID", "")
+        run_url = f"{server_url}/{repository}/actions/runs/{run_id}"
+        notification = notification_from_event(
+            os.environ.get("GITHUB_EVENT_NAME", ""), event, manual_ping, run_url
+        )
+        status = send_webhook(webhook_url, build_payload(notification, role_id))
+        write_summary(Path(os.environ.get("GITHUB_STEP_SUMMARY", "")), notification, status)
+    except (OSError, json.JSONDecodeError):
+        print(
+            "::error::Discord release notification could not read required GitHub Actions files.",
+            file=sys.stderr,
+        )
+        return 1
+    except (ValueError, RuntimeError) as error:
+        message = _redact_webhook_text(str(error), webhook_url) if webhook_url else str(error)
+        print(f"::error::{message}", file=sys.stderr)
+        return 1
+    except Exception:
+        print("::error::Discord release notification failed unexpectedly.", file=sys.stderr)
+        return 1
+
+    print(
+        f"component={notification.component}; tag={notification.tag}; status={status}"
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
 
 
 def component_name(tag: str, target: str) -> str:
