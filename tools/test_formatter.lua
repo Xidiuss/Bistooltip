@@ -11,7 +11,7 @@ dofile("Bistooltip/SourceFormatter.lua")
 local cases = {
   { { kind = "DROP", source = "VEZAX" }, "Ulduar [25N] - General Vezax" },
   { { kind = "TOKEN", tier = "T8", family = "Wayward Protector", source = "THORIM" },
-    "T8 - TOKEN: Wayward Protector [Ulduar: Thorim <25N>]" },
+    "T8 - TOKEN: Wayward Protector\n [Ulduar: Thorim <25N>]" },
   { { kind = "MARK", tier = "T10", family = "Vanquisher's Mark", source = "THORIM" },
     "T10 - MARK: Vanquisher's Mark [Ulduar: Thorim <25N>]" },
   { { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
@@ -28,7 +28,7 @@ local cases = {
   { { kind = "DROP", source = "NOPE" }, nil }, -- unknown sourceID: skip line, no error
   { { kind = "DROP", source = "AKN" }, "Ahn'kahet: The Old Kingdom [HC] - Prince Taldaram" }, -- 5-man heroic vocab v2
   { { kind = "TOKEN", tier = "T8", family = "Wayward Protector", source = "HODIR_HM" },
-    "T8 - TOKEN: Wayward Protector [Ulduar: Hodir <25HM>]" }, -- Ulduar hard mode vocab v2
+    "T8 - TOKEN: Wayward Protector\n [Ulduar: Hodir <25HM>]" }, -- 2-line: family 17+ chars
 }
 for i, c in ipairs(cases) do
   local got = BisTooltip_FormatSource(c[1])
@@ -69,7 +69,7 @@ local ccases = {
   { { kind = "DROP", source = "AKN" },
     "|cFFFFD100Ahn'kahet: The Old Kingdom|r |cFFFF4040[HC]|r - |cFFFFFFFFPrince Taldaram|r" },
   { { kind = "TOKEN", tier = "T8", family = "Wayward Protector", source = "HODIR_HM" },
-    "|cFF00CCFFT8 - TOKEN: |r|cFFFFFFFFWayward Protector|r |cFFFFD100[Ulduar: |r|cFFFFFFFFHodir |r|cFFFF9900<25HM>]|r" },
+    "|cFF00CCFFT8 - TOKEN: |r|cFFFFFFFFWayward Protector|r\n |cFFFFD100[Ulduar: |r|cFFFFFFFFHodir |r|cFFFF9900<25HM>]|r" },
   { { kind = "VENDOR", tier = "T9", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
     "|cFF00CCFFT9 - VENDOR: |r|cFF00FFCC50 Emblem of Triumph|r" },
   { { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY",

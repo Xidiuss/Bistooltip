@@ -9690,6 +9690,8 @@ BisTooltip_ItemAcquisition = {
   },
   [39192] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_ANUB_REKHAN" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7", family = "Lost Conqueror" },
   },
   [39193] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_ANUB_REKHAN" },
@@ -9698,6 +9700,8 @@ BisTooltip_ItemAcquisition = {
   [39194] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_FAERLINA" },
     { kind = "DROP", source = "NAXXRAMAS_10N_GLUTH" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7", family = "Lost Protector" },
   },
   [39195] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_FAERLINA" },
@@ -9732,7 +9736,12 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_10N_MAEXXNA" },
   },
   [39224] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_MAEXXNA" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_4HORSEMEN", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_GLUTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_NOTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_HEIGAN", tier = "T7", family = "Lost Vanquisher" },
   },
   [39225] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_MAEXXNA" },
@@ -9771,6 +9780,8 @@ BisTooltip_ItemAcquisition = {
   [39237] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_NOTH" },
     { kind = "DROP", source = "NAXXRAMAS_10N_GLUTH" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
   },
   [39239] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_NOTH" },
@@ -9800,11 +9811,12 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_10N_HEIGAN" },
   },
   [39248] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_GLUTH" },
-    { kind = "DROP", source = "NAXXRAMAS_10N_HEIGAN" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_4HORSEMEN", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Protector" },
   },
   [39249] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_HEIGAN" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7", family = "Lost Protector" },
   },
   [39250] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_HEIGAN" },
@@ -9925,6 +9937,8 @@ BisTooltip_ItemAcquisition = {
   },
   [39299] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_RAZUVIOUS" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7", family = "Lost Vanquisher" },
   },
   [39306] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_RAZUVIOUS" },
@@ -9936,11 +9950,16 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_10N_RAZUVIOUS" },
   },
   [39309] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_RAZUVIOUS" },
-    { kind = "DROP", source = "NAXXRAMAS_10N_GLUTH" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_4HORSEMEN", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_GLUTH", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_NOTH", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_HEIGAN", tier = "T7", family = "Lost Conqueror" },
   },
   [39310] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_RAZUVIOUS" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7", family = "Lost Conqueror" },
   },
   [39311] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_RAZUVIOUS" },
@@ -9961,7 +9980,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_10N_GLUTH" },
   },
   [39386] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_GOTHIK" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_4HORSEMEN", tier = "T7", family = "Lost Vanquisher" },
   },
   [39388] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_GOTHIK" },
@@ -9990,8 +10010,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_10N_4HORSEMEN" },
   },
   [39396] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_GLUTH" },
-    { kind = "DROP", source = "NAXXRAMAS_10N_4HORSEMEN" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_4HORSEMEN", tier = "T7", family = "Lost Vanquisher" },
   },
   [39397] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_4HORSEMEN" },
@@ -10000,7 +10020,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_10N_SAPPHIRON" },
   },
   [39399] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_SAPPHIRON" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7", family = "Lost Vanquisher" },
   },
   [39401] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_SAPPHIRON" },
@@ -10018,7 +10039,12 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_10N_SAPPHIRON" },
   },
   [39408] = {
-    { kind = "DROP", source = "NAXXRAMAS_10N_SAPPHIRON" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_4HORSEMEN", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_GLUTH", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_NOTH", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_HEIGAN", tier = "T7", family = "Lost Conqueror" },
   },
   [39409] = {
     { kind = "DROP", source = "NAXXRAMAS_10N_SAPPHIRON" },
@@ -10448,6 +10474,8 @@ BisTooltip_ItemAcquisition = {
   },
   [39704] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [39706] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
@@ -10472,10 +10500,13 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
   },
   [39719] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7", family = "Lost Conqueror" },
   },
   [39720] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [39721] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
@@ -10488,6 +10519,8 @@ BisTooltip_ItemAcquisition = {
   },
   [39724] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_FAERLINA" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Protector" },
   },
   [39725] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_FAERLINA" },
@@ -10497,6 +10530,8 @@ BisTooltip_ItemAcquisition = {
   },
   [39727] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_FAERLINA" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [39728] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_FAERLINA" },
@@ -10518,6 +10553,8 @@ BisTooltip_ItemAcquisition = {
   [39733] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_FAERLINA" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7", family = "Lost Conqueror" },
   },
   [39734] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_FAERLINA" },
@@ -10543,7 +10580,12 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
   },
   [39761] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_4HORSEMEN", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_GLUTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_NOTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_HEIGAN", tier = "T7", family = "Lost Vanquisher" },
   },
   [39762] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
@@ -10562,6 +10604,8 @@ BisTooltip_ItemAcquisition = {
   },
   [39767] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Protector" },
   },
   [39768] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
@@ -10572,12 +10616,15 @@ BisTooltip_ItemAcquisition = {
   },
   [40060] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Conqueror" },
   },
   [40061] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
   },
   [40062] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_4HORSEMEN", tier = "T7", family = "Lost Vanquisher" },
   },
   [40063] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
@@ -10655,8 +10702,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH" },
   },
   [40185] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_NOTH" },
-    { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7", family = "Lost Protector" },
   },
   [40186] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH" },
@@ -10688,12 +10735,16 @@ BisTooltip_ItemAcquisition = {
   },
   [40194] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_4HORSEMEN", tier = "T7", family = "Lost Conqueror" },
   },
   [40196] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH" },
   },
   [40197] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7", family = "Lost Vanquisher" },
   },
   [40198] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH" },
@@ -10702,11 +10753,18 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH" },
   },
   [40201] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_HEIGAN", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_GLUTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_NOTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_4HORSEMEN", tier = "T7", family = "Lost Protector" },
   },
   [40203] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Protector" },
   },
   [40204] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
@@ -10740,6 +10798,8 @@ BisTooltip_ItemAcquisition = {
   },
   [40234] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
   },
   [40235] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN" },
@@ -10766,6 +10826,8 @@ BisTooltip_ItemAcquisition = {
   [40242] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7", family = "Lost Protector" },
   },
   [40243] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_LOATHEB" },
@@ -10850,9 +10912,13 @@ BisTooltip_ItemAcquisition = {
   },
   [40261] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [40262] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7", family = "Lost Protector" },
   },
   [40263] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
@@ -10898,7 +10964,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
   },
   [40277] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_4HORSEMEN", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Protector" },
   },
   [40278] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
@@ -10918,7 +10985,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
   },
   [40283] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_4HORSEMEN", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Protector" },
   },
   [40284] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
@@ -10928,19 +10996,27 @@ BisTooltip_ItemAcquisition = {
   },
   [40286] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
   },
   [40287] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7", family = "Lost Conqueror" },
   },
   [40288] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
   },
   [40289] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
-    { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7", family = "Lost Conqueror" },
   },
   [40294] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_HEIGAN", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_GLUTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_NOTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_4HORSEMEN", tier = "T7", family = "Lost Protector" },
   },
   [40296] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
@@ -10954,7 +11030,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
   },
   [40299] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7", family = "Lost Protector" },
   },
   [40300] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
@@ -10965,16 +11042,21 @@ BisTooltip_ItemAcquisition = {
   [40302] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7", family = "Lost Protector" },
   },
   [40303] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7", family = "Lost Conqueror" },
   },
   [40304] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS" },
   },
   [40305] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_RAZUVIOUS" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7", family = "Lost Vanquisher" },
   },
   [40306] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_RAZUVIOUS" },
@@ -10989,11 +11071,16 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_RAZUVIOUS" },
   },
   [40318] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_RAZUVIOUS" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_HEIGAN", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_GLUTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_NOTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_4HORSEMEN", tier = "T7", family = "Lost Protector" },
   },
   [40319] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_RAZUVIOUS" },
-    { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_4HORSEMEN", tier = "T7", family = "Lost Vanquisher" },
   },
   [40320] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_RAZUVIOUS" },
@@ -11024,22 +11111,35 @@ BisTooltip_ItemAcquisition = {
   },
   [40328] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Conqueror" },
   },
   [40329] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7", family = "Lost Vanquisher" },
   },
   [40330] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK" },
   },
   [40331] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_HEIGAN", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_GLUTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_NOTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_4HORSEMEN", tier = "T7", family = "Lost Protector" },
   },
   [40332] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
   },
   [40333] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_4HORSEMEN", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_GLUTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_NOTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_HEIGAN", tier = "T7", family = "Lost Vanquisher" },
   },
   [40334] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK" },
@@ -11058,7 +11158,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK" },
   },
   [40339] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7", family = "Lost Protector" },
   },
   [40340] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK" },
@@ -11075,7 +11176,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_4HORSEMEN" },
   },
   [40344] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_4HORSEMEN" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7", family = "Lost Protector" },
   },
   [40345] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_4HORSEMEN" },
@@ -11099,12 +11201,21 @@ BisTooltip_ItemAcquisition = {
   },
   [40351] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GROBBULUS" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
   },
   [40352] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_4HORSEMEN" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_HEIGAN", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_GLUTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_NOTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_4HORSEMEN", tier = "T7", family = "Lost Protector" },
   },
   [40362] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7", family = "Lost Vanquisher" },
   },
   [40363] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
@@ -11143,7 +11254,12 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
   },
   [40376] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_4HORSEMEN", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_GLUTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_NOTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_HEIGAN", tier = "T7", family = "Lost Vanquisher" },
   },
   [40377] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
@@ -11153,12 +11269,17 @@ BisTooltip_ItemAcquisition = {
   },
   [40379] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
   },
   [40380] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7", family = "Lost Vanquisher" },
   },
   [40381] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_4HORSEMEN", tier = "T7", family = "Lost Conqueror" },
   },
   [40382] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_SAPPHIRON" },
@@ -11189,6 +11310,8 @@ BisTooltip_ItemAcquisition = {
   },
   [40398] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Conqueror" },
   },
   [40399] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD" },
@@ -11228,6 +11351,8 @@ BisTooltip_ItemAcquisition = {
   },
   [40414] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_TRASH_MOBS" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [40415] = {
     { kind = "DROP", source = "VOA_25N_ARCHAVON" },
@@ -11292,12 +11417,18 @@ BisTooltip_ItemAcquisition = {
   },
   [40437] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
   },
   [40438] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7", family = "Lost Protector" },
   },
   [40439] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7", family = "Lost Protector" },
   },
   [40445] = {
     { kind = "DROP", source = "VOA_25N_ARCHAVON" },
@@ -11322,6 +11453,8 @@ BisTooltip_ItemAcquisition = {
   },
   [40451] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7", family = "Lost Protector" },
   },
   [40453] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION" },
@@ -11524,6 +11657,8 @@ BisTooltip_ItemAcquisition = {
   },
   [40526] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_10N_MALYGOS" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
   },
   [40527] = {
     { kind = "DROP", source = "VOA_25N_ARCHAVON" },
@@ -11547,12 +11682,18 @@ BisTooltip_ItemAcquisition = {
   },
   [40539] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Protector" },
   },
   [40541] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [40543] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7", family = "Lost Protector" },
   },
   [40544] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_4HORSEMEN", tier = "T7" },
@@ -11588,6 +11729,8 @@ BisTooltip_ItemAcquisition = {
   },
   [40555] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7", family = "Lost Vanquisher" },
   },
   [40556] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7" },
@@ -11605,12 +11748,16 @@ BisTooltip_ItemAcquisition = {
   },
   [40560] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
   },
   [40561] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
   },
   [40562] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [40563] = {
     { kind = "DROP", source = "VOA_25N_ARCHAVON" },
@@ -11618,6 +11765,8 @@ BisTooltip_ItemAcquisition = {
   },
   [40564] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_25N_SARTHARION", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "OBSIDIAN_SANCTUM_10N_SARTHARION", tier = "T7", family = "Lost Protector" },
   },
   [40565] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7" },
@@ -11688,9 +11837,13 @@ BisTooltip_ItemAcquisition = {
   },
   [40588] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_4HORSEMEN", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Protector" },
   },
   [40589] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [40590] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
@@ -11703,10 +11856,12 @@ BisTooltip_ItemAcquisition = {
   },
   [40594] = {
     { kind = "DROP", source = "EYE_OF_ETERNITY_25N_MALYGOS" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7", family = "Lost Vanquisher" },
   },
   [40602] = {
-    { kind = "DROP", source = "NAXXRAMAS_25N_NOTH" },
-    { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_4HORSEMEN", tier = "T7", family = "Lost Conqueror" },
   },
   [40610] = {
     { kind = "TOKEN", source = "NAXXRAMAS_10N_4HORSEMEN", tier = "T7", family = "Lost Conqueror" },
@@ -14591,6 +14746,8 @@ BisTooltip_ItemAcquisition = {
   },
   [43990] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION_1D" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Vanquisher" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_4HORSEMEN", tier = "T7", family = "Lost Vanquisher" },
   },
   [43991] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION_1D" },
@@ -14603,24 +14760,38 @@ BisTooltip_ItemAcquisition = {
   },
   [43994] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION_2D" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_HEIGAN", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_GLUTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_THADDIUS", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_NOTH", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_4HORSEMEN", tier = "T7", family = "Lost Protector" },
   },
   [43995] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION_2D" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_KEL_THUZAD", tier = "T7", family = "Lost Conqueror" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_KEL_THUZAD", tier = "T7", family = "Lost Conqueror" },
   },
   [43996] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION_2D" },
   },
   [43998] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_10N_SARTHARION_2D" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_4HORSEMEN", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_GLUTH", tier = "T7", family = "Lost Protector" },
   },
   [44000] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_1D" },
   },
   [44002] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_1D" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Conqueror" },
   },
   [44003] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_1D" },
+    { kind = "TOKEN", source = "NAXXRAMAS_25N_LOATHEB", tier = "T7", family = "Lost Protector" },
+    { kind = "TOKEN", source = "NAXXRAMAS_10N_LOATHEB", tier = "T7", family = "Lost Protector" },
   },
   [44004] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_1D" },
@@ -14630,15 +14801,21 @@ BisTooltip_ItemAcquisition = {
   },
   [44006] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_2D" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [44007] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_2D" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [44008] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_2D" },
   },
   [44011] = {
     { kind = "DROP", source = "OBSIDIAN_SANCTUM_25N_SARTHARION_2D" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [44050] = {
     { kind = "DROP", source = "THE_KALU_AK_EXALTED" },
@@ -15284,7 +15461,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_LEVIATHAN" },
   },
   [45107] = {
-    { kind = "DROP", source = "ULDUAR_25N_LEVIATHAN" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [45108] = {
     { kind = "DROP", source = "ULDUAR_25N_LEVIATHAN" },
@@ -15330,13 +15508,15 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25HM_LEVIATHAN" },
   },
   [45134] = {
-    { kind = "DROP", source = "ULDUAR_25HM_LEVIATHAN" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [45135] = {
     { kind = "DROP", source = "ULDUAR_25HM_LEVIATHAN" },
   },
   [45136] = {
-    { kind = "DROP", source = "ULDUAR_25HM_LEVIATHAN" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [45137] = {
     { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
@@ -15351,13 +15531,15 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
   },
   [45141] = {
-    { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45142] = {
     { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
   },
   [45143] = {
-    { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [45144] = {
     { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
@@ -15380,7 +15562,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
   },
   [45150] = {
-    { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45151] = {
     { kind = "DROP", source = "ULDUAR_25N_RAZORSCALE" },
@@ -15398,7 +15581,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_IGNIS" },
   },
   [45164] = {
-    { kind = "DROP", source = "ULDUAR_25N_IGNIS" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [45165] = {
     { kind = "DROP", source = "ULDUAR_25N_IGNIS" },
@@ -15426,7 +15610,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_IGNIS" },
   },
   [45186] = {
-    { kind = "DROP", source = "ULDUAR_25N_IGNIS" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45187] = {
     { kind = "DROP", source = "ULDUAR_25N_IGNIS" },
@@ -15444,7 +15629,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_IRON_COUNCIL" },
   },
   [45227] = {
-    { kind = "DROP", source = "ULDUAR_25N_IRON_COUNCIL" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [45228] = {
     { kind = "DROP", source = "ULDUAR_25N_IRON_COUNCIL" },
@@ -15468,13 +15654,16 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_IRON_COUNCIL" },
   },
   [45238] = {
-    { kind = "DROP", source = "ULDUAR_25N_IRON_COUNCIL" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45239] = {
-    { kind = "DROP", source = "ULDUAR_25N_IRON_COUNCIL" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [45240] = {
-    { kind = "DROP", source = "ULDUAR_25N_IRON_COUNCIL" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Conqueror" },
   },
   [45241] = {
     { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
@@ -15489,7 +15678,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
   },
   [45245] = {
-    { kind = "DROP", source = "ULDUAR_25HM_IRON_COUNCIL" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [45246] = {
     { kind = "DROP", source = "ULDUAR_25N_XT" },
@@ -15498,7 +15688,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_XT" },
   },
   [45248] = {
-    { kind = "DROP", source = "ULDUAR_25N_XT" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [45249] = {
     { kind = "DROP", source = "ULDUAR_25N_XT" },
@@ -15513,7 +15704,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_XT" },
   },
   [45253] = {
-    { kind = "DROP", source = "ULDUAR_25N_XT" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Conqueror" },
   },
   [45254] = {
     { kind = "DROP", source = "ULDUAR_25N_XT" },
@@ -15552,7 +15744,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_KOLOGARN" },
   },
   [45265] = {
-    { kind = "DROP", source = "ULDUAR_25N_KOLOGARN" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45266] = {
     { kind = "DROP", source = "ULDUAR_25N_KOLOGARN" },
@@ -15574,10 +15767,12 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_KOLOGARN" },
   },
   [45272] = {
-    { kind = "DROP", source = "ULDUAR_25N_KOLOGARN" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Conqueror" },
   },
   [45273] = {
-    { kind = "DROP", source = "ULDUAR_25N_KOLOGARN" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Conqueror" },
   },
   [45274] = {
     { kind = "DROP", source = "ULDUAR_25N_KOLOGARN" },
@@ -15607,7 +15802,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_LEVIATHAN" },
   },
   [45289] = {
-    { kind = "DROP", source = "ULDUAR_10N_LEVIATHAN" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Conqueror" },
   },
   [45291] = {
     { kind = "DROP", source = "ULDUAR_10N_LEVIATHAN" },
@@ -15637,7 +15833,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_RAZORSCALE" },
   },
   [45300] = {
-    { kind = "DROP", source = "ULDUAR_10HM_LEVIATHAN" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [45301] = {
     { kind = "DROP", source = "ULDUAR_10N_RAZORSCALE" },
@@ -15697,7 +15894,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_AURIAYA" },
   },
   [45320] = {
-    { kind = "DROP", source = "ULDUAR_25N_AURIAYA" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [45321] = {
     { kind = "DROP", source = "ULDUAR_10N_IGNIS" },
@@ -15709,7 +15907,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_IRON_COUNCIL" },
   },
   [45325] = {
-    { kind = "DROP", source = "ULDUAR_25N_AURIAYA" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [45326] = {
     { kind = "DROP", source = "ULDUAR_25N_AURIAYA" },
@@ -15718,7 +15917,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_AURIAYA" },
   },
   [45329] = {
-    { kind = "DROP", source = "ULDUAR_10N_IRON_COUNCIL" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [45330] = {
     { kind = "DROP", source = "ULDUAR_10N_IRON_COUNCIL" },
@@ -15802,49 +16002,60 @@ BisTooltip_ItemAcquisition = {
   },
   [45355] = {
     { kind = "DROP", source = "VOA_10N_EMALON" },
-    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45356] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45357] = {
     { kind = "DROP", source = "VOA_10N_EMALON" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45358] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45359] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45360] = {
     { kind = "DROP", source = "VOA_10N_EMALON" },
-    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [45361] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [45362] = {
     { kind = "DROP", source = "VOA_10N_EMALON" },
   },
   [45363] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [45364] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Protector" },
   },
   [45365] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45367] = {
     { kind = "DROP", source = "VOA_10N_EMALON" },
-    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45368] = {
     { kind = "DROP", source = "ULDUAR_10N_YOGG", tier = "T8" },
   },
   [45369] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45370] = {
     { kind = "DROP", source = "VOA_10N_EMALON" },
@@ -15905,17 +16116,21 @@ BisTooltip_ItemAcquisition = {
   },
   [45387] = {
     { kind = "DROP", source = "VOA_10N_EMALON" },
-    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Conqueror" },
   },
   [45388] = {
     { kind = "DROP", source = "VOA_10N_EMALON" },
-    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Conqueror" },
   },
   [45389] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Conqueror" },
   },
   [45390] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Conqueror" },
   },
   [45391] = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
@@ -15935,21 +16150,25 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_YOGG", tier = "T8" },
   },
   [45396] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45397] = {
     { kind = "DROP", source = "VOA_10N_EMALON" },
-    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45398] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45399] = {
     { kind = "DROP", source = "VOA_10N_EMALON" },
     { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
   },
   [45400] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45401] = {
     { kind = "DROP", source = "VOA_10N_EMALON" },
@@ -16010,14 +16229,17 @@ BisTooltip_ItemAcquisition = {
   },
   [45419] = {
     { kind = "DROP", source = "VOA_10N_EMALON" },
-    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Conqueror" },
   },
   [45420] = {
     { kind = "DROP", source = "VOA_10N_EMALON" },
-    { kind = "DROP", source = "ULDUAR_10N_HODIR", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Conqueror" },
   },
   [45421] = {
-    { kind = "DROP", source = "ULDUAR_10N_YOGG", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Conqueror" },
   },
   [45422] = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM", tier = "T8" },
@@ -16091,7 +16313,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25HM_XT" },
   },
   [45444] = {
-    { kind = "DROP", source = "ULDUAR_25HM_XT" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [45445] = {
     { kind = "DROP", source = "ULDUAR_25HM_XT" },
@@ -16118,7 +16341,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR" },
   },
   [45453] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45454] = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR" },
@@ -16151,7 +16375,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM" },
   },
   [45464] = {
-    { kind = "DROP", source = "ULDUAR_10N_HODIR" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45466] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM" },
@@ -16160,7 +16385,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM" },
   },
   [45468] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Conqueror" },
   },
   [45469] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM" },
@@ -16172,13 +16398,16 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
   },
   [45472] = {
-    { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [45473] = {
-    { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Protector" },
   },
   [45474] = {
-    { kind = "DROP", source = "ULDUAR_25HM_THORIM" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [45479] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA" },
@@ -16208,7 +16437,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
   },
   [45488] = {
-    { kind = "DROP", source = "ULDUAR_25HM_FREYA" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [45489] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
@@ -16235,7 +16465,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
   },
   [45497] = {
-    { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [45498] = {
     { kind = "DROP", source = "ULDUAR_25N_VEZAX" },
@@ -16250,7 +16481,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_VEZAX" },
   },
   [45504] = {
-    { kind = "DROP", source = "ULDUAR_25N_VEZAX" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [45505] = {
     { kind = "DROP", source = "ULDUAR_25N_VEZAX" },
@@ -16282,7 +16514,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_VEZAX" },
   },
   [45514] = {
-    { kind = "DROP", source = "ULDUAR_25N_VEZAX" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Conqueror" },
   },
   [45515] = {
     { kind = "DROP", source = "ULDUAR_25N_VEZAX" },
@@ -16297,10 +16530,12 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25HM_VEZAX" },
   },
   [45519] = {
-    { kind = "DROP", source = "ULDUAR_25HM_VEZAX" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45520] = {
-    { kind = "DROP", source = "ULDUAR_25HM_VEZAX" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Conqueror" },
   },
   [45521] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG" },
@@ -16309,10 +16544,12 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG" },
   },
   [45523] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45524] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Protector" },
   },
   [45525] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG" },
@@ -16330,7 +16567,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG" },
   },
   [45532] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Conqueror" },
   },
   [45533] = {
     { kind = "DROP", source = "ULDUAR_25HM_YOGG" },
@@ -16342,7 +16580,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25HM_YOGG" },
   },
   [45536] = {
-    { kind = "DROP", source = "ULDUAR_25HM_YOGG" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [45537] = {
     { kind = "DROP", source = "ULDUAR_25HM_YOGG" },
@@ -16461,7 +16700,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
   },
   [45610] = {
-    { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [45611] = {
     { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
@@ -16532,15 +16772,12 @@ BisTooltip_ItemAcquisition = {
     { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45641] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
     { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Conqueror" },
   },
   [45642] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
     { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [45643] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION" },
     { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45644] = {
@@ -16553,15 +16790,12 @@ BisTooltip_ItemAcquisition = {
     { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45647] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
     { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Conqueror" },
   },
   [45648] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
     { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [45649] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
     { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45650] = {
@@ -16604,7 +16838,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25HM_MIMIRION" },
   },
   [45665] = {
-    { kind = "DROP", source = "ULDUAR_25N_ALGALON" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [45675] = {
     { kind = "DROP", source = "ULDUAR_10N_XT" },
@@ -16613,7 +16848,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_XT" },
   },
   [45677] = {
-    { kind = "DROP", source = "ULDUAR_10N_XT" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [45679] = {
     { kind = "DROP", source = "ULDUAR_10N_XT" },
@@ -16631,7 +16867,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_XT" },
   },
   [45687] = {
-    { kind = "DROP", source = "ULDUAR_10N_XT" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [45694] = {
     { kind = "DROP", source = "ULDUAR_10N_XT" },
@@ -16679,7 +16916,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_AURIAYA" },
   },
   [45712] = {
-    { kind = "DROP", source = "ULDUAR_10N_AURIAYA" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Protector" },
   },
   [45713] = {
     { kind = "DROP", source = "ULDUAR_10N_AURIAYA" },
@@ -16814,13 +17052,15 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_AURIAYA" },
   },
   [45865] = {
-    { kind = "DROP", source = "ULDUAR_10N_AURIAYA" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45866] = {
     { kind = "DROP", source = "ULDUAR_10N_AURIAYA" },
   },
   [45867] = {
-    { kind = "DROP", source = "ULDUAR_10HM_XT" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Protector" },
   },
   [45868] = {
     { kind = "DROP", source = "ULDUAR_10HM_XT" },
@@ -16862,7 +17102,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM" },
   },
   [45893] = {
-    { kind = "DROP", source = "ULDUAR_10N_THORIM" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45894] = {
     { kind = "DROP", source = "ULDUAR_10N_THORIM" },
@@ -16898,13 +17139,16 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_FREYA" },
   },
   [45940] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45941] = {
-    { kind = "DROP", source = "ULDUAR_10N_FREYA" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Protector" },
   },
   [45943] = {
-    { kind = "DROP", source = "ULDUAR_10HM_FREYA" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [45945] = {
     { kind = "DROP", source = "ULDUAR_10HM_FREYA" },
@@ -16928,10 +17172,12 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
   },
   [45976] = {
-    { kind = "DROP", source = "ULDUAR_10N_MIMIRION" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [45982] = {
-    { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [45988] = {
     { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
@@ -16943,7 +17189,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
   },
   [45993] = {
-    { kind = "DROP", source = "ULDUAR_10HM_MIMIRION" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [45996] = {
     { kind = "DROP", source = "ULDUAR_10N_VEZAX" },
@@ -16964,10 +17211,12 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_VEZAX" },
   },
   [46012] = {
-    { kind = "DROP", source = "ULDUAR_10N_VEZAX" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Conqueror" },
   },
   [46013] = {
-    { kind = "DROP", source = "ULDUAR_10N_VEZAX" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Conqueror" },
   },
   [46014] = {
     { kind = "DROP", source = "ULDUAR_10N_VEZAX" },
@@ -17028,7 +17277,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10HM_VEZAX" },
   },
   [46034] = {
-    { kind = "DROP", source = "ULDUAR_10HM_VEZAX" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Conqueror" },
   },
   [46035] = {
     { kind = "DROP", source = "ULDUAR_10HM_VEZAX" },
@@ -17037,7 +17287,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10HM_VEZAX" },
   },
   [46037] = {
-    { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [46038] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
@@ -17055,13 +17306,16 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
   },
   [46043] = {
-    { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [46044] = {
-    { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [46045] = {
-    { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [46046] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
@@ -17073,7 +17327,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
   },
   [46049] = {
-    { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46050] = {
     { kind = "DROP", source = "ULDUAR_10N_ALGALON" },
@@ -17091,7 +17346,8 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_10HM_YOGG" },
   },
   [46068] = {
-    { kind = "DROP", source = "ULDUAR_10HM_YOGG" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [46095] = {
     { kind = "DROP", source = "ULDUAR_10HM_YOGG" },
@@ -17140,97 +17396,122 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG", tier = "T8" },
   },
   [46123] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46124] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46125] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46126] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46127] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46129] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46130] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46131] = {
     { kind = "DROP", source = "VOA_10N_EMALON" },
-    { kind = "DROP", source = "ULDUAR_10N_FREYA", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46132] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46133] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46134] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46135] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Conqueror" },
   },
   [46136] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Conqueror" },
   },
   [46137] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Conqueror" },
   },
   [46138] = {
     { kind = "DROP", source = "ULDUAR_25N_TRASH_MOBS" },
     { kind = "VENDOR", cost = { { currency = "Emblem of Conquest", amount = 19 } } },
   },
   [46139] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Conqueror" },
   },
   [46140] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Conqueror" },
   },
   [46141] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Protector" },
   },
   [46142] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [46143] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [46144] = {
     { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
   },
   [46145] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [46146] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Protector" },
   },
   [46148] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [46149] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Protector" },
   },
   [46150] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Protector" },
   },
   [46151] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Protector" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Protector" },
   },
   [46152] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG", tier = "T8" },
@@ -17250,21 +17531,26 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
   },
   [46157] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46158] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46159] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46160] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46161] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46162] = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
@@ -17352,15 +17638,17 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG", tier = "T8" },
   },
   [46188] = {
-    { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_FREYA", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_MIMIRON", tier = "T8", family = "Wayward Conqueror" },
   },
   [46189] = {
     { kind = "DROP", source = "ULDUAR_25N_MIMIRION", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
   },
   [46190] = {
-    { kind = "DROP", source = "ULDUAR_25N_YOGG", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_THORIM", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_YOGG", tier = "T8", family = "Wayward Conqueror" },
   },
   [46191] = {
     { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
@@ -17370,20 +17658,24 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "VOA_25N_EMALON" },
   },
   [46193] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Conqueror" },
   },
   [46194] = {
-    { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_10N_YOGG", tier = "T8", family = "Wayward Vanquisher" },
+    { kind = "TOKEN", source = "ULDUAR_25N_HODIR", tier = "T8", family = "Wayward Vanquisher" },
   },
   [46195] = {
-    { kind = "DROP", source = "ULDUAR_25N_FREYA", tier = "T8" },
     { kind = "DROP", source = "VOA_25N_EMALON" },
+    { kind = "TOKEN", source = "ULDUAR_10N_HODIR", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_25N_FREYA", tier = "T8", family = "Wayward Conqueror" },
   },
   [46196] = {
     { kind = "DROP", source = "ULDUAR_25N_YOGG", tier = "T8" },
   },
   [46197] = {
-    { kind = "DROP", source = "ULDUAR_25N_THORIM", tier = "T8" },
+    { kind = "TOKEN", source = "ULDUAR_25N_THORIM", tier = "T8", family = "Wayward Conqueror" },
+    { kind = "TOKEN", source = "ULDUAR_10N_MIMIRON", tier = "T8", family = "Wayward Conqueror" },
   },
   [46198] = {
     { kind = "DROP", source = "ULDUAR_25N_HODIR", tier = "T8" },

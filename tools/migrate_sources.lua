@@ -547,16 +547,24 @@ do
       addEntry(itemID, { kind = "TOKEN", tier = info.tier, family = info.family, source = sid })
       bossSeen[sid] = true
     end
-    -- a TOKEN line fully describes the drop: remove the plain DROP from the
-    -- same place so the tooltip shows the TOKEN format only
-    local tokenSources = {}
+    -- a TOKEN line fully describes the drop: remove ALL plain DROPs from
+    -- any instance a TOKEN covers (same raid tier), so only TOKEN shows
+    local tokenInstances = {}
     for _, e in ipairs(acquisition[itemID]) do
-      if e.kind == "TOKEN" then tokenSources[e.source] = true end
+      if e.kind == "TOKEN" then
+        local s = registry[e.source]
+        if s then tokenInstances[s.instance] = true end
+      end
     end
-    if next(tokenSources) then
+    if next(tokenInstances) then
       local deduped = {}
       for _, e in ipairs(acquisition[itemID]) do
-        if not (e.kind == "DROP" and tokenSources[e.source]) then
+        local dropOnTokenInstance = false
+        if e.kind == "DROP" and e.source then
+          local s = registry[e.source]
+          if s and tokenInstances[s.instance] then dropOnTokenInstance = true end
+        end
+        if not dropOnTokenInstance then
           deduped[#deduped + 1] = e
         end
       end
@@ -564,6 +572,66 @@ do
     end
     nTokenItems = nTokenItems + 1
   end
+end
+
+-- T7/T8 GEAR -> TOKEN conversion (owner 2026-09-15): tier pieces listed
+-- under bosses in Loot_Sources (legacy "associated boss" convention) must
+-- render as TOKEN lines, not plain DROPs. For each gear item in
+-- TM.GEAR_SLOTS, find TOKEN_PAGES tokens of the same tier+family+slot and
+-- replace the gear's DROP lines on those very bosses with TOKEN lines.
+do
+  local PREFIX = { T7 = "Lost ", T8 = "Wayward " }
+  local nGearToken = 0
+  for itemID, g in pairs(TM.GEAR_SLOTS) do
+    local family = TM.CLASS_FAMILY[g.class]
+    if family then
+      local key = g.tier .. "|" .. PREFIX[g.tier] .. family .. "|" .. g.slot
+      local pages
+      for tokID, info in pairs(TM.TOKEN_PAGES) do
+        if info.tier == g.tier and info.family == PREFIX[g.tier] .. family
+          and info.slot == g.slot then
+          pages = info.pages
+          break
+        end
+      end
+      if pages then
+        -- collect ALL matching token variants (10N + 25N etc.)
+        local tokenSources = {}
+        local covered = {}
+        for tokID, info in pairs(TM.TOKEN_PAGES) do
+          if info.tier == g.tier and info.family == PREFIX[g.tier] .. family
+            and info.slot == g.slot then
+            for _, pg in ipairs(info.pages) do
+              local sid = sourceID(pg[1], pg[3], pg[2])
+              registry[sid] = registry[sid] or { instance = pg[1], boss = pg[2], difficulty = pg[3] }
+              tokenSources[sid] = true
+              covered[pg[1]] = true
+            end
+          end
+        end
+        local list = acquisition[itemID]
+        if list then
+          local kept = {}
+          for _, e in ipairs(list) do
+            -- drop ALL legacy boss-DROPs from instances the tokens cover
+            local dropOnCovered = false
+            if e.kind == "DROP" and e.source then
+              local s = registry[e.source]
+              if s and covered[s.instance] then dropOnCovered = true end
+            end
+            if not dropOnCovered then kept[#kept + 1] = e end
+          end
+          acquisition[itemID] = kept
+        end
+        for sid in pairs(tokenSources) do
+          addEntry(itemID, { kind = "TOKEN", tier = g.tier,
+            family = PREFIX[g.tier] .. family, source = sid })
+        end
+        nGearToken = nGearToken + 1
+      end
+    end
+  end
+  print("[gear->token] converted " .. nGearToken .. " tier gear items")
 end
 
 -- emblem items -> VENDOR entries (tier only where provable, see VENDOR_TIER)
