@@ -10,6 +10,16 @@ on:
         required: true
         default: false
         type: boolean
+  workflow_call:
+    inputs:
+      ping_role:
+        description: Ping the BiSTooltip Updates role for a called manual test
+        required: false
+        default: false
+        type: boolean
+    secrets:
+      DISCORD_WEBHOOK_URL:
+        required: true
 
 permissions:
   contents: read
