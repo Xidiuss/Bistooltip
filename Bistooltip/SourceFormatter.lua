@@ -91,18 +91,13 @@ local function render(entry, colored)
       or type(s.difficulty) ~= "string" then
       return nil
     end
-    -- Owner (2026-09-15): long families (Grand Vanquisher etc.) break the
-    -- line in two — the bracket part starts on a new line.
+    -- Keep every method and its source context on one tooltip line.
     local familyText = seg(P.family, entry.family)
     local bracket = seg(P.instance, "[" .. s.instance .. ": ")
       .. seg(P.boss, s.boss .. " ")
       .. seg(diffColor(s.difficulty), "<" .. s.difficulty .. ">]")
-    local sep = " "
-    if entry.kind == "TOKEN" and #entry.tier + #entry.family > 14 then
-      sep = "\n "
-    end
     return seg(P.method, entry.tier .. " - " .. entry.kind .. ": ")
-      .. familyText .. sep .. bracket
+      .. familyText .. " " .. bracket
   end
   return nil
 end

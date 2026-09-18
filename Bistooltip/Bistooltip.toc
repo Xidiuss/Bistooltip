@@ -31,11 +31,11 @@ Libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
 # ============================================================
 # Data Files
 # NOTE: EmblemData.lua must load after bislists (T8 set auto-registration)
-# NOTE: Loot_Sources.lua is an OFFLINE migrator input only — never loaded here
+# NOTE: Offline migrator inputs live in Private/Legacy/data and are not shipped here
 # ============================================================
 GemData.lua
 Bistooltip_classes.lua
-Bistooltip_wowsims_final.lua
+Bistooltip_WoWSimsBP_final.lua
 Bistooltip_wh_bislists.lua
 Bistooltip_wowtbc_bislists.lua
 Bistooltip_horde_to_ali.lua

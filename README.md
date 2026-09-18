@@ -50,12 +50,15 @@ Bis-Tooltip/
 ├── # Data Layer
 ├── DataProvider.lua            # Data access, filtering, caching
 ├── StateManager.lua            # Application state management
+├── Bistooltip_WoWSimsBP_final.lua  # Generated STANDARD BiS database
 ├── Bistooltip_wowtbc_bislists.lua  # BiS item database
 ├── Bistooltip_classes.lua      # Class/spec definitions
 ├── Bistooltip_horde_to_ali.lua # Horde<->Alliance item translations
 ├── EmblemData.lua              # Emblem vendor items & costs
 ├── GemData.lua                 # Gem stats database
-├── Loot_Sources.lua            # Item drop locations
+├── SourceRegistry.lua          # Canonical source definitions
+├── ItemAcquisition.lua         # Item-to-source relationships
+├── SourceFormatter.lua         # Source label formatting
 │
 ├── # UI Framework
 ├── UIFramework.lua             # UI helper functions & factories

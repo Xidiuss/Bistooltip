@@ -68,7 +68,7 @@
 ### Changes
 
 1. **Three selectable ranking databases** (options → Data source, default WoWSimsBP)
-   - `Bistooltip_wowsims_final.lua` generated OFFLINE by `tools/assemble_wowsims.lua`
+   - `Bistooltip_WoWSimsBP_final.lua` generated OFFLINE by `Private/Legacy/tools/assemble_wowsims.lua`
      (1:1 port of upstream's faction assembly): alliance base (2907 slots) +
      `horde_overrides` — only the 956 slots (32.9%) where horde differs — applied
      at runtime by reference swaps (706 KB loaded instead of the 1.98 MB 3-table file)
