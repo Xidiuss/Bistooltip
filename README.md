@@ -1,6 +1,8 @@
 # Bistooltip WOTLK5 S2
 
-Server acquisition overlay for WOTLK5 season 2, WoW 3.3.5a (`Interface: 30300`, TOC version `1.0.1`). Install `Bistooltip_WOTLK5_S2` beside the required `Bistooltip` core addon in `Interface/AddOns`. Enable the overlay only on the matching server; it does not select itself by realm or exclude another server overlay.
+Server acquisition overlay for WOTLK5 season 2, WoW 3.3.5a (`Interface: 30300`, TOC version `1.0.1`). Install `Bistooltip_WOTLK5_S2` beside the required `Bistooltip` core addon in `Interface/AddOns`. Enable the overlay only on the matching server; it does not select itself by realm or exclude another server overlay. This addon supplies acquisition data, not a separate ranking database or UI.
+
+**Current status:** offline core integration has exercised this overlay with three ranking databases and both factions. Native Lua 5.1 CI and a live WOTLK5 merchant/scroll check remain release gates. The [project roadmap](https://github.com/Xidiuss/Bistooltip/blob/main/docs/ROADMAP.md) records the next data and scanner work.
 
 This branch packages only the WOTLK5 S2 addon. `main` packages core, `Bistooltip_Scanner` packages the optional scanner, and `Bistooltip_Whitemane_Frostmourne` is a different server overlay. These are separate addons, not core ranking database choices.
 
