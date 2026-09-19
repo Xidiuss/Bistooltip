@@ -45,26 +45,43 @@ test("repeated replay never mutates a recorded replacement with earlier appends"
     end
 end)
 
+test("vendor price replacement preserves non-vendor routes across replay", function()
+    setup()
+    BisTooltip:SetAcquisition(99, {
+        {kind="DROP",source="SHOP"},
+        {kind="VENDOR",cost={{currency="Emblem of Heroism",amount=40}}},
+    })
+    BisTooltip:ReplaceVendorAcquisitions(99, {
+        {kind="VENDOR",cost={{currency="Justice",amount=700}}},
+    })
+    for round=1,2 do
+        if round == 2 then BisTooltip_ReplayOverlay() end
+        local entries=BisTooltip_ItemAcquisition[99]
+        assert(#entries==2 and entries[1].kind=="DROP"
+            and entries[2].cost[1].currency=="Justice", "vendor replacement lost routes")
+    end
+end)
+
 test("invalid server rank remains an actionable API error", function()
     setup()
     assert(not pcall(BisTooltip.SetBiSSlotRank, BisTooltip, "Druid", "Balance", "TYPO", "Head", 1, 99))
     assert(not pcall(BisTooltip.SetBiSSlotRank, BisTooltip, "Druid", "Balance", "T7", "Head", 9, 99))
 end)
 
-test("inserted server rank shifts every existing item and survives replay", function()
+test("inserted server rank retains the slot capacity and survives replay", function()
     setup()
     Bistooltip_bislists = Bistooltip_wowsims_final
     BisTooltip:InsertBiSSlotRank("Druid", "Balance", "T7", "Head", 1, 99, "test")
     local slot = Bistooltip_bislists.Druid.Balance.T7[1]
-    assert(#slot == 3 and slot[1] == 99 and slot[2] == 1 and slot[3] == 2,
-        "inserting rank 1 discarded or reordered a baseline item")
+    assert(#slot == 2 and slot[1] == 99 and slot[2] == 1,
+        "inserting rank 1 did not replace the last baseline alternative")
     Bistooltip_bislists = {Druid = {Balance = {T7 = {
         {slot_name = "Head", enhs = {}, 5, 6},
     }}}}
     BisTooltip_ReplayOverlay()
     slot = Bistooltip_bislists.Druid.Balance.T7[1]
-    assert(#slot == 3 and slot[1] == 99 and slot[2] == 5 and slot[3] == 6,
-        "replay did not insert before the new database order")
+    assert(#slot == 2 and slot[1] == 99 and slot[2] == 5,
+        "replay did not preserve the new database capacity")
 end)
 
 test("inserting an already ranked item moves it without duplicates", function()
@@ -85,8 +102,8 @@ test("insert into unavailable database phase is deferred", function()
     Bistooltip_bislists = Bistooltip_wowsims_final
     BisTooltip_ReplayOverlay()
     local slot = Bistooltip_bislists.Druid.Balance.T7[1]
-    assert(#slot == 3 and slot[1] == 99 and slot[2] == 1 and slot[3] == 2,
-        "deferred insertion lost a baseline rank")
+    assert(#slot == 2 and slot[1] == 99 and slot[2] == 1,
+        "deferred insertion exceeded the baseline capacity")
 end)
 
 test("accepted custom registry source renders without a tooltip error", function()

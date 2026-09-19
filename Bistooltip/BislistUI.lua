@@ -1666,7 +1666,7 @@ local CUSTOM_ICON_SPACING = 4
 
 -- Column positions for different modes
 -- STRUCTURE:
--- MAIN mode: Col1: SLOT | Col2: ENCHANT | Col3-5: GEMS | Col6-12: BIS + TOP1-TOP6
+-- MAIN mode: Col1: SLOT | Col2: ENCHANT | Col3-5: GEMS | Col6-11: BIS + TOP1-TOP5
 -- BIS mode:  Col1: SLOT | Col2: BIS | Col3: SOURCE | Col4: COST | Col5: ILVL | Col6: DROP%
 -- (No gems in BIS mode as per user request)
 local function GetColumnPositions()
@@ -1698,10 +1698,9 @@ local function GetColumnPositions()
             { x = 326, width = 40,  type = "item" },
             { x = 370, width = 40,  type = "item" },
             { x = 414, width = 40,  type = "item" },
-            { x = 458, width = 40,  type = "item" },
         }
     else
-        -- MAIN mode: SLOT | ENCHANT | GEMS | BIS | TOP1-TOP6
+        -- MAIN mode: SLOT | ENCHANT | GEMS | BIS | TOP1-TOP5
         return {
             { x = 4,   width = 70,  type = "label" },      -- Col1: SLOT
             { x = 76,  width = 24,  type = "enchant" },    -- Col2: ENCHANT
@@ -1712,7 +1711,6 @@ local function GetColumnPositions()
             { x = 326, width = 40,  type = "item" },       -- Col9: TOP3
             { x = 370, width = 40,  type = "item" },       -- Col10: TOP4
             { x = 414, width = 40,  type = "item" },       -- Col11: TOP5
-            { x = 458, width = 40,  type = "item" },       -- Col12: TOP6
         }
     end
 end
@@ -1893,10 +1891,10 @@ local function CreateCustomHeader(yOffset)
         -- Same enchant/gems columns as MAIN mode
         headers = { "SEARCH", "E", "Gems", "BIS", "SOURCE", "MODE", "COST", "iLvl" }
     elseif customizeMode then
-        headers = { "SEARCH", "E", "Gems", "BIS", "TOP1", "T2", "T3", "T4", "T5", "T6" }
+        headers = { "SEARCH", "E", "Gems", "BIS", "TOP1", "T2", "T3", "T4", "T5" }
     else
-        -- MAIN mode headers: SLOT | E | GEMS | BIS | TOP1-TOP6
-        headers = { "SEARCH", "E", "Gems", "BIS", "TOP1", "TOP2", "TOP3", "TOP4", "TOP5", "TOP6" }
+        -- MAIN mode headers: SLOT | E | GEMS | BIS | TOP1-TOP5
+        headers = { "SEARCH", "E", "Gems", "BIS", "TOP1", "TOP2", "TOP3", "TOP4", "TOP5" }
     end
 
     -- Create or reuse search box with consistent styling
@@ -3499,13 +3497,13 @@ drawSpecData = function()
         slots, searchText, showOnlyMissing, vendorFilterMode, isHorde, bisChecklistMode
     )
 
-    -- VENDOR renders one purchasable item per row: BIS has only one item
-    -- column, so packing alternatives into a single row hides later ranks.
+    -- VENDOR renders only the required BiS item(s) with a purchase route.
+    -- A single row cannot show both required ring/trinket choices.
     if vendorFilterMode then
         local vendorSlots = {}
         for _, slot in ipairs(filteredSlots) do
             local seen = {}
-            for _, id in ipairs(slot) do
+            for _, id in ipairs(Data.GetVendorBISItems(slot, isHorde)) do
                 if type(id) == "number" and id > 0 then
                     local disp = id
                     if Data.GetDisplayItemID then disp = Data.GetDisplayItemID(id, isHorde) end

@@ -409,6 +409,7 @@ function BistooltipAddon:GetItemSourceInfo(itemId)
       return s.instance, s.boss
     end
   end
+  if e.kind == "ACTIVITY" then return e.label, nil end
   return nil, nil
 end
 

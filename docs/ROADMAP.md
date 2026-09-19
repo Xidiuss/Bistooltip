@@ -1,45 +1,36 @@
 # Roadmap Meta-Bistooltipa
 
-Wersja do zatwierdzenia: 19 września 2026. Punkt wyjścia: [audyt postmigracyjny](POSTMIGRATION-AUDIT.md), [pełna lista brakujących źródeł](MISSING-ACQUISITIONS.md) i [audyt importu Whitemane](https://github.com/Xidiuss/Bistooltip/blob/Bistooltip_Whitemane_Frostmourne/docs/SCANNER-IMPORT-AUDIT.md). Core dla WoW 3.3.5a, trzy niezależne migawki rankingów, kanoniczne acquisitions i osobne dodatki serwerowe tworzą bazę do dalszego rozwoju. Kolejne etapy mają domknąć zachowanie, wiarygodność danych i użyteczność; nie wymagają ponownej przebudowy całości.
+Aktualizacja 20 września 2026 po testach właściciela w kliencie. Core, scanner, Whitemane i WOTLK5 pozostają osobnymi pakietami. Priorytety poniżej zastępują wcześniejszą kolejność QoL; nadal wymagają testów natywnego Lua 5.1 i kolejnego smoke testu w grze.
 
-## P0 — zrobić teraz, przed wydaniem
+## P0 — poprawność bieżącego wydania
 
-| Działanie | Dlaczego teraz | Warunek ukończenia |
-| --- | --- | --- |
-| Wstawianie serwerowego BiS na rank 1 | Dotychczasowe `SetBiSSlotRank` usuwało pierwszą bazową alternatywę Whitemane | 27 wpisów używa `InsertBiSSlotRank`; kolejność i liczba bazowych ID zostają zachowane po starcie, zmianie bazy i RESET; MAIN/CUSTOM pokazują przesuniętą siódmą pozycję |
-| Spójne opisy czterech gałęzi | Użytkownik musi wiedzieć, co instaluje i od czego zależy wtyczka | Każdy README podaje rolę, instalację, zakres danych, ograniczenia i status weryfikacji; core i Whitemane opisują zależność od nowego API |
-| Przegląd pochodzenia i licencji danych | WoWSimsBP wywodzi się z backportu ExoJdi, a użyty offline AtlasLoot oracle jest GPL-2.0; sam brak pliku oracle w Git nie wystarcza do potwierdzenia MIT wszystkich wyników | Udokumentować źródło i licencję wejścia ExoJdi; przejrzeć fakty wygenerowane z oracle, potwierdzić je niezależnym źródłem/klientem i nie kopiować kodu ani tabel GPL do pakietu MIT |
-| Natywna weryfikacja przed publikacją | Lokalny Fengari nie jest klientem Lua 5.1; nowa konfiguracja CI nie dowodzi udanego przebiegu | Zielone CI Lua 5.1 dla core, obu wtyczek i scannera; odnotowany commit i wynik przebiegu |
-| Smoke test w kliencie 3.3.5a | Stubowane API nie dowodzi ładowania TOC, renderowania ani cen serwera | Wykonać [checklistę](DEVELOPMENT.md#in-game-smoke-checklist): core osobno, Alliance/Horde, każda baza z Whitemane, rank 1–7 po RESET, zimny cache, VENDOR, scanner Honor/Arena/token i WOTLK5 scroll; zapisać wyniki i błędy Lua |
-| Publikacja zgodnych pakietów | Aktualny Whitemane wywołuje nową funkcję core | Opublikować i instalować zgodny core razem z Whitemane; nie udostępniać nowej wtyczki z wcześniejszym core |
+1. Utrzymać naprawy wynikające z testów klienta: poprawna frakcja dla Death's Choice/Verdict, ograniczenie wstawienia BiS do sześciu pozycji, VENDOR tylko dla wymaganych pozycji BiS, oraz źródło scrolla WOTLK5 `5000762`. Sprawdzić Alliance/Horde w WoWSimsBP i wowtbc, RESET, przełączanie baz oraz Whitemane.
+2. Udostępniać zgodny core i Whitemane razem. Scanner oferuje `append`, `replace_vendor` i `replace_all`; import Justice/Valor używa zastąpienia starego VENDOR, custom emblemy są dodatkowymi źródłami. Nie traktować pustej ceny jako darmowego zakupu.
+3. Przejść natywną macierz Lua 5.1 i testy klienta 3.3.5a. Lokalny Fengari jest tylko kontrolą offline. Zanotować commit, realm, frakcję i wyniki; publikację wykonać dopiero po decyzji właściciela.
+4. Zachować [pochodzenie WoWSimsBP od ExoJdi](../README.md) i oddzielność pakietu MIT od zewnętrznego zestawienia AtlasLoot GPL-2.0. Nowe fakty pochodzą z ręcznie sprawdzonego przez właściciela `Private/new_data`; nie kopiować kodu ani tabel tego zestawienia.
 
-Pierwsze dwa wiersze zrealizowano lokalnie. Opis pochodzenia danych dopisano, ale jego przegląd dowodów pozostaje otwarty. Status wydania pozostaje otwarty do czasu potwierdzenia pozostałych bramek. Push sam w sobie nie zastępuje sprawdzenia przebiegu CI.
+## P1 — enchanty i cache
 
-## P1 — wiarygodność danych
+1. **Edytor przypisań enchantów.** Pokazać dostępne scroll ID, źródło i cenę, pozwolić przypisać itemID lub spellID do dokładnego class/spec/phase/slot, wyświetlić podgląd `SetEnhancement` i ostrzeżenie o nadpisaniu istniejącej listy. Walidować typ ID i zgodność slotu. Dziewięć scrolli WOTLK5 ma obecnie źródła zakupu, ale nie rekomendacje.
+2. **Cache przedmiotów.** Zmierzyć opóźnienia na zimnym cache w kliencie. Następnie wprowadzić ograniczoną kolejkę żądań z ponawianiem, limitem prób i tokenem generacji widoku, aby spóźniona odpowiedź nie przepisywała bieżącej selekcji. Pokazać stan oczekiwania i umożliwić ręczne odświeżenie.
 
-1. **Źródła dla rank 1.** Zacząć od 34 unikalnych ID na rank 1 w [pełnym spisie](MISSING-ACQUISITIONS.md); następnie pozostałe 159 (razem 193). Luki per baza: 134 WoWSimsBP Alliance, 120 Horde, 107 wowtbc, 102 Wowhead. Każdy wpis powinien mieć potwierdzone źródło, metodę i — jeśli dotyczy — wszystkie składniki ceny; generator ma dawać deterministyczny output i przejść census.
-2. **23 kandydatów BiS Whitemane.** Wszystkie adnotacje są już zachowane jako nieaktywne `PLANNED`; 17 ID nie ma acquisition. Zebrać źródła/ceny oraz dokładne class/spec/phase/slot/rank według [listy kandydatów](https://github.com/Xidiuss/Bistooltip/blob/Bistooltip_Whitemane_Frostmourne/docs/BIS-CANDIDATES.md). Rozstrzygnąć szczególnie Nightwing kontra Atiesh, parę Warglaive, Priest/Druid Atiesh i klasę tarczy. Dopiero potem dodać ranki i niepuste źródła bez kasowania istniejących DROP/TOKEN/MARK.
-3. **Fazy Wowhead.** Zweryfikować PR/T7 względem dostępności przedmiotów na docelowym progresie, w tym wskazane w audycie 45931 i 48472. Opisać zasady faz i skorygować tylko potwierdzone przypadki; obecnie Wowhead jest alternatywną migawką, nie obietnicą ścisłej progresji.
-4. **Kontrola wątpliwych cen.** Sprawdzić kandydatów takich jak 37111 w więcej niż jednym źródle lub w kliencie. Nie usuwać istniejącej oferty wyłącznie dlatego, że pojedynczy oracle jej nie zawiera. Dla Justice/Valor Whitemane zachować przyjętą politykę: nowa cena zastępuje starszą VENDOR, a DROP/TOKEN/MARK pozostają.
+## P2 — domknięcie danych
 
-## P2 — od skanu do sprawdzalnej wtyczki
+1. [Import danych właściciela](NEW-DATA-IMPORT.md) dodał 165 źródeł i skorygował ranking `34209` → `34391`. W WoWSimsBP Alliance pozostało 28 unikalnych ID bez źródła; [pierwotny spis 193](MISSING-ACQUISITIONS.md) jest migawką sprzed importu. Dwie luki rank 1 WoWSimsBP obejmują `34388` i `43792`; wowtbc ma cztery. Nie udawać pełnej ceny 17 wymian u Yrma bez ID oddawanego przedmiotu.
+2. Dla 10 cen ograniczonych do Alliance wprowadzić semantykę frakcji w modelu ofert przed importem. Doprecyzować brakujące bossy dla `37761` i `43573`; dla `43792` rozstrzygnąć niedostępność i związek z `40458` bez automatycznego aliasu.
+3. [Dwadzieścia rekordów custom Whitemane](https://github.com/Xidiuss/Bistooltip/blob/Bistooltip_Whitemane_Frostmourne/docs/BIS-CANDIDATES.md) obejmuje 10 częściowych metod quest/drop, siedem odroczonych upgrade'ów i trzy nieustalone metody. Ceny Ascension z niepotwierdzonym ID waluty i puste koszty pozostają nieaktywne. Uzupełnić konkretne questy, bossów, waluty i dokładne class/spec/phase/slot/rank przed kolejnym wstawieniem BiS.
+4. Zweryfikować fazy Wowhead PR/T7, szczególnie `45931` i `48472`, oraz historyczną ofertę `37111` na docelowym serwerze.
 
-1. Eksport scannera z jawnym wyborem **Append** lub **Replace vendor price**, raportem pustych cen, niezbuforowanych ID i alternatywnych ofert różnych merchantów/walut. Wybór musi być widoczny przed wygenerowaniem kodu, ponieważ `SetAcquisition` zastępuje wszystkie metody.
-2. Dodać identyfikator realm do klucza obserwacji i zachować itemID waluty oraz pochodzenie skanu w danych do przeglądu. Nie zakładać, że sama nazwa Justice/Valor identyfikuje walutę na wszystkich serwerach.
-3. Generować kompletny szkielet dodatku TOC + dane po walidacji. Decyzje o BiS i enchantach pozostają redakcyjne: sam skan merchanta nie wyznacza klasy, speca, fazy ani rankingu.
+## P3 — scanner i przyszłe upgrade'y
 
-## P3 — funkcje użytkowe po ustabilizowaniu danych
+1. Trzy tryby eksportu są dostępne; kolejnym krokiem jest zapis realm w kluczu obserwacji, pełne zachowanie alternatywnych ofert wielu merchantów również w trybie zastąpienia ceny i podgląd konfliktu z istniejącym acquisition przed eksportem.
+2. Po walidacji danych generować pakiet TOC + plik źródeł. Sam skan merchanta nie tworzy rankingów ani enchantów.
+3. Model łańcucha upgrade'ów custom Whitemane zaprojektować osobno po poznaniu kosztu i poprzedniego przedmiotu. Nie wpisywać teraz placeholderowych cen dla siedmiu odroczonych rekordów.
 
-1. **Koszyk zakupów:** użytkownik wybiera jedną ofertę na przedmiot; suma obejmuje wszystkie jej waluty, tokeny i gold w poprawnych jednostkach, z rozdzieleniem posiadanych i brakujących. Alternatyw nie sumować jak wspólnego obowiązku.
-2. **Enchantment:** edytor przypisuje potwierdzony scroll do klasy/speca/fazy/slotu i pokazuje wynik `SetEnhancement`. Sprawdza itemID kontra spellID; osiem scrolli WOTLK5 ma na razie tylko ceny pozyskania.
-3. **Cache przedmiotów:** zmierzyć opóźnienia w kliencie, potem zastąpić ograniczenie 2 s kolejką z ponawianiem i tokenem generacji widoku. Dla brakujących ID kolejka musi mieć granicę prób.
+## P4 — koszyk zakupów
 
-## P4 — kontrakt i utrzymanie
+Koszyk ma być osobną listą **wybranych, brakujących** przedmiotów. Użytkownik wybiera dla każdego przedmiotu dokładnie jedną z dostępnych ofert (np. Justice albo custom emblem); jedna oferta może wymagać kilku składników jednocześnie, takich jak Honor + Arena lub item wejściowy + Sunmote. Widok sumuje wyłącznie wybrane oferty, oddzielnie według waluty i itemID, a gold liczy w miedzi i formatuje na g/s/c. Pokazuje posiadane ilości, brak i miejsce zakupu, pozwala zmienić ofertę bez zmiany rankingu BiS. Alternatywnych ofert nie sumuje jako jednego kosztu; upgrade'y dochodzą dopiero po zdefiniowaniu łańcucha i zużycia przedmiotów wejściowych.
 
-- Wersjonować kontrakt PluginAPI i schemat danych; dodać diagnostykę konfliktów overlay oraz identyfikację realm. Zachować osobne znaczenia `SetBiSSlotRank` (zastąp) i `InsertBiSSlotRank` (wstaw/przesuń).
-- Zinwentaryzować konsumentów globalnych komponentów UI po testach w kliencie, a następnie usuwać lub wydzielać tylko potwierdzony martwy kod. Wiele elementów BislistUI można upraszczać stopniowo.
-- Jeśli prywatne narzędzia `Private/Legacy` mają być wersjonowane, najpierw uzgodnić repozytorium i lokalizację. Ich lokalny stan nie jest częścią publikowanych gałęzi.
+## Kontrakt i utrzymanie
 
-## Definicja wydania
-
-Każdy pakiet ma wskazany commit, zielone odpowiednie testy natywnego Lua 5.1, poprawny manifest/składnię oraz zapisany smoke test klienta na właściwym serwerze. Dokumentacja mówi, które źródła i fazy są jeszcze niepełne. Wtyczki są sprawdzane z tą wersją core, z którą użytkownik ma je instalować.
+Wersjonować PluginAPI i schemat danych, diagnozować konflikty overlay oraz wydzielać UI stopniowo po testach w kliencie. `SetBiSSlotRank` zastępuje wskazany rank, a `InsertBiSSlotRank` wstawia lub przenosi przedmiot w granicach liczby pozycji danego slotu. Prywatne narzędzia `Private/Legacy` pozostają poza historią Git, dopóki nie zostanie uzgodniona lokalizacja repozytorium.

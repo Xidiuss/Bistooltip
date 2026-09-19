@@ -3,7 +3,7 @@
 -- ============================================================
 -- Not loaded by the TOC. Runtime uses only ItemAcquisition.lua.
 -- Retained here because the private offline migrator consumes this path.
--- Price corrections checked against the offline vendor oracle, 2026-09-18.
+-- Price corrections checked against the offline vendor reference, 2026-09-18.
 -- Custom server content lives in server plugins (e.g. Bistooltip_Whitemane_Frostmourne), not in core.
 
 -- Initialize the emblem items table

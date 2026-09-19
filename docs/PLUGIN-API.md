@@ -9,6 +9,7 @@ Core rankings are selected independently of server data. Enable the one server o
 | `DefineSource(sourceID, definition, plugin)` | Replace/register source facts |
 | `SetAcquisition(itemID, entries, plugin)` | Replace **all** acquisition routes for an item |
 | `AddAcquisition(itemID, entry, plugin)` | Append an alternative, deduplicating an identical entry |
+| `ReplaceVendorAcquisitions(itemID, offers, plugin)` | Replace only VENDOR offers, preserving drops, quests, tokens, and other methods |
 | `SetBiSSlot(class, spec, phase, slot, IDs, plugin)` | Replace a complete rank list, preserving slot metadata |
 | `SetBiSSlotRank(class, spec, phase, slot, rank, itemID, plugin)` | Replace one existing rank |
 | `InsertBiSSlotRank(class, spec, phase, slot, rank, itemID, plugin)` | Insert at a rank and shift later items; move an item already in the slot |
@@ -41,7 +42,7 @@ BisTooltip:AddAcquisition(900001, {
 
 These IDs/names are illustrative, not supplied server data. Named currencies are labels with amounts; there is no mandatory currency registry. Item-based costs retain item IDs and render with an `Item #ID` fallback. All cost parts in one acquisition are required together; multiple acquisition records represent alternatives. An empty cost list means the source has no recorded price, not proof that it is free.
 
-`DROP` references a source. `TOKEN` and `MARK` additionally require `tier` and `family`; use them only for verified tier membership. `VENDOR` carries `cost`; optional `tier`, `displayVariant="TROPHY"`, and `variantLabel` control tier presentation. `CUSTOM` uses a nonempty label, for example a shop description; use VENDOR when you need structured prices.
+`DROP` references a source. `TOKEN` and `MARK` additionally require `tier` and `family`; use them only for verified tier membership. `VENDOR` carries `cost`; optional `tier`, `displayVariant="TROPHY"`, and `variantLabel` control tier presentation. `CUSTOM` uses a nonempty label, for example a shop description; use VENDOR when you need structured prices. `ACTIVITY` uses a nonempty label for a known method without a structured merchant or boss record, such as a world drop or a quest whose details are not yet available.
 
 The VENDOR filter includes VENDOR and CUSTOM entries, with one purchasable item per row. Simple one-part prices can be totaled by their unit; gold is displayed as gold/silver/copper, not raw copper. Compound prices, alternative purchases and unspecified prices display **See item sources** instead of an incomplete budget and **Details** in the COST cell. Full purchase lines remain available in source text and `/bisemblem`.
 
@@ -60,10 +61,10 @@ BisTooltip:SetEnhancement("Druid", "Balance", "T10", "Head", {
 
 Enhancements are whole-list replacement, not append. Spell entries use `{type="spell", id=spellID}` and must not be queried as item IDs. Test the plugin on every intended ranking database and faction, including initial login, not only replay.
 
-An insertion keeps all existing alternatives in the data; inserting an ID already present moves it without duplication. MAIN and CUSTOM currently show seven ranked icons per slot. If future overlays produce longer lists, the remaining ranks still exist in the data but need additional UI space to appear in those views.
+An insertion keeps the slot's existing number of alternatives. A new rank-1 item shifts the earlier ranks down and drops the old last alternative; an ID already present moves without duplication. MAIN and CUSTOM show up to six ranked icons per slot.
 
 ## Scanner handoff
 
-The Scanner branch collects merchant observations and exports text; it does not install or execute generated plugins. Review output before using it. Its default `SetAcquisition` export replaces routes, and multi-merchant logs keep one record per item ID. Convert a reviewed addition to `AddAcquisition` when it should retain existing core drops. Re-scan observations collected with an older scanner if Honor/Arena/token costs were omitted.
+The Scanner branch collects merchant observations and exports text; it does not install or execute generated plugins. Review output before using it. Default `append` uses `AddAcquisition` and preserves multiple merchants; `replace_vendor` uses `ReplaceVendorAcquisitions` to change only purchase routes; `replace_all` uses `SetAcquisition`. Empty prices are comments, not executable offers. Re-scan observations collected with an older scanner if Honor/Arena/token costs were omitted.
 
 See [development checks](DEVELOPMENT.md) for the real-plugin matrix. The existing Whitemane and WOTLK5 packages demonstrate additive costs; Whitemane also demonstrates rank changes. WOTLK5's scroll prices do not currently include enhancement recommendations.

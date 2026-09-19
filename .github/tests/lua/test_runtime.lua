@@ -209,7 +209,7 @@ test("cost cells distinguish complete, compound and alternative prices", functio
     end
 end)
 
-test("vendor draw renders every eligible alternative and clears empty headers", function()
+test("vendor draw renders only required BiS choices and clears empty headers", function()
     local draw = upvalue(BistooltipAddon.showMainFrame, "drawSpecData")
     for _, name in ipairs({"ReleaseActiveElements", "saveData", "ClearCustomRows", "CreateProgressBar", "CreateCustomHeader", "UpdateProgressBar"}) do
         upvalue(draw, name, noop, true)
@@ -231,7 +231,8 @@ test("vendor draw renders every eligible alternative and clears empty headers", 
     BistooltipState.Set("vendorFilterMode", true)
     BistooltipState.Set("bisChecklistMode", true)
     draw()
-    assert(#rendered==3, "purchasable alternatives disappeared")
+    assert(#rendered==2 and rendered[1]==3 and rendered[2]==1,
+        "vendor draw included a lower-ranked alternative")
     local previous=released
     BistooltipData.GetSlotsForSpec=function() return {} end
     draw()

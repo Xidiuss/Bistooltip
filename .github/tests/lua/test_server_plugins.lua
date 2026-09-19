@@ -57,6 +57,7 @@ local function verifyInsertions(ops, sourceKey, faction)
                     for _,id in ipairs(baseline) do
                         if id ~= itemID then expected[#expected + 1] = id end
                     end
+                    while #expected > #baseline do table.remove(expected) end
                     assert(#slot == #expected, 'plugin insertion changed baseline rank count')
                     for i,id in ipairs(expected) do
                         assert(slot[i] == id, 'plugin insertion discarded or reordered a baseline item')
@@ -75,6 +76,7 @@ for _,faction in ipairs({'Alliance','Horde'}) do
         BisTooltip={}
         dofile('Bistooltip/SourceRegistry.lua')
         dofile('Bistooltip/ItemAcquisition.lua')
+        dofile('Bistooltip/UserVerifiedSources.lua')
         dofile('Bistooltip/SourceFormatter.lua')
         dofile('Bistooltip/PluginAPI.lua')
         dofile('Bistooltip/DataProvider.lua')
@@ -98,6 +100,22 @@ for _,faction in ipairs({'Alliance','Horde'}) do
         BisTooltip.InsertBiSSlotRank=insert
         if plugin:find('Whitemane_Frostmourne', 1, true) then
             assert(#insertOps == 27, 'Whitemane legendary ranks must insert, not replace')
+            local quest = BisTooltip_ItemAcquisition[130025]
+            assert(quest and quest[1].kind == 'ACTIVITY', 'Whitemane quest route missing')
+            local routes = BisTooltip_ItemAcquisition[130023]
+            local hasQuest, hasVendor = false, false
+            for _, entry in ipairs(routes or {}) do
+                if entry.kind == 'ACTIVITY' then hasQuest = true end
+                if entry.kind == 'VENDOR' then hasVendor = true end
+            end
+            assert(hasQuest and hasVendor, 'Whitemane quest/vendor alternatives lost')
+            assert(not BisTooltip_ItemAcquisition[315003], 'deferred upgrade became a source')
+        elseif plugin:find('WOTLK5_S2', 1, true) then
+            local scroll = BisTooltip_ItemAcquisition[5000762]
+            assert(scroll and #scroll == 1 and scroll[1].kind == 'VENDOR'
+                and scroll[1].cost[1].amount == 1
+                and scroll[1].cost[1].currency == 'Plagued Legendary Shard',
+                'Great Wall necklace scroll source missing')
         end
         local after=count()
         assert(after>before, 'plugin registered no acquisitions')

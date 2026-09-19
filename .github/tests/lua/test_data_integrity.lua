@@ -1,9 +1,24 @@
--- Runtime data contract; no private oracle or generator needed in CI.
+-- Runtime data contract; no private generator needed in CI.
 dofile('Bistooltip/SourceRegistry.lua')
 dofile('Bistooltip/ItemAcquisition.lua')
+dofile('Bistooltip/UserVerifiedSources.lua')
 dofile('Bistooltip/SourceFormatter.lua')
-local methods = {DROP=true, TOKEN=true, MARK=true, VENDOR=true, CUSTOM=true}
-local difficulties = {['']=true, HC=true, ['10N']=true, ['25N']=true,
+local methods = {DROP=true, TOKEN=true, MARK=true, VENDOR=true, CUSTOM=true, ACTIVITY=true}
+assert(BisTooltip_ItemAcquisition[24116][1].kind=='ACTIVITY', 'craft method absent')
+assert(BisTooltip_ItemAcquisition[34180][1].kind=='DROP', 'Sunwell drop absent')
+local choice=BisTooltip_ItemAcquisition[41678]
+assert(#choice==2 and choice[1].kind=='VENDOR' and choice[2].kind=='VENDOR',
+    'alternative Triumph/Honor offers were combined')
+local exchange=BisTooltip_ItemAcquisition[34391][1]
+assert(exchange.kind=='VENDOR' and #exchange.cost==2
+    and exchange.cost[1].item==34209 and exchange.cost[2].item==34664,
+    'Yrma exchange lost its two required items')
+assert(not BisTooltip_ItemAcquisition[34386], 'incomplete Sunmote exchange became a vendor price')
+assert(not BisTooltip_ItemAcquisition[43792], 'unavailable ID got an invented source')
+assert(BisTooltip_ItemAcquisition[37761][1].label=='World drop'
+    and BisTooltip_ItemAcquisition[43573][1].label=='World drop',
+    'known world-drop method was omitted')
+local difficulties = {['']=true, HC=true, ['5HC']=true, ['10N']=true, ['25N']=true,
     ['10HC']=true, ['25HC']=true, ['10HM']=true, ['25HM']=true}
 local count = 0
 for id, entries in pairs(BisTooltip_ItemAcquisition) do

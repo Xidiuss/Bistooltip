@@ -37,7 +37,7 @@ Zdalna lista gałęzi sprawdzona na początku audytu zawierała cztery publikowa
 | Scanner / CSV | Pusty koszt dawał pięć kolumn pod sześciokolumnowym nagłówkiem | Poprawiony separator, test rzeczywistego eksportu |
 | Scanner / klient 3.3.5 | Honor błędnie traktowany jako liczba składników kosztu, token-only pomijany | Osobne Honor/Arena/third-return token count, zachowana zgodność z count-only wariantem serwera |
 
-Sygnaturę skanera potwierdza [kod MerchantFrame klienta 3.3.5](https://github.com/wowgaming/3.3.5-interface-files/blob/main/MerchantFrame.lua#L220). Źródłem kontroli cen był [offline oracle AtlasLoot](https://github.com/wonderkidsem-official/Pazzions-WotLK-BiS-List-AtlasLoot-Enhanced-v5.11.04/blob/main/AtlasLoot_WrathoftheLichKing/wrathofthelichking.lua), którego repozytorium deklaruje GPL-2.0. Kod oracle nie został dodany do dodatku ani historii tego audytu. Aby utrzymać osobny pakiet MIT, nie przenosimy jego kodu ani tabel do runtime; fakty zaproponowane przez oracle wymagają niezależnej weryfikacji i zapisu pochodzenia. Historycznie wygenerowane fakty i wejścia generatora wymagają przeglądu pochodzenia przed wydaniem — samo trzymanie pliku oracle poza Git nie rozstrzyga licencji wszystkich wyników. Przykłady poprawionych faktów: 50965 → 95 Frost, 50993 → 60 Frost, 47667 → 25 Triumph. Poprzednia macierz tierów nadal przechodzi audyt.
+Sygnaturę skanera potwierdza [kod MerchantFrame klienta 3.3.5](https://github.com/wowgaming/3.3.5-interface-files/blob/main/MerchantFrame.lua#L220). Podczas kontroli cen konsultowano [zewnętrzne zestawienie AtlasLoot](https://github.com/wonderkidsem-official/Pazzions-WotLK-BiS-List-AtlasLoot-Enhanced-v5.11.04/blob/main/AtlasLoot_WrathoftheLichKing/wrathofthelichking.lua), którego repozytorium deklaruje GPL-2.0. Nie włączono jego kodu ani tabel do pakietu MIT. Właściciel niezależnie sprawdził dane i przekazał je w `Private/new_data`; [raport importu](NEW-DATA-IMPORT.md) odróżnia fakty kompletne od nieustalonych. Przykłady wcześniejszych korekt: 50965 → 95 Frost, 50993 → 60 Frost, 47667 → 25 Triumph. Poprzednia macierz tierów nadal przechodzi audyt.
 
 ## Architektura i ownership
 
@@ -74,7 +74,7 @@ Przykłady luk STANDARD: 34181, 34210, 34241, 34340, 34348, 34388, 37574, 40585,
 
 Wowhead PR/T7 wymaga osobnej kuracji faz: wcześniejsze notatki wskazywały np. 45931/Ulduar i 48472/T9 w kontekście PR. W tym audycie nie zmieniano arbitralnie rankingu ani dostępnych faz. Baza pozostaje alternatywną migawką, nie gwarancją ścisłej progresji serwera.
 
-Dodatkowy kandydat do kontroli danych: vendor 60 Heroism dla 37111 pochodzi jeszcze z `e07563c`, a dostępny oracle wykazuje drop Mal'Ganis. Nie zmieniono go wyłącznie na podstawie braku wpisu vendorowego w jednym źródle. WOTLK5 ma osobną, jawną ofertę za Resolve. Tej pozycji nie należy uznawać za zweryfikowany koszt stock.
+Dodatkowy kandydat do kontroli danych: vendor 60 Heroism dla 37111 pochodzi jeszcze z `e07563c`, a zewnętrzne zestawienie wykazuje drop Mal'Ganis. Nie zmieniono go wyłącznie na podstawie braku wpisu vendorowego w jednym źródle. WOTLK5 ma osobną, jawną ofertę za Resolve. Tej pozycji nie należy uznawać za zweryfikowany koszt stock.
 
 ## Gałęzie
 
@@ -101,11 +101,13 @@ Publiczne CI obejmuje teraz pakiet, składnię i regresje na Lua 5.1, integracj�
 
 ## Bezpieczna kolejność dalszego rozwoju / QoL
 
+Aktualne priorytety po testach właściciela są w [ROADMAP.md](ROADMAP.md). Poniższa lista zachowuje kontekst audytu; edytor enchantów i cache są teraz przed koszykiem.
+
 1. **Domknięcie wydania:** natywne CI Lua 5.1 i smoke test core-alone, obie frakcje, start Whitemane z każdą bazą, reset po przełączeniu, cold cache, merchant Honor/Arena/token. Dopiero potem oznaczenie wydania jako sprawdzonego w grze.
 2. **Kuracja danych:** uzupełnianie luk rank 1 z udokumentowanymi źródłami, kontrola kandydatów takich jak 37111, decyzja o PR/T7 Wowhead. Zmiany przez wejścia generatora i deterministyczny output, bez reguły „podobny slot = tier”.
 3. **Scanner → wtyczka:** wybór Append/Replace, zachowanie alternatywnych ofert per vendor i currency itemID, gotowy szkielet TOC + plik danych, eksport bez ucięcia okna i raport niezbuforowanych ID. Realm powinien wejść do klucza obserwacji.
-4. **Koszyk zakupów:** jawny wybór jednej oferty dla przedmiotu, suma wszystkich wymaganych składników w poprawnych jednostkach, osobno brakujące i posiadane waluty/tokeny. Nie sumować alternatyw jako jednego obowiązku.
-5. **Enchantment QoL:** edytor powiązania zeskanowanego scrolla z klasą/specem/slotem, walidacja itemID vs spellID, podgląd wynikowego SetEnhancement.
-6. **Obsługa cache:** jedna ograniczona kolejka z tokenem generacji widoku, ponawianiem i niską częstotliwością sprawdzania; obecny limit bulk 2 s wymaga czasem RELOAD. Zmianę poprzedzić pomiarem w kliencie, nie zwiększać bez końca pętli dla nieistniejących ID.
+4. **Enchantment QoL:** edytor powiązania zeskanowanego scrolla z klasą/specem/slotem, walidacja itemID vs spellID, podgląd wynikowego SetEnhancement.
+5. **Obsługa cache:** jedna ograniczona kolejka z tokenem generacji widoku, ponawianiem i niską częstotliwością sprawdzania; obecny limit bulk 2 s wymaga czasem RELOAD. Zmianę poprzedzić pomiarem w kliencie, nie zwiększać bez końca pętli dla nieistniejących ID.
+6. **Koszyk zakupów:** jawny wybór jednej oferty dla przedmiotu, suma wszystkich wymaganych składników w poprawnych jednostkach, osobno brakujące i posiadane waluty/tokeny. Nie sumować alternatyw jako jednego obowiązku.
 7. **Kontrakt rozszerzeń:** wersjonowanie API/schematu, jawna identyfikacja realm i konfliktów overlay, provenance danych, pełna walidacja kosztów/ID oraz publiczny proces generatorów po uzgodnieniu repozytorium dla prywatnych narzędzi.
 8. **Redukcja UI:** po smoke testach zinwentaryzować zewnętrzne użycie globalnych komponentów, następnie wygasić rzeczywiście zbędne API i wydzielać odpowiedzialności stopniowo. Nie przepisywać całego BislistUI dla estetyki.

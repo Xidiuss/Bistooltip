@@ -4,7 +4,8 @@
 --   BisTooltip_ItemAcquisition (itemID -> acquisition entries)
 --   Bistooltip_bislists[class][spec][phase] (slot tables with slot_name/enhs + ranked IDs)
 -- Semantics: DefineSource/SetAcquisition/SetBiSSlot/SetBiSSlotRank/SetEnhancement
--- = replace-wins, AddAcquisition = append, InsertBiSSlotRank = insert/move.
+-- = replace-wins, AddAcquisition = append, ReplaceVendorAcquisitions replaces
+-- only purchase routes, InsertBiSSlotRank = bounded insert/move.
 -- Core overrides print a one-time dev
 -- warning ("Plugin <name> replaced core ... <ID>", caller via trailing plugin
 -- arg or "unknown plugin"). Malformed input raises a pcall-safe error (never
@@ -13,7 +14,7 @@
 -- SetEnhancement with phase=nil means COMMON: the slot's enhs is replaced in
 -- EVERY phase of the spec that contains a slot with that slot_name.
 -- SetBiSSlotRank overrides a SINGLE rank (DB-independent server diffs).
--- InsertBiSSlotRank moves/inserts an item and keeps the other ranks.
+-- InsertBiSSlotRank moves/inserts an item within the slot's rank capacity.
 -- W4 overlay: every mutation is recorded (deep-copied) and can be REPLAYED
 -- after a database switch (BisTooltip_ReplayOverlay) — plugins describe the
 -- server, not a specific ranking DB.
@@ -64,7 +65,7 @@ function BisTooltip_ReplayOverlay()
   replaying = false
 end
 
-local KINDS = { DROP = true, TOKEN = true, MARK = true, VENDOR = true, CUSTOM = true }
+local KINDS = { DROP = true, TOKEN = true, MARK = true, VENDOR = true, CUSTOM = true, ACTIVITY = true }
 -- Byte-level identity of an entry (idempotent-append + replay safety).
 local function entryIdentity(e)
   local parts = {
@@ -81,9 +82,9 @@ end
 local function checkEntry(e, what)
   if type(e) ~= "table" then error(what .. ": entry must be a table", 2) end
   if not KINDS[e.kind] then error(what .. ": unknown kind " .. tostring(e.kind), 2) end
-  if e.kind == "CUSTOM" then
+  if e.kind == "CUSTOM" or e.kind == "ACTIVITY" then
     if type(e.label) ~= "string" or e.label == "" then
-      error(what .. ": CUSTOM needs non-empty label", 2)
+      error(what .. ": " .. e.kind .. " needs non-empty label", 2)
     end
     return true
   end
@@ -302,6 +303,33 @@ local function rankSlot(className, specName, phase, slotName, what)
   return slot, true
 end
 
+-- Replace vendor prices without destroying drops, tokens, marks or custom
+-- sources. Replay computes from the newly bound acquisition table.
+function BisTooltip:ReplaceVendorAcquisitions(itemID, offers, plugin)
+  local what = "BisTooltip.ReplaceVendorAcquisitions"
+  if type(itemID) ~= "number" or itemID <= 0 then
+    error(what .. ": itemID must be a positive number", 2)
+  end
+  if type(offers) ~= "table" or offers[1] == nil then
+    error(what .. ": offers must be a non-empty list", 2)
+  end
+  for _, offer in ipairs(offers) do
+    checkEntry(offer, what)
+    if offer.kind ~= "VENDOR" then error(what .. ": only VENDOR offers allowed", 2) end
+  end
+  if type(BisTooltip_ItemAcquisition) ~= "table" then
+    error(what .. ": BisTooltip_ItemAcquisition missing", 2)
+  end
+  local entries = {}
+  for _, entry in ipairs(BisTooltip_ItemAcquisition[itemID] or {}) do
+    if entry.kind ~= "VENDOR" then entries[#entries + 1] = entry end
+  end
+  for _, offer in ipairs(offers) do entries[#entries + 1] = deepCopy(offer) end
+  BisTooltip_ItemAcquisition[itemID] = entries
+  record("ReplaceVendorAcquisitions", itemID, offers, plugin)
+  return true
+end
+
 local function checkRankArgs(rank, itemID, what)
   if type(rank) ~= "number" or rank < 1 or rank % 1 ~= 0 then
     error(what .. ": rank must be a positive integer", 3)
@@ -348,7 +376,8 @@ function BisTooltip:SetBiSSlotRank(className, specName, phase, slotName, rank, i
 end
 
 -- Insert an alternative ahead of the selected rank. If the item already
--- appears in the slot, move it instead of creating a duplicate.
+-- appears in the slot, move it instead of creating a duplicate. Otherwise
+-- the previous last alternative falls off so all slots keep their capacity.
 function BisTooltip:InsertBiSSlotRank(className, specName, phase, slotName, rank, itemID, plugin)
   local what = "BisTooltip.InsertBiSSlotRank"
   checkRankArgs(rank, itemID, what)
@@ -365,6 +394,7 @@ function BisTooltip:InsertBiSSlotRank(className, specName, phase, slotName, rank
     if slot[i] == itemID then table.remove(slot, i) end
   end
   table.insert(slot, math.min(rank, #slot + 1), itemID)
+  while #slot > maxRank do table.remove(slot) end
   record("InsertBiSSlotRank", className, specName, phase, slotName, rank, itemID, plugin)
   return true
 end

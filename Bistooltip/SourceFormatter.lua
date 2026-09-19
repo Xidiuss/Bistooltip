@@ -35,7 +35,7 @@ local function render(entry, colored)
     if colored and hex then return "|cFF" .. hex .. text .. "|r" end
     return text
   end
-  if entry.kind == "CUSTOM" then
+  if entry.kind == "CUSTOM" or entry.kind == "ACTIVITY" then
     if type(entry.label) == "string" and entry.label ~= "" then
       return seg(P.family, entry.label)
     end

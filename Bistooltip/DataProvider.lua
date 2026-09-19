@@ -156,19 +156,19 @@ end
 -- Equipment Cache Access
 -- ============================================================
 
--- Reverse mapping cache: Alliance ID -> Horde ID (built on first use)
-local aliToHordeCache = nil
+-- Reverse of the historically named table: Horde ID -> Alliance ID.
+local hordeToAliCache = nil
 
-local function GetAliToHordeMapping()
-    if aliToHordeCache then return aliToHordeCache end
+local function GetHordeToAliMapping()
+    if hordeToAliCache then return hordeToAliCache end
 
-    aliToHordeCache = {}
+    hordeToAliCache = {}
     if _G.Bistooltip_horde_to_ali then
-        for hordeId, aliId in pairs(_G.Bistooltip_horde_to_ali) do
-            aliToHordeCache[aliId] = hordeId
+        for allianceId, hordeId in pairs(_G.Bistooltip_horde_to_ali) do
+            hordeToAliCache[hordeId] = allianceId
         end
     end
-    return aliToHordeCache
+    return hordeToAliCache
 end
 
 function BistooltipData.GetOwnedRow(itemId)
@@ -180,14 +180,13 @@ function BistooltipData.GetOwnedRow(itemId)
 
     -- Handle Horde<->Alliance translation using cached reverse mapping
     if _G.Bistooltip_horde_to_ali then
-        -- Check if itemId is Alliance version - use O(1) reverse lookup
-        local aliToHorde = GetAliToHordeMapping()
-        local hordeId = aliToHorde[itemId]
-        if hordeId and t[hordeId] then return t[hordeId] end
+        -- Check whether a Horde item has its Alliance equivalent in inventory.
+        local allianceId = GetHordeToAliMapping()[itemId]
+        if allianceId and t[allianceId] then return t[allianceId] end
 
-        -- Check if itemId is Horde - try Alliance version
-        local aliId = _G.Bistooltip_horde_to_ali[itemId]
-        if aliId and t[aliId] then return t[aliId] end
+        -- Check whether an Alliance item has its Horde equivalent in inventory.
+        local hordeId = _G.Bistooltip_horde_to_ali[itemId]
+        if hordeId and t[hordeId] then return t[hordeId] end
     end
 
     return nil
@@ -224,12 +223,14 @@ local NormalizeItemID = Utils.NormalizeItemID
 function BistooltipData.GetDisplayItemID(originalItemId, isHorde)
     if not originalItemId or originalItemId <= 0 then return nil end
 
-    -- BIS lists contain HORDE item IDs
-    -- If player is ALLIANCE (not isHorde), convert to Alliance equivalent
-    -- If player is HORDE (isHorde), keep original Horde ID
-    if not isHorde and _G.Bistooltip_horde_to_ali then
-        local aliId = _G.Bistooltip_horde_to_ali[originalItemId]
-        if aliId then return aliId end
+    -- Despite its historical name, this table maps Alliance IDs to Horde
+    -- IDs. Most baseline slots contain Alliance IDs; WoWSims Horde overrides
+    -- already contain Horde IDs. Accept either form without flipping sides.
+    if _G.Bistooltip_horde_to_ali then
+        if isHorde then
+            return _G.Bistooltip_horde_to_ali[originalItemId] or originalItemId
+        end
+        return GetHordeToAliMapping()[originalItemId] or originalItemId
     end
 
     return originalItemId
@@ -379,6 +380,12 @@ function BistooltipData.GetAllItemSources(itemId)
                 elseif e.kind == "CUSTOM" then
                     src = {
                         type = "custom",
+                        label = e.label,
+                        text = line,
+                    }
+                elseif e.kind == "ACTIVITY" then
+                    src = {
+                        type = "activity",
                         label = e.label,
                         text = line,
                     }
@@ -629,21 +636,22 @@ function BistooltipData.SlotMatchesFilter(slot, searchLower, isHorde)
     return false
 end
 
--- W5/VENDOR semantics: a slot qualifies for VENDOR mode when ANY of its
--- ranked items has a vendor acquisition (kind=VENDOR via the single source
--- of truth BisTooltip_GetVendorCost). Custom (plugin) sources join when
--- the Whitemane plugin ships (spec Q8: kind VENDOR + CUSTOM).
-function BistooltipData.SlotHasVendorSource(slot, vendorFilterMode, isHorde)
-    if not vendorFilterMode then return true end
-
-    for _, iid in ipairs(slot) do
-        local id = BistooltipData.GetDisplayItemID(iid, isHorde)
-        if BistooltipData.GetVendorSummary(id) then
-            return true
+-- VENDOR is the purchasable subset of the required BiS choices, not every
+-- lower-ranked alternative in the slot. Dual slots may require two items.
+function BistooltipData.GetVendorBISItems(slot, isHorde)
+    local items = {}
+    for _, id in ipairs(BistooltipData.GetRequiredBISItems(slot)) do
+        local displayID = BistooltipData.GetDisplayItemID(id, isHorde)
+        if displayID and BistooltipData.GetVendorSummary(displayID) then
+            items[#items + 1] = id
         end
     end
+    return items
+end
 
-    return false
+function BistooltipData.SlotHasVendorSource(slot, vendorFilterMode, isHorde)
+    if not vendorFilterMode then return true end
+    return #BistooltipData.GetVendorBISItems(slot, isHorde) > 0
 end
 
 -- ============================================================
@@ -764,6 +772,13 @@ function BistooltipData.BuildChecklistGroups(className, specName, phase, vendorF
                             slot = slot.slot_name or "",
                             cost = 0,
                             sources = sources,
+                        })
+                    elseif src.type == "activity" and not vendorFilterMode then
+                        local label = src.label or "Other source"
+                        groups[label] = groups[label] or {}
+                        groups[label][label] = groups[label][label] or { items = {} }
+                        table.insert(groups[label][label].items, {
+                            id = id, slot = slot.slot_name or "", sources = sources,
                         })
                     end
                 end

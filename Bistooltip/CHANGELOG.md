@@ -140,7 +140,7 @@ See [audit findings and remaining gaps](../docs/POSTMIGRATION-AUDIT.md). Local v
 ### Changes
 
 1. **Vault of Archavon sources added** (was completely absent)
-   - 4 canonical bosses × {10N, 25N}, items decoded from the AtlasLoot oracle
+   - 4 canonical bosses × {10N, 25N}, items checked against the AtlasLoot reference
      (upstream's mangled `Archavon1..7` keys replaced by real boss names)
    - Toravon drops T10 gloves/legs directly; Emalon/Koralon carry T8/T9 tokens
 2. **T10 sanctified gear: per-boss MARK format** (owner requirement)

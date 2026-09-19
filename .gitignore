@@ -20,3 +20,5 @@ tmpclaude*
 documents/
 .superpowers/
 .worktrees/
+__pycache__/
+*.pyc
