@@ -566,6 +566,19 @@ ReplaceVendorAcquisitions(46138, { { kind = "VENDOR", cost = { { currency = "Val
 -- Planned BiS update: 23 annotated item IDs, not acquisition evidence.
 -- Preserve the notes below; enable only after sources/prices and rank targets
 -- are confirmed. These observations must not erase existing runtime sources.
+-- Verified method-only routes from the owner's 2026-09-19 handoff. Specific
+-- quest IDs/bosses are still pending; these are not merchant prices.
+BisTooltip:AddAcquisition(130025, { kind = "ACTIVITY", label = "Whitemane quest (details pending)" }, P)
+BisTooltip:AddAcquisition(130026, { kind = "ACTIVITY", label = "Whitemane quest (details pending)" }, P)
+BisTooltip:AddAcquisition(132001, { kind = "ACTIVITY", label = "Whitemane quest (details pending)" }, P)
+BisTooltip:AddAcquisition(132003, { kind = "ACTIVITY", label = "Whitemane quest (details pending)" }, P)
+BisTooltip:AddAcquisition(217741, { kind = "ACTIVITY", label = "Whitemane quest (details pending)" }, P)
+BisTooltip:AddAcquisition(130023, { kind = "ACTIVITY", label = "Whitemane quest (details pending)" }, P)
+BisTooltip:AddAcquisition(130031, { kind = "ACTIVITY", label = "Whitemane quest (details pending)" }, P)
+BisTooltip:AddAcquisition(131001, { kind = "ACTIVITY", label = "Whitemane drop (boss pending)" }, P)
+BisTooltip:AddAcquisition(131002, { kind = "ACTIVITY", label = "Whitemane drop (boss pending)" }, P)
+BisTooltip:AddAcquisition(128858, { kind = "ACTIVITY", label = "Whitemane drop (boss pending)" }, P)
+
 -- PLANNED (not a source): BisTooltip:SetAcquisition(128858, { { kind = "VENDOR", cost = {  } } }) -- Embersoul, Scythe of the Cat God -- EMPTY-COST ext=nil nCost=nil | ilvl 245 [BIS T8 feral]
 -- PLANNED (not a source): BisTooltip:SetAcquisition(315010, { { kind = "VENDOR", cost = {  } } }) -- Embersoul, Scythe of the Cat God -- EMPTY-COST ext=nil nCost=nil | ilvl 258 [BIS T9 feral]
 
