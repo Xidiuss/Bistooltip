@@ -1,7 +1,9 @@
 -- ============================================================
--- EmblemData.lua - Emblem vendor item database
+-- EmblemData.lua - OFFLINE vendor input for migrate_sources.lua
 -- ============================================================
--- This file contains mappings of items that can be purchased with emblems.
+-- Not loaded by the TOC. Runtime uses only ItemAcquisition.lua.
+-- Retained here because the private offline migrator consumes this path.
+-- Price corrections checked against the offline vendor oracle, 2026-09-18.
 -- Custom server content lives in server plugins (e.g. Bistooltip_Whitemane_Frostmourne), not in core.
 
 -- Initialize the emblem items table
@@ -18,25 +20,26 @@ local function RegisterEmblemItems(currency, items)
             cost = cost,
         }
         
-        -- Also register in Constants if available
-        if BistooltipConstants and BistooltipConstants.RegisterEmblemItem then
-            BistooltipConstants.RegisterEmblemItem(itemId, currency, cost)
-        end
     end
 end
 
 -- ============================================================
--- Emblem of Ascension Items (Custom Server)
--- Format: [itemId] = cost
--- 
--- To find item IDs:
--- 1. Use /script print(GetItemInfo("item:ITEMID"))
--- 2. Or check wowhead.com URL: wowhead.com/wotlk/item=ITEMID
--- 
--- Example: Sanctified T10 gear typically costs 60-95 emblems
+-- Standard Emblem of Frost purchases
 -- ============================================================
 
 local FROST_ITEMS = {
+    -- Non-set Frost vendor purchases.
+    [50965] = 95,        -- Castle Breaker's Battleplate
+    [50968] = 95,        -- Cataclysmic Chestguard
+    [50969] = 95,        -- Chestplate of Unspoken Truths
+    [50975] = 95,        -- Ermine Coronation Robes
+    [50970] = 95,        -- Longstrider's Vest
+    [50971] = 95,        -- Mail of the Geyser
+    [50974] = 95,        -- Meteor Chaser's Raiment
+    [50972] = 95,        -- Shadow Seeker's Tunic
+    [50973] = 95,        -- Vestments of Spruce and Fir
+    [50993] = 60,        -- Band of the Night Raven
+
     -- ==================
     -- Tier 10 Sanctified (264 -> 277)
     -- These are example items - uncomment and adjust for your server
@@ -219,22 +222,14 @@ RegisterEmblemItems("Emblem of Frost", FROST_ITEMS)
 local TRIUMPH_ITEMS = {
 
     -- Chest
-    [50965] = 50,        -- Castle Breaker's Battleplate
-    [50968] = 50,        -- Cataclysmic Chestguard
-    [50969] = 50,        -- Chestplate of Unspoken Truths
-    [50975] = 50,        -- Ermine Coronation Robes
-    [50970] = 50,        -- Longstrider's Vest
-    [50971] = 50,        -- Mail of the Geyser
-    [50974] = 50,        -- Meteor Chaser's Raiment
-    [50972] = 50,        -- Shadow Seeker's Tunic
-    [50973] = 50,        -- Vestments of Spruce and Fir
+
     -- Finger
     [47732] = 35,        -- Band of the Invoker
     [47729] = 35,        -- Bloodshed Band
     [47731] = 35,        -- Clutch of Fortification
     [47730] = 35,        -- Dexterous Brightstone Ring
     [47733] = 35,        -- Heartmender Circle
-    [50993] = 35,        -- Band of the Night Raven
+
 
     -- Head
     [47688] = 75,        -- Mask of Lethal Intent
@@ -250,7 +245,7 @@ local TRIUMPH_ITEMS = {
     [47660] = 25,        -- Blades of the Sable Cross
     [47659] = 25,        -- Crimson Star
     -- Relic
-    [47667] = 19,        -- Totem of Quaking Earth
+    [47667] = 25,        -- Totem of Quaking Earth
     [47666] = 25,        -- Totem of Electrifying Wind
     [47665] = 25,        -- Totem of Calming Tides
     [47673] = 25,        -- Sigil of Virulence
@@ -371,16 +366,16 @@ local VALOR_ITEMS = {
     [40717] = 25,        -- Ring of Invincibility
     [40720] = 25,        -- Renewal of Life
     -- Relic
-    [40342] = 15,        -- Idol of Awakening
-    [40337] = 15,        -- Libram of Resurgence
-    [40322] = 15,        -- Totem of Dueling
-    [40321] = 15,        -- Idol of the Shooting Star
-    [40268] = 15,        -- Libram of Tolerance
-    [40267] = 15,        -- Totem of Hex
-    [40207] = 15,        -- Sigil of Awareness
-    [40191] = 15,        -- Libram of Radiance
-    [39757] = 15,        -- Idol of Worship
-    [39728] = 15,        -- Totem of Misery
+    [40342] = 25,        -- Idol of Awakening
+    [40337] = 25,        -- Libram of Resurgence
+    [40322] = 25,        -- Totem of Dueling
+    [40321] = 25,        -- Idol of the Shooting Star
+    [40268] = 25,        -- Libram of Tolerance
+    [40267] = 25,        -- Totem of Hex
+    [40207] = 25,        -- Sigil of Awareness
+    [40191] = 25,        -- Libram of Radiance
+    [39757] = 25,        -- Idol of Worship
+    [39728] = 25,        -- Totem of Misery
 
     -- Wrist
     [40741] = 60,        -- Cuffs of the Shadow Ascendant
@@ -414,15 +409,15 @@ local Heroism_ITEMS = {
 [40679] = 25,        -- Chained Military Gorget
 [40680] = 25,        -- Encircling Burnished Gold Chains
 [40681] = 25,        -- Lattice Choker of Light
-[40698] = 40,        -- Ward of the Violet Citadel
-[40699] = 40,        -- Handbook of Obscure Remedies
+[40698] = 25,        -- Ward of the Violet Citadel
+[40699] = 25,        -- Handbook of Obscure Remedies
 -- One-Hand
 [40702] = 50,        -- Rolfsen's Ripper
 [40703] = 50,        -- Grasscutter
 [40704] = 50,        -- Pride
 -- Shield
-[40700] = 40,        -- Protective Barricade of the Light
-[40701] = 40,        -- Crygil's Discarded Plate Panel
+[40700] = 35,        -- Protective Barricade of the Light
+[40701] = 35,        -- Crygil's Discarded Plate Panel
 -- Trinket
 [40682] = 40,        -- Sundial of the Exiled
 [40683] = 40,        -- Valor Medal of the First War
@@ -463,159 +458,3 @@ RegisterEmblemItems("Emblem of Heroism", Heroism_ITEMS)
 -- ============================================================
 -- Emblem of Ascension Items
 -- ============================================================
-
--- Custom server currencies (Emblem of Ascension / Ascension II, Echo of the
--- Titans) moved to Bistooltip_Whitemane_Frostmourne (spec W6): core stays
--- clean WotLK. Add your own server via a plugin, not here.
-
--- ============================================================
--- T8 Set Auto-Registration (from BIS lists)
--- ============================================================
--- Scans the T8 phase of all BIS lists and registers class-specific
--- set piece items with the appropriate Emblem of Ascension II cost.
---
--- Logic:
---   - Only registers items that appear in exactly ONE class (class-specific = set piece)
---   - Items shared across multiple classes (non-set drops) are skipped
---   - Items already registered in any emblem table are preserved as-is
---
--- Slot costs (mirror the T8 token costs):
---   Head / Chest / Legs  = 25 emblems
---   Shoulder / Hands     = 19 emblems
--- ============================================================
-
-local function RegisterT8SetFromBislist()
-    if not Bistooltip_wowtbc_bislists then return end
-
-    local slotCosts = {
-        ["Head"]     = 25,
-        ["Shoulder"] = 19,
-        ["Chest"]    = 25,
-        ["Hands"]    = 19,
-        ["Legs"]     = 25,
-    }
-
-    -- Pass 1: for every item in T8 set slots, record which classes use it
-    local itemClasses = {}
-    for className, classData in pairs(Bistooltip_wowtbc_bislists) do
-        for _, specData in pairs(classData) do
-            local t8Data = specData["T8"]
-            if t8Data then
-                for _, slotData in ipairs(t8Data) do
-                    if slotCosts[slotData["slot_name"]] then
-                        local i = 1
-                        while slotData[i] do
-                            local itemId = slotData[i]
-                            if not itemClasses[itemId] then
-                                itemClasses[itemId] = {}
-                            end
-                            itemClasses[itemId][className] = true
-                            i = i + 1
-                        end
-                    end
-                end
-            end
-        end
-    end
-
-    -- Pass 2: register class-specific items not already in any emblem table
-    for className, classData in pairs(Bistooltip_wowtbc_bislists) do
-        for _, specData in pairs(classData) do
-            local t8Data = specData["T8"]
-            if t8Data then
-                for _, slotData in ipairs(t8Data) do
-                    local slotName = slotData["slot_name"]
-                    local cost = slotCosts[slotName]
-                    if cost then
-                        local i = 1
-                        while slotData[i] do
-                            local itemId = slotData[i]
-                            local numClasses = 0
-                            for _ in pairs(itemClasses[itemId]) do
-                                numClasses = numClasses + 1
-                            end
-                            if numClasses == 1 and not Bistooltip_emblem_items[itemId] then
-                                Bistooltip_emblem_items[itemId] = {
-                                    currency = "Emblem of Ascension II",
-                                    cost = cost,
-                                }
-                            end
-                            i = i + 1
-                        end
-                    end
-                end
-            end
-        end
-    end
-end
-
-RegisterT8SetFromBislist()
-
--- ============================================================
--- Utility Functions
--- ============================================================
-
--- Check if an item is available from emblems
-function Bistooltip_GetEmblemSource(itemId)
-    if not itemId then return nil end
-    return Bistooltip_emblem_items[itemId]
-end
-
--- Calculate total emblems needed for a list of item IDs
-function Bistooltip_CalculateEmblemsNeeded(itemIds)
-    local totals = {}  -- currency -> { total = n, items = {} }
-    
-    for _, itemId in ipairs(itemIds) do
-        local emblem = Bistooltip_emblem_items[itemId]
-        if emblem then
-            local currency = emblem.currency
-            if not totals[currency] then
-                totals[currency] = { total = 0, items = {} }
-            end
-            totals[currency].total = totals[currency].total + (emblem.cost or 0)
-            table.insert(totals[currency].items, {
-                id = itemId,
-                cost = emblem.cost or 0,
-            })
-        end
-    end
-    
-    return totals
-end
-
--- Print emblem info for an item (useful for debugging)
-function Bistooltip_PrintEmblemInfo(itemIdOrLink)
-    local itemId = itemIdOrLink
-    if type(itemIdOrLink) == "string" then
-        itemId = tonumber(itemIdOrLink:match("item:(%d+)"))
-    end
-    
-    if not itemId then
-        print("|cffff0000Invalid item ID or link|r")
-        return
-    end
-    
-    local name = GetItemInfo(itemId)
-    local emblem = Bistooltip_emblem_items[itemId]
-    
-    if emblem then
-        print(string.format("|cffffd000%s|r (ID: %d): |cff00ff00%s x%d|r", 
-            name or "Unknown", itemId, emblem.currency, emblem.cost or 0))
-    else
-        print(string.format("|cffffd000%s|r (ID: %d): |cffff0000Not available from emblems|r",
-            name or "Unknown", itemId))
-    end
-end
-
--- Slash command to check emblem info
-SLASH_BISEMBLEM1 = "/bisemblem"
-SlashCmdList["BISEMBLEM"] = function(msg)
-    if msg == "" then
-        print("|cffffd000Bis-Tooltip Emblem Info:|r")
-        print("Usage: /bisemblem [itemId or item link]")
-        print("Example: /bisemblem 50356")
-        return
-    end
-    
-    Bistooltip_PrintEmblemInfo(msg)
-end

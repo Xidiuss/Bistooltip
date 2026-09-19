@@ -469,24 +469,17 @@ local function GetAllItemSources(itemId)
 end
 
 -- ============================================================
--- Tooltip Refresh with Cooldown
+-- Tooltip Refresh (modifier events must not be dropped)
 -- ============================================================
-
-local lastRefreshTime = 0
-local REFRESH_COOLDOWN = 0.1
 
 local function RefreshAnyTooltip(tt)
     if not tt or not tt.GetItem then return end
-    
-    local now = GetTime()
-    if now - lastRefreshTime < REFRESH_COOLDOWN then return end
     
     if BistooltipAddon._refreshing then return end
     
     local _, link = tt:GetItem()
     if not link then return end
     
-    lastRefreshTime = now
     BistooltipAddon._refreshing = true
     tt:ClearLines()
     tt:SetHyperlink(link)

@@ -52,21 +52,32 @@ local function render(entry, colored)
     if c > 0 or #t == 0 then t[#t + 1] = c .. "c" end
     return table.concat(t, " ")
   end
-  local function costText(cost)
+  local function costText(cost, displayedTrophy)
     local parts = {}
     for _, c in ipairs(cost or {}) do
-      if c.currency == "Gold" then
+      if c == displayedTrophy then
+        -- This part is rendered with the TROPHY display label below.
+      elseif c.currency == "Gold" then
         parts[#parts + 1] = seg(P.currency, goldText(c.amount or 0))
       elseif c.currency then
         parts[#parts + 1] = seg(P.currency, c.amount .. " " .. c.currency)
+      elseif c.item then
+        parts[#parts + 1] = seg(P.currency, c.amount .. " Item #" .. c.item)
       end
     end
     return table.concat(parts, " + ")
   end
   if entry.kind == "VENDOR" then
     if entry.displayVariant == "TROPHY" then
+      local trophy
+      for _, c in ipairs(entry.cost or {}) do
+        if c.item == 47242 and not c.currency then trophy = c break end
+      end
+      local label = entry.variantLabel or "Crusade"
+      if trophy and trophy.amount ~= 1 then label = trophy.amount .. " " .. label end
+      local remaining = costText(entry.cost, trophy)
       return seg(P.method, (entry.tier or "T9") .. " - TROPHY: ")
-        .. seg(P.currency, (entry.variantLabel or "Crusade") .. " + ") .. costText(entry.cost)
+        .. seg(P.currency, label .. (remaining ~= "" and " + " or "")) .. remaining
     end
     local prefix = (entry.tier or "") .. (entry.tier and " - " or "") .. "VENDOR: "
     return seg(P.method, prefix) .. costText(entry.cost)
@@ -74,6 +85,12 @@ local function render(entry, colored)
   local s = entry.source and (BisTooltip_SourceRegistry or {})[entry.source] or nil
   if not s then
     if entry.source and not warned[entry.source] then warned[entry.source] = true end
+    return nil
+  end
+  if s.kind == "CUSTOM" then
+    if type(s.label) == "string" and s.label ~= "" then
+      return seg(P.family, s.label)
+    end
     return nil
   end
   if entry.kind == "DROP" then

@@ -1,5 +1,22 @@
 # BisTooltip Changelog
 
+## Unreleased — post-migration audit (2026-09-19)
+
+- Fix standalone loading: correct bundled LibDataBroker path and remove missing SharedMedia references.
+- Fix account priority RESET, repeated legacy migration, shared baseline mutation and personal-order filtering/progress.
+- Defer valid server rank targets absent from the active database; preserve nil arguments in Lua 5.1 overlay replay.
+- Keep replay snapshots immutable when appends precede replacements; repeated database switches no longer restore replaced offers.
+- Render CUSTOM registry sources and every item/currency payment part. VENDOR includes item-only/custom entries and deeper ring/trinket ranks; ambiguous budgets refer to full item sources.
+- Render each vendor alternative in its own row, format gold units, mark complex COST cells as Details, and clear old headers for an empty vendor view.
+- Fix repeated pool allocation, window close/reopen references, cleanup variable scope, incomplete preload polling, spell IDs queried as items, and modifier refresh of both tooltips.
+- Correct 25 standard vendor prices in the offline input and generated acquisitions; preserve existing tier membership/difficulty checks.
+- Stop loading EmblemData at runtime. Keep it as a generator input; `/bisemblem` now reads canonical acquisitions.
+- Remove 18 unused bundled files, eight unreferenced private UI functions, global table-function interception and the unused parallel Constants price tables.
+- Add public Lua regression/data/integration checks and native Lua 5.1 CI jobs, retaining Discord tests. Update component, architecture, API and developer documentation.
+- Scanner branch: fix stock Honor/Arena/token API interpretation, resolved scan placeholders, six-column CSV and late item-cache export metadata.
+
+See [audit findings and remaining gaps](../docs/POSTMIGRATION-AUDIT.md). Local validation used Fengari plus a Lua 5.1 syntax parser; in-game verification is pending. Historical entries below describe their original commits and are not current CI/architecture guarantees.
+
 ## v3.0.0 — row duplication FIXED (owner-verified in-game, 2026-09-15)
 
 ### Root cause & fix

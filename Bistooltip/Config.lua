@@ -377,15 +377,18 @@ local function MigrateAddonDB()
     -- W4 (§12): account-wide migration — one-time copy of the old
     -- per-character values into db.global; char copies stay dormant.
     local gdb = BistooltipAddon.db.global
-    if db.data_source ~= nil and gdb.data_source == "wowsims"
-        and db.data_source ~= "wowsims" then
-        gdb.data_source = db.data_source
-    end
-    if type(db.custom_priorities) == "table" then
-        gdb.custom_priorities = gdb.custom_priorities or {}
-        for k, v in pairs(db.custom_priorities) do
-            if gdb.custom_priorities[k] == nil then gdb.custom_priorities[k] = v end
+    if not gdb.account_state_migrated then
+        if db.data_source ~= nil and gdb.data_source == "wowsims"
+            and db.data_source ~= "wowsims" then
+            gdb.data_source = db.data_source
         end
+        if type(db.custom_priorities) == "table" then
+            gdb.custom_priorities = gdb.custom_priorities or {}
+            for k, v in pairs(db.custom_priorities) do
+                if gdb.custom_priorities[k] == nil then gdb.custom_priorities[k] = v end
+            end
+        end
+        gdb.account_state_migrated = true
     end
 
     -- Initial migration
@@ -425,12 +428,15 @@ end
 -- Enable Data Source
 -- ============================================================
 
--- Fresh shallow copy of the database's phase ARRAYS per bind (slot tables
--- stay shared, so rank-level personalization and plugin rank overrides
--- survive). This isolates the live view from in-session corruption of the
--- pristine globals: an owner report showed a phase array mutating mid-
--- session (Chest/Hands/Legs swapped for extra Trinket/Weapon/Off hand
--- entries) — with per-bind copies every (re)bind heals the arrays.
+-- Each bind starts from pristine database slots. Plugin replay and saved
+-- personal priorities supply the two mutable layers on top of that baseline.
+local function CopySlot(value)
+    if type(value) ~= "table" then return value end
+    local copy = {}
+    for k, v in pairs(value) do copy[k] = CopySlot(v) end
+    return copy
+end
+
 local function FreshBind(src)
     if type(src) ~= "table" then return src end
     local out = {}
@@ -440,7 +446,7 @@ local function FreshBind(src)
             out[className][specName] = {}
             for phaseName, list in pairs(phases) do
                 local arr = {}
-                for i, slot in ipairs(list) do arr[i] = slot end
+                for i, slot in ipairs(list) do arr[i] = CopySlot(slot) end
                 -- Mutation trap (row-duplication hunt): after bind these
                 -- arrays should only be index-READ; any NEW key written
                 -- (e.g. an appended duplicate Weapon/Off hand) logs the
@@ -493,7 +499,7 @@ local function EnableSpec(spec_name)
                                 local phaseList = specData[phaseName]
                                 if type(phaseList) == "table" then
                                     for idx, slot in pairs(idxMap) do
-                                        phaseList[idx] = slot
+                                        phaseList[idx] = CopySlot(slot)
                                     end
                                 end
                             end

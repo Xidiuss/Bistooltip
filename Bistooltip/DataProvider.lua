@@ -347,7 +347,9 @@ function BistooltipData.GetAllItemSources(itemId)
                 local src = nil
                 if e.kind == "DROP" or e.kind == "TOKEN" or e.kind == "MARK" then
                     local s = e.source and reg[e.source] or nil
-                    if s then
+                    if s and s.kind == "CUSTOM" then
+                        src = { type = "custom", label = s.label, text = line }
+                    elseif s then
                         local zone = s.instance
                         if s.difficulty and s.difficulty ~= "" then
                             zone = zone .. " [" .. s.difficulty .. "]"
@@ -408,6 +410,27 @@ function BistooltipData.GetEmblemCost(itemId)
     return BisTooltip_GetVendorCost(itemId)
 end
 
+-- Vendor eligibility is a property of the method, not of its first currency.
+-- Only a single one-part price is safe to add to a group budget. Alternatives
+-- and compound prices remain visible in full through the source formatter.
+function BistooltipData.GetVendorSummary(itemId)
+    local purchases = {}
+    for _, entry in ipairs((BisTooltip_ItemAcquisition or {})[itemId] or {}) do
+        if entry.kind == "VENDOR" or entry.kind == "CUSTOM" then
+            purchases[#purchases + 1] = entry
+        end
+    end
+    if #purchases == 0 then return nil end
+    if #purchases > 1 then return "Vendor options", nil, true end
+    local entry = purchases[1]
+    if entry.kind == "CUSTOM" then return entry.label or "Custom", nil, true end
+    local costs = entry.cost or {}
+    if #costs == 0 then return "Free / unspecified price", nil, true end
+    if #costs > 1 then return "Multiple costs", nil, true end
+    local cost = costs[1]
+    return cost.currency or ("Item #" .. tostring(cost.item)), cost.amount, false
+end
+
 -- NOTE: difficulty is a closed fact set on SourceRegistry entries (spec S2);
 -- the old difficulty-substring guessing heuristic was removed with the O(N)
 -- lookup (Task 5). Difficulty now travels on GetAllItemSources structs.
@@ -436,7 +459,12 @@ function BistooltipData.GetSlotsForSpec(className, specName, phase)
     -- every draw reads the bound source untouched. Slot tables stay shared
     -- (personal rank order and plugin rank overrides persist).
     local copy = {}
-    for i, slot in ipairs(list) do copy[i] = slot end
+    for i, slot in ipairs(list) do
+        -- Consumers filter, split rings/trinkets and calculate progress before
+        -- rendering, so the personal order must already be applied here.
+        BistooltipData.LoadCustomPriority(slot, className, specName, phase)
+        copy[i] = slot
+    end
     return copy
 end
 
@@ -507,7 +535,11 @@ function BistooltipData.FilterSlots(slots, searchText, showOnlyMissing, vendorFi
 
         if matches and hasVendor then
             -- In BIS mode, split Finger and Trinket into separate rows
-            if bisMode and slot.slot_name == "Finger" then
+            if vendorFilterMode then
+                -- Keep all ranks for the per-item vendor filter, including
+                -- purchasable rings/trinkets below the two BIS positions.
+                table.insert(filtered, slot)
+            elseif bisMode and slot.slot_name == "Finger" then
                 -- Create Ring 1 (item [1]) and Ring 2 (item [2])
                 local ring1 = CreateVirtualSlot(slot, "Ring 1", 1)
                 local ring2 = CreateVirtualSlot(slot, "Ring 2", 2)
@@ -606,8 +638,7 @@ function BistooltipData.SlotHasVendorSource(slot, vendorFilterMode, isHorde)
 
     for _, iid in ipairs(slot) do
         local id = BistooltipData.GetDisplayItemID(iid, isHorde)
-        local _, currency = BisTooltip_GetVendorCost(id)
-        if currency then
+        if BistooltipData.GetVendorSummary(id) then
             return true
         end
     end
@@ -950,11 +981,11 @@ function BistooltipData.ResetCustomPriorities(className, specName, phase)
     end
     
     -- Clear from saved variables
-    if _G.BistooltipAddon and _G.BistooltipAddon.db and _G.BistooltipAddon.db.char and
-       _G.BistooltipAddon.db.char.custom_priorities then
-        for key in pairs(_G.BistooltipAddon.db.char.custom_priorities) do
+    if _G.BistooltipAddon and _G.BistooltipAddon.db and _G.BistooltipAddon.db.global and
+       _G.BistooltipAddon.db.global.custom_priorities then
+        for key in pairs(_G.BistooltipAddon.db.global.custom_priorities) do
             if key:find(prefix, 1, true) == 1 then
-                _G.BistooltipAddon.db.char.custom_priorities[key] = nil
+                _G.BistooltipAddon.db.global.custom_priorities[key] = nil
             end
         end
     end

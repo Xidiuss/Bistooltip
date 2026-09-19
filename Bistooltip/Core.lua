@@ -240,53 +240,9 @@ end
 -- ============================================================
 
 function BistooltipAddon:OnInitialize()
-    -- Diagnostic interception of table.insert/remove on slot arrays.
-    -- SILENT by default — fires only when /bis debug on enables
-    -- _G.Bistooltip_DebugMode (the wrappers otherwise spammed chat on every
-    -- normal FilterSlots call during tab switches).
+    -- Diagnostics are local to our data/rendering paths. Do not replace
+    -- shared Lua functions used by Blizzard UI and other addons.
     _G.Bistooltip_DebugMode = _G.Bistooltip_DebugMode or false
-    do
-        local rawInsert, rawRemove = table.insert, table.remove
-        local seenSites = {}
-        local function slotArray(t)
-            return type(t) == "table" and #t > 0 and #t <= 40
-                and type(t[1]) == "table" and t[1].slot_name ~= nil
-        end
-        local function report(tag, detail)
-            if not _G.Bistooltip_DebugMode then return end
-            local site = type(debugstack) == "function"
-                and tostring(debugstack(2, 3, 1) or "?") or "?"
-            site = site:gsub("\n", " ")
-            local key = tag .. "|" .. site
-            if seenSites[key] then return end
-            seenSites[key] = true
-            if DEFAULT_CHAT_FRAME then
-                DEFAULT_CHAT_FRAME:AddMessage("|cffff8800[Bis-" .. tag .. "]|r " .. detail .. " @ " .. site)
-            end
-        end
-        table.insert = function(t, a, b)
-            if b ~= nil then
-                if slotArray(t) and type(b) == "table" and b.slot_name then
-                    report("INS", "slot-array insert pos=" .. tostring(a))
-                end
-                return rawInsert(t, a, b)
-            end
-            if slotArray(t) and type(a) == "table" and a.slot_name then
-                report("INS", "slot-array append")
-            end
-            return rawInsert(t, a) -- preserve 2-arg arity (explicit nil breaks C insert)
-        end
-        table.remove = function(t, pos)
-            if slotArray(t) then
-                local v = pos ~= nil and t[pos] or t[#t]
-                report("REM", "slot-array remove pos=" .. tostring(pos or #t) .. " (" .. tostring(v and v.slot_name) .. ")")
-            end
-            if pos ~= nil then
-                return rawRemove(t, pos)
-            end
-            return rawRemove(t) -- preserve 1-arg arity
-        end
-    end
 
     -- Pre-warm object pools FIRST (before any UI creation)
     -- This prevents CreateFrame calls during rendering and reduces FPS drops

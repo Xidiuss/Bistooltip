@@ -11,7 +11,6 @@
 # IMPORTANT: AceConfigRegistry MUST load before AceConfig!
 # ============================================================
 Libs\LibStub\LibStub.lua
-Libs\LibParse\LibParse.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
 Libs\AceAddon-3.0\AceAddon-3.0.lua
 Libs\AceEvent-3.0\AceEvent-3.0.lua
@@ -23,15 +22,13 @@ Libs\AceConfig-3.0\AceConfigRegistry-3.0\AceConfigRegistry-3.0.lua
 Libs\AceConfig-3.0\AceConfigCmd-3.0\AceConfigCmd-3.0.lua
 Libs\AceConfig-3.0\AceConfigDialog-3.0\AceConfigDialog-3.0.lua
 Libs\AceConfig-3.0\AceConfig-3.0.lua
-Libs\AceGUI-3.0-SharedMediaWidgets\widget.xml
-Libs\LibSharedMedia-3.0\lib.xml
-Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libs\LibDataBroker\LibDataBroker-1.1.lua
 Libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
 
 # ============================================================
 # Data Files
-# NOTE: EmblemData.lua must load after bislists (T8 set auto-registration)
-# NOTE: Offline migrator inputs live in Private/Legacy/data and are not shipped here
+# NOTE: EmblemData.lua is retained only as an offline migration input.
+# Other offline inputs live in Private/Legacy/data, outside the addon package.
 # ============================================================
 GemData.lua
 Bistooltip_classes.lua
@@ -39,7 +36,6 @@ Bistooltip_WoWSimsBP_final.lua
 Bistooltip_wh_bislists.lua
 Bistooltip_wowtbc_bislists.lua
 Bistooltip_horde_to_ali.lua
-EmblemData.lua
 
 # ============================================================
 # New source model (canonical registry + acquisition + formatter)

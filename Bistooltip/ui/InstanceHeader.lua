@@ -510,9 +510,17 @@ function BistooltipInstanceHeader.Create(parent, instanceData, yOffset)
         color.r * 255, color.g * 255, color.b * 255, instanceName))
 
     -- Item count / Emblem cost (for vendor groups)
-    if instanceData.isVendorGroup and instanceData.totalEmblemCost and instanceData.totalEmblemCost > 0 then
+    if instanceData.costNeedsDetails then
+        header._countLabel:SetText("|cffaaaaaaSee item sources|r")
+    elseif instanceData.isVendorGroup and instanceData.totalEmblemCost and instanceData.totalEmblemCost > 0 then
         -- Show total emblem cost for vendor groups
-        header._countLabel:SetText(string.format("|cff00ffcc%d Emblems|r", instanceData.totalEmblemCost))
+        local total = instanceData.totalEmblemCost
+        if instanceData.emblemType == "Gold" then
+            header._countLabel:SetText(BisTooltip_FormatSource({kind="VENDOR",
+                cost={{currency="Gold", amount=total}}}))
+        else
+            header._countLabel:SetText(string.format("|cff00ffcc%d %s|r", total, instanceData.emblemType or ""))
+        end
     else
         header._countLabel:SetText(string.format("|cffaaaaaa%d items|r", itemCount))
     end
@@ -678,6 +686,7 @@ function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, vendorFil
             local emblemCost = 0
             local emblemType = nil
             local isEmblemTypeGroup = false
+            local costNeedsDetails = false
 
             -- Check if it's from emblem vendor first
             if _G.BistooltipData and _G.BistooltipData.GetEmblemCost then
@@ -700,9 +709,10 @@ function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, vendorFil
                 if _G.BistooltipData and _G.BistooltipData.GetDisplayItemID and _G.BistooltipData.GetEmblemCost then
                     for _, iid in ipairs(slot) do
                         local id = _G.BistooltipData.GetDisplayItemID(iid, isHorde)
-                        local cost, currency = _G.BistooltipData.GetEmblemCost(id)
-                        if cost and currency then
+                        local currency, cost, needsDetails = _G.BistooltipData.GetVendorSummary(id)
+                        if currency then
                             vendorCost, vendorCurrency = cost, currency
+                            costNeedsDetails = needsDetails or #slot > 1
                             break
                         end
                     end
@@ -715,7 +725,7 @@ function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, vendorFil
                     -- Store the cost on the slot for later sorting and use it
                     -- for the group totals (rank-1 may not be the vendor item)
                     slot._emblemCost = vendorCost
-                    emblemCost = vendorCost
+                    emblemCost = vendorCost or 0
                 else
                     -- Defensive: no vendor item found (filter should prevent
                     -- this). Keep the slot visible under Unknown instead of
@@ -758,6 +768,7 @@ function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, vendorFil
             end
 
             -- Add slot to group
+            if costNeedsDetails then groups[groupKey].costNeedsDetails = true end
             table.insert(groups[groupKey].slots, slot)
             groups[groupKey].itemCount = groups[groupKey].itemCount + 1
 

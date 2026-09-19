@@ -39,7 +39,7 @@ local function deepCopy(v)
 end
 local function record(fn, ...)
   if replaying then return end
-  Overlay[#Overlay + 1] = { fn = fn, args = deepCopy({ ... }) }
+  Overlay[#Overlay + 1] = { fn = fn, args = deepCopy({ ... }), n = select("#", ...) }
 end
 -- Re-executes the recorded plugin mutations (call after rebinding
 -- Bistooltip_bislists to another database). Failures are warn-once skips:
@@ -49,7 +49,10 @@ function BisTooltip_ReplayOverlay()
   for _, op in ipairs(Overlay) do
     local fn = BisTooltip[op.fn]
     if type(fn) == "function" then
-      local ok, err = pcall(fn, BisTooltip, unpack(op.args))
+      -- Setters publish tables into live data. Never expose the recorded
+      -- snapshot itself: a later append can otherwise mutate a future replay.
+      local args = deepCopy(op.args)
+      local ok, err = pcall(fn, BisTooltip, unpack(args, 1, op.n))
       if not ok then
         noteOverride("replay:" .. op.fn .. "|" .. tostring(err),
           "Plugin overlay replay skipped one op: " .. tostring(err))
@@ -286,13 +289,38 @@ function BisTooltip:SetBiSSlotRank(className, specName, phase, slotName, rank, i
   if type(itemID) ~= "number" or itemID <= 0 then
     error(what .. ": itemID must be a positive number", 2)
   end
-  local slot = findSlot(className, specName, phase, slotName, what)
+  local found, slot = pcall(findSlot, className, specName, phase, slotName, what)
+  local deferred = false
+  if not found then
+    local lookupError = slot
+    slot = nil
+    -- Plugins describe the server across databases. A valid target can be
+    -- absent in the selected database (e.g. T7 while using wowtbc).
+    for _, database in pairs({ Bistooltip_wowsims_final,
+        Bistooltip_wowtbc_bislists, Bistooltip_wh_bislists }) do
+      local classData = type(database) == "table" and database[className]
+      local specData = type(classData) == "table" and classData[specName]
+      local phaseSlots = type(specData) == "table" and specData[phase]
+      if type(phaseSlots) == "table" then
+        for _, candidate in ipairs(phaseSlots) do
+          if candidate.slot_name == slotName then slot = candidate break end
+        end
+      end
+      if slot then break end
+    end
+    if not slot then error(lookupError, 2) end
+    deferred = true
+  end
   local maxRank = 0
   for k in pairs(slot) do
     if type(k) == "number" and k > maxRank then maxRank = k end
   end
   if rank > maxRank then
     error(what .. ": rank " .. rank .. " exceeds slot length " .. maxRank, 2)
+  end
+  if deferred then
+    record("SetBiSSlotRank", className, specName, phase, slotName, rank, itemID, plugin)
+    return true
   end
   for i = 1, maxRank do
     if i ~= rank and slot[i] == itemID then

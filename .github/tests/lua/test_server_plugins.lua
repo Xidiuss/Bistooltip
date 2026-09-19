@@ -1,0 +1,78 @@
+-- Run with the real plugin main.lua path as arg[1]; no private inputs.
+local plugin = assert(arg[1], 'usage: test_server_plugins.lua <plugin/main.lua>')
+local say = print
+print = function() end -- Expected override diagnostics are noisy in a matrix.
+local noop = function() end
+local saved
+LibStub = function(name)
+    if name == 'AceDB-3.0' then return {New=function() return saved end} end
+    if name == 'AceConfig-3.0' then return {RegisterOptionsTable=noop} end
+    if name == 'AceConfigDialog-3.0' then return {AddToBlizOptions=noop} end
+    return {}
+end
+DEFAULT_CHAT_FRAME={AddMessage=noop}
+GetTime=function() return 0 end
+GetItemInfo=function() return nil end
+BistooltipUtils={NormalizeItemID=function(id) return id end}
+BistooltipConstants={}
+dofile('Bistooltip/Bistooltip_WoWSimsBP_final.lua')
+dofile('Bistooltip/Bistooltip_wowtbc_bislists.lua')
+dofile('Bistooltip/Bistooltip_wh_bislists.lua')
+local function count()
+    local n=0
+    for _,list in pairs(BisTooltip_ItemAcquisition) do n=n+#list end
+    return n
+end
+local function verifyRanks(ops)
+    for _,op in ipairs(ops) do
+        local c=Bistooltip_bislists[op[1]]
+        local s=c and c[op[2]]
+        for _,slot in ipairs(s and s[op[3]] or {}) do
+            if slot.slot_name==op[4] then
+                assert(slot[op[5]]==op[6], 'server rank lost after database switch')
+            end
+        end
+    end
+end
+for _,faction in ipairs({'Alliance','Horde'}) do
+    UnitFactionGroup=function() return faction end
+    for _,initial in ipairs({'wowsims','wowtbc','wh'}) do
+        BistooltipAddon={AceAddonName='Bis-Tooltip'}
+        saved={global={data_source=initial,custom_priorities={},account_state_migrated=true},
+            char={version=6.3,class_index=1,spec_index=1,phase_index=1,filter_specs={},highlight_spec={}}}
+        BisTooltip={}
+        dofile('Bistooltip/SourceRegistry.lua')
+        dofile('Bistooltip/ItemAcquisition.lua')
+        dofile('Bistooltip/SourceFormatter.lua')
+        dofile('Bistooltip/PluginAPI.lua')
+        dofile('Bistooltip/DataProvider.lua')
+        dofile('Bistooltip/Config.lua')
+        BistooltipAddon:initConfig()
+        local before=count()
+        local rankOps={}
+        local rank=BisTooltip.SetBiSSlotRank
+        BisTooltip.SetBiSSlotRank=function(self,...)
+            rankOps[#rankOps+1]={...}
+            return rank(self,...)
+        end
+        dofile(plugin)
+        BisTooltip.SetBiSSlotRank=rank
+        local after=count()
+        assert(after>before, 'plugin registered no acquisitions')
+        verifyRanks(rankOps)
+        for round=1,2 do
+            for _,target in ipairs({'wh','wowtbc','wowsims'}) do
+                BistooltipAddon:changeSpec(target)
+                assert(count()==after, 'overlay replay duplicated acquisition entries')
+                verifyRanks(rankOps)
+            end
+        end
+        for id,entries in pairs(BisTooltip_ItemAcquisition) do
+            for _,entry in ipairs(entries) do
+                assert(BisTooltip_FormatSource(entry), 'unrenderable plugin acquisition '..id)
+            end
+        end
+        say('server_plugin: OK '..faction..' initial='..initial..' '..plugin)
+    end
+end
+print=say

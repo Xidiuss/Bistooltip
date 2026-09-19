@@ -10538,7 +10538,7 @@ BisTooltip_ItemAcquisition = {
   },
   [39728] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 25 } } },
   },
   [39729] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_FAERLINA" },
@@ -10568,7 +10568,7 @@ BisTooltip_ItemAcquisition = {
   },
   [39757] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_FAERLINA" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 25 } } },
   },
   [39758] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_MAEXXNA" },
@@ -10715,7 +10715,7 @@ BisTooltip_ItemAcquisition = {
   [40191] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH" },
     { kind = "DROP", source = "NAXXRAMAS_25N_GLUTH" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 25 } } },
   },
   [40192] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_NOTH" },
@@ -10760,7 +10760,7 @@ BisTooltip_ItemAcquisition = {
   },
   [40207] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_HEIGAN" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 25 } } },
   },
   [40208] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_ANUB_REKHAN" },
@@ -10907,11 +10907,11 @@ BisTooltip_ItemAcquisition = {
   },
   [40267] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 25 } } },
   },
   [40268] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 25 } } },
   },
   [40269] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_PATCHWERK" },
@@ -11038,11 +11038,11 @@ BisTooltip_ItemAcquisition = {
   },
   [40321] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 25 } } },
   },
   [40322] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_RAZUVIOUS" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 25 } } },
   },
   [40323] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_RAZUVIOUS" },
@@ -11090,7 +11090,7 @@ BisTooltip_ItemAcquisition = {
   },
   [40337] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 25 } } },
   },
   [40338] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK" },
@@ -11106,7 +11106,7 @@ BisTooltip_ItemAcquisition = {
   },
   [40342] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_GOTHIK" },
-    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 15 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Valor", amount = 25 } } },
   },
   [40343] = {
     { kind = "DROP", source = "NAXXRAMAS_25N_4HORSEMEN" },
@@ -11966,16 +11966,16 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Heroism", amount = 40 } } },
   },
   [40698] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Heroism", amount = 40 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Heroism", amount = 25 } } },
   },
   [40699] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Heroism", amount = 40 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Heroism", amount = 25 } } },
   },
   [40700] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Heroism", amount = 40 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Heroism", amount = 35 } } },
   },
   [40701] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Heroism", amount = 40 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Heroism", amount = 35 } } },
   },
   [40702] = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Heroism", amount = 50 } } },
@@ -19150,7 +19150,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 25 } } },
   },
   [47667] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 19 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 25 } } },
   },
   [47668] = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 25 } } },
@@ -24180,7 +24180,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", tier = "T10", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50965] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50966] = {
     { kind = "DROP", source = "ICECROWN_CITADEL_10N_FESTERGUT" },
@@ -24189,28 +24189,28 @@ BisTooltip_ItemAcquisition = {
     { kind = "DROP", source = "ICECROWN_CITADEL_10N_FESTERGUT" },
   },
   [50968] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50969] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50970] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50971] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50972] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50973] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50974] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50975] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 50 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Frost", amount = 95 } } },
   },
   [50976] = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Frost", amount = 60 } } },
@@ -24264,7 +24264,7 @@ BisTooltip_ItemAcquisition = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50993] = {
-    { kind = "VENDOR", cost = { { currency = "Emblem of Triumph", amount = 35 } } },
+    { kind = "VENDOR", cost = { { currency = "Emblem of Frost", amount = 60 } } },
   },
   [50994] = {
     { kind = "VENDOR", cost = { { currency = "Emblem of Frost", amount = 60 } } },
