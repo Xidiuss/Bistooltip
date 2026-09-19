@@ -3,8 +3,8 @@
 --   * EmblemData.lua custom currencies (Emblem of Ascension / Ascension II /
 --     Echo of the Titans) — moved OUT of core per spec W6 (core = clean WotLK)
 --   * docs/superpowers/data/whitemane-custom-extract-2026-09-08.lua:
---     27 rank-1 legendary overrides (128858/130023/130031/131004/150005),
---     expressed as DB-independent SetBiSSlotRank ("rank 1 = legendary"),
+--     27 rank-1 legendary insertions (128858/130023/130031/131004/150005),
+--     expressed as DB-independent InsertBiSSlotRank ("rank 1 = legendary"),
 --     so they survive ranking updates and database switches
 --   * typo fix (owner Q2): EmblemData [15000] emitted as 150005
 -- Vendor location labels: pending owner scans (D6) — VENDOR lines carry
@@ -20,33 +20,33 @@ if not BisTooltip then
     end
     return
 end
-BisTooltip:SetBiSSlotRank("Druid", "Balance", "T7", "Weapon", 1, 130023, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Druid", "Balance", "T8", "Weapon", 1, 130023, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Druid", "Feral dps", "T8", "Weapon", 1, 128858, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Hunter", "Beast mastery", "T7", "Ranged", 1, 150005, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Hunter", "Marksmanship", "T7", "Ranged", 1, 150005, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Hunter", "Survival", "T7", "Ranged", 1, 150005, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Mage", "Arcane", "T7", "Weapon", 1, 130023, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Mage", "Arcane", "T8", "Weapon", 1, 130023, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Mage", "Fire", "T7", "Weapon", 1, 130023, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Mage", "Fire", "T8", "Weapon", 1, 130023, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Mage", "Fire FFB", "T7", "Weapon", 1, 130023, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Mage", "Fire FFB", "T8", "Weapon", 1, 130023, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Mage", "Frost", "T7", "Weapon", 1, 130023, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Mage", "Frost", "T8", "Weapon", 1, 130023, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Paladin", "Retribution", "T7", "Weapon", 1, 130031, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Paladin", "Retribution", "T8", "Weapon", 1, 130031, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Paladin", "Retribution", "T9", "Weapon", 1, 130031, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Priest", "Shadow", "T7", "Weapon", 1, 130023, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Priest", "Shadow", "T8", "Weapon", 1, 130023, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Shaman", "Enhancement", "T8", "Weapon", 1, 131004, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Shaman", "Enhancement", "T9", "Weapon", 1, 131004, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Warrior", "Arms", "T7", "Weapon", 1, 130031, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Warrior", "Arms", "T8", "Weapon", 1, 130031, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Warrior", "Arms", "T9", "Weapon", 1, 130031, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Warrior", "Fury", "T7", "Weapon", 1, 130031, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Warrior", "Fury", "T8", "Weapon", 1, 130031, P) -- legendary rank-1
-BisTooltip:SetBiSSlotRank("Warrior", "Fury", "T9", "Weapon", 1, 130031, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Druid", "Balance", "T7", "Weapon", 1, 130023, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Druid", "Balance", "T8", "Weapon", 1, 130023, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Druid", "Feral dps", "T8", "Weapon", 1, 128858, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Hunter", "Beast mastery", "T7", "Ranged", 1, 150005, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Hunter", "Marksmanship", "T7", "Ranged", 1, 150005, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Hunter", "Survival", "T7", "Ranged", 1, 150005, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Mage", "Arcane", "T7", "Weapon", 1, 130023, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Mage", "Arcane", "T8", "Weapon", 1, 130023, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Mage", "Fire", "T7", "Weapon", 1, 130023, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Mage", "Fire", "T8", "Weapon", 1, 130023, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Mage", "Fire FFB", "T7", "Weapon", 1, 130023, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Mage", "Fire FFB", "T8", "Weapon", 1, 130023, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Mage", "Frost", "T7", "Weapon", 1, 130023, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Mage", "Frost", "T8", "Weapon", 1, 130023, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Paladin", "Retribution", "T7", "Weapon", 1, 130031, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Paladin", "Retribution", "T8", "Weapon", 1, 130031, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Paladin", "Retribution", "T9", "Weapon", 1, 130031, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Priest", "Shadow", "T7", "Weapon", 1, 130023, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Priest", "Shadow", "T8", "Weapon", 1, 130023, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Shaman", "Enhancement", "T8", "Weapon", 1, 131004, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Shaman", "Enhancement", "T9", "Weapon", 1, 131004, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Warrior", "Arms", "T7", "Weapon", 1, 130031, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Warrior", "Arms", "T8", "Weapon", 1, 130031, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Warrior", "Arms", "T9", "Weapon", 1, 130031, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Warrior", "Fury", "T7", "Weapon", 1, 130031, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Warrior", "Fury", "T8", "Weapon", 1, 130031, P) -- legendary rank-1
+BisTooltip:InsertBiSSlotRank("Warrior", "Fury", "T9", "Weapon", 1, 130031, P) -- legendary rank-1
 
 -- Custom-currency vendor costs (from EmblemData, W6 cutover)
 BisTooltip:AddAcquisition(39701, { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 19 } } }, P)

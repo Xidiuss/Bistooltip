@@ -7,7 +7,7 @@ dofile(core.."/Bistooltip/ItemAcquisition.lua")
 dofile(core.."/Bistooltip/SourceFormatter.lua")
 dofile(core.."/Bistooltip/PluginAPI.lua")
 -- Rank behavior is covered by core's real-plugin matrix; inspect acquisitions here.
-BisTooltip.SetBiSSlotRank=function() end
+BisTooltip.InsertBiSSlotRank=function() end
 local baseline={}
 for id,entries in pairs(BisTooltip_ItemAcquisition) do
   local nonvendor={}
