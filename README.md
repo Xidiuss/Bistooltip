@@ -8,6 +8,8 @@ The overlay registers 377 additional VENDOR acquisition entries using `AddAcquis
 
 The reviewed September 19 scanner import adds 112 Justice/Valor offers. Per the author's decision, these replace older VENDOR prices for the same IDs while preserving DROP/TOKEN/MARK and other non-vendor methods. The final 23 annotated legendary IDs are retained as inactive comments for a future BiS update; they do not register empty prices or change current ranks. See [the import audit](docs/SCANNER-IMPORT-AUDIT.md) for findings and the applied policy.
 
+The [candidate BiS checklist](docs/BIS-CANDIDATES.md) records all 23 annotated IDs, existing acquisition status and the exact information still needed to activate additional ranks. Seventeen currently have no acquisition in core plus this overlay. The notes are already present in `main.lua`; copying the same scanner block again would not add data.
+
 The core records plugin mutations for replay when the user switches ranking databases. Some profiles/phases are absent from some databases; this requires a compatible core that defers valid unavailable rank targets. Older cores can abort plugin startup at the first T7 override when Wowhead or wowtbc is selected. Validate startup as well as an in-session database switch when updating either package.
 
 The addon has no commands, settings, SavedVariables, scanner, or independent UI. Use core's `/bis` interface. Vendor locations are not included in these acquisition rows. Currency display names are data labels; this plugin does not define a currency-item registry or custom enchant assignments.
