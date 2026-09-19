@@ -87,7 +87,9 @@ Dodatkowy kandydat do kontroli danych: vendor 60 Heroism dla 37111 pochodzi jesz
 
 Wydzielenie dodatków jest widoczne w `68d0272` i osobnym pniu dodatków `e766d02`; nie są to gałęzie eksperymentalne do scalania całymi drzewami w main. Starsze nazwy META-Z/feat w dokumentach odnoszą się do historii migracji. Wszystkie aktywne komponenty dostały opis odpowiadający ich zawartości.
 
-Liczby Whitemane w tabeli odnoszą się do opublikowanego punktu wyjścia. W trakcie końcowej weryfikacji użytkownik dopisał lokalny eksport skanera (Justice/Valor i ręczne ID); jego osobny audyt następuje po ustabilizowaniu core. Nie należy traktować niezweryfikowanych pustych cen w tym eksporcie jako darmowych ofert.
+Liczby Whitemane w tabeli odnoszą się do opublikowanego punktu wyjścia. Po ustabilizowaniu core osobno zbadano dopisany eksport skanera: autor wybrał 112 ofert Justice/Valor zastępujących stare ceny VENDOR z zachowaniem innych metod. Najnowsze 23 adnotowane ID legendarek pozostają komentarzami do przyszłego BiS, nie pustymi ofertami. Szczegóły i test polityki importu znajdują się na gałęzi Whitemane w `docs/SCANNER-IMPORT-AUDIT.md`.
+
+Zgłoszenie użytkownika dotyczące AMOUNT również potwierdzono: edycja aktywnego presetu aktualizowała zapis, lecz nie ukryte pola robocze. Scanner synchronizuje je teraz natychmiast i chroni SavedVariables przed częściowymi wartościami podczas renderowania. Siedem testów callbacków menu uzupełnia dziesięć regresji merchant/export.
 
 ## Weryfikacja i jej granice
 

@@ -14,6 +14,7 @@
 - Remove 18 unused bundled files, eight unreferenced private UI functions, global table-function interception and the unused parallel Constants price tables.
 - Add public Lua regression/data/integration checks and native Lua 5.1 CI jobs, retaining Discord tests. Update component, architecture, API and developer documentation.
 - Scanner branch: fix stock Honor/Arena/token API interpretation, resolved scan placeholders, six-column CSV and late item-cache export metadata.
+- Follow-up scanner fix: active preset AMOUNT/ID edits update the pending price immediately; rendering no longer overwrites saved presets. Whitemane import replaces only vendor prices and keeps future legendary notes inactive.
 
 See [audit findings and remaining gaps](../docs/POSTMIGRATION-AUDIT.md). Local validation used Fengari plus a Lua 5.1 syntax parser; in-game verification is pending. Historical entries below describe their original commits and are not current CI/architecture guarantees.
 
