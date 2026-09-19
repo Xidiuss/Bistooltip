@@ -94,5 +94,7 @@ Use a WoW 3.3.5a client with Lua errors visible. Record the core commit, server,
 8. Enable VENDOR in BIS. Inspect items with multiple purchase options, currency/item-token costs, and gold costs; compare tooltip, list, and `/bisemblem <ID or link>` output.
 9. Enable the relevant server plugin. For Whitemane, check a legendary at rank 1, the former first item at rank 2, and the shifted seventh item in MAIN/CUSTOM before and after database switches and RESET. Check a known source/cost as well. Do not assume the other server's plugin describes this server.
 10. Run `/bis debug on`, redraw a selection, then `/bis debug`; collect its output for row issues and finish with `/bis debug off`.
+11. With the scanner enabled, capture a merchant with Honor, Arena and item-token costs. Change AMOUNT in the checked preset without toggling its checkmark, then export Lua and CSV; compare all amounts and six CSV columns with the merchant window. Record unresolved `EMPTY-COST` rows instead of importing them as free offers.
+12. On WOTLK5 S2, enable only its matching server overlay and compare a known vendor item and one custom enchant scroll with the in-game merchant. Confirm the scroll shows a source/price but is not presented as a class/spec enchant recommendation.
 
 Report automated results, native-runtime availability, and in-game results separately. Passing stubs cannot establish rendering, addon interactions, or server data accuracy.

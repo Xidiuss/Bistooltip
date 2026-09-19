@@ -22,6 +22,8 @@ Open `/bis config` and choose a database. The selection is shared across charact
 
 `wh` means **Wowhead**, not Whitemane. Available specs, phases, and ranked alternatives depend on the selected dataset. These are bundled snapshots; selecting a database does not download current rankings. Sources and vendor costs use the shared canonical acquisition tables, with optional server-plugin overrides.
 
+The WoWSimsBP snapshot was assembled offline from the ranking and faction data in [ExoJdi's fixed 3.3.5a backport](https://github.com/ExoJdi/BiS-Tooltip_335a_fixed_backport), a fork of the disruption01 backport. The generated core snapshot retains that data lineage; WoWSimsBP is the database label, not a claim that these rankings were downloaded from the current WoWSims site.
+
 ## Use the window
 
 - MAIN shows up to seven ranked gear alternatives per slot. BIS groups checklist items by acquisition location.
@@ -63,9 +65,12 @@ Install the relevant server plugin alongside the core when using that server's c
 - [Development, regression tests, and in-game checks](docs/DEVELOPMENT.md)
 - [Server plugin API and scanner handoff](docs/PLUGIN-API.md)
 - [Post-migration audit and measured data gaps](docs/POSTMIGRATION-AUDIT.md)
+- [Complete list of ranking item IDs without acquisition records](docs/MISSING-ACQUISITIONS.md)
 - [Prioritized roadmap and release gates](docs/ROADMAP.md)
 - [Changelog](Bistooltip/CHANGELOG.md)
 
 Runtime files live under `Bistooltip/`; public regression tests live under `.github/tests/`. `Bistooltip.toc` defines the actual load graph. `EmblemData.lua` is retained as an offline migration input and is not loaded by the addon.
 
-Original addon/backport credits: Silver [DisruptionAuras]. Refactoring and maintenance: Divian. See the [core license](Bistooltip/LICENSE); bundled third-party libraries retain their own license notices.
+The core is distributed under its [MIT license](Bistooltip/LICENSE); bundled third-party libraries retain their own notices. The [AtlasLoot reference used during the audit](https://github.com/wonderkidsem-official/Pazzions-WotLK-BiS-List-AtlasLoot-Enhanced-v5.11.04) is GPL-2.0 and is an external offline oracle, not a bundled dependency. Its code and tables must not be copied into the MIT package; proposed source and price facts need independent verification and recorded provenance before publication. The [audit](docs/POSTMIGRATION-AUDIT.md) describes its historical use, and the [roadmap](docs/ROADMAP.md) includes a provenance review of both the oracle-derived facts and the ExoJdi input before release.
+
+Original addon/backport credits: Silver [DisruptionAuras], [disruption01](https://github.com/disruption01/BiS-Tooltip_335a_backport), and [ExoJdi](https://github.com/ExoJdi/BiS-Tooltip_335a_fixed_backport) for the fixed backport and WoWSimsBP input. Refactoring and maintenance: Divian.

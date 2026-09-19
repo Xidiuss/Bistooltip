@@ -32,7 +32,7 @@ There is currently no standalone `DisplayNames` runtime module. Source facts and
 
 ## Ranking databases and mutable layers
 
-The three database keys are `wowsims`, `wowtbc`, and `wh` (Wowhead). `Bistooltip_WoWSimsBP_final.lua` still exports historical globals such as `Bistooltip_wowsims_final`; the filename and exported names are distinct contracts.
+The three database keys are `wowsims`, `wowtbc`, and `wh` (Wowhead). The WoWSimsBP ranking/faction input came from [ExoJdi's fixed 3.3.5a backport](https://github.com/ExoJdi/BiS-Tooltip_335a_fixed_backport); the final core snapshot was assembled offline. `Bistooltip_WoWSimsBP_final.lua` still exports historical globals such as `Bistooltip_wowsims_final`; the filename and exported names are distinct contracts.
 
 For a bind, Config copies the chosen baseline into `Bistooltip_bislists`. The WoWSimsBP selection applies Horde overrides when appropriate. The corresponding class and phase lists are rebound, then recorded server-plugin operations replay. DataProvider returns defensive slot copies and applies saved personal priorities before consumers filter/group them.
 

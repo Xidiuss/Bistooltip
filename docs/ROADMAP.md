@@ -1,6 +1,6 @@
 # Roadmap Meta-Bistooltipa
 
-Stan planu: 19 września 2026. Punkt wyjścia: [audyt postmigracyjny](POSTMIGRATION-AUDIT.md) i [audyt importu Whitemane](https://github.com/Xidiuss/Bistooltip/blob/Bistooltip_Whitemane_Frostmourne/docs/SCANNER-IMPORT-AUDIT.md). Core dla WoW 3.3.5a, trzy niezależne migawki rankingów, kanoniczne acquisitions i osobne dodatki serwerowe tworzą bazę do dalszego rozwoju. Kolejne etapy mają domknąć zachowanie, wiarygodność danych i użyteczność; nie wymagają ponownej przebudowy całości.
+Wersja do zatwierdzenia: 19 września 2026. Punkt wyjścia: [audyt postmigracyjny](POSTMIGRATION-AUDIT.md), [pełna lista brakujących źródeł](MISSING-ACQUISITIONS.md) i [audyt importu Whitemane](https://github.com/Xidiuss/Bistooltip/blob/Bistooltip_Whitemane_Frostmourne/docs/SCANNER-IMPORT-AUDIT.md). Core dla WoW 3.3.5a, trzy niezależne migawki rankingów, kanoniczne acquisitions i osobne dodatki serwerowe tworzą bazę do dalszego rozwoju. Kolejne etapy mają domknąć zachowanie, wiarygodność danych i użyteczność; nie wymagają ponownej przebudowy całości.
 
 ## P0 — zrobić teraz, przed wydaniem
 
@@ -8,17 +8,19 @@ Stan planu: 19 września 2026. Punkt wyjścia: [audyt postmigracyjny](POSTMIGRAT
 | --- | --- | --- |
 | Wstawianie serwerowego BiS na rank 1 | Dotychczasowe `SetBiSSlotRank` usuwało pierwszą bazową alternatywę Whitemane | 27 wpisów używa `InsertBiSSlotRank`; kolejność i liczba bazowych ID zostają zachowane po starcie, zmianie bazy i RESET; MAIN/CUSTOM pokazują przesuniętą siódmą pozycję |
 | Spójne opisy czterech gałęzi | Użytkownik musi wiedzieć, co instaluje i od czego zależy wtyczka | Każdy README podaje rolę, instalację, zakres danych, ograniczenia i status weryfikacji; core i Whitemane opisują zależność od nowego API |
+| Przegląd pochodzenia i licencji danych | WoWSimsBP wywodzi się z backportu ExoJdi, a użyty offline AtlasLoot oracle jest GPL-2.0; sam brak pliku oracle w Git nie wystarcza do potwierdzenia MIT wszystkich wyników | Udokumentować źródło i licencję wejścia ExoJdi; przejrzeć fakty wygenerowane z oracle, potwierdzić je niezależnym źródłem/klientem i nie kopiować kodu ani tabel GPL do pakietu MIT |
 | Natywna weryfikacja przed publikacją | Lokalny Fengari nie jest klientem Lua 5.1; nowa konfiguracja CI nie dowodzi udanego przebiegu | Zielone CI Lua 5.1 dla core, obu wtyczek i scannera; odnotowany commit i wynik przebiegu |
 | Smoke test w kliencie 3.3.5a | Stubowane API nie dowodzi ładowania TOC, renderowania ani cen serwera | Wykonać [checklistę](DEVELOPMENT.md#in-game-smoke-checklist): core osobno, Alliance/Horde, każda baza z Whitemane, rank 1–7 po RESET, zimny cache, VENDOR, scanner Honor/Arena/token i WOTLK5 scroll; zapisać wyniki i błędy Lua |
 | Publikacja zgodnych pakietów | Aktualny Whitemane wywołuje nową funkcję core | Opublikować i instalować zgodny core razem z Whitemane; nie udostępniać nowej wtyczki z wcześniejszym core |
 
-Pierwsze dwa wiersze zrealizowano lokalnie w bieżącej zmianie. Status wydania pozostaje otwarty do czasu potwierdzenia pozostałych bramek. Push sam w sobie nie zastępuje sprawdzenia przebiegu CI.
+Pierwsze dwa wiersze zrealizowano lokalnie. Opis pochodzenia danych dopisano, ale jego przegląd dowodów pozostaje otwarty. Status wydania pozostaje otwarty do czasu potwierdzenia pozostałych bramek. Push sam w sobie nie zastępuje sprawdzenia przebiegu CI.
 
 ## P1 — wiarygodność danych
 
-1. **Źródła dla rank 1.** Zacząć od 18 brakujących ID WoWSimsBP Alliance, 17 Horde, 22 wowtbc i 10 Wowhead; następnie zmniejszać pozostałe luki (odpowiednio 134/120/107/102 unikalne ID bez acquisitions w całych bazach). Liczby odnoszą się do migawek z audytu i mogą obejmować te same ID. Każdy wpis powinien mieć potwierdzone źródło, metodę i — jeśli dotyczy — wszystkie składniki ceny; generator ma dawać deterministyczny output i przejść census.
-2. **Fazy Wowhead.** Zweryfikować PR/T7 względem dostępności przedmiotów na docelowym progresie, w tym wskazane w audycie 45931 i 48472. Opisać zasady faz i skorygować tylko potwierdzone przypadki; obecnie Wowhead jest alternatywną migawką, nie obietnicą ścisłej progresji.
-3. **Kontrola wątpliwych cen.** Sprawdzić kandydatów takich jak 37111 w więcej niż jednym źródle lub w kliencie. Nie usuwać istniejącej oferty wyłącznie dlatego, że pojedynczy oracle jej nie zawiera. Dla Justice/Valor Whitemane zachować przyjętą politykę: nowa cena zastępuje starszą VENDOR, a DROP/TOKEN/MARK pozostają.
+1. **Źródła dla rank 1.** Zacząć od 34 unikalnych ID na rank 1 w [pełnym spisie](MISSING-ACQUISITIONS.md); następnie pozostałe 159 (razem 193). Luki per baza: 134 WoWSimsBP Alliance, 120 Horde, 107 wowtbc, 102 Wowhead. Każdy wpis powinien mieć potwierdzone źródło, metodę i — jeśli dotyczy — wszystkie składniki ceny; generator ma dawać deterministyczny output i przejść census.
+2. **23 kandydatów BiS Whitemane.** Wszystkie adnotacje są już zachowane jako nieaktywne `PLANNED`; 17 ID nie ma acquisition. Zebrać źródła/ceny oraz dokładne class/spec/phase/slot/rank według [listy kandydatów](https://github.com/Xidiuss/Bistooltip/blob/Bistooltip_Whitemane_Frostmourne/docs/BIS-CANDIDATES.md). Rozstrzygnąć szczególnie Nightwing kontra Atiesh, parę Warglaive, Priest/Druid Atiesh i klasę tarczy. Dopiero potem dodać ranki i niepuste źródła bez kasowania istniejących DROP/TOKEN/MARK.
+3. **Fazy Wowhead.** Zweryfikować PR/T7 względem dostępności przedmiotów na docelowym progresie, w tym wskazane w audycie 45931 i 48472. Opisać zasady faz i skorygować tylko potwierdzone przypadki; obecnie Wowhead jest alternatywną migawką, nie obietnicą ścisłej progresji.
+4. **Kontrola wątpliwych cen.** Sprawdzić kandydatów takich jak 37111 w więcej niż jednym źródle lub w kliencie. Nie usuwać istniejącej oferty wyłącznie dlatego, że pojedynczy oracle jej nie zawiera. Dla Justice/Valor Whitemane zachować przyjętą politykę: nowa cena zastępuje starszą VENDOR, a DROP/TOKEN/MARK pozostają.
 
 ## P2 — od skanu do sprawdzalnej wtyczki
 
