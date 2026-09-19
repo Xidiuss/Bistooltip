@@ -10,6 +10,11 @@ BistooltipScannerDB = BistooltipScannerDB or {}
 
 local PREFIX = "|cffffd000Bistooltip_Scanner:|r "
 
+-- Bound token rows from malformed server APIs. Stock 3.3.5 returns Honor,
+-- Arena, then token-row count: Honor (e.g. 1650) is NEVER a row count.
+-- Some server clients instead expose the later count-only signature.
+local COST_ROW_CAP = 8
+
 local function msg(text)
   if type(DEFAULT_CHAT_FRAME) == "table" and type(DEFAULT_CHAT_FRAME.AddMessage) == "function" then
     DEFAULT_CHAT_FRAME:AddMessage(PREFIX .. tostring(text), 1, 0.82, 0)
@@ -124,14 +129,15 @@ local function scanOne(rec, i, noCostAPI, st)
     end
     if itemID == nil then
       -- No link in cache: keep a positional placeholder so the slot is
-      -- not lost. Rescan overwrites the whole record, so this can never
-      -- duplicate a later keyed entry.
+      -- not lost. Once a link resolves, scanOne removes this placeholder
+      -- even on the merging page/stabilize paths.
       st.uncached = st.uncached + 1
       rec.items["pending:" .. i] = { name = (name or "?"), money = (price or 0),
         costs = {}, qty = (qty or 1), limited = limited,
         uncached = true, index = i }
       return "pending:" .. i
     else
+      rec.items["pending:" .. i] = nil
       local costs = {}
       local entryUncached = (name == nil)
       local nCostDbg = nil
@@ -140,18 +146,39 @@ local function scanOne(rec, i, noCostAPI, st)
       if canCost then
         -- Probujemy zawsze, nie tylko gdy extendedCost: czesc serwerow
         -- zle raportuje flage, a GetMerchantItemCostInfo mowi prawde.
-        local okN, nCost = pcall(GetMerchantItemCostInfo, i)
+        local okN, firstCost, arenaPoints, itemCount = pcall(GetMerchantItemCostInfo, i)
+        local nCost = firstCost -- count-only server API fallback
+        if okN and type(itemCount) == "number" then
+          -- Stock 3.3.5 MerchantFrame_UpdateAltCurrency uses these three
+          -- returns. Point currencies have names/amounts but no item IDs.
+          nCost = itemCount
+          if type(firstCost) == "number" and firstCost > 0 then
+            costs[#costs + 1] = { currName = "Honor Points", amount = firstCost }
+          end
+          if type(arenaPoints) == "number" and arenaPoints > 0 then
+            costs[#costs + 1] = { currName = "Arena Points", amount = arenaPoints }
+          end
+        end
         if okN and type(nCost) == "number" then
           nCostDbg = nCost
           if nCost > 0 then
-            for c = 1, nCost do
+            -- Clamp licznika: stock API nie zwraca wiecej niz kilku walut
+            -- na pozycje; smieciowe liczniki ucina cap.
+            local nRows = (nCost > COST_ROW_CAP) and COST_ROW_CAP or nCost
+            for c = 1, nRows do
               -- Stock 3.3.5a zwraca 3 wartosci (texture, value, link),
               -- bez nazwy: nazwe dobieramy sami przez GetItemInfo.
               local okC, _tex, amount, currLink = pcall(GetMerchantItemCostItem, i, c)
               if okC then
                 local currID = itemIDFromLink(currLink)
+                if currID == nil then
+                  -- Wiersz bez linku/ID: serwer zwraca juz tylko nil za
+                  -- realnymi wierszami (bug odznak commendation). Dalej
+                  -- sa same smieci - przerwac zamiast zapisywac "?".
+                  break
+                end
                 local currName = nil
-                if currID and type(GetItemInfo) == "function" then
+                if type(GetItemInfo) == "function" then
                   local okI, iname = pcall(GetItemInfo, currID)
                   if okI then currName = iname end
                 end
@@ -753,8 +780,10 @@ function Bistooltip_Scanner_RequestClearCache()
 end
 
 -- Walidacja rekordu: {emptyN, emptySample, nonameN, nonameSample, badN, badSample}.
--- empty = brak kosztu i brak golda; noname = koszt bez ID waluty;
--- bad = ilosc nil/<=0. Proby do 5 ID dla zwiezlosci.
+-- Renderowalny wiersz kosztu = z currID lub currName; wiersze bez obu
+-- (legacy smieci z buga licznika kosztow) eksport pomija. empty = brak
+-- golda i zaden renderowalny wiersz; noname = pominiety wiersz w pozycji,
+-- ktora ma jakis koszt/gold; bad = ilosc nil/<=0. Proby do 5 ID.
 function Bistooltip_Scanner_ValidateKey(key)
   local r = { emptyN = 0, emptySample = {}, nonameN = 0, nonameSample = {}, badN = 0, badSample = {} }
   local db = BistooltipScannerDB
@@ -768,16 +797,25 @@ function Bistooltip_Scanner_ValidateKey(key)
   for _, id in ipairs(ids) do
     local it = rec.items[id]
     if type(it) == "table" then
-      if (it.money or 0) == 0 and #(it.costs or {}) == 0 then
+      local renderable, junk = 0, false
+      for _, c in ipairs(it.costs or {}) do
+        if type(c) == "table" and (c.currID ~= nil or c.currName ~= nil) then
+          renderable = renderable + 1
+        else
+          junk = true
+        end
+      end
+      if (it.money or 0) == 0 and renderable == 0 then
         r.emptyN = r.emptyN + 1
         if #r.emptySample < 5 then r.emptySample[#r.emptySample + 1] = id end
       else
+        if junk then
+          r.nonameN = r.nonameN + 1
+          if #r.nonameSample < 5 then r.nonameSample[#r.nonameSample + 1] = id end
+        end
         for _, c in ipairs(it.costs or {}) do
-          if c.currID == nil then
-            r.nonameN = r.nonameN + 1
-            if #r.nonameSample < 5 then r.nonameSample[#r.nonameSample + 1] = id end
-            break
-          elseif c.amount == nil or tonumber(c.amount) == nil or tonumber(c.amount) <= 0 then
+          if type(c) == "table" and (c.currID ~= nil or c.currName ~= nil)
+            and (c.amount == nil or tonumber(c.amount) == nil or tonumber(c.amount) <= 0) then
             r.badN = r.badN + 1
             if #r.badSample < 5 then r.badSample[#r.badSample + 1] = id end
             break

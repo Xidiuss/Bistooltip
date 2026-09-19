@@ -668,6 +668,8 @@ local function ensureMenu()
   -- Forward: wiersz LOG/EKSPORT tworzony po layoucie, ale layout ustawia
   -- jego y (bez deklaracji Lua wiazaloby global nil — por. fix syncPendingMark).
   local logBtn1, logBtn2
+  local updatingSetRows = false
+  local applySetToFields
   -- Wiersz i na pozycji; resizeOnly=true pomija SetText (nie gubi kursora).
   local function layoutMarkSets(resizeOnly)
     local sets = {}
@@ -720,6 +722,9 @@ local function ensureMenu()
           pcall(r.del.SetPoint, r.del, "TOPRIGHT", -12, y)
         end
         if not resizeOnly then
+          -- SetText fires OnTextChanged synchronously. A partially populated
+          -- row must not overwrite the saved amount/note while rendering.
+          updatingSetRows = true
           Bistooltip_Scanner_SetCheckVisual(r.tgl, active == i)
           if type(r.id.SetText) == "function" then
             pcall(r.id.SetText, r.id, (s.id ~= nil) and tostring(s.id) or "")
@@ -730,6 +735,7 @@ local function ensureMenu()
           if type(r.note.SetText) == "function" then
             pcall(r.note.SetText, r.note, tostring(s.note or ""))
           end
+          updatingSetRows = false
         end
       end
     end
@@ -761,9 +767,11 @@ local function ensureMenu()
       local H = 420
       if need > H then H = need end
       if type(f.SetHeight) == "function" then pcall(f.SetHeight, f, H) end
+      applySetToFields(active)
     end
   end
   local function syncSetRow(i)
+    if updatingSetRows then return end
     local r = setRows[i]
     if r == nil then return end
     if type(Bistooltip_Scanner_UpdateMarkSet) ~= "function" then return end
@@ -781,15 +789,19 @@ local function ensureMenu()
       if okT and type(txt) == "string" then note = txt end
     end
     pcall(Bistooltip_Scanner_UpdateMarkSet, i, id, amt, note)
+    if type(BistooltipScannerDB) == "table" and BistooltipScannerDB._markActive == i then
+      applySetToFields(i)
+      refreshStatus()
+    end
   end
-  local function applySetToFields(i)
+  applySetToFields = function(i)
     local sets = {}
     if type(Bistooltip_Scanner_GetMarkSets) == "function" then
       local okG, t = pcall(Bistooltip_Scanner_GetMarkSets)
       if okG and type(t) == "table" then sets = t end
     end
     local s = sets[i]
-    if type(s) ~= "table" then return end
+    if type(s) ~= "table" then s = {} end
     if markBox ~= nil and type(markBox.SetText) == "function" then
       pcall(markBox.SetText, markBox, (s.id ~= nil) and tostring(s.id) or "")
     end

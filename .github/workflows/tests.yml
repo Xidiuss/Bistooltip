@@ -1,0 +1,19 @@
+name: Scanner tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  scanner:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Install Lua 5.1
+        run: sudo apt-get update && sudo apt-get install -y lua5.1
+      - name: Check syntax and merchant/export contracts
+        run: |
+          find Bistooltip_Scanner .github/tests/lua -name '*.lua' -print0 | xargs -0 -n1 luac5.1 -p
+          lua5.1 .github/tests/lua/scanner_regression.lua
+          lua5.1 .github/tests/lua/menu_regression.lua

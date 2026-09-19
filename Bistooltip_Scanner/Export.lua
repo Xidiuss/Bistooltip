@@ -35,6 +35,28 @@ local function labelFor(vendor, zone)
   return tostring(vendor)
 end
 
+-- Cache responses may arrive after scanning (including manual by-ID scans).
+-- Refresh metadata at export time without rescanning or replacing user costs.
+local function refreshCachedItem(itemID, item)
+  if type(GetItemInfo) ~= "function" then return end
+  local ok, name = pcall(GetItemInfo, itemID)
+  if ok and type(name) == "string" and name ~= "" then item.name = name end
+  local uncached = item.name == nil or item.name == "?"
+  for _, c in ipairs(item.costs or {}) do
+    if c.currID == nil and c.currName == nil then
+      -- Wiersz bez ID i nazwy (legacy smieci): render go pominie, nie
+      -- wymusza tez flagi UNCACHED.
+    else
+      if c.currID then
+        local okC, currName = pcall(GetItemInfo, c.currID)
+        if okC and type(currName) == "string" and currName ~= "" then c.currName = currName end
+      end
+      if c.currName == nil then uncached = true end
+    end
+  end
+  item.uncached = uncached
+end
+
 -- NOTE on the frozen spec's S2 example: it shows the currency item ID as
 -- an inline `-- item:CurrID` comment *inside* the cost table, before the
 -- closing braces. Taken literally that comments out the line's own
@@ -44,22 +66,27 @@ end
 -- field (name, stack/limited, currency item IDs, UNCACHED, no-cost-API)
 -- while staying luac-clean S3.
 local function buildItemLine(itemID, item, custom, label)
+  refreshCachedItem(itemID, item)
   local head
+  local cost = {} -- czesci kosztu; w zakresie takze dla ogona EMPTY-COST
   if custom then
     head = "BisTooltip:SetAcquisition(" .. itemID
       .. ', { { kind = "CUSTOM", label = "' .. esc(label) .. '" } })'
   else
-    local cost = {}
     if (item.money or 0) > 0 then
       cost[#cost + 1] = '{ currency = "Gold", amount = ' .. item.money .. " }"
     end
+    -- Wiersze bez ID i bez nazwy (legacy smieci z buga licznika kosztow)
+    -- nie sa renderowalne: pomijane zamiast produkowac currency = "?".
     for _, c in ipairs(item.costs or {}) do
-      -- ID zawsze widoczne: bez cache GetItemInfo nazwa jest nil,
-      -- wtedy w pole currency wchodzi item:ID zamiast "?".
-      local curLabel = c.currName
-      if curLabel == nil and c.currID ~= nil then curLabel = "item:" .. tostring(c.currID) end
-      cost[#cost + 1] = '{ currency = "' .. esc(curLabel)
-        .. '", amount = ' .. tostring(c.amount or 0) .. " }"
+      if c.currName ~= nil or c.currID ~= nil then
+        -- ID zawsze widoczne: bez cache GetItemInfo nazwa jest nil,
+        -- wtedy w pole currency wchodzi item:ID zamiast "?".
+        local curLabel = c.currName
+        if curLabel == nil then curLabel = "item:" .. tostring(c.currID) end
+        cost[#cost + 1] = '{ currency = "' .. esc(curLabel)
+          .. '", amount = ' .. tostring(c.amount or 0) .. " }"
+      end
     end
     head = "BisTooltip:SetAcquisition(" .. itemID
       .. ', { { kind = "VENDOR", cost = { ' .. table.concat(cost, ", ") .. " } } })"
@@ -74,9 +101,10 @@ local function buildItemLine(itemID, item, custom, label)
   end
   if item.uncached then tail = tail .. " -- UNCACHED" end
   if item.noCostAPI then tail = tail .. " -- no cost API" end
-  if not custom and (item.money or 0) == 0 and #(item.costs or {}) == 0 then
-    -- Pusty koszt: przyczyna wprost w linii, bez /script.
-    -- Manual by-ID z zasady nie zna ceny (brak kontekstu vendora).
+  if not custom and #cost == 0 then
+    -- Pusty koszt (po filtracji smieciowych wierszy): przyczyna wprost
+    -- w linii, bez /script. Manual by-ID z zasady nie zna ceny (brak
+    -- kontekstu vendora).
     tail = tail .. " -- EMPTY-COST ext=" .. tostring(item.ext) .. " nCost=" .. tostring(item.nCost)
     if type(item.tip) == "table" and #item.tip > 0 then
       local t = table.concat(item.tip, " | ")
@@ -236,13 +264,19 @@ function Bistooltip_Scanner_BuildCSV(vendorKey, skipIDs)
   for _, id in ipairs(ids) do
     local item = rec.items[id]
     if type(item) == "table" then
-      if #(item.costs or {}) == 0 then
-        lines[#lines + 1] = id .. ";" .. cell(item.name) .. ";;;"
+      refreshCachedItem(id, item)
+      -- Jak w S3: wiersze bez ID i nazwy (legacy smieci) pomijane.
+      local rows = {}
+      for _, c in ipairs(item.costs or {}) do
+        if c.currName ~= nil or c.currID ~= nil then rows[#rows + 1] = c end
+      end
+      if #rows == 0 then
+        lines[#lines + 1] = id .. ";" .. cell(item.name) .. ";;;;"
           .. tostring(item.money or 0)
       else
-        for _, c in ipairs(item.costs) do
+        for _, c in ipairs(rows) do
           local label = c.currName
-          if label == nil and c.currID ~= nil then label = "item:" .. c.currID end
+          if label == nil then label = "item:" .. c.currID end
           lines[#lines + 1] = id .. ";" .. cell(item.name) .. ";" .. cell(label)
             .. ";" .. tostring(c.amount or 0) .. ";" .. tostring(c.currID or "")
             .. ";" .. tostring(item.money or 0)
