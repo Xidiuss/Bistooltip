@@ -1,6 +1,8 @@
 # Bistooltip Scanner
 
-Standalone vendor and item-ID collector for WoW 3.3.5a (`Interface: 30300`). This branch ships only `Bistooltip_Scanner`; the current TOC version is `0.2.1`. Core Bistooltip is optional for scanning. Copy `Bistooltip_Scanner` into `Interface/AddOns` and enable it in the client.
+Standalone vendor and item-ID collector for WoW 3.3.5a (`Interface: 30300`). This branch ships only `Bistooltip_Scanner`; the current TOC version is `0.2.1`. Core Bistooltip is optional for scanning. Copy `Bistooltip_Scanner` into `Interface/AddOns` and enable it in the client. This tool records observations for review; it does not create BiS rankings or install a server overlay.
+
+**Current status:** local offline regressions cover the corrected 3.3.5 merchant cost signature, cache resolution, CSV rows, and live preset edits. A native Lua 5.1 CI run and an in-game merchant test are still needed before release. The [project roadmap](https://github.com/Xidiuss/Bistooltip/blob/main/docs/ROADMAP.md) tracks the scanner-to-plugin workflow and its remaining limits.
 
 The scanner stores observations in the account SavedVariables table `BistooltipScannerDB`. It does not modify the core addon or install generated plugins. Server APIs and the local item cache determine what can be collected.
 
