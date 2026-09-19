@@ -21,6 +21,9 @@ The scanner stores observations in the account SavedVariables table `BistooltipS
 | `/bisscan setcost 12345 456 7` | Replace the item-cost list for item 12345 in the last record. |
 | `/bisscan undo` | Undo the last manual cost assignment (one level). |
 | `/bisscan custom` | Toggle CUSTOM export for a donate/shop label instead of VENDOR costs. |
+| `/bisscan mode append` | Add each scanned purchase route, preserving existing sources; default mode. |
+| `/bisscan mode replace_vendor` | Replace only existing VENDOR offers, preserving DROP/TOKEN/MARK/ACTIVITY/CUSTOM. Requires matching current core. |
+| `/bisscan mode replace_all` | Replace every acquisition route for the item; legacy behavior. |
 | `/bisscan export` or `/bisscan log` | Export logged merchants, or the last record if the log is empty. |
 | `/bisscan csv` | Export semicolon-separated item/cost data. |
 | `/bisscan clearlog` | Clear the selected vendor log, retaining observations. |
@@ -38,11 +41,11 @@ A defensive eight-row cap applies to token counts, without truncating Honor/Aren
 
 ## Export contract
 
-Lua export uses `BisTooltip:SetAcquisition`: executing it **replaces all acquisition routes** for each item. To preserve core drops and add vendor alternatives, review and convert those lines to `AddAcquisition`, as the shipped server plugins do. Scanner output is input for review, not a ready-to-install addon.
+The menu's **Export** mode button cycles through `append`, `replace_vendor`, and `replace_all`; `/bisscan mode ...` selects the same policy. Default `append` emits `AddAcquisition`, suitable for additional Whitemane custom-emblem routes. `replace_vendor` emits `ReplaceVendorAcquisitions`, suitable for Whitemane Justice/Valor prices that supersede WotLK emblem vendor prices while retaining non-vendor sources. `replace_all` emits `SetAcquisition` and removes all previous routes. These modes change export behavior, not the merchant scan; item upgrades are outside this scanner contract for now. Scanner output is input for review, not a ready-to-install addon.
 
-The log exports each item ID once; the last merchant in log order wins, even if two merchants offer different currencies. Updating an existing log entry keeps its position. Review DEDUPE warnings before discarding alternatives. Merchant records use `name @ zone` keys, so servers/realms with matching merchant names share that key in the account database.
+In `append`, the log exports every merchant offer, including repeated item IDs with different currencies. `replace_vendor` and `replace_all` currently keep the last merchant for each item ID and warn about duplicates; review those warnings before discarding alternatives. Merchant records use `name @ zone` keys, so servers/realms with matching merchant names share that key in the account database.
 
-Currency names and amounts are executable fields; currency item IDs are retained in trailing Lua comments and CSV `currID`. Money is in **copper**. Quantity/limited-stock details appear in comments. CUSTOM mode exports a label and omits costs. Missing prices produce EMPTY-COST warnings; resolve them before using the output.
+Currency names and amounts are executable fields; currency item IDs are retained in trailing Lua comments and CSV `currID`. Money is in **copper**. Quantity/limited-stock details appear in comments. CUSTOM mode exports a label and omits costs. Missing prices produce commented `UNRESOLVED PRICE` lines with EMPTY-COST warnings; resolve them before using the output.
 
 Honor Points and Arena Points have names and amounts but no currency item ID; their CSV `currID` field is empty.
 

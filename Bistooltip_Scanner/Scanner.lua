@@ -905,7 +905,8 @@ function Bistooltip_Scanner_ExportText()
   -- DEDUPE: kazdy itemID eksportowany RAZ (ostatni vendor wygrywa, zgodnie
   -- z semantyka wklejania). Pomijane wystapienia trafiaja do notek ponizej.
   local winner = {}
-  if type(Bistooltip_Scanner_DedupeWinners) == "function" then
+  if Bistooltip_Scanner_GetExportMode() ~= "append"
+    and type(Bistooltip_Scanner_DedupeWinners) == "function" then
     local okW, w = pcall(Bistooltip_Scanner_DedupeWinners, keys)
     if okW and type(w) == "table" then winner = w end
   end
@@ -913,7 +914,8 @@ function Bistooltip_Scanner_ExportText()
   local parts = { table.concat(head, "\n") }
   for _, key in ipairs(keys) do
     local skip = nil
-    if type(Bistooltip_Scanner_SkipForKey) == "function" then
+    if Bistooltip_Scanner_GetExportMode() ~= "append"
+      and type(Bistooltip_Scanner_SkipForKey) == "function" then
       local okS, s = pcall(Bistooltip_Scanner_SkipForKey, key, winner)
       if okS and type(s) == "table" then skip = s end
     end
@@ -954,14 +956,16 @@ function Bistooltip_Scanner_CSVText()
   local keys = logKeys()
   if #keys == 0 then return nil end
   local winner = {}
-  if type(Bistooltip_Scanner_DedupeWinners) == "function" then
+  if Bistooltip_Scanner_GetExportMode() ~= "append"
+    and type(Bistooltip_Scanner_DedupeWinners) == "function" then
     local okW, w = pcall(Bistooltip_Scanner_DedupeWinners, keys)
     if okW and type(w) == "table" then winner = w end
   end
   local parts = {}
   for _, key in ipairs(keys) do
     local skip = nil
-    if type(Bistooltip_Scanner_SkipForKey) == "function" then
+    if Bistooltip_Scanner_GetExportMode() ~= "append"
+      and type(Bistooltip_Scanner_SkipForKey) == "function" then
       local okS, s = pcall(Bistooltip_Scanner_SkipForKey, key, winner)
       if okS and type(s) == "table" then skip = s end
     end
@@ -992,6 +996,14 @@ local function onSlash(raw)
     else
       msg("No CUSTOM toggle.")
     end
+    return
+  end
+  local mode = s:match("^mode%s+(%S+)$")
+  if mode then
+    local selected = type(Bistooltip_Scanner_SetExportMode) == "function"
+      and Bistooltip_Scanner_SetExportMode(mode)
+    msg(selected and ("Export mode: " .. selected)
+      or "Usage: /bisscan mode append|replace_vendor|replace_all")
     return
   end
   if s == "export" or s == "log" then
@@ -1084,7 +1096,7 @@ local function onSlash(raw)
     end
     return
   end
-  msg("Usage: /bisscan | /bisscan page | /bisscan stab | /bisscan <itemID> | /bisscan menu | /bisscan export | /bisscan csv | /bisscan log | /bisscan clearlog | /bisscan clearcache | /bisscan custom | /bisscan setcost <markID> <amount> | /bisscan undo")
+  msg("Usage: /bisscan | /bisscan page | /bisscan stab | /bisscan <itemID> | /bisscan menu | /bisscan export | /bisscan csv | /bisscan log | /bisscan clearlog | /bisscan clearcache | /bisscan custom | /bisscan mode append|replace_vendor|replace_all | /bisscan setcost <markID> <amount> | /bisscan undo")
 end
 
 if type(SlashCmdList) == "table" then

@@ -7,6 +7,21 @@
 
 -- Custom toggle backing the export-window checkbox. Default off (VENDOR).
 Bistooltip_Scanner_UseCustom = Bistooltip_Scanner_UseCustom or false
+Bistooltip_Scanner_ExportMode = Bistooltip_Scanner_ExportMode or nil
+
+local exportModes = {append=true, replace_vendor=true, replace_all=true}
+function Bistooltip_Scanner_GetExportMode()
+  if exportModes[Bistooltip_Scanner_ExportMode] then return Bistooltip_Scanner_ExportMode end
+  local db = BistooltipScannerDB
+  if type(db) == "table" and exportModes[db._exportMode] then return db._exportMode end
+  return "append"
+end
+function Bistooltip_Scanner_SetExportMode(mode)
+  if not exportModes[mode] then return nil end
+  Bistooltip_Scanner_ExportMode = mode
+  if type(BistooltipScannerDB) == "table" then BistooltipScannerDB._exportMode = mode end
+  return mode
+end
 
 -- Max lines shown in the copy window; full text always stays in SV.
 Bistooltip_Scanner_MaxWindowLines = Bistooltip_Scanner_MaxWindowLines or 500
@@ -88,8 +103,15 @@ local function buildItemLine(itemID, item, custom, label)
           .. '", amount = ' .. tostring(c.amount or 0) .. " }"
       end
     end
-    head = "BisTooltip:SetAcquisition(" .. itemID
-      .. ', { { kind = "VENDOR", cost = { ' .. table.concat(cost, ", ") .. " } } })"
+    local mode = Bistooltip_Scanner_GetExportMode()
+    local offer = '{ kind = "VENDOR", cost = { ' .. table.concat(cost, ", ") .. " } }"
+    if mode == "append" then
+      head = "BisTooltip:AddAcquisition(" .. itemID .. ", " .. offer .. ")"
+    elseif mode == "replace_vendor" then
+      head = "BisTooltip:ReplaceVendorAcquisitions(" .. itemID .. ", { " .. offer .. " })"
+    else
+      head = "BisTooltip:SetAcquisition(" .. itemID .. ", { " .. offer .. " })"
+    end
   end
   local tail = " -- " .. safeComment(item.name)
   if (item.qty or 1) > 1 then tail = tail .. " x" .. item.qty end
@@ -111,6 +133,7 @@ local function buildItemLine(itemID, item, custom, label)
       if #t > 220 then t = t:sub(1, 220) .. "..." end
       tail = tail .. " -- TIP: " .. safeComment(t)
     end
+    head = "-- UNRESOLVED PRICE: " .. head
   end
   return head .. tail
 end

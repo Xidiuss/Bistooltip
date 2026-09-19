@@ -1,5 +1,6 @@
 -- Real menu callbacks, with synchronous EditBox SetText notifications as in WoW.
 dofile("Bistooltip_Scanner/Scanner.lua")
+dofile("Bistooltip_Scanner/Export.lua")
 local noop=function() end
 local methods={}
 local function widget()
@@ -41,6 +42,11 @@ local function test(name,run)
   if ok then print("PASS "..name) else failures=failures+1;print("FAIL "..name..": "..tostring(err)) end
 end
 local function click(frame) assert(frame:GetScript("OnClick"))(frame) end
+test("export mode button cycles purchase policies",function()
+  local before=Bistooltip_Scanner_GetExportMode()
+  click(BistooltipScannerMenuMode)
+  assert(Bistooltip_Scanner_GetExportMode()~=before,"mode button did not switch policy")
+end)
 test("opening the menu preserves saved preset fields",function()
   assert(BistooltipScannerDB._markSets[1].amount==7,"layout overwrote stored amount")
   assert(BistooltipScannerDB._markSets[1].note=="Active","layout overwrote stored note")

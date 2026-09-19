@@ -8,6 +8,32 @@ end
 
 dofile("Bistooltip_Scanner/Scanner.lua")
 dofile("Bistooltip_Scanner/Export.lua")
+Bistooltip_Scanner_ExportMode = "replace_all" -- existing fixtures exercise legacy output
+
+test("export modes keep purchase route semantics explicit", function()
+  BistooltipScannerDB = { test = {vendor="Vendor",zone="Zone",items={
+    [123]={name="Sword",money=0,costs={{currName="Justice",amount=700}}}
+  }} }
+  Bistooltip_Scanner_ExportMode = "append"
+  assert(Bistooltip_Scanner_BuildSnippet("test"):find("BisTooltip:AddAcquisition(123",1,true))
+  Bistooltip_Scanner_ExportMode = "replace_vendor"
+  assert(Bistooltip_Scanner_BuildSnippet("test"):find("BisTooltip:ReplaceVendorAcquisitions(123",1,true))
+  Bistooltip_Scanner_ExportMode = "replace_all"
+  assert(Bistooltip_Scanner_BuildSnippet("test"):find("BisTooltip:SetAcquisition(123",1,true))
+end)
+
+test("append mode exports both merchants selling the same item", function()
+  BistooltipScannerDB = {_log={"A","B"},
+    A={vendor="A",zone="Z",items={[123]={name="Sword",costs={{currName="Justice",amount=700}}}}},
+    B={vendor="B",zone="Z",items={[123]={name="Sword",costs={{currName="Ascension",amount=20}}}}}}
+  Bistooltip_Scanner_ExportMode = "append"
+  local text = Bistooltip_Scanner_ExportText()
+  local count = 0
+  for _ in text:gmatch("BisTooltip:AddAcquisition%(123") do count = count + 1 end
+  assert(count == 2, "append mode discarded a second merchant offer")
+  Bistooltip_Scanner_ExportMode = "replace_all"
+end)
+Bistooltip_Scanner_ExportMode = "replace_all"
 
 -- A merchant slot with a late link must become one item, not two records.
 test("page rescan resolves positional placeholder", function()

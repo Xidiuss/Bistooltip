@@ -10,6 +10,7 @@ local markBox = nil
 local qtyBox = nil
 local customBtn = nil
 local customLabelFs = nil
+local modeBtn = nil
 local noteHeaderFs = nil
 
 -- Dark styling (ten sam look co Export.lua z "scanner wygląd").
@@ -96,6 +97,10 @@ local function refreshStatus()
   if customBtn ~= nil then
     Bistooltip_Scanner_SetCheckVisual(customBtn, Bistooltip_Scanner_UseCustom == true)
   end
+  if modeBtn and type(modeBtn.SetText) == "function"
+    and type(Bistooltip_Scanner_GetExportMode) == "function" then
+    modeBtn:SetText("Export: " .. Bistooltip_Scanner_GetExportMode())
+  end
 end
 
 -- Zielona fajka na ciemnym przycisku (standard wszystkich checkboxow menu).
@@ -156,6 +161,9 @@ function Bistooltip_Scanner_MenuStatus()
   local s = "vendors: " .. nKeys .. "  items: " .. total
   if type(db._lastKey) == "string" then s = s .. "  |  last: " .. db._lastKey end
   if Bistooltip_Scanner_UseCustom then s = s .. "  [CUSTOM]" else s = s .. "  [VENDOR]" end
+  if type(Bistooltip_Scanner_GetExportMode) == "function" then
+    s = s .. "  [" .. Bistooltip_Scanner_GetExportMode() .. "]"
+  end
   if type(Bistooltip_Scanner_ActiveMarkLabel) == "function" then
     local okL, lab = pcall(Bistooltip_Scanner_ActiveMarkLabel)
     if okL and type(lab) == "string" then s = s .. "  |  set: " .. lab end
@@ -755,7 +763,11 @@ local function ensureMenu()
       if type(customLabelFs.ClearAllPoints) == "function" then pcall(customLabelFs.ClearAllPoints, customLabelFs) end
       pcall(customLabelFs.SetPoint, customLabelFs, "TOPLEFT", 12 + 36, customBoxY - 6)
     end
-    local logY = customBoxY - 46
+    if modeBtn ~= nil and type(modeBtn.SetPoint) == "function" then
+      if type(modeBtn.ClearAllPoints) == "function" then pcall(modeBtn.ClearAllPoints, modeBtn) end
+      pcall(modeBtn.SetPoint, modeBtn, "TOPLEFT", 12, customBoxY - 34)
+    end
+    local logY = customBoxY - 76
     for _, e in ipairs(rightCol) do
       if type(e) == "table" and (e.b == logBtn1 or e.b == logBtn2) then
         e.y = logY
@@ -763,7 +775,7 @@ local function ensureMenu()
     end
     applyResponsive(fwNow() - 460)
     if not resizeOnly then
-      local need = -customBoxY + 176
+      local need = -customBoxY + 210
       local H = 420
       if need > H then H = need end
       if type(f.SetHeight) == "function" then pcall(f.SetHeight, f, H) end
@@ -933,6 +945,22 @@ local function ensureMenu()
     if type(customBtn.SetScript) == "function" then
       customBtn:SetScript("OnClick", function() Bistooltip_Scanner_ToggleCustom() end)
     end
+  end)
+  pcall(function()
+    modeBtn = CreateFrame("Button", "BistooltipScannerMenuMode", f)
+    if modeBtn == nil then return end
+    if type(modeBtn.SetSize) == "function" then modeBtn:SetSize(230, 24) end
+    styleDarkButton(modeBtn)
+    modeBtn:SetScript("OnClick", function()
+      if type(Bistooltip_Scanner_GetExportMode) ~= "function"
+        or type(Bistooltip_Scanner_SetExportMode) ~= "function" then return end
+      local current = Bistooltip_Scanner_GetExportMode()
+      local nextMode = current == "append" and "replace_vendor"
+        or current == "replace_vendor" and "replace_all" or "append"
+      Bistooltip_Scanner_SetExportMode(nextMode)
+      refreshStatus()
+    end)
+    refreshStatus()
   end)
   -- Domyslnie jeden pusty wiersz (pierwsze zbudowanie menu, puste SV).
   if type(Bistooltip_Scanner_GetMarkSets) == "function"
