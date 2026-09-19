@@ -657,6 +657,7 @@ BisTooltip:AddAcquisition(37192, { kind = "VENDOR", cost = { { currency = "Emble
 BisTooltip:SetAcquisition(5000759, { { kind = "VENDOR", cost = { { currency = "Plagued Legendary Shard", amount = 1 } } } }, P) -- Scroll of Enchant Necklace - Damage All -- item:5000971
 BisTooltip:SetAcquisition(5000760, { { kind = "VENDOR", cost = { { currency = "Plagued Legendary Shard", amount = 1 } } } }, P) -- Scroll of Enchant Necklace - Reduce All -- item:5000971
 BisTooltip:SetAcquisition(5000761, { { kind = "VENDOR", cost = { { currency = "Plagued Legendary Shard", amount = 1 } } } }, P) -- Scroll of Enchant Necklace - Heal All -- item:5000971
+BisTooltip:SetAcquisition(5000762, { { kind = "VENDOR", cost = { { currency = "Plagued Legendary Shard", amount = 1 } } } }, P) -- Scroll of Enchant Necklace - Great Wall -- item:5000971
 BisTooltip:SetAcquisition(5000763, { { kind = "VENDOR", cost = { { currency = "Plagued Legendary Shard", amount = 1 } } } }, P) -- Scroll of Enchant Necklace - Huge Rocket -- item:5000971
 BisTooltip:SetAcquisition(5000764, { { kind = "VENDOR", cost = { { currency = "Plagued Legendary Shard", amount = 1 } } } }, P) -- Scroll of Enchant Necklace - Lightning Empowerement -- item:5000971
 BisTooltip:SetAcquisition(5000765, { { kind = "VENDOR", cost = { { currency = "Plagued Legendary Shard", amount = 1 } } } }, P) -- Scroll of Enchant Necklace - Critical Empowerement -- item:5000971
