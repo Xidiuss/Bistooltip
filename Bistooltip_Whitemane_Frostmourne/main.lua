@@ -426,3 +426,179 @@ BisTooltip:AddAcquisition(131004, { kind = "VENDOR", cost = { { currency = "Embl
 BisTooltip:AddAcquisition(131008, { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 1 } } }, P)
 BisTooltip:AddAcquisition(131010, { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 2 } } }, P)
 BisTooltip:AddAcquisition(150005, { kind = "VENDOR", cost = { { currency = "Emblem of Ascension", amount = 80 } } }, P)
+
+
+-- Bistooltip_Scanner EXPORT | vendors: 1 | 2026-09-19
+-- Magistrix Lambriesse / Dalaran / 2026-09-19 / 37 by Bistooltip_Scanner
+-- Owner policy: current Justice/Valor offers replace older vendor prices,
+-- while DROP/TOKEN/MARK/CUSTOM methods remain. Keep the core API unchanged.
+local function ReplaceVendorAcquisitions(itemID, offers)
+    local entries = {}
+    for _, entry in ipairs(BisTooltip_ItemAcquisition[itemID] or {}) do
+        if entry.kind ~= "VENDOR" then entries[#entries + 1] = entry end
+    end
+    for _, offer in ipairs(offers) do entries[#entries + 1] = offer end
+    BisTooltip:SetAcquisition(itemID, entries, P)
+end
+ReplaceVendorAcquisitions(39728, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Totem of Misery -- item:40752
+ReplaceVendorAcquisitions(39757, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Idol of Worship -- item:40752
+ReplaceVendorAcquisitions(40191, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Libram of Radiance -- item:40752
+ReplaceVendorAcquisitions(40207, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Sigil of Awareness -- item:40752
+ReplaceVendorAcquisitions(40267, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Totem of Hex -- item:40752
+ReplaceVendorAcquisitions(40268, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Libram of Tolerance -- item:40752
+ReplaceVendorAcquisitions(40321, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Idol of the Shooting Star -- item:40752
+ReplaceVendorAcquisitions(40322, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Totem of Dueling -- item:40752
+ReplaceVendorAcquisitions(40337, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Libram of Resurgence -- item:40752
+ReplaceVendorAcquisitions(40342, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Idol of Awakening -- item:40752
+ReplaceVendorAcquisitions(40636, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 2200 } } } }) -- Legplates of the Lost Vanquisher -- item:40752
+ReplaceVendorAcquisitions(40639, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Mantle of the Lost Vanquisher -- item:40752
+ReplaceVendorAcquisitions(40717, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Ring of Invincibility -- item:40752
+ReplaceVendorAcquisitions(40718, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Signet of the Impregnable Fortress -- item:40752
+ReplaceVendorAcquisitions(40719, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Band of Channeled Magic -- item:40752
+ReplaceVendorAcquisitions(40720, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Renewal of Life -- item:40752
+ReplaceVendorAcquisitions(40721, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Hammerhead Sharkskin Cloak -- item:40752
+ReplaceVendorAcquisitions(40722, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Platinum Mesh Cloak -- item:40752
+ReplaceVendorAcquisitions(40723, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Disguise of the Kumiho -- item:40752
+ReplaceVendorAcquisitions(40724, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Cloak of Kea Feathers -- item:40752
+ReplaceVendorAcquisitions(40733, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Wristbands of the Sentinel Huntress -- item:40752
+ReplaceVendorAcquisitions(40734, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Bracers of Dalaran's Parapets -- item:40752
+ReplaceVendorAcquisitions(40735, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Zartson's Jungle Vambraces -- item:40752
+ReplaceVendorAcquisitions(40736, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Armguard of the Tower Archer -- item:40752
+ReplaceVendorAcquisitions(40737, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Pigmented Clan Bindings -- item:40752
+ReplaceVendorAcquisitions(40738, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Wristwraps of the Cutthroat -- item:40752
+ReplaceVendorAcquisitions(40739, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Bands of the Great Tree -- item:40752
+ReplaceVendorAcquisitions(40740, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Wraps of the Astral Traveler -- item:40752
+ReplaceVendorAcquisitions(40741, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Cuffs of the Shadow Ascendant -- item:40752
+ReplaceVendorAcquisitions(40743, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Kyzoc's Ground Stompers -- item:40752
+ReplaceVendorAcquisitions(40745, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Sabatons of Rapid Recovery -- item:40752
+ReplaceVendorAcquisitions(40746, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Pack-Ice Striders -- item:40752
+ReplaceVendorAcquisitions(40747, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Treads of Coastal Wandering -- item:40752
+ReplaceVendorAcquisitions(40748, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Boots of Captain Ellis -- item:40752
+ReplaceVendorAcquisitions(40749, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Rainey's Chewed Boots -- item:40752
+ReplaceVendorAcquisitions(40750, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Xintor's Expeditionary Boots -- item:40752
+ReplaceVendorAcquisitions(40751, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Slippers of the Holy Light -- item:40752
+
+-- Bistooltip_Scanner EXPORT | vendors: 1 | 2026-09-19
+-- Magister Sarien / Dalaran / 2026-09-19 / 28 by Bistooltip_Scanner
+ReplaceVendorAcquisitions(37111, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Soul Preserver -- item:40752
+ReplaceVendorAcquisitions(40612, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 2200 } } } }) -- Chestguard of the Lost Vanquisher -- item:40752
+ReplaceVendorAcquisitions(40615, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Gloves of the Lost Vanquisher -- item:40752
+ReplaceVendorAcquisitions(40678, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Pendant of the Outcast Hero -- item:40752
+ReplaceVendorAcquisitions(40679, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Chained Military Gorget -- item:40752
+ReplaceVendorAcquisitions(40680, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Encircling Burnished Gold Chains -- item:40752
+ReplaceVendorAcquisitions(40681, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Lattice Choker of Light -- item:40752
+ReplaceVendorAcquisitions(40682, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Sundial of the Exiled -- item:40752
+ReplaceVendorAcquisitions(40683, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Valor Medal of the First War -- item:40752
+ReplaceVendorAcquisitions(40684, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Mirror of Truth -- item:40752
+ReplaceVendorAcquisitions(40685, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- The Egg of Mortal Essence -- item:40752
+ReplaceVendorAcquisitions(40688, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Verdungo's Barbarian Cord -- item:40752
+ReplaceVendorAcquisitions(40689, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Waistguard of Living Iron -- item:40752
+ReplaceVendorAcquisitions(40691, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Magroth's Meditative Cincture -- item:40752
+ReplaceVendorAcquisitions(40692, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Vereesa's Silver Chain Belt -- item:40752
+ReplaceVendorAcquisitions(40693, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Beadwork Belt of Shamanic Vision -- item:40752
+ReplaceVendorAcquisitions(40694, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Jorach's Crocolisk Skin Belt -- item:40752
+ReplaceVendorAcquisitions(40695, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Vine Belt of the Woodland Dryad -- item:40752
+ReplaceVendorAcquisitions(40696, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Plush Sash of Guzbah -- item:40752
+ReplaceVendorAcquisitions(40697, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Elegant Temple Gardens' Girdle -- item:40752
+ReplaceVendorAcquisitions(40698, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 950 } } } }) -- Ward of the Violet Citadel -- item:40752
+ReplaceVendorAcquisitions(40699, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 950 } } } }) -- Handbook of Obscure Remedies -- item:40752
+ReplaceVendorAcquisitions(40700, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 950 } } } }) -- Protective Barricade of the Light -- item:40752
+ReplaceVendorAcquisitions(40701, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 950 } } } }) -- Crygil's Discarded Plate Panel -- item:40752
+ReplaceVendorAcquisitions(40702, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 950 } } } }) -- Rolfsen's Ripper -- item:40752
+ReplaceVendorAcquisitions(40703, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 950 } } } }) -- Grasscutter -- item:40752
+ReplaceVendorAcquisitions(40704, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 950 } } } }) -- Pride -- item:40752
+ReplaceVendorAcquisitions(40716, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Lillehoff's Winged Blades -- item:40752
+
+-- Bistooltip_Scanner EXPORT | vendors: 1 | 2026-09-19
+-- Magister Brasael / Dalaran / 2026-09-19 / 47 by Bistooltip_Scanner
+ReplaceVendorAcquisitions(41649, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 2200 } } } }) -- Deadly Gladiator's Leather Tunic -- item:40753
+ReplaceVendorAcquisitions(41654, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 2200 } } } }) -- Deadly Gladiator's Leather Legguards -- item:40753
+ReplaceVendorAcquisitions(41671, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 2200 } } } }) -- Deadly Gladiator's Leather Helm -- item:40753
+ReplaceVendorAcquisitions(41682, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Deadly Gladiator's Leather Spaulders -- item:40753
+ReplaceVendorAcquisitions(41766, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Deadly Gladiator's Leather Gloves -- item:40753
+ReplaceVendorAcquisitions(45114, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Steamcaller's Totem -- item:40753
+ReplaceVendorAcquisitions(45144, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Sigil of Deflection -- item:40753
+ReplaceVendorAcquisitions(45145, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Libram of the Sacred Shield -- item:40753
+ReplaceVendorAcquisitions(45169, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Totem of the Dancing Flame -- item:40753
+ReplaceVendorAcquisitions(45254, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Sigil of the Vengeful Heart -- item:40753
+ReplaceVendorAcquisitions(45255, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Thunderfall Totem -- item:40753
+ReplaceVendorAcquisitions(45270, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Idol of the Crying Wind -- item:40753
+ReplaceVendorAcquisitions(45436, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Libram of the Resolute -- item:40753
+ReplaceVendorAcquisitions(45509, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Idol of the Corruptor -- item:40753
+ReplaceVendorAcquisitions(45510, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Libram of Discord -- item:40753
+ReplaceVendorAcquisitions(45634, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 2200 } } } }) -- Breastplate of the Wayward Vanquisher -- item:40753
+ReplaceVendorAcquisitions(45640, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 2200 } } } }) -- Crown of the Wayward Vanquisher -- item:40753
+ReplaceVendorAcquisitions(45819, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Spiked Battleguard Choker -- item:40753
+ReplaceVendorAcquisitions(45820, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Broach of the Wailing Night -- item:40753
+ReplaceVendorAcquisitions(45821, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Shard of the Crystal Forest -- item:40753
+ReplaceVendorAcquisitions(45822, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Evoker's Charm -- item:40753
+ReplaceVendorAcquisitions(45823, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Frozen Tear of Elune -- item:40753
+ReplaceVendorAcquisitions(45824, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Belt of the Singing Blade -- item:40753
+ReplaceVendorAcquisitions(45825, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Shieldwarder Girdle -- item:40753
+ReplaceVendorAcquisitions(45826, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Girdle of Unyielding Trust -- item:40753
+ReplaceVendorAcquisitions(45827, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Belt of the Ardent Marksman -- item:40753
+ReplaceVendorAcquisitions(45828, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Windchill Binding -- item:40753
+ReplaceVendorAcquisitions(45829, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Belt of the Twilight Assassin -- item:40753
+ReplaceVendorAcquisitions(45830, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Belt of the Living Thicket -- item:40753
+ReplaceVendorAcquisitions(45831, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Sash of Potent Incantations -- item:40753
+ReplaceVendorAcquisitions(45833, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Bladebreaker Gauntlets -- item:40753
+ReplaceVendorAcquisitions(45834, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Gauntlets of the Royal Watch -- item:40753
+ReplaceVendorAcquisitions(45835, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Gauntlets of Serene Blessing -- item:40753
+ReplaceVendorAcquisitions(45836, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Gloves of Unerring Aim -- item:40753
+ReplaceVendorAcquisitions(45837, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Gloves of Augury -- item:40753
+ReplaceVendorAcquisitions(45838, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Gloves of the Blind Stalker -- item:40753
+ReplaceVendorAcquisitions(45839, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Grips of the Secret Grove -- item:40753
+ReplaceVendorAcquisitions(45840, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Touch of the Occult -- item:40753
+ReplaceVendorAcquisitions(45841, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 2200 } } } }) -- Legplates of the Violet Champion -- item:40753
+ReplaceVendorAcquisitions(45842, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 2200 } } } }) -- Wyrmguard Legplates -- item:40753
+ReplaceVendorAcquisitions(45843, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 2200 } } } }) -- Legguards of the Peaceful Covenant -- item:40753
+ReplaceVendorAcquisitions(45844, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 2200 } } } }) -- Leggings of the Tireless Sentry -- item:40753
+ReplaceVendorAcquisitions(45845, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 2200 } } } }) -- Leggings of the Weary Mystic -- item:40753
+ReplaceVendorAcquisitions(45846, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 2200 } } } }) -- Leggings of Wavering Shadow -- item:40753
+ReplaceVendorAcquisitions(45847, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 2200 } } } }) -- Wildstrider Legguards -- item:40753
+ReplaceVendorAcquisitions(45848, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 2200 } } } }) -- Legwraps of the Master Conjurer -- item:40753
+ReplaceVendorAcquisitions(46138, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Idol of the Flourishing Life -- item:40753
+
+
+
+
+-- Bistooltip_Scanner EXPORT | LEGENDARY WEAPONS
+-- Planned BiS update: 23 annotated item IDs, not acquisition evidence.
+-- Preserve the notes below; enable only after sources/prices and rank targets
+-- are confirmed. These observations must not erase existing runtime sources.
+-- PLANNED (not a source): BisTooltip:SetAcquisition(128858, { { kind = "VENDOR", cost = {  } } }) -- Embersoul, Scythe of the Cat God -- EMPTY-COST ext=nil nCost=nil | ilvl 245 [BIS T8 feral]
+-- PLANNED (not a source): BisTooltip:SetAcquisition(315010, { { kind = "VENDOR", cost = {  } } }) -- Embersoul, Scythe of the Cat God -- EMPTY-COST ext=nil nCost=nil | ilvl 258 [BIS T9 feral]
+
+-- PLANNED (not a source): BisTooltip:SetAcquisition(130023, { { kind = "VENDOR", cost = {  } } }) -- Atiesh, Greatstaff of the Guardian -- EMPTY-COST ext=nil nCost=nil | mage   BIS T7-T8 ilvl 232
+-- PLANNED (not a source): BisTooltip:SetAcquisition(315003, { { kind = "VENDOR", cost = {  } } }) -- Atiesh, Greatstaff of the Guardian -- EMPTY-COST ext=nil nCost=nil | mage T9 BIS ilvl 258
+-- PLANNED (not a source): BisTooltip:SetAcquisition(130025, { { kind = "VENDOR", cost = {  } } }) -- Atiesh, Greatstaff of the Guardian -- EMPTY-COST ext=nil nCost=nil | priest BIS T7-T8 ilvl 232
+-- PLANNED (not a source): BisTooltip:SetAcquisition(315015, { { kind = "VENDOR", cost = {  } } }) -- Atiesh, Greatstaff of the Guardian -- EMPTY-COST ext=nil nCost=nil  |priest BIS T9 ilvl 258
+-- PLANNED (not a source): BisTooltip:SetAcquisition(130026, { { kind = "VENDOR", cost = {  } } }) -- Atiesh, Greatstaff of the Guardian -- EMPTY-COST ext=nil nCost=nil | druid  BIS T7-T8 ilvl 232
+-- PLANNED (not a source): BisTooltip:SetAcquisition(315016, { { kind = "VENDOR", cost = {  } } }) -- Atiesh, Greatstaff of the Guardian -- EMPTY-COST ext=nil nCost=nil | druid BIS T9 ilvl 258
+
+
+
+-- PLANNED (not a source): BisTooltip:SetAcquisition(131001, { { kind = "VENDOR", cost = {  } } }) -- Warglaive of Azzinoth -- EMPTY-COST ext=nil nCost=nil - rogue T8 BIS
+-- PLANNED (not a source): BisTooltip:SetAcquisition(131002, { { kind = "VENDOR", cost = {  } } }) -- Warglaive of Azzinoth -- EMPTY-COST ext=nil nCost=nil - rogue T8 BIS
+
+-- PLANNED (not a source): BisTooltip:SetAcquisition(130031, { { kind = "VENDOR", cost = {  } } }) -- Armata Strigoi -- EMPTY-COST ext=nil nCost=nil | BIS T7-T8 warrior / paladin
+-- PLANNED (not a source): BisTooltip:SetAcquisition(315004, { { kind = "VENDOR", cost = {  } } }) -- Armata Strigoi -- EMPTY-COST ext=nil nCost=nil | BIS T9 warrior / paladin | BIS T10 offhand warrior fury
+
+-- PLANNED (not a source): BisTooltip:SetAcquisition(131004, { { kind = "VENDOR", cost = {  } } }) -- Doomhammer -- EMPTY-COST ext=nil nCost=nil | BIS T8
+-- PLANNED (not a source): BisTooltip:SetAcquisition(315008, { { kind = "VENDOR", cost = {  } } }) -- Doomhammer -- EMPTY-COST ext=nil nCost=nil  | BIS T9 upgraded
+
+-- PLANNED (not a source): BisTooltip:SetAcquisition(132001, { { kind = "VENDOR", cost = {  } } }) -- Sulfuras, Hand of Ragnaros -- EMPTY-COST ext=nil nCost=nil | BIS T9 2h DK TANK
+
+-- PLANNED (not a source): BisTooltip:SetAcquisition(132003, { { kind = "VENDOR", cost = {  } } }) -- Thunderfury, Blessed Blade of the Windseeker -- EMPTY-COST ext=nil nCost=nil | BIS PALADIN / PROT T9
+
+-- PLANNED (not a source): BisTooltip:SetAcquisition(150005, { { kind = "VENDOR", cost = {  } } }) -- Stormcoil -- EMPTY-COST ext=nil nCost=nil | BIS T7 hunter
+-- PLANNED (not a source): BisTooltip:SetAcquisition(150090, { { kind = "VENDOR", cost = {  } } }) -- Stormcoil -- EMPTY-COST ext=nil nCost=nil | BIS T8 hunter
+-- PLANNED (not a source): BisTooltip:SetAcquisition(315005, { { kind = "VENDOR", cost = {  } } }) -- Stormcoil -- EMPTY-COST ext=nil nCost=nil | BIS T9 hunter
+
+-- PLANNED (not a source): BisTooltip:SetAcquisition(315006, { { kind = "VENDOR", cost = {  } } }) -- Nightwing  | 258 ilvl staff - mage druid warlock priest  [W8 for dev info development Nightwing or  Atiesh, Greatstaff of the Guardian ilvl 258]
+
+-- PLANNED (not a source): BisTooltip:SetAcquisition(46017, { { kind = "VENDOR", cost = {  } } }) -- Val'anyr, Hammer of Ancient Kings -- EMPTY-COST ext=nil nCost=nil | BIS T8
+-- PLANNED (not a source): BisTooltip:SetAcquisition(315009, { { kind = "VENDOR", cost = {  } } }) -- Val'anyr, Hammer of Ancient Kings -- EMPTY-COST ext=nil nCost=nil | BIS T9-T10
+
+
+-- PLANNED (not a source): BisTooltip:SetAcquisition(217741, { { kind = "VENDOR", cost = {  } } }) -- Fury of the Sunwell -- EMPTY-COST ext=nil nCost=nil | BIS T10 shield

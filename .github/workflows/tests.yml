@@ -1,0 +1,23 @@
+name: Whitemane import tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  import-policy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          path: .integration/core
+          persist-credentials: false
+      - name: Install Lua 5.1
+        run: sudo apt-get update && sudo apt-get install -y lua5.1
+      - name: Check syntax and source-preservation policy
+        run: |
+          find Bistooltip_Whitemane_Frostmourne .github/tests/lua -name '*.lua' -print0 | xargs -0 -n1 luac5.1 -p
+          lua5.1 .github/tests/lua/import_policy.lua .integration/core
