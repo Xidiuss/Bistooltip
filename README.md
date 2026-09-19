@@ -1,6 +1,8 @@
 # Bis-Tooltip
 
-Bis-Tooltip 3.0.0 is a World of Warcraft 3.3.5a addon that shows Best-in-Slot rankings and item acquisition sources in tooltips, with a window for browsing gear and tracking what your character owns. The runtime targets the client's Lua 5.1 environment.
+Bis-Tooltip 3.0.0 is the standalone core addon for World of Warcraft 3.3.5a. It shows Best-in-Slot rankings and item acquisition sources in tooltips, with a window for browsing gear and tracking what your character owns. The runtime targets the client's Lua 5.1 environment. Server-specific data and the scanner are separate addon packages on separate branches.
+
+**Current status:** the post-migration offline audit and regression checks are complete locally. This is not yet an in-game verified release: native Lua 5.1 CI and a WoW client smoke test remain release gates. See the [roadmap](docs/ROADMAP.md) for the order of work and the [audit](docs/POSTMIGRATION-AUDIT.md) for measured data gaps.
 
 ## Install
 
@@ -22,7 +24,7 @@ Open `/bis config` and choose a database. The selection is shared across charact
 
 ## Use the window
 
-- MAIN shows ranked gear alternatives. BIS groups checklist items by acquisition location.
+- MAIN shows up to seven ranked gear alternatives per slot. BIS groups checklist items by acquisition location.
 - VENDOR, available in BIS, filters purchasable items. It is not restricted to Emblem of Ascension.
 - Search and missing-item filters narrow the list. Ownership indicators and progress use the character's equipment/bag cache.
 - LOCK fixes the selected phase. CUSTOM allows slot priorities to be changed by selecting two item icons in an unlocked slot; RESET restores the dataset/plugin order for that selection.
@@ -53,14 +55,15 @@ These components have separate branches and addon directories in the same Git re
 | Whitemane Frostmourne plugin | `Bistooltip_Whitemane_Frostmourne` |
 | WOTLK5 S2 plugin | `Bistooltip_WOTLK5_S2` |
 
-Install the relevant server plugin alongside the core when using that server's changes. A core-only download does not include these other branches.
+Install the relevant server plugin alongside the core when using that server's changes. A core-only download does not include these other branches. Whitemane's current legendary ranking data requires a core with `InsertBiSSlotRank`; install the matching current packages together.
 
 ## Development documentation
 
 - [Architecture and data ownership](docs/ARCHITECTURE.md)
 - [Development, regression tests, and in-game checks](docs/DEVELOPMENT.md)
 - [Server plugin API and scanner handoff](docs/PLUGIN-API.md)
-- [Post-migration audit, remaining data gaps, and roadmap](docs/POSTMIGRATION-AUDIT.md)
+- [Post-migration audit and measured data gaps](docs/POSTMIGRATION-AUDIT.md)
+- [Prioritized roadmap and release gates](docs/ROADMAP.md)
 - [Changelog](Bistooltip/CHANGELOG.md)
 
 Runtime files live under `Bistooltip/`; public regression tests live under `.github/tests/`. `Bistooltip.toc` defines the actual load graph. `EmblemData.lua` is retained as an offline migration input and is not loaded by the addon.

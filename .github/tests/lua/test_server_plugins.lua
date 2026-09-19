@@ -34,6 +34,38 @@ local function verifyRanks(ops)
         end
     end
 end
+local function verifyInsertions(ops, sourceKey, faction)
+    local source = sourceKey == 'wowsims' and Bistooltip_wowsims_final
+        or sourceKey == 'wowtbc' and Bistooltip_wowtbc_bislists or Bistooltip_wh_bislists
+    for _,op in ipairs(ops) do
+        local class, spec, phase, slotName, rank, itemID = unpack(op)
+        local active = Bistooltip_bislists[class] and Bistooltip_bislists[class][spec]
+        local original = source[class] and source[class][spec]
+        local activeSlots = active and active[phase]
+        local sourceSlots = original and original[phase]
+        if activeSlots and sourceSlots then
+            for index, slot in ipairs(activeSlots) do
+                if slot.slot_name == slotName then
+                    local baseline = sourceSlots[index]
+                    local horde = faction == 'Horde' and sourceKey == 'wowsims'
+                        and Bistooltip_wowsims_horde_overrides
+                    local override = horde and horde[class] and horde[class][spec]
+                        and horde[class][spec][phase]
+                    if override and override[index] then baseline = override[index] end
+                    assert(baseline and baseline.slot_name == slotName, 'baseline slot mismatch')
+                    local expected = {itemID}
+                    for _,id in ipairs(baseline) do
+                        if id ~= itemID then expected[#expected + 1] = id end
+                    end
+                    assert(#slot == #expected, 'plugin insertion changed baseline rank count')
+                    for i,id in ipairs(expected) do
+                        assert(slot[i] == id, 'plugin insertion discarded or reordered a baseline item')
+                    end
+                end
+            end
+        end
+    end
+end
 for _,faction in ipairs({'Alliance','Horde'}) do
     UnitFactionGroup=function() return faction end
     for _,initial in ipairs({'wowsims','wowtbc','wh'}) do
@@ -50,21 +82,33 @@ for _,faction in ipairs({'Alliance','Horde'}) do
         BistooltipAddon:initConfig()
         local before=count()
         local rankOps={}
+        local insertOps={}
         local rank=BisTooltip.SetBiSSlotRank
+        local insert=BisTooltip.InsertBiSSlotRank
         BisTooltip.SetBiSSlotRank=function(self,...)
             rankOps[#rankOps+1]={...}
             return rank(self,...)
         end
+        BisTooltip.InsertBiSSlotRank=function(self,...)
+            insertOps[#insertOps+1]={...}
+            return insert(self,...)
+        end
         dofile(plugin)
         BisTooltip.SetBiSSlotRank=rank
+        BisTooltip.InsertBiSSlotRank=insert
+        if plugin:find('Whitemane_Frostmourne', 1, true) then
+            assert(#insertOps == 27, 'Whitemane legendary ranks must insert, not replace')
+        end
         local after=count()
         assert(after>before, 'plugin registered no acquisitions')
         verifyRanks(rankOps)
+        verifyInsertions(insertOps, initial, faction)
         for round=1,2 do
             for _,target in ipairs({'wh','wowtbc','wowsims'}) do
                 BistooltipAddon:changeSpec(target)
                 assert(count()==after, 'overlay replay duplicated acquisition entries')
                 verifyRanks(rankOps)
+                verifyInsertions(insertOps, target, faction)
             end
         end
         for id,entries in pairs(BisTooltip_ItemAcquisition) do

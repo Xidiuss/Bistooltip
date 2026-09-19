@@ -11,9 +11,10 @@ Core rankings are selected independently of server data. Enable the one server o
 | `AddAcquisition(itemID, entry, plugin)` | Append an alternative, deduplicating an identical entry |
 | `SetBiSSlot(class, spec, phase, slot, IDs, plugin)` | Replace a complete rank list, preserving slot metadata |
 | `SetBiSSlotRank(class, spec, phase, slot, rank, itemID, plugin)` | Replace one existing rank |
+| `InsertBiSSlotRank(class, spec, phase, slot, rank, itemID, plugin)` | Insert at a rank and shift later items; move an item already in the slot |
 | `SetEnhancement(class, spec, phase, slot, enhancements, plugin)` | Replace enhancements; `phase=nil` applies to every existing phase of the spec |
 
-Pass an identifying plugin string for useful diagnostics. Entries are validated before application. Unknown source IDs may be forward references: define them before the player uses the source. Invalid ranking paths raise errors; `SetBiSSlotRank` has a special case for targets present in another bundled database, recording them for a later compatible bind. This deferral does not create a missing phase or extend the current slot, and is not a general registration queue for every API method.
+Pass an identifying plugin string for useful diagnostics. Entries are validated before application. Unknown source IDs may be forward references: define them before the player uses the source. Invalid ranking paths raise errors; both rank methods defer targets present in another bundled database for a later compatible bind. Deferral does not create a missing phase and is not a general registration queue for every API method. `SetBiSSlotRank` accepts an existing rank; `InsertBiSSlotRank` accepts ranks through one past the current end.
 
 Successful operations are recorded for replay after a database switch. Each replay receives fresh argument copies so later appends cannot mutate a recorded replacement. Optional arguments retain their positions, including the nil COMMON phase. Do not modify core tables directly: such mutations bypass the replay contract. The active ranking tables are mutable copies; original dataset slots and Horde overrides stay unchanged. The effective order is database, then server changes, then the user's saved personal order.
 
@@ -50,12 +51,16 @@ Use exact dataset class/spec/phase/slot names. A ranking override does not autom
 
 ```lua
 BisTooltip:SetBiSSlotRank("Druid", "Balance", "T10", "Head", 1, 900001, P)
+-- Use InsertBiSSlotRank instead when the old rank 1 should become rank 2:
+BisTooltip:InsertBiSSlotRank("Druid", "Balance", "T10", "Weapon", 1, 900004, P)
 BisTooltip:SetEnhancement("Druid", "Balance", "T10", "Head", {
     {type = "item", id = 900003}, -- custom scroll, requested through GetItemInfo
 }, P)
 ```
 
 Enhancements are whole-list replacement, not append. Spell entries use `{type="spell", id=spellID}` and must not be queried as item IDs. Test the plugin on every intended ranking database and faction, including initial login, not only replay.
+
+An insertion keeps all existing alternatives in the data; inserting an ID already present moves it without duplication. MAIN and CUSTOM currently show seven ranked icons per slot. If future overlays produce longer lists, the remaining ranks still exist in the data but need additional UI space to appear in those views.
 
 ## Scanner handoff
 

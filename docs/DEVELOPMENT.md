@@ -92,7 +92,7 @@ Use a WoW 3.3.5a client with Lua errors visible. Record the core commit, server,
 6. Browse a cold item cache and switch selections during loading. Check icon/name updates and gem/enchant details. After a slow response beyond the bulk timeout, verify a redraw/RELOAD resolves cached placeholders.
 7. Keep an item-link tooltip open while hovering another item. Press and quickly release Shift/Ctrl; both tooltips should reflect the final modifier state. Check item chat links and dressing-room actions.
 8. Enable VENDOR in BIS. Inspect items with multiple purchase options, currency/item-token costs, and gold costs; compare tooltip, list, and `/bisemblem <ID or link>` output.
-9. Enable the relevant server plugin. Check a known custom rank/source/cost before and after database switches. Do not assume the other server's plugin describes this server.
+9. Enable the relevant server plugin. For Whitemane, check a legendary at rank 1, the former first item at rank 2, and the shifted seventh item in MAIN/CUSTOM before and after database switches and RESET. Check a known source/cost as well. Do not assume the other server's plugin describes this server.
 10. Run `/bis debug on`, redraw a selection, then `/bis debug`; collect its output for row issues and finish with `/bis debug off`.
 
 Report automated results, native-runtime availability, and in-game results separately. Passing stubs cannot establish rendering, addon interactions, or server data accuracy.

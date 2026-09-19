@@ -2,6 +2,7 @@
 
 ## Unreleased — post-migration audit (2026-09-19)
 
+- Add `InsertBiSSlotRank` for server items that should lead a ranking without discarding the previous first choice; show a seventh ranked icon in MAIN/CUSTOM for the shifted alternative. Whitemane now uses insertion for its 27 legendary rank changes.
 - Fix standalone loading: correct bundled LibDataBroker path and remove missing SharedMedia references.
 - Fix account priority RESET, repeated legacy migration, shared baseline mutation and personal-order filtering/progress.
 - Defer valid server rank targets absent from the active database; preserve nil arguments in Lua 5.1 overlay replay.

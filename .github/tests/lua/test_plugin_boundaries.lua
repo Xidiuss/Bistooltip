@@ -51,6 +51,44 @@ test("invalid server rank remains an actionable API error", function()
     assert(not pcall(BisTooltip.SetBiSSlotRank, BisTooltip, "Druid", "Balance", "T7", "Head", 9, 99))
 end)
 
+test("inserted server rank shifts every existing item and survives replay", function()
+    setup()
+    Bistooltip_bislists = Bistooltip_wowsims_final
+    BisTooltip:InsertBiSSlotRank("Druid", "Balance", "T7", "Head", 1, 99, "test")
+    local slot = Bistooltip_bislists.Druid.Balance.T7[1]
+    assert(#slot == 3 and slot[1] == 99 and slot[2] == 1 and slot[3] == 2,
+        "inserting rank 1 discarded or reordered a baseline item")
+    Bistooltip_bislists = {Druid = {Balance = {T7 = {
+        {slot_name = "Head", enhs = {}, 5, 6},
+    }}}}
+    BisTooltip_ReplayOverlay()
+    slot = Bistooltip_bislists.Druid.Balance.T7[1]
+    assert(#slot == 3 and slot[1] == 99 and slot[2] == 5 and slot[3] == 6,
+        "replay did not insert before the new database order")
+end)
+
+test("inserting an already ranked item moves it without duplicates", function()
+    setup()
+    Bistooltip_bislists = Bistooltip_wowsims_final
+    BisTooltip:InsertBiSSlotRank("Druid", "Balance", "T7", "Head", 1, 2, "test")
+    local slot = Bistooltip_bislists.Druid.Balance.T7[1]
+    assert(#slot == 2 and slot[1] == 2 and slot[2] == 1,
+        "existing item was duplicated or another item lost")
+    BisTooltip_ReplayOverlay()
+    assert(#slot == 2 and slot[1] == 2 and slot[2] == 1,
+        "replay duplicated an existing ranked item")
+end)
+
+test("insert into unavailable database phase is deferred", function()
+    setup()
+    BisTooltip:InsertBiSSlotRank("Druid", "Balance", "T7", "Head", 1, 99, "test")
+    Bistooltip_bislists = Bistooltip_wowsims_final
+    BisTooltip_ReplayOverlay()
+    local slot = Bistooltip_bislists.Druid.Balance.T7[1]
+    assert(#slot == 3 and slot[1] == 99 and slot[2] == 1 and slot[3] == 2,
+        "deferred insertion lost a baseline rank")
+end)
+
 test("accepted custom registry source renders without a tooltip error", function()
     setup()
     BisTooltip:DefineSource("SHOP", {kind = "CUSTOM", label = "Server shop"})

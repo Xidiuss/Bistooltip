@@ -4,7 +4,8 @@
 --   BisTooltip_ItemAcquisition (itemID -> acquisition entries)
 --   Bistooltip_bislists[class][spec][phase] (slot tables with slot_name/enhs + ranked IDs)
 -- Semantics: DefineSource/SetAcquisition/SetBiSSlot/SetBiSSlotRank/SetEnhancement
--- = replace-wins, AddAcquisition = append. Core overrides print a one-time dev
+-- = replace-wins, AddAcquisition = append, InsertBiSSlotRank = insert/move.
+-- Core overrides print a one-time dev
 -- warning ("Plugin <name> replaced core ... <ID>", caller via trailing plugin
 -- arg or "unknown plugin"). Malformed input raises a pcall-safe error (never
 -- silent). Acquisition entries are shape-validated WITHOUT registry membership
@@ -12,6 +13,7 @@
 -- SetEnhancement with phase=nil means COMMON: the slot's enhs is replaced in
 -- EVERY phase of the spec that contains a slot with that slot_name.
 -- SetBiSSlotRank overrides a SINGLE rank (DB-independent server diffs).
+-- InsertBiSSlotRank moves/inserts an item and keeps the other ranks.
 -- W4 overlay: every mutation is recorded (deep-copied) and can be REPLAYED
 -- after a database switch (BisTooltip_ReplayOverlay) — plugins describe the
 -- server, not a specific ranking DB.
@@ -277,44 +279,52 @@ function BisTooltip:SetBiSSlot(className, specName, phase, slotName, ids, plugin
   return true
 end
 
--- S3-6: rank-level override — the granular form plugins should prefer for
--- server diffs ("rank 1 = custom legendary"). DB-independent: the rest of
--- the ranked list stays from the active database, so the diff survives
--- ranking updates and database switches (overlay replay).
-function BisTooltip:SetBiSSlotRank(className, specName, phase, slotName, rank, itemID, plugin)
-  local what = "BisTooltip.SetBiSSlotRank"
+local function rankSlot(className, specName, phase, slotName, what)
+  local found, slot = pcall(findSlot, className, specName, phase, slotName, what)
+  if found then return slot, false end
+  local lookupError = slot
+  slot = nil
+  -- Plugins describe the server across databases. A valid target can be
+  -- absent in the selected database (e.g. T7 while using wowtbc).
+  for _, database in pairs({ Bistooltip_wowsims_final,
+      Bistooltip_wowtbc_bislists, Bistooltip_wh_bislists }) do
+    local classData = type(database) == "table" and database[className]
+    local specData = type(classData) == "table" and classData[specName]
+    local phaseSlots = type(specData) == "table" and specData[phase]
+    if type(phaseSlots) == "table" then
+      for _, candidate in ipairs(phaseSlots) do
+        if candidate.slot_name == slotName then slot = candidate break end
+      end
+    end
+    if slot then break end
+  end
+  if not slot then error(lookupError, 3) end
+  return slot, true
+end
+
+local function checkRankArgs(rank, itemID, what)
   if type(rank) ~= "number" or rank < 1 or rank % 1 ~= 0 then
-    error(what .. ": rank must be a positive integer", 2)
+    error(what .. ": rank must be a positive integer", 3)
   end
   if type(itemID) ~= "number" or itemID <= 0 then
-    error(what .. ": itemID must be a positive number", 2)
+    error(what .. ": itemID must be a positive number", 3)
   end
-  local found, slot = pcall(findSlot, className, specName, phase, slotName, what)
-  local deferred = false
-  if not found then
-    local lookupError = slot
-    slot = nil
-    -- Plugins describe the server across databases. A valid target can be
-    -- absent in the selected database (e.g. T7 while using wowtbc).
-    for _, database in pairs({ Bistooltip_wowsims_final,
-        Bistooltip_wowtbc_bislists, Bistooltip_wh_bislists }) do
-      local classData = type(database) == "table" and database[className]
-      local specData = type(classData) == "table" and classData[specName]
-      local phaseSlots = type(specData) == "table" and specData[phase]
-      if type(phaseSlots) == "table" then
-        for _, candidate in ipairs(phaseSlots) do
-          if candidate.slot_name == slotName then slot = candidate break end
-        end
-      end
-      if slot then break end
-    end
-    if not slot then error(lookupError, 2) end
-    deferred = true
-  end
+end
+
+local function slotMaxRank(slot)
   local maxRank = 0
   for k in pairs(slot) do
     if type(k) == "number" and k > maxRank then maxRank = k end
   end
+  return maxRank
+end
+
+-- Replace exactly one rank. Existing plugins depend on this meaning.
+function BisTooltip:SetBiSSlotRank(className, specName, phase, slotName, rank, itemID, plugin)
+  local what = "BisTooltip.SetBiSSlotRank"
+  checkRankArgs(rank, itemID, what)
+  local slot, deferred = rankSlot(className, specName, phase, slotName, what)
+  local maxRank = slotMaxRank(slot)
   if rank > maxRank then
     error(what .. ": rank " .. rank .. " exceeds slot length " .. maxRank, 2)
   end
@@ -334,6 +344,28 @@ function BisTooltip:SetBiSSlotRank(className, specName, phase, slotName, rank, i
     "Plugin " .. plugName(plugin) .. " replaced core BiS rank " .. rank
     .. " of " .. className .. "/" .. specName .. "/" .. phase .. "/" .. slotName)
   record("SetBiSSlotRank", className, specName, phase, slotName, rank, itemID, plugin)
+  return true
+end
+
+-- Insert an alternative ahead of the selected rank. If the item already
+-- appears in the slot, move it instead of creating a duplicate.
+function BisTooltip:InsertBiSSlotRank(className, specName, phase, slotName, rank, itemID, plugin)
+  local what = "BisTooltip.InsertBiSSlotRank"
+  checkRankArgs(rank, itemID, what)
+  local slot, deferred = rankSlot(className, specName, phase, slotName, what)
+  local maxRank = slotMaxRank(slot)
+  if rank > maxRank + 1 then
+    error(what .. ": rank " .. rank .. " exceeds insertion boundary " .. (maxRank + 1), 2)
+  end
+  if deferred then
+    record("InsertBiSSlotRank", className, specName, phase, slotName, rank, itemID, plugin)
+    return true
+  end
+  for i = maxRank, 1, -1 do
+    if slot[i] == itemID then table.remove(slot, i) end
+  end
+  table.insert(slot, math.min(rank, #slot + 1), itemID)
+  record("InsertBiSSlotRank", className, specName, phase, slotName, rank, itemID, plugin)
   return true
 end
 
