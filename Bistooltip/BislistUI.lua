@@ -1676,6 +1676,18 @@ local function GetColumnPositions()
     if bisChecklistMode then
         -- BIS mode: SLOT | ENCHANT | GEMS | BIS | SOURCE | MODE | COST | ILVL
         -- Same enchant/gems columns as MAIN mode
+        if BistooltipAddon.db and BistooltipAddon.db.char
+                and BistooltipAddon.db.char.show_source_column == false then
+            return {
+                { x = 4,   width = 70,  type = "label" },
+                { x = 76,  width = 24,  type = "enchant" },
+                { x = 102, width = 70,  type = "gems" },
+                { x = 176, width = 38,  type = "item" },
+                { x = 218, width = 40,  type = "mode" },
+                { x = 262, width = 159, type = "cost" },
+                { x = 425, width = 35,  type = "ilvl" },
+            }
+        end
         return {
             { x = 4,   width = 70,  type = "label" },      -- Col1: SLOT name
             { x = 76,  width = 24,  type = "enchant" },    -- Col2: ENCHANT
@@ -1889,7 +1901,11 @@ local function CreateCustomHeader(yOffset)
     if bisChecklistMode then
         -- BIS mode headers: SLOT | E | GEMS | BIS | SOURCE | MODE | COST | iLvl
         -- Same enchant/gems columns as MAIN mode
-        headers = { "SEARCH", "E", "Gems", "BIS", "SOURCE", "MODE", "COST", "iLvl" }
+        if columns[5].type == "source" then
+            headers = { "SEARCH", "E", "Gems", "BIS", "SOURCE", "MODE", "COST", "iLvl" }
+        else
+            headers = { "SEARCH", "E", "Gems", "BIS", "MODE", "COST", "iLvl" }
+        end
     elseif customizeMode then
         headers = { "SEARCH", "E", "Gems", "BIS", "TOP1", "T2", "T3", "T4", "T5" }
     else

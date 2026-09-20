@@ -70,6 +70,21 @@ BistooltipData = {}
 BistooltipUI = {}
 dofile("Bistooltip/BislistUI.lua")
 
+test("independent source option removes the BIS column without hiding costs", function()
+    local draw = upvalue(BistooltipAddon.showMainFrame, "drawSpecData")
+    local header = upvalue(draw, "CreateCustomHeader")
+    local columnsFor = upvalue(header, "GetColumnPositions")
+    BistooltipState.Set("bisChecklistMode", true)
+    BistooltipAddon.db = { char = { show_item_source = false, show_source_column = true } }
+    local shown = columnsFor()
+    assert(shown[5].type == "source" and shown[7].type == "cost", "default BIS columns changed")
+    BistooltipAddon.db.char.show_source_column = false
+    local hidden = columnsFor()
+    assert(#hidden == 7 and hidden[5].type == "mode" and hidden[6].type == "cost", "source column remains or costs disappeared")
+    BistooltipAddon.db.char.show_source_column = true
+    BistooltipState.Set("bisChecklistMode", false)
+end)
+
 test("closing retains the native UI for reuse", function()
     local main = frame()
     main.frame = main

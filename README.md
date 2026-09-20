@@ -32,6 +32,7 @@ The WoWSimsBP snapshot was assembled offline from the ranking and faction data i
 - LOCK fixes the selected phase. CUSTOM allows slot priorities to be changed by selecting two item icons in an unlocked slot; RESET restores the dataset/plugin order for that selection.
 - Personal priorities are saved account-wide and reconciled by item ID when changing databases.
 - Optional gem and enchant details expand rows. Shift-click links an available item to chat; Ctrl-click previews equipment where an item link is available.
+- `/bis config` has two independent source options, both on by default: **Show item source in tooltips** controls the tooltip block; **Show SOURCE column in BIS window** controls that column. Hiding the column keeps COST and MODE visible and does not alter acquisition data, the VENDOR filter, or the exported checklist.
 
 | Command | Action |
 | --- | --- |

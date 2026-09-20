@@ -52,6 +52,7 @@ local db_defaults = {
         highlight_spec = {},
         filter_class_names = true,
         show_item_source = true,
+        show_source_column = true,
 
         -- UI preferences
         minimap_icon = true,
@@ -129,6 +130,22 @@ local configTable = {
             end,
             get = function(info)
                 return BistooltipAddon.db.char.show_item_source
+            end
+        },
+        show_source_column = {
+            name = "Show SOURCE column in BIS window",
+            order = 2.6,
+            desc = "Show the dedicated source column in BIS mode, independently of tooltip sources",
+            type = "toggle",
+            width = "full",
+            set = function(info, val)
+                BistooltipAddon.db.char.show_source_column = val
+                if BistooltipAddon.RefreshUI then
+                    BistooltipAddon:RefreshUI()
+                end
+            end,
+            get = function(info)
+                return BistooltipAddon.db.char.show_source_column
             end
         },
         tooltip_with_ctrl = {

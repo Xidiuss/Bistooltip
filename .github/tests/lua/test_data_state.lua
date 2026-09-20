@@ -9,10 +9,10 @@ local function test(name, fn)
     end
 end
 
-local saved, options
+local saved, options, defaults
 local noop = function() end
 LibStub = function(name)
-    if name == "AceDB-3.0" then return { New = function() return saved end } end
+    if name == "AceDB-3.0" then return { New = function(_, _, values) defaults = values; return saved end } end
     if name == "AceConfig-3.0" then return { RegisterOptionsTable = function(_, _, opts) options = opts end } end
     if name == "AceConfigDialog-3.0" then return { AddToBlizOptions = noop } end
     return {}
@@ -57,6 +57,22 @@ local function personalize(slot, first, second)
     slot[1], slot[2] = first, second
     BistooltipData.SaveCustomPriority(slot, "Warrior", "Fury", "T7")
 end
+
+test("source column starts on, redraws, and stays independent of tooltip sources", function()
+    setup()
+    assert(defaults.char.show_item_source == true and defaults.char.show_source_column == true,
+        "fresh characters should see both source displays")
+    local refreshes = 0
+    BistooltipAddon.RefreshUI = function() refreshes = refreshes + 1 end
+    options.args.show_item_source.set(nil, false)
+    assert(options.args.show_item_source.get() == false, "source toggle did not persist")
+    options.args.show_source_column.set(nil, false)
+    assert(options.args.show_source_column.get() == false and options.args.show_item_source.get() == false,
+        "column toggle changed tooltip preference")
+    options.args.show_source_column.set(nil, true)
+    assert(options.args.show_source_column.get() == true and refreshes == 2,
+        "source column toggle did not refresh UI")
+end)
 
 test("RESET removes the saved account order", function()
     setup()
