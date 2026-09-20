@@ -2,7 +2,7 @@
 
 Standalone vendor and item-ID collector for WoW 3.3.5a (`Interface: 30300`). This branch ships only `Bistooltip_Scanner`; the current TOC version is `0.2.1`. Core Bistooltip is optional for scanning. Copy `Bistooltip_Scanner` into `Interface/AddOns` and enable it in the client. This tool records observations for review; it does not create BiS rankings or install a server overlay.
 
-**Current status:** local offline regressions cover the corrected 3.3.5 merchant cost signature, cache resolution, CSV rows, and live preset edits. A native Lua 5.1 CI run and an in-game merchant test are still needed before release. The [project roadmap](https://github.com/Xidiuss/Bistooltip/blob/main/docs/ROADMAP.md) tracks the scanner-to-plugin workflow and its remaining limits.
+**Current status:** local offline regressions cover the corrected 3.3.5 merchant cost signature, cache resolution, CSV rows, and live preset edits. The owner also confirmed all three VENDOR export modes in the game client on 2026-09-20. Native Lua 5.1 validation and broader merchant coverage are still needed before release. The [project roadmap](https://github.com/Xidiuss/Bistooltip/blob/main/docs/ROADMAP.md) tracks the scanner-to-plugin workflow and its remaining limits.
 
 The scanner stores observations in the account SavedVariables table `BistooltipScannerDB`. It does not modify the core addon or install generated plugins. Server APIs and the local item cache determine what can be collected.
 
@@ -21,9 +21,9 @@ The scanner stores observations in the account SavedVariables table `BistooltipS
 | `/bisscan setcost 12345 456 7` | Replace the item-cost list for item 12345 in the last record. |
 | `/bisscan undo` | Undo the last manual cost assignment (one level). |
 | `/bisscan custom` | Toggle CUSTOM export for a donate/shop label instead of VENDOR costs. |
-| `/bisscan mode append` | Add each scanned purchase route, preserving existing sources; default mode. |
-| `/bisscan mode replace_vendor` | Replace only existing VENDOR offers, preserving DROP/TOKEN/MARK/ACTIVITY/CUSTOM. Requires matching current core. |
-| `/bisscan mode replace_all` | Replace every acquisition route for the item; legacy behavior. |
+| `/bisscan mode append` | Select additive purchase export; default mode. |
+| `/bisscan mode replace_vendor` | Select replacement of purchase offers only; requires matching current core. |
+| `/bisscan mode replace_all` | Select replacement of every acquisition route; legacy behavior. |
 | `/bisscan export` or `/bisscan log` | Export logged merchants, or the last record if the log is empty. |
 | `/bisscan csv` | Export semicolon-separated item/cost data. |
 | `/bisscan clearlog` | Clear the selected vendor log, retaining observations. |
@@ -41,9 +41,19 @@ A defensive eight-row cap applies to token counts, without truncating Honor/Aren
 
 ## Export contract
 
-The menu's **Export** mode button cycles through `append`, `replace_vendor`, and `replace_all`; `/bisscan mode ...` selects the same policy. Default `append` emits `AddAcquisition`, suitable for additional Whitemane custom-emblem routes. `replace_vendor` emits `ReplaceVendorAcquisitions`, suitable for Whitemane Justice/Valor prices that supersede WotLK emblem vendor prices while retaining non-vendor sources. `replace_all` emits `SetAcquisition` and removes all previous routes. These modes change export behavior, not the merchant scan; item upgrades are outside this scanner contract for now. Scanner output is input for review, not a ready-to-install addon.
+The menu's **Export** button cycles through `append`, `replace_vendor`, and `replace_all`; `/bisscan mode ...` selects the same policy. **The mode is applied when you press Export, not when you scan.** It is one setting for the entire generated Lua text, not a property saved on each item. To use different policies for different items, select a mode, export and save that snippet, then switch mode and export the next item separately. Changing the mode does not change text already copied or stored in an earlier export; press Export again. The scanner records observations only: review the Lua and place selected calls in the appropriate server plugin; it does not execute them in the current game session.
 
-In `append`, the log exports every merchant offer, including repeated item IDs with different currencies. `replace_vendor` and `replace_all` currently keep the last merchant for each item ID and warn about duplicates; review those warnings before discarding alternatives. Merchant records use `name @ zone` keys, so servers/realms with matching merchant names share that key in the account database.
+| Mode | Generated call for item `5000759` (shown with `offer` below) | What happens when the Lua is loaded | Use when |
+| --- | --- | --- | --- |
+| `append` | `BisTooltip:AddAcquisition(5000759, offer)` | Adds this purchase option and keeps existing vendor prices, drops, tokens, quests and other routes; an identical entry is deduplicated. | The item gains a second valid offer, such as a custom emblem price. |
+| `replace_vendor` | `BisTooltip:ReplaceVendorAcquisitions(5000759, { offer })` | Removes previous `VENDOR` offers for this item, then adds the scanned offer; other acquisition methods remain. | Justice/Valor supersedes old WotLK emblem prices while drops and tokens stay available. Requires a core with `ReplaceVendorAcquisitions`. |
+| `replace_all` | `BisTooltip:SetAcquisition(5000759, { offer })` | Replaces **every** acquisition route for this item, including drops and tokens. | A reviewed full correction where all previous routes are intentionally obsolete. |
+
+For this example, `offer` means `{ kind = "VENDOR", cost = { { currency = "Plagued Legendary Shard", amount = 1 } } }`. The actual export writes this value inline; the table above shows how the three calls differ.
+
+These three calls can show the same price in a tooltip when the item had only one vendor source before. Compare the generated function name, or test a single item that already has both a drop and vendor price, to see the policy difference. The trailing `-- item:5000971` in the owner's scroll example is the currency item ID, while `5000759` is the scroll ID. The export policy does not assign a scroll as a recommended enchant or create an item upgrade.
+
+In `append`, the log exports every merchant offer, including repeated item IDs with different currencies. `replace_vendor` and `replace_all` currently keep the last merchant for each item ID and warn about duplicates; export those alternatives separately or curate a combined offer list before using replacement. Merchant records use `name @ zone` keys, so servers/realms with matching merchant names share that key in the account database. The separate CUSTOM toggle exports a label with `SetAcquisition` regardless of these three VENDOR modes; review it as a full replacement.
 
 Currency names and amounts are executable fields; currency item IDs are retained in trailing Lua comments and CSV `currID`. Money is in **copper**. Quantity/limited-stock details appear in comments. CUSTOM mode exports a label and omits costs. Missing prices produce commented `UNRESOLVED PRICE` lines with EMPTY-COST warnings; resolve them before using the output.
 
