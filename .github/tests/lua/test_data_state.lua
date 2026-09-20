@@ -74,6 +74,62 @@ test("source column starts on, redraws, and stays independent of tooltip sources
         "source column toggle did not refresh UI")
 end)
 
+test("personal enchant assignment preserves gems and follows only its selected database", function()
+    setup()
+    local base = Bistooltip_bislists.Warrior.Fury.T7[1]
+    base.enhs = {{type="spell",id=111}, {type="item",id=222}}
+    local ok, err = BistooltipData.SaveCustomEnhancement("Warrior", "Fury", "T7", "Head", "item", 5000762)
+    assert(ok, tostring(err))
+    local shown = slots()[1]
+    assert(shown.enhs[1].id == 5000762 and shown.enhs[2].id == 222, "assignment lost the existing gem")
+    assert(base.enhs[1].id == 111, "personal assignment mutated the plugin/data slot")
+    options.args.data_source.set(nil, "wowtbc")
+    assert(slots()[1].enhs[1] == nil, "assignment leaked into another database")
+    options.args.data_source.set(nil, "wowsims")
+    assert(slots()[1].enhs[1].id == 5000762, "assignment was lost after database switch")
+    assert(BistooltipData.ResetCustomEnhancement("Warrior", "Fury", "T7", "Head"))
+    assert(slots()[1].enhs[1] == nil, "reset did not restore the current dataset")
+end)
+
+test("rank RESET still restores the base slot when it has a personal enchant", function()
+    setup()
+    personalize(slots()[1], 2, 1)
+    assert(BistooltipData.SaveCustomEnhancement("Warrior", "Fury", "T7", "Head", "item", 5000762))
+    BistooltipData.ResetCustomPriorities("Warrior", "Fury", "T7")
+    local slot = slots()[1]
+    assert(slot[1] == 1 and slot[2] == 2 and slot.enhs[1].id == 5000762,
+        "rank RESET lost its base order or erased the personal enchant")
+end)
+
+test("enchant editor rejects unknown slots and invalid descriptor IDs", function()
+    setup()
+    assert(not BistooltipData.SaveCustomEnhancement("Warrior", "Fury", "T7", "Missing", "item", 1))
+    assert(not BistooltipData.SaveCustomEnhancement("Warrior", "Fury", "T7", "Head", "item", 0))
+    assert(not BistooltipData.SaveCustomEnhancement("Warrior", "Fury", "T7", "Head", "gem", 123))
+    assert(not BistooltipData.SaveCustomEnhancement("Warrior", "Fury", "T7", "Head", "spell", 1.5))
+end)
+
+test("enchant editor previews a vendor price and saves and resets the chosen slot", function()
+    setup()
+    BisTooltip_ItemAcquisition[5000762] = {{kind="VENDOR",cost={{currency="Plagued Legendary Shard",amount=1}}}}
+    local editor = options.args.enchant_editor.args
+    editor.class.set(nil, "Warrior")
+    editor.spec.set(nil, "Fury")
+    editor.phase.set(nil, "T7")
+    editor.slot.set(nil, "Head")
+    editor.kind.set(nil, "item")
+    editor.id.set(nil, "invalid")
+    assert(editor.save.disabled(), "bad ID left Save enabled")
+    editor.id.set(nil, "5000762")
+    assert(not editor.save.disabled(), "valid ID left Save disabled")
+    assert(editor.preview.name():find("Plagued Legendary Shard", 1, true), "price missing from preview")
+    editor.save.func()
+    assert(slots()[1].enhs[1].id == 5000762, "UI save did not apply assignment")
+    assert(not editor.reset.disabled(), "reset stayed disabled")
+    editor.reset.func()
+    assert(slots()[1].enhs[1] == nil, "UI reset did not restore dataset")
+end)
+
 test("RESET removes the saved account order", function()
     setup()
     personalize(slots()[1], 2, 1)

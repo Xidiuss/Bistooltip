@@ -1,5 +1,11 @@
 # BisTooltip Changelog
 
+## Unreleased — enchant editor and cache (2026-09-20)
+
+- Add an account-wide enchant assignment editor scoped by ranking database/class/spec/phase/slot. Its preview includes recorded scroll sources and prices; personal overrides replace the first enhancement entry without modifying plugin data or later gem entries.
+- Request cold item information in bounded batches, retry unresolved IDs, retain a pending/unavailable status, and ignore stale selection callbacks. The on-demand queue also retries and invalidates newly loaded item cache entries.
+- Add an independent SOURCE column toggle in BIS while keeping tooltip source visibility separate.
+
 ## Unreleased — post-migration audit (2026-09-19)
 
 - Add `InsertBiSSlotRank` for server items that should lead a ranking without discarding the previous first choice; show a seventh ranked icon in MAIN/CUSTOM for the shifted alternative. Whitemane now uses insertion for its 27 legendary rank changes.

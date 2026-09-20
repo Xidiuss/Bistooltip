@@ -446,6 +446,57 @@ end
 -- Slot Data Access
 -- ============================================================
 
+local function CustomEnhancementBranch(className, specName, phase, create)
+    local db = _G.BistooltipAddon and _G.BistooltipAddon.db
+    local global = db and db.global
+    if not global then return nil end
+    if create then global.custom_enhancements = global.custom_enhancements or {} end
+    local root = global.custom_enhancements
+    if not root then return nil end
+    local source = global.data_source or "wowsims"
+    if create then root[source] = root[source] or {} end
+    root = root[source]
+    if not root then return nil end
+    for _, key in ipairs({className, specName, phase}) do
+        if create then root[key] = root[key] or {} end
+        root = root[key]
+        if not root then return nil end
+    end
+    return root
+end
+
+function BistooltipData.GetCustomEnhancement(className, specName, phase, slotName)
+    local branch = CustomEnhancementBranch(className, specName, phase, false)
+    return branch and branch[slotName] or nil
+end
+
+function BistooltipData.SaveCustomEnhancement(className, specName, phase, slotName, kind, id)
+    if (kind ~= "item" and kind ~= "spell") or type(id) ~= "number"
+            or id <= 0 or id % 1 ~= 0 then
+        return false, "Choose an item or spell and enter a positive whole-number ID."
+    end
+    local spec = _G.Bistooltip_bislists and _G.Bistooltip_bislists[className]
+    spec = spec and spec[specName]
+    local slots = spec and spec[phase]
+    if type(slots) ~= "table" then return false, "Choose an available class, spec and phase." end
+    local found = false
+    for _, slot in ipairs(slots) do
+        if slot.slot_name == slotName then found = true break end
+    end
+    if not found then return false, "Choose a slot present in the selected phase." end
+    local branch = CustomEnhancementBranch(className, specName, phase, true)
+    if not branch then return false, "Saved variables are unavailable." end
+    branch[slotName] = {type = kind, id = id}
+    return true
+end
+
+function BistooltipData.ResetCustomEnhancement(className, specName, phase, slotName)
+    local branch = CustomEnhancementBranch(className, specName, phase, false)
+    if not branch then return false end
+    branch[slotName] = nil
+    return true
+end
+
 function BistooltipData.GetSlotsForSpec(className, specName, phase)
     if not _G.Bistooltip_bislists then return nil end
     if not className or not specName or not phase then return nil end
@@ -470,7 +521,19 @@ function BistooltipData.GetSlotsForSpec(className, specName, phase)
         -- Consumers filter, split rings/trinkets and calculate progress before
         -- rendering, so the personal order must already be applied here.
         BistooltipData.LoadCustomPriority(slot, className, specName, phase)
-        copy[i] = slot
+        local override = BistooltipData.GetCustomEnhancement(className, specName, phase, slot.slot_name)
+        if override and (override.type == "item" or override.type == "spell")
+                and type(override.id) == "number" and override.id > 0 and override.id % 1 == 0 then
+            local view = {}
+            for key, value in pairs(slot) do view[key] = value end
+            local enhs = {}
+            for index, entry in ipairs(slot.enhs or {}) do enhs[index] = entry end
+            enhs[1] = {type = override.type, id = override.id}
+            view.enhs = enhs
+            copy[i] = view
+        else
+            copy[i] = slot
+        end
     end
     return copy
 end
@@ -972,7 +1035,10 @@ function BistooltipData.ResetCustomPriorities(className, specName, phase)
     local prefix = BistooltipData.GetCustomPriorityKey(className, specName, phase, "")
     
     -- Restore original orders
-    local slots = BistooltipData.GetSlotsForSpec(className, specName, phase)
+    -- Restore the bound base slots, not a view copy carrying a personal enchant.
+    local classData = _G.Bistooltip_bislists and _G.Bistooltip_bislists[className]
+    local specData = classData and classData[specName]
+    local slots = specData and specData[phase]
     if slots then
         for _, slot in ipairs(slots) do
             if slot.slot_name then

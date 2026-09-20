@@ -34,6 +34,14 @@ The WoWSimsBP snapshot was assembled offline from the ranking and faction data i
 - Optional gem and enchant details expand rows. Shift-click links an available item to chat; Ctrl-click previews equipment where an item link is available.
 - `/bis config` has two independent source options, both on by default: **Show item source in tooltips** controls the tooltip block; **Show SOURCE column in BIS window** controls that column. Hiding the column keeps COST and MODE visible and does not alter acquisition data, the VENDOR filter, or the exported checklist.
 
+VENDOR is the existing purchase view for ranked BiS items: it shows their recorded offers and costs, and EXPORT can produce a checklist to share. It does not select off-list upgrades or total a personal shopping plan. A broader shopping basket is a later roadmap item.
+
+### Assign an enchant
+
+Open `/bis config` → **Enchant editor**. Select the database, class, spec, phase and slot, choose **Item / scroll** or **Spell**, then enter its numeric ID. The preview shows the current first enhancement, any personal assignment, the new item name when cached, up to three recorded acquisition/price lines, and the equivalent `SetEnhancement` call for a plugin author. Confirm **Save assignment** to replace the first enhancement entry for this exact target; later entries, including gems, remain. **Reset this slot** restores the current dataset/plugin recommendation.
+
+Personal enchant assignments are account-wide but scoped to one ranking database. They do not edit plugin files or change another database. A vendor source for a scroll does not create an assignment by itself. The editor validates the target slot and ID format, but does not verify that a custom scroll can enchant that slot; confirm compatibility in game before saving.
+
 | Command | Action |
 | --- | --- |
 | `/bis` or `/bistooltip` | Open the window |
@@ -45,7 +53,7 @@ The WoWSimsBP snapshot was assembled offline from the ranking and faction data i
 | `/bis debug on` / `/bis debug off` | Enable/disable detailed row snapshots |
 | `/bis repairrows` | Rebind the active dataset and replay its overlays |
 
-Item information arrives asynchronously from the game. The current bulk preload waits for up to two seconds. If a slow response leaves a placeholder, use RELOAD or change the selection to redraw it.
+Item information arrives asynchronously from the game. The window requests uncached items in batches of eight, retries up to four times over an eight-second window, and shows the pending count in the progress bar. Late responses from a previous selection cannot redraw the current view. If an item remains unavailable, the progress bar indicates this; use RELOAD after the client cache fills.
 
 ## Core, server plugins, and scanner
 

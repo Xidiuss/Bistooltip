@@ -104,7 +104,7 @@ test("closing retains the native UI for reuse", function()
         "reopening would allocate a new tab tree")
 end)
 
-test("bulk preload waits for uncached items beyond the first batch", function()
+test("bulk preload requests bounded batches and waits for slow items", function()
     BistooltipState.Set("class", "Warrior")
     BistooltipState.Set("spec", "Fury")
     BistooltipState.Set("phase", "T7")
@@ -113,19 +113,25 @@ test("bulk preload waits for uncached items beyond the first batch", function()
     BistooltipData.GetSlotsForSpec = function() return slots end
     BistooltipData.GetDisplayItemID = function(id) return id end
     GetItemInfo = function() return nil end
+    local requests = {}
+    BistooltipAddon._bulkScanner = frame()
+    BistooltipAddon._bulkScanner.SetHyperlink = function(_, link) requests[#requests + 1] = link end
     local bulk = upvalue(BistooltipAddon.showMainFrame, "BulkPreloadAllItems")
     bulk(false)
     local ticker = upvalue(bulk, "bulkPreloadFrame")
     local update = ticker:GetScript("OnUpdate")
-    local pending = upvalue(update, "itemsToLoad")
+    local pending = upvalue(upvalue(update, "RequestMissingBatch"), "itemsToLoad")
+    assert(#requests > 0 and #requests <= 8, "initial request exceeded one bounded batch")
+    update(ticker, 0.2)
+    assert(#requests <= 16, "one update sent too many item requests")
     -- Leave the last entry in this runtime's iteration order uncached.
     local last
     for id in pairs(pending) do last = id end
     GetItemInfo = function(id) if id ~= last then return "cached" end end
-    update(ticker, 0.1)
-    assert(ticker:GetScript("OnUpdate"), "stopped polling while a requested item was uncached")
+    update(ticker, 2.1)
+    assert(ticker:GetScript("OnUpdate"), "stopped polling after the old two-second timeout")
     GetItemInfo = function() return "cached" end
-    update(ticker, 0.1)
+    update(ticker, 0.2)
     assert(not ticker:GetScript("OnUpdate"), "did not finish once every item was cached")
 end)
 
@@ -140,6 +146,72 @@ test("bulk preload requests item enhancements but never spell IDs", function()
     upvalue(BistooltipAddon.showMainFrame, "BulkPreloadAllItems")(false)
     assert(requested["item:123:0:0:0:0:0:0:0"], "item enhancement was not requested")
     assert(not requested["item:456:0:0:0:0:0:0:0"], "spell enhancement was requested as an item")
+end)
+
+test("stale preload callback cannot cancel a newer selection", function()
+    local bulk = upvalue(BistooltipAddon.showMainFrame, "BulkPreloadAllItems")
+    BistooltipState.Set("class", "Warrior")
+    BistooltipState.Set("spec", "Fury")
+    BistooltipState.Set("phase", "T7")
+    BistooltipData.GetSlotsForSpec = function() return {{123456}} end
+    GetItemInfo = function() return nil end
+    bulk(false)
+    local ticker = upvalue(bulk, "bulkPreloadFrame")
+    local old = ticker:GetScript("OnUpdate")
+    BistooltipState.Set("phase", "T8")
+    bulk(false)
+    local current = ticker:GetScript("OnUpdate")
+    assert(old ~= current, "new selection did not replace preload callback")
+    old(ticker, 0.2)
+    assert(ticker:GetScript("OnUpdate") == current, "old callback canceled the current preload")
+end)
+
+test("switching to a fully cached selection cancels the old poller", function()
+    local bulk = upvalue(BistooltipAddon.showMainFrame, "BulkPreloadAllItems")
+    BistooltipState.Set("phase", "T7")
+    BistooltipData.GetSlotsForSpec = function() return {{123456}} end
+    GetItemInfo = function() return nil end
+    bulk(false)
+    local ticker = upvalue(bulk, "bulkPreloadFrame")
+    assert(ticker:GetScript("OnUpdate"), "uncached item did not start polling")
+    GetItemInfo = function() return "cached" end
+    bulk(false)
+    assert(not ticker:GetScript("OnUpdate"), "obsolete callback continued after all items were cached")
+end)
+
+test("on-demand preload retries a missing item and clears its pending state", function()
+    local init = upvalue(BistooltipAddon.showMainFrame, "InitPreloadSystem")
+    init()
+    local ticker = upvalue(init, "preloadFrame")
+    local draw = upvalue(BistooltipAddon.showMainFrame, "drawSpecData")
+    local queue = upvalue(upvalue(draw, "CreateCustomSlotRow"), "QueuePreload")
+    local requests = 0
+    BistooltipAddon._preloadScanner = frame()
+    BistooltipAddon._preloadScanner.SetHyperlink = function() requests = requests + 1 end
+    GetItemInfo = function() return nil end
+    queue(987654)
+    local update = ticker:GetScript("OnUpdate")
+    update(ticker, 0.2)
+    update(ticker, 1.0)
+    assert(requests >= 2, "on-demand miss was never retried")
+    GetItemInfo = function() return "cached" end
+    update(ticker, 0.2)
+    assert(not upvalue(queue, "preloadSeen")[987654], "loaded ID remained blocked in preload cache")
+end)
+
+test("on-demand preload stops requesting after its retry budget", function()
+    local init = upvalue(BistooltipAddon.showMainFrame, "InitPreloadSystem")
+    local ticker = upvalue(init, "preloadFrame")
+    local draw = upvalue(BistooltipAddon.showMainFrame, "drawSpecData")
+    local queue = upvalue(upvalue(draw, "CreateCustomSlotRow"), "QueuePreload")
+    local requests = 0
+    BistooltipAddon._preloadScanner.SetHyperlink = function() requests = requests + 1 end
+    GetItemInfo = function() return nil end
+    queue(987655)
+    for i = 1, 16 do ticker:GetScript("OnUpdate")(ticker, 1.0) end
+    assert(requests == 4 and not ticker:IsShown(), "missing item kept being requested")
+    queue(987655)
+    assert(not ticker:IsShown(), "exhausted item was requeued before manual reload")
 end)
 
 test("recreate cleanup hides the actual spec container", function()

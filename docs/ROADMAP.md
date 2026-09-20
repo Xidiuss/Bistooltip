@@ -11,8 +11,8 @@ Aktualizacja 20 września 2026 po testach właściciela w kliencie. Core, scanne
 
 ## P1 — enchanty i cache
 
-1. **Edytor przypisań enchantów.** Pokazać dostępne scroll ID, źródło i cenę, pozwolić przypisać itemID lub spellID do dokładnego class/spec/phase/slot, wyświetlić podgląd `SetEnhancement` i ostrzeżenie o nadpisaniu istniejącej listy. Walidować typ ID i zgodność slotu. Dziewięć scrolli WOTLK5 ma obecnie źródła zakupu, ale nie rekomendacje.
-2. **Cache przedmiotów.** Zmierzyć opóźnienia na zimnym cache w kliencie. Następnie wprowadzić ograniczoną kolejkę żądań z ponawianiem, limitem prób i tokenem generacji widoku, aby spóźniona odpowiedź nie przepisywała bieżącej selekcji. Pokazać stan oczekiwania i umożliwić ręczne odświeżenie.
+1. **Edytor przypisań enchantów — wdrożony offline.** W `/bis config` użytkownik podaje scroll itemID lub spellID oraz dokładny class/spec/phase/slot w wybranej bazie. Podgląd pokazuje istniejący wpis, źródło/cenę nowego scrolla (jeśli znane) i wywołanie `SetEnhancement` dla autora wtyczki. Zapis osobistego przypisania zachowuje dalsze wpisy, w tym gemy; reset przywraca dane bazy/wtyczki. Pozostaje sprawdzenie UI i zgodności custom scrolli ze slotami w kliencie, bo API itemów nie podaje jej niezawodnie. Dziewięć scrolli WOTLK5 ma źródła zakupu, lecz nadal nie ma automatycznych rekomendacji serwerowych.
+2. **Cache przedmiotów — poprawiony offline.** Ładowanie listy działa porcjami po osiem ID, ponawia do czterech prób w oknie ośmiu sekund, pokazuje liczbę oczekujących/brakujących i nie pozwala staremu callbackowi skasować nowego widoku. Kolejka doraźna też ponawia i odświeża dane po załadowaniu. Zmierzyć zimny cache i stabilność odświeżania w kliencie; RELOAD pozostaje ręcznym sposobem ponownej próby.
 
 ## P2 — domknięcie danych
 
@@ -29,7 +29,7 @@ Aktualizacja 20 września 2026 po testach właściciela w kliencie. Core, scanne
 
 ## P4 — koszyk zakupów
 
-Koszyk ma być osobną listą **wybranych, brakujących** przedmiotów. Użytkownik wybiera dla każdego przedmiotu dokładnie jedną z dostępnych ofert (np. Justice albo custom emblem); jedna oferta może wymagać kilku składników jednocześnie, takich jak Honor + Arena lub item wejściowy + Sunmote. Widok sumuje wyłącznie wybrane oferty, oddzielnie według waluty i itemID, a gold liczy w miedzi i formatuje na g/s/c. Pokazuje posiadane ilości, brak i miejsce zakupu, pozwala zmienić ofertę bez zmiany rankingu BiS. Alternatywnych ofert nie sumuje jako jednego kosztu; upgrade'y dochodzą dopiero po zdefiniowaniu łańcucha i zużycia przedmiotów wejściowych.
+VENDOR już jest prostą listą zakupów BiS: pokazuje wymagane pozycje, ich ceny i pozwala eksportować checklistę. Docelowy koszyk ma rozszerzyć ten widok o ręcznie wybierane przedmioty zakupowe **także spoza BiS**, gdy stanowią użyteczny upgrade. Użytkownik wybiera jedną ofertę na przedmiot, może zmieniać kolejność kupna, a widok pokazuje liczbę pozycji i sumy kosztów według waluty/itemID. Składniki jednej oferty (np. Honor + Arena) sumują się razem; alternatywne oferty nie są dodawane jednocześnie. Powiadomienie dźwiękowe ma zadziałać raz, gdy wiarygodnie odczytane zasoby wystarczą na konkretną pozycję; dla walut bez dostępnego stanu nie wolno zgadywać gotowości. Zakupy automatyczne i łańcuchy upgrade'ów nie należą do pierwszego wydania koszyka.
 
 ## Kontrakt i utrzymanie
 

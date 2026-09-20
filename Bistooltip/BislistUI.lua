@@ -280,8 +280,12 @@ local preloadFrame = nil
 local preloadQueue = {}
 local preloadSeen = {}
 local preloadCooldown = 0
+local preloadClock = 0
+local progressBarFrame = nil
 local PRELOAD_BATCH = Constants.TIMING and Constants.TIMING.PRELOAD_BATCH_SIZE or 5
 local PRELOAD_INTERVAL = Constants.TIMING and Constants.TIMING.PRELOAD_INTERVAL or 0.1
+local PRELOAD_MAX_ATTEMPTS = 4
+local PRELOAD_RETRY_DELAY = 0.75
 
 -- Active pooled elements tracking (for proper cleanup)
 local activePooledElements = {
@@ -649,7 +653,7 @@ local function QueuePreload(itemId)
     if not itemId or itemId <= 0 then return end
     if preloadSeen[itemId] then return end
     
-    preloadSeen[itemId] = true
+    preloadSeen[itemId] = {attempts = 0, nextAt = preloadClock}
     table.insert(preloadQueue, itemId)
     
     if preloadFrame then
@@ -664,6 +668,7 @@ local function InitPreloadSystem()
     preloadFrame:Hide()
     
     preloadFrame:SetScript("OnUpdate", function(self, elapsed)
+        preloadClock = preloadClock + (elapsed or 0)
         preloadCooldown = (preloadCooldown or 0) - (elapsed or 0)
         if preloadCooldown > 0 then return end
         preloadCooldown = PRELOAD_INTERVAL
@@ -682,19 +687,33 @@ local function InitPreloadSystem()
         end
         local scanTT = BistooltipAddon._preloadScanner
         
-        for i = 1, PRELOAD_BATCH do
-            local itemId = table.remove(preloadQueue)
+        local loaded = false
+        for i = 1, math.min(PRELOAD_BATCH, #preloadQueue) do
+            local itemId = table.remove(preloadQueue, 1)
             if not itemId then break end
-            if not GetItemInfo(itemId) then
-                scanTT:SetHyperlink("item:" .. itemId .. ":0:0:0:0:0:0:0")
-                scanTT:Hide()
+            local attempt = preloadSeen[itemId]
+            if GetItemInfo(itemId) then
+                preloadSeen[itemId] = nil
+                if Data.InvalidateItemCache then Data.InvalidateItemCache(itemId) end
+                loaded = true
+            elseif attempt then
+                if attempt.attempts < PRELOAD_MAX_ATTEMPTS and preloadClock >= attempt.nextAt then
+                    scanTT:SetHyperlink("item:" .. itemId .. ":0:0:0:0:0:0:0")
+                    scanTT:Hide()
+                    attempt.attempts = attempt.attempts + 1
+                    attempt.nextAt = preloadClock + PRELOAD_RETRY_DELAY * attempt.attempts
+                end
+                if attempt.attempts < PRELOAD_MAX_ATTEMPTS then
+                    table.insert(preloadQueue, itemId)
+                end
             end
         end
         
-        -- Refresh if main frame is visible and not already drawing
-        if mainFrame and specFrame and mainFrame.frame:IsShown() and not isDrawing then
+        -- Redraw only when an item actually becomes available.
+        if loaded and mainFrame and specFrame and mainFrame.frame:IsShown() and not isDrawing then
             drawSpecData()
         end
+        if #preloadQueue == 0 then self:Hide() end
     end)
 end
 
@@ -703,9 +722,31 @@ end
 -- ============================================================
 
 local bulkPreloadFrame = nil
-local bulkPreloadPending = false
+local bulkPreloadGeneration = 0
+local bulkPreloadRemaining = 0
+local bulkPreloadFailed = 0
+local BULK_REQUEST_BATCH = 8
+local BULK_RETRY_DELAY = 0.75
+local BULK_MAX_ATTEMPTS = 4
+local BULK_MAX_WAIT = 8.0
+
+local function RefreshPreloadStatus()
+    if not progressBarFrame or not progressBarFrame._text or not progressBarFrame._progressText then return end
+    local suffix = ""
+    if bulkPreloadRemaining > 0 then
+        suffix = " | Loading item info: " .. bulkPreloadRemaining
+    elseif bulkPreloadFailed > 0 then
+        suffix = " | " .. bulkPreloadFailed .. " unavailable (RELOAD)"
+    end
+    progressBarFrame._text:SetText(progressBarFrame._progressText .. suffix)
+end
 
 local function BulkPreloadAllItems(forceRefresh)
+    bulkPreloadGeneration = bulkPreloadGeneration + 1
+    bulkPreloadRemaining = 0
+    bulkPreloadFailed = 0
+    if bulkPreloadFrame then bulkPreloadFrame:SetScript("OnUpdate", nil) end
+    local generation = bulkPreloadGeneration
     local className, specName, phase = State.GetCurrentSelection()
     if not className or not specName or not phase then return end
 
@@ -724,7 +765,10 @@ local function BulkPreloadAllItems(forceRefresh)
 
     local isHorde = State.Get("isHorde")
     local itemsToLoad = {}
-    local itemsRequested = 0
+    local attempts = {}
+    local source = BistooltipAddon.db and BistooltipAddon.db.global
+        and BistooltipAddon.db.global.data_source or "wowsims"
+    local selectionKey = table.concat({source, className, specName, phase, tostring(isHorde)}, "|")
 
     -- Collect all item IDs
     for _, slot in ipairs(slots) do
@@ -749,43 +793,73 @@ local function BulkPreloadAllItems(forceRefresh)
         end
     end
 
-    -- Request all items at once
-    for itemId in pairs(itemsToLoad) do
-        scanTT:SetHyperlink("item:" .. itemId .. ":0:0:0:0:0:0:0")
-        scanTT:Hide()
-        itemsRequested = itemsRequested + 1
+    local function RequestMissingBatch(now)
+        local pending, loaded = 0, false
+        for itemId in pairs(itemsToLoad) do
+            if GetItemInfo(itemId) then
+                itemsToLoad[itemId] = nil
+                if Data.InvalidateItemCache then Data.InvalidateItemCache(itemId) end
+                loaded = true
+            else
+                pending = pending + 1
+            end
+        end
+        local budget = BULK_REQUEST_BATCH
+        -- New IDs get a first request before previously requested IDs retry.
+        for pass = 1, 2 do
+            for itemId in pairs(itemsToLoad) do
+                local attempt = attempts[itemId]
+                local eligible = (pass == 1 and not attempt)
+                    or (pass == 2 and attempt and attempt.count < BULK_MAX_ATTEMPTS and now >= attempt.nextAt)
+                if eligible then
+                    scanTT:SetHyperlink("item:" .. itemId .. ":0:0:0:0:0:0:0")
+                    scanTT:Hide()
+                    local count = attempt and attempt.count + 1 or 1
+                    attempts[itemId] = {count = count, nextAt = now + BULK_RETRY_DELAY * count}
+                    budget = budget - 1
+                    if budget == 0 then return pending, loaded end
+                end
+            end
+        end
+        return pending, loaded
     end
 
+    bulkPreloadRemaining = select(1, RequestMissingBatch(0))
+    RefreshPreloadStatus()
+
     -- Schedule refresh after items are loaded
-    if itemsRequested > 0 or forceRefresh then
+    if bulkPreloadRemaining > 0 or forceRefresh then
         if not bulkPreloadFrame then
             bulkPreloadFrame = CreateFrame("Frame")
         end
 
-        bulkPreloadPending = true
         local waitTime = 0
-        local maxWait = 2.0  -- Max 2 seconds wait
+        local lastPoll = 0
 
         bulkPreloadFrame:SetScript("OnUpdate", function(self, elapsed)
-            waitTime = waitTime + elapsed
-
-            -- Check if items are loaded or timeout reached
-            local allLoaded = true
-            for itemId in pairs(itemsToLoad) do
-                if not GetItemInfo(itemId) then
-                    allLoaded = false
-                    break
-                end
+            if generation ~= bulkPreloadGeneration then
+                return
             end
+            waitTime = waitTime + elapsed
+            if waitTime - lastPoll < 0.15 and waitTime < BULK_MAX_WAIT then return end
+            lastPoll = waitTime
+            local remaining, loaded = RequestMissingBatch(waitTime)
+            bulkPreloadRemaining = remaining
+            local currentClass, currentSpec, currentPhase = State.GetCurrentSelection()
+            local currentSource = BistooltipAddon.db and BistooltipAddon.db.global
+                and BistooltipAddon.db.global.data_source or "wowsims"
+            local sameSelection = selectionKey == table.concat({currentSource,
+                currentClass or "", currentSpec or "", currentPhase or "", tostring(State.Get("isHorde"))}, "|")
 
-            if allLoaded or waitTime >= maxWait then
+            if remaining == 0 or waitTime >= BULK_MAX_WAIT then
                 self:SetScript("OnUpdate", nil)
-                bulkPreloadPending = false
-
-                -- Refresh UI
-                if mainFrame and mainFrame.frame:IsShown() and not isDrawing then
-                    drawSpecData()
-                end
+                if remaining > 0 then bulkPreloadFailed = remaining end
+                bulkPreloadRemaining = 0
+            end
+            RefreshPreloadStatus()
+            if (loaded or remaining == 0 or waitTime >= BULK_MAX_WAIT) and sameSelection
+                    and mainFrame and mainFrame.frame:IsShown() and not isDrawing then
+                drawSpecData()
             end
         end)
     end
@@ -795,6 +869,7 @@ end
 local function ForceReloadAllItems()
     -- Clear preload seen cache to allow re-queueing
     wipe(preloadSeen)
+    wipe(preloadQueue)
 
     -- Trigger bulk preload
     BulkPreloadAllItems(true)
@@ -1497,7 +1572,6 @@ local customContentFrame = nil
 local customHeaderFrame = nil
 local activeCustomRows = {}
 local specContainerFrame = nil
-local progressBarFrame = nil
 
 local function DestroyCustomSpecFrame()
     -- Clear active rows
@@ -1815,7 +1889,8 @@ local function UpdateProgressBar(collected, total)
     local barWidth = (progressBarFrame._fixedWidth or ((Constants.UI.MAIN_FRAME_WIDTH or 600) - 8)) - 2
     local width = barWidth * pct
     progressBarFrame._fill:SetWidth(math.max(width, 1))
-    progressBarFrame._text:SetText(string.format("Progress: %d/%d (%.0f%%)", collected, total, pct * 100))
+    progressBarFrame._progressText = string.format("Progress: %d/%d (%.0f%%)", collected, total, pct * 100)
+    RefreshPreloadStatus()
 end
 
 -- Create custom header row with search in SLOT column
