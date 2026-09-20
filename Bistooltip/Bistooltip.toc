@@ -44,6 +44,7 @@ Bistooltip_horde_to_ali.lua
 SourceRegistry.lua
 ItemAcquisition.lua
 UserVerifiedSources.lua
+OwnerVerifiedAdditions.lua
 SourceFormatter.lua
 PluginAPI.lua
 

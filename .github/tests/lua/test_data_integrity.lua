@@ -2,6 +2,7 @@
 dofile('Bistooltip/SourceRegistry.lua')
 dofile('Bistooltip/ItemAcquisition.lua')
 dofile('Bistooltip/UserVerifiedSources.lua')
+dofile('Bistooltip/OwnerVerifiedAdditions.lua')
 dofile('Bistooltip/SourceFormatter.lua')
 local methods = {DROP=true, TOKEN=true, MARK=true, VENDOR=true, CUSTOM=true, ACTIVITY=true}
 assert(BisTooltip_ItemAcquisition[24116][1].kind=='ACTIVITY', 'craft method absent')
@@ -13,11 +14,48 @@ local exchange=BisTooltip_ItemAcquisition[34391][1]
 assert(exchange.kind=='VENDOR' and #exchange.cost==2
     and exchange.cost[1].item==34209 and exchange.cost[2].item==34664,
     'Yrma exchange lost its two required items')
-assert(not BisTooltip_ItemAcquisition[34386], 'incomplete Sunmote exchange became a vendor price')
 assert(not BisTooltip_ItemAcquisition[43792], 'unavailable ID got an invented source')
-assert(BisTooltip_ItemAcquisition[37761][1].label=='World drop'
-    and BisTooltip_ItemAcquisition[43573][1].label=='World drop',
-    'known world-drop method was omitted')
+assert(BisTooltip_ItemAcquisition[37761][1].label:find('elite and ordinary mobs',1,true),
+    'world-drop mob scope was lost')
+assert(BisTooltip_ItemAcquisition[43573][1].label:find('Nascent Val',1,true),
+    'known NPC source was omitted')
+local exchanges={
+    [34381]=34180,[34385]=34188,[34386]=34170,[34388]=34192,
+    [34389]=34193,[34390]=34208,[34392]=34195,[34394]=34215,
+    [34396]=34229,[34397]=34211,[34398]=34212,[34399]=34233,
+    [34400]=34345,[34401]=34243,[34404]=34244,[34406]=34342,
+    [34408]=34234,
+}
+for target,precursor in pairs(exchanges) do
+    local entries=assert(BisTooltip_ItemAcquisition[target], 'missing Yrma target '..target)
+    assert(#entries==1 and entries[1].kind=='VENDOR' and #entries[1].cost==2,
+        'Yrma offer must have two joint ingredients: '..target)
+    assert(entries[1].cost[1].item==precursor and entries[1].cost[1].amount==1
+        and entries[1].cost[2].item==34664 and entries[1].cost[2].amount==1,
+        'incorrect Yrma pair: '..target)
+    local precursorEntries=assert(BisTooltip_ItemAcquisition[precursor],
+        'missing precursor acquisition '..precursor)
+    local hasDrop=false
+    for _,entry in ipairs(precursorEntries) do
+        if entry.kind=='DROP' then hasDrop=true end
+    end
+    assert(hasDrop, 'precursor has no DROP: '..precursor)
+end
+local twins=assert(BisTooltip_SourceRegistry['OWNER_VERIFIED_PRECURSOR_34192'])
+assert(twins.npcIds[1]==25166 and twins.npcIds[2]==25165,
+    'Eredar Twins NPC IDs lost')
+for _,pair in ipairs({
+    {47674,47675,75},{47677,47678,75},{47689,47688,75},
+    {47690,47691,75},{47693,47692,75},{47694,47695,75},
+    {47702,47701,45},{47704,47705,45},{47713,47714,45},
+    {47715,47716,45},
+}) do
+    for _,id in ipairs({pair[1],pair[2]}) do
+        local amount,currency=BisTooltip_GetVendorCost(id)
+        assert(amount==pair[3] and currency=='Emblem of Triumph',
+            'faction vendor price incorrect: '..id)
+    end
+end
 local difficulties = {['']=true, HC=true, ['5HC']=true, ['10N']=true, ['25N']=true,
     ['10HC']=true, ['25HC']=true, ['10HM']=true, ['25HM']=true}
 local count = 0

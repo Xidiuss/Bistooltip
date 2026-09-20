@@ -77,6 +77,7 @@ for _,faction in ipairs({'Alliance','Horde'}) do
         dofile('Bistooltip/SourceRegistry.lua')
         dofile('Bistooltip/ItemAcquisition.lua')
         dofile('Bistooltip/UserVerifiedSources.lua')
+        dofile('Bistooltip/OwnerVerifiedAdditions.lua')
         dofile('Bistooltip/SourceFormatter.lua')
         dofile('Bistooltip/PluginAPI.lua')
         dofile('Bistooltip/DataProvider.lua')

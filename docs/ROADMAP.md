@@ -16,8 +16,8 @@ Aktualizacja 20 września 2026 po testach właściciela w kliencie. Core, scanne
 
 ## P2 — domknięcie danych
 
-1. [Import danych właściciela](NEW-DATA-IMPORT.md) dodał 165 źródeł i skorygował ranking `34209` → `34391`. W WoWSimsBP Alliance pozostało 28 unikalnych ID bez źródła; [pierwotny spis 193](MISSING-ACQUISITIONS.md) jest migawką sprzed importu. Dwie luki rank 1 WoWSimsBP obejmują `34388` i `43792`; wowtbc ma cztery. Nie udawać pełnej ceny 17 wymian u Yrma bez ID oddawanego przedmiotu.
-2. Dla 10 cen ograniczonych do Alliance wprowadzić semantykę frakcji w modelu ofert przed importem. Doprecyzować brakujące bossy dla `37761` i `43573`; dla `43792` rozstrzygnąć niedostępność i związek z `40458` bez automatycznego aliasu.
+1. [Import danych właściciela](NEW-DATA-IMPORT.md) dodał 165 źródeł z pierwszej migawki, następnie 17 kompletnych wymian u Yrma, osiem brakujących źródeł przedmiotów wejściowych i 10 cen Alliance. Niedostępne `43792` usunięto z jednego rankingu Shadow PR. Bieżący census wykazuje zero ID bez źródła w aktywnych rankingach core; [spis 193](MISSING-ACQUISITIONS.md) jest migawką historyczną. Kontynuować kontrolę jakości i dokładności źródeł, nie odtwarzać dawnych braków z tej tabeli.
+2. Weryfikować w kliencie złożone wymiany item + Sunmote, ceny par Alliance/Horde oraz miejsce pozyskania `43573`. Dla `37761` znany jest world drop z elitarnych i zwykłych mobów; dokładna lista NPC nie jest wymagana do działania.
 3. [Dwadzieścia rekordów custom Whitemane](https://github.com/Xidiuss/Bistooltip/blob/Bistooltip_Whitemane_Frostmourne/docs/BIS-CANDIDATES.md) obejmuje 10 częściowych metod quest/drop, siedem odroczonych upgrade'ów i trzy nieustalone metody. Ceny Ascension z niepotwierdzonym ID waluty i puste koszty pozostają nieaktywne. Uzupełnić konkretne questy, bossów, waluty i dokładne class/spec/phase/slot/rank przed kolejnym wstawieniem BiS.
 4. Zweryfikować fazy Wowhead PR/T7, szczególnie `45931` i `48472`, oraz historyczną ofertę `37111` na docelowym serwerze.
 

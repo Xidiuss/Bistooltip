@@ -65,13 +65,13 @@ Install the relevant server plugin alongside the core when using that server's c
 - [Development, regression tests, and in-game checks](docs/DEVELOPMENT.md)
 - [Server plugin API and scanner handoff](docs/PLUGIN-API.md)
 - [Post-migration audit and measured data gaps](docs/POSTMIGRATION-AUDIT.md)
-- [Complete list of ranking item IDs without acquisition records](docs/MISSING-ACQUISITIONS.md)
-- [September 2026 user-data import and remaining exceptions](docs/NEW-DATA-IMPORT.md)
+- [Historical pre-import list of ranking IDs without acquisition records](docs/MISSING-ACQUISITIONS.md)
+- [September 2026 user-data import and owner-verified follow-up](docs/NEW-DATA-IMPORT.md)
 - [Prioritized roadmap and release gates](docs/ROADMAP.md)
 - [Changelog](Bistooltip/CHANGELOG.md)
 
 Runtime files live under `Bistooltip/`; public regression tests live under `.github/tests/`. `Bistooltip.toc` defines the actual load graph. `EmblemData.lua` is retained as an offline migration input and is not loaded by the addon.
 
-The core is distributed under its [MIT license](Bistooltip/LICENSE); bundled third-party libraries retain their own notices. [Pazzions AtlasLoot](https://github.com/wonderkidsem-official/Pazzions-WotLK-BiS-List-AtlasLoot-Enhanced-v5.11.04) is a separate GPL-2.0 reference used during an earlier data check, not a bundled dependency. Its code and tables are not copied into this package. The new acquisition facts come from the owner's manually verified `Private/new_data` handoff, with incomplete records explicitly omitted; the [import report](docs/NEW-DATA-IMPORT.md) records the boundary. The ExoJdi data lineage remains documented above.
+The core is distributed under its [MIT license](Bistooltip/LICENSE); bundled third-party libraries retain their own notices. [Pazzions AtlasLoot](https://github.com/wonderkidsem-official/Pazzions-WotLK-BiS-List-AtlasLoot-Enhanced-v5.11.04) is a separate GPL-2.0 reference used during an earlier data check, not a bundled dependency. Its code and tables are not copied into this package. The new acquisition facts come from the owner's manually verified `Private/new_data` handoff and subsequent item-pair corrections; the [import report](docs/NEW-DATA-IMPORT.md) records their scope and remaining custom-server work. The ExoJdi data lineage remains documented above.
 
 Original addon/backport credits: Silver [DisruptionAuras], [disruption01](https://github.com/disruption01/BiS-Tooltip_335a_backport), and [ExoJdi](https://github.com/ExoJdi/BiS-Tooltip_335a_fixed_backport) for the fixed backport and WoWSimsBP input. Refactoring and maintenance: Divian.

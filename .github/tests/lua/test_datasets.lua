@@ -5,6 +5,7 @@ dofile('Bistooltip/Bistooltip_wh_bislists.lua')
 dofile('Bistooltip/SourceRegistry.lua')
 dofile('Bistooltip/ItemAcquisition.lua')
 dofile('Bistooltip/UserVerifiedSources.lua')
+dofile('Bistooltip/OwnerVerifiedAdditions.lua')
 local function copy(t)
     if type(t)~='table' then return t end
     local out={} for k,v in pairs(t) do out[k]=copy(v) end return out
@@ -21,7 +22,17 @@ for class,specs in pairs(Bistooltip_wowsims_horde_overrides or {}) do
         end
     end
 end
-local forbidden={[128858]=true,[130023]=true,[130031]=true,[131004]=true,[150005]=true}
+local forbidden={[128858]=true,[130023]=true,[130031]=true,[131004]=true,[150005]=true,[43792]=true}
+local shadowPR=assert(Bistooltip_wowsims_final['Priest']['Shadow']['PR'])
+local shadowChest
+for _,slot in ipairs(shadowPR) do
+    if slot.slot_name=='Chest' then shadowChest=slot break end
+end
+assert(shadowChest and shadowChest[1]==39523 and shadowChest[2]==43401,
+    'unavailable Shadow robe was not removed from WoWSims PR')
+local shadowCount=0
+for _,id in ipairs(shadowChest) do if id==39523 then shadowCount=shadowCount+1 end end
+assert(shadowCount==1, 'Shadow PR duplicates Heroes Raiments of Faith')
 for name,db in pairs({wowsims_alliance=Bistooltip_wowsims_final,
     wowsims_horde=horde,wowtbc=Bistooltip_wowtbc_bislists,wh=Bistooltip_wh_bislists}) do
     local slots,entries=0,0
@@ -57,6 +68,7 @@ for name,db in pairs({wowsims_alliance=Bistooltip_wowsims_final,
         end
     end
     local gaps=0 for _ in pairs(missing) do gaps=gaps+1 end
+    assert(gaps==0, 'ranking source gaps in '..name..': '..gaps)
     if name=='wowsims_alliance' or name=='wowtbc' then
         assert(exchangedShoulders>0, 'Yrma reward missing from '..name)
     end

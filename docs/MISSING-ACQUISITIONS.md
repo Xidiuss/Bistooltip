@@ -1,6 +1,6 @@
 # Przedmioty rankingowe bez źródła pozyskania
 
-Historyczna migawka danych z core `main` (`9cca07d`, 19 września 2026), **sprzed [importu danych właściciela](NEW-DATA-IMPORT.md)**. Po imporcie w rankingach core pozostało 31 unikalnych ID bez źródła. W tej tabeli brak oznaczał, że dodatni itemID w dostarczonym rankingu nie miał wpisu w `BisTooltip_ItemAcquisition`. To nie znaczy, że przedmiot nie istnieje ani że jest darmowy. Dodatki serwerowe mogą uzupełniać część tych źródeł. Nazw nie zgadujemy z ID; użytkownik powinien podać nazwę i źródło z klienta.
+Historyczna migawka danych z core `main` (`9cca07d`, 19 września 2026), **sprzed [importu danych właściciela](NEW-DATA-IMPORT.md)**. Po pierwszej migawce danych część luk pozostawała; uzupełnienie z 20 września zamknęło je w aktywnych rankingach. **Ta tabela nie jest aktualną listą braków.** W historycznym pomiarze brak oznaczał, że dodatni itemID w dostarczonym rankingu nie miał wpisu w `BisTooltip_ItemAcquisition`. Nie znaczyło to, że przedmiot nie istnieje ani że jest darmowy.
 
 Kody baz: **A** = WoWSimsBP Alliance, **H** = WoWSimsBP Horde, **T** = wowtbc, **W** = Wowhead (`wh`). Gwiazdka przy kodzie oznacza, że ID występuje na rank 1 w tej bazie. Jeden przykład profilu pomaga odnaleźć pozycję; ID może występować także w innych profilach i fazach.
 

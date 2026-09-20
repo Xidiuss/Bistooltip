@@ -22,6 +22,16 @@ dofile('Bistooltip/Bistooltip_horde_to_ali.lua')
 assert(BistooltipData.GetDisplayItemID(47115,false)==47115, 'Alliance Verdict changed faction')
 assert(BistooltipData.GetDisplayItemID(47115,true)==47303, 'Horde Choice not selected')
 assert(BistooltipData.GetDisplayItemID(47303,false)==47115, 'Alliance reverse faction mapping failed')
+for _,pair in ipairs({
+  {47674,47675},{47677,47678},{47689,47688},{47690,47691},
+  {47693,47692},{47694,47695},{47702,47701},{47704,47705},
+  {47713,47714},{47715,47716},
+}) do
+ assert(BistooltipData.GetDisplayItemID(pair[1],true)==pair[2],
+  'Horde Triumph counterpart missing: '..pair[1])
+ assert(BistooltipData.GetDisplayItemID(pair[2],false)==pair[1],
+  'Alliance Triumph counterpart missing: '..pair[2])
+end
 for _,id in ipairs({1,2,3,4,5,7}) do
  assert(BistooltipData.SlotHasVendorSource({slot_name='Head',id},true,false), 'vendor mode dropped item '..id)
  local groups=BistooltipInstanceHeader.GroupSlotsByInstance({{slot_name='Head',id}},false,true)

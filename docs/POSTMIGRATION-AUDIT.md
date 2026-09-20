@@ -1,5 +1,7 @@
 # Audyt postmigracyjny — 18–19 września 2026
 
+Ten raport jest migawką audytu. [Uzupełnienie danych właściciela z 20 września](NEW-DATA-IMPORT.md) zamknęło opisane tu braki ID w aktywnych rankingach core; pozostała kuracja jakości źródeł i testy natywnego klienta.
+
 ## Werdykt
 
 Architektura wspiera cel Meta-Bistooltipa: wspólny core dla WotLK 3.3.5a, niezależne rankingi, kanoniczne acquisitions ze składnikami ceny oraz dodatki serwerowe. Nie ma potrzeby kolejnej przebudowy całości. Audyt wykazał jednak rzeczywiste błędy ładowania, migracji stanu, obsługi wtyczek i skanera; opisane niżej poprawki usuwają potwierdzone regresje.
