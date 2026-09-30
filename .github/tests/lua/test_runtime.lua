@@ -21,7 +21,7 @@ end
 local noop = function() end
 local methods = {}
 local function frame()
-    return setmetatable({ scripts = {}, shown = true }, { __index = function(_, key)
+    return setmetatable({ scripts = {}, events = {}, lines = {}, doubleLines = {}, shown = true }, { __index = function(_, key)
         if methods[key] then return methods[key] end
         if key:match("^[A-Z]") then return noop end
     end })
@@ -31,6 +31,13 @@ function methods:Show() self.shown = true end
 function methods:IsShown() return self.shown end
 function methods:SetScript(name, fn) self.scripts[name] = fn end
 function methods:GetScript(name) return self.scripts[name] end
+function methods:HookScript(name, fn) self.scripts[name] = fn end
+function methods:RegisterEvent(name) self.events[name] = true end
+function methods:UnregisterEvent(name) self.events[name] = nil end
+function methods:AddLine(text) self.lines[#self.lines + 1] = tostring(text) end
+function methods:AddDoubleLine(left, right)
+    self.doubleLines[#self.doubleLines + 1] = tostring(left) .. " | " .. tostring(right)
+end
 function methods:SetParent(parent) self.parent = parent end
 function methods:GetParent() return self.parent end
 function methods:CreateTexture() return frame() end
@@ -231,6 +238,17 @@ test("recreate cleanup hides the actual progress bar", function()
     assert(not bar:IsShown(), "cleanup targeted a global instead of the live progress bar")
 end)
 
+BistooltipUtils.ColorizeByClass = function(_, text) return tostring(text) end
+BistooltipUtils.ColorizeClassName = function(text) return tostring(text) end
+BistooltipUtils.NormalizeClassFileToken = function(value) return value end
+BistooltipUtils.GetClassFileFromDatasetName = function(value) return value end
+BistooltipUtils.TableContains = function() return false end
+BistooltipUtils.CaseInsensitivePairs = function(value) return pairs(value or {}) end
+BistooltipUtils.GetSpecIcon = function() return nil end
+BistooltipPlayerContext = {
+    GetPlayerClassSpecKeys = function() return "Shaman", "Spellhance" end,
+}
+
 test("modifier events refresh both tooltips including rapid release", function()
     GameTooltip, ItemRefTooltip = frame(), frame()
     local counts = { 0, 0 }
@@ -245,6 +263,69 @@ test("modifier events refresh both tooltips including rapid release", function()
     events:GetScript("OnEvent")(events, "MODIFIER_STATE_CHANGED", "LSHIFT", 0)
     assert(counts[1] == 2 and counts[2] == 2,
         "modifier refresh lost tooltip or release: " .. counts[1] .. "/" .. counts[2])
+end)
+
+test("Your specialization uses the shared player context result", function()
+    Bistooltip_bislists = { Shaman = { Spellhance = { T7 = {
+        {slot_name = "Head", enhs = {}, 123},
+    } } } }
+    Bistooltip_spec_icons = { Shaman = { Spellhance = "spellhance-icon" } }
+    Bistooltip_classes_indexes = { Shaman = 1 }
+    Bistooltip_wowtbc_phases = {"T7"}
+    BistooltipAddon.db = { char = {
+        tooltip_with_ctrl = false, filter_specs = {}, highlight_spec = {},
+        filter_class_names = false, show_item_source = false,
+    } }
+    IsShiftKeyDown = function() return false end
+    IsControlKeyDown = function() return false end
+    IsEquippableItem = function() return true end
+    strsplit = function() return "item", "123" end
+    GetItemInfo = function()
+        return "Test item", nil, 4, nil, nil, nil, nil, nil, "INVTYPE_HEAD"
+    end
+    GameTooltip.GetItem = function() return "Test item", "item:123:0:0:0" end
+    GameTooltip.lines, GameTooltip.doubleLines = {}, {}
+    local hook = GameTooltip.scripts.OnTooltipSetItem
+    assert(type(hook) == "function", "tooltip hook was not installed")
+    hook(GameTooltip)
+    local output = table.concat(GameTooltip.doubleLines, "\n")
+    assert(output:find("Spellhance", 1, true),
+        "shared Spellhance context was not shown in Your specialization")
+end)
+
+test("character context events refresh visible tooltips and UI safely", function()
+    local eventFrame = upvalue(BistooltipAddon.initBisTooltip, "eventFrame")
+    local events = {
+        "ACTIVE_TALENT_GROUP_CHANGED", "CHARACTER_POINTS_CHANGED", "PLAYER_TALENT_UPDATE",
+        "PLAYER_EQUIPMENT_CHANGED", "SKILL_LINES_CHANGED",
+    }
+    local tooltipRefreshes, uiRefreshes = 0, 0
+    GameTooltip.SetHyperlink = function() tooltipRefreshes = tooltipRefreshes + 1 end
+    ItemRefTooltip.SetHyperlink = function() tooltipRefreshes = tooltipRefreshes + 1 end
+    GameTooltip.GetItem = function() return "Item", "item:123:0:0:0" end
+    ItemRefTooltip.GetItem = GameTooltip.GetItem
+    GameTooltip:Show()
+    ItemRefTooltip:Show()
+    BistooltipAddon.RefreshUI = function() uiRefreshes = uiRefreshes + 1 end
+    local onEvent = eventFrame:GetScript("OnEvent")
+    for _, event in ipairs(events) do
+        assert(eventFrame.events[event], "context event was not registered: " .. event)
+        onEvent(eventFrame, event)
+    end
+    assert(tooltipRefreshes == #events * 2, "context events missed a visible tooltip")
+    assert(uiRefreshes == #events, "context events missed the main UI refresh")
+
+    BistooltipAddon.RefreshUI = nil
+    local oldGame, oldRef = GameTooltip, ItemRefTooltip
+    GameTooltip, ItemRefTooltip = nil, nil
+    local ok, err = pcall(onEvent, eventFrame, "PLAYER_EQUIPMENT_CHANGED")
+    GameTooltip, ItemRefTooltip = oldGame, oldRef
+    assert(ok, "context event was unsafe before UI creation: " .. tostring(err))
+
+    BistooltipAddon:cleanupBisTooltip()
+    for _, event in ipairs(events) do
+        assert(not eventFrame.events[event], "cleanup retained context event: " .. event)
+    end
 end)
 
 test("bisemblem prints every canonical vendor option for IDs and links", function()

@@ -21,12 +21,6 @@ local TableContains = Utils.TableContains
 local CaseInsensitivePairs = Utils.CaseInsensitivePairs
 
 -- ============================================================
--- Spec Detection Configuration (from Constants)
--- ============================================================
-
-local SPEC_BY_CLASSFILE_TAB = Constants.SPEC_BY_CLASSFILE_TAB
-
--- ============================================================
 -- Local Helper Functions
 -- ============================================================
 
@@ -147,18 +141,6 @@ local function RankTagForSelf(rank)
     return "|cffff3b3bNO BIS|r"
 end
 
--- Robust points extraction across API variations
-local function ExtractTalentPoints(...)
-    local best
-    for i = 1, select("#", ...) do
-        local v = select(i, ...)
-        if type(v) == "number" and v >= 0 and v <= 71 then
-            if not best or v > best then best = v end
-        end
-    end
-    return best
-end
-
 -- Promote ALT2 to BIS2 for dual-slot items (rings/trinkets) and Fury DW weapons
 local function NormalizeDualSlotRank(itemId, className, specName, rank)
     if not rank or rank.kind ~= "ALT" or tonumber(rank.n) ~= 2 then
@@ -213,55 +195,6 @@ local function RankTag(rank)
     if rank.kind == "BIS2" then return "|cff009900BIS²|r" end
     if rank.kind == "ALT" then return string.format("|cffffa500ALT %d|r", rank.n or 0) end
     return "|cffffff00FOUND|r"
-end
-
-local function GetPlayerClassSpecKeys()
-    local _, classFile = UnitClass("player")
-    if not classFile then return nil end
-    
-    local classKey = Utils.CLASSFILE_TO_DATASET[classFile] or UnitClass("player")
-    
-    -- Active talent group (dual spec)
-    local group = 1
-    if type(_G.GetActiveTalentGroup) == "function" then
-        local ok, g = pcall(_G.GetActiveTalentGroup, false, false)
-        if not ok then ok, g = pcall(_G.GetActiveTalentGroup) end
-        if ok and type(g) == "number" and g >= 1 then group = g end
-    end
-    
-    local bestTab, bestPts = 1, -1
-    local tabs = _G.GetNumTalentTabs and _G.GetNumTalentTabs(false, false) or 3
-    
-    for tab = 1, tabs do
-        local points
-        do
-            local ok, r1, r2, r3, r4, r5, r6, r7, r8 = pcall(_G.GetTalentTabInfo, tab, false, false, group)
-            if ok then
-                points = ExtractTalentPoints(r1, r2, r3, r4, r5, r6, r7, r8)
-            end
-            if points == nil then
-                local ok2, a1, a2, a3, a4, a5, a6, a7, a8 = pcall(_G.GetTalentTabInfo, tab, false, false)
-                if ok2 then points = ExtractTalentPoints(a1, a2, a3, a4, a5, a6, a7, a8) end
-            end
-        end
-        if points and points > bestPts then
-            bestPts, bestTab = points, tab
-        end
-    end
-
-    -- Druid edge: tab 2 can be cat or bear
-    local specName = (SPEC_BY_CLASSFILE_TAB[classFile] and SPEC_BY_CLASSFILE_TAB[classFile][bestTab]) or nil
-    if classFile == "DRUID" and bestTab == 2 then
-        local form = GetShapeshiftForm and GetShapeshiftForm() or 0
-        if form == 1 then specName = "Feral tank"
-        elseif form == 3 then specName = "Feral dps"
-        else specName = "Feral tank" end
-    end
-    if classFile == "DEATHKNIGHT" and bestTab == 1 then
-        specName = "Blood tank"
-    end
-    
-    return classKey, specName
 end
 
 local function specHighlighted(class_name, spec_name)
@@ -556,7 +489,11 @@ local function OnGameTooltipSetItem(tooltip)
     local playerClass, playerSpec = nil, nil
     
     if showSpec then
-        local pClass, pSpec = GetPlayerClassSpecKeys()
+        local pClass, pSpec
+        if type(_G.BistooltipPlayerContext) == "table"
+                and type(_G.BistooltipPlayerContext.GetPlayerClassSpecKeys) == "function" then
+            pClass, pSpec = _G.BistooltipPlayerContext.GetPlayerClassSpecKeys()
+        end
         playerClass, playerSpec = pClass, pSpec  -- Save for later
         
         if pClass and pSpec then
@@ -867,16 +804,30 @@ end
 -- ============================================================
 
 function BistooltipAddon:initBisTooltip()
+    local contextEvents = {
+        "ACTIVE_TALENT_GROUP_CHANGED",
+        "CHARACTER_POINTS_CHANGED",
+        "PLAYER_TALENT_UPDATE",
+        "PLAYER_EQUIPMENT_CHANGED",
+        "SKILL_LINES_CHANGED",
+    }
     eventFrame:RegisterEvent("MODIFIER_STATE_CHANGED")
-    eventFrame:SetScript("OnEvent", function(_, _, e_key)
-        if e_key ~= "RCTRL" and e_key ~= "LCTRL" and e_key ~= "RSHIFT" and e_key ~= "LSHIFT" then
-            return
+    for _, event in ipairs(contextEvents) do eventFrame:RegisterEvent(event) end
+    eventFrame:SetScript("OnEvent", function(_, event, e_key)
+        if event == "MODIFIER_STATE_CHANGED" then
+            if e_key ~= "RCTRL" and e_key ~= "LCTRL" and e_key ~= "RSHIFT" and e_key ~= "LSHIFT" then
+                return
+            end
         end
         if GameTooltip and GameTooltip:IsShown() then
             RefreshAnyTooltip(GameTooltip)
         end
         if ItemRefTooltip and ItemRefTooltip:IsShown() then
             RefreshAnyTooltip(ItemRefTooltip)
+        end
+        if event ~= "MODIFIER_STATE_CHANGED" and BistooltipAddon
+                and type(BistooltipAddon.RefreshUI) == "function" then
+            BistooltipAddon:RefreshUI()
         end
     end)
 
@@ -887,5 +838,10 @@ end
 -- Cleanup function for addon disable (prevents memory leaks)
 function BistooltipAddon:cleanupBisTooltip()
     eventFrame:UnregisterEvent("MODIFIER_STATE_CHANGED")
+    eventFrame:UnregisterEvent("ACTIVE_TALENT_GROUP_CHANGED")
+    eventFrame:UnregisterEvent("CHARACTER_POINTS_CHANGED")
+    eventFrame:UnregisterEvent("PLAYER_TALENT_UPDATE")
+    eventFrame:UnregisterEvent("PLAYER_EQUIPMENT_CHANGED")
+    eventFrame:UnregisterEvent("SKILL_LINES_CHANGED")
     eventFrame:SetScript("OnEvent", nil)
 end
