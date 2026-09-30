@@ -110,8 +110,8 @@ local function verifyWotlkEnhancementViews()
         local baseSlots = Bistooltip_bislists[className][specName].T7
         local views = BistooltipData.GetSlotsForSpec(className,specName,'T7')
         for _,target in ipairs({
-            {'Trinket','item',profile[3]}, {'Finger','spell',profile[4]},
-            {'Head','item',profile[5]}, {'Shoulder','spell',profile[6]},
+            {'Trinket','spell',profile[3]}, {'Finger','spell',profile[4]},
+            {'Head','spell',profile[5]}, {'Shoulder','spell',profile[6]},
             {'Neck','item',profile[7]},
         }) do
             local slotName, expectedType, expectedID = target[1], target[2], target[3]
@@ -144,8 +144,8 @@ local function verifyWotlkEnhancementViews()
         if phaseSlots then
             local views = BistooltipData.GetSlotsForSpec('Warrior','Fury',phase)
             for _,target in ipairs({
-                {'Trinket','item',5000161}, {'Finger','spell',44645},
-                {'Head','item',5000156}, {'Shoulder','spell',61117},
+                {'Trinket','spell',5000161}, {'Finger','spell',44645},
+                {'Head','spell',5000156}, {'Shoulder','spell',61117},
             }) do
                 local slotName, expectedType, expectedID = target[1], target[2], target[3]
                 local base, view = findSlot(phaseSlots,slotName), findSlot(views,slotName)
@@ -196,8 +196,8 @@ local function verifyWotlkLegacyProfessionContext()
     local baseSlots = Bistooltip_bislists.Warrior.Fury.T8
     local views = BistooltipData.GetSlotsForSpec('Warrior','Fury','T8')
     for _,target in ipairs({
-        {'Trinket','item',5000161}, {'Finger','spell',44645},
-        {'Head','item',5000156}, {'Shoulder','spell',61117},
+        {'Trinket','spell',5000161}, {'Finger','spell',44645},
+        {'Head','spell',5000156}, {'Shoulder','spell',61117},
     }) do
         local view = findSlot(views,target[1])
         assert(view and view.enhs[1] and view.enhs[1].type == target[2]

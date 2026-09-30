@@ -14,9 +14,9 @@ Trinket, Finger, Head and Shoulder are COMMON profession rules shared by every p
 
 These rules require Enchanting skill-line ID `333` and target the literal `Trinket` slot:
 
-- tanks: item `5000162` — 30 stamina;
-- physical/AP DPS: item `5000161` — 40 AP;
-- caster/SP DPS and healers: item `5000160` — 23 SP.
+- tanks: spell `5000162` — 30 stamina;
+- physical/AP DPS: spell `5000161` — 40 AP;
+- caster/SP DPS and healers: spell `5000160` — 23 SP.
 
 ### Enchanting — Finger
 
@@ -30,10 +30,10 @@ These COMMON rules require Enchanting skill-line ID `333`:
 
 These rules require Inscription skill-line ID `773` and target `Head`:
 
-- tanks: item `5000158` — 110 stamina and 20 defense rating;
-- physical/AP DPS: item `5000156` — 150 AP and 20 crit;
-- caster/SP DPS: item `5000159` — 90 SP and 20 crit;
-- healers: item `5000157` — 90 SP and 10 mp5.
+- tanks: spell `5000158` — 110 stamina and 20 defense rating;
+- physical/AP DPS: spell `5000156` — 150 AP and 20 crit;
+- caster/SP DPS: spell `5000159` — 90 SP and 20 crit;
+- healers: spell `5000157` — 90 SP and 10 mp5.
 
 ### Inscription — Shoulder
 
@@ -97,7 +97,7 @@ BisTooltip:DefineEnhancementOverride({
     spec = "Feral tank",
     phase = nil,     -- optional; nil means COMMON across phases
     slot = "Trinket",
-    enhancement = {type = "item", id = 5000162},
+    enhancement = {type = "spell", id = 5000162},
 }, "Bistooltip_WOTLK5_S2")
 ```
 

@@ -177,9 +177,9 @@ Stub `AddAcquisition`, `SetAcquisition` and `DefineEnhancementOverride`, load th
 
 - 160 unique rules and no target duplicates;
 - Trinket/Finger/Head/Shoulder omit phase (COMMON), while Neck uses `T7`;
-- all Trinket rules use profession `333` and IDs `5000160`–`5000162` by role;
+- all Trinket rules use profession `333`, spell descriptors and IDs `5000160`–`5000162` by role;
 - all Finger rules use profession `333` and spells `59636`/`44645`/`44636` by role;
-- all Head rules use profession `773` and IDs `5000156`–`5000159` by role;
+- all Head rules use profession `773`, spell descriptors and IDs `5000156`–`5000159` by role;
 - all Shoulder rules use profession `773` and spells `61119`/`61117`/`61120`/`61118` by role;
 - all Neck rules omit profession and use `5000764`/`5000766`, except Warlock Affliction uses only `5000765`;
 - the four tank, thirteen AP DPS, ten SP DPS and five healer profiles exactly cover 32 unique class/spec pairs;
@@ -197,9 +197,9 @@ Expected: FAIL because the plugin registers zero override rules.
 
 In `Bistooltip_WOTLK5_S2/main.lua`, add local tank/AP/SP/healer class-spec tables near the enchant section. Register five rules per profile:
 
-- `Trinket`, COMMON, profession `333`, role-specific item;
+- `Trinket`, COMMON, profession `333`, role-specific spell;
 - `Finger`, COMMON, profession `333`, role-specific spell;
-- `Head`, COMMON, profession `773`, role-specific item;
+- `Head`, COMMON, profession `773`, role-specific spell;
 - `Shoulder`, COMMON, profession `773`, role-specific spell;
 - `Neck`, no profession, role-specific item with the Affliction exception.
 
