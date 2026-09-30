@@ -345,11 +345,12 @@ function BistooltipData.GetAllItemSources(itemId)
             local line = fmt(e)
             if line and not seen[line] then
                 seen[line] = true
+                local displayLine = fmt(e, BistooltipData.GetItemTexture) or line
                 local src = nil
                 if e.kind == "DROP" or e.kind == "TOKEN" or e.kind == "MARK" then
                     local s = e.source and reg[e.source] or nil
                     if s and s.kind == "CUSTOM" then
-                        src = { type = "custom", label = s.label, text = line }
+                        src = { type = "custom", label = s.label, text = displayLine }
                     elseif s then
                         local zone = s.instance
                         if s.difficulty and s.difficulty ~= "" then
@@ -361,7 +362,7 @@ function BistooltipData.GetAllItemSources(itemId)
                             boss = s.boss,
                             difficulty = s.difficulty,
                             tier = e.tier, -- optional ex-Tier-zone stamp (R5-A), nil otherwise
-                            text = line,
+                            text = displayLine,
                         }
                     end
                 elseif e.kind == "VENDOR" then
@@ -375,19 +376,19 @@ function BistooltipData.GetAllItemSources(itemId)
                         type = "emblem",
                         currency = currency or "Emblems",
                         cost = amount,
-                        text = line,
+                        text = displayLine,
                     }
                 elseif e.kind == "CUSTOM" then
                     src = {
                         type = "custom",
                         label = e.label,
-                        text = line,
+                        text = displayLine,
                     }
                 elseif e.kind == "ACTIVITY" then
                     src = {
                         type = "activity",
                         label = e.label,
-                        text = line,
+                        text = displayLine,
                     }
                 end
                 -- Entries with unknown sourceIDs render to nil and are

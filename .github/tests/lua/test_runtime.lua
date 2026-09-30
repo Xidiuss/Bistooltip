@@ -293,6 +293,35 @@ test("Your specialization uses the shared player context result", function()
         "shared Spellhance context was not shown in Your specialization")
 end)
 
+test("tooltip source lines request native TOKEN item textures", function()
+    dofile("Bistooltip/SourceFormatter.lua")
+    local texture = "Interface\\Icons\\INV_Misc_QuestionMark"
+    BisTooltip_SourceRegistry = {
+        RAID = {instance = "Ulduar", boss = "Hodir", difficulty = "25N"},
+    }
+    BisTooltip_ItemAcquisition = { [123] = {{
+        kind = "TOKEN", source = "RAID", tier = "T8",
+        family = "Wayward Vanquisher", tokenItem = 45634,
+    }} }
+    BistooltipData.GetItemTexture = function(itemID)
+        assert(itemID == 45634, "tooltip requested the wrong TOKEN item texture")
+        return texture
+    end
+    BistooltipAddon.db.char.show_item_source = true
+    IsEquippableItem = function() return false end
+    GetItemInfo = function()
+        return "Test item", nil, 2, nil, nil, nil, nil, nil, ""
+    end
+    GameTooltip.GetItem = function() return "Test item", "item:123:0:0:0" end
+    GameTooltip.lines, GameTooltip.doubleLines = {}, {}
+    GameTooltip.scripts.OnTooltipSetItem(GameTooltip)
+    local output = table.concat(GameTooltip.lines, "\n")
+    assert(output:find("|T" .. texture .. ":14|t", 1, true),
+        "tooltip source did not render the native TOKEN icon")
+    assert(not output:find("TOKEN:", 1, true),
+        "tooltip source retained the literal TOKEN label")
+end)
+
 test("character context events refresh visible tooltips and UI safely", function()
     local eventFrame = upvalue(BistooltipAddon.initBisTooltip, "eventFrame")
     local events = {
@@ -336,9 +365,15 @@ test("bisemblem prints every canonical vendor option for IDs and links", functio
     BistooltipAddon:initBislists()
     assert(commands.bisemblem, "canonical bisemblem command was not registered")
     dofile("Bistooltip/SourceFormatter.lua")
+    local trophyTexture = "Interface\\Icons\\INV_Misc_Rune_10"
+    BistooltipData.GetItemTexture = function(itemID)
+        if itemID == 47242 then return trophyTexture end
+    end
     BisTooltip_ItemAcquisition = { [123] = {
         { kind = "VENDOR", cost = {{ currency = "Emblem of Frost", amount = 5 }} },
         { kind = "VENDOR", cost = {{ currency = "Gold", amount = 10000 }} },
+        { kind = "VENDOR", tier = "T9", displayVariant = "TROPHY",
+          variantLabel = "Crusade", cost = {{ item = 47242, amount = 1 }} },
         { kind = "CUSTOM", label = "not a vendor" },
     } }
     for _, argument in ipairs({ "123", "|Hitem:123:0:0|h[Item Name]|h" }) do
@@ -351,6 +386,8 @@ test("bisemblem prints every canonical vendor option for IDs and links", functio
         local output = table.concat(lines, "\n")
         assert(output:find("5 Emblem of Frost", 1, true), "missing emblem purchase option")
         assert(output:find("1g", 1, true), "missing gold purchase option")
+        assert(output:find("|T" .. trophyTexture .. ":14|t", 1, true),
+            "TROPHY purchase option did not use its native icon")
         assert(not output:find("not a vendor", 1, true), "printed a non-vendor source")
     end
 end)
@@ -358,6 +395,29 @@ end)
 function methods:SetText(text) self.text = text end
 BistooltipUtils.NormalizeItemID = function(id) return type(id)=="number" and id>0 and id or nil end
 dofile("Bistooltip/DataProvider.lua")
+
+test("data source text resolves icons without changing plain dedup identity", function()
+    local texture = "Interface\\Icons\\INV_Misc_QuestionMark"
+    BisTooltip_SourceRegistry = {
+        RAID = {instance = "Ulduar", boss = "Hodir", difficulty = "25N"},
+    }
+    BisTooltip_ItemAcquisition = { [123] = {{
+        kind = "TOKEN", source = "RAID", tier = "T8",
+        family = "Wayward Vanquisher", tokenItem = 45634,
+    }} }
+    GetItemInfo = function(itemID)
+        assert(itemID == 45634, "data provider requested the wrong TOKEN item")
+        return "Token", nil, nil, nil, nil, nil, nil, nil, nil, texture
+    end
+    BistooltipData.ClearAllCaches()
+    local sources = BistooltipData.GetAllItemSources(123)
+    assert(#sources == 1 and sources[1].text:find("|T" .. texture .. ":14|t", 1, true),
+        "data provider source text did not resolve the native TOKEN icon")
+    assert(BisTooltip_FormatSource(BisTooltip_ItemAcquisition[123][1]) ==
+        "T8 - TOKEN: Wayward Vanquisher [Ulduar: Hodir <25N>]",
+        "icon lookup changed deterministic plain formatting")
+    GetItemInfo = function() return nil end
+end)
 
 test("cost cells distinguish complete, compound and alternative prices", function()
     BisTooltip_ItemAcquisition = {

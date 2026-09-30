@@ -1,4 +1,4 @@
--- Bistooltip/SourceFormatter.lua (pure; no WoW API; warn-once via local flag table)
+-- Bistooltip/SourceFormatter.lua (pure; optional texture resolver; no WoW API)
 local warned = {}
 
 -- Default source palette (spec S2-4; Q9: colors on by default).
@@ -28,12 +28,19 @@ end
 -- Shared MASTER builder (spec S2/S2-4): ONE place assembles every string;
 -- plain mode returns fragments verbatim (golden-locked), colored mode wraps
 -- them per palette. Identity/dedup always uses the PLAIN rendering.
-local function render(entry, colored)
+local function render(entry, colored, resolveTexture)
   if type(entry) ~= "table" or not entry.kind then return nil end
   local P = BisTooltip_SourcePalette
   local function seg(hex, text)
     if colored and hex then return "|cFF" .. hex .. text .. "|r" end
     return text
+  end
+  local function itemIcon(itemID)
+    if type(itemID) ~= "number" or itemID <= 0
+      or type(resolveTexture) ~= "function" then return nil end
+    local ok, texture = pcall(resolveTexture, itemID)
+    if not ok or type(texture) ~= "string" or texture == "" then return nil end
+    return "|T" .. texture .. ":14|t"
   end
   if entry.kind == "CUSTOM" or entry.kind == "ACTIVITY" then
     if type(entry.label) == "string" and entry.label ~= "" then
@@ -76,7 +83,11 @@ local function render(entry, colored)
       local label = entry.variantLabel or "Crusade"
       if trophy and trophy.amount ~= 1 then label = trophy.amount .. " " .. label end
       local remaining = costText(entry.cost, trophy)
-      return seg(P.method, (entry.tier or "T9") .. " - TROPHY: ")
+      local icon = trophy and itemIcon(trophy.item)
+      local method = icon
+        and (seg(P.method, (entry.tier or "T9") .. " - ") .. icon .. " ")
+        or seg(P.method, (entry.tier or "T9") .. " - TROPHY: ")
+      return method
         .. seg(P.currency, label .. (remaining ~= "" and " + " or "")) .. remaining
     end
     local prefix = (entry.tier or "") .. (entry.tier and " - " or "") .. "VENDOR: "
@@ -113,18 +124,22 @@ local function render(entry, colored)
     local bracket = seg(P.instance, "[" .. s.instance .. ": ")
       .. seg(P.boss, s.boss .. " ")
       .. seg(diffColor(s.difficulty), "<" .. s.difficulty .. ">]")
-    return seg(P.method, entry.tier .. " - " .. entry.kind .. ": ")
+    local icon = entry.kind == "TOKEN" and itemIcon(entry.tokenItem) or nil
+    local method = icon
+      and (seg(P.method, entry.tier .. " - ") .. icon .. " ")
+      or seg(P.method, entry.tier .. " - " .. entry.kind .. ": ")
+    return method
       .. familyText .. " " .. bracket
   end
   return nil
 end
 
-function BisTooltip_FormatSource(entry)
-  return render(entry, false)
+function BisTooltip_FormatSource(entry, resolveTexture)
+  return render(entry, false, resolveTexture)
 end
 
-function BisTooltip_FormatSourceColored(entry)
-  return render(entry, true)
+function BisTooltip_FormatSourceColored(entry, resolveTexture)
+  return render(entry, true, resolveTexture)
 end
 
 -- Single source of truth for vendor costs (W1): returns the amount and

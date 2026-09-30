@@ -392,7 +392,8 @@ local function GetAllItemSources(itemId)
             seen[line] = true
             local out = line
             if useColor then
-                local colored = fmtC(e)
+                local resolver = BistooltipData and BistooltipData.GetItemTexture
+                local colored = fmtC(e, resolver)
                 if colored then out = colored end
             end
             table.insert(lines, out)

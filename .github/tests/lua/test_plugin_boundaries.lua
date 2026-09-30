@@ -170,6 +170,44 @@ test("TROPHY display keeps its label and other item payment parts", function()
     assert(BisTooltip_FormatSource(entry) == "T9 - TROPHY: 2 Crusade + 3 Item #30183 + 75 Emblem of Triumph")
 end)
 
+test("TOKEN and TROPHY labels become exact item icons only when resolved", function()
+    setup()
+    BisTooltip_SourceRegistry.RAID = {
+        instance = "Ulduar", boss = "Hodir", difficulty = "25N",
+    }
+    local token = {
+        kind = "TOKEN", source = "RAID", tier = "T8",
+        family = "Wayward Vanquisher", tokenItem = 45634,
+    }
+    local trophy = {
+        kind = "VENDOR", tier = "T9", displayVariant = "TROPHY",
+        variantLabel = "Crusade", cost = {
+            {item = 47242, amount = 2},
+            {currency = "Emblem of Triumph", amount = 75},
+        },
+    }
+    local texture = "Interface\\Icons\\INV_Misc_QuestionMark"
+    local function resolved(itemID)
+        assert(itemID == 45634 or itemID == 47242, "wrong icon item requested")
+        return texture
+    end
+    assert(BisTooltip_FormatSource(token) ==
+        "T8 - TOKEN: Wayward Vanquisher [Ulduar: Hodir <25N>]")
+    assert(BisTooltip_FormatSource(token, function() return nil end) ==
+        "T8 - TOKEN: Wayward Vanquisher [Ulduar: Hodir <25N>]")
+    assert(BisTooltip_FormatSource(token, resolved) ==
+        "T8 - |T" .. texture .. ":14|t Wayward Vanquisher [Ulduar: Hodir <25N>]")
+    assert(BisTooltip_FormatSource(trophy, resolved) ==
+        "T9 - |T" .. texture .. ":14|t 2 Crusade + 75 Emblem of Triumph")
+    local colored = assert(BisTooltip_FormatSourceColored(token, resolved))
+    assert(colored:find("|T" .. texture .. ":14|t", 1, true),
+        "colored TOKEN output lost the native icon")
+    assert(not colored:find("TOKEN:", 1, true),
+        "colored TOKEN output retained the literal label")
+    assert(BisTooltip_FormatSource(trophy, function() error("cold cache") end) ==
+        "T9 - TROPHY: 2 Crusade + 75 Emblem of Triumph")
+end)
+
 local function enhancementRule(overrides)
     local rule = {
         class = "Druid",

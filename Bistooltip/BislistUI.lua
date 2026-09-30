@@ -5610,7 +5610,7 @@ function BistooltipAddon:initBislists()
         if type(entries) == "table" and type(formatter) == "function" then
             for _, entry in ipairs(entries) do
                 if type(entry) == "table" and entry.kind == "VENDOR" then
-                    local line = formatter(entry)
+                    local line = formatter(entry, Data and Data.GetItemTexture)
                     if line then
                         print("Item " .. itemId .. ": " .. line)
                         found = true
