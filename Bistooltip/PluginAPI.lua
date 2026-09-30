@@ -34,6 +34,7 @@ end
 -- ---------------------------------------------------------------------------
 local Overlay = {}
 local replaying = false
+local EnhancementOverrideRules = {}
 local function deepCopy(v)
   if type(v) ~= "table" then return v end
   local out = {}
@@ -303,6 +304,39 @@ local function rankSlot(className, specName, phase, slotName, what)
   return slot, true
 end
 
+local function checkEnhancementDescriptor(enhancement, what)
+  if type(enhancement) ~= "table" then
+    error(what .. ": enhancement must be a {type=...,id=...} table", 3)
+  end
+  if enhancement.type ~= "item" and enhancement.type ~= "spell" and enhancement.type ~= "none" then
+    error(what .. ": enhancement has unknown type " .. tostring(enhancement.type), 3)
+  end
+  if type(enhancement.id) ~= "number" or enhancement.id % 1 ~= 0 then
+    error(what .. ": enhancement id must be a whole number", 3)
+  end
+  if enhancement.type == "none" then
+    if enhancement.id ~= 0 then error(what .. ": none enhancement needs id 0", 3) end
+  elseif enhancement.id <= 0 then
+    error(what .. ": enhancement id must be positive", 3)
+  end
+end
+
+local function copyEnhancement(enhancement)
+  if not enhancement then return nil end
+  return { type = enhancement.type, id = enhancement.id }
+end
+
+local function enhancementRuleKey(profession, className, specName, phase, slotName)
+  return table.concat({
+    profession and tostring(profession) or "<GLOBAL>",
+    className, specName, phase or "<COMMON>", slotName,
+  }, "\0")
+end
+
+local function enhancementTarget(className, specName, phase, slotName)
+  return className .. "/" .. specName .. "/" .. tostring(phase or "COMMON") .. "/" .. slotName
+end
+
 -- Replace vendor prices without destroying drops, tokens, marks or custom
 -- sources. Replay computes from the newly bound acquisition table.
 function BisTooltip:ReplaceVendorAcquisitions(itemID, offers, plugin)
@@ -432,6 +466,80 @@ function BisTooltip:SetEnhancement(className, specName, phase, slotName, enhs, p
     .. className .. "/" .. specName .. "/" .. phase .. "/" .. slotName)
   record("SetEnhancement", className, specName, phase, slotName, enhs, plugin)
   return true
+end
+
+function BisTooltip:DefineEnhancementOverride(rule, plugin)
+  local what = "BisTooltip.DefineEnhancementOverride"
+  if type(rule) ~= "table" then error(what .. ": rule must be a table", 2) end
+  if type(plugin) ~= "string" or plugin == "" then
+    error(what .. ": plugin must be a non-empty string", 2)
+  end
+  if rule.profession ~= nil and (type(rule.profession) ~= "number"
+      or rule.profession <= 0 or rule.profession % 1 ~= 0) then
+    error(what .. ": profession must be a positive integer skill-line ID", 2)
+  end
+  for _, field in ipairs({"class", "spec", "slot"}) do
+    if type(rule[field]) ~= "string" or rule[field] == "" then
+      error(what .. ": " .. field .. " must be a non-empty string", 2)
+    end
+  end
+  if rule.phase ~= nil and (type(rule.phase) ~= "string" or rule.phase == "") then
+    error(what .. ": phase must be a non-empty string or nil for COMMON", 2)
+  end
+  checkEnhancementDescriptor(rule.enhancement, what)
+
+  local key = enhancementRuleKey(rule.profession, rule.class, rule.spec, rule.phase, rule.slot)
+  local previous = EnhancementOverrideRules[key]
+  if previous then
+    noteOverride("enhancement-rule:" .. key,
+      "Plugin " .. plugin .. " replaced enhancement override from " .. previous.plugin
+      .. " for " .. enhancementTarget(rule.class, rule.spec, rule.phase, rule.slot))
+  end
+  EnhancementOverrideRules[key] = {
+    profession = rule.profession,
+    class = rule.class,
+    spec = rule.spec,
+    phase = rule.phase,
+    slot = rule.slot,
+    enhancement = copyEnhancement(rule.enhancement),
+    plugin = plugin,
+  }
+  return true
+end
+
+local function selectEnhancementRule(profession, className, specName, phase, slotName)
+  local exact = phase and EnhancementOverrideRules[
+    enhancementRuleKey(profession, className, specName, phase, slotName)] or nil
+  local common = EnhancementOverrideRules[
+    enhancementRuleKey(profession, className, specName, nil, slotName)]
+  return exact or common
+end
+
+function BisTooltip:ResolveEnhancementOverride(
+    className, specName, phase, slotName, professionSet, allowProfessionRules)
+  local global = selectEnhancementRule(nil, className, specName, phase, slotName)
+  if not allowProfessionRules or type(professionSet) ~= "table" then
+    return global and copyEnhancement(global.enhancement) or nil
+  end
+  local matches = {}
+  for profession, owned in pairs(professionSet) do
+    if owned then
+      local selected = selectEnhancementRule(profession, className, specName, phase, slotName)
+      if selected then matches[#matches + 1] = selected end
+    end
+  end
+  if #matches == 0 then return global and copyEnhancement(global.enhancement) or nil end
+  if #matches > 1 then
+    local plugins = {}
+    for _, match in ipairs(matches) do plugins[#plugins + 1] = match.plugin end
+    table.sort(plugins)
+    local target = enhancementTarget(className, specName, phase, slotName)
+    noteOverride("profession-ambiguous:" .. target,
+      "Profession enhancement target is ambiguous for " .. target
+      .. " (plugins: " .. table.concat(plugins, ", ") .. ")")
+    return global and copyEnhancement(global.enhancement) or nil
+  end
+  return copyEnhancement(matches[1].enhancement)
 end
 
 return BisTooltip

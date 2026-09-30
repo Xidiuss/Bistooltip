@@ -152,5 +152,175 @@ test("TROPHY display keeps its label and other item payment parts", function()
     assert(BisTooltip_FormatSource(entry) == "T9 - TROPHY: 2 Crusade + 3 Item #30183 + 75 Emblem of Triumph")
 end)
 
+local function enhancementRule(overrides)
+    local rule = {
+        class = "Druid",
+        spec = "Feral tank",
+        slot = "Finger",
+        enhancement = {type = "item", id = 900001},
+    }
+    for key, value in pairs(overrides or {}) do rule[key] = value end
+    return rule
+end
+
+test("targeted enhancement registration rejects malformed rules", function()
+    setup()
+    local invalid = {
+        enhancementRule({profession = false}),
+        enhancementRule({profession = 0}),
+        enhancementRule({profession = 333.5}),
+        enhancementRule({class = false}),
+        enhancementRule({spec = false}),
+        enhancementRule({slot = false}),
+        enhancementRule({phase = ""}),
+        enhancementRule({enhancement = false}),
+        enhancementRule({enhancement = {type = "gem", id = 1}}),
+        enhancementRule({enhancement = {type = "item", id = 0}}),
+        enhancementRule({enhancement = {type = "spell", id = 1.5}}),
+        enhancementRule({enhancement = {type = "none", id = 1}}),
+    }
+    for index, rule in ipairs(invalid) do
+        assert(not pcall(BisTooltip.DefineEnhancementOverride, BisTooltip, rule, "test"),
+            "malformed targeted rule accepted at case " .. index)
+    end
+    assert(not pcall(BisTooltip.DefineEnhancementOverride, BisTooltip, enhancementRule(), nil),
+        "missing plugin identifier was accepted")
+    assert(BisTooltip:DefineEnhancementOverride(enhancementRule({
+        enhancement = {type = "none", id = 0},
+    }), "none"))
+    assert(BisTooltip:DefineEnhancementOverride(enhancementRule({
+        slot = "Head", enhancement = {type = "spell", id = 123},
+    }), "spell"))
+    assert(BisTooltip:DefineEnhancementOverride(enhancementRule({
+        slot = "Neck", enhancement = {type = "item", id = 456},
+    }), "item"))
+end)
+
+test("targeted resolver prefers exact phase then COMMON", function()
+    setup()
+    BisTooltip:DefineEnhancementOverride(enhancementRule({
+        enhancement = {type = "item", id = 10},
+    }), "common")
+    BisTooltip:DefineEnhancementOverride(enhancementRule({
+        phase = "T10", enhancement = {type = "item", id = 20},
+    }), "phase")
+    local t9 = BisTooltip:ResolveEnhancementOverride(
+        "Druid", "Feral tank", "T9", "Finger", {}, true)
+    local t10 = BisTooltip:ResolveEnhancementOverride(
+        "Druid", "Feral tank", "T10", "Finger", {}, true)
+    assert(t9 and t9.id == 10, "COMMON rule was not used")
+    assert(t10 and t10.id == 20, "phase rule did not outrank COMMON")
+    assert(BisTooltip:ResolveEnhancementOverride(
+        "Druid", "Feral dps", "T10", "Finger", {}, true) == nil,
+        "nonmatching spec returned a rule")
+end)
+
+test("targeted registry owns input and returned descriptor copies", function()
+    setup()
+    local rule = enhancementRule({enhancement = {type = "item", id = 40119}})
+    BisTooltip:DefineEnhancementOverride(rule, "test")
+    rule.enhancement.id = 999
+    local first = BisTooltip:ResolveEnhancementOverride(
+        "Druid", "Feral tank", "T9", "Finger", {}, true)
+    assert(first.type == "item" and first.id == 40119,
+        "registration retained the caller's descriptor")
+    first.id = 888
+    local second = BisTooltip:ResolveEnhancementOverride(
+        "Druid", "Feral tank", "T9", "Finger", {}, true)
+    assert(second.id == 40119, "resolver exposed its stored descriptor")
+end)
+
+test("duplicate targeted identity is last-write-wins with a diagnostic", function()
+    setup()
+    local lines = {}
+    local originalPrint = print
+    print = function(line) lines[#lines + 1] = tostring(line) end
+    BisTooltip:DefineEnhancementOverride(enhancementRule({
+        enhancement = {type = "item", id = 10},
+    }), "first")
+    BisTooltip:DefineEnhancementOverride(enhancementRule({
+        enhancement = {type = "item", id = 20},
+    }), "second")
+    print = originalPrint
+    local found = BisTooltip:ResolveEnhancementOverride(
+        "Druid", "Feral tank", "T9", "Finger", {}, true)
+    assert(found and found.id == 20, "duplicate target did not replace the rule")
+    local output = table.concat(lines, "\n")
+    assert(output:find("second", 1, true) and output:find("first", 1, true),
+        "replacement diagnostic omitted the participating plugins")
+end)
+
+test("profession rule outranks a global rule when profession use is allowed", function()
+    setup()
+    BisTooltip:DefineEnhancementOverride(enhancementRule({
+        enhancement = {type = "item", id = 10},
+    }), "global")
+    BisTooltip:DefineEnhancementOverride(enhancementRule({
+        profession = 333, enhancement = {type = "item", id = 20},
+    }), "enchanting")
+    local profession = BisTooltip:ResolveEnhancementOverride(
+        "Druid", "Feral tank", "T9", "Finger", {[333] = true}, true)
+    local global = BisTooltip:ResolveEnhancementOverride(
+        "Druid", "Feral tank", "T9", "Finger", {[333] = true}, false)
+    assert(profession and profession.id == 20, "profession rule did not outrank global")
+    assert(global and global.id == 10, "disallowed profession rules hid the global rule")
+end)
+
+test("two owned profession matches diagnose ambiguity and fall back globally", function()
+    setup()
+    BisTooltip:DefineEnhancementOverride(enhancementRule({
+        enhancement = {type = "item", id = 900000},
+    }), "global")
+    BisTooltip:DefineEnhancementOverride(enhancementRule({
+        profession = 333, enhancement = {type = "item", id = 900001},
+    }), "enchanting")
+    BisTooltip:DefineEnhancementOverride(enhancementRule({
+        profession = 773, enhancement = {type = "item", id = 900002},
+    }), "inscription")
+    local lines = {}
+    local originalPrint = print
+    print = function(line) lines[#lines + 1] = tostring(line) end
+    local found = BisTooltip:ResolveEnhancementOverride(
+        "Druid", "Feral tank", "T9", "Finger", {[773] = true, [333] = true}, true)
+    print = originalPrint
+    assert(found and found.id == 900000, "ambiguous professions did not use global fallback")
+    local output = table.concat(lines, "\n")
+    assert(output:find("ambiguous", 1, true) and output:find("Finger", 1, true),
+        "ambiguous target did not produce an actionable diagnostic")
+end)
+
+test("ambiguous profession rules without a global rule resolve to nil", function()
+    setup()
+    BisTooltip:DefineEnhancementOverride(enhancementRule({profession = 333}), "enchanting")
+    BisTooltip:DefineEnhancementOverride(enhancementRule({
+        profession = 773, enhancement = {type = "item", id = 900002},
+    }), "inscription")
+    local originalPrint = print
+    print = function() end
+    local found = BisTooltip:ResolveEnhancementOverride(
+        "Druid", "Feral tank", "T9", "Finger", {[333] = true, [773] = true}, true)
+    print = originalPrint
+    assert(found == nil, "ambiguous professions invented a fallback")
+end)
+
+test("overlay replay neither duplicates nor removes targeted rules", function()
+    setup()
+    BisTooltip:DefineEnhancementOverride(enhancementRule({profession = 333}), "test")
+    BisTooltip_ReplayOverlay()
+    BisTooltip_ReplayOverlay()
+    local found = BisTooltip:ResolveEnhancementOverride(
+        "Druid", "Feral tank", "T9", "Finger", {[333] = true}, true)
+    assert(found and found.id == 900001,
+        "overlay replay cleared or changed a targeted rule")
+end)
+
+test("unpublished whole-list profession API is absent", function()
+    setup()
+    assert(type(BisTooltip.DefineEnhancementOverride) == "function", "targeted registration API missing")
+    assert(type(BisTooltip.ResolveEnhancementOverride) == "function", "targeted resolver API missing")
+    assert(BisTooltip.DefineProfessionEnhancement == nil, "old registration API still published")
+    assert(BisTooltip.ResolveProfessionEnhancement == nil, "old resolver API still published")
+end)
+
 assert(failures == 0, tostring(failures) .. " plugin boundary regression(s)")
 print("plugin_boundaries: OK")

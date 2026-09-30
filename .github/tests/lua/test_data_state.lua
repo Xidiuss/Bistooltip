@@ -10,6 +10,7 @@ local function test(name, fn)
 end
 
 local saved, options, defaults
+local playerClass, professionSet
 local noop = function() end
 LibStub = function(name)
     if name == "AceDB-3.0" then return { New = function(_, _, values) defaults = values; return saved end } end
@@ -25,10 +26,23 @@ BistooltipUtils = { NormalizeItemID = function(id) return id end }
 BistooltipConstants = {}
 
 local function database(a, b)
-    return { Warrior = { Fury = { T7 = {
-        {slot_name = "Head", enhs = {}, a, b},
-        {slot_name = "Finger", enhs = {}, 10, 20, 30},
-    } } } }
+    return {
+        Warrior = {
+            Fury = {
+                T7 = {
+                    {slot_name = "Head", enhs = {}, a, b},
+                    {slot_name = "Finger", enhs = {}, 10, 20, 30},
+                },
+                T8 = {{slot_name = "Head", enhs = {{type="item",id=80}}, a, b}},
+            },
+            Protection = { T7 = {
+                {slot_name = "Head", enhs = {{type="item",id=70}}, a, b},
+            } },
+        },
+        Druid = { Balance = { T7 = {
+            {slot_name = "Head", enhs = {{type="item",id=700}}, a, b},
+        } } },
+    }
 end
 local function setup(legacy)
     BistooltipAddon = { AceAddonName = "Bis-Tooltip" }
@@ -44,6 +58,15 @@ local function setup(legacy)
         data_source = legacy, filter_specs = {}, highlight_spec = {},
     } }
     BisTooltip, BisTooltip_SourceRegistry, BisTooltip_ItemAcquisition = {}, {}, {}
+    playerClass, professionSet = "Warrior", {}
+    BistooltipPlayerContext = {
+        GetPlayerClassKey = function() return playerClass end,
+        GetProfessionSkillLines = function()
+            local copy = {}
+            for id, owned in pairs(professionSet) do copy[id] = owned end
+            return copy
+        end,
+    }
     Bistooltip_char_equipment = {}
     dofile("Bistooltip/PluginAPI.lua")
     dofile("Bistooltip/SourceFormatter.lua")
@@ -206,6 +229,152 @@ test("Horde overrides remain pristine across a database round trip", function()
     BistooltipData.ResetCustomPriorities("Warrior", "Fury", "T7")
     assert(slots()[1][1] == 7 and slots()[1][2] == 8, "Horde source slot was mutated")
     UnitFactionGroup = function() return "Alliance" end
+end)
+
+test("profession rules apply to same-class offspec while other classes use global rules", function()
+    setup()
+    professionSet[333] = true
+    BisTooltip:DefineEnhancementOverride({
+        profession = 333, class = "Warrior", spec = "Protection", slot = "Head",
+        enhancement = {type="item",id=333001},
+    }, "test")
+    BisTooltip:DefineEnhancementOverride({
+        profession = 333, class = "Druid", spec = "Balance", slot = "Head",
+        enhancement = {type="item",id=333002},
+    }, "test")
+    BisTooltip:DefineEnhancementOverride({
+        class = "Druid", spec = "Balance", slot = "Head",
+        enhancement = {type="item",id=700001},
+    }, "test")
+    local offspec = BistooltipData.GetSlotsForSpec("Warrior", "Protection", "T7")[1]
+    local otherClass = BistooltipData.GetSlotsForSpec("Druid", "Balance", "T7")[1]
+    assert(offspec.enhs[1].id == 333001,
+        "same-class offspec did not receive its profession override")
+    assert(otherClass.enhs[1].id == 700001,
+        "profession rule leaked to another class or global rule was skipped")
+end)
+
+test("Enchanting and Inscription resolve independently on disjoint slots", function()
+    setup()
+    professionSet[333], professionSet[773] = true, true
+    BisTooltip:DefineEnhancementOverride({
+        profession = 333, class = "Warrior", spec = "Fury", slot = "Finger",
+        enhancement = {type="item",id=333001},
+    }, "enchanting")
+    BisTooltip:DefineEnhancementOverride({
+        profession = 773, class = "Warrior", spec = "Fury", slot = "Head",
+        enhancement = {type="item",id=773001},
+    }, "inscription")
+    local shown = slots()
+    assert(shown[1].enhs[1].id == 773001, "Inscription head rule missing")
+    assert(shown[2].enhs[1].id == 333001, "Enchanting finger rule missing")
+end)
+
+test("profession overrides global and replaces only index one", function()
+    setup()
+    professionSet[333] = true
+    local base = Bistooltip_bislists.Warrior.Fury.T7[1]
+    base.enhs = {
+        {type="spell",id=111}, {type="item",id=222}, {type="item",id=333},
+    }
+    BisTooltip:DefineEnhancementOverride({
+        class = "Warrior", spec = "Fury", slot = "Head",
+        enhancement = {type="item",id=10},
+    }, "global")
+    BisTooltip:DefineEnhancementOverride({
+        profession = 333, class = "Warrior", spec = "Fury", slot = "Head",
+        enhancement = {type="item",id=20},
+    }, "profession")
+    local shown = slots()[1]
+    assert(shown.enhs[1].id == 20, "profession rule did not outrank global")
+    assert(shown.enhs[2].id == 222 and shown.enhs[3].id == 333,
+        "targeted override replaced later gems")
+    assert(base.enhs[1].id == 111 and base.enhs[2].id == 222,
+        "targeted override mutated the bound database")
+end)
+
+test("an empty Trinket enhancement list gains only index one", function()
+    setup()
+    local base = {slot_name = "Trinket", enhs = {}, 101, 102}
+    table.insert(Bistooltip_bislists.Warrior.Fury.T7, base)
+    BisTooltip:DefineEnhancementOverride({
+        class = "Warrior", spec = "Fury", phase = "T7", slot = "Trinket",
+        enhancement = {type="item",id=5000161},
+    }, "test")
+    local shown = slots()[3]
+    assert(shown.enhs[1].id == 5000161 and shown.enhs[2] == nil,
+        "empty Trinket list was not populated cleanly")
+    assert(next(base.enhs) == nil, "empty base Trinket list was mutated")
+end)
+
+test("slot views prefer exact phase and isolate registry and caller mutations", function()
+    setup()
+    professionSet[333] = true
+    BisTooltip:DefineEnhancementOverride({
+        profession = 333, class = "Warrior", spec = "Fury", slot = "Head",
+        enhancement = {type="item",id=10},
+    }, "common")
+    local exactRule = {
+        profession = 333, class = "Warrior", spec = "Fury", phase = "T7", slot = "Head",
+        enhancement = {type="item",id=20},
+    }
+    BisTooltip:DefineEnhancementOverride(exactRule, "phase")
+    exactRule.enhancement.id = 777
+    local exact = BistooltipData.GetSlotsForSpec("Warrior", "Fury", "T7")[1]
+    local common = BistooltipData.GetSlotsForSpec("Warrior", "Fury", "T8")[1]
+    assert(exact.enhs[1].id == 20 and common.enhs[1].id == 10,
+        "phase precedence or COMMON fallback was not preserved")
+    exact.enhs[1].id = 999
+    assert(BistooltipData.GetSlotsForSpec("Warrior", "Fury", "T7")[1].enhs[1].id == 20,
+        "caller mutation reached the override registry")
+    assert(Bistooltip_bislists.Warrior.Fury.T7[1].enhs[1] == nil,
+        "automatic rule mutated the bound database")
+end)
+
+test("an exact-phase rule leaves other phases unchanged without COMMON", function()
+    setup()
+    BisTooltip:DefineEnhancementOverride({
+        class = "Warrior", spec = "Fury", phase = "T7", slot = "Head",
+        enhancement = {type="item",id=20},
+    }, "phase")
+    local t7 = BistooltipData.GetSlotsForSpec("Warrior", "Fury", "T7")[1]
+    local t8 = BistooltipData.GetSlotsForSpec("Warrior", "Fury", "T8")[1]
+    assert(t7.enhs[1].id == 20, "exact phase rule was skipped")
+    assert(t8.enhs[1].id == 80, "exact phase rule leaked to another phase")
+end)
+
+test("personal enchant wins after automatic override and preserves base gems", function()
+    setup()
+    professionSet[773] = true
+    local base = Bistooltip_bislists.Warrior.Fury.T7[1]
+    base.enhs = {{type="spell",id=111}, {type="item",id=40119}}
+    BisTooltip:DefineEnhancementOverride({
+        profession = 773, class = "Warrior", spec = "Fury", slot = "Head",
+        enhancement = {type="item",id=773001},
+    }, "inscription")
+    assert(BistooltipData.SaveCustomEnhancement(
+        "Warrior", "Fury", "T7", "Head", "item", 999001))
+    local shown = slots()[1]
+    assert(shown.enhs[1].id == 999001 and shown.enhs[2].id == 40119,
+        "personal override did not win last or preserve the base gem")
+    assert(BistooltipData.ResetCustomEnhancement("Warrior", "Fury", "T7", "Head"))
+    shown = slots()[1]
+    assert(shown.enhs[1].id == 773001 and shown.enhs[2].id == 40119,
+        "removing the personal override did not reveal the automatic layer")
+end)
+
+test("targeted rules survive database switches without stale mutation", function()
+    setup()
+    professionSet[333] = true
+    BisTooltip:DefineEnhancementOverride({
+        profession = 333, class = "Warrior", spec = "Fury", slot = "Finger",
+        enhancement = {type="item",id=333001},
+    }, "test")
+    assert(slots()[2].enhs[1].id == 333001, "rule missing from initial database")
+    options.args.data_source.set(nil, "wowtbc")
+    assert(slots()[2].enhs[1].id == 333001, "rule was lost after database switch")
+    assert(Bistooltip_bislists.Warrior.Fury.T7[2].enhs[1] == nil,
+        "rule was replayed destructively into the new database")
 end)
 
 assert(failures == 0, tostring(failures) .. " data state regression(s)")

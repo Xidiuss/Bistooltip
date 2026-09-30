@@ -497,6 +497,14 @@ function BistooltipData.ResetCustomEnhancement(className, specName, phase, slotN
     return true
 end
 
+local function CopyEnhancements(enhancements)
+    local copy = {}
+    for index, entry in ipairs(enhancements or {}) do
+        copy[index] = {type = entry.type, id = entry.id}
+    end
+    return copy
+end
+
 function BistooltipData.GetSlotsForSpec(className, specName, phase)
     if not _G.Bistooltip_bislists then return nil end
     if not className or not specName or not phase then return nil end
@@ -516,19 +524,40 @@ function BistooltipData.GetSlotsForSpec(className, specName, phase)
     -- fresh bind. Returning a fresh array per call starves that mutator —
     -- every draw reads the bound source untouched. Slot tables stay shared
     -- (personal rank order and plugin rank overrides persist).
+    local professionSet
+    local allowProfessionRules = false
+    if type(_G.BistooltipPlayerContext) == "table"
+            and type(_G.BistooltipPlayerContext.GetPlayerClassKey) == "function"
+            and _G.BistooltipPlayerContext.GetPlayerClassKey() == className then
+        allowProfessionRules = true
+        if type(_G.BistooltipPlayerContext.GetProfessionSkillLines) == "function" then
+            professionSet = _G.BistooltipPlayerContext.GetProfessionSkillLines()
+        end
+    end
+
     local copy = {}
     for i, slot in ipairs(list) do
         -- Consumers filter, split rings/trinkets and calculate progress before
         -- rendering, so the personal order must already be applied here.
         BistooltipData.LoadCustomPriority(slot, className, specName, phase)
+        local automatic
+        if type(_G.BisTooltip) == "table"
+                and type(_G.BisTooltip.ResolveEnhancementOverride) == "function" then
+            automatic = _G.BisTooltip:ResolveEnhancementOverride(
+                className, specName, phase, slot.slot_name,
+                professionSet, allowProfessionRules)
+        end
         local override = BistooltipData.GetCustomEnhancement(className, specName, phase, slot.slot_name)
-        if override and (override.type == "item" or override.type == "spell")
-                and type(override.id) == "number" and override.id > 0 and override.id % 1 == 0 then
+        local validOverride = override and (override.type == "item" or override.type == "spell")
+            and type(override.id) == "number" and override.id > 0 and override.id % 1 == 0
+        if automatic or validOverride then
             local view = {}
             for key, value in pairs(slot) do view[key] = value end
-            local enhs = {}
-            for index, entry in ipairs(slot.enhs or {}) do enhs[index] = entry end
-            enhs[1] = {type = override.type, id = override.id}
+            local enhs = CopyEnhancements(slot.enhs)
+            if automatic then
+                enhs[1] = {type = automatic.type, id = automatic.id}
+            end
+            if validOverride then enhs[1] = {type = override.type, id = override.id} end
             view.enhs = enhs
             copy[i] = view
         else
