@@ -78,7 +78,7 @@ for index, registered in ipairs(rules) do
     local expectedPhase = rule.slot == "Neck" and "T7" or nil
     assert(rule.phase == expectedPhase,
         "rule " .. index .. " has the wrong phase scope for " .. tostring(rule.slot))
-    local expectedType = (rule.slot == "Finger" or rule.slot == "Shoulder") and "spell" or "item"
+    local expectedType = rule.slot == "Neck" and "item" or "spell"
     assert(type(rule.enhancement) == "table" and rule.enhancement.type == expectedType,
         "rule " .. index .. " has the wrong descriptor type")
     local scope = rule.profession and tostring(rule.profession) or "global"
@@ -107,9 +107,9 @@ for role, profiles in pairs(roleProfiles) do
         seenProfiles[profileKey] = role
         roleCounts[role] = roleCounts[role] + 1
 
-        expectRule(className, specName, nil, "Trinket", 333, "item", expectedIDs[role].Trinket)
+        expectRule(className, specName, nil, "Trinket", 333, "spell", expectedIDs[role].Trinket)
         expectRule(className, specName, nil, "Finger", 333, "spell", expectedIDs[role].Finger)
-        expectRule(className, specName, nil, "Head", 773, "item", expectedIDs[role].Head)
+        expectRule(className, specName, nil, "Head", 773, "spell", expectedIDs[role].Head)
         expectRule(className, specName, nil, "Shoulder", 773, "spell", expectedIDs[role].Shoulder)
         local neckID = expectedIDs[role].Neck
         if className == "Warlock" and specName == "Affliction" then neckID = 5000765 end

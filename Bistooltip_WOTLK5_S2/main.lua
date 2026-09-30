@@ -717,7 +717,7 @@ for _, role in ipairs(enhancementRoles) do
 
     BisTooltip:DefineEnhancementOverride({
       profession = 333, class = className, spec = specName, slot = "Trinket",
-      enhancement = { type = "item", id = role.trinket },
+      enhancement = { type = "spell", id = role.trinket },
     }, P)
     BisTooltip:DefineEnhancementOverride({
       profession = 333, class = className, spec = specName, slot = "Finger",
@@ -725,7 +725,7 @@ for _, role in ipairs(enhancementRoles) do
     }, P)
     BisTooltip:DefineEnhancementOverride({
       profession = 773, class = className, spec = specName, slot = "Head",
-      enhancement = { type = "item", id = role.head },
+      enhancement = { type = "spell", id = role.head },
     }, P)
     BisTooltip:DefineEnhancementOverride({
       profession = 773, class = className, spec = specName, slot = "Shoulder",
