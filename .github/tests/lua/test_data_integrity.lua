@@ -63,6 +63,12 @@ for id, entries in pairs(BisTooltip_ItemAcquisition) do
     assert(type(id)=='number' and id>0 and id%1==0, 'invalid item ID')
     for _, e in ipairs(entries) do
         assert(methods[e.kind], 'unknown acquisition kind')
+        if e.kind=='TOKEN' then
+            assert(type(e.tokenItem)=='number' and e.tokenItem>0 and e.tokenItem%1==0,
+                'TOKEN missing exact tokenItem on '..id)
+        else
+            assert(e.tokenItem==nil, 'non-TOKEN carries tokenItem on '..id)
+        end
         if e.source then
             local s = assert(BisTooltip_SourceRegistry[e.source], 'dangling source on '..id)
             assert(difficulties[s.difficulty or ''], 'invalid difficulty on '..id)
@@ -87,11 +93,26 @@ for _, e in ipairs(BisTooltip_ItemAcquisition[46111]) do
     if e.kind=='TOKEN' then
         local source=BisTooltip_SourceRegistry[e.source]
         assert(e.tier=='T8' and e.family=='Wayward Vanquisher')
+        assert(e.tokenItem==45634, 'T8 DK chest has the wrong token item')
         assert(source.boss=='Hodir' and source.difficulty=='25N')
         hasToken=true
     end
 end
 assert(hasToken, 'T8 DK chest must have its 25N token source')
+local expectedTokenItems = {
+    [40550] = 40627, -- T7 25N DK chest: Lost Vanquisher
+    [47758] = 47559, -- T9 25HC Mage chest: Grand Vanquisher
+}
+for itemID, tokenItem in pairs(expectedTokenItems) do
+    local matched=false
+    for _, e in ipairs(assert(BisTooltip_ItemAcquisition[itemID])) do
+        if e.kind=='TOKEN' then
+            assert(e.tokenItem==tokenItem, 'wrong exact token item on '..itemID)
+            matched=true
+        end
+    end
+    assert(matched, 'representative item has no TOKEN source: '..itemID)
+end
 local prices = {
     {50965,95,'Emblem of Frost'}, {50968,95,'Emblem of Frost'},
     {50969,95,'Emblem of Frost'}, {50975,95,'Emblem of Frost'},
