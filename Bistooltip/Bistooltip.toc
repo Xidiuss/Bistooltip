@@ -61,6 +61,9 @@ util\debounce.lua
 # Layer 2: Configuration Constants
 Constants.lua
 
+# Layer 2.5: Current player context (depends on Utils, Constants)
+PlayerContext.lua
+
 # Layer 3: Data Provider (depends on Utils, Constants)
 DataProvider.lua
 
