@@ -2,6 +2,8 @@
 
 ## Unreleased — profession-aware enhancements (2026-09-30)
 
+- Replace source-line `TOKEN` and `TROPHY` labels with the native icon of the exact token or Trophy of the Crusade (`47242`), retaining readable labels while item textures are uncached.
+- Record and validate exact `tokenItem` IDs for all 718 T7/T8/T9 TOKEN acquisitions; plain source formatting remains deterministic and `MARK` output is unchanged.
 - Add declarative targeted enhancement rules for server plugins without mutating ranking databases or replay state. Rules replace only `enhs[1]`, preserving every later gem.
 - Support global and profession-gated rules: character professions apply to every viewed spec of that character's class, global rules also apply on other-class tabs, and personal enchant assignments remain highest priority.
 - Add the confirmed WOTLK5 T7 Trinket/Enchanting, Head/Inscription and global legendary Neck recommendations, including the Affliction critical-rating exception.
