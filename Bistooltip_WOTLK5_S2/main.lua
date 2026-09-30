@@ -654,6 +654,82 @@ BisTooltip:AddAcquisition(37192, { kind = "VENDOR", cost = { { currency = "Emble
 
 
 --ENCHANTY
+local enhancementRoles = {
+  {
+    trinket = 5000162, head = 5000158, neck = 5000766,
+    profiles = {
+      { "Death knight", "Blood tank" },
+      { "Druid", "Feral tank" },
+      { "Paladin", "Protection" },
+      { "Warrior", "Protection" },
+    },
+  },
+  {
+    trinket = 5000161, head = 5000156, neck = 5000764,
+    profiles = {
+      { "Death knight", "Frost" },
+      { "Death knight", "Unholy" },
+      { "Death knight", "Blood dps" },
+      { "Druid", "Feral dps" },
+      { "Hunter", "Beast mastery" },
+      { "Hunter", "Marksmanship" },
+      { "Hunter", "Survival" },
+      { "Paladin", "Retribution" },
+      { "Rogue", "Assassination" },
+      { "Rogue", "Combat" },
+      { "Shaman", "Enhancement" },
+      { "Warrior", "Arms" },
+      { "Warrior", "Fury" },
+    },
+  },
+  {
+    trinket = 5000160, head = 5000159, neck = 5000764,
+    profiles = {
+      { "Druid", "Balance" },
+      { "Mage", "Arcane" },
+      { "Mage", "Fire" },
+      { "Mage", "Fire FFB" },
+      { "Mage", "Frost" },
+      { "Priest", "Shadow" },
+      { "Shaman", "Elemental" },
+      { "Warlock", "Affliction" },
+      { "Warlock", "Demonology" },
+      { "Warlock", "Destruction" },
+    },
+  },
+  {
+    trinket = 5000160, head = 5000157, neck = 5000764,
+    profiles = {
+      { "Druid", "Restoration" },
+      { "Paladin", "Holy" },
+      { "Priest", "Discipline" },
+      { "Priest", "Holy" },
+      { "Shaman", "Restoration" },
+    },
+  },
+}
+
+for _, role in ipairs(enhancementRoles) do
+  for _, profile in ipairs(role.profiles) do
+    local className, specName = profile[1], profile[2]
+    local neck = role.neck
+    if className == "Warlock" and specName == "Affliction" then neck = 5000765 end
+
+    BisTooltip:DefineEnhancementOverride({
+      profession = 333, class = className, spec = specName, phase = "T7", slot = "Trinket",
+      enhancement = { type = "item", id = role.trinket },
+    }, P)
+    BisTooltip:DefineEnhancementOverride({
+      profession = 773, class = className, spec = specName, phase = "T7", slot = "Head",
+      enhancement = { type = "item", id = role.head },
+    }, P)
+    BisTooltip:DefineEnhancementOverride({
+      class = className, spec = specName, phase = "T7", slot = "Neck",
+      enhancement = { type = "item", id = neck },
+    }, P)
+  end
+end
+
 BisTooltip:SetAcquisition(5000759, { { kind = "VENDOR", cost = { { currency = "Plagued Legendary Shard", amount = 1 } } } }, P) -- Scroll of Enchant Necklace - Damage All -- item:5000971
 BisTooltip:SetAcquisition(5000760, { { kind = "VENDOR", cost = { { currency = "Plagued Legendary Shard", amount = 1 } } } }, P) -- Scroll of Enchant Necklace - Reduce All -- item:5000971
 BisTooltip:SetAcquisition(5000761, { { kind = "VENDOR", cost = { { currency = "Plagued Legendary Shard", amount = 1 } } } }, P) -- Scroll of Enchant Necklace - Heal All -- item:5000971
