@@ -115,6 +115,24 @@ test("accepted custom registry source renders without a tooltip error", function
     assert(#sources == 1 and sources[1].type == "custom" and sources[1].label == "Server shop")
 end)
 
+test("TOKEN acquisitions require an exact token item and keep it in identity", function()
+    setup()
+    local function token(tokenItem)
+        return {
+            kind = "TOKEN", source = "RAID", tier = "T8",
+            family = "Wayward Vanquisher", tokenItem = tokenItem,
+        }
+    end
+    for _, invalid in ipairs({token(nil), token(0), token(1.5), token("45634")}) do
+        assert(not pcall(BisTooltip.AddAcquisition, BisTooltip, 99, invalid, "test"),
+            "malformed TOKEN tokenItem was accepted")
+    end
+    assert(BisTooltip:AddAcquisition(99, token(45634), "test"))
+    assert(BisTooltip:AddAcquisition(99, token(45637), "test"))
+    assert(#BisTooltip_ItemAcquisition[99] == 2,
+        "distinct TOKEN item IDs were collapsed by acquisition identity")
+end)
+
 test("COMMON enhancement replay preserves arguments across its nil phase", function()
     setup()
     BisTooltip:SetEnhancement("Druid", "Balance", nil, "Head", {{type = "spell", id = 123}})
