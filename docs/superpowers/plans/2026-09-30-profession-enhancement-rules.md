@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Replace only `enhs[1]` through global or profession-gated plugin rules, preserve later gems, and ship the confirmed WOTLK5 T7 Trinket, Head and Neck mappings.
+**Goal:** Replace only `enhs[1]` through global or profession-gated plugin rules, preserve later gems, and ship COMMON WOTLK5 Trinket/Finger/Head/Shoulder mappings plus phase-specific Neck mappings.
 
 **Architecture:** `PlayerContext.lua` remains the source of current class, spec and professions. `PluginAPI.lua` stores immutable `DefineEnhancementOverride` rules and resolves one descriptor, while `DataProvider.lua` copies the active slot and replaces only index 1 before applying the personal override. The WOTLK5 plugin owns explicit role tables and all custom IDs.
 
@@ -16,7 +16,7 @@
 - `DefineEnhancementOverride` replaces only `enhs[1]`; every later entry remains from the active database.
 - A missing `enhs[1]` is created without introducing filler entries.
 - Profession rules apply only to the current player's class; global rules apply to normal tabs for every class.
-- Exact phase outranks COMMON; WOTLK5 production rules use exactly `T7`.
+- Exact phase outranks COMMON; WOTLK5 profession slots use COMMON while the confirmed Neck rules use exactly `T7`.
 - Personal enchant assignment remains the final, highest-priority layer.
 - Enchanting and Inscription use skill-line IDs `333` and `773`.
 - No acquisition or price is invented for `5000156`–`5000162`.
@@ -169,16 +169,18 @@ git commit -m "feat: apply targeted enhancement overrides"
 
 **Interfaces:**
 - Consumes: `BisTooltip:DefineEnhancementOverride(rule, "Bistooltip_WOTLK5_S2")` from Task 1.
-- Produces: exactly one T7 Trinket, Head and Neck override for every declared role profile; 96 unique rule identities across 32 profiles.
+- Produces: four COMMON profession overrides and one T7 Neck override for every declared role profile; 160 unique rule identities across 32 profiles.
 
 - [ ] **Step 1: Write the failing standalone plugin test**
 
 Stub `AddAcquisition`, `SetAcquisition` and `DefineEnhancementOverride`, load the actual plugin, then assert:
 
-- 96 unique rules and no target duplicates;
-- every rule uses phase `T7` and an `item` descriptor;
+- 160 unique rules and no target duplicates;
+- Trinket/Finger/Head/Shoulder omit phase (COMMON), while Neck uses `T7`;
 - all Trinket rules use profession `333` and IDs `5000160`–`5000162` by role;
+- all Finger rules use profession `333` and spells `59636`/`44645`/`44636` by role;
 - all Head rules use profession `773` and IDs `5000156`–`5000159` by role;
+- all Shoulder rules use profession `773` and spells `61119`/`61117`/`61120`/`61118` by role;
 - all Neck rules omit profession and use `5000764`/`5000766`, except Warlock Affliction uses only `5000765`;
 - the four tank, thirteen AP DPS, ten SP DPS and five healer profiles exactly cover 32 unique class/spec pairs;
 - acquisition methods are not called for `5000156`–`5000162`.
@@ -193,19 +195,21 @@ Expected: FAIL because the plugin registers zero override rules.
 
 - [ ] **Step 2: Add explicit role tables and registration loops**
 
-In `Bistooltip_WOTLK5_S2/main.lua`, add local tank/AP/SP/healer class-spec tables near the enchant section. Register three rules per profile:
+In `Bistooltip_WOTLK5_S2/main.lua`, add local tank/AP/SP/healer class-spec tables near the enchant section. Register five rules per profile:
 
-- `Trinket`, profession `333`, role-specific item;
-- `Head`, profession `773`, role-specific item;
+- `Trinket`, COMMON, profession `333`, role-specific item;
+- `Finger`, COMMON, profession `333`, role-specific spell;
+- `Head`, COMMON, profession `773`, role-specific item;
+- `Shoulder`, COMMON, profession `773`, role-specific spell;
 - `Neck`, no profession, role-specific item with the Affliction exception.
 
-Use `P` as the plugin name and phase exactly `T7`. Keep existing neck acquisition records unchanged and add no acquisition entry for `5000156`–`5000162`.
+Use `P` as the plugin name. Omit `phase` for the four profession rules and use exactly `T7` only for Neck. Keep existing neck acquisition records unchanged and add no acquisition entry for `5000156`–`5000162`.
 
 - [ ] **Step 3: Run the plugin rule test**
 
 Run: `lua5.1 .github/tests/lua/test_enhancement_rules.lua`
 
-Expected: final line `wotlk5_enhancement_rules: OK (96 rules)`.
+Expected: final line `wotlk5_enhancement_rules: OK (160 rules)`.
 
 - [ ] **Step 4: Run actual core-plugin integration**
 
@@ -232,11 +236,11 @@ git -C ../wotlk5-s2 commit -m "feat: recommend WOTLK5 T7 enhancements"
 
 **Interfaces:**
 - Consumes: real WOTLK5 rules and core view composition from Tasks 1–3.
-- Produces: integration evidence using actual T7 Head, Neck and Trinket slots from every bundled database/faction binding.
+- Produces: integration evidence using actual COMMON profession slots across phases and the T7 Neck slot from every bundled database/faction binding.
 
 - [ ] **Step 1: Add targeted integration assertions and verify red if the composition is bypassed**
 
-Extend the harness so the WOTLK5 path asserts representative tank, AP, SP, healer and Affliction views with controlled profession sets. For each populated Head/Neck sample, snapshot indices 2..n before resolution and assert they are unchanged afterward. Assert PR/T8/T9/T10/RS views retain their original index 1.
+Extend the harness so the WOTLK5 path asserts representative tank, AP, SP, healer and Affliction views with controlled profession sets. For every targeted slot, snapshot indices 2..n before resolution and assert they are unchanged afterward. Assert COMMON profession slots apply in PR/T8/T9/T10/RS and that Neck retains its original value outside T7.
 
 Run both faction/database matrices. Expected before final harness wiring: FAIL on missing resolved-view assertions.
 
@@ -281,7 +285,7 @@ Document `DefineEnhancementOverride`, optional profession/global scope, phase pr
 
 - [ ] **Step 2: Update WOTLK5 documentation**
 
-Describe the confirmed T7 role groups, profession gates, global Neck behavior and Affliction exception. State that `5000156`–`5000162` have no invented acquisition data and later phases intentionally remain unchanged.
+Describe the confirmed role groups, COMMON profession gates, phase-specific Neck behavior and Affliction exception. State that `5000156`–`5000162` have no invented acquisition data.
 
 - [ ] **Step 3: Scan for stale terminology**
 
@@ -411,7 +415,7 @@ Record core commit, WOTLK5 commit, realm, faction, database, class/spec, phase T
 
 - [ ] **Step 2: Run representative T7 checks in WoW 3.3.5a**
 
-Cover one tank, AP DPS, SP DPS, healer and Warlock Affliction. Verify Trinket only with Enchanting, Head only with Inscription, Neck for everyone, preserved Head/Neck gems, personal override/reset, dual-spec refresh and another-class tabs.
+Cover one tank, AP DPS, SP DPS, healer and Warlock Affliction. Verify Trinket/Finger only with Enchanting, Head/Shoulder only with Inscription across multiple phases, Neck only in its declared phase, preserved later gems, personal override/reset, dual-spec refresh and another-class tabs.
 
 - [ ] **Step 3: Record results separately**
 

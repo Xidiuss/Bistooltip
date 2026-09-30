@@ -17,6 +17,8 @@ local function reset()
     state.talents = {}
     state.professions = {}
     state.professionInfo = {}
+    state.skillLines = {}
+    state.spellbook = {}
     state.form = 0
     state.weaponLink = nil
     state.weaponStats = nil
@@ -48,6 +50,8 @@ end
 GetSpellInfo = function(id)
     if id == 57873 then return "Lokalny Obrońca Stada" end
     if id == 33867 then return "Lokalny Instynkt Drapieżcy" end
+    if id == 7411 then return "Lokalne Zaklinanie" end
+    if id == 45357 then return "Lokalna Inskrypcja" end
 end
 GetShapeshiftForm = function() return state.form end
 GetProfessions = function() return unpack(state.professions) end
@@ -55,6 +59,21 @@ GetProfessionInfo = function(index)
     local info = state.professionInfo[index]
     if not info then return nil end
     return info.name, "icon", 450, 450, 1, 0, info.skillLine
+end
+GetNumSkillLines = function() return #state.skillLines end
+GetSkillLineInfo = function(index)
+    local info = state.skillLines[index]
+    if not info then return nil end
+    return info.name, info.header or false, true, info.rank or 0, 0, 0, info.maxRank or 450
+end
+GetNumSpellTabs = function() return #state.spellbook > 0 and 1 or 0 end
+GetSpellTabInfo = function(index)
+    if index == 1 and #state.spellbook > 0 then
+        return "Professions", "icon", 0, #state.spellbook
+    end
+end
+GetSpellName = function(index)
+    return state.spellbook[index]
 end
 GetInventoryItemLink = function(_, slot)
     if slot == 16 then return state.weaponLink end
@@ -86,6 +105,32 @@ test("profession detection returns stable IDs and a fresh set", function()
     first[333] = nil
     local second = BistooltipPlayerContext.GetProfessionSkillLines()
     assert(second[333] and second[773], "profession result was reused between calls")
+end)
+
+test("WotLK 3.3.5 skill lines detect professions without Cataclysm APIs", function()
+    reset()
+    state.skillLines = {
+        {name = "Lokalne Zaklinanie", rank = 450},
+        {name = "Lokalna Inskrypcja", rank = 450},
+    }
+    local savedProfessions, savedProfessionInfo = GetProfessions, GetProfessionInfo
+    GetProfessions, GetProfessionInfo = nil, nil
+    local detected = BistooltipPlayerContext.GetProfessionSkillLines()
+    GetProfessions, GetProfessionInfo = savedProfessions, savedProfessionInfo
+    assert(detected[333] and detected[773],
+        "3.3.5 skill lines did not produce Enchanting and Inscription IDs")
+end)
+
+test("WotLK 3.3.5 spellbook detects professions behind a collapsed skill header", function()
+    reset()
+    state.skillLines = {{name = "Profesje", header = true}}
+    state.spellbook = {"Lokalne Zaklinanie", "Lokalna Inskrypcja"}
+    local savedProfessions, savedProfessionInfo = GetProfessions, GetProfessionInfo
+    GetProfessions, GetProfessionInfo = nil, nil
+    local detected = BistooltipPlayerContext.GetProfessionSkillLines()
+    GetProfessions, GetProfessionInfo = savedProfessions, savedProfessionInfo
+    assert(detected[333] and detected[773],
+        "collapsed 3.3.5 skill header hid spellbook professions")
 end)
 
 test("missing or truncated profession APIs produce an empty set", function()

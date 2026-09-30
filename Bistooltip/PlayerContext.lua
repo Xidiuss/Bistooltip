@@ -6,6 +6,10 @@ local Context = BistooltipPlayerContext
 local Constants = BistooltipConstants or {}
 local Utils = BistooltipUtils or {}
 local SPEC_BY_CLASSFILE_TAB = Constants.SPEC_BY_CLASSFILE_TAB or {}
+local LEGACY_PROFESSION_SPELL_BY_SKILL_LINE = {
+    [333] = 7411,  -- Enchanting
+    [773] = 45357, -- Inscription
+}
 
 local function ExtractTalentPoints(...)
     local best
@@ -123,18 +127,61 @@ end
 
 function Context.GetProfessionSkillLines()
     local result = {}
-    if type(_G.GetProfessions) ~= "function" or type(_G.GetProfessionInfo) ~= "function" then
-        return result
+    if type(_G.GetProfessions) == "function" and type(_G.GetProfessionInfo) == "function" then
+        local ok, p1, p2, p3, p4 = pcall(_G.GetProfessions)
+        if ok then
+            local professions = {p1, p2, p3, p4}
+            for index = 1, 4 do
+                local profession = professions[index]
+                if profession then
+                    local infoOk, _, _, _, _, _, _, skillLine = pcall(_G.GetProfessionInfo, profession)
+                    if infoOk and type(skillLine) == "number" and skillLine > 0 then
+                        result[skillLine] = true
+                    end
+                end
+            end
+        end
     end
-    local ok, p1, p2, p3, p4 = pcall(_G.GetProfessions)
-    if not ok then return result end
-    local professions = {p1, p2, p3, p4}
-    for index = 1, 4 do
-        local profession = professions[index]
-        if profession then
-            local infoOk, _, _, _, _, _, _, skillLine = pcall(_G.GetProfessionInfo, profession)
-            if infoOk and type(skillLine) == "number" and skillLine > 0 then
-                result[skillLine] = true
+
+    local skillLineByName = {}
+    if type(_G.GetSpellInfo) == "function" then
+        for skillLine, spellID in pairs(LEGACY_PROFESSION_SPELL_BY_SKILL_LINE) do
+            local nameOk, name = pcall(_G.GetSpellInfo, spellID)
+            if nameOk and type(name) == "string" and name ~= "" then
+                skillLineByName[name] = skillLine
+            end
+        end
+    end
+
+    if next(skillLineByName)
+            and type(_G.GetNumSkillLines) == "function"
+            and type(_G.GetSkillLineInfo) == "function" then
+        local countOk, count = pcall(_G.GetNumSkillLines)
+        if countOk and type(count) == "number" then
+            for index = 1, count do
+                local infoOk, name, isHeader = pcall(_G.GetSkillLineInfo, index)
+                local skillLine = infoOk and not isHeader and skillLineByName[name] or nil
+                if skillLine then result[skillLine] = true end
+            end
+        end
+    end
+
+    if next(skillLineByName)
+            and type(_G.GetNumSpellTabs) == "function"
+            and type(_G.GetSpellTabInfo) == "function"
+            and type(_G.GetSpellName) == "function" then
+        local tabsOk, tabCount = pcall(_G.GetNumSpellTabs)
+        if tabsOk and type(tabCount) == "number" then
+            local bookType = _G.BOOKTYPE_SPELL or "spell"
+            for tab = 1, tabCount do
+                local infoOk, _, _, offset, spellCount = pcall(_G.GetSpellTabInfo, tab)
+                if infoOk and type(offset) == "number" and type(spellCount) == "number" then
+                    for index = offset + 1, offset + spellCount do
+                        local spellOk, name = pcall(_G.GetSpellName, index, bookType)
+                        local skillLine = spellOk and skillLineByName[name] or nil
+                        if skillLine then result[skillLine] = true end
+                    end
+                end
             end
         end
     end

@@ -8,7 +8,7 @@ The first production consumer is the WOTLK5 S2 plugin. Core remains free of WOTL
 
 ## Confirmed WOTLK5 inputs
 
-All rules below apply only to phase `T7`.
+Trinket, Finger, Head and Shoulder are COMMON profession rules shared by every phase. Legendary Neck is phase-specific; the currently confirmed Neck rules apply only to `T7`.
 
 ### Enchanting — Trinket
 
@@ -18,6 +18,14 @@ These rules require Enchanting skill-line ID `333` and target the literal `Trink
 - physical/AP DPS: item `5000161` — 40 AP;
 - caster/SP DPS and healers: item `5000160` — 23 SP.
 
+### Enchanting — Finger
+
+These COMMON rules require Enchanting skill-line ID `333`:
+
+- tanks: spell `59636`;
+- physical/AP DPS: spell `44645`;
+- caster/SP DPS and healers: spell `44636`.
+
 ### Inscription — Head
 
 These rules require Inscription skill-line ID `773` and target `Head`:
@@ -26,6 +34,15 @@ These rules require Inscription skill-line ID `773` and target `Head`:
 - physical/AP DPS: item `5000156` — 150 AP and 20 crit;
 - caster/SP DPS: item `5000159` — 90 SP and 20 crit;
 - healers: item `5000157` — 90 SP and 10 mp5.
+
+### Inscription — Shoulder
+
+These COMMON rules require Inscription skill-line ID `773`:
+
+- tanks: spell `61119`;
+- physical/AP DPS: spell `61117`;
+- caster/SP DPS: spell `61120`;
+- healers: spell `61118`.
 
 ### Global legendary Neck
 
@@ -49,7 +66,7 @@ This change covers:
 - view-time resolution without mutating a ranking database;
 - preservation of every `enhs` entry after index 1;
 - personal enchant priority over automatic plugin rules;
-- confirmed WOTLK5 T7 mappings and integration tests.
+- confirmed WOTLK5 COMMON profession mappings, T7 Neck mappings and integration tests.
 
 The later `TOKEN` icon change is a separate task and is not part of this implementation.
 
@@ -78,11 +95,13 @@ BisTooltip:DefineEnhancementOverride({
     profession = 333, -- optional; nil means global
     class = "Druid",
     spec = "Feral tank",
-    phase = "T7",    -- optional nil remains COMMON-capable
+    phase = nil,     -- optional; nil means COMMON across phases
     slot = "Trinket",
     enhancement = {type = "item", id = 5000162},
 }, "Bistooltip_WOTLK5_S2")
 ```
+
+The phase-specific Neck rules use `phase = "T7"` instead.
 
 `class`, `spec`, `slot`, `enhancement` and `plugin` are required. `phase` and `profession` are optional. A profession value must be a positive integer skill-line ID. Enhancement descriptors use the existing `item`, `spell` and `none` vocabulary.
 
@@ -159,7 +178,7 @@ Profession and gear context is read on demand. Talent-group, talent, equipment a
 
 ## Failure behavior
 
-- Missing profession APIs or no matching profession: use the global rule or lower-layer recommendation.
+- On WoW 3.3.5a, resolve stable profession IDs through legacy skill-line and spellbook APIs; a client with no usable profession API or no matching profession uses the global rule or lower-layer recommendation.
 - Requested class different from the player class: ignore profession-gated rules, but allow global rules.
 - Malformed registration: reject it without changing other rules.
 - Missing target in the active database: leave that view unchanged.
@@ -184,12 +203,12 @@ Core tests cover:
 
 The WOTLK5 integration test loads the real plugin and verifies:
 
-- all confirmed T7 role mappings;
+- all confirmed COMMON profession mappings and T7 Neck mappings;
 - Enchanting and Inscription gates;
-- unchanged PR/T8/T9/T10/RS views;
-- global Neck behavior;
+- COMMON Trinket/Finger/Head/Shoulder behavior in PR/T7/T8/T9/T10/RS;
+- T7-only global Neck behavior and unchanged Neck in other phases;
 - the Affliction `5000765` exception;
-- preservation of later Head and Neck gems;
+- preservation of later enhancements and gems in every targeted slot;
 - absence of invented acquisition data for `5000156`–`5000162`.
 
 Native Lua 5.1, `luac5.1`, the package checker, actual-plugin integration and the existing Python release tests remain automated release gates. Live-client smoke testing covers dual-spec switching, both professions, representative role groups, Affliction, personal override/reset, database switching and another-class tabs.

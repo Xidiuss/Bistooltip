@@ -83,6 +83,8 @@ BisTooltip:DefineEnhancementOverride({
 
 `class`, `spec`, `slot`, `enhancement` and the plugin name are required. `phase` and `profession` are optional; omitting `profession` creates a global rule. Profession values are positive integer skill-line IDs (`333` for Enchanting, `773` for Inscription). A descriptor is `item` or `spell` with a positive integer ID, or `none` with ID `0`.
 
+Core resolves those stable IDs through `GetProfessions` where available and through the legacy skill-line/spellbook APIs on WoW 3.3.5a. Plugins must never depend on localized profession names.
+
 The matching rule replaces only `enhs[1]` in a defensive slot view. An empty list gains index 1; entries from index 2 onward remain from the active database. Global rules apply on every matching class tab. Profession-gated rules apply only to tabs belonging to the current player's class; a normal tab supplies its own spec, so a Protection player browsing Holy can receive the Holy profession rule. The tooltip's **Your specialization** section instead uses the active talent group: hybrid Feral resolves to `Feral tank`, while a spell-power main hand resolves Enhancement to `Spellhance` only when that profile exists in the selected database.
 
 Within one scope, an exact phase outranks COMMON. One matching owned profession outranks a global rule. If two owned professions match the same class/spec/phase/slot, core emits a deterministic diagnostic, ignores both profession matches and falls back to the global rule or base list. The personal Enchant editor remains the final user override at index 1.
@@ -95,4 +97,4 @@ An insertion keeps the slot's existing number of alternatives. A new rank-1 item
 
 The Scanner branch collects merchant observations and exports text; it does not install or execute generated plugins. Review output before using it. Default `append` uses `AddAcquisition` and preserves multiple merchants; `replace_vendor` uses `ReplaceVendorAcquisitions` to change only purchase routes; `replace_all` uses `SetAcquisition`. Empty prices are comments, not executable offers. Re-scan observations collected with an older scanner if Honor/Arena/token costs were omitted.
 
-See [development checks](DEVELOPMENT.md) for the real-plugin matrix. The existing Whitemane and WOTLK5 packages demonstrate additive costs; Whitemane also demonstrates rank changes, while WOTLK5 declares confirmed T7 targeted enhancement rules.
+See [development checks](DEVELOPMENT.md) for the real-plugin matrix. The existing Whitemane and WOTLK5 packages demonstrate additive costs; Whitemane also demonstrates rank changes, while WOTLK5 demonstrates COMMON profession rules alongside a phase-specific targeted Neck rule.

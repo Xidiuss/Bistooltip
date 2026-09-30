@@ -98,11 +98,11 @@ local function assertEnhancementsEqual(actual, expected, message)
 end
 local function verifyWotlkEnhancementViews()
     local representatives = {
-        {'Warrior','Protection',5000162,5000158,5000766},
-        {'Warrior','Fury',5000161,5000156,5000764},
-        {'Mage','Arcane',5000160,5000159,5000764},
-        {'Priest','Holy',5000160,5000157,5000764},
-        {'Warlock','Affliction',5000160,5000159,5000765},
+        {'Warrior','Protection',5000162,59636,5000158,61119,5000766},
+        {'Warrior','Fury',5000161,44645,5000156,61117,5000764},
+        {'Mage','Arcane',5000160,44636,5000159,61120,5000764},
+        {'Priest','Holy',5000160,44636,5000157,61118,5000764},
+        {'Warlock','Affliction',5000160,44636,5000159,61120,5000765},
     }
     for _,profile in ipairs(representatives) do
         local className, specName = profile[1], profile[2]
@@ -110,13 +110,15 @@ local function verifyWotlkEnhancementViews()
         local baseSlots = Bistooltip_bislists[className][specName].T7
         local views = BistooltipData.GetSlotsForSpec(className,specName,'T7')
         for _,target in ipairs({
-            {'Trinket',profile[3]}, {'Head',profile[4]}, {'Neck',profile[5]},
+            {'Trinket','item',profile[3]}, {'Finger','spell',profile[4]},
+            {'Head','item',profile[5]}, {'Shoulder','spell',profile[6]},
+            {'Neck','item',profile[7]},
         }) do
-            local slotName, expectedID = target[1], target[2]
+            local slotName, expectedType, expectedID = target[1], target[2], target[3]
             local base, view = findSlot(baseSlots,slotName), findSlot(views,slotName)
             assert(base and view, className .. '/' .. specName .. ' missing ' .. slotName)
             local before = copyEnhancements(base.enhs)
-            assert(view.enhs[1] and view.enhs[1].type == 'item'
+            assert(view.enhs[1] and view.enhs[1].type == expectedType
                 and view.enhs[1].id == expectedID,
                 className .. '/' .. specName .. '/' .. slotName .. ' override missing')
             for index=2,#before do
@@ -141,15 +143,76 @@ local function verifyWotlkEnhancementViews()
         local phaseSlots = Bistooltip_bislists.Warrior.Fury[phase]
         if phaseSlots then
             local views = BistooltipData.GetSlotsForSpec('Warrior','Fury',phase)
-            for _,slotName in ipairs({'Trinket','Head','Neck'}) do
+            for _,target in ipairs({
+                {'Trinket','item',5000161}, {'Finger','spell',44645},
+                {'Head','item',5000156}, {'Shoulder','spell',61117},
+            }) do
+                local slotName, expectedType, expectedID = target[1], target[2], target[3]
                 local base, view = findSlot(phaseSlots,slotName), findSlot(views,slotName)
                 if base and view then
-                    assertEnhancementsEqual(view.enhs,base.enhs,
-                        'T7 override leaked to Warrior/Fury/' .. phase .. '/' .. slotName)
+                    assert(view.enhs[1] and view.enhs[1].type == expectedType
+                        and view.enhs[1].id == expectedID,
+                        'COMMON override missing from Warrior/Fury/' .. phase .. '/' .. slotName)
+                    for index=2,#(base.enhs or {}) do
+                        assert(view.enhs[index] and view.enhs[index].type == base.enhs[index].type
+                            and view.enhs[index].id == base.enhs[index].id,
+                            'COMMON override lost later enhancement at Warrior/Fury/'
+                                .. phase .. '/' .. slotName .. '/' .. index)
+                    end
                 end
+            end
+            local baseNeck, viewNeck = findSlot(phaseSlots,'Neck'), findSlot(views,'Neck')
+            if baseNeck and viewNeck then
+                assertEnhancementsEqual(viewNeck.enhs,baseNeck.enhs,
+                    'phase-specific Neck leaked to Warrior/Fury/' .. phase)
             end
         end
     end
+end
+
+local function verifyWotlkLegacyProfessionContext()
+    local savedContext = BistooltipPlayerContext
+    local savedClassMap = BistooltipUtils.CLASSFILE_TO_DATASET
+    local savedUnitClass = UnitClass
+    local savedGetProfessions, savedGetProfessionInfo = GetProfessions, GetProfessionInfo
+    local savedGetSpellInfo = GetSpellInfo
+    local savedGetNumSkillLines, savedGetSkillLineInfo = GetNumSkillLines, GetSkillLineInfo
+
+    BistooltipUtils.CLASSFILE_TO_DATASET = {WARRIOR='Warrior'}
+    UnitClass = function() return 'Warrior','WARRIOR' end
+    GetProfessions, GetProfessionInfo = nil, nil
+    GetSpellInfo = function(id)
+        if id == 7411 then return 'Localized Enchanting' end
+        if id == 45357 then return 'Localized Inscription' end
+    end
+    GetNumSkillLines = function() return 2 end
+    GetSkillLineInfo = function(index)
+        if index == 1 then return 'Localized Enchanting',false,true,450 end
+        if index == 2 then return 'Localized Inscription',false,true,450 end
+    end
+    BistooltipPlayerContext = {}
+    dofile('Bistooltip/PlayerContext.lua')
+
+    local baseSlots = Bistooltip_bislists.Warrior.Fury.T8
+    local views = BistooltipData.GetSlotsForSpec('Warrior','Fury','T8')
+    for _,target in ipairs({
+        {'Trinket','item',5000161}, {'Finger','spell',44645},
+        {'Head','item',5000156}, {'Shoulder','spell',61117},
+    }) do
+        local view = findSlot(views,target[1])
+        assert(view and view.enhs[1] and view.enhs[1].type == target[2]
+            and view.enhs[1].id == target[3],
+            'real 3.3.5 profession context missed T8 ' .. target[1])
+    end
+    assertEnhancementsEqual(findSlot(views,'Neck').enhs,findSlot(baseSlots,'Neck').enhs,
+        'real 3.3.5 profession context leaked T7 Neck into T8')
+
+    BistooltipPlayerContext = savedContext
+    BistooltipUtils.CLASSFILE_TO_DATASET = savedClassMap
+    UnitClass = savedUnitClass
+    GetProfessions, GetProfessionInfo = savedGetProfessions, savedGetProfessionInfo
+    GetSpellInfo = savedGetSpellInfo
+    GetNumSkillLines, GetSkillLineInfo = savedGetNumSkillLines, savedGetSkillLineInfo
 end
 for _,faction in ipairs({'Alliance','Horde'}) do
     UnitFactionGroup=function() return faction end
@@ -203,6 +266,7 @@ for _,faction in ipairs({'Alliance','Horde'}) do
                 'Great Wall necklace scroll source missing')
             BistooltipAddon:changeSpec('wowsims')
             verifyWotlkEnhancementViews()
+            verifyWotlkLegacyProfessionContext()
             BistooltipAddon:changeSpec(initial)
         end
         local after=count()
