@@ -656,7 +656,7 @@ BisTooltip:AddAcquisition(37192, { kind = "VENDOR", cost = { { currency = "Emble
 --ENCHANTY
 local enhancementRoles = {
   {
-    trinket = 5000162, head = 5000158, neck = 5000766,
+    trinket = 5000162, ring = 59636, head = 5000158, shoulder = 61119, neck = 5000766,
     profiles = {
       { "Death knight", "Blood tank" },
       { "Druid", "Feral tank" },
@@ -665,7 +665,7 @@ local enhancementRoles = {
     },
   },
   {
-    trinket = 5000161, head = 5000156, neck = 5000764,
+    trinket = 5000161, ring = 44645, head = 5000156, shoulder = 61117, neck = 5000764,
     profiles = {
       { "Death knight", "Frost" },
       { "Death knight", "Unholy" },
@@ -683,7 +683,7 @@ local enhancementRoles = {
     },
   },
   {
-    trinket = 5000160, head = 5000159, neck = 5000764,
+    trinket = 5000160, ring = 44636, head = 5000159, shoulder = 61120, neck = 5000764,
     profiles = {
       { "Druid", "Balance" },
       { "Mage", "Arcane" },
@@ -698,7 +698,7 @@ local enhancementRoles = {
     },
   },
   {
-    trinket = 5000160, head = 5000157, neck = 5000764,
+    trinket = 5000160, ring = 44636, head = 5000157, shoulder = 61118, neck = 5000764,
     profiles = {
       { "Druid", "Restoration" },
       { "Paladin", "Holy" },
@@ -716,12 +716,20 @@ for _, role in ipairs(enhancementRoles) do
     if className == "Warlock" and specName == "Affliction" then neck = 5000765 end
 
     BisTooltip:DefineEnhancementOverride({
-      profession = 333, class = className, spec = specName, phase = "T7", slot = "Trinket",
+      profession = 333, class = className, spec = specName, slot = "Trinket",
       enhancement = { type = "item", id = role.trinket },
     }, P)
     BisTooltip:DefineEnhancementOverride({
-      profession = 773, class = className, spec = specName, phase = "T7", slot = "Head",
+      profession = 333, class = className, spec = specName, slot = "Finger",
+      enhancement = { type = "spell", id = role.ring },
+    }, P)
+    BisTooltip:DefineEnhancementOverride({
+      profession = 773, class = className, spec = specName, slot = "Head",
       enhancement = { type = "item", id = role.head },
+    }, P)
+    BisTooltip:DefineEnhancementOverride({
+      profession = 773, class = className, spec = specName, slot = "Shoulder",
+      enhancement = { type = "spell", id = role.shoulder },
     }, P)
     BisTooltip:DefineEnhancementOverride({
       class = className, spec = specName, phase = "T7", slot = "Neck",
