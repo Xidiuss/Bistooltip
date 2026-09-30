@@ -1,5 +1,13 @@
 # BisTooltip Changelog
 
+## Unreleased — profession-aware enhancements (2026-09-30)
+
+- Add declarative targeted enhancement rules for server plugins without mutating ranking databases or replay state. Rules replace only `enhs[1]`, preserving every later gem.
+- Support global and profession-gated rules: character professions apply to every viewed spec of that character's class, global rules also apply on other-class tabs, and personal enchant assignments remain highest priority.
+- Add the confirmed WOTLK5 T7 Trinket/Enchanting, Head/Inscription and global legendary Neck recommendations, including the Affliction critical-rating exception.
+- Share active dual-spec detection with **Your specialization**. Feral talent signals distinguish tank/DPS with hybrids classified as tank; Enhancement selects an available Spellhance profile from main-hand spell stats.
+- Refresh visible tooltips and the main UI after talent-group, talent, equipment and profession changes.
+
 ## Unreleased — enchant editor and cache (2026-09-20)
 
 - Add an account-wide enchant assignment editor scoped by ranking database/class/spec/phase/slot. Its preview includes recorded scroll sources and prices; personal overrides replace the first enhancement entry without modifying plugin data or later gem entries.

@@ -50,8 +50,9 @@ The package checker follows TOC/XML dependencies and catches missing shipped fil
 | Test | Coverage |
 | --- | --- |
 | `test_data_integrity.lua` | Canonical acquisition and formatting contracts |
-| `test_data_state.lua` | Binding, migration, replay, personal order and enchant assignment |
-| `test_plugin_boundaries.lua` | Malformed operations and isolation |
+| `test_data_state.lua` | Binding, migration, replay, personal order, targeted enhancement views and enchant assignment |
+| `test_player_context.lua` | Profession IDs, dual spec, Feral hybrid policy and Spellhance fallback |
+| `test_plugin_boundaries.lua` | Malformed operations, targeted override precedence and isolation |
 | `test_vendor.lua` | Vendor purchase interpretation |
 | `test_runtime.lua` | Lifecycle, bounded/retried preloading, stale selection callbacks, tooltip modifiers and vendor command |
 | `test_datasets.lua` | Bundled ranking datasets |
@@ -62,6 +63,7 @@ For server integration, check out the corresponding branches and supply their en
 ```sh
 lua5.1 .github/tests/lua/test_server_plugins.lua ../whitemane-frostmourne/Bistooltip_Whitemane_Frostmourne/main.lua
 lua5.1 .github/tests/lua/test_server_plugins.lua ../wotlk5-s2/Bistooltip_WOTLK5_S2/main.lua
+lua5.1 ../wotlk5-s2/.github/tests/lua/test_enhancement_rules.lua
 ```
 
 An isolated core checkout needs separate plugin checkouts for these two commands. CI uses a plugin branch matrix and a separate integration checkout. [tests.yml](../.github/workflows/tests.yml) is the source of truth for its jobs and inputs; this document does not assert that any particular run has passed.
@@ -96,8 +98,9 @@ Use a WoW 3.3.5a client with Lua errors visible. Record the core commit, server,
 10. Enable the relevant server plugin. For Whitemane, check a legendary at rank 1, the former first item at rank 2, and exactly six ranked positions in MAIN/CUSTOM before and after database switches and RESET. Check a known source/cost as well. Do not assume the other server's plugin describes this server.
 11. Run `/bis debug on`, redraw a selection, then `/bis debug`; collect its output for row issues and finish with `/bis debug off`.
 12. With the scanner enabled, capture a merchant with Honor, Arena and item-token costs. Change AMOUNT in the checked preset without toggling its checkmark, then export Lua and CSV; compare all amounts and six CSV columns with the merchant window. In `append`, scan the same item at two merchants and check that both offers are exported. In `replace_vendor`, verify that an old WotLK emblem price is replaced by Justice/Valor without erasing a drop or token; use `append` for an additional custom-emblem purchase. `replace_all` is only for a deliberate full replacement. Record unresolved `EMPTY-COST` rows instead of importing them as free offers.
-13. On WOTLK5 S2, enable only its matching server overlay and compare a known vendor item plus scroll `5000762` with the in-game merchant. The scroll should show 1 × Plagued Legendary Shard and remain absent from class/spec enchant recommendations until assigned.
+13. On WOTLK5 S2, enable only its matching server overlay and compare a known vendor item plus a legendary Neck scroll with the in-game merchant. In T7, check one tank, AP DPS, SP DPS, healer and Warlock Affliction: Trinket appears only with Enchanting (`333`), Head only with Inscription (`773`), and Neck is global; Affliction must use `5000765`. Confirm Head/Neck gems after index 1 remain, later phases are unchanged, same-class offspec tabs use their declared spec, another-class tabs receive only the global Neck rule, and a personal assignment wins and resets cleanly.
 14. Check one complete Yrma exchange: `34388` should require 1 × `34192` and 1 × Sunmote `34664`; `34192` should identify the Eredar Twins in Sunwell Plateau 25N rather than claiming that the target `34388` drops there. Check Priest/Shadow/PR/Chest in WoWSimsBP: `39523` should be first, `43792` absent and no duplicated `39523`. Discipline/Holy should retain `39515` where ranked.
 15. Compare Alliance/Horde counterpart prices, for example `47674`/`47675` at 75 Emblem of Triumph and `47702`/`47701` at 45. Check `43573` for the Nascent Val'kyr NPC description and `37761` for the broad world-drop description.
+16. On a Druid, switch dual spec while a relevant tooltip is open. Verify Protector-only Feral as tank, Predatory-only as DPS and a hybrid as tank; with neither signal, verify Cat/Bear form fallback. On an Enhancement Shaman, verify a spell-power main hand selects `Spellhance` only when that profile exists, while normal Enhancement tabs never follow the equipped weapon.
 
 Report automated results, native-runtime availability, and in-game results separately. Passing stubs cannot establish rendering, addon interactions, or server data accuracy.

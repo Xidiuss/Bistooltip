@@ -42,6 +42,8 @@ Open `/bis config` → **Enchant editor**. Select the database, class, spec, pha
 
 Personal enchant assignments are account-wide but scoped to one ranking database. They do not edit plugin files or change another database. A vendor source for a scroll does not create an assignment by itself. The editor validates the target slot and ID format, but does not verify that a custom scroll can enchant that slot; confirm compatibility in game before saving.
 
+Server plugins can also declare one automatic enhancement for a class/spec/phase/slot. A rule may be global or require a profession: profession rules apply only to tabs for the current character's class, while global rules also work on other-class tabs. Normal tabs use the specialization being viewed; **Your specialization** follows the active dual spec and the Feral/Spellhance classifier. The automatic rule replaces only the first `enhs` entry, preserving later gems, and a saved personal assignment still wins afterward. The WOTLK5 plugin supplies confirmed T7 Trinket/Head/Neck rules for this mechanism.
+
 | Command | Action |
 | --- | --- |
 | `/bis` or `/bistooltip` | Open the window |

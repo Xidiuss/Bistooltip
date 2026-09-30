@@ -4,7 +4,7 @@ The core targets WoW 3.3.5a and Lua 5.1. The authoritative runtime load order is
 
 ## Load and initialization
 
-The TOC loads bundled libraries first, then gem/class/ranking/faction tables, followed by `SourceRegistry.lua`, `ItemAcquisition.lua`, `SourceFormatter.lua`, and `PluginAPI.lua`. Utilities and constants precede `DataProvider.lua`, `StateManager.lua`, pooling, and UI helpers/components. `Core.lua` creates the AceAddon instance; `Config.lua`, `Bistooltip.lua`, and `BislistUI.lua` attach its configuration, tooltip, and window methods.
+The TOC loads bundled libraries first, then gem/class/ranking/faction tables, followed by `SourceRegistry.lua`, `ItemAcquisition.lua`, `SourceFormatter.lua`, and `PluginAPI.lua`. Utilities and constants precede `PlayerContext.lua`, `DataProvider.lua`, `StateManager.lua`, pooling, and UI helpers/components. `Core.lua` creates the AceAddon instance; `Config.lua`, `Bistooltip.lua`, and `BislistUI.lua` attach its configuration, tooltip, and window methods.
 
 AceAddon invokes `OnInitialize` after those files have loaded. Initialization prepares pools and the equipment watcher, initializes saved settings and the selected database, adds the minimap launcher, and registers commands and tooltip hooks. Most of the native window is created when first opened. Closing it hides the retained frame tree; reopening refreshes its contents.
 
@@ -19,6 +19,7 @@ AceAddon invokes `OnInitialize` after those files have loaded. Initialization pr
 | `ItemAcquisition.lua` | Item IDs mapped to acquisition entries and vendor costs |
 | `SourceFormatter.lua` | Plain/colored source text, source palette, vendor cost helpers |
 | `PluginAPI.lua` | Validated server mutations and replayable overlay operations |
+| `PlayerContext.lua` | Current class, active dual spec, profession IDs and Feral/Spellhance classification |
 | `DataProvider.lua` | Selection reads, defensive slot copies, filtering, ownership interpretation, personal priorities |
 | `StateManager.lua` | Current selection, UI modes, phase lock, collapsed sections, frame references |
 | `Bistooltip.lua` | Item tooltip hooks and modifier-key refresh |
@@ -39,11 +40,14 @@ For a bind, Config copies the chosen baseline into `Bistooltip_bislists`. The Wo
 ```text
 bundled ranking snapshot -> fresh active database -> server overlay replay
                                                     |
+plugin enhancement rules + current player context -+
                                                     v
-                              slot read + personal item-ID order -> UI
+                         defensive slot view -> personal override -> UI
 ```
 
 Personal order does not rewrite the bundled baseline. RESET must restore the active database/plugin baseline. Saved IDs that are absent from a newly selected dataset are reconciled against that dataset; the databases do not promise identical coverage or rank counts. A replay operation targeting an unavailable slot is reported and skipped rather than aborting the whole switch.
+
+Enhancement override rules are a separate, session-only registry rather than overlay mutations. Global rules are considered for every requested class; profession-gated rules are considered only when the requested class is the player's class. Within either scope an exact phase precedes COMMON, one matching owned profession precedes a global rule, and ambiguous profession matches fall back to the global/base layer with a diagnostic. `DataProvider` copies the active slot and its `enhs` list only when an automatic or personal layer applies, replaces only index 1, and preserves later gems. A normal tab supplies its declared spec; only **Your specialization** uses active talents and main-hand context. The personal Enchant editor is applied last.
 
 ## Acquisition model
 

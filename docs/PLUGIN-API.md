@@ -14,6 +14,7 @@ Core rankings are selected independently of server data. Enable the one server o
 | `SetBiSSlotRank(class, spec, phase, slot, rank, itemID, plugin)` | Replace one existing rank |
 | `InsertBiSSlotRank(class, spec, phase, slot, rank, itemID, plugin)` | Insert at a rank and shift later items; move an item already in the slot |
 | `SetEnhancement(class, spec, phase, slot, enhancements, plugin)` | Replace enhancements; `phase=nil` applies to every existing phase of the spec |
+| `DefineEnhancementOverride(rule, plugin)` | Register one view-time index-1 enhancement override; optional profession gate |
 
 Pass an identifying plugin string for useful diagnostics. Entries are validated before application. Unknown source IDs may be forward references: define them before the player uses the source. Invalid ranking paths raise errors; both rank methods defer targets present in another bundled database for a later compatible bind. Deferral does not create a missing phase and is not a general registration queue for every API method. `SetBiSSlotRank` accepts an existing rank; `InsertBiSSlotRank` accepts ranks through one past the current end.
 
@@ -61,10 +62,33 @@ BisTooltip:SetEnhancement("Druid", "Balance", "T10", "Head", {
 
 Enhancements are whole-list replacement, not append. Spell entries use `{type="spell", id=spellID}` and must not be queried as item IDs. Test the plugin on every intended ranking database and faction, including initial login, not only replay.
 
+### Targeted enhancement overrides
+
+Use `DefineEnhancementOverride` for a global recommendation or one valid only for a profession owned by the current character. The rule is declarative and is not replayed into ranking tables:
+
+```lua
+BisTooltip:DefineEnhancementOverride({
+    profession = 333, -- Enchanting skill-line ID; never a localized name
+    class = "Druid",
+    spec = "Feral tank",
+    phase = nil,      -- COMMON; an exact phase rule takes precedence
+    slot = "Finger",
+    enhancement = {type = "item", id = 900003},
+}, P)
+```
+
+`class`, `spec`, `slot`, `enhancement` and the plugin name are required. `phase` and `profession` are optional; omitting `profession` creates a global rule. Profession values are positive integer skill-line IDs (`333` for Enchanting, `773` for Inscription). A descriptor is `item` or `spell` with a positive integer ID, or `none` with ID `0`.
+
+The matching rule replaces only `enhs[1]` in a defensive slot view. An empty list gains index 1; entries from index 2 onward remain from the active database. Global rules apply on every matching class tab. Profession-gated rules apply only to tabs belonging to the current player's class; a normal tab supplies its own spec, so a Protection player browsing Holy can receive the Holy profession rule. The tooltip's **Your specialization** section instead uses the active talent group: hybrid Feral resolves to `Feral tank`, while a spell-power main hand resolves Enhancement to `Spellhance` only when that profile exists in the selected database.
+
+Within one scope, an exact phase outranks COMMON. One matching owned profession outranks a global rule. If two owned professions match the same class/spec/phase/slot, core emits a deterministic diagnostic, ignores both profession matches and falls back to the global rule or base list. The personal Enchant editor remains the final user override at index 1.
+
+Rules remain registered across database switches and resolve only when their target exists in the selected database. Registering the same profession-or-global/class/spec/phase/slot identity again is last-write-wins with a diagnostic. Acquisition records still do not imply recommendation rules; declare each confirmed target explicitly.
+
 An insertion keeps the slot's existing number of alternatives. A new rank-1 item shifts the earlier ranks down and drops the old last alternative; an ID already present moves without duplication. MAIN and CUSTOM show up to six ranked icons per slot.
 
 ## Scanner handoff
 
 The Scanner branch collects merchant observations and exports text; it does not install or execute generated plugins. Review output before using it. Default `append` uses `AddAcquisition` and preserves multiple merchants; `replace_vendor` uses `ReplaceVendorAcquisitions` to change only purchase routes; `replace_all` uses `SetAcquisition`. Empty prices are comments, not executable offers. Re-scan observations collected with an older scanner if Honor/Arena/token costs were omitted.
 
-See [development checks](DEVELOPMENT.md) for the real-plugin matrix. The existing Whitemane and WOTLK5 packages demonstrate additive costs; Whitemane also demonstrates rank changes. WOTLK5's scroll prices do not currently include enhancement recommendations.
+See [development checks](DEVELOPMENT.md) for the real-plugin matrix. The existing Whitemane and WOTLK5 packages demonstrate additive costs; Whitemane also demonstrates rank changes, while WOTLK5 declares confirmed T7 targeted enhancement rules.
