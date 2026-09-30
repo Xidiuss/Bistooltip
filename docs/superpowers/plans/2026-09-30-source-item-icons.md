@@ -98,5 +98,5 @@
 
 - [x] Document `tokenItem`, native TOKEN/TROPHY icons, and cold-cache fallbacks.
 - [x] Run syntax diagnostics, package validation, all core Lua suites, real plugin suites, offline checker, and Python tests; inspect every output.
-- [ ] Run `git diff --check`, verify the core branch/status and local/remote divergence, and update the three root state files with exact evidence.
-- [ ] Commit versioned documentation; do not push.
+- [x] Run `git diff --check`, verify the core branch/status and local/remote divergence, and update the three root state files with exact evidence.
+- [x] Commit versioned documentation; do not push.
