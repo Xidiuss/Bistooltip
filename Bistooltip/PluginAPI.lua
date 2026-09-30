@@ -71,7 +71,7 @@ local KINDS = { DROP = true, TOKEN = true, MARK = true, VENDOR = true, CUSTOM = 
 local function entryIdentity(e)
   local parts = {
     tostring(e.kind), tostring(e.tier or ""), tostring(e.family or ""),
-    tostring(e.label or ""), tostring(e.source or ""),
+    tostring(e.tokenItem or 0), tostring(e.label or ""), tostring(e.source or ""),
     tostring(e.displayVariant or ""), tostring(e.variantLabel or ""),
   }
   for _, c in ipairs(e.cost or {}) do
@@ -83,6 +83,9 @@ end
 local function checkEntry(e, what)
   if type(e) ~= "table" then error(what .. ": entry must be a table", 2) end
   if not KINDS[e.kind] then error(what .. ": unknown kind " .. tostring(e.kind), 2) end
+  if e.tokenItem ~= nil and e.kind ~= "TOKEN" then
+    error(what .. ": tokenItem is only valid for TOKEN", 2)
+  end
   if e.kind == "CUSTOM" or e.kind == "ACTIVITY" then
     if type(e.label) ~= "string" or e.label == "" then
       error(what .. ": " .. e.kind .. " needs non-empty label", 2)
@@ -118,6 +121,10 @@ local function checkEntry(e, what)
     end
     if type(e.family) ~= "string" or e.family == "" then
       error(what .. ": " .. e.kind .. " needs family", 2)
+    end
+    if e.kind == "TOKEN" and (type(e.tokenItem) ~= "number"
+      or e.tokenItem <= 0 or e.tokenItem % 1 ~= 0) then
+      error(what .. ": TOKEN needs a positive whole tokenItem", 2)
     end
   end
   return true
