@@ -42,12 +42,12 @@ bundled ranking snapshot -> fresh active database -> server overlay replay
                                                     |
 plugin enhancement rules + current player context -+
                                                     v
-                         defensive slot view -> personal override -> UI
+                                      defensive slot view -> UI
 ```
 
 Personal order does not rewrite the bundled baseline. RESET must restore the active database/plugin baseline. Saved IDs that are absent from a newly selected dataset are reconciled against that dataset; the databases do not promise identical coverage or rank counts. A replay operation targeting an unavailable slot is reported and skipped rather than aborting the whole switch.
 
-Enhancement override rules are a separate, session-only registry rather than overlay mutations. Global rules are considered for every requested class; profession-gated rules are considered only when the requested class is the player's class. Within either scope an exact phase precedes COMMON, one matching owned profession precedes a global rule, and ambiguous profession matches fall back to the global/base layer with a diagnostic. `DataProvider` copies the active slot and its `enhs` list only when an automatic or personal layer applies, replaces only index 1, and preserves later gems. A normal tab supplies its declared spec; only **Your specialization** uses active talents and main-hand context. The personal Enchant editor is applied last.
+Enhancement override rules are a separate, session-only registry rather than overlay mutations. Global rules are considered for every requested class; profession-gated rules are considered only when the requested class is the player's class. Within either scope an exact phase precedes COMMON, one matching owned profession precedes a global rule, and ambiguous profession matches fall back to the global/base layer with a diagnostic. `DataProvider` copies the active slot and its `enhs` list only when an automatic rule applies, replaces only index 1, and preserves later gems. A normal tab supplies its declared spec; only **Your specialization** uses active talents and main-hand context. Custom enhancement recommendations belong to server plugins; there is no later personal override layer.
 
 ## Acquisition model
 

@@ -40,7 +40,6 @@ local db_defaults = {
     global = {
         data_source = "wowsims",
         custom_priorities = {},
-        custom_enhancements = {},
     },
     char = {
         -- Selection state
@@ -69,109 +68,6 @@ local db_defaults = {
         debug_mode = false,
     }
 }
-
--- Editor state is intentionally transient; saved assignments live in
--- db.global.custom_enhancements and are scoped to the selected database.
-local enchantEditor = { kind = "item", id = "" }
-
-local function EditorChoices(level)
-    local choices = {}
-    local lists = _G.Bistooltip_bislists or {}
-    if level == "class" then
-        for name in pairs(lists) do choices[name] = name end
-        return choices
-    end
-    local className = enchantEditor.class
-    if not className or not lists[className] then className = next(lists) end
-    enchantEditor.class = className
-    local specs = className and lists[className] or {}
-    if level == "spec" then
-        for name in pairs(specs) do choices[name] = name end
-        return choices
-    end
-    local specName = enchantEditor.spec
-    if not specName or not specs[specName] then specName = next(specs) end
-    enchantEditor.spec = specName
-    local phases = specName and specs[specName] or {}
-    if level == "phase" then
-        for name in pairs(phases) do choices[name] = name end
-        return choices
-    end
-    local phase = enchantEditor.phase
-    if not phase or not phases[phase] then phase = next(phases) end
-    enchantEditor.phase = phase
-    local slots = phase and phases[phase] or {}
-    for _, slot in ipairs(slots) do
-        if slot.slot_name then choices[slot.slot_name] = slot.slot_name end
-    end
-    return choices
-end
-
-local function EditorTarget()
-    local choices = EditorChoices("slot")
-    if not enchantEditor.slot or not choices[enchantEditor.slot] then
-        enchantEditor.slot = next(choices)
-    end
-    return enchantEditor.class, enchantEditor.spec, enchantEditor.phase, enchantEditor.slot
-end
-
-local function EditorBaseSlot()
-    local className, specName, phase, slotName = EditorTarget()
-    local slots = _G.Bistooltip_bislists and _G.Bistooltip_bislists[className]
-    slots = slots and slots[specName]
-    slots = slots and slots[phase]
-    for _, slot in ipairs(slots or {}) do
-        if slot.slot_name == slotName then return slot end
-    end
-    return nil
-end
-
-local function EditorPreview()
-    local className, specName, phase, slotName = EditorTarget()
-    if not slotName then return "No slot is available in this database." end
-    local base = EditorBaseSlot()
-    local old = base and base.enhs and base.enhs[1]
-    local current = BistooltipData.GetCustomEnhancement(className, specName, phase, slotName)
-    local id = tonumber(enchantEditor.id)
-    local lines = {
-        "Current first entry: " .. (old and (old.type .. ":" .. old.id) or "none"),
-        "Personal assignment: " .. (current and (current.type .. ":" .. current.id) or "none"),
-    }
-    if not id or id <= 0 or id % 1 ~= 0 then
-        lines[#lines + 1] = "Enter a positive whole-number item or spell ID to preview."
-    else
-        local name
-        if enchantEditor.kind == "item" and type(GetItemInfo) == "function" then
-            name = GetItemInfo(id)
-        elseif enchantEditor.kind == "spell" and type(GetSpellInfo) == "function" then
-            name = GetSpellInfo(id)
-        end
-        lines[#lines + 1] = "New first entry: " .. enchantEditor.kind .. ":" .. id
-            .. " (" .. (name or "name not cached/available") .. ")"
-        if enchantEditor.kind == "item" and BistooltipData.GetAllItemSources then
-            local sources = BistooltipData.GetAllItemSources(id)
-            if #sources == 0 then
-                lines[#lines + 1] = "No recorded acquisition or price for this item."
-            else
-                for i = 1, math.min(#sources, 3) do
-                    lines[#lines + 1] = sources[i].text
-                end
-                if #sources > 3 then lines[#lines + 1] = "+ " .. (#sources - 3) .. " more sources" end
-            end
-        end
-        local entries = {}
-        entries[1] = string.format('{type=%q,id=%d}', enchantEditor.kind, id)
-        for i = 2, #(base and base.enhs or {}) do
-            local entry = base.enhs[i]
-            entries[#entries + 1] = string.format('{type=%q,id=%d}', entry.type, entry.id)
-        end
-        lines[#lines + 1] = "Plugin preview: BisTooltip:SetEnhancement(" .. string.format("%q,%q,%q,%q", className, specName, phase, slotName)
-            .. ", {" .. table.concat(entries, ", ") .. "})"
-    end
-    lines[#lines + 1] = "The game item API cannot confirm enchant-to-slot compatibility; verify the scroll in game."
-    if enchantEditor.message then lines[#lines + 1] = enchantEditor.message end
-    return table.concat(lines, "\n")
-end
 
 -- ============================================================
 -- Configuration Table
@@ -314,74 +210,11 @@ local configTable = {
             set = function(info, value)
                 BistooltipAddon.db.global.data_source = value
                 BistooltipAddon:changeSpec(value)
-                enchantEditor.class, enchantEditor.spec, enchantEditor.phase, enchantEditor.slot = nil, nil, nil, nil
-                enchantEditor.id = ""
-                enchantEditor.message = nil
             end,
             -- FIXED: select type uses (info) not (info, key)
             get = function(info)
                 return BistooltipAddon.db.global.data_source
             end
-        },
-        enchant_editor = {
-            type = "group",
-            name = "Enchant editor",
-            order = 15,
-            args = {
-                intro = { type = "description", order = 1, name = "Assign an item scroll or spell to one exact database/class/spec/phase/slot. The first enhancement entry is replaced; later entries, including gems, are preserved. Assignments are account-wide and can be reset here.", width = "full" },
-                class = { type = "select", name = "Class", order = 2, values = function() return EditorChoices("class") end,
-                    get = function() EditorTarget(); return enchantEditor.class end,
-                    set = function(_, value) enchantEditor.class = value; enchantEditor.spec, enchantEditor.phase, enchantEditor.slot = nil, nil, nil; enchantEditor.id = ""; enchantEditor.message = nil end },
-                spec = { type = "select", name = "Spec", order = 3, values = function() return EditorChoices("spec") end,
-                    get = function() EditorTarget(); return enchantEditor.spec end,
-                    set = function(_, value) enchantEditor.spec = value; enchantEditor.phase, enchantEditor.slot = nil, nil; enchantEditor.id = ""; enchantEditor.message = nil end },
-                phase = { type = "select", name = "Phase", order = 4, values = function() return EditorChoices("phase") end,
-                    get = function() EditorTarget(); return enchantEditor.phase end,
-                    set = function(_, value) enchantEditor.phase = value; enchantEditor.slot = nil; enchantEditor.id = ""; enchantEditor.message = nil end },
-                slot = { type = "select", name = "Slot", order = 5, values = function() return EditorChoices("slot") end,
-                    get = function() EditorTarget(); return enchantEditor.slot end,
-                    set = function(_, value) enchantEditor.slot = value; enchantEditor.id = ""; enchantEditor.message = nil end },
-                kind = { type = "select", name = "Type", order = 6, values = { item = "Item / scroll", spell = "Spell" },
-                    get = function() return enchantEditor.kind end,
-                    set = function(_, value) enchantEditor.kind = value; enchantEditor.message = nil end },
-                id = { type = "input", name = "Item or spell ID", order = 7,
-                    get = function() return enchantEditor.id end,
-                    set = function(_, value) enchantEditor.id = value; enchantEditor.message = nil end },
-                preview = { type = "description", name = EditorPreview, order = 8, width = "full" },
-                save = { type = "execute", name = "Save assignment", order = 9,
-                    disabled = function()
-                        local id = tonumber(enchantEditor.id)
-                        local _, _, _, slotName = EditorTarget()
-                        return not slotName or not id or id <= 0 or id % 1 ~= 0
-                    end,
-                    confirm = function()
-                        local base = EditorBaseSlot()
-                        local className, specName, phase, slotName = EditorTarget()
-                        if (base and base.enhs and base.enhs[1])
-                                or BistooltipData.GetCustomEnhancement(className, specName, phase, slotName) then
-                            return "Replace the first enhancement entry for this exact slot? Later entries are preserved."
-                        end
-                        return false
-                    end,
-                    func = function()
-                        local className, specName, phase, slotName = EditorTarget()
-                        local ok, err = BistooltipData.SaveCustomEnhancement(className, specName, phase, slotName,
-                            enchantEditor.kind, tonumber(enchantEditor.id))
-                        enchantEditor.message = ok and "Assignment saved." or err
-                        if ok and BistooltipAddon.RefreshUI then BistooltipAddon:RefreshUI() end
-                    end },
-                reset = { type = "execute", name = "Reset this slot", order = 10,
-                    disabled = function()
-                        local className, specName, phase, slotName = EditorTarget()
-                        return not BistooltipData.GetCustomEnhancement(className, specName, phase, slotName)
-                    end,
-                    func = function()
-                        local className, specName, phase, slotName = EditorTarget()
-                        BistooltipData.ResetCustomEnhancement(className, specName, phase, slotName)
-                        enchantEditor.message = "Dataset/plugin enhancement restored."
-                        if BistooltipAddon.RefreshUI then BistooltipAddon:RefreshUI() end
-                    end },
-            },
         },
         header_filter = {
             name = "Spec Filtering",
@@ -561,6 +394,9 @@ local function MigrateAddonDB()
     -- W4 (§12): account-wide migration — one-time copy of the old
     -- per-character values into db.global; char copies stay dormant.
     local gdb = BistooltipAddon.db.global
+    -- Personal enchant assignments were retired in favor of plugin-owned
+    -- recommendations. Remove legacy state so it cannot silently return.
+    gdb.custom_enhancements = nil
     if not gdb.account_state_migrated then
         if db.data_source ~= nil and gdb.data_source == "wowsims"
             and db.data_source ~= "wowsims" then

@@ -36,13 +36,7 @@ The WoWSimsBP snapshot was assembled offline from the ranking and faction data i
 
 VENDOR is the existing purchase view for ranked BiS items: it shows their recorded offers and costs, and EXPORT can produce a checklist to share. It does not select off-list upgrades or total a personal shopping plan. A broader shopping basket is a later roadmap item.
 
-### Assign an enchant
-
-Open `/bis config` → **Enchant editor**. Select the database, class, spec, phase and slot, choose **Item / scroll** or **Spell**, then enter its numeric ID. The preview shows the current first enhancement, any personal assignment, the new item name when cached, up to three recorded acquisition/price lines, and the equivalent `SetEnhancement` call for a plugin author. Confirm **Save assignment** to replace the first enhancement entry for this exact target; later entries, including gems, remain. **Reset this slot** restores the current dataset/plugin recommendation.
-
-Personal enchant assignments are account-wide but scoped to one ranking database. They do not edit plugin files or change another database. A vendor source for a scroll does not create an assignment by itself. The editor validates the target slot and ID format, but does not verify that a custom scroll can enchant that slot; confirm compatibility in game before saving.
-
-Server plugins can also declare one automatic enhancement for a class/spec/phase/slot. A rule may be global or require a profession: profession rules apply only to tabs for the current character's class, while global rules also work on other-class tabs. Normal tabs use the specialization being viewed; **Your specialization** follows the active dual spec and the Feral/Spellhance classifier. The automatic rule replaces only the first `enhs` entry, preserving later gems, and a saved personal assignment still wins afterward. The WOTLK5 plugin uses COMMON profession rules for Trinket/Finger/Head/Shoulder and a phase-specific T7 Neck rule. On WoW 3.3.5a, professions are detected through legacy skill-line and spellbook APIs because `GetProfessions` is unavailable.
+Server plugins declare automatic enhancements for a class/spec/phase/slot. A rule may be global or require a profession: profession rules apply only to tabs for the current character's class, while global rules also work on other-class tabs. Normal tabs use the specialization being viewed; **Your specialization** follows the active dual spec and the Feral/Spellhance classifier. The automatic rule replaces only the first `enhs` entry and preserves later gems. The WOTLK5 plugin uses COMMON profession rules for Trinket/Finger/Head/Shoulder and a phase-specific T7 Neck rule. On WoW 3.3.5a, professions are detected through legacy skill-line and spellbook APIs because `GetProfessions` is unavailable.
 
 | Command | Action |
 | --- | --- |

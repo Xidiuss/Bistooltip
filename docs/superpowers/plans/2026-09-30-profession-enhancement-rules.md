@@ -4,7 +4,7 @@
 
 **Goal:** Replace only `enhs[1]` through global or profession-gated plugin rules, preserve later gems, and ship COMMON WOTLK5 Trinket/Finger/Head/Shoulder mappings plus phase-specific Neck mappings.
 
-**Architecture:** `PlayerContext.lua` remains the source of current class, spec and professions. `PluginAPI.lua` stores immutable `DefineEnhancementOverride` rules and resolves one descriptor, while `DataProvider.lua` copies the active slot and replaces only index 1 before applying the personal override. The WOTLK5 plugin owns explicit role tables and all custom IDs.
+**Architecture:** `PlayerContext.lua` remains the source of current class, spec and professions. `PluginAPI.lua` stores immutable `DefineEnhancementOverride` rules and resolves one descriptor, while `DataProvider.lua` copies the active slot and replaces only index 1. The WOTLK5 plugin owns explicit role tables and all custom IDs. The personal override described in the original execution sequence was retired on 2026-10-01 after plugin mappings became complete.
 
 **Tech Stack:** WoW 3.3.5a API, Lua 5.1, AceAddon runtime, pure-Lua regression scripts, Node package checker, Python `unittest` release checks.
 
@@ -126,7 +126,7 @@ Add assertions for:
 - replacing only index 1 while indices 2..n remain equal to base gems;
 - adding index 1 to an empty Trinket list;
 - mutation isolation between one returned view, the registry and later reads;
-- personal override applied after automatic override;
+- cleanup of retired personal-override state without masking the automatic rule;
 - exact phase only, COMMON fallback and clean database round trips.
 
 Run: `lua5.1 .github/tests/lua/test_data_state.lua`
@@ -415,7 +415,7 @@ Record core commit, WOTLK5 commit, realm, faction, database, class/spec, phase T
 
 - [ ] **Step 2: Run representative T7 checks in WoW 3.3.5a**
 
-Cover one tank, AP DPS, SP DPS, healer and Warlock Affliction. Verify Trinket/Finger only with Enchanting, Head/Shoulder only with Inscription across multiple phases, Neck only in its declared phase, preserved later gems, personal override/reset, dual-spec refresh and another-class tabs.
+Cover one tank, AP DPS, SP DPS, healer and Warlock Affliction. Verify Trinket/Finger only with Enchanting, Head/Shoulder only with Inscription across multiple phases, Neck only in its declared phase, preserved later gems, dual-spec refresh and another-class tabs.
 
 - [ ] **Step 3: Record results separately**
 

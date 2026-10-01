@@ -5,14 +5,14 @@
 - Replace source-line `TOKEN` and `TROPHY` labels with the native icon of the exact token or Trophy of the Crusade (`47242`), retaining readable labels while item textures are uncached.
 - Record and validate exact `tokenItem` IDs for all 718 T7/T8/T9 TOKEN acquisitions; plain source formatting remains deterministic and `MARK` output is unchanged.
 - Add declarative targeted enhancement rules for server plugins without mutating ranking databases or replay state. Rules replace only `enhs[1]`, preserving every later gem.
-- Support global and profession-gated rules: character professions apply to every viewed spec of that character's class, global rules also apply on other-class tabs, and personal enchant assignments remain highest priority.
+- Support global and profession-gated rules: character professions apply to every viewed spec of that character's class, while global rules also apply on other-class tabs.
 - Add the confirmed WOTLK5 T7 Trinket/Enchanting, Head/Inscription and global legendary Neck recommendations, including the Affliction critical-rating exception.
 - Share active dual-spec detection with **Your specialization**. Feral talent signals distinguish tank/DPS with hybrids classified as tank; Enhancement selects an available Spellhance profile from main-hand spell stats.
 - Refresh visible tooltips and the main UI after talent-group, talent, equipment and profession changes.
+- Remove the obsolete personal enchant editor and its saved override layer. Plugin rules are now the single owner of custom recommendations; legacy assignments are cleared during migration. Returning the settings root to a flat AceConfig page restores native scrolling in Blizzard Interface Options.
 
-## Unreleased — enchant editor and cache (2026-09-20)
+## Unreleased — item cache and source controls (2026-09-20)
 
-- Add an account-wide enchant assignment editor scoped by ranking database/class/spec/phase/slot. Its preview includes recorded scroll sources and prices; personal overrides replace the first enhancement entry without modifying plugin data or later gem entries.
 - Request cold item information in bounded batches, retry unresolved IDs, retain a pending/unavailable status, and ignore stale selection callbacks. The on-demand queue also retries and invalidates newly loaded item cache entries.
 - Add an independent SOURCE column toggle in BIS while keeping tooltip source visibility separate.
 

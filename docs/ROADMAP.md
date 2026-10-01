@@ -11,14 +11,14 @@ Aktualizacja 20 września 2026 po testach właściciela w kliencie. Core, scanne
 
 ## P1 — enchanty i cache
 
-1. **Edytor przypisań enchantów — wdrożony offline.** W `/bis config` użytkownik podaje scroll itemID lub spellID oraz dokładny class/spec/phase/slot w wybranej bazie. Podgląd pokazuje istniejący wpis, źródło/cenę nowego scrolla (jeśli znane) i wywołanie `SetEnhancement` dla autora wtyczki. Zapis osobistego przypisania zachowuje dalsze wpisy, w tym gemy; reset przywraca dane bazy/wtyczki. Pozostaje sprawdzenie UI i zgodności custom scrolli ze slotami w kliencie, bo API itemów nie podaje jej niezawodnie. Dziewięć scrolli WOTLK5 ma źródła zakupu, lecz nadal nie ma automatycznych rekomendacji serwerowych.
+1. **Automatyczne enchanty pluginów — wdrożone.** Customowe rekomendacje należą do pluginów i zastępują wyłącznie pierwszy wpis enhancementu, zachowując dalsze gemy. Ręczny edytor oraz jego osobista warstwa override zostały usunięte po wdrożeniu kompletnych reguł WOTLK5; stare zapisane przypisania są czyszczone podczas migracji.
 2. **Cache przedmiotów — poprawiony offline.** Ładowanie listy działa porcjami po osiem ID, ponawia do czterech prób w oknie ośmiu sekund, pokazuje liczbę oczekujących/brakujących i nie pozwala staremu callbackowi skasować nowego widoku. Kolejka doraźna też ponawia i odświeża dane po załadowaniu. Zmierzyć zimny cache i stabilność odświeżania w kliencie; RELOAD pozostaje ręcznym sposobem ponownej próby.
 
-### Ustalenia do następnej sesji: automatyczne enchanty
+### Stan bieżący: automatyczne enchanty
 
-Docelowo rekomendacje ulepszeń mają pochodzić z deklaratywnych reguł wtyczki serwera i działać automatycznie dla aktualnej postaci. Core udostępni wspólne rozpoznawanie aktywnej specjalizacji dla sekcji „Your specialization”, wykrywanie profesji oraz resolver kompletnych list `enhs`. Zwykła zakładka zawsze określa własny spec; profesje postaci obowiązują wszystkie specy jej klasy i nigdy inne klasy. Osobisty edytor pozostaje najwyższym, opcjonalnym nadpisaniem.
+Rekomendacje ulepszeń pochodzą z deklaratywnych reguł pluginu serwera i są rozwiązywane w czasie budowania widoku. Core współdzieli rozpoznawanie aktywnej specjalizacji dla sekcji „Your specialization”, wykrywa profesje i wybiera regułę globalną albo profession-gated. Zwykła zakładka zawsze określa własny spec; profesje postaci obowiązują wszystkie specy jej klasy i nigdy inne klasy. Nie istnieje późniejsza warstwa ręcznego nadpisania.
 
-Zatwierdzony projekt nie używa progów staminy ani AP. Hybrydowy Feral jest klasyfikowany jako tank, a wariant Enhancement/Spellhance w „Your specialization” rozróżnia broń i dostępność profilu Spellhance. Automatyczna reguła podmienia kompletną listę `enhs`, bez założenia, że `enhs[1]` jest enchantem. Szczegóły kontraktu i testów opisuje [specyfikacja reguł profesyjnych](superpowers/specs/2026-09-30-profession-enhancement-rules-design.md). WOTLK5 zna ceny dziewięciu custom scrolli, ale nadal nie wolno wyprowadzać ich przypisań do speców wyłącznie z nazw.
+Hybrydowy Feral jest klasyfikowany jako tank, a wariant Enhancement/Spellhance w „Your specialization” rozróżnia broń i dostępność profilu Spellhance. Wybrana reguła zastępuje wyłącznie `enhs[1]` w defensywnej kopii slotu i zachowuje wszystkie dalsze gemy. Szczegóły kontraktu i testów opisuje [specyfikacja reguł profesyjnych](superpowers/specs/2026-09-30-profession-enhancement-rules-design.md).
 
 ## P2 — domknięcie danych
 

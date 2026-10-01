@@ -65,7 +65,7 @@ This change covers:
 - optional profession gating and global rules through the same API;
 - view-time resolution without mutating a ranking database;
 - preservation of every `enhs` entry after index 1;
-- personal enchant priority over automatic plugin rules;
+- migration cleanup for the retired personal-enchant state;
 - confirmed WOTLK5 COMMON profession mappings, T7 Neck mappings and integration tests.
 
 The later `TOKEN` icon change is a separate task and is not part of this implementation.
@@ -119,7 +119,8 @@ Resolution occurs while producing a slot view:
 4. Within one scope, prefer an exact phase over COMMON.
 5. If one owned profession matches, it outranks a global rule for the same target. If multiple owned professions match, use no profession rule and emit a deterministic diagnostic; a global rule may still apply.
 6. When a rule is selected, copy the slot and its `enhs` list, then assign a defensive copy of `rule.enhancement` to `enhs[1]`. An empty list thereby gains its first entry. Entries `enhs[2]` and later remain byte-for-byte equivalent to the active database values.
-7. Apply the existing personal Enchant editor entry last. It remains the highest-priority single-entry override.
+
+The former personal Enchant editor layer was retired after the plugin mappings became complete. Migration clears its saved state so it cannot mask a current plugin rule.
 
 Rules are stored independently of overlay replay. Switching databases cannot leave stale overrides behind. A target absent from one database is a no-op there and may work after a later database switch.
 
@@ -197,7 +198,7 @@ Core tests cover:
 - global rules on normal tabs regardless of player class;
 - replacing index 1 of a populated list while preserving all later gems;
 - adding index 1 to an empty `Trinket` list;
-- personal enchant priority;
+- cleanup of retired personal-enchant state without masking plugin rules;
 - database switching without stale mutation;
 - existing PlayerContext and refresh behavior.
 
@@ -211,7 +212,7 @@ The WOTLK5 integration test loads the real plugin and verifies:
 - preservation of later enhancements and gems in every targeted slot;
 - absence of invented acquisition data for `5000156`–`5000162`.
 
-Native Lua 5.1, `luac5.1`, the package checker, actual-plugin integration and the existing Python release tests remain automated release gates. Live-client smoke testing covers dual-spec switching, both professions, representative role groups, Affliction, personal override/reset, database switching and another-class tabs.
+Native Lua 5.1, `luac5.1`, the package checker, actual-plugin integration and the existing Python release tests remain automated release gates. Live-client smoke testing covers dual-spec switching, both professions, representative role groups, Affliction, database switching and another-class tabs.
 
 ## Local history transition
 
