@@ -1,0 +1,27 @@
+name: WOTLK5 tests
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  enhancement-rules:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Enforce release tree hygiene
+        run: |
+          if git ls-files docs | grep -q . || [ -d docs ]; then
+            echo "::error::Public docs/ content is not allowed in release branches."
+            exit 1
+          fi
+      - name: Install Lua 5.1
+        run: sudo apt-get update && sudo apt-get install -y lua5.1
+      - name: Check syntax and enhancement rules
+        run: |
+          find Bistooltip_WOTLK5_S2 .github/tests/lua -name '*.lua' -print0 | xargs -0 -n1 luac5.1 -p
+          lua5.1 .github/tests/lua/test_enhancement_rules.lua
