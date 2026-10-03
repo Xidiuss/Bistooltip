@@ -74,6 +74,38 @@ end
 -- STYLED BUTTON FACTORY - Unified button creation
 -- ============================================================
 
+local function CreateButtonBorders(frame)
+    local borderTop = frame:CreateTexture(nil, "BORDER")
+    borderTop:SetPoint("TOPLEFT", 0, 0)
+    borderTop:SetPoint("TOPRIGHT", 0, 0)
+    borderTop:SetHeight(1)
+    borderTop:SetTexture("Interface\\Buttons\\WHITE8x8")
+    ApplyColor(borderTop, STYLE.COLORS.BORDER_SUBTLE)
+
+    local borderBottom = frame:CreateTexture(nil, "BORDER")
+    borderBottom:SetPoint("BOTTOMLEFT", 0, 0)
+    borderBottom:SetPoint("BOTTOMRIGHT", 0, 0)
+    borderBottom:SetHeight(1)
+    borderBottom:SetTexture("Interface\\Buttons\\WHITE8x8")
+    ApplyColor(borderBottom, STYLE.COLORS.BORDER_SUBTLE)
+
+    local borderLeft = frame:CreateTexture(nil, "BORDER")
+    borderLeft:SetPoint("TOPLEFT", 0, 0)
+    borderLeft:SetPoint("BOTTOMLEFT", 0, 0)
+    borderLeft:SetWidth(1)
+    borderLeft:SetTexture("Interface\\Buttons\\WHITE8x8")
+    ApplyColor(borderLeft, STYLE.COLORS.BORDER_SUBTLE)
+
+    local borderRight = frame:CreateTexture(nil, "BORDER")
+    borderRight:SetPoint("TOPRIGHT", 0, 0)
+    borderRight:SetPoint("BOTTOMRIGHT", 0, 0)
+    borderRight:SetWidth(1)
+    borderRight:SetTexture("Interface\\Buttons\\WHITE8x8")
+    ApplyColor(borderRight, STYLE.COLORS.BORDER_SUBTLE)
+
+    return { borderTop, borderBottom, borderLeft, borderRight }
+end
+
 local function CreateStyledButton(parent, text, width, height, onClick, tooltipText)
     local btn = CreateFrame("Button", nil, parent)
     btn:SetSize(width or 70, height or STYLE.BUTTON_HEIGHT)
@@ -87,35 +119,7 @@ local function CreateStyledButton(parent, text, width, height, onClick, tooltipT
     btn._bg = bg
 
     -- Border (4 edges for crisp look)
-    local borderTop = btn:CreateTexture(nil, "BORDER")
-    borderTop:SetPoint("TOPLEFT", 0, 0)
-    borderTop:SetPoint("TOPRIGHT", 0, 0)
-    borderTop:SetHeight(1)
-    borderTop:SetTexture("Interface\\Buttons\\WHITE8x8")
-    ApplyColor(borderTop, STYLE.COLORS.BORDER_SUBTLE)
-
-    local borderBottom = btn:CreateTexture(nil, "BORDER")
-    borderBottom:SetPoint("BOTTOMLEFT", 0, 0)
-    borderBottom:SetPoint("BOTTOMRIGHT", 0, 0)
-    borderBottom:SetHeight(1)
-    borderBottom:SetTexture("Interface\\Buttons\\WHITE8x8")
-    ApplyColor(borderBottom, STYLE.COLORS.BORDER_SUBTLE)
-
-    local borderLeft = btn:CreateTexture(nil, "BORDER")
-    borderLeft:SetPoint("TOPLEFT", 0, 0)
-    borderLeft:SetPoint("BOTTOMLEFT", 0, 0)
-    borderLeft:SetWidth(1)
-    borderLeft:SetTexture("Interface\\Buttons\\WHITE8x8")
-    ApplyColor(borderLeft, STYLE.COLORS.BORDER_SUBTLE)
-
-    local borderRight = btn:CreateTexture(nil, "BORDER")
-    borderRight:SetPoint("TOPRIGHT", 0, 0)
-    borderRight:SetPoint("BOTTOMRIGHT", 0, 0)
-    borderRight:SetWidth(1)
-    borderRight:SetTexture("Interface\\Buttons\\WHITE8x8")
-    ApplyColor(borderRight, STYLE.COLORS.BORDER_SUBTLE)
-
-    btn._borders = { borderTop, borderBottom, borderLeft, borderRight }
+    btn._borders = CreateButtonBorders(btn)
 
     -- Label
     local label = btn:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
@@ -196,24 +200,6 @@ end
 -- SHADOW HELPER - Add subtle depth to frames
 -- ============================================================
 
-local function AddFrameShadow(frame, offset, alpha)
-    offset = offset or 3
-    alpha = alpha or 0.4
-
-    -- Shadow is created as a separate frame behind
-    local shadow = CreateFrame("Frame", nil, frame)
-    shadow:SetFrameLevel(math.max(1, frame:GetFrameLevel() - 1))
-    shadow:SetPoint("TOPLEFT", frame, "TOPLEFT", -offset, offset)
-    shadow:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", offset, -offset)
-
-    local shadowTex = shadow:CreateTexture(nil, "BACKGROUND")
-    shadowTex:SetAllPoints()
-    shadowTex:SetTexture("Interface\\Buttons\\WHITE8x8")
-    shadowTex:SetVertexColor(0, 0, 0, alpha)
-
-    frame._shadow = shadow
-    return shadow
-end
 
 -- ============================================================
 -- Lua 5.1 Compatibility: Delayed Call Helper (Optimized)
@@ -284,7 +270,6 @@ local phaseDropdown = nil
 
 -- UI element references
 local checklistSummaryLabel = nil
-local emblemSummaryLabel = nil
 local customizeToggleRef = nil
 local resetBtnRef = nil
 
@@ -299,8 +284,12 @@ local preloadFrame = nil
 local preloadQueue = {}
 local preloadSeen = {}
 local preloadCooldown = 0
+local preloadClock = 0
+local progressBarFrame = nil
 local PRELOAD_BATCH = Constants.TIMING and Constants.TIMING.PRELOAD_BATCH_SIZE or 5
 local PRELOAD_INTERVAL = Constants.TIMING and Constants.TIMING.PRELOAD_INTERVAL or 0.1
+local PRELOAD_MAX_ATTEMPTS = 4
+local PRELOAD_RETRY_DELAY = 0.75
 
 -- Active pooled elements tracking (for proper cleanup)
 local activePooledElements = {
@@ -401,22 +390,22 @@ local function SwitchToTab(tabId)
     -- Handle mode switching
     if tabId == TAB_MAIN then
         State.SetChecklistMode(false)
-        -- Disable ASCEND mode when leaving BIS tab
-        State.SetEmblemFilterMode(false)
-        -- Reset ASCEND button visual using STYLE system
-        if uiFrames.ascendBtn then
-            if uiFrames.ascendBtn._bg then
-                ApplyColor(uiFrames.ascendBtn._bg, STYLE.COLORS.BG_MEDIUM)
+        -- Disable VENDOR mode when leaving BIS tab
+        State.SetVendorFilterMode(false)
+        -- Reset VENDOR button visual using STYLE system
+        if uiFrames.vendorBtn then
+            if uiFrames.vendorBtn._bg then
+                ApplyColor(uiFrames.vendorBtn._bg, STYLE.COLORS.BG_MEDIUM)
             end
-            if uiFrames.ascendBtn._borders then
-                for _, border in ipairs(uiFrames.ascendBtn._borders) do
+            if uiFrames.vendorBtn._borders then
+                for _, border in ipairs(uiFrames.vendorBtn._borders) do
                     ApplyColor(border, STYLE.COLORS.BORDER_SUBTLE)
                 end
             end
-            if uiFrames.ascendBtn._label then
-                ApplyTextColor(uiFrames.ascendBtn._label, STYLE.COLORS.TEXT_NORMAL)
+            if uiFrames.vendorBtn._label then
+                ApplyTextColor(uiFrames.vendorBtn._label, STYLE.COLORS.TEXT_NORMAL)
             end
-            uiFrames.ascendBtn._isActive = false
+            uiFrames.vendorBtn._isActive = false
         end
         if BistooltipAddon.db and BistooltipAddon.db.char then
             BistooltipAddon.db.char.bis_checklist = false
@@ -434,126 +423,6 @@ local function SwitchToTab(tabId)
     end
 end
 
-local function CreateTabBar(parent)
-    if tabBarFrame then
-        tabBarFrame:Show()
-        return tabBarFrame
-    end
-
-    local TAB_HEIGHT = STYLE.TAB_HEIGHT or 28
-    local TAB_WIDTH = Constants.UI.TAB_WIDTH or 100
-    local TAB_SPACING = 1  -- Tighter spacing for modern look
-
-    -- Tab bar container - positioned below title bar
-    tabBarFrame = CreateFrame("Frame", "BistooltipTabBar", parent)
-    tabBarFrame:SetHeight(TAB_HEIGHT + 4)
-    tabBarFrame:SetPoint("TOPLEFT", parent, "TOPLEFT", 10, -26)
-    tabBarFrame:SetPoint("TOPRIGHT", parent, "TOPRIGHT", -30, -26)
-
-    -- Ensure tabs are visible above other elements
-    tabBarFrame:SetFrameStrata("HIGH")
-    tabBarFrame:SetFrameLevel(parent:GetFrameLevel() + 10)
-
-    -- Tab definitions
-    local tabs = {
-        { id = TAB_MAIN, name = "MAIN" },
-        { id = TAB_BIS, name = "BIS" },
-        { id = TAB_OPTIONS, name = "OPTIONS" },
-    }
-
-    -- Tab bar background (subtle)
-    local barBg = tabBarFrame:CreateTexture(nil, "BACKGROUND")
-    barBg:SetAllPoints()
-    barBg:SetTexture("Interface\\Buttons\\WHITE8x8")
-    ApplyColor(barBg, STYLE.COLORS.BG_DARK)
-
-    -- Bottom separator line
-    local barSep = tabBarFrame:CreateTexture(nil, "ARTWORK")
-    barSep:SetPoint("BOTTOMLEFT", tabBarFrame, "BOTTOMLEFT", 0, 0)
-    barSep:SetPoint("BOTTOMRIGHT", tabBarFrame, "BOTTOMRIGHT", 0, 0)
-    barSep:SetHeight(1)
-    barSep:SetTexture("Interface\\Buttons\\WHITE8x8")
-    ApplyColor(barSep, STYLE.COLORS.BORDER_SUBTLE)
-
-    -- Create tabs
-    for i, tabDef in ipairs(tabs) do
-        local btn = CreateFrame("Button", "BistooltipTab" .. tabDef.id, tabBarFrame)
-        btn:SetSize(TAB_WIDTH, TAB_HEIGHT)
-        btn:SetPoint("LEFT", tabBarFrame, "LEFT", (i - 1) * (TAB_WIDTH + TAB_SPACING), 1)
-        btn:SetFrameStrata("HIGH")
-
-        -- Background
-        local bg = btn:CreateTexture(nil, "BACKGROUND")
-        bg:SetPoint("TOPLEFT", 1, -1)
-        bg:SetPoint("BOTTOMRIGHT", -1, 0)
-        bg:SetTexture("Interface\\Buttons\\WHITE8x8")
-        btn._bg = bg
-
-        -- Top accent border (shown when active)
-        local topBorder = btn:CreateTexture(nil, "ARTWORK")
-        topBorder:SetPoint("TOPLEFT", 1, 0)
-        topBorder:SetPoint("TOPRIGHT", -1, 0)
-        topBorder:SetHeight(2)
-        topBorder:SetTexture("Interface\\Buttons\\WHITE8x8")
-        topBorder:Hide()
-        btn._topBorder = topBorder
-
-        -- Bottom highlight (accent line when active)
-        local highlight = btn:CreateTexture(nil, "OVERLAY")
-        highlight:SetPoint("BOTTOMLEFT", 1, 0)
-        highlight:SetPoint("BOTTOMRIGHT", -1, 0)
-        highlight:SetHeight(2)
-        highlight:SetTexture("Interface\\Buttons\\WHITE8x8")
-        highlight:Hide()
-        btn._highlight = highlight
-
-        -- Side borders (subtle separation)
-        local leftBorder = btn:CreateTexture(nil, "BORDER")
-        leftBorder:SetPoint("TOPLEFT", 0, 0)
-        leftBorder:SetPoint("BOTTOMLEFT", 0, 0)
-        leftBorder:SetWidth(1)
-        leftBorder:SetTexture("Interface\\Buttons\\WHITE8x8")
-        ApplyColor(leftBorder, STYLE.COLORS.BORDER_SUBTLE)
-
-        local rightBorder = btn:CreateTexture(nil, "BORDER")
-        rightBorder:SetPoint("TOPRIGHT", 0, 0)
-        rightBorder:SetPoint("BOTTOMRIGHT", 0, 0)
-        rightBorder:SetWidth(1)
-        rightBorder:SetTexture("Interface\\Buttons\\WHITE8x8")
-        ApplyColor(rightBorder, STYLE.COLORS.BORDER_SUBTLE)
-
-        -- Label
-        local label = btn:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-        label:SetPoint("CENTER", 0, 1)
-        label:SetText(tabDef.name)
-        btn._label = label
-
-        -- Initial appearance
-        UpdateTabButtonAppearance(btn, tabDef.id == currentTab)
-
-        -- Hover
-        btn:SetScript("OnEnter", function(self)
-            if currentTab ~= tabDef.id then
-                ApplyColor(self._bg, STYLE.COLORS.BG_HOVER)
-                ApplyTextColor(self._label, STYLE.COLORS.TEXT_NORMAL)
-            end
-        end)
-
-        btn:SetScript("OnLeave", function(self)
-            UpdateTabButtonAppearance(self, currentTab == tabDef.id)
-        end)
-
-        -- Click
-        btn:SetScript("OnClick", function()
-            SwitchToTab(tabDef.id)
-        end)
-
-        tabButtons[tabDef.id] = btn
-    end
-
-    tabBarFrame:Show()
-    return tabBarFrame
-end
 
 local function DestroyTabBar()
     if tabBarFrame then
@@ -769,72 +638,15 @@ local function ReleaseActiveElements()
 end
 
 local function CleanupMainFrame()
-    ReleaseActiveElements()
+    -- Native frames cannot be destroyed. Keep the complete tree and its
+    -- pools for the next Show; dropping references leaked controls on close.
     State.ClearSelectedSwapItem()
-    State.SetMainFrame(nil)
-    State.SetSpecFrame(nil)
 
     -- Cancel any pending debounced operations
     if BistooltipDebounce and BistooltipDebounce.CancelAll then
         BistooltipDebounce.CancelAll()
     end
 
-    -- Clear active rows list (check if exists first)
-    if activeCustomRows then
-        wipe(activeCustomRows)
-    end
-
-    -- Destroy the entire row pool (rows have destroyed parent after close)
-    DestroyCustomRowPool()
-
-    -- Destroy old tab bar (legacy)
-    DestroyTabBar()
-
-    -- Destroy UI frame references properly (don't just nil them)
-    if uiFrames then
-        -- Destroy progress bar if it exists
-        if uiFrames.progressBar then
-            uiFrames.progressBar:Hide()
-            uiFrames.progressBar:SetParent(nil)
-            uiFrames.progressBar = nil
-        end
-        -- Clear other references (they get destroyed with mainFrame)
-        uiFrames.tabBar = nil
-        uiFrames.filterBar = nil
-        uiFrames.headerRow = nil
-        uiFrames.scrollArea = nil
-        uiFrames.contentFrame = nil
-        uiFrames.bottomBar = nil
-    end
-
-    -- Clear tab buttons array to prevent stale references
-    if tabButtons then wipe(tabButtons) end
-    -- Clear NEW tab bar buttons array (module-level)
-    if tabBarButtons then wipe(tabBarButtons) end
-    -- Clear new tab bar frame reference
-    tabBarFrame = nil
-    -- Clear filter bar frame reference (module-level)
-    filterBarFrame = nil
-    -- Clear native dropdown references
-    nativeClassDropdown = nil
-    nativeSpecDropdown = nil
-    nativePhaseDropdown = nil
-    -- Clear pill buttons references
-    if pillButtons then wipe(pillButtons) end
-    if filterBarButtons then wipe(filterBarButtons) end
-
-    -- Clear custom frame references (they get destroyed with mainFrame)
-    customContentFrame = nil
-    customScrollFrame = nil
-    customHeaderFrame = nil
-    specFrame = nil
-    specContainerFrame = nil
-
-    -- Remove from UISpecialFrames
-    if mainFrameUISpecialName then
-        Utils.RemoveFromUISpecialFrames(mainFrameUISpecialName)
-        mainFrameUISpecialName = nil
-    end
 end
 
 -- ============================================================
@@ -845,7 +657,7 @@ local function QueuePreload(itemId)
     if not itemId or itemId <= 0 then return end
     if preloadSeen[itemId] then return end
     
-    preloadSeen[itemId] = true
+    preloadSeen[itemId] = {attempts = 0, nextAt = preloadClock}
     table.insert(preloadQueue, itemId)
     
     if preloadFrame then
@@ -860,6 +672,7 @@ local function InitPreloadSystem()
     preloadFrame:Hide()
     
     preloadFrame:SetScript("OnUpdate", function(self, elapsed)
+        preloadClock = preloadClock + (elapsed or 0)
         preloadCooldown = (preloadCooldown or 0) - (elapsed or 0)
         if preloadCooldown > 0 then return end
         preloadCooldown = PRELOAD_INTERVAL
@@ -878,19 +691,33 @@ local function InitPreloadSystem()
         end
         local scanTT = BistooltipAddon._preloadScanner
         
-        for i = 1, PRELOAD_BATCH do
-            local itemId = table.remove(preloadQueue)
+        local loaded = false
+        for i = 1, math.min(PRELOAD_BATCH, #preloadQueue) do
+            local itemId = table.remove(preloadQueue, 1)
             if not itemId then break end
-            if not GetItemInfo(itemId) then
-                scanTT:SetHyperlink("item:" .. itemId .. ":0:0:0:0:0:0:0")
-                scanTT:Hide()
+            local attempt = preloadSeen[itemId]
+            if GetItemInfo(itemId) then
+                preloadSeen[itemId] = nil
+                if Data.InvalidateItemCache then Data.InvalidateItemCache(itemId) end
+                loaded = true
+            elseif attempt then
+                if attempt.attempts < PRELOAD_MAX_ATTEMPTS and preloadClock >= attempt.nextAt then
+                    scanTT:SetHyperlink("item:" .. itemId .. ":0:0:0:0:0:0:0")
+                    scanTT:Hide()
+                    attempt.attempts = attempt.attempts + 1
+                    attempt.nextAt = preloadClock + PRELOAD_RETRY_DELAY * attempt.attempts
+                end
+                if attempt.attempts < PRELOAD_MAX_ATTEMPTS then
+                    table.insert(preloadQueue, itemId)
+                end
             end
         end
         
-        -- Refresh if main frame is visible and not already drawing
-        if mainFrame and specFrame and mainFrame.frame:IsShown() and not isDrawing then
+        -- Redraw only when an item actually becomes available.
+        if loaded and mainFrame and specFrame and mainFrame.frame:IsShown() and not isDrawing then
             drawSpecData()
         end
+        if #preloadQueue == 0 then self:Hide() end
     end)
 end
 
@@ -899,9 +726,31 @@ end
 -- ============================================================
 
 local bulkPreloadFrame = nil
-local bulkPreloadPending = false
+local bulkPreloadGeneration = 0
+local bulkPreloadRemaining = 0
+local bulkPreloadFailed = 0
+local BULK_REQUEST_BATCH = 8
+local BULK_RETRY_DELAY = 0.75
+local BULK_MAX_ATTEMPTS = 4
+local BULK_MAX_WAIT = 8.0
+
+local function RefreshPreloadStatus()
+    if not progressBarFrame or not progressBarFrame._text or not progressBarFrame._progressText then return end
+    local suffix = ""
+    if bulkPreloadRemaining > 0 then
+        suffix = " | Loading item info: " .. bulkPreloadRemaining
+    elseif bulkPreloadFailed > 0 then
+        suffix = " | " .. bulkPreloadFailed .. " unavailable (RELOAD)"
+    end
+    progressBarFrame._text:SetText(progressBarFrame._progressText .. suffix)
+end
 
 local function BulkPreloadAllItems(forceRefresh)
+    bulkPreloadGeneration = bulkPreloadGeneration + 1
+    bulkPreloadRemaining = 0
+    bulkPreloadFailed = 0
+    if bulkPreloadFrame then bulkPreloadFrame:SetScript("OnUpdate", nil) end
+    local generation = bulkPreloadGeneration
     local className, specName, phase = State.GetCurrentSelection()
     if not className or not specName or not phase then return end
 
@@ -920,7 +769,10 @@ local function BulkPreloadAllItems(forceRefresh)
 
     local isHorde = State.Get("isHorde")
     local itemsToLoad = {}
-    local itemsRequested = 0
+    local attempts = {}
+    local source = BistooltipAddon.db and BistooltipAddon.db.global
+        and BistooltipAddon.db.global.data_source or "wowsims"
+    local selectionKey = table.concat({source, className, specName, phase, tostring(isHorde)}, "|")
 
     -- Collect all item IDs
     for _, slot in ipairs(slots) do
@@ -936,7 +788,7 @@ local function BulkPreloadAllItems(forceRefresh)
         -- Also preload enhancement items (gems, enchants)
         if slot.enhs then
             for _, enh in ipairs(slot.enhs) do
-                if enh and enh.id and enh.id > 0 then
+                if enh and enh.type == "item" and type(enh.id) == "number" and enh.id > 0 then
                     if not GetItemInfo(enh.id) then
                         itemsToLoad[enh.id] = true
                     end
@@ -945,46 +797,73 @@ local function BulkPreloadAllItems(forceRefresh)
         end
     end
 
-    -- Request all items at once
-    for itemId in pairs(itemsToLoad) do
-        scanTT:SetHyperlink("item:" .. itemId .. ":0:0:0:0:0:0:0")
-        scanTT:Hide()
-        itemsRequested = itemsRequested + 1
+    local function RequestMissingBatch(now)
+        local pending, loaded = 0, false
+        for itemId in pairs(itemsToLoad) do
+            if GetItemInfo(itemId) then
+                itemsToLoad[itemId] = nil
+                if Data.InvalidateItemCache then Data.InvalidateItemCache(itemId) end
+                loaded = true
+            else
+                pending = pending + 1
+            end
+        end
+        local budget = BULK_REQUEST_BATCH
+        -- New IDs get a first request before previously requested IDs retry.
+        for pass = 1, 2 do
+            for itemId in pairs(itemsToLoad) do
+                local attempt = attempts[itemId]
+                local eligible = (pass == 1 and not attempt)
+                    or (pass == 2 and attempt and attempt.count < BULK_MAX_ATTEMPTS and now >= attempt.nextAt)
+                if eligible then
+                    scanTT:SetHyperlink("item:" .. itemId .. ":0:0:0:0:0:0:0")
+                    scanTT:Hide()
+                    local count = attempt and attempt.count + 1 or 1
+                    attempts[itemId] = {count = count, nextAt = now + BULK_RETRY_DELAY * count}
+                    budget = budget - 1
+                    if budget == 0 then return pending, loaded end
+                end
+            end
+        end
+        return pending, loaded
     end
 
+    bulkPreloadRemaining = select(1, RequestMissingBatch(0))
+    RefreshPreloadStatus()
+
     -- Schedule refresh after items are loaded
-    if itemsRequested > 0 or forceRefresh then
+    if bulkPreloadRemaining > 0 or forceRefresh then
         if not bulkPreloadFrame then
             bulkPreloadFrame = CreateFrame("Frame")
         end
 
-        bulkPreloadPending = true
         local waitTime = 0
-        local maxWait = 2.0  -- Max 2 seconds wait
+        local lastPoll = 0
 
         bulkPreloadFrame:SetScript("OnUpdate", function(self, elapsed)
-            waitTime = waitTime + elapsed
-
-            -- Check if items are loaded or timeout reached
-            local allLoaded = true
-            local checkCount = 0
-            for itemId in pairs(itemsToLoad) do
-                if checkCount > 20 then break end  -- Only check first 20 for performance
-                if not GetItemInfo(itemId) then
-                    allLoaded = false
-                    break
-                end
-                checkCount = checkCount + 1
+            if generation ~= bulkPreloadGeneration then
+                return
             end
+            waitTime = waitTime + elapsed
+            if waitTime - lastPoll < 0.15 and waitTime < BULK_MAX_WAIT then return end
+            lastPoll = waitTime
+            local remaining, loaded = RequestMissingBatch(waitTime)
+            bulkPreloadRemaining = remaining
+            local currentClass, currentSpec, currentPhase = State.GetCurrentSelection()
+            local currentSource = BistooltipAddon.db and BistooltipAddon.db.global
+                and BistooltipAddon.db.global.data_source or "wowsims"
+            local sameSelection = selectionKey == table.concat({currentSource,
+                currentClass or "", currentSpec or "", currentPhase or "", tostring(State.Get("isHorde"))}, "|")
 
-            if allLoaded or waitTime >= maxWait then
+            if remaining == 0 or waitTime >= BULK_MAX_WAIT then
                 self:SetScript("OnUpdate", nil)
-                bulkPreloadPending = false
-
-                -- Refresh UI
-                if mainFrame and mainFrame.frame:IsShown() and not isDrawing then
-                    drawSpecData()
-                end
+                if remaining > 0 then bulkPreloadFailed = remaining end
+                bulkPreloadRemaining = 0
+            end
+            RefreshPreloadStatus()
+            if (loaded or remaining == 0 or waitTime >= BULK_MAX_WAIT) and sameSelection
+                    and mainFrame and mainFrame.frame:IsShown() and not isDrawing then
+                drawSpecData()
             end
         end)
     end
@@ -994,6 +873,7 @@ end
 local function ForceReloadAllItems()
     -- Clear preload seen cache to allow re-queueing
     wipe(preloadSeen)
+    wipe(preloadQueue)
 
     -- Trigger bulk preload
     BulkPreloadAllItems(true)
@@ -1111,11 +991,13 @@ local function CreatePooledItemIcon(itemId, size, parent, callbacks)
         UI.SetBoEMarker(icon, true)
     end
 
-    -- Set up Tier gear marker (T7-10.5 items have "Tier" in their source)
-    if _G.BistooltipAddon and _G.BistooltipAddon.GetItemSourceInfo then
-        local zone = _G.BistooltipAddon:GetItemSourceInfo(displayId)
-        if zone and (zone:find("Tier") or zone:find("tier")) then
-            UI.SetTierMarker(icon, true)
+    -- Set up Tier gear marker (entries from ex-Tier zones carry a tier stamp)
+    if Data and Data.GetAllItemSources then
+        for _, src in ipairs(Data.GetAllItemSources(displayId)) do
+            if src.tier then
+                UI.SetTierMarker(icon, true)
+                break
+            end
         end
     end
 
@@ -1170,24 +1052,6 @@ local function StripEnchantPrefix(name)
 end
 
 -- Get enchant name from a single enhancement entry
-local function GetEnchantNameFromEntry(enhancement)
-    if not enhancement then return nil end
-    
-    if enhancement.type == "spell" and enhancement.id then
-        local name = GetSpellInfo(enhancement.id)
-        return StripEnchantPrefix(name)
-    elseif enhancement.type == "item" and enhancement.id then
-        local name, _, _, _, _, class = GetItemInfo(enhancement.id)
-        -- Check if it's a gem (exclude from enchant display)
-        local ITEM_CLASS_GEM = _G.ITEM_CLASS_GEM or "Gem"
-        if class == ITEM_CLASS_GEM then
-            return nil -- It's a gem, not an enchant
-        end
-        return StripEnchantPrefix(name)
-    end
-    
-    return nil
-end
 
 -- Get enchant info (name, icon, id, type) from slot.enhs
 local function GetSlotEnchantInfo(slot)
@@ -1451,117 +1315,6 @@ local function CreateGemIcons(slot)
 end
 
 -- Legacy combined function (for BIS checklist mode compatibility)
-local function CreateEnhancementsFrame(slot)
-    local group = NewSimpleGroup()
-    group:SetLayout("Flow")
-    group:SetAutoAdjustHeight(false)
-    group:SetWidth(Constants.UI.ENH_LABEL_WIDTH or 55)
-    group:SetHeight(40)
-    
-    if not slot or not slot.enhs then return group end
-    
-    local iconSize = 18
-    
-    -- Get enchant info from raw data
-    local enchName, enchIcon, enchId, enchType = GetSlotEnchantInfo(slot)
-    
-    -- Enchant icon only
-    if enchIcon then
-        local enchIconWidget = AceGUI:Create("Icon")
-        enchIconWidget:SetImageSize(iconSize, iconSize)
-        enchIconWidget:SetWidth(iconSize + 2)
-        enchIconWidget:SetHeight(iconSize + 2)
-        enchIconWidget:SetImage(enchIcon)
-        if enchIconWidget.image then
-            enchIconWidget.image:SetTexCoord(0.1, 0.9, 0.1, 0.9)
-        end
-        
-        enchIconWidget:SetCallback("OnEnter", function(widget)
-            GameTooltip:SetOwner(widget.frame, "ANCHOR_RIGHT")
-            if enchType == "item" and enchId then
-                Utils.TooltipSetItemByID(GameTooltip, enchId)
-            elseif enchType == "spell" and enchId then
-                GameTooltip:SetSpellByID(enchId)
-            end
-            GameTooltip:Show()
-        end)
-        enchIconWidget:SetCallback("OnLeave", function() GameTooltip:Hide() end)
-
-        -- Shift+Click to link enchant to chat
-        local capturedEnchId = enchId
-        local capturedEnchType = enchType
-        MakeIconClickable(enchIconWidget, function(self, button)
-            if button == "LeftButton" and capturedEnchId then
-                local link = nil
-                if capturedEnchType == "item" then
-                    -- Fetch fresh link at click time
-                    link = select(2, GetItemInfo(capturedEnchId))
-                elseif capturedEnchType == "spell" then
-                    -- Fetch fresh spell name at click time
-                    local spellName = GetSpellInfo(capturedEnchId)
-                    if spellName then
-                        link = "|cffffd000|Henchant:" .. capturedEnchId .. "|h[" .. spellName .. "]|h|r"
-                    end
-                end
-                if link then
-                    ChatEdit_InsertLink(link)
-                end
-            end
-        end)
-
-        group:AddChild(enchIconWidget)
-    end
-
-    -- Gem icons
-    local gemIds = CollectGemIdsFromSlot(slot)
-    if gemIds and #gemIds > 0 then
-        for i, gemId in ipairs(gemIds) do
-            local name, itemLink, _, _, _, _, _, _, _, texture = GetItemInfo(gemId)
-            
-            local gemIcon = AceGUI:Create("Icon")
-            gemIcon:SetImageSize(iconSize, iconSize)
-            gemIcon:SetWidth(iconSize + 2)
-            gemIcon:SetHeight(iconSize + 2)
-            
-            if texture then
-                gemIcon:SetImage(texture)
-                if gemIcon.image then
-                    gemIcon.image:SetTexCoord(0.1, 0.9, 0.1, 0.9)
-                end
-            else
-                gemIcon:SetImage("Interface\\Icons\\INV_Misc_QuestionMark")
-                QueuePreload(gemId)
-            end
-            
-            local capturedGemId = gemId
-            gemIcon:SetCallback("OnEnter", function(widget)
-                GameTooltip:SetOwner(widget.frame, "ANCHOR_RIGHT")
-                if itemLink then
-                    GameTooltip:SetHyperlink(itemLink)
-                else
-                    Utils.TooltipSetItemByID(GameTooltip, capturedGemId)
-                end
-                GameTooltip:Show()
-            end)
-            gemIcon:SetCallback("OnLeave", function() GameTooltip:Hide() end)
-
-            -- Shift+Click to link gem to chat
-            MakeIconClickable(gemIcon, function(self, button)
-                if button == "LeftButton" then
-                    -- Fetch fresh link at click time
-                    local _, freshLink = GetItemInfo(capturedGemId)
-                    if freshLink then
-                        ChatEdit_InsertLink(freshLink)
-                    end
-                end
-            end)
-
-            group:AddChild(gemIcon)
-        end
-    end
-
-    return group
-end
 
 -- ============================================================
 -- Boss/Item Info Frame (for checklist mode)
@@ -1599,12 +1352,20 @@ local function CreateBossItemInfoFrame(slot)
     
     local bossText
     if bossName then
-        bossText = "|cffc41f3b" .. Utils.TruncateText(bossName, 18) .. "|r"
+        -- W3: palette-driven source colors (single palette, spec S2-4)
+        local P = Constants.COLORS.SOURCE or BisTooltip_SourcePalette or {}
+        local dc = P.diffN or "9d9d9d"
         if difficulty then
-            bossText = bossText .. " |cffaaaaaa(" .. difficulty .. ")|r"
+            if difficulty:find("HM", 1, true) then dc = P.diffHM or "ff9900"
+            elseif difficulty:find("HC", 1, true) then dc = P.diffHC or "ff4040" end
+        end
+        bossText = "|cff" .. (P.boss or "ffffff") .. Utils.TruncateText(bossName, 18) .. "|r"
+        if difficulty then
+            bossText = bossText .. " |cff" .. dc .. "(" .. difficulty .. ")|r"
         end
     elseif emblemInfo then
-        local color = Constants.COLORS.ASCENSION or "00ffcc"
+        local P = Constants.COLORS.SOURCE or BisTooltip_SourcePalette or {}
+        local color = P.currency or Constants.COLORS.ASCENSION or "00ffcc"
         bossText = "|cff" .. color .. (emblemInfo.currency or "Emblem") .. " x" .. (emblemInfo.cost or "?") .. "|r"
     else
         bossText = "|cff666666Unknown Source|r"
@@ -1794,225 +1555,16 @@ end
 -- Draw Item Slot
 -- ============================================================
 
-local function drawItemSlot(slot, parent)
-    if not slot or not parent then return end
-    
-    local slotName = slot.slot_name
-    local isHorde = State.Get("isHorde")
-    local bisChecklistMode = State.Get("bisChecklistMode")
-    local showOnlyMissing = State.Get("showOnlyMissing")
-    local customizeMode = State.Get("customizeMode")
-    local isUnlocked = State.IsSlotUnlocked(slotName)
-    local selectedSwapItem = State.GetSelectedSwapItem()
-    
-    -- Slot name label
-    local slotLabel = AceGUI:Create("Label")
-    slotLabel:SetText("|cffffd700" .. slotName .. "|r")
-    slotLabel:SetFont(Constants.FONTS.DEFAULT, Constants.FONTS.SIZE_LARGE, "OUTLINE")
-    parent:AddChild(slotLabel)
-    
-    -- Enhancements or Boss/Item info
-    local gemIds = nil
-    if bisChecklistMode then
-        parent:AddChild(CreateBossItemInfoFrame(slot))
-        gemIds = CollectGemIdsFromSlot(slot)
-    else
-        -- Normal mode: separate columns for enchant and gems
-        parent:AddChild(CreateEnchantIcon(slot))
-        parent:AddChild(CreateGemIcons(slot))
-    end
-    
-    -- Item icons
-    for i, originalItemId in ipairs(slot) do
-        if type(originalItemId) == "number" and originalItemId > 0 then
-            local itemId = Data.GetDisplayItemID(originalItemId, isHorde)
-            local ownedState, ownedCount = Data.GetOwnedState(itemId)
-            
-            -- Skip owned items if "Only missing" is checked
-            if showOnlyMissing and ownedState then
-                local emptyLabel = AceGUI:Create("Label")
-                emptyLabel:SetText("")
-                parent:AddChild(emptyLabel)
-            else
-                -- Create icon using pool
-                local callbacks = {
-                    onLeftClick = function(self, displayId, origId)
-                        if customizeMode and isUnlocked then
-                            -- Swap logic
-                            if selectedSwapItem and selectedSwapItem.slotName == slotName then
-                                -- Swap items
-                                local fromIndex = selectedSwapItem.index
-                                local toIndex = i
-                                if fromIndex ~= toIndex then
-                                    -- Perform swap in slot data
-                                    slot[fromIndex], slot[toIndex] = slot[toIndex], slot[fromIndex]
-                                    Data.SaveCustomPriority(slot, State.Get("class"), State.Get("spec"), State.Get("phase"))
-                                end
-                                State.ClearSelectedSwapItem()
-                                drawSpecData()
-                            else
-                                -- Select this item for swap
-                                State.SetSelectedSwapItem(slotName, i)
-                                drawSpecData()
-                            end
-                        else
-                            -- Normal click - link to chat
-                            local link = select(2, GetItemInfo(displayId))
-                            if link then ChatEdit_InsertLink(link) end
-                        end
-                    end,
-                }
-                
-                local icon = CreatePooledItemIcon(originalItemId, Constants.UI.ICON_SIZE_ITEM, parent.frame, callbacks)
-                
-                if icon then
-                    -- Show selection border if this item is selected for swap
-                    if customizeMode and selectedSwapItem and 
-                       selectedSwapItem.slotName == slotName and selectedSwapItem.index == i then
-                        UI.SetSelectionBorder(icon, true)
-                    end
-                    
-                    -- Create wrapper with immediate parenting (no async OnShow)
-                    local iconWrapper = AceGUI:Create("Label")
-                    iconWrapper:SetWidth(Constants.UI.ICON_SIZE_ITEM + 4)
-                    
-                    -- Parent immediately and unconditionally
-                    icon:SetParent(iconWrapper.frame)
-                    icon:ClearAllPoints()
-                    icon:SetPoint("CENTER")
-                    icon:Show()
-                    
-                    -- Store reference for proper cleanup
-                    iconWrapper._pooledIcon = icon
-                    
-                    parent:AddChild(iconWrapper)
-                else
-                    local emptyLabel = AceGUI:Create("Label")
-                    emptyLabel:SetText("")
-                    parent:AddChild(emptyLabel)
-                end
-            end
-        end
-    end
-    
-    -- Customize mode: Lock icon
-    if customizeMode then
-        local lockIcon = AceGUI:Create("Icon")
-        lockIcon:SetImageSize(20, 20)
-        lockIcon:SetWidth(24)
-        lockIcon:SetImage(isUnlocked and "Interface\\Icons\\INV_Misc_Key_03" or "Interface\\Icons\\INV_Misc_Key_04")
-        
-        lockIcon:SetCallback("OnClick", function()
-            State.ToggleSlotUnlock(slotName)
-            if not State.IsSlotUnlocked(slotName) then
-                -- Clear selection if locking
-                local sel = State.GetSelectedSwapItem()
-                if sel and sel.slotName == slotName then
-                    State.ClearSelectedSwapItem()
-                end
-            end
-            drawSpecData()
-        end)
-        
-        lockIcon:SetCallback("OnEnter", function(widget)
-            GameTooltip:SetOwner(widget.frame, "ANCHOR_TOP")
-            GameTooltip:SetText(isUnlocked and "Click to lock (prevent reordering)" or "Click to unlock (allow reordering)")
-            GameTooltip:Show()
-        end)
-        lockIcon:SetCallback("OnLeave", function() GameTooltip:Hide() end)
-        
-        parent:AddChild(lockIcon)
-    end
-    
-    -- Gem plan row (in checklist mode)
-    if gemIds then
-        DrawGemPlanRow(gemIds, parent)
-    end
-
-    -- Enchant detailed row (shows enchant name below slot row)
-    local showEnchantDetailed = BistooltipAddon.db and BistooltipAddon.db.char and BistooltipAddon.db.char.enchant_detailed
-    if showEnchantDetailed and not bisChecklistMode then
-        local enchName, _, _, _ = GetSlotEnchantInfo(slot)
-        if enchName then
-            -- Create a label showing "SlotName: EnchantName"
-            local enchLabel = AceGUI:Create("Label")
-            enchLabel:SetText("|cff00ff00" .. slotName .. ": " .. enchName .. "|r")
-            enchLabel:SetFont(Constants.FONTS.DEFAULT, 9, "")
-            enchLabel:SetFullWidth(true)
-            parent:AddChild(enchLabel)
-        end
-    end
-end
 
 -- ============================================================
 -- Table Header
 -- ============================================================
 
-local function drawTableHeader(parent)
-    local bisChecklistMode = State.Get("bisChecklistMode")
-    local customizeMode = State.Get("customizeMode")
-    
-    local headers
-    if bisChecklistMode then
-        headers = {
-            { text = "Slot" },
-            { text = "Plan" },
-            { text = "BIS" },
-            { text = "BIS2" },
-            { text = "Alt 3" },
-            { text = "Alt 4" },
-            { text = "Alt 5" },
-            { text = "Alt 6" },
-        }
-    else
-        -- Normal mode: separate Enc and Gems columns
-        headers = {
-            { text = "Slot" },
-            { text = "Enc" },
-            { text = "Gems" },
-            { text = "BIS" },
-            { text = "BIS2" },
-            { text = "Alt 3" },
-            { text = "Alt 4" },
-            { text = "Alt 5" },
-            { text = "Alt 6" },
-        }
-    end
-    
-    if customizeMode and not bisChecklistMode then
-        table.insert(headers, { text = "Lock" })
-    end
-    
-    for _, h in ipairs(headers) do
-        local label = AceGUI:Create("Label")
-        label:SetText("|cffaaaaaa" .. h.text .. "|r")
-        label:SetFont(Constants.FONTS.DEFAULT, Constants.FONTS.SIZE_MEDIUM, "OUTLINE")
-        label:SetJustifyH("CENTER")
-        parent:AddChild(label)
-    end
-end
 
 -- ============================================================
 -- Apply Spec Table Layout
 -- ============================================================
 
-local function ApplySpecTable()
-    if not specFrame then return end
-    
-    local bisChecklistMode = State.Get("bisChecklistMode")
-    local customizeMode = State.Get("customizeMode")
-    
-    local tableLayout
-    if bisChecklistMode then
-        tableLayout = Constants.SPEC_TABLE_CHECKLIST
-    elseif customizeMode then
-        tableLayout = Constants.SPEC_TABLE_CUSTOMIZE
-    else
-        tableLayout = Constants.SPEC_TABLE_DEFAULT
-    end
-    
-    specFrame:SetUserData("table", tableLayout)
-end
 
 -- ============================================================
 -- Create Spec Frame - CUSTOM FRAMES (No AceGUI Table!)
@@ -2023,6 +1575,7 @@ local customScrollFrame = nil
 local customContentFrame = nil
 local customHeaderFrame = nil
 local activeCustomRows = {}
+local specContainerFrame = nil
 
 local function DestroyCustomSpecFrame()
     -- Clear active rows
@@ -2084,9 +1637,6 @@ end
 
 -- Counter for unique frame names
 local specFrameCounter = 0
-
--- Store reference to the container frame for cleanup
-local specContainerFrame = nil
 
 local function CreateCustomSpecFrame()
     if customScrollFrame then return end
@@ -2204,6 +1754,18 @@ local function GetColumnPositions()
     if bisChecklistMode then
         -- BIS mode: SLOT | ENCHANT | GEMS | BIS | SOURCE | MODE | COST | ILVL
         -- Same enchant/gems columns as MAIN mode
+        if BistooltipAddon.db and BistooltipAddon.db.char
+                and BistooltipAddon.db.char.show_source_column == false then
+            return {
+                { x = 4,   width = 70,  type = "label" },
+                { x = 76,  width = 24,  type = "enchant" },
+                { x = 102, width = 70,  type = "gems" },
+                { x = 176, width = 38,  type = "item" },
+                { x = 218, width = 40,  type = "mode" },
+                { x = 262, width = 159, type = "cost" },
+                { x = 425, width = 35,  type = "ilvl" },
+            }
+        end
         return {
             { x = 4,   width = 70,  type = "label" },      -- Col1: SLOT name
             { x = 76,  width = 24,  type = "enchant" },    -- Col2: ENCHANT
@@ -2245,9 +1807,6 @@ end
 
 -- Store search editbox reference
 local headerSearchBox = nil
-
--- Progress bar reference (FIXED position, outside scroll)
-local progressBarFrame = nil
 
 -- Create progress bar as FIXED element ABOVE the scroll frame
 -- Parented to specContainerFrame, not the scroll content
@@ -2334,7 +1893,8 @@ local function UpdateProgressBar(collected, total)
     local barWidth = (progressBarFrame._fixedWidth or ((Constants.UI.MAIN_FRAME_WIDTH or 600) - 8)) - 2
     local width = barWidth * pct
     progressBarFrame._fill:SetWidth(math.max(width, 1))
-    progressBarFrame._text:SetText(string.format("Progress: %d/%d (%.0f%%)", collected, total, pct * 100))
+    progressBarFrame._progressText = string.format("Progress: %d/%d (%.0f%%)", collected, total, pct * 100)
+    RefreshPreloadStatus()
 end
 
 -- Create custom header row with search in SLOT column
@@ -2420,7 +1980,11 @@ local function CreateCustomHeader(yOffset)
     if bisChecklistMode then
         -- BIS mode headers: SLOT | E | GEMS | BIS | SOURCE | MODE | COST | iLvl
         -- Same enchant/gems columns as MAIN mode
-        headers = { "SEARCH", "E", "Gems", "BIS", "SOURCE", "MODE", "COST", "iLvl" }
+        if columns[5].type == "source" then
+            headers = { "SEARCH", "E", "Gems", "BIS", "SOURCE", "MODE", "COST", "iLvl" }
+        else
+            headers = { "SEARCH", "E", "Gems", "BIS", "MODE", "COST", "iLvl" }
+        end
     elseif customizeMode then
         headers = { "SEARCH", "E", "Gems", "BIS", "TOP1", "T2", "T3", "T4", "T5" }
     else
@@ -3449,7 +3013,7 @@ local function CreateCustomSlotRow(slot, yOffset, rowIndex)
             modeLabel:SetText("|cff" .. modeColor .. modeText .. "|r")
 
         elseif col.type == "cost" then
-            -- COST column: Emblem cost if applicable
+            -- Compact price; full multi-part/alternative offers live in sources.
             if not row._costLabel then
                 row._costLabel = row:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
             end
@@ -3465,15 +3029,17 @@ local function CreateCustomSlotRow(slot, yOffset, rowIndex)
             local costColor = "888888"
 
             if firstItemId and firstItemId > 0 then
-                -- Check emblem cost
-                local cost, currency = nil, nil
-                if Data and Data.GetEmblemCost then
-                    cost, currency = Data.GetEmblemCost(firstItemId)
-                end
-
-                if cost and currency then
-                    -- Format: "x38" for emblems
-                    costText = "x" .. tostring(cost)
+                local displayId = Data.GetDisplayItemID(firstItemId, isHorde)
+                local currency, cost, needsDetails = Data.GetVendorSummary(displayId)
+                if needsDetails then
+                    costText, costColor = "Details", "ffaa00"
+                elseif cost and currency then
+                    if currency == "Gold" then
+                        costText = BisTooltip_FormatSource({kind="VENDOR",
+                            cost={{currency="Gold",amount=cost}}}):gsub("^VENDOR: ", "")
+                    else
+                        costText = "x" .. tostring(cost)
+                    end
                     if currency == "Emblem of Ascension" then
                         costColor = "00ffcc"  -- Teal for Ascension
                     elseif currency == "Emblem of Frost" then
@@ -3977,22 +3543,87 @@ drawSpecData = function()
         return
     end
 
+    -- Integrity guard (owner-reported row duplication): Finger/Trinket may
+    -- legitimately appear twice in some databases (dual slots); any OTHER
+    -- slot_name occurring more than once in a phase is array corruption.
+    do
+        local seen, bad = {}, nil
+        for i, s in ipairs(slots) do
+            local n = s.slot_name
+            if n then
+                seen[n] = (seen[n] or 0) + 1
+                if seen[n] > 1 and n ~= "Finger" and n ~= "Trinket" then
+                    bad = (bad and bad .. ", " or "") .. n .. "x" .. seen[n]
+                end
+            end
+        end
+        if bad then
+            local entries = {}
+            for i, s in ipairs(slots) do
+                entries[#entries + 1] = i .. ":" .. tostring(s.slot_name) .. "[" .. tostring(s[1]) .. "]"
+            end
+            -- compare with the pristine global to localize the corruption
+            local g = _G.Bistooltip_wowsims_final
+            local glist = g and g[className] and g[className][specName] and g[className][specName][phase]
+            local gbad = "n/a"
+            if type(glist) == "table" then
+                local gseen = {}
+                for _, s in ipairs(glist) do
+                    gseen[s.slot_name] = (gseen[s.slot_name] or 0) + 1
+                end
+                gbad = (gseen["Weapon"] or 0) .. "W/" .. (gseen["Off hand"] or 0) .. "O"
+            end
+            DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Bis-Tooltip:|r corrupted phase rows (" .. bad
+                .. ") | " .. className .. "/" .. specName .. "/" .. phase
+                .. " | pristine: " .. gbad
+                .. " | " .. table.concat(entries, " "))
+            DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Bis-Tooltip:|r use /bistooltip repairrows")
+        end
+    end
+
     -- Filter slots
     local searchText = State.Get("searchTextLower")
     local showOnlyMissing = State.Get("showOnlyMissing")
-    local emblemFilterMode = State.Get("emblemFilterMode")
+    local vendorFilterMode = State.Get("vendorFilterMode")
     local bisChecklistMode = State.Get("bisChecklistMode")
     local isHorde = State.Get("isHorde")
 
     local filteredSlots, allSlotsForProgress = Data.FilterSlots(
-        slots, searchText, showOnlyMissing, emblemFilterMode, isHorde, bisChecklistMode
+        slots, searchText, showOnlyMissing, vendorFilterMode, isHorde, bisChecklistMode
     )
+
+    -- VENDOR renders only the required BiS item(s) with a purchase route.
+    -- A single row cannot show both required ring/trinket choices.
+    if vendorFilterMode then
+        local vendorSlots = {}
+        for _, slot in ipairs(filteredSlots) do
+            local seen = {}
+            for _, id in ipairs(Data.GetVendorBISItems(slot, isHorde)) do
+                if type(id) == "number" and id > 0 then
+                    local disp = id
+                    if Data.GetDisplayItemID then disp = Data.GetDisplayItemID(id, isHorde) end
+                    if not seen[disp] and Data.GetVendorSummary(disp) and Data.GetOwnedCount(disp) < 1 then
+                        seen[disp] = true
+                        vendorSlots[#vendorSlots + 1] = {
+                            slot_name = slot.slot_name, enhs = slot.enhs, id,
+                        }
+                    end
+                end
+            end
+        end
+        filteredSlots = vendorSlots
+    end
 
     -- Store for progress calculation
     _G.Bistooltip_allSlotsForProgress = allSlotsForProgress
 
-    -- Show message if ASCEND mode is enabled but no items match
-    if emblemFilterMode and #filteredSlots == 0 then
+    -- Clear old headers even when this draw has no vendor rows.
+    if BistooltipInstanceHeader and BistooltipInstanceHeader.ReleaseAll then
+        BistooltipInstanceHeader.ReleaseAll()
+    end
+
+    -- Show message if VENDOR mode is enabled but no items match
+    if vendorFilterMode and #filteredSlots == 0 then
         -- Create or show empty message label
         if not customContentFrame._emptyLabel then
             customContentFrame._emptyLabel = customContentFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
@@ -4001,7 +3632,7 @@ drawSpecData = function()
             customContentFrame._emptyLabel:SetWidth((Constants.UI.MAIN_FRAME_WIDTH or 600) - 4 - 24 - 40)
             customContentFrame._emptyLabel:SetJustifyH("CENTER")
         end
-        customContentFrame._emptyLabel:SetText("|cffff8800ASCEND Mode Active|r\n\n|cffaaaaaaNo items in this spec/phase are purchasable with Emblem of Ascension.\n\nTry a different spec or phase.|r")
+        customContentFrame._emptyLabel:SetText("|cffff8800VENDOR Mode Active|r\n\n|cffaaaaaaNo items in this spec/phase are vendor-purchasable.\n\nTry a different spec or phase.|r")
         customContentFrame._emptyLabel:Show()
         customContentFrame:SetHeight(150)
         isDrawing = false
@@ -4013,16 +3644,11 @@ drawSpecData = function()
         end
     end
 
-    -- Release previous instance headers
-    if BistooltipInstanceHeader and BistooltipInstanceHeader.ReleaseAll then
-        BistooltipInstanceHeader.ReleaseAll()
-    end
-
     local rowIndex = 1
 
     -- In BIS mode, group slots by instance and render with collapsible headers
     if bisChecklistMode and BistooltipInstanceHeader and BistooltipInstanceHeader.GroupSlotsByInstance then
-        local instanceGroups = BistooltipInstanceHeader.GroupSlotsByInstance(filteredSlots, isHorde, emblemFilterMode)
+        local instanceGroups = BistooltipInstanceHeader.GroupSlotsByInstance(filteredSlots, isHorde, vendorFilterMode)
 
         for _, group in ipairs(instanceGroups) do
             -- Render instance header
@@ -4036,11 +3662,6 @@ drawSpecData = function()
             -- If not collapsed, render slots belonging to this instance
             if not isCollapsed then
                 for _, slot in ipairs(group.slots) do
-                    -- Apply custom priorities
-                    if slot.slot_name then
-                        Data.LoadCustomPriority(slot, className, specName, phase)
-                    end
-
                     local _, rowHeight = CreateCustomSlotRow(slot, yOffset, rowIndex)
                     yOffset = yOffset - rowHeight
                     totalHeight = totalHeight + rowHeight
@@ -4051,11 +3672,6 @@ drawSpecData = function()
     else
         -- MAIN mode: render slots directly (no grouping)
         for _, slot in ipairs(filteredSlots) do
-            -- Apply custom priorities
-            if slot.slot_name then
-                Data.LoadCustomPriority(slot, className, specName, phase)
-            end
-
             local _, rowHeight = CreateCustomSlotRow(slot, yOffset, rowIndex)
             yOffset = yOffset - rowHeight
             totalHeight = totalHeight + rowHeight
@@ -4065,6 +3681,33 @@ drawSpecData = function()
     
     -- Set content height
     customContentFrame:SetHeight(math.max(totalHeight, 1))
+
+    -- Detailed snapshots are opt-in; grouping a second time on every draw
+    -- is only useful while investigating row duplication.
+    if _G.Bistooltip_DebugMode then
+        local snap = {
+            class = className, spec = specName, phase = phase,
+            bisMode = bisChecklistMode and true or false,
+            vendorMode = vendorFilterMode and true or false,
+            dataSlots = slots and #slots or 0,
+            filtered = {},
+            renderedRows = #activeCustomRows,
+            groups = {},
+            progressTotal = allSlotsForProgress and #allSlotsForProgress or 0,
+        }
+        for i, s in ipairs(filteredSlots) do
+            snap.filtered[i] = tostring(s.slot_name) .. "[" .. tostring(s[1]) .. "]"
+        end
+        if bisChecklistMode and BistooltipInstanceHeader then
+            local gs = BistooltipInstanceHeader.GroupSlotsByInstance(filteredSlots, isHorde, vendorFilterMode)
+            for gi, g in ipairs(gs) do
+                local names = {}
+                for _, s in ipairs(g.slots) do names[#names + 1] = tostring(s.slot_name) end
+                snap.groups[gi] = g.name .. " => " .. table.concat(names, ",")
+            end
+        end
+        _G.Bistooltip_DebugRows = snap
+    end
 
     -- Calculate and update progress bar
     local collectedCount = 0
@@ -4083,30 +3726,13 @@ drawSpecData = function()
     if checklistSummaryLabel then
         if not bisChecklistMode then
             checklistSummaryLabel:SetText("")
-        elseif emblemFilterMode then
-            checklistSummaryLabel:SetText("|cffff00ffASCEND MODE|r: Showing Emblem of Ascension items only")
+        elseif vendorFilterMode then
+            checklistSummaryLabel:SetText("|cffff00ffVENDOR MODE|r: Showing vendor-purchasable items only")
         else
             checklistSummaryLabel:SetText("|cffffff00BIS Mode|r: Shows source boss, cost, and gem planning.")
         end
     end
     
-    -- Update emblem summary
-    if emblemSummaryLabel then
-        if bisChecklistMode and emblemFilterMode then
-            local totals = Data.CalculateMissingEmblems(className, specName, phase)
-            local ascensionData = totals["Emblem of Ascension"]
-            
-            if ascensionData and ascensionData.total > 0 then
-                local color = Constants.COLORS.ASCENSION or "00ffcc"
-                emblemSummaryLabel:SetText(string.format("|cff%sEmblem of Ascension: %d|r", color, ascensionData.total))
-            else
-                emblemSummaryLabel:SetText("|cff00ff00All Ascension items collected!|r")
-            end
-        else
-            emblemSummaryLabel:SetText("")
-        end
-    end
-
     isDrawing = false
 end
 
@@ -4202,74 +3828,6 @@ end
 
 local pillButtons = {}  -- Store references for state updates
 
-local function CreatePillButton(parent, text, width, isActive, onClick, tooltip)
-    local btn = CreateFrame("Button", nil, parent)
-    btn:SetSize(width, 22)
-
-    -- Background
-    local bg = btn:CreateTexture(nil, "BACKGROUND")
-    bg:SetAllPoints()
-    bg:SetTexture("Interface\\Buttons\\WHITE8x8")
-    btn._bg = bg
-
-    -- Border
-    local border = btn:CreateTexture(nil, "BORDER")
-    border:SetPoint("TOPLEFT", -1, 1)
-    border:SetPoint("BOTTOMRIGHT", 1, -1)
-    border:SetTexture("Interface\\Buttons\\WHITE8x8")
-    border:SetVertexColor(0.3, 0.3, 0.35, 1)
-    btn._border = border
-
-    -- Label
-    local label = btn:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
-    label:SetPoint("CENTER")
-    label:SetText(text)
-    btn._label = label
-
-    -- State
-    btn._isActive = isActive
-
-    local function UpdateVisual()
-        if btn._isActive then
-            bg:SetVertexColor(0.2, 0.5, 0.8, 0.9)  -- Blue when active
-            label:SetTextColor(1, 1, 1)
-        else
-            bg:SetVertexColor(0.15, 0.15, 0.18, 0.9)  -- Dark when inactive
-            label:SetTextColor(0.7, 0.7, 0.7)
-        end
-    end
-
-    btn.SetActive = function(self, active)
-        self._isActive = active
-        UpdateVisual()
-    end
-
-    UpdateVisual()
-
-    btn:SetScript("OnClick", function(self)
-        if onClick then
-            onClick(self, not self._isActive)
-        end
-    end)
-
-    btn:SetScript("OnEnter", function(self)
-        if not self._isActive then
-            bg:SetVertexColor(0.2, 0.2, 0.25, 0.95)
-        end
-        if tooltip then
-            GameTooltip:SetOwner(self, "ANCHOR_TOP")
-            GameTooltip:SetText(tooltip)
-            GameTooltip:Show()
-        end
-    end)
-
-    btn:SetScript("OnLeave", function(self)
-        UpdateVisual()
-        GameTooltip:Hide()
-    end)
-
-    return btn
-end
 
 -- ============================================================
 -- NATIVE DROPDOWN SYSTEM (No AceGUI - full visual control)
@@ -4354,9 +3912,13 @@ local function ShowDropdownMenu(dropdown, items, selectedKey, onSelect)
         item:Hide()
     end
 
-    -- Position menu below dropdown
+    -- Position the shared menu relative to the requesting dropdown.
     menu:ClearAllPoints()
-    menu:SetPoint("TOPLEFT", dropdown, "BOTTOMLEFT", 0, -2)
+    if dropdown._menuDirection == "UP" then
+        menu:SetPoint("BOTTOMLEFT", dropdown, "TOPLEFT", 0, 2)
+    else
+        menu:SetPoint("TOPLEFT", dropdown, "BOTTOMLEFT", 0, -2)
+    end
     menu:SetWidth(dropdown:GetWidth())
 
     -- Create/reuse item buttons
@@ -4432,16 +3994,21 @@ local function ShowDropdownMenu(dropdown, items, selectedKey, onSelect)
 end
 
 -- Native dropdown button factory (styled to match tab bar look)
-local function CreateNativeDropdown(parent, width, height)
+local function CreateNativeDropdown(parent, width, height, actionBarStyle)
     local btn = CreateFrame("Button", nil, parent)
     btn:SetSize(width, height)
+    btn._actionBarStyle = actionBarStyle == true
 
     -- Background (subtle, darker than container)
     local bg = btn:CreateTexture(nil, "BACKGROUND")
     bg:SetPoint("TOPLEFT", 1, -1)
     bg:SetPoint("BOTTOMRIGHT", -1, 1)
     bg:SetTexture("Interface\\Buttons\\WHITE8x8")
-    bg:SetVertexColor(0.08, 0.08, 0.10, 0.8)
+    if btn._actionBarStyle then
+        ApplyColor(bg, STYLE.COLORS.BG_MEDIUM)
+    else
+        bg:SetVertexColor(0.08, 0.08, 0.10, 0.8)
+    end
     btn._bg = bg
 
     -- Right separator line (to visually separate from next element)
@@ -4453,11 +4020,21 @@ local function CreateNativeDropdown(parent, width, height)
     separator:SetVertexColor(0.35, 0.35, 0.40, 0.6)
     btn._separator = separator
 
+    if btn._actionBarStyle then
+        btn._borders = CreateButtonBorders(btn)
+        separator:Hide()
+    end
+
     -- Label text
     local label = btn:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
-    label:SetPoint("LEFT", 8, 0)
-    label:SetPoint("RIGHT", -20, 0)
-    label:SetJustifyH("LEFT")
+    if btn._actionBarStyle then
+        label:SetPoint("CENTER", -4, 0)
+        label:SetJustifyH("CENTER")
+    else
+        label:SetPoint("LEFT", 8, 0)
+        label:SetPoint("RIGHT", -20, 0)
+        label:SetJustifyH("LEFT")
+    end
     ApplyTextColor(label, STYLE.COLORS.TEXT_NORMAL)
     btn._label = label
 
@@ -4470,6 +4047,7 @@ local function CreateNativeDropdown(parent, width, height)
 
     -- State
     btn._items = {}
+    btn._displayItems = {}
     btn._selectedKey = nil
     btn._disabled = false
     btn._onValueChanged = nil
@@ -4479,11 +4057,16 @@ local function CreateNativeDropdown(parent, width, height)
         self._items = items or {}
     end
 
+    -- API: SetDisplayList (optional compact labels for the closed control)
+    function btn:SetDisplayList(items)
+        self._displayItems = items or {}
+    end
+
     -- API: SetValue
     function btn:SetValue(key)
         self._selectedKey = key
         if self._items[key] then
-            self._label:SetText(self._items[key])
+            self._label:SetText(self._displayItems[key] or self._items[key])
         end
     end
 
@@ -4502,7 +4085,14 @@ local function CreateNativeDropdown(parent, width, height)
         else
             ApplyTextColor(self._label, STYLE.COLORS.TEXT_NORMAL)
             ApplyTextColor(self._arrow, STYLE.COLORS.TEXT_DIM)
-            self._bg:SetVertexColor(0.08, 0.08, 0.10, 0.8)
+            if self._actionBarStyle then
+                ApplyColor(self._bg, STYLE.COLORS.BG_MEDIUM)
+                for _, border in ipairs(self._borders) do
+                    ApplyColor(border, STYLE.COLORS.BORDER_SUBTLE)
+                end
+            else
+                self._bg:SetVertexColor(0.08, 0.08, 0.10, 0.8)
+            end
         end
     end
 
@@ -4538,19 +4128,82 @@ local function CreateNativeDropdown(parent, width, height)
     -- Hover effects
     btn:SetScript("OnEnter", function(self)
         if self._disabled then return end
-        self._bg:SetVertexColor(0.14, 0.14, 0.18, 0.9)
+        if self._actionBarStyle then
+            ApplyColor(self._bg, STYLE.COLORS.BG_HOVER)
+            for _, border in ipairs(self._borders) do
+                ApplyColor(border, STYLE.COLORS.BORDER_NORMAL)
+            end
+        else
+            self._bg:SetVertexColor(0.14, 0.14, 0.18, 0.9)
+        end
         ApplyTextColor(self._label, STYLE.COLORS.TEXT_BRIGHT)
         ApplyTextColor(self._arrow, STYLE.COLORS.TEXT_NORMAL)
     end)
 
     btn:SetScript("OnLeave", function(self)
         if self._disabled then return end
-        self._bg:SetVertexColor(0.08, 0.08, 0.10, 0.8)
+        if self._actionBarStyle then
+            ApplyColor(self._bg, STYLE.COLORS.BG_MEDIUM)
+            for _, border in ipairs(self._borders) do
+                ApplyColor(border, STYLE.COLORS.BORDER_SUBTLE)
+            end
+        else
+            self._bg:SetVertexColor(0.08, 0.08, 0.10, 0.8)
+        end
         ApplyTextColor(self._label, STYLE.COLORS.TEXT_NORMAL)
         ApplyTextColor(self._arrow, STYLE.COLORS.TEXT_DIM)
     end)
 
     return btn
+end
+
+local function CreateDatabaseSelector(parent)
+    local dropdown = CreateNativeDropdown(parent, 170, STYLE.BUTTON_HEIGHT, true)
+    local sourceKeys = {[1] = "wowsims", [2] = "wowtbc"}
+    local labels = {
+        (_G.Bistooltip_source_to_url and _G.Bistooltip_source_to_url.wowsims)
+            or "WoWSimsBP (STANDARD)",
+        (_G.Bistooltip_source_to_url and _G.Bistooltip_source_to_url.wowtbc)
+            or "wowtbc.gg",
+    }
+
+    dropdown:SetList(labels)
+    dropdown:SetDisplayList({ "WoWSiM", "WOWTBC.GG" })
+    dropdown._sourceKeys = sourceKeys
+    dropdown._menuDirection = "UP"
+    dropdown:HideSeparator()
+    dropdown:SetCallback("OnValueChanged", function(control, _, index)
+        local sourceKey = sourceKeys[index]
+        local db = BistooltipAddon.db and BistooltipAddon.db.global
+        if not sourceKey or not db then return end
+
+        control:SetValue(index)
+        if db.data_source == sourceKey then return end
+
+        db.data_source = sourceKey
+        BistooltipAddon:changeSpec(sourceKey)
+    end)
+
+    local currentSource = BistooltipAddon.db and BistooltipAddon.db.global
+        and BistooltipAddon.db.global.data_source or "wowsims"
+    dropdown:SetValue(currentSource == "wowtbc" and 2 or 1)
+    return dropdown
+end
+
+local function AttachDatabaseSelector(owner, bottomBar)
+    local dropdown = CreateDatabaseSelector(bottomBar)
+    dropdown:SetPoint("LEFT", bottomBar._exportButton, "RIGHT", 6, 0)
+    owner._databaseDropdown = dropdown
+    return dropdown
+end
+
+local function SyncDatabaseSelector()
+    local dropdown = mainFrame and mainFrame._databaseDropdown
+    if not dropdown then return end
+
+    local sourceKey = BistooltipAddon.db and BistooltipAddon.db.global
+        and BistooltipAddon.db.global.data_source or "wowsims"
+    dropdown:SetValue(sourceKey == "wowtbc" and 2 or 1)
 end
 
 -- ============================================================
@@ -4698,23 +4351,23 @@ local function CreateNewTabBar(parent)
                 -- Switching to MAIN tab
                 State.SetChecklistMode(false)
 
-                -- CRITICAL: Disable ASCEND mode when leaving BIS tab
-                State.SetEmblemFilterMode(false)
+                -- CRITICAL: Disable VENDOR mode when leaving BIS tab
+                State.SetVendorFilterMode(false)
 
-                -- Reset ASCEND button visual state using STYLE system
-                if uiFrames.ascendBtn then
-                    if uiFrames.ascendBtn._bg then
-                        ApplyColor(uiFrames.ascendBtn._bg, STYLE.COLORS.BG_MEDIUM)
+                -- Reset VENDOR button visual state using STYLE system
+                if uiFrames.vendorBtn then
+                    if uiFrames.vendorBtn._bg then
+                        ApplyColor(uiFrames.vendorBtn._bg, STYLE.COLORS.BG_MEDIUM)
                     end
-                    if uiFrames.ascendBtn._borders then
-                        for _, border in ipairs(uiFrames.ascendBtn._borders) do
+                    if uiFrames.vendorBtn._borders then
+                        for _, border in ipairs(uiFrames.vendorBtn._borders) do
                             ApplyColor(border, STYLE.COLORS.BORDER_SUBTLE)
                         end
                     end
-                    if uiFrames.ascendBtn._label then
-                        ApplyTextColor(uiFrames.ascendBtn._label, STYLE.COLORS.TEXT_NORMAL)
+                    if uiFrames.vendorBtn._label then
+                        ApplyTextColor(uiFrames.vendorBtn._label, STYLE.COLORS.TEXT_NORMAL)
                     end
-                    uiFrames.ascendBtn._isActive = false
+                    uiFrames.vendorBtn._isActive = false
                 end
 
                 if BistooltipAddon.db and BistooltipAddon.db.char then
@@ -5400,7 +5053,7 @@ local function ShowExportPopup()
 end
 
 -- ============================================================
--- NEW UI: Bottom Bar (Reload, Discord, Reset, ASCEND, EXPORT)
+-- NEW UI: Bottom Bar (Reload, Discord, Reset, VENDOR, EXPORT)
 -- Uses unified STYLE system for consistent look
 -- ============================================================
 
@@ -5454,16 +5107,16 @@ local function CreateNewBottomBar(parent)
     sep:SetTexture("Interface\\Buttons\\WHITE8x8")
     ApplyColor(sep, STYLE.COLORS.BORDER_NORMAL)
 
-    -- ASCEND button (emblem filter) - toggle button style
-    local ascendBtn = CreateStyledButton(frame, "ASCEND", 75, STYLE.BUTTON_HEIGHT, function(self)
+    -- VENDOR button (vendor filter) - toggle button style
+    local vendorBtn = CreateStyledButton(frame, "VENDOR", 80, STYLE.BUTTON_HEIGHT, function(self)
         local bisChecklistMode = State.Get("bisChecklistMode")
         if not bisChecklistMode then
-            DEFAULT_CHAT_FRAME:AddMessage("|cffff8800Bistooltip:|r ASCEND mode is only available in the BIS tab.")
+            DEFAULT_CHAT_FRAME:AddMessage("|cffff8800Bistooltip:|r VENDOR mode is only available in the BIS tab.")
             return
         end
 
-        local newState = not State.Get("emblemFilterMode")
-        State.SetEmblemFilterMode(newState)
+        local newState = not State.Get("vendorFilterMode")
+        State.SetVendorFilterMode(newState)
 
         -- Update button visual state
         if newState then
@@ -5478,14 +5131,14 @@ local function CreateNewBottomBar(parent)
             self:SetActive(false)
         end
         drawSpecData()
-    end, "Filter Emblem of Ascension items (BIS tab only)")
-    ascendBtn:SetToggleMode(true)
-    ascendBtn:SetPoint("LEFT", sep, "RIGHT", 12, 0)
-    uiFrames.ascendBtn = ascendBtn
+    end, "Show vendor-purchasable items only (BIS tab only)")
+    vendorBtn:SetToggleMode(true)
+    vendorBtn:SetPoint("LEFT", sep, "RIGHT", 12, 0)
+    uiFrames.vendorBtn = vendorBtn
 
-    -- Custom OnEnter/OnLeave for ASCEND to handle teal active state
-    ascendBtn:SetScript("OnEnter", function(self)
-        local isActive = State.Get("emblemFilterMode")
+    -- Custom OnEnter/OnLeave for VENDOR to handle teal active state
+    vendorBtn:SetScript("OnEnter", function(self)
+        local isActive = State.Get("vendorFilterMode")
         if not isActive then
             ApplyColor(self._bg, STYLE.COLORS.BG_HOVER)
             for _, border in ipairs(self._borders) do
@@ -5494,12 +5147,12 @@ local function CreateNewBottomBar(parent)
             ApplyTextColor(self._label, STYLE.COLORS.TEXT_BRIGHT)
         end
         GameTooltip:SetOwner(self, "ANCHOR_TOP")
-        GameTooltip:SetText("Filter Emblem of Ascension items (BIS tab only)", 1, 1, 1, 1, true)
+        GameTooltip:SetText("Show vendor-purchasable items only (BIS tab only)", 1, 1, 1, 1, true)
         GameTooltip:Show()
     end)
 
-    ascendBtn:SetScript("OnLeave", function(self)
-        local isActive = State.Get("emblemFilterMode")
+    vendorBtn:SetScript("OnLeave", function(self)
+        local isActive = State.Get("vendorFilterMode")
         if isActive then
             ApplyColor(self._bg, STYLE.COLORS.ACCENT_TEAL)
             for _, border in ipairs(self._borders) do
@@ -5520,7 +5173,8 @@ local function CreateNewBottomBar(parent)
     local exportBtn = CreateStyledButton(frame, "EXPORT", 75, STYLE.BUTTON_HEIGHT, function()
         ShowExportPopup()
     end, "Export BIS list to clipboard")
-    exportBtn:SetPoint("LEFT", ascendBtn, "RIGHT", 6, 0)
+    exportBtn:SetPoint("LEFT", vendorBtn, "RIGHT", 6, 0)
+    frame._exportButton = exportBtn
 
     return frame
 end
@@ -5530,6 +5184,54 @@ end
 -- ============================================================
 
 local nativeMainFrame = nil  -- Our custom frame (not AceGUI)
+
+local function CreateScaleHandle(parent)
+    local handle = CreateFrame("Button", nil, parent)
+    handle:SetSize(16, 16)
+    handle:SetPoint("BOTTOMRIGHT", parent, "BOTTOMRIGHT", -1, 1)
+    handle:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+    handle:SetNormalTexture("Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Up")
+    handle:SetHighlightTexture("Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Highlight")
+    handle:SetPushedTexture("Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Down")
+
+    handle:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_TOP")
+        GameTooltip:SetText("Window scale", 1, 1, 1)
+        GameTooltip:AddLine("Drag with the left mouse button to scale.", 0.8, 0.8, 0.8, true)
+        GameTooltip:AddLine("Right-click to reset to 100%.", 0.8, 0.8, 0.8, true)
+        GameTooltip:Show()
+    end)
+    handle:SetScript("OnLeave", function()
+        GameTooltip:Hide()
+    end)
+    handle:SetScript("OnMouseDown", function(self, button)
+        if button ~= "LeftButton" then return end
+        local uiScale = UIParent:GetEffectiveScale()
+        local x, y = GetCursorPosition()
+        self._dragStartX = x / uiScale
+        self._dragStartY = y / uiScale
+        self._dragStartScale = BistooltipAddon:GetWindowScale()
+        self._isScaling = true
+    end)
+    handle:SetScript("OnMouseUp", function(self, button)
+        if button == "LeftButton" then self._isScaling = false end
+    end)
+    handle:SetScript("OnUpdate", function(self)
+        if not self._isScaling then return end
+        local uiScale = UIParent:GetEffectiveScale()
+        local x, y = GetCursorPosition()
+        x, y = x / uiScale, y / uiScale
+        local delta = ((x - self._dragStartX) - (y - self._dragStartY)) / 400
+        BistooltipAddon:ApplyWindowScale(self._dragStartScale + delta)
+    end)
+    handle:SetScript("OnClick", function(_, button)
+        if button == "RightButton" then BistooltipAddon:ResetWindowScale() end
+    end)
+    handle:HookScript("OnHide", function(self)
+        self._isScaling = false
+    end)
+    return handle
+end
 
 local function CreateNativeMainFrame()
     local frameWidth = Constants.UI.MAIN_FRAME_WIDTH or 600
@@ -5638,7 +5340,13 @@ local function CreateNativeMainFrame()
     local statusText = statusBar:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
     statusText:SetPoint("LEFT", 8, 0)
     statusText:SetTextColor(0.7, 0.7, 0.7, 1)
+    frame._statusBar = statusBar
     frame._statusText = statusText
+
+    local scaleHandle = CreateScaleHandle(statusBar)
+    statusText:SetPoint("RIGHT", scaleHandle, "LEFT", -4, 0)
+    statusText:SetJustifyH("LEFT")
+    frame._scaleHandle = scaleHandle
 
     -- Content area (legacy - kept for compatibility, no longer used for dropdowns)
     -- Native dropdowns are now created directly in CreateNewFilterBar
@@ -5743,6 +5451,7 @@ function BistooltipAddon:showMainFrame()
     if mainFrame and not tabBarFrame then
         -- UI elements were cleaned up - need to rebuild them
         mainFrame:Show()
+        self:ApplyWindowScale()
 
         -- Re-register in UISpecialFrames for ESC to work
         -- First remove any existing entry to avoid duplicates
@@ -5756,6 +5465,7 @@ function BistooltipAddon:showMainFrame()
         uiFrames.tabBar = CreateNewTabBar(parentFrame)
         uiFrames.filterBar = CreateNewFilterBar(parentFrame, -66)
         uiFrames.bottomBar = CreateNewBottomBar(parentFrame)
+        AttachDatabaseSelector(mainFrame, uiFrames.bottomBar)
 
         -- Re-initialize dropdown values
         if nativeClassDropdown and nativeSpecDropdown then
@@ -5775,6 +5485,7 @@ function BistooltipAddon:showMainFrame()
 
         -- Recreate content frame and draw
         createSpecFrame()
+        SyncDatabaseSelector()
         drawSpecData()
 
         return
@@ -5783,9 +5494,13 @@ function BistooltipAddon:showMainFrame()
     -- If mainFrame exists and UI is intact, just show it
     if mainFrame then
         mainFrame:Show()
+        self:ApplyWindowScale()
         if specContainerFrame then
             specContainerFrame:Show()
         end
+        SyncDatabaseSelector()
+        drawSpecData()
+        BulkPreloadAllItems(false)
         return
     end
 
@@ -5806,6 +5521,9 @@ function BistooltipAddon:showMainFrame()
     -- CREATE NATIVE MAIN FRAME (NO AceGUI - fixes ElvUI interference)
     -- ============================================================
     mainFrame = CreateNativeMainFrame()
+    self:ApplyWindowScale()
+
+    mainFrame._statusText:SetJustifyH("LEFT")
 
     mainFrame:SetCallback("OnClose", function()
         CleanupMainFrame()
@@ -5818,8 +5536,7 @@ function BistooltipAddon:showMainFrame()
 
     mainFrame:SetTitle(self.AddonNameAndVersion)
 
-    local statusText = (self.AddonCredits or "") .. "  |  " .. (_G.Bistooltip_source_to_url and _G.Bistooltip_source_to_url[self.db.char.data_source] or "wowtbc.gg/wotlk")
-    mainFrame:SetStatusText(statusText)
+    mainFrame:SetStatusText(self.AddonCredits or "")
 
     State.SetMainFrame(mainFrame)
 
@@ -5838,6 +5555,8 @@ function BistooltipAddon:showMainFrame()
 
     -- 3. Bottom Bar (as direct frame at bottom)
     uiFrames.bottomBar = CreateNewBottomBar(parentFrame)
+    AttachDatabaseSelector(mainFrame, uiFrames.bottomBar)
+    SyncDatabaseSelector()
 
     -- 4. Initialize dropdown values (native dropdowns are already set in CreateNewFilterBar)
     -- Just ensure spec dropdown has correct list after class is set
@@ -5858,21 +5577,21 @@ function BistooltipAddon:showMainFrame()
         tabBtn:GetScript("OnClick")(tabBtn)
     end
 
-    -- 8. Update ASCEND button visual state
-    local ascendBtn = uiFrames.ascendBtn
-    if ascendBtn then
-        local emblemFilterMode = State.Get("emblemFilterMode")
-        local btnBg = ascendBtn._bg
-        local btnLabel = ascendBtn._label
+    -- 8. Update VENDOR button visual state
+    local vendorBtn = uiFrames.vendorBtn
+    if vendorBtn then
+        local vendorFilterMode = State.Get("vendorFilterMode")
+        local btnBg = vendorBtn._bg
+        local btnLabel = vendorBtn._label
         if btnBg and btnBg.SetVertexColor then
-            if emblemFilterMode then
+            if vendorFilterMode then
                 btnBg:SetVertexColor(0.0, 0.8, 0.6, 0.95)
             else
                 btnBg:SetVertexColor(0.12, 0.12, 0.15, 0.9)
             end
         end
         if btnLabel and btnLabel.SetTextColor then
-            if emblemFilterMode then
+            if vendorFilterMode then
                 btnLabel:SetTextColor(0.1, 0.1, 0.1, 1)
             else
                 btnLabel:SetTextColor(0.8, 0.8, 0.8, 1)
@@ -5950,16 +5669,34 @@ function BistooltipAddon:reloadData()
     -- Rebuild dictionaries
     buildClassDict()
     loadData()
+    SyncDatabaseSelector()
 
-    -- Refresh if frame is open
-    if mainFrame and mainFrame.frame:IsShown() then
-        if specDropdown then
-            buildSpecsDict(State.Get("class_index") or 1)
-            specDropdown:SetList(spec_options)
-            specDropdown:SetValue(State.Get("spec_index") or 1)
-        end
-        -- Force immediate redraw
+    -- W4 (owner feedback 2026-09-10): dropdowns must be rebuilt for the
+    -- bound database even when the main frame is hidden (e.g. the options
+    -- panel is open during a database switch) — stale widgets previously
+    -- left the class tab on the old database while spec indices resolved
+    -- against the new one (Rogue tab showing DK "Blood tank").
+    if classDropdown then
+        classDropdown:SetValue(State.Get("class_index") or 1)
+    end
+    if specDropdown then
+        buildSpecsDict(State.Get("class_index") or 1)
+        specDropdown:SetList(spec_options)
+        specDropdown:SetValue(State.Get("spec_index") or 1)
+    end
+    if phaseDropdown and _G.Bistooltip_phases then
+        phaseDropdown:SetList(_G.Bistooltip_phases)
+        phaseDropdown:SetValue(State.Get("phase_index") or 1)
+    end
+
+    -- W4 (owner feedback 2026-09-10): redraw even when the frame is hidden —
+    -- previously the table kept the OLD database's rows until a manual
+    -- refresh while the dropdown headers already showed the new selection.
+    if mainFrame then
+        mainFrame:SetStatusText(self.AddonCredits or "")
         drawSpecData()
+    end
+    if mainFrame and mainFrame.frame:IsShown() then
         -- Also preload items in background
         ForceReloadAllItems()
         -- Provide user feedback
@@ -5975,6 +5712,78 @@ function BistooltipAddon:initBislists()
         Data.ClearAllCaches()
     end
 
+    -- Global debug/repair entry points (used by both /bistooltip and /bis
+    -- handlers — no SlashCmdList indirection, which broke for the owner)
+    _G.Bistooltip_DebugDump = function()
+        local className, specName, phase = State.GetCurrentSelection()
+        local slots = className and specName and phase and Data.GetSlotsForSpec(className, specName, phase)
+        if slots then
+            local seen, bad = {}, nil
+            for _, s in ipairs(slots) do
+                local n = s.slot_name
+                if n then
+                    seen[n] = (seen[n] or 0) + 1
+                    if seen[n] > 1 and n ~= "Finger" and n ~= "Trinket" then
+                        bad = (bad and bad .. ", " or "") .. n .. "x" .. seen[n]
+                    end
+                end
+            end
+            if bad then
+                DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Bis-Tooltip debug: GUARD FAIL|r " ..
+                    tostring(className) .. "/" .. tostring(specName) .. "/" .. tostring(phase)
+                    .. " -> " .. bad .. " | use /bis repairrows")
+            else
+                DEFAULT_CHAT_FRAME:AddMessage("|cff00ff00Bis-Tooltip debug: guard OK|r " ..
+                    tostring(className) .. "/" .. tostring(specName) .. "/" .. tostring(phase)
+                    .. " (" .. #slots .. " slot rows, no illegal duplicates)")
+            end
+        else
+            DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip debug:|r open a spec first")
+        end
+        local s = _G.Bistooltip_DebugRows
+        if s then
+            DEFAULT_CHAT_FRAME:AddMessage(string.format(
+                "|cffffd000Bis-Tooltip debugrows:|r %s/%s/%s bis=%s vendor=%s | data slots: %d, filtered: %d, rendered rows: %d, progress total: %d",
+                tostring(s.class), tostring(s.spec), tostring(s.phase),
+                tostring(s.bisMode), tostring(s.vendorMode),
+                s.dataSlots, #s.filtered, s.renderedRows, s.progressTotal))
+            for gi, g in ipairs(s.groups) do
+                DEFAULT_CHAT_FRAME:AddMessage("  group[" .. gi .. "] " .. g)
+            end
+        end
+    end
+    _G.Bistooltip_RepairRows = function()
+        BistooltipAddon:changeSpec(BistooltipAddon.db.global.data_source)
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00ff00Bis-Tooltip:|r rows repaired (fresh rebind of " ..
+            tostring(BistooltipAddon.db.global.data_source) .. ")")
+    end
+
+    -- Keep the vendor diagnostic on the canonical acquisition model.
+    -- Multiple VENDOR entries represent alternative ways to purchase an item.
+    LibStub("AceConsole-3.0"):RegisterChatCommand("bisemblem", function(msg)
+        msg = tostring(msg or "")
+        local itemId = tonumber(msg:match("item:(%d+)") or msg:match("^%s*(%d+)%s*$"))
+        if not itemId or itemId <= 0 then
+            print("Usage: /bisemblem [itemId or item link]")
+            return
+        end
+        local entries = (BisTooltip_ItemAcquisition or {})[itemId]
+        local formatter = BisTooltip_FormatSourceColored or BisTooltip_FormatSource
+        local found = false
+        if type(entries) == "table" and type(formatter) == "function" then
+            for _, entry in ipairs(entries) do
+                if type(entry) == "table" and entry.kind == "VENDOR" then
+                    local line = formatter(entry, Data and Data.GetItemTexture)
+                    if line then
+                        print("Item " .. itemId .. ": " .. line)
+                        found = true
+                    end
+                end
+            end
+        end
+        if not found then print("No vendor source recorded for item " .. itemId .. ".") end
+    end)
+
     -- Register slash commands
     LibStub("AceConsole-3.0"):RegisterChatCommand("bistooltip", function(msg)
         msg = msg and msg:lower():trim() or ""
@@ -5982,11 +5791,27 @@ function BistooltipAddon:initBislists()
             BistooltipAddon:openConfigDialog()
         elseif msg == "reload" or msg == "refresh" then
             BistooltipAddon:reloadData()
+        elseif msg == "debug on" then
+            _G.Bistooltip_DebugMode = true
+            DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip:|r debug mode |cff00ff00ON|r - detailed row snapshots enabled (/bis debug off)")
+        elseif msg == "debug off" then
+            _G.Bistooltip_DebugMode = false
+            DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip:|r debug mode |cffff0000OFF|r")
+        elseif msg == "debug" or msg == "debugrows" then
+            _G.Bistooltip_DebugDump()
+            DEFAULT_CHAT_FRAME:AddMessage("  detailed row snapshots: " ..
+                (_G.Bistooltip_DebugMode and "|cff00ff00ON|r" or "|cffff0000OFF|r")
+                .. "  (toggle: /bis debug on | /bis debug off)")
+        elseif msg == "repairrows" then
+            _G.Bistooltip_RepairRows()
         elseif msg == "help" then
             DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip Commands:|r")
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip|r - Toggle BIS window")
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip config|r - Open settings")
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip reload|r - Reload data")
+            DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip debug|r - Integrity guard + row diagnostics")
+            DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip debug on/off|r - Toggle detailed row snapshots")
+            DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bistooltip repairrows|r - Fresh rebind (heal duplicated rows)")
             DEFAULT_CHAT_FRAME:AddMessage("  |cffffff00/bis|r - Short alias")
         else
             BistooltipAddon:createMainFrame()
@@ -5995,7 +5820,20 @@ function BistooltipAddon:initBislists()
 
     LibStub("AceConsole-3.0"):RegisterChatCommand("bis", function(msg)
         msg = msg and msg:lower():trim() or ""
-        if msg == "config" or msg == "c" then
+        if msg == "debug on" or msg == "d on" then
+            _G.Bistooltip_DebugMode = true
+            DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip:|r debug mode |cff00ff00ON|r - detailed row snapshots enabled (/bis debug off)")
+        elseif msg == "debug off" or msg == "d off" then
+            _G.Bistooltip_DebugMode = false
+            DEFAULT_CHAT_FRAME:AddMessage("|cffffd000Bis-Tooltip:|r debug mode |cffff0000OFF|r")
+        elseif msg == "debug" or msg == "d" or msg == "debugrows" then
+            _G.Bistooltip_DebugDump()
+            DEFAULT_CHAT_FRAME:AddMessage("  detailed row snapshots: " ..
+                (_G.Bistooltip_DebugMode and "|cff00ff00ON|r" or "|cffff0000OFF|r")
+                .. "  (toggle: /bis debug on | /bis debug off)")
+        elseif msg == "repairrows" then
+            _G.Bistooltip_RepairRows()
+        elseif msg == "config" or msg == "c" then
             BistooltipAddon:openConfigDialog()
         elseif msg == "reload" or msg == "r" then
             BistooltipAddon:reloadData()

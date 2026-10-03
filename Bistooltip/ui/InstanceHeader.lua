@@ -407,9 +407,9 @@ function BistooltipInstanceHeader.Create(parent, instanceData, yOffset)
     -- Get color for this instance (use pattern matching helper for flexibility)
     local color = GetInstanceColor(instanceName)
 
-    -- Background color - brighter for Ascension mode groups
-    local isAscensionGroup = instanceData.isAscensionGroup
-    local colorMultiplier = isAscensionGroup and 0.5 or 0.3  -- Ascension groups are brighter
+    -- Background color - brighter for vendor-mode groups
+    local isVendorGroup = instanceData.isVendorGroup
+    local colorMultiplier = isVendorGroup and 0.5 or 0.3  -- vendor groups are brighter
     header._bg:SetVertexColor(color.r * colorMultiplier, color.g * colorMultiplier, color.b * colorMultiplier, 0.95)
 
     -- Collapse state - use arrow icons for modern look
@@ -509,10 +509,18 @@ function BistooltipInstanceHeader.Create(parent, instanceData, yOffset)
     header._nameLabel:SetText(string.format("|cff%02x%02x%02x%s|r",
         color.r * 255, color.g * 255, color.b * 255, instanceName))
 
-    -- Item count / Emblem cost (for Ascension groups)
-    if instanceData.isAscensionGroup and instanceData.totalEmblemCost and instanceData.totalEmblemCost > 0 then
-        -- Show total emblem cost for Ascension groups
-        header._countLabel:SetText(string.format("|cff00ffcc%d Emblems|r", instanceData.totalEmblemCost))
+    -- Item count / Emblem cost (for vendor groups)
+    if instanceData.costNeedsDetails then
+        header._countLabel:SetText("|cffaaaaaaSee item sources|r")
+    elseif instanceData.isVendorGroup and instanceData.totalEmblemCost and instanceData.totalEmblemCost > 0 then
+        -- Show total emblem cost for vendor groups
+        local total = instanceData.totalEmblemCost
+        if instanceData.emblemType == "Gold" then
+            header._countLabel:SetText(BisTooltip_FormatSource({kind="VENDOR",
+                cost={{currency="Gold", amount=total}}}))
+        else
+            header._countLabel:SetText(string.format("|cff00ffcc%d %s|r", total, instanceData.emblemType or ""))
+        end
     else
         header._countLabel:SetText(string.format("|cffaaaaaa%d items|r", itemCount))
     end
@@ -577,7 +585,7 @@ local normalizeFullCache = {}
 local normalizeKeepSizeCache = {}
 -- Note: instanceColorCache is declared at line 30
 
--- Helper: Normalize instance name for ASCEND mode (removes ALL size/difficulty)
+-- Helper: Normalize instance name for VENDOR mode (removes ALL size/difficulty)
 local function NormalizeInstanceNameFull(instanceName)
     if not instanceName then return "Unknown" end
 
@@ -663,7 +671,7 @@ local function IsEmblemSource(currency)
     return lower:find("emblem") or lower:find("badge") or lower:find("echo") or lower:find("titan")
 end
 
-function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, emblemFilterMode)
+function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, vendorFilterMode)
     if not slots then return {} end
 
     local groups = {}
@@ -677,8 +685,8 @@ function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, emblemFil
             local groupName = "Unknown"
             local emblemCost = 0
             local emblemType = nil
-            local isAscensionCostGroup = false
             local isEmblemTypeGroup = false
+            local costNeedsDetails = false
 
             -- Check if it's from emblem vendor first
             if _G.BistooltipData and _G.BistooltipData.GetEmblemCost then
@@ -689,33 +697,41 @@ function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, emblemFil
                 end
             end
 
-            -- ASCEND mode grouping: ALL Ascension emblems in one group, other emblems by type, then instances
-            if emblemFilterMode then
-                -- Check if this is specifically an Emblem of Ascension item
-                local isAscensionEmblem = emblemType and emblemType == "Emblem of Ascension"
-
-                if isAscensionEmblem and emblemCost > 0 then
-                    -- Group 1: ALL Ascension emblems in ONE group (sorted by cost within group)
-                    groupKey = "emblem_Emblem of Ascension"
-                    groupName = "Emblem of Ascension"
-                    isAscensionCostGroup = true
-                    -- Store the cost on the slot for later sorting
-                    slot._emblemCost = emblemCost
-                elseif emblemType and IsEmblemSource(emblemType) then
-                    -- Group 2: Other emblem types (Emblem of Valor, Echo of the Titans, etc.)
-                    groupKey = "emblem_" .. emblemType
-                    groupName = emblemType
-                    isEmblemTypeGroup = true
-                else
-                    -- Group 3: Instance drops (normalized - no 10/25/HM split)
-                    if _G.BistooltipAddon and _G.BistooltipAddon.GetItemSourceInfo then
-                        local zone, boss = _G.BistooltipAddon:GetItemSourceInfo(firstItemId)
-                        if zone and zone ~= "" then
-                            local normalizedZone = NormalizeInstanceNameFull(zone)
-                            groupKey = "instance_" .. normalizedZone
-                            groupName = normalizedZone
+            -- VENDOR mode grouping: find the slot's FIRST vendor-purchasable
+            -- item (any rank, not just rank 1) and group by its currency.
+            -- A slot enters this mode only when it contains a vendor item
+            -- (SlotHasVendorSource), but that item may sit below a raid
+            -- rank-1 — grouping by slot[1]'s instance would leak raid items
+            -- into VENDOR mode (owner-reported Trial of the Crusader bug).
+            -- There is deliberately NO instance branch in VENDOR mode.
+            if vendorFilterMode then
+                local vendorCost, vendorCurrency
+                if _G.BistooltipData and _G.BistooltipData.GetDisplayItemID and _G.BistooltipData.GetEmblemCost then
+                    for _, iid in ipairs(slot) do
+                        local id = _G.BistooltipData.GetDisplayItemID(iid, isHorde)
+                        local currency, cost, needsDetails = _G.BistooltipData.GetVendorSummary(id)
+                        if currency then
+                            vendorCost, vendorCurrency = cost, currency
+                            costNeedsDetails = needsDetails or #slot > 1
+                            break
                         end
                     end
+                end
+                if vendorCurrency then
+                    groupKey = "emblem_" .. vendorCurrency
+                    groupName = vendorCurrency
+                    isEmblemTypeGroup = true
+                    emblemType = vendorCurrency
+                    -- Store the cost on the slot for later sorting and use it
+                    -- for the group totals (rank-1 may not be the vendor item)
+                    slot._emblemCost = vendorCost
+                    emblemCost = vendorCost or 0
+                else
+                    -- Defensive: no vendor item found (filter should prevent
+                    -- this). Keep the slot visible under Unknown instead of
+                    -- silently hiding it.
+                    groupKey = "emblem_Unknown"
+                    groupName = "Unknown vendor"
                 end
             else
                 -- Normal BIS mode: group by raid size (10/25) but not difficulty (Normal/Heroic)
@@ -745,17 +761,18 @@ function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, emblemFil
                     collectedCount = 0,
                     totalEmblemCost = 0,
                     emblemType = emblemType,
-                    isAscensionGroup = isAscensionCostGroup,
+                    isVendorGroup = isEmblemTypeGroup,
                     isEmblemTypeGroup = isEmblemTypeGroup,
                 }
                 table.insert(groupOrder, groupKey)
             end
 
             -- Add slot to group
+            if costNeedsDetails then groups[groupKey].costNeedsDetails = true end
             table.insert(groups[groupKey].slots, slot)
             groups[groupKey].itemCount = groups[groupKey].itemCount + 1
 
-            -- Track emblem cost for Ascension groups
+            -- Track emblem cost for vendor groups
             if emblemCost > 0 then
                 groups[groupKey].totalEmblemCost = (groups[groupKey].totalEmblemCost or 0) + emblemCost
                 totalEmblems = totalEmblems + emblemCost
@@ -770,19 +787,14 @@ function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, emblemFil
         end
     end
 
-    -- Sort groups by priority (dynamic for ASCEND mode)
+    -- Sort groups by priority (dynamic for VENDOR mode)
     local function GetGroupPriority(key)
-        -- Emblem of Ascension first (priority 100)
-        if key == "emblem_Emblem of Ascension" then
+        -- Emblem/vendor groups first (priority 100)
+        if key:find("^emblem_") then
             return 100
         end
 
-        -- Other emblem type groups second (priority 200)
-        if key:find("^emblem_") then
-            return 200
-        end
-
-        -- Instance groups third (sorted alphabetically)
+        -- Instance groups second (sorted alphabetically)
         if key:find("^instance_") then
             return 300
         end
@@ -824,6 +836,8 @@ function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, emblemFil
     _G.Bistooltip_totalEmblemsNeeded = totalEmblems
 
     -- Helper: Check if an item comes from a heroic source
+    -- (MUST return a real boolean — sort comparators choke on nil,
+    -- which crashed grouping when vendor items had no raid zone.)
     local function IsHeroicSource(slot)
         if not slot or not slot[1] then return false end
         local itemId = slot[1]
@@ -831,7 +845,7 @@ function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, emblemFil
             local zone, boss = _G.BistooltipAddon:GetItemSourceInfo(itemId)
             if zone then
                 local lowerZone = zone:lower()
-                return lowerZone:find("heroic") or lowerZone:find("hm") or lowerZone:find("hc")
+                return (lowerZone:find("heroic") or lowerZone:find("hm") or lowerZone:find("hc")) ~= nil
             end
         end
         return false
@@ -853,10 +867,10 @@ function BistooltipInstanceHeader.GroupSlotsByInstance(slots, isHorde, emblemFil
             else
                 -- For other groups: Heroic items first, then Normal
                 table.sort(group.slots, function(a, b)
-                    local aHeroic = IsHeroicSource(a)
-                    local bHeroic = IsHeroicSource(b)
+                    local aHeroic = IsHeroicSource(a) == true
+                    local bHeroic = IsHeroicSource(b) == true
                     if aHeroic ~= bHeroic then
-                        return aHeroic  -- Heroic items come first (true > false)
+                        return aHeroic  -- Heroic items come first
                     end
                     return (a.slot_name or "") < (b.slot_name or "")
                 end)

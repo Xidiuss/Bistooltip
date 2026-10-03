@@ -2,7 +2,7 @@
 ## Title: Bis-Tooltip
 ## Notes: Shows Best-in-Slot information in tooltips and provides a BIS checklist UI
 ## Author: Silver [DisruptionAuras], refactored by Divian
-## Version: 2.2.1-3.3.5a
+## Version: 3.0.0
 ## SavedVariables: BisTooltipDB
 ## OptionalDeps: DataStore, DataStore_Inventory, ElvUI, Tukui
 
@@ -11,7 +11,6 @@
 # IMPORTANT: AceConfigRegistry MUST load before AceConfig!
 # ============================================================
 Libs\LibStub\LibStub.lua
-Libs\LibParse\LibParse.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
 Libs\AceAddon-3.0\AceAddon-3.0.lua
 Libs\AceEvent-3.0\AceEvent-3.0.lua
@@ -23,21 +22,31 @@ Libs\AceConfig-3.0\AceConfigRegistry-3.0\AceConfigRegistry-3.0.lua
 Libs\AceConfig-3.0\AceConfigCmd-3.0\AceConfigCmd-3.0.lua
 Libs\AceConfig-3.0\AceConfigDialog-3.0\AceConfigDialog-3.0.lua
 Libs\AceConfig-3.0\AceConfig-3.0.lua
-Libs\AceGUI-3.0-SharedMediaWidgets\widget.xml
-Libs\LibSharedMedia-3.0\lib.xml
-Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libs\LibDataBroker\LibDataBroker-1.1.lua
 Libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
 
 # ============================================================
 # Data Files
-# NOTE: EmblemData.lua must load after bislists (T8 set auto-registration)
+# NOTE: EmblemData.lua is retained only as an offline migration input.
+# Other offline inputs live in Private/Legacy/data, outside the addon package.
 # ============================================================
-Loot_Sources.lua
 GemData.lua
 Bistooltip_classes.lua
+Bistooltip_WoWSimsBP_final.lua
+Bistooltip_wh_bislists.lua
 Bistooltip_wowtbc_bislists.lua
 Bistooltip_horde_to_ali.lua
-EmblemData.lua
+
+# ============================================================
+# New source model (canonical registry + acquisition + formatter)
+# Standalone tables; load before DataProvider.
+# ============================================================
+SourceRegistry.lua
+ItemAcquisition.lua
+UserVerifiedSources.lua
+OwnerVerifiedAdditions.lua
+SourceFormatter.lua
+PluginAPI.lua
 
 # ============================================================
 # Core Framework (ORDER MATTERS!)
@@ -51,6 +60,9 @@ util\debounce.lua
 
 # Layer 2: Configuration Constants
 Constants.lua
+
+# Layer 2.5: Current player context (depends on Utils, Constants)
+PlayerContext.lua
 
 # Layer 3: Data Provider (depends on Utils, Constants)
 DataProvider.lua

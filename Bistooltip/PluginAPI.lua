@@ -1,0 +1,548 @@
+-- Bistooltip/PluginAPI.lua (pure; no WoW API; plain Lua 5.1)
+-- Server plugin API over the canonical data model (S3 + S3-6):
+--   BisTooltip_SourceRegistry (sourceID -> facts)
+--   BisTooltip_ItemAcquisition (itemID -> acquisition entries)
+--   Bistooltip_bislists[class][spec][phase] (slot tables with slot_name/enhs + ranked IDs)
+-- Semantics: DefineSource/SetAcquisition/SetBiSSlot/SetBiSSlotRank/SetEnhancement
+-- = replace-wins, AddAcquisition = append, ReplaceVendorAcquisitions replaces
+-- only purchase routes, InsertBiSSlotRank = bounded insert/move.
+-- Selected core overrides print a one-time developer warning. Routine
+-- acquisition replacements are expected plugin behavior and stay silent.
+-- Malformed input raises a pcall-safe error (never silent). Acquisition entries
+-- are shape-validated WITHOUT registry membership
+-- checks, so plugins may SetAcquisition before DefineSource (any order).
+-- SetEnhancement with phase=nil means COMMON: the slot's enhs is replaced in
+-- EVERY phase of the spec that contains a slot with that slot_name.
+-- SetBiSSlotRank overrides a SINGLE rank (DB-independent server diffs).
+-- InsertBiSSlotRank moves/inserts an item within the slot's rank capacity.
+-- W4 overlay: every mutation is recorded (deep-copied) and can be REPLAYED
+-- after a database switch (BisTooltip_ReplayOverlay) — plugins describe the
+-- server, not a specific ranking DB.
+BisTooltip = BisTooltip or {}
+
+local warned = {}
+local function plugName(p)
+  if type(p) == "string" and p ~= "" then return p end
+  return "unknown plugin"
+end
+local function noteOverride(key, msg)
+  if not warned[key] then warned[key] = true print(msg) end
+end
+
+-- ---------------------------------------------------------------------------
+-- W4 overlay log + replay
+-- ---------------------------------------------------------------------------
+local Overlay = {}
+local replaying = false
+local EnhancementOverrideRules = {}
+local function deepCopy(v)
+  if type(v) ~= "table" then return v end
+  local out = {}
+  for k, val in pairs(v) do out[k] = deepCopy(val) end
+  return out
+end
+local function record(fn, ...)
+  if replaying then return end
+  Overlay[#Overlay + 1] = { fn = fn, args = deepCopy({ ... }), n = select("#", ...) }
+end
+-- Re-executes the recorded plugin mutations (call after rebinding
+-- Bistooltip_bislists to another database). Failures are warn-once skips:
+-- a slot missing in the new DB must never raise into the UI.
+function BisTooltip_ReplayOverlay()
+  replaying = true
+  for _, op in ipairs(Overlay) do
+    local fn = BisTooltip[op.fn]
+    if type(fn) == "function" then
+      -- Setters publish tables into live data. Never expose the recorded
+      -- snapshot itself: a later append can otherwise mutate a future replay.
+      local args = deepCopy(op.args)
+      local ok, err = pcall(fn, BisTooltip, unpack(args, 1, op.n))
+      if not ok then
+        noteOverride("replay:" .. op.fn .. "|" .. tostring(err),
+          "Plugin overlay replay skipped one op: " .. tostring(err))
+      end
+    end
+  end
+  replaying = false
+end
+
+local KINDS = { DROP = true, TOKEN = true, MARK = true, VENDOR = true, CUSTOM = true, ACTIVITY = true }
+-- Byte-level identity of an entry (idempotent-append + replay safety).
+local function entryIdentity(e)
+  local parts = {
+    tostring(e.kind), tostring(e.tier or ""), tostring(e.family or ""),
+    tostring(e.tokenItem or 0), tostring(e.label or ""), tostring(e.source or ""),
+    tostring(e.displayVariant or ""), tostring(e.variantLabel or ""),
+  }
+  for _, c in ipairs(e.cost or {}) do
+    parts[#parts + 1] = tostring(c.currency or "") .. "#"
+      .. tostring(c.item or 0) .. "#" .. tostring(c.amount or 0)
+  end
+  return table.concat(parts, "\0")
+end
+local function checkEntry(e, what)
+  if type(e) ~= "table" then error(what .. ": entry must be a table", 2) end
+  if not KINDS[e.kind] then error(what .. ": unknown kind " .. tostring(e.kind), 2) end
+  if e.tokenItem ~= nil and e.kind ~= "TOKEN" then
+    error(what .. ": tokenItem is only valid for TOKEN", 2)
+  end
+  if e.kind == "CUSTOM" or e.kind == "ACTIVITY" then
+    if type(e.label) ~= "string" or e.label == "" then
+      error(what .. ": " .. e.kind .. " needs non-empty label", 2)
+    end
+    return true
+  end
+  if e.kind == "VENDOR" then
+    if type(e.cost) ~= "table" then error(what .. ": VENDOR needs cost table", 2) end
+    for i, c in ipairs(e.cost) do
+      if type(c) ~= "table" or type(c.amount) ~= "number"
+        or (type(c.currency) ~= "string" and type(c.item) ~= "number") then
+        error(what .. ": VENDOR cost part " .. i .. " malformed", 2)
+      end
+    end
+    if e.tier ~= nil and (type(e.tier) ~= "string" or e.tier == "") then
+      error(what .. ": VENDOR tier must be a non-empty string", 2)
+    end
+    if e.displayVariant ~= nil and (type(e.displayVariant) ~= "string" or e.displayVariant == "") then
+      error(what .. ": VENDOR displayVariant must be a non-empty string", 2)
+    end
+    return true
+  end
+  if type(e.source) ~= "string" or e.source == "" then
+    error(what .. ": " .. e.kind .. " needs sourceID", 2)
+  end
+  if e.kind == "DROP" then
+    if e.tier ~= nil and (type(e.tier) ~= "string" or e.tier == "") then
+      error(what .. ": DROP tier must be a non-empty string", 2)
+    end
+  else -- TOKEN / MARK
+    if type(e.tier) ~= "string" or e.tier == "" then
+      error(what .. ": " .. e.kind .. " needs tier", 2)
+    end
+    if type(e.family) ~= "string" or e.family == "" then
+      error(what .. ": " .. e.kind .. " needs family", 2)
+    end
+    if e.kind == "TOKEN" and (type(e.tokenItem) ~= "number"
+      or e.tokenItem <= 0 or e.tokenItem % 1 ~= 0) then
+      error(what .. ": TOKEN needs a positive whole tokenItem", 2)
+    end
+  end
+  return true
+end
+
+local function checkSourceDef(sourceID, def)
+  local what = "BisTooltip.DefineSource"
+  if type(sourceID) ~= "string" or sourceID == "" then
+    error(what .. ": sourceID must be a non-empty string", 2)
+  end
+  if type(def) ~= "table" then error(what .. ": definition must be a table", 2) end
+  if def.kind == "CUSTOM" then
+    if type(def.label) ~= "string" or def.label == "" then
+      error(what .. ': CUSTOM source "' .. sourceID .. '" needs non-empty label', 2)
+    end
+    return true
+  end
+  if def.kind ~= nil then error(what .. ": unknown source kind " .. tostring(def.kind), 2) end
+  if type(def.instance) ~= "string" or def.instance == "" then
+    error(what .. ': source "' .. sourceID .. '" needs instance', 2)
+  end
+  if type(def.boss) ~= "string" or def.boss == "" then
+    error(what .. ': source "' .. sourceID .. '" needs boss', 2)
+  end
+  if def.difficulty ~= nil and type(def.difficulty) ~= "string" then
+    error(what .. ': source "' .. sourceID .. '" difficulty must be a string', 2)
+  end
+  return true
+end
+
+local function checkEnhs(enhs, what)
+  if type(enhs) ~= "table" or enhs[1] == nil then
+    error(what .. ": enhs must be a non-empty list of {type=...,id=...}", 2)
+  end
+  for i, e in ipairs(enhs) do
+    if type(e) ~= "table" then error(what .. ": enh #" .. i .. " must be a table", 2) end
+    if type(e.type) ~= "string" or e.type == "" then
+      error(what .. ": enh #" .. i .. " needs non-empty type", 2)
+    end
+    if type(e.id) ~= "number" then error(what .. ": enh #" .. i .. " needs numeric id", 2) end
+  end
+end
+local function copyEnhs(enhs)
+  local out = {}
+  for i, e in ipairs(enhs) do out[i] = { type = e.type, id = e.id } end
+  return out
+end
+
+local function specDataOf(className, specName, what)
+  if type(className) ~= "string" or className == "" then
+    error(what .. ": class must be a non-empty string", 2)
+  end
+  if type(specName) ~= "string" or specName == "" then
+    error(what .. ": spec must be a non-empty string", 2)
+  end
+  if type(Bistooltip_bislists) ~= "table" then error(what .. ": Bistooltip_bislists missing", 2) end
+  local classData = Bistooltip_bislists[className]
+  if type(classData) ~= "table" then error(what .. ": unknown class " .. className, 2) end
+  local specData = classData[specName]
+  if type(specData) ~= "table" then error(what .. ": unknown spec " .. specName, 2) end
+  return specData
+end
+local function findSlot(className, specName, phase, slotName, what)
+  if type(phase) ~= "string" or phase == "" then
+    error(what .. ": phase must be a non-empty string (nil means COMMON, SetEnhancement only)", 2)
+  end
+  if type(slotName) ~= "string" or slotName == "" then
+    error(what .. ": slot must be a non-empty string", 2)
+  end
+  local specData = specDataOf(className, specName, what)
+  local slots = specData[phase]
+  if type(slots) ~= "table" then error(what .. ": unknown phase " .. phase, 2) end
+  for _, slot in ipairs(slots) do
+    if type(slot) == "table" and slot.slot_name == slotName then return slot end
+  end
+  error(what .. ": unknown slot " .. slotName, 2)
+end
+
+function BisTooltip:DefineSource(sourceID, def, plugin)
+  checkSourceDef(sourceID, def)
+  if type(BisTooltip_SourceRegistry) ~= "table" then
+    error("BisTooltip.DefineSource: BisTooltip_SourceRegistry missing", 2)
+  end
+  if BisTooltip_SourceRegistry[sourceID] ~= nil then
+    noteOverride("source:" .. sourceID,
+      "Plugin " .. plugName(plugin) .. " replaced core source " .. sourceID)
+  end
+  BisTooltip_SourceRegistry[sourceID] = def
+  record("DefineSource", sourceID, def, plugin)
+  return true
+end
+
+function BisTooltip:SetAcquisition(itemID, entries, plugin)
+  local what = "BisTooltip.SetAcquisition"
+  if type(itemID) ~= "number" or itemID <= 0 then
+    error(what .. ": itemID must be a positive number", 2)
+  end
+  if type(entries) ~= "table" or entries[1] == nil then
+    error(what .. ": entries must be a non-empty list", 2)
+  end
+  for _, e in ipairs(entries) do checkEntry(e, what) end
+  if type(BisTooltip_ItemAcquisition) ~= "table" then
+    error(what .. ": BisTooltip_ItemAcquisition missing", 2)
+  end
+  BisTooltip_ItemAcquisition[itemID] = entries
+  record("SetAcquisition", itemID, entries, plugin)
+  return true
+end
+
+function BisTooltip:AddAcquisition(itemID, entry, plugin)
+  local what = "BisTooltip.AddAcquisition"
+  if type(itemID) ~= "number" or itemID <= 0 then
+    error(what .. ": itemID must be a positive number", 2)
+  end
+  checkEntry(entry, what)
+  if type(BisTooltip_ItemAcquisition) ~= "table" then
+    error(what .. ": BisTooltip_ItemAcquisition missing", 2)
+  end
+  local list = BisTooltip_ItemAcquisition[itemID]
+  if list == nil then
+    list = {}
+    BisTooltip_ItemAcquisition[itemID] = list
+  elseif type(list) ~= "table" then
+    error(what .. ": existing acquisition for item " .. tostring(itemID) .. " is corrupt", 2)
+  end
+  -- Idempotent append: a byte-identical entry already present is a no-op
+  -- (keeps overlay replay from duplicating lines across DB switches).
+  local identity = entryIdentity(entry)
+  for _, existing in ipairs(list) do
+    if entryIdentity(existing) == identity then
+      record("AddAcquisition", itemID, entry, plugin)
+      return true
+    end
+  end
+  table.insert(list, entry)
+  record("AddAcquisition", itemID, entry, plugin)
+  return true
+end
+
+function BisTooltip:SetBiSSlot(className, specName, phase, slotName, ids, plugin)
+  local what = "BisTooltip.SetBiSSlot"
+  if type(ids) ~= "table" or ids[1] == nil then
+    error(what .. ": ids must be a non-empty list of itemIDs", 2)
+  end
+  for i, id in ipairs(ids) do
+    if type(id) ~= "number" or id <= 0 then
+      error(what .. ": itemID #" .. i .. " must be a positive number", 2)
+    end
+  end
+  local slot = findSlot(className, specName, phase, slotName, what)
+  for k in pairs(slot) do if type(k) == "number" then slot[k] = nil end end
+  for i, id in ipairs(ids) do slot[i] = id end
+  noteOverride("bis:" .. className .. "|" .. specName .. "|" .. phase .. "|" .. slotName,
+    "Plugin " .. plugName(plugin) .. " replaced core BiS slot "
+    .. className .. "/" .. specName .. "/" .. phase .. "/" .. slotName)
+  record("SetBiSSlot", className, specName, phase, slotName, ids, plugin)
+  return true
+end
+
+local function rankSlot(className, specName, phase, slotName, what)
+  local found, slot = pcall(findSlot, className, specName, phase, slotName, what)
+  if found then return slot, false end
+  local lookupError = slot
+  slot = nil
+  -- Plugins describe the server across databases. A valid target can be
+  -- absent in the selected database (e.g. T7 while using wowtbc).
+  for _, database in pairs({ Bistooltip_wowsims_final,
+      Bistooltip_wowtbc_bislists, Bistooltip_wh_bislists }) do
+    local classData = type(database) == "table" and database[className]
+    local specData = type(classData) == "table" and classData[specName]
+    local phaseSlots = type(specData) == "table" and specData[phase]
+    if type(phaseSlots) == "table" then
+      for _, candidate in ipairs(phaseSlots) do
+        if candidate.slot_name == slotName then slot = candidate break end
+      end
+    end
+    if slot then break end
+  end
+  if not slot then error(lookupError, 3) end
+  return slot, true
+end
+
+local function checkEnhancementDescriptor(enhancement, what)
+  if type(enhancement) ~= "table" then
+    error(what .. ": enhancement must be a {type=...,id=...} table", 3)
+  end
+  if enhancement.type ~= "item" and enhancement.type ~= "spell" and enhancement.type ~= "none" then
+    error(what .. ": enhancement has unknown type " .. tostring(enhancement.type), 3)
+  end
+  if type(enhancement.id) ~= "number" or enhancement.id % 1 ~= 0 then
+    error(what .. ": enhancement id must be a whole number", 3)
+  end
+  if enhancement.type == "none" then
+    if enhancement.id ~= 0 then error(what .. ": none enhancement needs id 0", 3) end
+  elseif enhancement.id <= 0 then
+    error(what .. ": enhancement id must be positive", 3)
+  end
+end
+
+local function copyEnhancement(enhancement)
+  if not enhancement then return nil end
+  return { type = enhancement.type, id = enhancement.id }
+end
+
+local function enhancementRuleKey(profession, className, specName, phase, slotName)
+  return table.concat({
+    profession and tostring(profession) or "<GLOBAL>",
+    className, specName, phase or "<COMMON>", slotName,
+  }, "\0")
+end
+
+local function enhancementTarget(className, specName, phase, slotName)
+  return className .. "/" .. specName .. "/" .. tostring(phase or "COMMON") .. "/" .. slotName
+end
+
+-- Replace vendor prices without destroying drops, tokens, marks or custom
+-- sources. Replay computes from the newly bound acquisition table.
+function BisTooltip:ReplaceVendorAcquisitions(itemID, offers, plugin)
+  local what = "BisTooltip.ReplaceVendorAcquisitions"
+  if type(itemID) ~= "number" or itemID <= 0 then
+    error(what .. ": itemID must be a positive number", 2)
+  end
+  if type(offers) ~= "table" or offers[1] == nil then
+    error(what .. ": offers must be a non-empty list", 2)
+  end
+  for _, offer in ipairs(offers) do
+    checkEntry(offer, what)
+    if offer.kind ~= "VENDOR" then error(what .. ": only VENDOR offers allowed", 2) end
+  end
+  if type(BisTooltip_ItemAcquisition) ~= "table" then
+    error(what .. ": BisTooltip_ItemAcquisition missing", 2)
+  end
+  local entries = {}
+  for _, entry in ipairs(BisTooltip_ItemAcquisition[itemID] or {}) do
+    if entry.kind ~= "VENDOR" then entries[#entries + 1] = entry end
+  end
+  for _, offer in ipairs(offers) do entries[#entries + 1] = deepCopy(offer) end
+  BisTooltip_ItemAcquisition[itemID] = entries
+  record("ReplaceVendorAcquisitions", itemID, offers, plugin)
+  return true
+end
+
+local function checkRankArgs(rank, itemID, what)
+  if type(rank) ~= "number" or rank < 1 or rank % 1 ~= 0 then
+    error(what .. ": rank must be a positive integer", 3)
+  end
+  if type(itemID) ~= "number" or itemID <= 0 then
+    error(what .. ": itemID must be a positive number", 3)
+  end
+end
+
+local function slotMaxRank(slot)
+  local maxRank = 0
+  for k in pairs(slot) do
+    if type(k) == "number" and k > maxRank then maxRank = k end
+  end
+  return maxRank
+end
+
+-- Replace exactly one rank. Existing plugins depend on this meaning.
+function BisTooltip:SetBiSSlotRank(className, specName, phase, slotName, rank, itemID, plugin)
+  local what = "BisTooltip.SetBiSSlotRank"
+  checkRankArgs(rank, itemID, what)
+  local slot, deferred = rankSlot(className, specName, phase, slotName, what)
+  local maxRank = slotMaxRank(slot)
+  if rank > maxRank then
+    error(what .. ": rank " .. rank .. " exceeds slot length " .. maxRank, 2)
+  end
+  if deferred then
+    record("SetBiSSlotRank", className, specName, phase, slotName, rank, itemID, plugin)
+    return true
+  end
+  for i = 1, maxRank do
+    if i ~= rank and slot[i] == itemID then
+      noteOverride("bisrank-dup:" .. className .. "|" .. specName .. "|" .. phase .. "|" .. slotName .. "|" .. itemID,
+        "Plugin " .. plugName(plugin) .. ": item " .. itemID .. " already at rank " .. i
+        .. " of " .. className .. "/" .. specName .. "/" .. phase .. "/" .. slotName .. " (duplicate ranking)")
+    end
+  end
+  slot[rank] = itemID
+  noteOverride("bisrank:" .. className .. "|" .. specName .. "|" .. phase .. "|" .. slotName .. "|" .. rank,
+    "Plugin " .. plugName(plugin) .. " replaced core BiS rank " .. rank
+    .. " of " .. className .. "/" .. specName .. "/" .. phase .. "/" .. slotName)
+  record("SetBiSSlotRank", className, specName, phase, slotName, rank, itemID, plugin)
+  return true
+end
+
+-- Insert an alternative ahead of the selected rank. If the item already
+-- appears in the slot, move it instead of creating a duplicate. Otherwise
+-- the previous last alternative falls off so all slots keep their capacity.
+function BisTooltip:InsertBiSSlotRank(className, specName, phase, slotName, rank, itemID, plugin)
+  local what = "BisTooltip.InsertBiSSlotRank"
+  checkRankArgs(rank, itemID, what)
+  local slot, deferred = rankSlot(className, specName, phase, slotName, what)
+  local maxRank = slotMaxRank(slot)
+  if rank > maxRank + 1 then
+    error(what .. ": rank " .. rank .. " exceeds insertion boundary " .. (maxRank + 1), 2)
+  end
+  if deferred then
+    record("InsertBiSSlotRank", className, specName, phase, slotName, rank, itemID, plugin)
+    return true
+  end
+  for i = maxRank, 1, -1 do
+    if slot[i] == itemID then table.remove(slot, i) end
+  end
+  table.insert(slot, math.min(rank, #slot + 1), itemID)
+  while #slot > maxRank do table.remove(slot) end
+  record("InsertBiSSlotRank", className, specName, phase, slotName, rank, itemID, plugin)
+  return true
+end
+
+function BisTooltip:SetEnhancement(className, specName, phase, slotName, enhs, plugin)
+  local what = "BisTooltip.SetEnhancement"
+  checkEnhs(enhs, what)
+  if type(slotName) ~= "string" or slotName == "" then
+    error(what .. ": slot must be a non-empty string", 2)
+  end
+  if phase == nil then -- COMMON: every phase of the spec holding that slot
+    local specData = specDataOf(className, specName, what)
+    local n = 0
+    for phaseName, slots in pairs(specData) do
+      if type(slots) == "table" then
+        for _, slot in ipairs(slots) do
+          if type(slot) == "table" and slot.slot_name == slotName then
+            slot.enhs = copyEnhs(enhs)
+            noteOverride("enh:" .. className .. "|" .. specName .. "|" .. tostring(phaseName) .. "|" .. slotName,
+              "Plugin " .. plugName(plugin) .. " replaced core enhancements "
+              .. className .. "/" .. specName .. "/" .. tostring(phaseName) .. "/" .. slotName)
+            n = n + 1
+          end
+        end
+      end
+    end
+    if n == 0 then error(what .. ": unknown slot " .. slotName .. " (no phase of " .. specName .. " has it)", 2) end
+    record("SetEnhancement", className, specName, phase, slotName, enhs, plugin)
+    return true
+  end
+  local slot = findSlot(className, specName, phase, slotName, what)
+  slot.enhs = copyEnhs(enhs)
+  noteOverride("enh:" .. className .. "|" .. specName .. "|" .. phase .. "|" .. slotName,
+    "Plugin " .. plugName(plugin) .. " replaced core enhancements "
+    .. className .. "/" .. specName .. "/" .. phase .. "/" .. slotName)
+  record("SetEnhancement", className, specName, phase, slotName, enhs, plugin)
+  return true
+end
+
+function BisTooltip:DefineEnhancementOverride(rule, plugin)
+  local what = "BisTooltip.DefineEnhancementOverride"
+  if type(rule) ~= "table" then error(what .. ": rule must be a table", 2) end
+  if type(plugin) ~= "string" or plugin == "" then
+    error(what .. ": plugin must be a non-empty string", 2)
+  end
+  if rule.profession ~= nil and (type(rule.profession) ~= "number"
+      or rule.profession <= 0 or rule.profession % 1 ~= 0) then
+    error(what .. ": profession must be a positive integer skill-line ID", 2)
+  end
+  for _, field in ipairs({"class", "spec", "slot"}) do
+    if type(rule[field]) ~= "string" or rule[field] == "" then
+      error(what .. ": " .. field .. " must be a non-empty string", 2)
+    end
+  end
+  if rule.phase ~= nil and (type(rule.phase) ~= "string" or rule.phase == "") then
+    error(what .. ": phase must be a non-empty string or nil for COMMON", 2)
+  end
+  checkEnhancementDescriptor(rule.enhancement, what)
+
+  local key = enhancementRuleKey(rule.profession, rule.class, rule.spec, rule.phase, rule.slot)
+  local previous = EnhancementOverrideRules[key]
+  if previous then
+    noteOverride("enhancement-rule:" .. key,
+      "Plugin " .. plugin .. " replaced enhancement override from " .. previous.plugin
+      .. " for " .. enhancementTarget(rule.class, rule.spec, rule.phase, rule.slot))
+  end
+  EnhancementOverrideRules[key] = {
+    profession = rule.profession,
+    class = rule.class,
+    spec = rule.spec,
+    phase = rule.phase,
+    slot = rule.slot,
+    enhancement = copyEnhancement(rule.enhancement),
+    plugin = plugin,
+  }
+  return true
+end
+
+local function selectEnhancementRule(profession, className, specName, phase, slotName)
+  local exact = phase and EnhancementOverrideRules[
+    enhancementRuleKey(profession, className, specName, phase, slotName)] or nil
+  local common = EnhancementOverrideRules[
+    enhancementRuleKey(profession, className, specName, nil, slotName)]
+  return exact or common
+end
+
+function BisTooltip:ResolveEnhancementOverride(
+    className, specName, phase, slotName, professionSet, allowProfessionRules)
+  local global = selectEnhancementRule(nil, className, specName, phase, slotName)
+  if not allowProfessionRules or type(professionSet) ~= "table" then
+    return global and copyEnhancement(global.enhancement) or nil
+  end
+  local matches = {}
+  for profession, owned in pairs(professionSet) do
+    if owned then
+      local selected = selectEnhancementRule(profession, className, specName, phase, slotName)
+      if selected then matches[#matches + 1] = selected end
+    end
+  end
+  if #matches == 0 then return global and copyEnhancement(global.enhancement) or nil end
+  if #matches > 1 then
+    local plugins = {}
+    for _, match in ipairs(matches) do plugins[#plugins + 1] = match.plugin end
+    table.sort(plugins)
+    local target = enhancementTarget(className, specName, phase, slotName)
+    noteOverride("profession-ambiguous:" .. target,
+      "Profession enhancement target is ambiguous for " .. target
+      .. " (plugins: " .. table.concat(plugins, ", ") .. ")")
+    return global and copyEnhancement(global.enhancement) or nil
+  end
+  return copyEnhancement(matches[1].enhancement)
+end
+
+return BisTooltip

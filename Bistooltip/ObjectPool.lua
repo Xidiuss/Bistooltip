@@ -617,7 +617,10 @@ end
 -- Pre-warm pools on load
 -- ============================================================
 
+local poolsInitialized = false
+
 function BistooltipPools.Initialize()
+    if poolsInitialized then return end
     -- Pre-warm commonly used pools
     -- 17 slots × 8 items = 136 icons max, plus gems/enchants = ~200 total
     -- Pre-warming prevents CreateFrame calls during rendering
@@ -629,4 +632,5 @@ function BistooltipPools.Initialize()
     BistooltipPools.ItemRows:PreWarm(50)       -- was 30, for checklist
     BistooltipPools.Textures:PreWarm(100)      -- NEW: for overlays/decorations
     BistooltipPools.Frames:PreWarm(30)         -- NEW: generic containers
+    poolsInitialized = true
 end

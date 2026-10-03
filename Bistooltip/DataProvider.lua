@@ -156,19 +156,19 @@ end
 -- Equipment Cache Access
 -- ============================================================
 
--- Reverse mapping cache: Alliance ID -> Horde ID (built on first use)
-local aliToHordeCache = nil
+-- Reverse of the historically named table: Horde ID -> Alliance ID.
+local hordeToAliCache = nil
 
-local function GetAliToHordeMapping()
-    if aliToHordeCache then return aliToHordeCache end
+local function GetHordeToAliMapping()
+    if hordeToAliCache then return hordeToAliCache end
 
-    aliToHordeCache = {}
+    hordeToAliCache = {}
     if _G.Bistooltip_horde_to_ali then
-        for hordeId, aliId in pairs(_G.Bistooltip_horde_to_ali) do
-            aliToHordeCache[aliId] = hordeId
+        for allianceId, hordeId in pairs(_G.Bistooltip_horde_to_ali) do
+            hordeToAliCache[hordeId] = allianceId
         end
     end
-    return aliToHordeCache
+    return hordeToAliCache
 end
 
 function BistooltipData.GetOwnedRow(itemId)
@@ -180,14 +180,13 @@ function BistooltipData.GetOwnedRow(itemId)
 
     -- Handle Horde<->Alliance translation using cached reverse mapping
     if _G.Bistooltip_horde_to_ali then
-        -- Check if itemId is Alliance version - use O(1) reverse lookup
-        local aliToHorde = GetAliToHordeMapping()
-        local hordeId = aliToHorde[itemId]
-        if hordeId and t[hordeId] then return t[hordeId] end
+        -- Check whether a Horde item has its Alliance equivalent in inventory.
+        local allianceId = GetHordeToAliMapping()[itemId]
+        if allianceId and t[allianceId] then return t[allianceId] end
 
-        -- Check if itemId is Horde - try Alliance version
-        local aliId = _G.Bistooltip_horde_to_ali[itemId]
-        if aliId and t[aliId] then return t[aliId] end
+        -- Check whether an Alliance item has its Horde equivalent in inventory.
+        local hordeId = _G.Bistooltip_horde_to_ali[itemId]
+        if hordeId and t[hordeId] then return t[hordeId] end
     end
 
     return nil
@@ -224,12 +223,14 @@ local NormalizeItemID = Utils.NormalizeItemID
 function BistooltipData.GetDisplayItemID(originalItemId, isHorde)
     if not originalItemId or originalItemId <= 0 then return nil end
 
-    -- BIS lists contain HORDE item IDs
-    -- If player is ALLIANCE (not isHorde), convert to Alliance equivalent
-    -- If player is HORDE (isHorde), keep original Horde ID
-    if not isHorde and _G.Bistooltip_horde_to_ali then
-        local aliId = _G.Bistooltip_horde_to_ali[originalItemId]
-        if aliId then return aliId end
+    -- Despite its historical name, this table maps Alliance IDs to Horde
+    -- IDs. Most baseline slots contain Alliance IDs; WoWSims Horde overrides
+    -- already contain Horde IDs. Accept either form without flipping sides.
+    if _G.Bistooltip_horde_to_ali then
+        if isHorde then
+            return _G.Bistooltip_horde_to_ali[originalItemId] or originalItemId
+        end
+        return GetHordeToAliMapping()[originalItemId] or originalItemId
     end
 
     return originalItemId
@@ -320,126 +321,194 @@ end
 -- Source Information
 -- ============================================================
 
+-- Item sources from the new model (O(1) acquisition -> registry facts).
+-- Each acquisition entry renders via BisTooltip_FormatSource; multi-source
+-- items keep every line, deduped ONLY on byte-identical rendered lines
+-- (Saurfang vs Putricide stay separate). Returned structs preserve the
+-- legacy {type,zone,boss,difficulty,currency,cost} shape so existing UI
+-- call sites (BislistUI, UIFramework, BuildChecklistGroups) keep working
+-- untouched; the rendered MASTER line rides along as .text.
 function BistooltipData.GetAllItemSources(itemId)
     if not itemId or itemId <= 0 then return {} end
-    
-    -- Check cache
-    if DataCache.sourceCache[itemId] then
-        return DataCache.sourceCache[itemId]
-    end
-    
+
+    local entries = (BisTooltip_ItemAcquisition or {})[itemId]
+    if type(entries) ~= "table" then return {} end
+    local reg = BisTooltip_SourceRegistry or {}
+    local fmt = BisTooltip_FormatSource
+    if type(fmt) ~= "function" then return {} end
+
     local sources = {}
-    
-    -- Raid/dungeon source
-    if _G.BistooltipAddon and _G.BistooltipAddon.GetItemSourceInfo then
-        local zone, boss = _G.BistooltipAddon:GetItemSourceInfo(itemId)
-        if zone and boss then
-            local difficulty = BistooltipData.GetInstanceDifficulty(zone)
-            table.insert(sources, {
-                type = "raid",
-                zone = zone,
-                boss = boss,
-                difficulty = difficulty,
-            })
+    local seen = {}
+
+    for _, e in ipairs(entries) do
+        if type(e) == "table" then
+            local line = fmt(e)
+            if line and not seen[line] then
+                seen[line] = true
+                local displayLine = fmt(e, BistooltipData.GetItemTexture) or line
+                local src = nil
+                if e.kind == "DROP" or e.kind == "TOKEN" or e.kind == "MARK" then
+                    local s = e.source and reg[e.source] or nil
+                    if s and s.kind == "CUSTOM" then
+                        src = { type = "custom", label = s.label, text = displayLine }
+                    elseif s then
+                        local zone = s.instance
+                        if s.difficulty and s.difficulty ~= "" then
+                            zone = zone .. " [" .. s.difficulty .. "]"
+                        end
+                        src = {
+                            type = "raid",
+                            zone = zone,
+                            boss = s.boss,
+                            difficulty = s.difficulty,
+                            tier = e.tier, -- optional ex-Tier-zone stamp (R5-A), nil otherwise
+                            text = displayLine,
+                        }
+                    end
+                elseif e.kind == "VENDOR" then
+                    local currency, amount = nil, nil
+                    for _, c in ipairs(e.cost or {}) do
+                        if c.currency and not currency then
+                            currency, amount = c.currency, c.amount
+                        end
+                    end
+                    src = {
+                        type = "emblem",
+                        currency = currency or "Emblems",
+                        cost = amount,
+                        text = displayLine,
+                    }
+                elseif e.kind == "CUSTOM" then
+                    src = {
+                        type = "custom",
+                        label = e.label,
+                        text = displayLine,
+                    }
+                elseif e.kind == "ACTIVITY" then
+                    src = {
+                        type = "activity",
+                        label = e.label,
+                        text = displayLine,
+                    }
+                end
+                -- Entries with unknown sourceIDs render to nil and are
+                -- skipped here (dev warning is drained once in Core.lua).
+                if src then
+                    table.insert(sources, src)
+                end
+            end
         end
     end
-    
-    -- Emblem source
-    local emblemSource = nil
-    if _G.Bistooltip_emblem_items then
-        emblemSource = _G.Bistooltip_emblem_items[itemId]
-    end
-    if not emblemSource and Constants and Constants.EMBLEM_ITEMS then
-        emblemSource = Constants.EMBLEM_ITEMS[itemId]
-    end
-    
-    if emblemSource then
-        local emblemInfo = Constants and Constants.EMBLEM_VENDORS and
-                          Constants.EMBLEM_VENDORS[emblemSource.currency]
-        table.insert(sources, {
-            type = "emblem",
-            currency = emblemSource.currency or "Emblems",
-            cost = emblemSource.cost,
-            color = emblemInfo and emblemInfo.color or (Constants.COLORS.ASCENSION or "00ffcc"),
-            icon = emblemInfo and emblemInfo.icon,
-        })
-    end
-    
-    -- Cache result
-    DataCache.sourceCache[itemId] = sources
+
     return sources
 end
 
+-- W1 cutover: both emblem helpers read the new source model
+-- (ItemAcquisition VENDOR entries) via the pure lookup in
+-- SourceFormatter.lua. Bistooltip_emblem_items / Constants.EMBLEM_ITEMS
+-- are no longer consulted at runtime (single source of truth).
 function BistooltipData.HasEmblemSource(itemId)
     if not itemId or itemId <= 0 then return false end
-    
-    if _G.Bistooltip_emblem_items and _G.Bistooltip_emblem_items[itemId] then
-        return true
-    end
-    if Constants and Constants.EMBLEM_ITEMS and Constants.EMBLEM_ITEMS[itemId] then
-        return true
-    end
-    
-    return false
+    local _, currency = BisTooltip_GetVendorCost(itemId)
+    return currency ~= nil
 end
 
 function BistooltipData.GetEmblemCost(itemId)
     if not itemId or itemId <= 0 then return nil, nil end
-    
-    local emblem = nil
-    if _G.Bistooltip_emblem_items then
-        emblem = _G.Bistooltip_emblem_items[itemId]
-    end
-    if not emblem and Constants and Constants.EMBLEM_ITEMS then
-        emblem = Constants.EMBLEM_ITEMS[itemId]
-    end
-    
-    if emblem then
-        return emblem.cost, emblem.currency
-    end
-    return nil, nil
+    return BisTooltip_GetVendorCost(itemId)
 end
 
-function BistooltipData.GetInstanceDifficulty(instanceName)
-    if not instanceName then return nil end
-    
-    -- Check Constants first
-    if Constants and Constants.GetInstanceDifficulty then
-        local tag = Constants.GetInstanceDifficulty(instanceName)
-        if tag then return tag end
+-- Vendor eligibility is a property of the method, not of its first currency.
+-- Only a single one-part price is safe to add to a group budget. Alternatives
+-- and compound prices remain visible in full through the source formatter.
+function BistooltipData.GetVendorSummary(itemId)
+    local purchases = {}
+    for _, entry in ipairs((BisTooltip_ItemAcquisition or {})[itemId] or {}) do
+        if entry.kind == "VENDOR" or entry.kind == "CUSTOM" then
+            purchases[#purchases + 1] = entry
+        end
     end
-    
-    -- Parse common patterns
-    local lower = string.lower(instanceName)
-    
-    if lower:find("heroic") or lower:find("hm") then
-        if lower:find("25") then return "25HM"
-        elseif lower:find("10") then return "10HM"
-        else return "HM" end
-    end
-    
-    if lower:find("25") then return "25N"
-    elseif lower:find("10") then return "10N"
-    end
-    
-    return nil
+    if #purchases == 0 then return nil end
+    if #purchases > 1 then return "Vendor options", nil, true end
+    local entry = purchases[1]
+    if entry.kind == "CUSTOM" then return entry.label or "Custom", nil, true end
+    local costs = entry.cost or {}
+    if #costs == 0 then return "Free / unspecified price", nil, true end
+    if #costs > 1 then return "Multiple costs", nil, true end
+    local cost = costs[1]
+    return cost.currency or ("Item #" .. tostring(cost.item)), cost.amount, false
 end
+
+-- NOTE: difficulty is a closed fact set on SourceRegistry entries (spec S2);
+-- the old difficulty-substring guessing heuristic was removed with the O(N)
+-- lookup (Task 5). Difficulty now travels on GetAllItemSources structs.
 
 -- ============================================================
 -- Slot Data Access
 -- ============================================================
 
+local function CopyEnhancements(enhancements)
+    local copy = {}
+    for index, entry in ipairs(enhancements or {}) do
+        copy[index] = {type = entry.type, id = entry.id}
+    end
+    return copy
+end
+
 function BistooltipData.GetSlotsForSpec(className, specName, phase)
     if not _G.Bistooltip_bislists then return nil end
     if not className or not specName or not phase then return nil end
-    
+
     local classData = _G.Bistooltip_bislists[className]
     if not classData then return nil end
-    
+
     local specData = classData[specName]
     if not specData then return nil end
-    
-    return specData[phase]
+
+    local list = specData[phase]
+    if type(list) ~= "table" then return nil end
+
+    -- Defensive copy per read (row-duplication hunt, owner report): some
+    -- in-session code path overwrites EXISTING array entries (invisible to
+    -- __newindex traps), duplicating Weapon/Off hand rows within ~2s of a
+    -- fresh bind. Returning a fresh array per call starves that mutator —
+    -- every draw reads the bound source untouched. Slot tables stay shared
+    -- (personal rank order and plugin rank overrides persist).
+    local professionSet
+    local allowProfessionRules = false
+    if type(_G.BistooltipPlayerContext) == "table"
+            and type(_G.BistooltipPlayerContext.GetPlayerClassKey) == "function"
+            and _G.BistooltipPlayerContext.GetPlayerClassKey() == className then
+        allowProfessionRules = true
+        if type(_G.BistooltipPlayerContext.GetProfessionSkillLines) == "function" then
+            professionSet = _G.BistooltipPlayerContext.GetProfessionSkillLines()
+        end
+    end
+
+    local copy = {}
+    for i, slot in ipairs(list) do
+        -- Consumers filter, split rings/trinkets and calculate progress before
+        -- rendering, so the personal order must already be applied here.
+        BistooltipData.LoadCustomPriority(slot, className, specName, phase)
+        local automatic
+        if type(_G.BisTooltip) == "table"
+                and type(_G.BisTooltip.ResolveEnhancementOverride) == "function" then
+            automatic = _G.BisTooltip:ResolveEnhancementOverride(
+                className, specName, phase, slot.slot_name,
+                professionSet, allowProfessionRules)
+        end
+        if automatic then
+            local view = {}
+            for key, value in pairs(slot) do view[key] = value end
+            local enhs = CopyEnhancements(slot.enhs)
+            enhs[1] = {type = automatic.type, id = automatic.id}
+            view.enhs = enhs
+            copy[i] = view
+        else
+            copy[i] = slot
+        end
+    end
+    return copy
 end
 
 -- ============================================================
@@ -471,7 +540,7 @@ local function CreateVirtualSlot(originalSlot, newSlotName, itemIndex)
     return virtualSlot
 end
 
-function BistooltipData.FilterSlots(slots, searchText, showOnlyMissing, emblemFilterMode, isHorde, bisMode)
+function BistooltipData.FilterSlots(slots, searchText, showOnlyMissing, vendorFilterMode, isHorde, bisMode)
     if not slots then return {}, {} end
 
     -- Ensure searchText is a string (handle nil/empty properly)
@@ -504,12 +573,16 @@ function BistooltipData.FilterSlots(slots, searchText, showOnlyMissing, emblemFi
         -- Check if slot matches search filter
         local matches = BistooltipData.SlotMatchesFilter(slot, searchLower, isHorde)
 
-        -- Check if slot passes emblem filter (Ascension mode)
-        local hasAscension = BistooltipData.SlotHasAscensionSource(slot, emblemFilterMode, isHorde)
+        -- Check if slot passes the vendor filter (VENDOR mode; true when off)
+        local hasVendor = BistooltipData.SlotHasVendorSource(slot, vendorFilterMode, isHorde)
 
-        if matches and hasAscension then
+        if matches and hasVendor then
             -- In BIS mode, split Finger and Trinket into separate rows
-            if bisMode and slot.slot_name == "Finger" then
+            if vendorFilterMode then
+                -- Keep all ranks for the per-item vendor filter, including
+                -- purchasable rings/trinkets below the two BIS positions.
+                table.insert(filtered, slot)
+            elseif bisMode and slot.slot_name == "Finger" then
                 -- Create Ring 1 (item [1]) and Ring 2 (item [2])
                 local ring1 = CreateVirtualSlot(slot, "Ring 1", 1)
                 local ring2 = CreateVirtualSlot(slot, "Ring 2", 2)
@@ -599,18 +672,22 @@ function BistooltipData.SlotMatchesFilter(slot, searchLower, isHorde)
     return false
 end
 
-function BistooltipData.SlotHasAscensionSource(slot, emblemFilterMode, isHorde)
-    if not emblemFilterMode then return true end
-    
-    for _, iid in ipairs(slot) do
-        local id = BistooltipData.GetDisplayItemID(iid, isHorde)
-        local cost, currency = BistooltipData.GetEmblemCost(id)
-        if currency and string.find(currency, "Ascension") then
-            return true
+-- VENDOR is the purchasable subset of the required BiS choices, not every
+-- lower-ranked alternative in the slot. Dual slots may require two items.
+function BistooltipData.GetVendorBISItems(slot, isHorde)
+    local items = {}
+    for _, id in ipairs(BistooltipData.GetRequiredBISItems(slot)) do
+        local displayID = BistooltipData.GetDisplayItemID(id, isHorde)
+        if displayID and BistooltipData.GetVendorSummary(displayID) then
+            items[#items + 1] = id
         end
     end
-    
-    return false
+    return items
+end
+
+function BistooltipData.SlotHasVendorSource(slot, vendorFilterMode, isHorde)
+    if not vendorFilterMode then return true end
+    return #BistooltipData.GetVendorBISItems(slot, isHorde) > 0
 end
 
 -- ============================================================
@@ -671,7 +748,7 @@ end
 -- Build Checklist Groups (by Boss/Zone)
 -- ============================================================
 
-function BistooltipData.BuildChecklistGroups(className, specName, phase, emblemFilterMode)
+function BistooltipData.BuildChecklistGroups(className, specName, phase, vendorFilterMode)
     local groups = {}         -- groups[zone][boss] = { items = {}, difficulty = "10HM" }
     local totalMissing = 0
     local emblemGroups = {}   -- emblemGroups[costKey] = { items = {}, total = 0, cost = X }
@@ -685,28 +762,19 @@ function BistooltipData.BuildChecklistGroups(className, specName, phase, emblemF
         for _, id in ipairs(required) do
             if id and id > 0 and BistooltipData.GetOwnedCount(id) < 1 then
                 totalMissing = totalMissing + 1
-                
+
                 local sources = BistooltipData.GetAllItemSources(id)
-                local isAscensionItem = false
-                
-                -- Check if this is an Ascension emblem item
-                for _, src in ipairs(sources) do
-                    if src.type == "emblem" and src.currency and string.find(src.currency, "Ascension") then
-                        isAscensionItem = true
-                        break
-                    end
-                end
-                
+
                 for _, src in ipairs(sources) do
                     if src.type == "raid" then
-                        -- Only add raid items if NOT in ASCEND mode
-                        if not emblemFilterMode then
+                        -- Only add raid items if NOT in VENDOR mode
+                        if not vendorFilterMode then
                             local zone = src.zone or "Unknown"
                             local boss = src.boss or "Unknown"
-                            
+
                             groups[zone] = groups[zone] or {}
                             groups[zone][boss] = groups[zone][boss] or { items = {}, difficulty = src.difficulty }
-                            
+
                             table.insert(groups[zone][boss].items, {
                                 id = id,
                                 slot = slot.slot_name or "",
@@ -714,31 +782,40 @@ function BistooltipData.BuildChecklistGroups(className, specName, phase, emblemF
                             })
                         end
                     elseif src.type == "emblem" then
+                        -- VENDOR mode: vendor items are the WHOLE point; normal
+                        -- mode keeps them as emblem groups next to raid drops.
+                        -- Grouped by currency (spec W5; replaces the old
+                        -- Ascension-only substring grouping and its cost buckets).
                         local currency = src.currency or "Emblems"
                         local cost = src.cost or 0
-                        local isAscension = string.find(currency, "Ascension") ~= nil
-                        
-                        -- In ASCEND mode: only show Ascension emblems
-                        -- In normal mode: only show non-Ascension emblems
-                        if (emblemFilterMode and isAscension) or (not emblemFilterMode and not isAscension) then
-                            -- Group by cost for Ascension emblems
-                            local groupKey
-                            if isAscension then
-                                groupKey = string.format("Ascension (%d)", cost)
-                            else
-                                groupKey = currency
-                            end
-                            
-                            emblemGroups[groupKey] = emblemGroups[groupKey] or { items = {}, total = 0, cost = cost }
-                            emblemGroups[groupKey].total = emblemGroups[groupKey].total + cost
-                            
-                            table.insert(emblemGroups[groupKey].items, {
-                                id = id,
-                                slot = slot.slot_name or "",
-                                cost = cost,
-                                sources = sources,
-                            })
-                        end
+                        local groupKey = currency
+
+                        emblemGroups[groupKey] = emblemGroups[groupKey] or { items = {}, total = 0, cost = 0 }
+                        emblemGroups[groupKey].total = emblemGroups[groupKey].total + cost
+
+                        table.insert(emblemGroups[groupKey].items, {
+                            id = id,
+                            slot = slot.slot_name or "",
+                            cost = cost,
+                            sources = sources,
+                        })
+                    elseif src.type == "custom" and vendorFilterMode then
+                        -- Plugin donate/custom shops: VENDOR mode only.
+                        local groupKey = src.label or "Custom"
+                        emblemGroups[groupKey] = emblemGroups[groupKey] or { items = {}, total = 0, cost = 0 }
+                        table.insert(emblemGroups[groupKey].items, {
+                            id = id,
+                            slot = slot.slot_name or "",
+                            cost = 0,
+                            sources = sources,
+                        })
+                    elseif src.type == "activity" and not vendorFilterMode then
+                        local label = src.label or "Other source"
+                        groups[label] = groups[label] or {}
+                        groups[label][label] = groups[label][label] or { items = {} }
+                        table.insert(groups[label][label].items, {
+                            id = id, slot = slot.slot_name or "", sources = sources,
+                        })
                     end
                 end
             end
@@ -846,11 +923,12 @@ function BistooltipData.LoadCustomPriority(slot, className, specName, phase)
     
     -- Load from memory
     local savedOrder = CustomPriorities[key]
-    
-    -- Try saved variables
-    if not savedOrder and _G.BistooltipAddon and _G.BistooltipAddon.db and 
-       _G.BistooltipAddon.db.char and _G.BistooltipAddon.db.char.custom_priorities then
-        savedOrder = _G.BistooltipAddon.db.char.custom_priorities[key]
+
+    -- Try saved variables (account-wide since W4/§12)
+    if not savedOrder and _G.BistooltipAddon and _G.BistooltipAddon.db
+       and _G.BistooltipAddon.db.global
+       and _G.BistooltipAddon.db.global.custom_priorities then
+        savedOrder = _G.BistooltipAddon.db.global.custom_priorities[key]
         if savedOrder then
             CustomPriorities[key] = savedOrder
         end
@@ -897,16 +975,24 @@ function BistooltipData.SaveCustomPriority(slot, className, specName, phase)
     end
     
     CustomPriorities[key] = itemIds
-    
-    -- Persist to saved variables
-    if _G.BistooltipAddon and _G.BistooltipAddon.db and _G.BistooltipAddon.db.char then
-        _G.BistooltipAddon.db.char.custom_priorities = _G.BistooltipAddon.db.char.custom_priorities or {}
-        _G.BistooltipAddon.db.char.custom_priorities[key] = itemIds
+
+    -- Persist to saved variables (account-wide since W4/§12)
+    if _G.BistooltipAddon and _G.BistooltipAddon.db and _G.BistooltipAddon.db.global then
+        local g = _G.BistooltipAddon.db.global
+        g.custom_priorities = g.custom_priorities or {}
+        g.custom_priorities[key] = itemIds
     end
 end
 
-function BistooltipData.RestoreOriginalOrder(slot, className, specName, phase)
-    if not slot or not slot.slot_name then return end
+-- W4: called on database switch — the cached orders belong to the
+-- previously bound DB. Reads re-reconcile from db.global per slot via
+-- LoadCustomPriority (ID-based, so personal order survives the switch).
+function BistooltipData.ResetCustomPriorityCaches()
+    CustomPriorities = {}
+    OriginalOrders = {}
+end
+
+function BistooltipData.RestoreOriginalOrder(slot, className, specName, phase)    if not slot or not slot.slot_name then return end
     
     local key = BistooltipData.GetCustomPriorityKey(className, specName, phase, slot.slot_name)
     local origOrder = OriginalOrders[key]
@@ -922,7 +1008,10 @@ function BistooltipData.ResetCustomPriorities(className, specName, phase)
     local prefix = BistooltipData.GetCustomPriorityKey(className, specName, phase, "")
     
     -- Restore original orders
-    local slots = BistooltipData.GetSlotsForSpec(className, specName, phase)
+    -- Restore the bound base slots, not a derived enhancement view.
+    local classData = _G.Bistooltip_bislists and _G.Bistooltip_bislists[className]
+    local specData = classData and classData[specName]
+    local slots = specData and specData[phase]
     if slots then
         for _, slot in ipairs(slots) do
             if slot.slot_name then
@@ -946,11 +1035,11 @@ function BistooltipData.ResetCustomPriorities(className, specName, phase)
     end
     
     -- Clear from saved variables
-    if _G.BistooltipAddon and _G.BistooltipAddon.db and _G.BistooltipAddon.db.char and
-       _G.BistooltipAddon.db.char.custom_priorities then
-        for key in pairs(_G.BistooltipAddon.db.char.custom_priorities) do
+    if _G.BistooltipAddon and _G.BistooltipAddon.db and _G.BistooltipAddon.db.global and
+       _G.BistooltipAddon.db.global.custom_priorities then
+        for key in pairs(_G.BistooltipAddon.db.global.custom_priorities) do
             if key:find(prefix, 1, true) == 1 then
-                _G.BistooltipAddon.db.char.custom_priorities[key] = nil
+                _G.BistooltipAddon.db.global.custom_priorities[key] = nil
             end
         end
     end

@@ -3,7 +3,6 @@
 -- ============================================================
 
 local AceConfigDialog = LibStub("AceConfigDialog-3.0")
-local AceGUI = LibStub("AceGUI-3.0")
 local LDB = LibStub("LibDataBroker-1.1", true)
 local LDBIcon = LDB and LibStub("LibDBIcon-1.0", true)
 
@@ -13,17 +12,23 @@ local LDBIcon = LDB and LibStub("LibDBIcon-1.0", true)
 
 local icon_loaded = false
 local icon_name = "BisTooltipIcon"
+local WINDOW_SCALE_MIN = 0.70
+local WINDOW_SCALE_MAX = 1.30
+local WINDOW_SCALE_STEP = 0.05
+local GENERAL_COLUMN_WIDTH = 1.65
 
 -- ============================================================
 -- Data Sources
 -- ============================================================
 
 local sources = {
-    wowtbc = "wowtbc"
+    wowsims = "wowsims",
+    wowtbc = "wowtbc",
 }
 
 Bistooltip_source_to_url = {
-    ["wowtbc"] = "wowtbc.gg/wotlk"
+    ["wowsims"] = "WoWSimsBP (STANDARD)",
+    ["wowtbc"] = "wowtbc.gg",
 }
 
 -- ============================================================
@@ -31,21 +36,26 @@ Bistooltip_source_to_url = {
 -- ============================================================
 
 local db_defaults = {
+    -- Account-wide (W4 §12): database choice, personal BiS priorities, and
+    -- window scale are shared across characters; other UI preferences stay per-char.
+    global = {
+        data_source = "wowsims",
+        custom_priorities = {},
+        window_scale = 1,
+    },
     char = {
         -- Selection state
         class_index = 1,
         spec_index = 1,
         phase_index = 1,
-        
+
         -- Filtering
         filter_specs = {},
         highlight_spec = {},
         filter_class_names = true,
         show_item_source = true,
+        show_source_column = true,
 
-        -- Data source
-        data_source = "wowtbc",
-        
         -- UI preferences
         minimap_icon = true,
         tooltip_with_ctrl = false,
@@ -79,7 +89,7 @@ local configTable = {
             order = 1,
             desc = "Shows/hides minimap icon",
             type = "toggle",
-            width = "full",
+            width = GENERAL_COLUMN_WIDTH,
             set = function(info, val)
                 BistooltipAddon.db.char.minimap_icon = val
                 if val == true then
@@ -103,7 +113,7 @@ local configTable = {
             order = 2,
             desc = "Removes class name separators from item tooltips",
             type = "toggle",
-            width = "full",
+            width = GENERAL_COLUMN_WIDTH,
             set = function(info, val)
                 BistooltipAddon.db.char.filter_class_names = val
             end,
@@ -113,10 +123,10 @@ local configTable = {
         },
         show_item_source = {
             name = "Show item source in tooltips",
-            order = 2.5,
+            order = 3,
             desc = "Shows where items drop from (boss, zone, emblems, etc.)",
             type = "toggle",
-            width = "full",
+            width = GENERAL_COLUMN_WIDTH,
             set = function(info, val)
                 BistooltipAddon.db.char.show_item_source = val
             end,
@@ -124,12 +134,28 @@ local configTable = {
                 return BistooltipAddon.db.char.show_item_source
             end
         },
+        show_source_column = {
+            name = "Show SOURCE column in BIS window",
+            order = 4,
+            desc = "Show the dedicated source column in BIS mode, independently of tooltip sources",
+            type = "toggle",
+            width = GENERAL_COLUMN_WIDTH,
+            set = function(info, val)
+                BistooltipAddon.db.char.show_source_column = val
+                if BistooltipAddon.RefreshUI then
+                    BistooltipAddon:RefreshUI()
+                end
+            end,
+            get = function(info)
+                return BistooltipAddon.db.char.show_source_column
+            end
+        },
         tooltip_with_ctrl = {
             name = "Show BIS info only with Ctrl",
-            order = 3,
+            order = 5,
             desc = "Show BIS information in item tooltips only when holding Ctrl key",
             type = "toggle",
-            width = "full",
+            width = GENERAL_COLUMN_WIDTH,
             set = function(info, val)
                 BistooltipAddon.db.char.tooltip_with_ctrl = val
             end,
@@ -139,10 +165,10 @@ local configTable = {
         },
         gem_detailed = {
             name = "Show gem stats in BIS list",
-            order = 4,
+            order = 6,
             desc = "Display shortened stat bonuses below gem icons (e.g., +20 STR, +16 Crit)",
             type = "toggle",
-            width = "full",
+            width = GENERAL_COLUMN_WIDTH,
             set = function(info, val)
                 BistooltipAddon.db.char.gem_detailed = val
                 if BistooltipAddon.reloadData then
@@ -155,10 +181,10 @@ local configTable = {
         },
         enchant_detailed = {
             name = "Show enchant names in BIS list",
-            order = 5,
+            order = 7,
             desc = "Display enchant name below item icon (e.g., Gloves: Crusher)",
             type = "toggle",
-            width = "full",
+            width = GENERAL_COLUMN_WIDTH,
             set = function(info, val)
                 BistooltipAddon.db.char.enchant_detailed = val
                 if BistooltipAddon.reloadData then
@@ -169,28 +195,62 @@ local configTable = {
                 return BistooltipAddon.db.char.enchant_detailed
             end
         },
-        header_data = {
-            name = "Data Source",
-            order = 10,
-            type = "header",
-        },
-        data_source = {
-            name = "Data source",
-            order = 11,
-            desc = "Changes BIS data source",
-            type = "select",
-            style = "dropdown",
-            width = "double",
-            values = Bistooltip_source_to_url,
-            -- FIXED: select type uses (info, value) not (info, key, val)
-            set = function(info, value)
-                BistooltipAddon.db.char.data_source = value
-                BistooltipAddon:changeSpec(value)
+        window_scale = {
+            name = "Window scale",
+            order = 1.1,
+            desc = "Scale the main BiSTooltip window without changing its layout",
+            type = "range",
+            width = GENERAL_COLUMN_WIDTH,
+            min = WINDOW_SCALE_MIN,
+            max = WINDOW_SCALE_MAX,
+            step = WINDOW_SCALE_STEP,
+            isPercent = true,
+            set = function(info, val)
+                BistooltipAddon:ApplyWindowScale(val)
             end,
-            -- FIXED: select type uses (info) not (info, key)
             get = function(info)
-                return BistooltipAddon.db.char.data_source
-            end
+                return BistooltipAddon:GetWindowScale()
+            end,
+        },
+        reset_window_scale = {
+            name = "Reset window scale",
+            order = 2.1,
+            desc = "Restore the main window to 100% scale",
+            type = "execute",
+            width = GENERAL_COLUMN_WIDTH,
+            func = function()
+                BistooltipAddon:ResetWindowScale()
+            end,
+        },
+        general_spacer_source = {
+            name = "",
+            order = 3.1,
+            type = "description",
+            width = GENERAL_COLUMN_WIDTH,
+        },
+        general_spacer_column = {
+            name = "",
+            order = 4.1,
+            type = "description",
+            width = GENERAL_COLUMN_WIDTH,
+        },
+        general_spacer_ctrl = {
+            name = "",
+            order = 5.1,
+            type = "description",
+            width = GENERAL_COLUMN_WIDTH,
+        },
+        general_spacer_gem = {
+            name = "",
+            order = 6.1,
+            type = "description",
+            width = GENERAL_COLUMN_WIDTH,
+        },
+        general_spacer_enchant = {
+            name = "",
+            order = 7.1,
+            type = "description",
+            width = GENERAL_COLUMN_WIDTH,
         },
         header_filter = {
             name = "Spec Filtering",
@@ -281,6 +341,35 @@ local configTable = {
     }
 }
 
+function BistooltipAddon:NormalizeWindowScale(value)
+    value = tonumber(value) or 1
+    if value < WINDOW_SCALE_MIN then value = WINDOW_SCALE_MIN end
+    if value > WINDOW_SCALE_MAX then value = WINDOW_SCALE_MAX end
+    value = math.floor((value + WINDOW_SCALE_STEP / 2) / WINDOW_SCALE_STEP) * WINDOW_SCALE_STEP
+    return math.floor(value * 100 + 0.5) / 100
+end
+
+function BistooltipAddon:GetWindowScale()
+    local value = self.db and self.db.global and self.db.global.window_scale or 1
+    return self:NormalizeWindowScale(value)
+end
+
+function BistooltipAddon:ApplyWindowScale(value)
+    local normalized = self:NormalizeWindowScale(value == nil and self:GetWindowScale() or value)
+    if self.db and self.db.global then
+        self.db.global.window_scale = normalized
+    end
+    local frame = _G.BistooltipMainFrame
+    if frame and frame.SetScale then
+        frame:SetScale(normalized)
+    end
+    return normalized
+end
+
+function BistooltipAddon:ResetWindowScale()
+    return self:ApplyWindowScale(1)
+end
+
 -- ============================================================
 -- Build Filter/Highlight Options
 -- ============================================================
@@ -319,54 +408,37 @@ local function BuildFilterSpecOptions()
 end
 
 -- ============================================================
--- Source Selection Dialog (first-time setup)
--- ============================================================
-
-local function OpenSourceSelectDialog()
-    local frame = AceGUI:Create("Window")
-    frame:SetWidth(300)
-    frame:SetHeight(150)
-    frame:EnableResize(false)
-    frame:SetCallback("OnClose", function(widget)
-        AceGUI:Release(widget)
-    end)
-    frame:SetLayout("List")
-    frame:SetTitle(BistooltipAddon.AddonNameAndVersion)
-
-    local labelEmpty = AceGUI:Create("Label")
-    labelEmpty:SetFont("Fonts\\FRIZQT__.TTF", 14, "")
-    labelEmpty:SetText(" ")
-    frame:AddChild(labelEmpty)
-
-    local label = AceGUI:Create("Label")
-    label:SetText("Please select a BIS data source to be used for this addon:")
-    label:SetFont("Fonts\\FRIZQT__.TTF", 14, "")
-    label:SetRelativeWidth(1)
-    frame:AddChild(label)
-
-    local labelEmpty2 = AceGUI:Create("Label")
-    labelEmpty2:SetFont("Fonts\\FRIZQT__.TTF", 14, "")
-    labelEmpty2:SetText(" ")
-    frame:AddChild(labelEmpty2)
-
-    local sourceDropdown = AceGUI:Create("Dropdown")
-    sourceDropdown:SetCallback("OnValueChanged", function(_, _, key)
-        BistooltipAddon.db.char.data_source = key
-        BistooltipAddon:changeSpec(key)
-    end)
-    sourceDropdown:SetRelativeWidth(1)
-    sourceDropdown:SetList(Bistooltip_source_to_url)
-    sourceDropdown:SetValue(BistooltipAddon.db.char.data_source)
-    frame:AddChild(sourceDropdown)
-end
-
--- ============================================================
 -- Database Migration
 -- ============================================================
 
 local function MigrateAddonDB()
     local db = BistooltipAddon.db.char
-    
+
+    -- W4 (§12): account-wide migration — one-time copy of the old
+    -- per-character values into db.global; char copies stay dormant.
+    local gdb = BistooltipAddon.db.global
+    -- Personal enchant assignments were retired in favor of plugin-owned
+    -- recommendations. Remove legacy state so it cannot silently return.
+    gdb.custom_enhancements = nil
+    if not gdb.account_state_migrated then
+        if db.data_source ~= nil and gdb.data_source == "wowsims"
+            and db.data_source ~= "wowsims" then
+            gdb.data_source = db.data_source
+        end
+        if type(db.custom_priorities) == "table" then
+            gdb.custom_priorities = gdb.custom_priorities or {}
+            for k, v in pairs(db.custom_priorities) do
+                if gdb.custom_priorities[k] == nil then gdb.custom_priorities[k] = v end
+            end
+        end
+        gdb.account_state_migrated = true
+    end
+
+    -- Unsupported or retired account sources bind STANDARD immediately.
+    if not sources[gdb.data_source] then
+        gdb.data_source = "wowsims"
+    end
+
     -- Initial migration
     if not db.version then
         db.version = 6.1
@@ -379,7 +451,7 @@ local function MigrateAddonDB()
 
     -- Set default data source if not set
     if db.data_source == nil then
-        db.data_source = "wowtbc"
+        db.data_source = "wowsims"
     end
 
     -- Version 6.1 -> 6.2 migration
@@ -404,16 +476,92 @@ end
 -- Enable Data Source
 -- ============================================================
 
+-- Each bind starts from pristine database slots. Plugin replay and saved
+-- personal priorities supply the two mutable layers on top of that baseline.
+local function CopySlot(value)
+    if type(value) ~= "table" then return value end
+    local copy = {}
+    for k, v in pairs(value) do copy[k] = CopySlot(v) end
+    return copy
+end
+
+local function FreshBind(src)
+    if type(src) ~= "table" then return src end
+    local out = {}
+    for className, specs in pairs(src) do
+        out[className] = {}
+        for specName, phases in pairs(specs) do
+            out[className][specName] = {}
+            for phaseName, list in pairs(phases) do
+                local arr = {}
+                for i, slot in ipairs(list) do arr[i] = CopySlot(slot) end
+                -- Mutation trap (row-duplication hunt): after bind these
+                -- arrays should only be index-READ; any NEW key written
+                -- (e.g. an appended duplicate Weapon/Off hand) logs the
+                -- exact source line that did it via debugstack.
+                local label = className .. "/" .. specName .. "/" .. phaseName
+                local seenSites = {}
+                setmetatable(arr, {
+                    __newindex = function(t, k, v)
+                        local site = "?"
+                        if type(debugstack) == "function" then
+                            site = tostring(debugstack(2, 2, 1) or "?"):gsub("\n", " ")
+                        end
+                        if not seenSites[site] then
+                            seenSites[site] = true
+                            if DEFAULT_CHAT_FRAME then
+                                DEFAULT_CHAT_FRAME:AddMessage("|cffff0000[Bis-MUTATE]|r " .. label
+                                    .. " [" .. tostring(k) .. "] = " .. tostring(v and v.slot_name or type(v))
+                                    .. " @ " .. site)
+                            end
+                        end
+                        rawset(t, k, v)
+                    end,
+                })
+                out[className][specName][phaseName] = arr
+            end
+        end
+    end
+    return out
+end
+
 local function EnableSpec(spec_name)
-    if spec_name == sources.wowtbc then
-        Bistooltip_bislists = Bistooltip_wowtbc_bislists
-        Bistooltip_items = Bistooltip_wowtbc_items
-        Bistooltip_classes = Bistooltip_wowtbc_classes
-        Bistooltip_phases = Bistooltip_wowtbc_phases
-    else
-        -- Handle unexpected spec_name - fall back to wowtbc
-        Bistooltip_bislists = Bistooltip_wowtbc_bislists
-        Bistooltip_items = Bistooltip_wowtbc_items
+    -- W4 DB registry (spec §4): wowsims = assembled STANDARD (alliance base
+    -- + horde slot overrides via reference swaps); wowtbc / wh = plain alias.
+    -- Unknown keys fall back to the STANDARD.
+    local key = sources[spec_name] and spec_name or "wowsims"
+    if key == "wowsims" then
+        Bistooltip_bislists = FreshBind(Bistooltip_wowsims_final)
+        Bistooltip_classes = Bistooltip_wowsims_final_classes
+        Bistooltip_phases = Bistooltip_wowsims_final_phases
+        if type(Bistooltip_wowsims_horde_overrides) == "table"
+            and type(UnitFactionGroup) == "function"
+            and UnitFactionGroup("player") == "Horde" then
+            for className, specs in pairs(Bistooltip_wowsims_horde_overrides) do
+                local classData = Bistooltip_bislists[className]
+                if type(classData) == "table" then
+                    for specName, phases in pairs(specs) do
+                        local specData = classData[specName]
+                        if type(specData) == "table" then
+                            for phaseName, idxMap in pairs(phases) do
+                                local phaseList = specData[phaseName]
+                                if type(phaseList) == "table" then
+                                    for idx, slot in pairs(idxMap) do
+                                        phaseList[idx] = CopySlot(slot)
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    elseif key == "wh" then
+        Bistooltip_bislists = FreshBind(Bistooltip_wh_bislists)
+        Bistooltip_classes = Bistooltip_wh_classes
+        Bistooltip_phases = Bistooltip_wh_phases
+    else -- wowtbc
+        Bistooltip_bislists = FreshBind(Bistooltip_wowtbc_bislists)
         Bistooltip_classes = Bistooltip_wowtbc_classes
         Bistooltip_phases = Bistooltip_wowtbc_phases
     end
@@ -422,6 +570,13 @@ local function EnableSpec(spec_name)
     if type(Bistooltip_phases) ~= "table" then
         DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Bis-Tooltip:|r Phase data not loaded. Check addon files.")
         return
+    end
+
+    -- W4 overlay replay: server plugins describe the SERVER, not a ranking
+    -- DB — their mutations follow the user across database switches
+    -- (warn-once skips for slots missing in the new DB).
+    if type(BisTooltip_ReplayOverlay) == "function" then
+        BisTooltip_ReplayOverlay()
     end
 
     BuildFilterSpecOptions()
@@ -498,13 +653,54 @@ end
 -- ============================================================
 
 function BistooltipAddon:changeSpec(spec_name)
-    -- Reset selection indices
+    -- W4 (owner feedback 2026-09-10): keep the LAST VIEWED profile across a
+    -- database switch, resolved BY NAME against the new database (indices
+    -- are database-relative; specs/phases differ between bases).
+    local D = _G.BistooltipData
+    local className, specName, phaseName
+    if D and D.GetClassList then
+        local ci = D.GetClassList()[self.db.char.class_index]
+        className = ci and ci.name or nil
+        if className and D.GetSpecsForClass then
+            local specs = D.GetSpecsForClass(className)
+            specName = specs and specs[self.db.char.spec_index] or nil
+        end
+    end
+    if type(_G.Bistooltip_phases) == "table" then
+        phaseName = _G.Bistooltip_phases[self.db.char.phase_index] or nil
+    end
+
+    -- Personal-BiS order caches are keyed to the previously bound database
+    -- (ID reconciliation re-applies the saved order on read)
+    if BistooltipData and BistooltipData.ResetCustomPriorityCaches then
+        BistooltipData.ResetCustomPriorityCaches()
+    end
+
+    -- Enable new data source (binds aliases + replays the plugin overlay)
+    EnableSpec(spec_name)
+
+    -- Re-resolve the remembered profile in the new database (fallback 1/1/1)
     self.db.char.class_index = 1
     self.db.char.spec_index = 1
     self.db.char.phase_index = 1
-    
-    -- Enable new data source
-    EnableSpec(spec_name)
+    if className and D and D.GetClassList then
+        for i, cls in ipairs(D.GetClassList() or {}) do
+            if cls.name == className then
+                self.db.char.class_index = i
+                if specName and D.GetSpecsForClass then
+                    for j, sn in ipairs(D.GetSpecsForClass(cls.name) or {}) do
+                        if sn == specName then self.db.char.spec_index = j break end
+                    end
+                end
+                break
+            end
+        end
+    end
+    if phaseName and type(_G.Bistooltip_phases) == "table" then
+        for k, pn in ipairs(_G.Bistooltip_phases) do
+            if pn == phaseName then self.db.char.phase_index = k break end
+        end
+    end
     
     -- Clear caches
     if self.ClearSourceCache then
@@ -535,7 +731,7 @@ function BistooltipAddon:initConfig()
     MigrateAddonDB()
 
     -- Enable current data source
-    EnableSpec(self.db.char.data_source)
+    EnableSpec(self.db.global.data_source)
 
     -- Build filter options
     BuildFilterSpecOptions()

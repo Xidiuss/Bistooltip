@@ -1,0 +1,68 @@
+name: tests
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  addon:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Enforce release tree hygiene
+        run: |
+          if git ls-files docs | grep -q . || [ -d docs ]; then
+            echo "::error::Public docs/ content is not allowed in release branches."
+            exit 1
+          fi
+      - name: Install Lua 5.1
+        run: sudo apt-get update && sudo apt-get install -y lua5.1
+      - name: Check package and Lua syntax
+        run: |
+          node .github/tests/check_package.cjs
+          find Bistooltip .github/tests/lua -name '*.lua' -print0 | xargs -0 -n1 luac5.1 -p
+      - name: Run addon regression tests
+        run: |
+          for test in .github/tests/lua/test_*.lua; do
+            case "$test" in *test_server_plugins.lua) continue ;; esac
+            lua5.1 "$test" || exit 1
+          done
+  server-plugins:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        branch: [Bistooltip_Whitemane_Frostmourne, Bistooltip_WOTLK5_S2]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ matrix.branch }}
+          path: .integration/plugin
+          persist-credentials: false
+      - name: Install Lua 5.1
+        run: sudo apt-get update && sudo apt-get install -y lua5.1
+      - name: Exercise server overlay with every ranking database and faction
+        run: lua5.1 .github/tests/lua/test_server_plugins.lua .integration/plugin/${{ matrix.branch }}/main.lua
+  discord-notification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Compile sender and tests
+        run: python -m compileall -q .github/scripts .github/tests
+      - name: Run Discord notification tests
+        run: python -m unittest discover -s .github/tests -p "test_*.py" -v

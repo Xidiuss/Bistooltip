@@ -85,6 +85,10 @@ BistooltipConstants.COLORS = {
     NO_BIS = "ff3b3b",      -- Red
     FOUND = "ffff00",       -- Yellow
 
+    -- W3: source palette (alias of BisTooltip_SourcePalette defined in
+    -- SourceFormatter.lua, which loads earlier; one table, one truth)
+    SOURCE = BisTooltip_SourcePalette,
+
     -- UI colors
     HEADER = "ffd100",      -- Gold
     SUBHEADER = "ffffff",   -- White
@@ -414,75 +418,13 @@ BistooltipConstants.INSTANCE_DIFFICULTY = {
     ["Onyxia's Lair (25)"] = "25N",
 }
 
+-- LEGACY-DEAD: no .toc-loaded caller (sole caller was unloaded Bislist.lua); difficulty now comes from canonical data.
 -- Get difficulty tag for an instance name
 function BistooltipConstants.GetInstanceDifficulty(instanceName)
     if not instanceName then return nil end
     return BistooltipConstants.INSTANCE_DIFFICULTY[instanceName]
 end
 
--- ============================================================
--- Emblem/Badge Sources
--- ============================================================
-
-BistooltipConstants.EMBLEM_VENDORS = {
-    -- Custom server emblem
-    ["Emblem of Ascension"] = {
-        color = "00ffcc",  -- Cyan/turquoise for visibility
-        shortName = "Ascension",
-        icon = "Interface\\Icons\\Spell_Holy_SummonChampion",
-    },
-    -- Emblems of Frost
-    ["Emblem of Frost"] = {
-        color = "00ccff",
-        shortName = "Frost",
-        icon = "Interface\\Icons\\Spell_Frost_FrozenOrb",
-    },
-    -- Emblems of Triumph
-    ["Emblem of Triumph"] = {
-        color = "ffd700",
-        shortName = "Triumph",
-        icon = "Interface\\Icons\\Spell_Holy_ChampionsGrace",
-    },
-    -- Emblems of Conquest
-    ["Emblem of Conquest"] = {
-        color = "ff8000",
-        shortName = "Conquest",
-        icon = "Interface\\Icons\\Spell_Holy_ChampionsBond",
-    },
-    -- Emblems of Valor
-    ["Emblem of Valor"] = {
-        color = "a335ee",
-        shortName = "Valor",
-        icon = "Interface\\Icons\\Spell_Holy_ProclaimChampion_02",
-    },
-    -- Emblems of Heroism
-    ["Emblem of Heroism"] = {
-        color = "0070dd",
-        shortName = "Heroism",
-        icon = "Interface\\Icons\\Spell_Holy_ProclaimChampion",
-    },
-}
-
--- ============================================================
--- Emblem Vendor Items Database
--- Maps itemId -> { currency = "Emblem of Ascension", cost = 60 }
--- This should be populated with actual server data
--- ============================================================
-
-BistooltipConstants.EMBLEM_ITEMS = BistooltipConstants.EMBLEM_ITEMS or {}
-
--- Helper to register emblem items
-function BistooltipConstants.RegisterEmblemItem(itemId, currency, cost)
-    BistooltipConstants.EMBLEM_ITEMS[itemId] = {
-        currency = currency,
-        cost = cost,
-    }
-end
-
--- Get emblem source for item
-function BistooltipConstants.GetEmblemSource(itemId)
-    return BistooltipConstants.EMBLEM_ITEMS[itemId]
-end
 
 -- ============================================================
 -- Tier/Phase Combining Logic

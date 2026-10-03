@@ -1,8 +1,10 @@
 -- ============================================================
--- EmblemData.lua - Emblem vendor item database
+-- EmblemData.lua - OFFLINE vendor input for migrate_sources.lua
 -- ============================================================
--- This file contains mappings of items that can be purchased with emblems.
--- For custom servers, add your emblem vendor items here.
+-- Not loaded by the TOC. Runtime uses only ItemAcquisition.lua.
+-- Retained here because the private offline migrator consumes this path.
+-- Price corrections checked against the offline vendor reference, 2026-09-18.
+-- Custom server content lives in server plugins (e.g. Bistooltip_Whitemane_Frostmourne), not in core.
 
 -- Initialize the emblem items table
 Bistooltip_emblem_items = Bistooltip_emblem_items or {}
@@ -18,25 +20,26 @@ local function RegisterEmblemItems(currency, items)
             cost = cost,
         }
         
-        -- Also register in Constants if available
-        if BistooltipConstants and BistooltipConstants.RegisterEmblemItem then
-            BistooltipConstants.RegisterEmblemItem(itemId, currency, cost)
-        end
     end
 end
 
 -- ============================================================
--- Emblem of Ascension Items (Custom Server)
--- Format: [itemId] = cost
--- 
--- To find item IDs:
--- 1. Use /script print(GetItemInfo("item:ITEMID"))
--- 2. Or check wowhead.com URL: wowhead.com/wotlk/item=ITEMID
--- 
--- Example: Sanctified T10 gear typically costs 60-95 emblems
+-- Standard Emblem of Frost purchases
 -- ============================================================
 
 local FROST_ITEMS = {
+    -- Non-set Frost vendor purchases.
+    [50965] = 95,        -- Castle Breaker's Battleplate
+    [50968] = 95,        -- Cataclysmic Chestguard
+    [50969] = 95,        -- Chestplate of Unspoken Truths
+    [50975] = 95,        -- Ermine Coronation Robes
+    [50970] = 95,        -- Longstrider's Vest
+    [50971] = 95,        -- Mail of the Geyser
+    [50974] = 95,        -- Meteor Chaser's Raiment
+    [50972] = 95,        -- Shadow Seeker's Tunic
+    [50973] = 95,        -- Vestments of Spruce and Fir
+    [50993] = 60,        -- Band of the Night Raven
+
     -- ==================
     -- Tier 10 Sanctified (264 -> 277)
     -- These are example items - uncomment and adjust for your server
@@ -219,22 +222,14 @@ RegisterEmblemItems("Emblem of Frost", FROST_ITEMS)
 local TRIUMPH_ITEMS = {
 
     -- Chest
-    [50965] = 50,        -- Castle Breaker's Battleplate
-    [50968] = 50,        -- Cataclysmic Chestguard
-    [50969] = 50,        -- Chestplate of Unspoken Truths
-    [50975] = 50,        -- Ermine Coronation Robes
-    [50970] = 50,        -- Longstrider's Vest
-    [50971] = 50,        -- Mail of the Geyser
-    [50974] = 50,        -- Meteor Chaser's Raiment
-    [50972] = 50,        -- Shadow Seeker's Tunic
-    [50973] = 50,        -- Vestments of Spruce and Fir
+
     -- Finger
     [47732] = 35,        -- Band of the Invoker
     [47729] = 35,        -- Bloodshed Band
     [47731] = 35,        -- Clutch of Fortification
     [47730] = 35,        -- Dexterous Brightstone Ring
     [47733] = 35,        -- Heartmender Circle
-    [50993] = 35,        -- Band of the Night Raven
+
 
     -- Head
     [47688] = 75,        -- Mask of Lethal Intent
@@ -250,7 +245,7 @@ local TRIUMPH_ITEMS = {
     [47660] = 25,        -- Blades of the Sable Cross
     [47659] = 25,        -- Crimson Star
     -- Relic
-    [47667] = 19,        -- Totem of Quaking Earth
+    [47667] = 25,        -- Totem of Quaking Earth
     [47666] = 25,        -- Totem of Electrifying Wind
     [47665] = 25,        -- Totem of Calming Tides
     [47673] = 25,        -- Sigil of Virulence
@@ -371,16 +366,16 @@ local VALOR_ITEMS = {
     [40717] = 25,        -- Ring of Invincibility
     [40720] = 25,        -- Renewal of Life
     -- Relic
-    [40342] = 15,        -- Idol of Awakening
-    [40337] = 15,        -- Libram of Resurgence
-    [40322] = 15,        -- Totem of Dueling
-    [40321] = 15,        -- Idol of the Shooting Star
-    [40268] = 15,        -- Libram of Tolerance
-    [40267] = 15,        -- Totem of Hex
-    [40207] = 15,        -- Sigil of Awareness
-    [40191] = 15,        -- Libram of Radiance
-    [39757] = 15,        -- Idol of Worship
-    [39728] = 15,        -- Totem of Misery
+    [40342] = 25,        -- Idol of Awakening
+    [40337] = 25,        -- Libram of Resurgence
+    [40322] = 25,        -- Totem of Dueling
+    [40321] = 25,        -- Idol of the Shooting Star
+    [40268] = 25,        -- Libram of Tolerance
+    [40267] = 25,        -- Totem of Hex
+    [40207] = 25,        -- Sigil of Awareness
+    [40191] = 25,        -- Libram of Radiance
+    [39757] = 25,        -- Idol of Worship
+    [39728] = 25,        -- Totem of Misery
 
     -- Wrist
     [40741] = 60,        -- Cuffs of the Shadow Ascendant
@@ -414,15 +409,15 @@ local Heroism_ITEMS = {
 [40679] = 25,        -- Chained Military Gorget
 [40680] = 25,        -- Encircling Burnished Gold Chains
 [40681] = 25,        -- Lattice Choker of Light
-[40698] = 40,        -- Ward of the Violet Citadel
-[40699] = 40,        -- Handbook of Obscure Remedies
+[40698] = 25,        -- Ward of the Violet Citadel
+[40699] = 25,        -- Handbook of Obscure Remedies
 -- One-Hand
 [40702] = 50,        -- Rolfsen's Ripper
 [40703] = 50,        -- Grasscutter
 [40704] = 50,        -- Pride
 -- Shield
-[40700] = 40,        -- Protective Barricade of the Light
-[40701] = 40,        -- Crygil's Discarded Plate Panel
+[40700] = 35,        -- Protective Barricade of the Light
+[40701] = 35,        -- Crygil's Discarded Plate Panel
 -- Trinket
 [40682] = 40,        -- Sundial of the Exiled
 [40683] = 40,        -- Valor Medal of the First War
@@ -463,392 +458,3 @@ RegisterEmblemItems("Emblem of Heroism", Heroism_ITEMS)
 -- ============================================================
 -- Emblem of Ascension Items
 -- ============================================================
-
-local ASCENSION_ITEMS = {
-
-
-    -- Emblem of Ascension x12
-    [40322] = 12, [40321] = 12, [40268] = 12, [40267] = 12, [40207] = 12, [40191] = 12, [39757] = 12, [40239] = 12, [39728] = 12,
-
-    -- Emblem of Ascension x15
-    [40433] = 15, [40375] = 15, [40370] = 15, [40108] = 15, [40107] = 15, [40080] = 15, [40075] = 15, [40074] = 15, [40378] = 15, 
-    [40374] = 15, [40369] = 15, [40071] = 15, [40069] = 15, [40065] = 15, [40064] = 15, [40244] = 15, [40254] = 15, [40253] = 15, 
-    [40252] = 15, [40251] = 15, [40250] = 15, [40332] = 15, [40325] = 15, [40324] = 15, [40323] = 15, [40306] = 15, [40282] = 15, 
-    [40274] = 15, [40209] = 15, [40198] = 15, [40186] = 15, [39765] = 15, [39764] = 15, [39731] = 15, [39729] = 15, [39722] = 15, 
-    [39702] = 15, [40330] = 15,
-
-    -- Emblem of Ascension x19
-    [40638] = 19, [40439] = 19, [40438] = 19, [40437] = 19, [40377] = 19, [40351] = 19, [40315] = 19, [40305] = 19, [40299] = 19, 
-    [40289] = 19, [40288] = 19, [40286] = 19, [40185] = 19, [40063] = 19, [39725] = 19, [39719] = 19, [39704] = 19, [40334] = 19, 
-    [44003] = 19, [40629] = 19, [40380] = 19, [40362] = 19, [40349] = 19, [40347] = 19, [40316] = 19, [40303] = 19, [40302] = 19, 
-    [40262] = 19, [40261] = 19, [40242] = 19, [40238] = 19, [40197] = 19, [40188] = 19, [39733] = 19, [39727] = 19, [39726] = 19, 
-    [39718] = 19, [39703] = 19, [44004] = 19, [40327] = 19, [40317] = 19, [40301] = 19, [40278] = 19, [40275] = 19, [40272] = 19, 
-    [40271] = 19, [40263] = 19, [40260] = 19, [40259] = 19, [40241] = 19, [40205] = 19, [40200] = 19, [39762] = 19, [39759] = 19, 
-    [39735] = 19, [39721] = 19, [40243] = 19, [40236] = 19, [40237] = 19, [40270] = 19, [40206] = 19, [40367] = 19, [40326] = 19, 
-    [40320] = 19, [40297] = 19, [40269] = 19, [39701] = 19, [40187] = 19, [39706] = 19, [39734] = 19, [40246] = 19, [39717] = 19, 
-    [40184] = 19,
-
-    -- Emblem of Ascension x25
-    [40451] = 25, [40366] = 25, [40344] = 25, [40304] = 25, [40298] = 25, [40296] = 25, [40287] = 25, [40247] = 25, [40235] = 25, 
-    [39768] = 25, [39760] = 25, [39732] = 25, [39723] = 25, [40329] = 25, [40626] = 25, [40602] = 25, [40381] = 25, [40234] = 25, 
-    [40062] = 25, [40453] = 25, [40365] = 25, [40319] = 25, [40283] = 25, [40279] = 25, [40277] = 25, [40249] = 25, [40210] = 25, 
-    [40203] = 25, [40193] = 25, [40061] = 25, [39767] = 25, [39756] = 25, [39724] = 25, [40363] = 25, [40240] = 25, [39720] = 25, 
-    [40379] = 25, [40294] = 25, [40196] = 25, [40635] = 25, [40318] = 25, [40352] = 25, [40398] = 25, [40560] = 25, [40589] = 25, 
-    [40204] = 25, [39761] = 25,
-
-    -- Emblem of Ascension x38
-    [40532] = 38, [40531] = 38, [40432] = 38, [40431] = 38, [40382] = 38, [40373] = 38, [40372] = 38, [40371] = 38, [40258] = 38, 
-    [40257] = 38, [40256] = 38, [40255] = 38, [40399] = 38, [40387] = 38, [40402] = 38, [40401] = 38, [40400] = 38, [40396] = 38, 
-    [40395] = 38, [40388] = 38, [40386] = 38, [40385] = 38, [40384] = 38, [40383] = 38, [44007] = 38, [44006] = 38, [40562] = 38, 
-    [40543] = 38, [40632] = 38, [40594] = 38, [40590] = 38, [40555] = 38, [44005] = 38, [40405] = 38, [40403] = 38, [40588] = 38, 
-    [40539] = 38, [40194] = 38, [44008] = 38, [40541] = 38, [40564] = 38, [40566] = 38, [40561] = 38, [44011] = 38, [40201] = 38, 
-    [40376] = 38, [40446] = 38, [40592] = 38, [40591] = 38, [40558] = 38, [40549] = 38,
-
-    -- Emblem of Ascension x80
-    [15000] = 80, [130023] = 80, [130031] = 80,
-}
-
-RegisterEmblemItems("Emblem of Ascension", ASCENSION_ITEMS)
-
-
--- ============================================================
--- Emblem of Holy Ascension Items
--- ============================================================
-
-local HOLYASCENSION_ITEMS = {
-
--- Emblem of Ascension x1
-[131008] = 1,        -- Emblem of Ascension
--- Emblem of Ascension x2
-[131010] = 2,        -- Echo of the Titans
-
-
--- Emblem of Ascension T8 SET
-    --  x19
-[45642] = 19,        -- Gauntlets of the Wayward Protector
-[45657] = 19,        -- Mantle of the Wayward Protector
-    --  x25
-[45633] = 25,        -- Breastplate of the Wayward Protector
-[45654] = 25,        -- Legplates of the Wayward Protector
-[45639] = 25,        -- Crown of the Wayward Protector
-
--- Emblem of Ascension x25
-[45502] = 25,        -- Helm of the Faceless
-[45334] = 25,        -- Unbreakable Chestguard
-[45481] = 25,        -- Gauntlets of Ruthless Reprisal
-[45466] = 25,        -- Scale of Fates
-[45251] = 25,        -- Shoulderplates of the Deconstructor
-[45139] = 25,        -- Dragonslayer's Brace
-[45451] = 25,        -- Frozen Loop
-[45326] = 25,        -- Platinum Band of the Aesir
-[45137] = 25,        -- Veranus' Bane
-[45540] = 25,        -- Bladebearer's Signet
-[45271] = 25,        -- Ironmender
-[45228] = 25,        -- Handguards of the Enclave
-[45262] = 25,        -- Necklace of Unerring Mettle
-[45250] = 25,        -- Crazed Construct Ring
-[45112] = 25,        -- The Leviathan's Coil
-[45111] = 25,        -- Mimiron's Inferno Couplings
-[45542] = 25,        -- Greaves of the Stonewarder
-[45469] = 25,        -- Sif's Promise
-[45148] = 25,        -- Living Flame
-[45247] = 25,        -- Signet of the Earthshaker
-[45158] = 25,        -- Heart of Iron
-[45490] = 25,        -- Pandora's Plea
-[45319] = 25,        -- Cloak of the Makers
--- Emblem of Ascension x32
-[45133] = 32,        -- Pendant of Fiery Havoc
-[45135] = 32,        -- Boots of Fiery Resolution
-[45134] = 32,        -- Plated Leggings of Ruination
-[45136] = 32,        -- Shoulderpads of Dormant Energies
-[45241] = 32,        -- Belt of Colossal Rage
-[45242] = 32,        -- Drape of Mortal Downfall
-[45243] = 32,        -- Sapphire Amulet of Renewal
-[45244] = 32,        -- Greaves of Swift Vengeance
-[45245] = 32,        -- Shoulderpads of the Intruder
-[45443] = 32,        -- Charm of Meticulous Timing
-[45444] = 32,        -- Gloves of the Steady Hand
-[45445] = 32,        -- Breastplate of the Devoted
-[45446] = 32,        -- Grasps of Reason
-[45459] = 32,        -- Frigid Strength of Hodir
-[45460] = 32,        -- Bindings of Winter Gale
-[45461] = 32,        -- Drape of Icy Intent
-[45462] = 32,        -- Gloves of the Frozen Glade
-[45470] = 32,        -- Wisdom's Hold
-[45471] = 32,        -- Fate's Clutch
-[45472] = 32,        -- Warhelm of the Champion
-[45473] = 32,        -- Embrace of the Gladiator
-[45474] = 32,        -- Pauldrons of the Combatant
-[45485] = 32,        -- Bronze Pendant of the Vanir
-[45486] = 32,        -- Drape of the Sullen Goddess
-[45487] = 32,        -- Handguards of Revitalization
-[45488] = 32,        -- Leggings of the Enslaved Idol
-[45494] = 32,        -- Delirium's Touch
-[45495] = 32,        -- Conductive Seal
-[45496] = 32,        -- Titanskin Cloak
-[45497] = 32,        -- Crown of Luminescence
-[45517] = 32,        -- Pendulum of Infinity
-[45519] = 32,        -- Vestments of the Blind Denizen
-[45520] = 32,        -- Handwraps of the Vigilant
-[45534] = 32,        -- Seal of the Betrayed King
-[45536] = 32,        -- Legguards of Cunning Deception
-[45537] = 32,        -- Treads of the False Oracle
-[45587] = 32,        -- Bulwark of Algalon
-[45594] = 32,        -- Legplates of the Endless Void
-[45599] = 32,        -- Sabatons of Lifeless Night
-[45610] = 32,        -- Boundless Gaze
-[45611] = 32,        -- Solar Bindings
-[45615] = 32,        -- Planewalker Treads
-[45616] = 32,        -- Star-beaded Clutch
-[45617] = 32,        -- Cosmos
-[45619] = 32,        -- Starwatcher's Binding
-[45663] = 32,        -- Armbands of Bedlam
-[45665] = 32,        -- Pharos Gloves
--- Emblem of Ascension x44
-[45132] = 44,        -- Golden Saronite Dragon
-[45442] = 44,        -- Sorthalis Hammer of the Watchers
-[45484] = 44,        -- Bladetwister
-[45518] = 44,        -- Flare of the Heavens
-[45535] = 44,        -- Show of Faith
-[45609] = 44,        -- Comet's Trail
-[45612] = 44,        -- Constellus
-[45620] = 44,        -- Starshard Edge
--- Emblem of Ascension x52
-[45457] = 52,        -- Staff of Endless Winter
-[45516] = 52,        -- Voldrethar Dark Blade of Oblivion
-[45533] = 52,        -- Dark Edge of Depravity
-[45570] = 52,        -- Skyforge Crossbow
-[45613] = 52,        -- Dreambinder
--- Emblem of Ascension x150
-[46017] = 150,        -- Val'anyr
-[131004] = 150,        -- Domhammer
-[128858] = 150,        -- Scythe of the Cat God
-
-}
-
-RegisterEmblemItems("Emblem of Ascension II", HOLYASCENSION_ITEMS)
-
--- ============================================================
--- Echo of the Titans items
--- ============================================================
-
-
-local TITAN_ITEMS = {
-
-[46034] = 12,        -- Leggings of Profound Darkness
-[46044] = 12,        -- Observer's Mantle
-[46067] = 12,        -- Hammer of Crushing Whispers
-[46047] = 12,        -- Pendant of the Somber Witness
-[45989] = 12,        -- Tempered Mercury Greaves
-[45930] = 12,        -- Combatant's Bootblade
-[46045] = 12,        -- Pulsar Gloves
-[46021] = 12,        -- Royal Seal of King Llane
-[46040] = 12,        -- Strength of the Heavens
-[45931] = 12,        -- Mjolnir Runestone
-[46050] = 12,        -- Starlight Treads
-[46036] = 12,        -- Void Sabre
-[45982] = 12,        -- Fused Alloy Legplates
-[46051] = 12,        -- Meteorite Crystal
-[46032] = 12,        -- Drape of the Faceless General
-[46041] = 12,        -- Starfall Girdle
-[45947] = 12,        -- Serilas Blood Blade of Invar One-Arm
-[46097] = 12,        -- Caress of Insanity
-[45993] = 12,        -- Mimiron's Flight Goggles
-[45988] = 12,        -- Greaves of the Iron Army
-[46042] = 12,        -- Drape of the Messenger
-[45300] = 12,        -- Mantle of Fiery Vengeance
-[46096] = 12,        -- Signet of Soft Lament
-[46038] = 12,        -- Dark Matter
-[45945] = 12,        -- Seed of Budding Carnage
-[45286] = 12,        -- Pyrite Infuser
-[46037] = 12,        -- Shoulderplates of the Celestial Watch
-[45943] = 12,        -- Gloves of Whispering Winds
-[45928] = 12,        -- Gauntlets of the Thunder God
-[46048] = 12,        -- Band of Lights
-[45990] = 12,        -- Fusion Blade
-[46039] = 12,        -- Breastplate of the Timeless
-[45933] = 12,        -- Pendant of the Shallow Grave
-[45946] = 12,        -- Fire Orchid Signet
-[45297] = 12,        -- Shimmering Seal
-[46049] = 12,        -- Zodiac Leggings
-[45867] = 12,        -- Breastplate of the Stoneshaper
-[46033] = 12,        -- Tortured Earth
-[46043] = 12,        -- Gloves of the Endless Dark
-[46035] = 12,        -- Aesuga Hand of the Ardent Champion
-[46046] = 12,        -- Nebula Band
-[46068] = 12,        -- Amice of Inconceivable Horror
-[46095] = 12,        -- Soul-Devouring Cinch
-[45888] = 12,        -- Bitter Cold Armguards
-[45876] = 12,        -- Shiver
-[45868] = 12,        -- Aesir's Edge
-[45929] = 12,        -- Sif's Remembrance
-[45295] = 12,        -- Gilded Steel Legplates
-[45887] = 12,        -- Ice Layered Barrier
-[45293] = 12,        -- Handguards of Potent Cures
-[45886] = 12,        -- Icecore Staff
-[45877] = 12,        -- The Boreal Guard
-[45871] = 12,        -- Seal of Ulduar
-[45870] = 12,        -- Magnetized Projectile Emitter
-[45869] = 12,        -- Fluxing Energy Coils
-[45456] = 12,        -- Loop of the Agile
-[45449] = 12,        -- The Masticator
-[45448] = 12,        -- Perilous Bite
-[45308] = 12,        -- Eye of the Broodmother
-[45294] = 12,        -- Petrified Ivy Sprig
-[45296] = 12,        -- Twirling Blades
-[45447] = 12,        -- Watchful Eye of Fate
-[45703] = 12,        -- Spark of Hope
-}
-RegisterEmblemItems("Echo of the Titans", TITAN_ITEMS)
-
--- ============================================================
--- T8 Set Auto-Registration (from BIS lists)
--- ============================================================
--- Scans the T8 phase of all BIS lists and registers class-specific
--- set piece items with the appropriate Emblem of Ascension II cost.
---
--- Logic:
---   - Only registers items that appear in exactly ONE class (class-specific = set piece)
---   - Items shared across multiple classes (non-set drops) are skipped
---   - Items already registered in any emblem table are preserved as-is
---
--- Slot costs (mirror the T8 token costs):
---   Head / Chest / Legs  = 25 emblems
---   Shoulder / Hands     = 19 emblems
--- ============================================================
-
-local function RegisterT8SetFromBislist()
-    if not Bistooltip_wowtbc_bislists then return end
-
-    local slotCosts = {
-        ["Head"]     = 25,
-        ["Shoulder"] = 19,
-        ["Chest"]    = 25,
-        ["Hands"]    = 19,
-        ["Legs"]     = 25,
-    }
-
-    -- Pass 1: for every item in T8 set slots, record which classes use it
-    local itemClasses = {}
-    for className, classData in pairs(Bistooltip_wowtbc_bislists) do
-        for _, specData in pairs(classData) do
-            local t8Data = specData["T8"]
-            if t8Data then
-                for _, slotData in ipairs(t8Data) do
-                    if slotCosts[slotData["slot_name"]] then
-                        local i = 1
-                        while slotData[i] do
-                            local itemId = slotData[i]
-                            if not itemClasses[itemId] then
-                                itemClasses[itemId] = {}
-                            end
-                            itemClasses[itemId][className] = true
-                            i = i + 1
-                        end
-                    end
-                end
-            end
-        end
-    end
-
-    -- Pass 2: register class-specific items not already in any emblem table
-    for className, classData in pairs(Bistooltip_wowtbc_bislists) do
-        for _, specData in pairs(classData) do
-            local t8Data = specData["T8"]
-            if t8Data then
-                for _, slotData in ipairs(t8Data) do
-                    local slotName = slotData["slot_name"]
-                    local cost = slotCosts[slotName]
-                    if cost then
-                        local i = 1
-                        while slotData[i] do
-                            local itemId = slotData[i]
-                            local numClasses = 0
-                            for _ in pairs(itemClasses[itemId]) do
-                                numClasses = numClasses + 1
-                            end
-                            if numClasses == 1 and not Bistooltip_emblem_items[itemId] then
-                                Bistooltip_emblem_items[itemId] = {
-                                    currency = "Emblem of Ascension II",
-                                    cost = cost,
-                                }
-                            end
-                            i = i + 1
-                        end
-                    end
-                end
-            end
-        end
-    end
-end
-
-RegisterT8SetFromBislist()
-
--- ============================================================
--- Utility Functions
--- ============================================================
-
--- Check if an item is available from emblems
-function Bistooltip_GetEmblemSource(itemId)
-    if not itemId then return nil end
-    return Bistooltip_emblem_items[itemId]
-end
-
--- Calculate total emblems needed for a list of item IDs
-function Bistooltip_CalculateEmblemsNeeded(itemIds)
-    local totals = {}  -- currency -> { total = n, items = {} }
-    
-    for _, itemId in ipairs(itemIds) do
-        local emblem = Bistooltip_emblem_items[itemId]
-        if emblem then
-            local currency = emblem.currency
-            if not totals[currency] then
-                totals[currency] = { total = 0, items = {} }
-            end
-            totals[currency].total = totals[currency].total + (emblem.cost or 0)
-            table.insert(totals[currency].items, {
-                id = itemId,
-                cost = emblem.cost or 0,
-            })
-        end
-    end
-    
-    return totals
-end
-
--- Print emblem info for an item (useful for debugging)
-function Bistooltip_PrintEmblemInfo(itemIdOrLink)
-    local itemId = itemIdOrLink
-    if type(itemIdOrLink) == "string" then
-        itemId = tonumber(itemIdOrLink:match("item:(%d+)"))
-    end
-    
-    if not itemId then
-        print("|cffff0000Invalid item ID or link|r")
-        return
-    end
-    
-    local name = GetItemInfo(itemId)
-    local emblem = Bistooltip_emblem_items[itemId]
-    
-    if emblem then
-        print(string.format("|cffffd000%s|r (ID: %d): |cff00ff00%s x%d|r", 
-            name or "Unknown", itemId, emblem.currency, emblem.cost or 0))
-    else
-        print(string.format("|cffffd000%s|r (ID: %d): |cffff0000Not available from emblems|r",
-            name or "Unknown", itemId))
-    end
-end
-
--- Slash command to check emblem info
-SLASH_BISEMBLEM1 = "/bisemblem"
-SlashCmdList["BISEMBLEM"] = function(msg)
-    if msg == "" then
-        print("|cffffd000Bis-Tooltip Emblem Info:|r")
-        print("Usage: /bisemblem [itemId or item link]")
-        print("Example: /bisemblem 50356")
-        return
-    end
-    
-    Bistooltip_PrintEmblemInfo(msg)
-end

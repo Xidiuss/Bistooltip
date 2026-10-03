@@ -1,181 +1,169 @@
-# Bis-Tooltip
+<div align="center">
 
-A World of Warcraft 3.3.5a (WotLK) addon that displays Best-in-Slot (BiS) information in item tooltips and provides a comprehensive BiS checklist UI.
+# BiSTooltip Core
 
-## Features
+**Best-in-Slot rankings, acquisition details, and a practical gear checklist for World of Warcraft 3.3.5a.**
 
-- **Tooltip Enhancement**: Shows BiS ranking and phase information directly in item tooltips
-- **BiS Checklist UI**: Full-featured window displaying all BiS items for your class/spec
-- **Dual Mode**: MAIN (general gear) and BIS (checklist) views
-- **ASCEND Mode**: Filter items by Emblem of Ascension currency
-- **Progress Tracking**: Visual progress bars showing collection completion
-- **Gem & Enchant Details**: Optional expanded view showing recommended gems and enchants
-- **Shift+Click Linking**: Link gems and enchants to chat with Shift+Click
-- **Search & Filter**: Quick search through all BiS items
-- **Phase Selection**: Filter items by content phase (PR, T7, T8, T9, T10, RS)
-- **Instance Grouping**: Items grouped by raid instance with themed headers
-- **Lock System**: Mark items as obtained to track progress
-- **Custom Priority**: Drag items to reorder BiS priority per slot
+![Version 3.0.0](https://img.shields.io/badge/version-3.0.0-4c8eda)
+![WoW 3.3.5a](https://img.shields.io/badge/WoW-3.3.5a-c79c6e)
+![License MIT](https://img.shields.io/badge/license-MIT-2ea44f)
 
-## Installation
+</div>
 
-1. Download the addon
-2. Extract to `World of Warcraft/Interface/AddOns/`
-3. Ensure the folder is named `Bistooltip`
-4. Restart WoW or `/reload`
+BiSTooltip Core is a universal addon for standard World of Warcraft: Wrath of the Lich King 3.3.5a. It intentionally contains no private-server custom items, currencies, vendors, or rules; server-specific data belongs in optional plugins. Core 3.0.0 adds ranked gear information and acquisition sources to item tooltips, then brings the same data into a browsable checklist window with two ranking databases, faction-aware data, ownership tracking, vendor views, and personal priorities.
 
-## Usage
+<p align="center">
+  <img src=".github/assets/readme/core-overview.png" alt="BiSTooltip Core main window with ranked gear and acquisition sources" width="520">
+</p>
 
-- `/bis` or `/bistooltip` - Open the BiS checklist window
-- `/bis config` or `/bistooltip config` - Open settings
-- `/bis reload` or `/bistooltip reload` - Reload data
-- `/bistooltip help` - Show all available commands
-- Hover over items to see BiS information in tooltips
-- Use the class/spec dropdowns to view different specs
-- Toggle between MAIN and BIS tabs for different views
-- Enable ASCEND mode to filter emblem vendor items
-- **Shift+Click** on items to link them to chat
-- **Shift+Click** on gems/enchants to link them to chat
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src=".github/assets/readme/core-tooltip.png" alt="BiSTooltip item tooltip with rankings and source details" width="320">
+    </td>
+    <td align="center" width="50%">
+      <img src=".github/assets/readme/core-vendor.png" alt="BiSTooltip vendor view with item purchase routes" width="360">
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Ranked tooltip details</sub></td>
+    <td align="center"><sub>Vendor purchase routes</sub></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <img src=".github/assets/readme/core-settings.png" alt="BiSTooltip Interface settings with General Settings and window scale controls" width="420">
+      <br><sub>Interface settings</sub>
+    </td>
+  </tr>
+</table>
 
-## Project Structure
+## Quick Start
 
-```
-Bis-Tooltip/
-├── Bistooltip.toc              # Addon manifest (load order)
-├── Core.lua                    # Addon initialization & events
-├── Config.lua                  # Settings UI (AceConfig)
-├── Constants.lua               # UI dimensions, colors, layout constants
-│
-├── # Data Layer
-├── DataProvider.lua            # Data access, filtering, caching
-├── StateManager.lua            # Application state management
-├── Bistooltip_wowtbc_bislists.lua  # BiS item database
-├── Bistooltip_classes.lua      # Class/spec definitions
-├── Bistooltip_horde_to_ali.lua # Horde<->Alliance item translations
-├── EmblemData.lua              # Emblem vendor items & costs
-├── GemData.lua                 # Gem stats database
-├── Loot_Sources.lua            # Item drop locations
-│
-├── # UI Framework
-├── UIFramework.lua             # UI helper functions & factories
-├── ObjectPool.lua              # High-performance frame pooling
-├── BislistUI.lua               # Main checklist window
-├── Bistooltip.lua              # Tooltip enhancement logic
-│
-├── ui/                         # UI Components
-│   ├── InstanceHeader.lua      # Collapsible raid instance headers
-│   ├── SlotRow.lua             # Equipment slot row rendering
-│   └── ProgressBar.lua         # Collection progress bars
-│
-├── util/                       # Utilities
-│   ├── debounce.lua            # Input debouncing for search
-│   └── reset.lua               # Frame reset/cleanup functions
-│
-├── Utils.lua                   # Centralized utility functions
-│
-└── legacy/                     # Unused/deprecated code
-    ├── FlowView.lua            # (unused) Alternative layout
-    ├── GridView.lua            # (unused) Grid layout
-    └── ItemButton.lua          # (unused) Legacy item buttons
-```
+1. Download the Core package from the `main` branch or the `core-v3.0.0` release.
+2. Copy the `Bistooltip` folder into `World of Warcraft/Interface/AddOns/`.
+3. Confirm that the manifest is at `Interface/AddOns/Bistooltip/Bistooltip.toc`.
+4. Enable **Bis-Tooltip** at character selection and log in or reload the UI.
+5. Enter `/bis` to open the main window.
+6. Choose a class, specialization, and phase. Use the database selector after **EXPORT** in the bottom action bar when you want to change ranking sources.
 
-## Architecture
+All required libraries are included. DataStore and DataStore_Inventory are optional.
 
-### Load Order (defined in .toc)
+## What Core Provides
 
-1. **External Libraries** - Ace3 stack (AceAddon, AceDB, AceGUI, etc.)
-2. **Data Files** - Static databases (loot sources, emblems, gems, BiS lists)
-3. **Utilities** - Utils, reset, debounce
-4. **Constants** - UI configuration values
-5. **Data Provider** - Caching & data access layer
-6. **State Manager** - Application state
-7. **Object Pools** - Frame recycling system
-8. **UI Framework** - Common UI helpers
-9. **UI Components** - ProgressBar, SlotRow, InstanceHeader
-10. **Core** - Addon initialization
-11. **Config** - Settings UI
-12. **Tooltip** - Tooltip enhancement
-13. **Main UI** - BislistUI window
+- Ranked item tooltips with configurable class/spec visibility and highlighting.
+- Canonical acquisition lines for drops, tokens, marks, vendors, activities, and custom sources.
+- Native token and Trophy of the Crusade icons when their item data is cached.
+- Faction-aware rankings and acquisition data.
+- Character ownership indicators based on the current character's equipped items and bags.
+- Optional gem and enchant details in the checklist.
+- Safe, replayable server-plugin overlays across database changes.
 
-### Key Design Patterns
+## Main Window
 
-- **Object Pooling**: Frames are recycled to prevent GC pressure and frame drops
-- **Lazy Caching**: Item info, instance colors, and normalized names are cached on first use
-- **State Management**: Centralized state with listener pattern for UI updates
-- **Debounced Input**: Search input uses 250ms debounce to prevent excessive redraws
-- **Centralized Utilities**: Common functions in Utils.lua prevent code duplication
+The main window keeps class, specialization, and phase controls together with four focused workflows:
 
-### Performance Optimizations
+| Control | Purpose |
+| --- | --- |
+| **MAIN** | Browse up to six ranked alternatives per equipment slot. |
+| **BIS** | Turn the ranking into an acquisition checklist grouped by source location. |
+| **VENDOR** | While on the BIS tab, show only ranked items with a recorded purchase route and display each available offer. |
+| **CUSTOM** | While on MAIN, unlock a slot and choose two item icons to reorder its personal priorities. |
+| **LOCK** | Hold the selected phase while changing other filters. |
+| **RESET** | Restore the active database/plugin order for the current selection. |
+| **EXPORT** | Open a copyable text version of the current BIS checklist. |
+| **RELOAD** | Rescan owned items, clear display caches, request missing item data, and rebuild the view. |
+| **Scale grip** | Drag the lower-right grip with the left mouse button to scale the window; right-click it to reset to 100%. |
 
-- O(1) pool acquire/release using index tracking
-- Cached GetItemInfo() calls with lowercase name caching
-- Reverse lookup tables for Horde<->Alliance translations
-- Instance name normalization caching
-- Mark-and-compact strategy for delayed call queues
-- Event cleanup on addon disable to prevent memory leaks
+Shift-click an available item to link it in chat. Ctrl-click previews equipment when the game can provide an item link.
 
-## Configuration
+Personal item priorities, the selected ranking database, and window scale are account-wide. Priorities are reconciled by item ID after a database change. Character, specialization, and phase are preserved by name when the destination database contains them; otherwise the window uses a safe available profile.
 
-Access settings via:
-- ESC -> Interface -> AddOns -> Bis-Tooltip
-- Or click the OPTIONS button in the addon window
+## Ranking Databases
 
-### Available Options
+Core exposes exactly two ranking choices:
 
-- **Show Only Missing**: Hide already obtained items
-- **Gem Detailed**: Show gem stats below item icons
-- **Enchant Detailed**: Show enchant names in expanded rows
-- **Lock Items**: Mark items as obtained manually
+| Database | Key | Notes |
+| --- | --- | --- |
+| **WoWSimsBP (STANDARD)** | `wowsims` | Default snapshot with faction-specific overrides. |
+| **wowtbc.gg** | `wowtbc` | Alternative bundled ranking snapshot. |
 
-## Supported Classes & Specs
+Use the compact selector immediately after **EXPORT** in the bottom action bar. Its menu opens upward so it stays within the window area. Changing the database refreshes the controls and table, resets database-specific caches, and replays installed server overlays. Re-selecting the active database is a no-op.
 
-All WotLK classes and specs are supported:
-- Death Knight: Blood Tank, Frost, Unholy, Blood DPS
-- Druid: Balance, Feral Tank, Feral DPS, Restoration
-- Hunter: Beast Mastery, Marksmanship, Survival
-- Mage: Arcane, Fire, Fire FFB, Frost
-- Paladin: Holy, Protection, Retribution
-- Priest: Discipline, Holy, Shadow
-- Rogue: Assassination, Combat
-- Shaman: Elemental, Enhancement, Restoration
-- Warrior: Arms, Fury, Protection
-- Warlock: Affliction, Demonology, Destruction
+The snapshots are bundled with the addon; switching databases does not download current web data.
 
-## Content Phases
+## Ownership and Item Cache
 
-- **PR** - Pre-Raid (Heroic dungeons, crafted, reputation)
-- **T7** - Naxxramas, Eye of Eternity, Obsidian Sanctum
-- **T8** - Ulduar
-- **T9** - Trial of the Crusader
-- **T10** - Icecrown Citadel
-- **RS** - Ruby Sanctum
+Core scans the current character's equipped items and bags. DataStore modules are optional dependencies, but the built-in checklist count does not promise bank or alternate-character inventory; verify storage that is not available to the current client session.
 
-## Changelog
+World of Warcraft resolves item names, links, and textures asynchronously. Core requests missing information in bounded batches, retries unresolved items, shows pending/unavailable progress, and ignores late results from an older selection. If the client has just learned many new items, press **RELOAD** after its local cache fills.
 
-### v2.2.0 (2026-02-13)
-- **Fixed**: Slash commands `/bis` and `/bistooltip` now work (registration was missing)
-- **Fixed**: T9 and other faction-specific items no longer show "NO BIS" when hovering over equipped gear on cross-faction servers
-- **Added**: Slash command subcommands: `/bis config`, `/bis reload`, `/bistooltip help`
+Ownership markers are guidance, not a replacement for checking storage that is unavailable to the current client session.
 
-### v2.1.2 (2026-02-04)
-- cleared history and marked as release version
+## Settings
 
-### v2.1.1 (2026-02-04)
-- **Fixed**: Options window now opens in front of main addon window
-- **Fixed**: CUSTOM mode button properly deactivates when switching to BIS tab
-- **Changed**: Bottom buttons unified to uppercase (RELOAD, RESET, DISCORD)
+Open settings with `/bis config` or the **OPTIONS** tab. Available controls include:
 
-### v2.1.0 (2026-02-04)
-- **Fixed**: Shift+Click linking for gems and enchants
-- **Fixed**: sortByTier runtime error
-- **Fixed**: Config dialog race condition
-- **Consolidated**: TooltipSetItemByID, NormalizeItemID, GetSpecIcon
-- **Cleanup**: Dead code removal, legacy files moved, memory leak prevention
+- minimap icon visibility;
+- class-name separators in tooltips;
+- item-source lines in tooltips;
+- the independent **SOURCE** column in the BIS window;
+- Ctrl-only tooltip details;
+- detailed gem stats and enchant names;
+- account-wide window scale from 70% to 130% in 5% steps, plus a reset button;
+- visible specializations and one highlighted specialization;
+- standard AceDB profile controls.
+
+Database selection belongs to the main window action bar, not Interface Options. Window scale can be changed either in Interface Options or with the lower-right grip.
+
+<details>
+<summary><strong>Commands</strong></summary>
+
+| Command | Action |
+| --- | --- |
+| `/bis` or `/bistooltip` | Open or toggle the main window. |
+| `/bis config` | Open settings. |
+| `/bis reload` | Rescan ownership, clear caches, and rebuild the active view. |
+| `/bistooltip help` | Print command help. |
+| `/bisemblem <item ID or item link>` | Print every recorded vendor purchase option for an item. |
+| `/bis debug` | Run row-integrity diagnostics and print the current debug state. |
+| `/bis debug on` / `/bis debug off` | Enable or disable detailed row snapshots. |
+| `/bis repairrows` | Rebind the active database and replay overlays. |
+
+</details>
+
+## Optional Server Plugins
+
+Server plugins extend Core; they are not ranking databases and do not provide separate windows or commands. Whitemane Frostmourne and WOTLK5 S2 are optional private-server plugins, while Core remains a clean, classic WotLK addon. Install a plugin folder beside `Bistooltip`, never inside it.
+
+| Component | Branch | Release tag | Addon folder | Required dependency |
+| --- | --- | --- | --- | --- |
+| Core | `main` | `core-v3.0.0` | `Bistooltip` | — |
+| Scanner | `Bistooltip_Scanner` | `scanner-v0.2.1` | `Bistooltip_Scanner` | Optional Core integration |
+| Whitemane Frostmourne | `Bistooltip_Whitemane_Frostmourne` | `whitemane-frostmourne-v1.0.1` | `Bistooltip_Whitemane_Frostmourne` | Core |
+| WOTLK5 S2 | `Bistooltip_WOTLK5_S2` | `wotlk5-s2-v1.0.1` | `Bistooltip_WOTLK5_S2` | Core |
+
+<p align="center">
+  <img src=".github/assets/readme/branches.png" alt="GitHub branch list for BiSTooltip Core, Scanner, Whitemane Frostmourne, and WOTLK5 S2" width="360">
+  <br><sub>Choose the branch that matches the component you want to install.</sub>
+</p>
+
+Use the Whitemane plugin for Frostmourne custom currencies, vendor sources, and legendary ranking insertions. Use the WOTLK5 S2 plugin for its server vendor overlay and profession-aware equipment recommendations. Install only the overlay that matches your server.
+
+The Scanner is a separate data-collection and export tool. It was designed to reduce the manual work required to review merchant data and implement additional plugins for other private servers; it does not change Core data by itself.
+
+## Troubleshooting
+
+- **The addon does not appear:** verify the exact folder nesting and enable **Load out of date AddOns** if your client requires it.
+- **Names or icons show as unavailable:** hover the item, visit the relevant vendor, or press **RELOAD** after the client cache has populated.
+- **The list shows the wrong profile after switching databases:** choose the desired class/spec/phase again; unavailable profiles intentionally fall back to a valid selection.
+- **Rows appear duplicated or stale:** run `/bis repairrows`, then `/bis reload`.
+- **Bank or alt ownership is missing:** this is expected from the built-in scan; its authoritative count covers the current character's equipped items and bags.
+- **A server item or currency is missing:** confirm that the matching server plugin is installed, enabled, and loaded after Core.
 
 ## Credits
 
-- Original addon by **Silver [DisruptionAuras]**
-- Refactored and maintained by **Divian**
+Original addon and backport work: Silver [DisruptionAuras], [disruption01](https://github.com/disruption01/BiS-Tooltip_335a_backport), and [ExoJdi](https://github.com/ExoJdi/BiS-Tooltip_335a_fixed_backport). The WoWSimsBP snapshot retains its upstream backport lineage. Refactoring and maintenance: Divian.
 
 ## License
-MIT License
+
+BiSTooltip Core is distributed under the [MIT License](Bistooltip/LICENSE). Bundled third-party libraries retain their own notices and licenses.

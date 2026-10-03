@@ -21,12 +21,6 @@ local TableContains = Utils.TableContains
 local CaseInsensitivePairs = Utils.CaseInsensitivePairs
 
 -- ============================================================
--- Spec Detection Configuration (from Constants)
--- ============================================================
-
-local SPEC_BY_CLASSFILE_TAB = Constants.SPEC_BY_CLASSFILE_TAB
-
--- ============================================================
 -- Local Helper Functions
 -- ============================================================
 
@@ -147,18 +141,6 @@ local function RankTagForSelf(rank)
     return "|cffff3b3bNO BIS|r"
 end
 
--- Robust points extraction across API variations
-local function ExtractTalentPoints(...)
-    local best
-    for i = 1, select("#", ...) do
-        local v = select(i, ...)
-        if type(v) == "number" and v >= 0 and v <= 71 then
-            if not best or v > best then best = v end
-        end
-    end
-    return best
-end
-
 -- Promote ALT2 to BIS2 for dual-slot items (rings/trinkets) and Fury DW weapons
 local function NormalizeDualSlotRank(itemId, className, specName, rank)
     if not rank or rank.kind ~= "ALT" or tonumber(rank.n) ~= 2 then
@@ -213,55 +195,6 @@ local function RankTag(rank)
     if rank.kind == "BIS2" then return "|cff009900BIS²|r" end
     if rank.kind == "ALT" then return string.format("|cffffa500ALT %d|r", rank.n or 0) end
     return "|cffffff00FOUND|r"
-end
-
-local function GetPlayerClassSpecKeys()
-    local _, classFile = UnitClass("player")
-    if not classFile then return nil end
-    
-    local classKey = Utils.CLASSFILE_TO_DATASET[classFile] or UnitClass("player")
-    
-    -- Active talent group (dual spec)
-    local group = 1
-    if type(_G.GetActiveTalentGroup) == "function" then
-        local ok, g = pcall(_G.GetActiveTalentGroup, false, false)
-        if not ok then ok, g = pcall(_G.GetActiveTalentGroup) end
-        if ok and type(g) == "number" and g >= 1 then group = g end
-    end
-    
-    local bestTab, bestPts = 1, -1
-    local tabs = _G.GetNumTalentTabs and _G.GetNumTalentTabs(false, false) or 3
-    
-    for tab = 1, tabs do
-        local points
-        do
-            local ok, r1, r2, r3, r4, r5, r6, r7, r8 = pcall(_G.GetTalentTabInfo, tab, false, false, group)
-            if ok then
-                points = ExtractTalentPoints(r1, r2, r3, r4, r5, r6, r7, r8)
-            end
-            if points == nil then
-                local ok2, a1, a2, a3, a4, a5, a6, a7, a8 = pcall(_G.GetTalentTabInfo, tab, false, false)
-                if ok2 then points = ExtractTalentPoints(a1, a2, a3, a4, a5, a6, a7, a8) end
-            end
-        end
-        if points and points > bestPts then
-            bestPts, bestTab = points, tab
-        end
-    end
-
-    -- Druid edge: tab 2 can be cat or bear
-    local specName = (SPEC_BY_CLASSFILE_TAB[classFile] and SPEC_BY_CLASSFILE_TAB[classFile][bestTab]) or nil
-    if classFile == "DRUID" and bestTab == 2 then
-        local form = GetShapeshiftForm and GetShapeshiftForm() or 0
-        if form == 1 then specName = "Feral tank"
-        elseif form == 3 then specName = "Feral dps"
-        else specName = "Feral tank" end
-    end
-    if classFile == "DEATHKNIGHT" and bestTab == 1 then
-        specName = "Blood tank"
-    end
-    
-    return classKey, specName
 end
 
 local function specHighlighted(class_name, spec_name)
@@ -389,90 +322,28 @@ function searchIDInBislistsClassSpec(structure, id, class, spec, filterByBlocked
 end
 
 -- ============================================================
--- DataStore Integration
+-- New source model (O(1) ItemAcquisition -> SourceRegistry)
 -- ============================================================
 
-local function getDataStoreInventory()
-    if _G.DataStore_Inventory then
-        return _G.DataStore_Inventory
-    end
-    local ok, AceAddon = pcall(LibStub, "AceAddon-3.0")
-    if ok and AceAddon and AceAddon.GetAddon then
-        local ds = AceAddon:GetAddon("DataStore_Inventory", true)
-        if ds then return ds end
-    end
-    return nil
-end
-
-local function formatInstanceName(instance)
-    if not instance then return nil end
-    instance = tostring(instance)
-    local tmpInstance = string.lower(instance)
-
-    -- Normalize heroic labels to 25-man naming
-    if tmpInstance == "the obsidian sanctum (heroic)" then
-        instance = "The Obsidian Sanctum(25)"
-    elseif tmpInstance == "the eye of eternity (heroic)" then
-        instance = "The Eye Of Eternity (25)"
-    elseif tmpInstance == "naxxramas (heroic)" then
-        instance = "Naxxramas (25)"
-    elseif tmpInstance == "ulduar (heroic)" then
-        instance = "Ulduar (25)"
-    end
-
-    return instance
-end
-
-local function findSourceInLootTable(itemId)
-    local lt = rawget(_G, "lootTable")
-    if type(lt) ~= "table" then
-        lt = type(lootTable) == "table" and lootTable or nil
-    end
-    if type(lt) ~= "table" then
-        return nil, nil
-    end
-
-    for zone, bosses in pairs(lt) do
-        if type(bosses) == "table" then
-            for boss, items in pairs(bosses) do
-                if type(items) == "table" then
-                    for k, v in pairs(items) do
-                        if k == itemId or v == itemId then
-                            return formatInstanceName(zone), boss
-                        end
-                    end
-                end
-            end
-        end
-    end
-
-    return nil, nil
-end
-
 -- Public API used by Bislist: returns instance, boss
+-- O(1) shim over the new model: first acquisition entry -> registry facts.
+-- Signature unchanged; all existing call sites keep working untouched.
 function BistooltipAddon:GetItemSourceInfo(itemId)
-    if not itemId then return nil, nil end
-
-    self._sourceCache = self._sourceCache or {}
-    local cached = self._sourceCache[itemId]
-    if cached then
-        return cached[1], cached[2]
+  if not itemId then return nil, nil end
+  local entries = (BisTooltip_ItemAcquisition or {})[itemId]
+  local e = entries and entries[1] or nil
+  if not e then return nil, nil end
+  if e.kind == "DROP" or e.kind == "TOKEN" or e.kind == "MARK" then
+    local s = (BisTooltip_SourceRegistry or {})[e.source]
+    if s then
+      if s.difficulty and s.difficulty ~= "" then
+        return s.instance .. " [" .. s.difficulty .. "]", s.boss
+      end
+      return s.instance, s.boss
     end
-
-    local zone, boss = findSourceInLootTable(itemId)
-
-    if not zone then
-        local DataStore_Inventory = getDataStoreInventory()
-        if DataStore_Inventory and DataStore_Inventory.GetSource then
-            local Instance, Boss = DataStore_Inventory:GetSource(itemId)
-            if Instance and Boss then
-                zone, boss = formatInstanceName(Instance), Boss
-            end
-        end
-    end
-
-    self._sourceCache[itemId] = { zone, boss }
-    return zone, boss
+  end
+  if e.kind == "ACTIVITY" then return e.label, nil end
+  return nil, nil
 end
 
 local function GetItemSource(itemId)
@@ -497,101 +368,117 @@ local function GetOwnedInfo(itemId)
 end
 
 -- ============================================================
--- Dual Source Support (Boss + Emblems)
+-- Tooltip source lines (new model: one line per acquisition entry)
 -- ============================================================
 
 local function GetAllItemSources(itemId)
-    local sources = {}
-    if not itemId or itemId <= 0 then return sources end
-    
-    -- Get raid/dungeon source
-    if _G.BistooltipAddon and _G.BistooltipAddon.GetItemSourceInfo then
-        local zone, boss = _G.BistooltipAddon:GetItemSourceInfo(itemId)
-        if zone and boss then
-            local diffTag = nil
-            if Constants and Constants.GetInstanceDifficulty then
-                diffTag = Constants.GetInstanceDifficulty(zone)
-            end
-            table.insert(sources, {
-                type = "raid",
-                zone = zone,
-                boss = boss,
-                difficulty = diffTag,
-            })
-        end
-    end
-    
-    -- Check for emblem source
-    local emblemSource = nil
-    if _G.Bistooltip_emblem_items then
-        emblemSource = _G.Bistooltip_emblem_items[itemId]
-    end
-    if not emblemSource and Constants and Constants.GetEmblemSource then
-        emblemSource = Constants.GetEmblemSource(itemId)
-    end
-    
-    if emblemSource then
-        table.insert(sources, {
-            type = "emblem",
-            currency = emblemSource.currency or "Emblems",
-            cost = emblemSource.cost,
-        })
-    end
-    
-    return sources
-end
-
-local function FormatSourcesForTooltip(sources)
-    if not sources or #sources == 0 then return nil end
-    
     local lines = {}
-    
-    for _, src in ipairs(sources) do
-        if src.type == "raid" then
-            local text = "|cFF00FF00[" .. tostring(src.zone)
-            if src.difficulty then
-                text = text .. " " .. src.difficulty
+    if not itemId or itemId <= 0 then return lines end
+    local entries = (BisTooltip_ItemAcquisition or {})[itemId]
+    if type(entries) ~= "table" then return lines end
+    local fmt = BisTooltip_FormatSource
+    if type(fmt) ~= "function" then return lines end
+    -- W3: colored rendering (identical structure); dedup stays on the
+    -- PLAIN line so color never participates in identity.
+    local fmtC = BisTooltip_FormatSourceColored
+    local useColor = type(fmtC) == "function"
+
+    -- Multi-source items keep every line; dedup ONLY byte-identical
+    -- rendered lines (Saurfang vs Putricide stay separate).
+    local seen = {}
+    for _, e in ipairs(entries) do
+        local line = fmt(e)
+        if line and not seen[line] then
+            seen[line] = true
+            local out = line
+            if useColor then
+                local resolver = BistooltipData and BistooltipData.GetItemTexture
+                local colored = fmtC(e, resolver)
+                if colored then out = colored end
             end
-            text = text .. "]|r - |cFFFFD000" .. tostring(src.boss) .. "|r"
-            table.insert(lines, text)
-            
-        elseif src.type == "emblem" then
-            local emblemInfo = Constants and Constants.EMBLEM_VENDORS and Constants.EMBLEM_VENDORS[src.currency]
-            local color = emblemInfo and emblemInfo.color or "ff00ff"
-            local text = "|cff" .. color .. src.currency
-            if src.cost then
-                text = text .. " x" .. src.cost
-            end
-            text = text .. "|r"
-            table.insert(lines, text)
+            table.insert(lines, out)
         end
     end
-    
+
     return lines
 end
 
 -- ============================================================
--- Tooltip Refresh with Cooldown
+-- Tooltip Refresh (modifier events must not be dropped)
 -- ============================================================
 
-local lastRefreshTime = 0
-local REFRESH_COOLDOWN = 0.1
+local function CaptureTooltipAnchor(tt)
+    local state = { points = {} }
+    if type(tt.GetOwner) == "function" then
+        local ok, owner = pcall(tt.GetOwner, tt)
+        if ok then state.owner = owner end
+    end
+    if type(tt.GetAnchorType) == "function" then
+        local ok, anchor = pcall(tt.GetAnchorType, tt)
+        if ok then state.anchor = anchor end
+    end
+    if type(tt.GetNumPoints) == "function" and type(tt.GetPoint) == "function" then
+        local ok, count = pcall(tt.GetNumPoints, tt)
+        if ok and type(count) == "number" then
+            for i = 1, count do
+                local got, point, relativeTo, relativePoint, x, y = pcall(tt.GetPoint, tt, i)
+                if got and point then
+                    state.points[#state.points + 1] = { point, relativeTo, relativePoint, x, y }
+                end
+            end
+        end
+    end
+    return state
+end
+
+local function RestoreTooltipAnchor(tt, state)
+    if state.owner and state.anchor and type(tt.SetOwner) == "function" then
+        local currentOwner, currentAnchor = nil, nil
+        if type(tt.GetOwner) == "function" then
+            local ok, value = pcall(tt.GetOwner, tt)
+            if ok then currentOwner = value end
+        end
+        if type(tt.GetAnchorType) == "function" then
+            local ok, value = pcall(tt.GetAnchorType, tt)
+            if ok then currentAnchor = value end
+        end
+        if currentOwner ~= state.owner or currentAnchor ~= state.anchor then
+            pcall(tt.SetOwner, tt, state.owner, state.anchor)
+        end
+    end
+    if #state.points > 0 and type(tt.ClearAllPoints) == "function" and type(tt.SetPoint) == "function" then
+        pcall(tt.ClearAllPoints, tt)
+        for _, point in ipairs(state.points) do
+            pcall(tt.SetPoint, tt, point[1], point[2], point[3], point[4], point[5])
+        end
+    end
+end
 
 local function RefreshAnyTooltip(tt)
     if not tt or not tt.GetItem then return end
-    
-    local now = GetTime()
-    if now - lastRefreshTime < REFRESH_COOLDOWN then return end
     
     if BistooltipAddon._refreshing then return end
     
     local _, link = tt:GetItem()
     if not link then return end
-    
-    lastRefreshTime = now
+
+    local owner = nil
+    if type(tt.GetOwner) == "function" then
+        local ok, value = pcall(tt.GetOwner, tt)
+        if ok then owner = value end
+    end
+    if owner and type(owner.UpdateTooltip) == "function" then
+        BistooltipAddon._refreshing = true
+        local ok = pcall(owner.UpdateTooltip, owner)
+        BistooltipAddon._refreshing = false
+        if ok then return end
+    end
+
+    local anchor = CaptureTooltipAnchor(tt)
     BistooltipAddon._refreshing = true
     tt:ClearLines()
     tt:SetHyperlink(link)
+    RestoreTooltipAnchor(tt, anchor)
     BistooltipAddon._refreshing = false
 end
 
@@ -664,7 +551,11 @@ local function OnGameTooltipSetItem(tooltip)
     local playerClass, playerSpec = nil, nil
     
     if showSpec then
-        local pClass, pSpec = GetPlayerClassSpecKeys()
+        local pClass, pSpec
+        if type(_G.BistooltipPlayerContext) == "table"
+                and type(_G.BistooltipPlayerContext.GetPlayerClassSpecKeys) == "function" then
+            pClass, pSpec = _G.BistooltipPlayerContext.GetPlayerClassSpecKeys()
+        end
         playerClass, playerSpec = pClass, pSpec  -- Save for later
         
         if pClass and pSpec then
@@ -957,8 +848,7 @@ local function OnGameTooltipSetItem(tooltip)
 
     -- Item source (controlled by show_item_source setting)
     if BistooltipAddon.db.char.show_item_source then
-        local sources = GetAllItemSources(itemId)
-        local sourceLines = FormatSourcesForTooltip(sources)
+        local sourceLines = GetAllItemSources(itemId)
 
         if sourceLines and #sourceLines > 0 then
             tooltip:AddLine(" ", 1, 1, 0)
@@ -976,16 +866,30 @@ end
 -- ============================================================
 
 function BistooltipAddon:initBisTooltip()
+    local contextEvents = {
+        "ACTIVE_TALENT_GROUP_CHANGED",
+        "CHARACTER_POINTS_CHANGED",
+        "PLAYER_TALENT_UPDATE",
+        "PLAYER_EQUIPMENT_CHANGED",
+        "SKILL_LINES_CHANGED",
+    }
     eventFrame:RegisterEvent("MODIFIER_STATE_CHANGED")
-    eventFrame:SetScript("OnEvent", function(_, _, e_key)
-        if e_key ~= "RCTRL" and e_key ~= "LCTRL" and e_key ~= "RSHIFT" and e_key ~= "LSHIFT" then
-            return
+    for _, event in ipairs(contextEvents) do eventFrame:RegisterEvent(event) end
+    eventFrame:SetScript("OnEvent", function(_, event, e_key)
+        if event == "MODIFIER_STATE_CHANGED" then
+            if e_key ~= "RCTRL" and e_key ~= "LCTRL" and e_key ~= "RSHIFT" and e_key ~= "LSHIFT" then
+                return
+            end
         end
         if GameTooltip and GameTooltip:IsShown() then
             RefreshAnyTooltip(GameTooltip)
         end
         if ItemRefTooltip and ItemRefTooltip:IsShown() then
             RefreshAnyTooltip(ItemRefTooltip)
+        end
+        if event ~= "MODIFIER_STATE_CHANGED" and BistooltipAddon
+                and type(BistooltipAddon.RefreshUI) == "function" then
+            BistooltipAddon:RefreshUI()
         end
     end)
 
@@ -996,5 +900,10 @@ end
 -- Cleanup function for addon disable (prevents memory leaks)
 function BistooltipAddon:cleanupBisTooltip()
     eventFrame:UnregisterEvent("MODIFIER_STATE_CHANGED")
+    eventFrame:UnregisterEvent("ACTIVE_TALENT_GROUP_CHANGED")
+    eventFrame:UnregisterEvent("CHARACTER_POINTS_CHANGED")
+    eventFrame:UnregisterEvent("PLAYER_TALENT_UPDATE")
+    eventFrame:UnregisterEvent("PLAYER_EQUIPMENT_CHANGED")
+    eventFrame:UnregisterEvent("SKILL_LINES_CHANGED")
     eventFrame:SetScript("OnEvent", nil)
 end

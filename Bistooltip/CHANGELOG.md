@@ -1,154 +1,19 @@
-# BisTooltip Changelog
+# BiSTooltip Changelog
 
-## Version 2.2.2-3.3.5a (2026-04-17)
+## 3.0.0 — 2026-10-01
 
-### Bug Fixes
-
-1. **Ctrl+Click Dressing Room** (`BislistUI.lua`)
-   - Pressing Ctrl+Left Click on any item icon in the BIS list now opens the Dressing Room with that item equipped
-   - Shift+Click still links the item to chat
-   - Plain click no longer accidentally inserts links (modifier key required)
-   - Applies to all item icons: main BIS list and checklist mode
-
-2. **ASCEND Mode — Missing Emblem of Ascension II Items** (`DataProvider.lua`)
-   - Fixed: items purchasable with Emblem of Ascension II were not shown in ASCEND filter mode
-   - Root cause: filter only checked for exact `"Emblem of Ascension"` currency, skipping `"Emblem of Ascension II"`
-   - Fix: changed to `string.find(currency, "Ascension")` — consistent with checklist group logic
-   - Now correctly shows T8 token set pieces, Ulduar drops, Val'anyr, Domhammer, and all other Ascension II items
-
----
-
-## Version 2.2.1-3.3.5a (2026-04-10)
-
-### Features
-
-1. **T8 Set Auto-Registration from BIS Lists** (`EmblemData.lua`)
-   - Added `RegisterT8SetFromBislist()` — automatically scans the T8 phase of all BIS lists and registers class-specific set piece items with the correct Emblem of Ascension II cost
-   - Slot costs: Head / Chest / Legs = 25 emblems, Shoulder / Hands = 19 emblems
-   - Items appearing in multiple classes (non-set drops) are skipped automatically
-   - Items already registered in any emblem table (e.g. Echo of the Titans drops) are preserved with their original cost
-   - Eliminates the need to manually maintain a list of T8 set piece IDs per spec
-
-2. **EmblemData Load Order Fix** (`.toc`)
-   - `EmblemData.lua` now loads after `Bistooltip_wowtbc_bislists.lua` to allow T8 set auto-registration at startup
-
----
-
-## Version 2.2.0-3.3.5a (2026-02-13)
-
-### Bug Fixes
-
-1. **Slash Commands Restored**
-   - `/bis` and `/bistooltip` commands were not working due to missing registration in the active code path
-   - Both commands now fully functional with subcommands: `config`, `reload`, `help`
-   - Short aliases: `/bis c` (config), `/bis r` (reload)
-
-2. **Cross-Faction T9 Tooltip Fix**
-   - Fixed "Your Class NO BIS" showing for all T9 (and other faction-specific) items when hovering over equipped gear
-   - Root cause: BIS lists store Horde item IDs, but Alliance players see Alliance IDs in tooltips - no reverse mapping was performed
-   - Added `GetBisCanonicalID()` with lazy-built reverse cache for O(1) Alliance-to-Horde ID normalization
-   - Fully supports cross-faction private servers where players may have mixed faction items
-
----
-
-## Version 1.3.8-3.3.5a
-
-### Bug Fixes
-
-1. **Checkmark Color Stability Fixed**
-   - `clearCheckMarks()` now properly hides textures with `Hide()`
-   - Colors reset to white (1,1,1,1) before clearing
-   - Prevents color bleeding when clicking UI elements
-
-2. **Removed Blue Border from Gem Box**
-   - Gem plan row has no backdrop (completely transparent)
-
-3. **Discord Link Dialog Fixed**
-   - Single "OK" button with copy hint
-
-4. **Slot Separators in All Modes**
-   - Solid line separator `_____` now visible in standard mode
-   - Color: medium gray (#555555)
-   - Works in: Standard, BIS Checklist, and Customize modes
-
-5. **Gem Condensing in Standard Mode**
-   - Duplicate gems now show as "2x" or "3x" instead of repeating
-   - Example: 3 identical gems → single icon with "3x" label
-   - Only applies to standard mode (BIS Checklist shows all gems)
-
-6. **Spec Highlight for Your Specialization**
-   - When Spec Highlight is enabled for player's own spec
-   - "Your specialization" section now shows `>>` markers
-   - Format: `>> Warrior - Protection <<`
-
----
-
-## New Features Since Lock Phase (v1.3.0)
-
-### 1. Lock Phase System (v1.3.0)
-- **Checkbox "Lock"** next to phase dropdown
-- When locked, phase dropdown is disabled
-- **Tooltips filter**: Only show BIS info for locked phase and earlier
-
-### 2. Customize Mode (v1.3.0)
-- **Checkbox "Customize"** in dropdown row
-- Only available in standard view
-- Allows reordering item priorities per slot
-
-### 3. Slot Locking Icons (v1.3.0)
-- **[O]** = unlocked (green), **[X]** = locked (default)
-- Click to toggle unlock state
-- **[L]** header to toggle all slots
-
-### 4. Click-to-Swap Item Reordering (v1.3.1)
-- Click first item → red border appears
-- Click second item → positions swap
-- Right-click → cancel selection
-
-### 5. Reset Button "R" (v1.3.1)
-- Resets all custom priorities for current class/spec/phase
-- Restores original item order
-
-### 6. Custom Priority Integration (v1.3.5)
-- Custom item order reflects in tooltips
-- Item at position 1 shows as "BIS"
-- Progress bar counts custom BIS items
-
-### 7. Progress Bar Improvements (v1.3.4-1.3.7)
-- Counts ALL slots
-- Proper Horde↔Alliance ID lookup
-- Color changes based on progress %
-
-### 8. Phase Combining (v1.3.7)
-- "PR BIS / T7 BIS" → "BIS PR-T7"
-- All BIS text in green color
-
-### 9. Tooltip Enhancements (v1.3.7)
-- "Where:" changed to "Rank:"
-- Rank: hidden when BIS until last phase
-- Player's spec hidden from main list
-
-### 10. UI Polish (v1.3.7-1.3.8)
-- Bright green checkmarks (0, 1, 0)
-- Gem stat width reduced for better fit
-- Slot separators in all modes
-- Gem condensing (2x, 3x notation)
-- Spec Highlight works for player's spec
-
----
-
-## Version History
-
-| Version | Key Changes |
-|---------|-------------|
-| 2.2.2 | Ctrl+Click dressing room, ASCEND mode Ascension II fix |
-| 2.2.1 | T8 set auto-registration from BIS lists |
-| 2.2.0 | Slash commands fix, cross-faction T9 tooltip fix |
-| 1.3.0 | Lock Phase, Customize Mode, Slot Locking |
-| 1.3.1 | Click-to-Swap, Reset Button |
-| 1.3.2 | Tooltip options, Lock Phase filtering |
-| 1.3.4 | Progress bar counting |
-| 1.3.5 | Custom priority system |
-| 1.3.6 | Reset functionality, BIS green color |
-| 1.3.7 | Phase combining, Rank: label, credits |
-| 1.3.8 | Color fix, separators, gem condensing, spec highlight |
+- Stabilized the MAIN, BIS, and VENDOR views so database changes, frame reopening, filtering, and overlay replay do not duplicate, omit, or retain stale rows.
+- Added clear acquisition details for drops, tokens, marks, vendors, activities, and custom sources, including multi-part costs and separate vendor offers.
+- Added native token and Trophy of the Crusade icons with readable text fallbacks while item textures are uncached.
+- Added bounded item-cache loading with retry progress, unavailable-item reporting, and protection from late callbacks that belong to an older selection.
+- Added independent controls for tooltip source lines and the BIS-window SOURCE column.
+- Stabilized live CTRL/SHIFT tooltip refreshes by reusing native bag and equipped-item update paths without replacing their item context.
+- Added a compact, button-styled account-wide database selector after **EXPORT** for **WoWSimsBP (STANDARD)** and **wowtbc.gg**, preserving the viewed profile by name when possible.
+- Added account-wide 70–130% window scaling through a two-column Interface Options layout and a lower-right drag grip, with reset controls in both locations.
+- Added replay-safe server overlays for custom sources, acquisition routes, ranking changes, and automatic enhancement recommendations.
+- Replaced routine acquisition-replacement diagnostics with one successful load message from each server plugin while retaining actionable warnings.
+- Added profession-aware server recommendations that preserve later gems, follow the active dual specialization, and support legacy WoW 3.3.5a profession detection.
+- Improved faction-aware rankings, personal item priorities, ownership progress, vendor filtering, export output, and source formatting.
+- Removed the obsolete personal enhancement override UI and its saved layer; server plugins are now the single owner of automatic custom recommendations.
+- Corrected standard vendor prices and expanded package validation, Lua regression coverage, plugin integration checks, and release-tree hygiene.
+- Packaged Core as a standalone addon with optional, separately installed Scanner and server-plugin components.
