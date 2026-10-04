@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: Bistooltip — Whitemane: Frostmourne
+## Notes: Server diff for Whitemane Frostmourne — active Echo of the Titans routes, pending Phase 2 Emblem data, legendary rank-1 overrides
+## Author: Bistooltip
+## Version: 1.0.1
+## Dependencies: Bistooltip
+main.lua
