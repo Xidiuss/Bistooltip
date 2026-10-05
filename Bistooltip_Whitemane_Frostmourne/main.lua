@@ -446,9 +446,7 @@ BisTooltip:AddAcquisition(150005, { kind = "DROP", source = "NAXXRAMAS_25N_KEL_T
 -- BisTooltip:AddAcquisition(315010, { kind = "VENDOR", cost = { { currency = "Emblem of Ascension II", amount = 80 } } }, P)
 
 
--- Bistooltip_Scanner EXPORT | vendors: 1 | 2026-09-19
--- Magistrix Lambriesse / Dalaran / 2026-09-19 / 37 by Bistooltip_Scanner
--- Owner policy: current Justice/Valor offers replace older vendor prices,
+-- Owner policy: reviewed vendor offers replace older vendor prices,
 -- while DROP/TOKEN/MARK/CUSTOM methods remain. Keep the core API unchanged.
 local function ReplaceVendorAcquisitions(itemID, offers)
     local entries = {}
@@ -458,43 +456,263 @@ local function ReplaceVendorAcquisitions(itemID, offers)
     for _, offer in ipairs(offers) do entries[#entries + 1] = offer end
     BisTooltip:SetAcquisition(itemID, entries, P)
 end
-ReplaceVendorAcquisitions(39728, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Totem of Misery -- item:40752
-ReplaceVendorAcquisitions(39757, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Idol of Worship -- item:40752
-ReplaceVendorAcquisitions(40191, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Libram of Radiance -- item:40752
-ReplaceVendorAcquisitions(40207, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Sigil of Awareness -- item:40752
-ReplaceVendorAcquisitions(40267, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Totem of Hex -- item:40752
-ReplaceVendorAcquisitions(40268, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Libram of Tolerance -- item:40752
-ReplaceVendorAcquisitions(40321, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Idol of the Shooting Star -- item:40752
-ReplaceVendorAcquisitions(40322, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Totem of Dueling -- item:40752
-ReplaceVendorAcquisitions(40337, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Libram of Resurgence -- item:40752
-ReplaceVendorAcquisitions(40342, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 700 } } } }) -- Idol of Awakening -- item:40752
+-- Remaining Magistrix Lambriesse entries from the 2026-09-19 scan.
 ReplaceVendorAcquisitions(40636, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 2200 } } } }) -- Legplates of the Lost Vanquisher -- item:40752
 ReplaceVendorAcquisitions(40639, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Mantle of the Lost Vanquisher -- item:40752
-ReplaceVendorAcquisitions(40717, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Ring of Invincibility -- item:40752
-ReplaceVendorAcquisitions(40718, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Signet of the Impregnable Fortress -- item:40752
-ReplaceVendorAcquisitions(40719, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Band of Channeled Magic -- item:40752
-ReplaceVendorAcquisitions(40720, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Renewal of Life -- item:40752
-ReplaceVendorAcquisitions(40721, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Hammerhead Sharkskin Cloak -- item:40752
-ReplaceVendorAcquisitions(40722, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Platinum Mesh Cloak -- item:40752
-ReplaceVendorAcquisitions(40723, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Disguise of the Kumiho -- item:40752
-ReplaceVendorAcquisitions(40724, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Cloak of Kea Feathers -- item:40752
-ReplaceVendorAcquisitions(40733, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Wristbands of the Sentinel Huntress -- item:40752
-ReplaceVendorAcquisitions(40734, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Bracers of Dalaran's Parapets -- item:40752
-ReplaceVendorAcquisitions(40735, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Zartson's Jungle Vambraces -- item:40752
-ReplaceVendorAcquisitions(40736, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Armguard of the Tower Archer -- item:40752
-ReplaceVendorAcquisitions(40737, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Pigmented Clan Bindings -- item:40752
-ReplaceVendorAcquisitions(40738, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Wristwraps of the Cutthroat -- item:40752
-ReplaceVendorAcquisitions(40739, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Bands of the Great Tree -- item:40752
-ReplaceVendorAcquisitions(40740, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Wraps of the Astral Traveler -- item:40752
-ReplaceVendorAcquisitions(40741, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1250 } } } }) -- Cuffs of the Shadow Ascendant -- item:40752
-ReplaceVendorAcquisitions(40743, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Kyzoc's Ground Stompers -- item:40752
-ReplaceVendorAcquisitions(40745, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Sabatons of Rapid Recovery -- item:40752
-ReplaceVendorAcquisitions(40746, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Pack-Ice Striders -- item:40752
-ReplaceVendorAcquisitions(40747, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Treads of Coastal Wandering -- item:40752
-ReplaceVendorAcquisitions(40748, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Boots of Captain Ellis -- item:40752
-ReplaceVendorAcquisitions(40749, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Rainey's Chewed Boots -- item:40752
-ReplaceVendorAcquisitions(40750, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Xintor's Expeditionary Boots -- item:40752
-ReplaceVendorAcquisitions(40751, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Slippers of the Holy Light -- item:40752
+
+-- Bistooltip_Scanner EXPORT | vendors: 1 | 2026-10-05
+-- Magister Brasael / Dalaran / 2026-10-05 / 43 by Bistooltip_Scanner
+ReplaceVendorAcquisitions(39728, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Totem of Misery -- item:40753
+ReplaceVendorAcquisitions(39757, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Idol of Worship -- item:40753
+ReplaceVendorAcquisitions(40191, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Libram of Radiance -- item:40753
+ReplaceVendorAcquisitions(40207, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Sigil of Awareness -- item:40753
+ReplaceVendorAcquisitions(40267, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Totem of Hex -- item:40753
+ReplaceVendorAcquisitions(40268, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Libram of Tolerance -- item:40753
+ReplaceVendorAcquisitions(40321, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Idol of the Shooting Star -- item:40753
+ReplaceVendorAcquisitions(40322, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Totem of Dueling -- item:40753
+ReplaceVendorAcquisitions(40337, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Libram of Resurgence -- item:40753
+ReplaceVendorAcquisitions(40342, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 700 } } } }) -- Idol of Awakening -- item:40753
+ReplaceVendorAcquisitions(40717, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Ring of Invincibility -- item:40753
+ReplaceVendorAcquisitions(40718, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Signet of the Impregnable Fortress -- item:40753
+ReplaceVendorAcquisitions(40719, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Band of Channeled Magic -- item:40753
+ReplaceVendorAcquisitions(40720, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Renewal of Life -- item:40753
+ReplaceVendorAcquisitions(40721, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Hammerhead Sharkskin Cloak -- item:40753
+ReplaceVendorAcquisitions(40722, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Platinum Mesh Cloak -- item:40753
+ReplaceVendorAcquisitions(40723, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Disguise of the Kumiho -- item:40753
+ReplaceVendorAcquisitions(40724, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Cloak of Kea Feathers -- item:40753
+ReplaceVendorAcquisitions(40733, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Wristbands of the Sentinel Huntress -- item:40753
+ReplaceVendorAcquisitions(40734, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Bracers of Dalaran's Parapets -- item:40753
+ReplaceVendorAcquisitions(40735, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Zartson's Jungle Vambraces -- item:40753
+ReplaceVendorAcquisitions(40736, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Armguard of the Tower Archer -- item:40753
+ReplaceVendorAcquisitions(40737, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Pigmented Clan Bindings -- item:40753
+ReplaceVendorAcquisitions(40738, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Wristwraps of the Cutthroat -- item:40753
+ReplaceVendorAcquisitions(40739, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Bands of the Great Tree -- item:40753
+ReplaceVendorAcquisitions(40740, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Wraps of the Astral Traveler -- item:40753
+ReplaceVendorAcquisitions(40741, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1250 } } } }) -- Cuffs of the Shadow Ascendant -- item:40753
+ReplaceVendorAcquisitions(40743, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Kyzoc's Ground Stompers -- item:40753
+ReplaceVendorAcquisitions(40745, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Sabatons of Rapid Recovery -- item:40753
+ReplaceVendorAcquisitions(40746, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Pack-Ice Striders -- item:40753
+ReplaceVendorAcquisitions(40747, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Treads of Coastal Wandering -- item:40753
+ReplaceVendorAcquisitions(40748, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Boots of Captain Ellis -- item:40753
+ReplaceVendorAcquisitions(40749, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Rainey's Chewed Boots -- item:40753
+ReplaceVendorAcquisitions(40750, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Xintor's Expeditionary Boots -- item:40753
+ReplaceVendorAcquisitions(40751, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Slippers of the Holy Light -- item:40753
+ReplaceVendorAcquisitions(40635, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 2200 } } } }) -- Legplates of the Lost Protector -- item:40753
+ReplaceVendorAcquisitions(40638, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Mantle of the Lost Protector -- item:40753
+ReplaceVendorAcquisitions(40742, { { kind = "VENDOR", cost = { { currency = "Valor", amount = 1650 } } } }) -- Bladed Steelboots -- item:40753
+ReplaceVendorAcquisitions(43950, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1650 } } } }) -- Kirin Tor Commendation Badge
+ReplaceVendorAcquisitions(44710, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1650 } } } }) -- Wyrmrest Commendation Badge
+ReplaceVendorAcquisitions(44711, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1650 } } } }) -- Argent Crusade Commendation Badge
+ReplaceVendorAcquisitions(44713, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1650 } } } }) -- Ebon Blade Commendation Badge
+ReplaceVendorAcquisitions(49702, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1650 } } } }) -- Sons of Hodir Commendation Badge
+
+-- Magistrix Lambriesse / Dalaran / 2026-10-05
+-- Protector scanned; owner confirmed identical chest/gloves prices for all classes.
+ReplaceVendorAcquisitions(40610, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 2200 } } } }) -- Chestguard of the Lost Conqueror -- item:40752
+ReplaceVendorAcquisitions(40611, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 2200 } } } }) -- Chestguard of the Lost Protector -- item:40752
+ReplaceVendorAcquisitions(40613, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Gloves of the Lost Conqueror -- item:40752
+ReplaceVendorAcquisitions(40614, { { kind = "VENDOR", cost = { { currency = "Justice", amount = 1650 } } } }) -- Gloves of the Lost Protector -- item:40752
+
+-- Bistooltip_Scanner EXPORT | vendors: 1 | 2026-10-05
+-- Zom Bocom / Dalaran / 2026-10-05 / 121 by Bistooltip_Scanner
+ReplaceVendorAcquisitions(42557, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42511, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42356, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42221, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42295, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42212, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42206, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42294, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42523, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42382, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(44416, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42344, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42297, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42535, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42213, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42446, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42574, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42575, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42576, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42219, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42220, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42611, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42612, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42445, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42215, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42517, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42296, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(40778, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(44415, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42444, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42448, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42595, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42594, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42593, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42343, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42224, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42618, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42217, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42556, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42216, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42218, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42447, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42529, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42568, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42223, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(42222, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(40856, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(40836, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(40816, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(40797, { { kind = "VENDOR", cost = { { currency = "Mark of Savagery", amount = 1 } } } }) -- item:1000001
+ReplaceVendorAcquisitions(40783, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 2200 } } } })
+ReplaceVendorAcquisitions(40819, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 2200 } } } })
+ReplaceVendorAcquisitions(40840, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 2200 } } } })
+ReplaceVendorAcquisitions(40801, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1650 } } } })
+ReplaceVendorAcquisitions(40859, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1650 } } } })
+ReplaceVendorAcquisitions(40877, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1650 } } } })
+ReplaceVendorAcquisitions(40878, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1650 } } } })
+ReplaceVendorAcquisitions(42122, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1650 } } } })
+ReplaceVendorAcquisitions(42123, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1650 } } } })
+ReplaceVendorAcquisitions(40887, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42020, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42021, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42022, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42023, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42024, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42025, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42026, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42055, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42056, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42057, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42058, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42059, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42060, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42061, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42110, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42112, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42207, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42241, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42259, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42274, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42284, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42345, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42351, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42558, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42563, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42569, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42226, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42231, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42247, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42254, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42264, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42269, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42279, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42289, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42524, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42530, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42536, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42316, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42321, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42326, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42331, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42359, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42383, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42484, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42489, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42494, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42501, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42512, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42518, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(44417, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(44418, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42449, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42577, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42582, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42587, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42596, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42601, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42606, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42613, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42619, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42851, { { kind = "VENDOR", cost = { { currency = "Honor Points", amount = 700 } } } })
+
+-- Bistooltip_Scanner EXPORT | vendors: 1 | 2026-10-05
+-- Nargle Lashcord / Dalaran / 2026-10-05 / 74 by Bistooltip_Scanner
+ReplaceVendorAcquisitions(40786, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 2200 } } } })
+ReplaceVendorAcquisitions(40823, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 2200 } } } })
+ReplaceVendorAcquisitions(40844, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 2200 } } } })
+ReplaceVendorAcquisitions(40804, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1650 } } } })
+ReplaceVendorAcquisitions(40862, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1650 } } } })
+ReplaceVendorAcquisitions(40880, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1650 } } } })
+ReplaceVendorAcquisitions(42128, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1650 } } } })
+ReplaceVendorAcquisitions(42129, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1650 } } } })
+ReplaceVendorAcquisitions(42130, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1650 } } } })
+ReplaceVendorAcquisitions(42131, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1650 } } } })
+ReplaceVendorAcquisitions(42132, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1650 } } } })
+ReplaceVendorAcquisitions(40879, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(40888, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42027, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42028, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42029, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42030, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42031, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42032, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42033, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42062, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42063, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42064, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42065, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42066, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42067, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42068, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42114, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42115, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 1250 } } } })
+ReplaceVendorAcquisitions(42208, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42242, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42260, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42275, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42285, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42346, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42352, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 2450 } } } })
+ReplaceVendorAcquisitions(42227, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42232, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42248, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42255, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42265, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42270, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42280, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42290, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42525, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42531, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42537, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42559, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42564, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42570, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 950 } } } })
+ReplaceVendorAcquisitions(42317, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42322, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42327, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42332, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42362, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42384, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42485, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42490, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42495, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(44419, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(44420, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 3400 } } } })
+ReplaceVendorAcquisitions(42450, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42502, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42513, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42519, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42578, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42583, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42588, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42597, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42602, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42607, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42614, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42620, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 700 } } } })
+ReplaceVendorAcquisitions(42852, { { kind = "VENDOR", cost = { { currency = "Arena Points", amount = 700 } } } })
 
 -- Bistooltip_Scanner EXPORT | vendors: 1 | 2026-09-19
 -- Magister Sarien / Dalaran / 2026-09-19 / 28 by Bistooltip_Scanner
